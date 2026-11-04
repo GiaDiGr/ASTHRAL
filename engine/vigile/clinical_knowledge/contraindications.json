@@ -1,0 +1,72 @@
+{
+  "schema_version": "1.0.0",
+  "rules": [
+    {
+      "rule_id": "BLOCK-DKA-INSULIN-LOW-K",
+      "protocol_id": "PROT-DKA-ADULT-2024",
+      "source_ids": ["SRC-DKA-2024"],
+      "condition": "potassium_mmol_l < 3.5",
+      "effect": "HOLD_INSULIN",
+      "reason": "risk_of_worsening_hypokalemia"
+    },
+    {
+      "rule_id": "BLOCK-DKA-MISSING-K",
+      "protocol_id": "PROT-DKA-ADULT-2024",
+      "condition": "potassium_unknown",
+      "effect": "BLOCKED_MISSING_SAFETY_DATA",
+      "reason": "potassium_required_for_safe_protocol_state_machine"
+    },
+    {
+      "rule_id": "BLOCK-DKA-NO-MONITOR",
+      "protocol_id": "PROT-DKA-ADULT-2024",
+      "condition": "required_monitoring_unavailable",
+      "effect": "BLOCKED_RESOURCE"
+    },
+    {
+      "rule_id": "ANAPH-IM-EPI-NO-ABSOLUTE-CLINICAL-CONTRAINDICATION",
+      "protocol_id": "PROT-ANAPH-IM-EPI",
+      "source_ids": ["SRC-WAO-ANAPH-2020"],
+      "condition": "anaphylaxis_emergency",
+      "effect": "DO_NOT_CREATE_HARD_CLINICAL_CONTRAINDICATION_TO_IM_EPINEPHRINE_FROM_UNSOURCED_RULES"
+    },
+    {
+      "rule_id": "BLOCK-ANAPH-WRONG-ROUTE",
+      "protocol_id": "PROT-ANAPH-IM-EPI",
+      "source_ids": ["SRC-WAO-ANAPH-2020"],
+      "condition": "initial_epinephrine_route == IV_BOLUS",
+      "effect": "BLOCK"
+    },
+    {
+      "rule_id": "BLOCK-ANAPH-NO-VERIFIED-DRUG",
+      "protocol_id": "PROT-ANAPH-IM-EPI",
+      "condition": "epinephrine_inventory_or_concentration_unverified",
+      "effect": "BLOCKED_RESOURCE"
+    },
+    {
+      "rule_id": "BLOCK-POTS-DEHYDRATION",
+      "criterion_id": "CRIT-POTS-HRS-NIH",
+      "source_ids": ["SRC-NIH-POTS-2021"],
+      "condition": "dehydration_present",
+      "effect": "POTS_CRITERIA_NOT_MET"
+    },
+    {
+      "rule_id": "BLOCK-POTS-OH",
+      "criterion_id": "CRIT-POTS-HRS-NIH",
+      "source_ids": ["SRC-HRS-POTS-2015"],
+      "condition": "orthostatic_hypotension_present",
+      "effect": "POTS_CRITERIA_NOT_MET"
+    },
+    {
+      "rule_id": "BLOCK-OH-FREE-MICROGRAVITY",
+      "criterion_id": "CRIT-OH-AHA-2024",
+      "condition": "gravity_context == FREE_MICROGRAVITY",
+      "effect": "NOT_APPLICABLE"
+    },
+    {
+      "rule_id": "BLOCK-MISSION-NOT-AUTHORIZED",
+      "protocol_id": "*",
+      "condition": "mission_authorization != AUTHORIZED",
+      "effect": "BLOCKED_AUTHORIZATION"
+    }
+  ]
+}

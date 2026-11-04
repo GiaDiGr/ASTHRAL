@@ -1,0 +1,32 @@
+{
+  "condition_id": "C002",
+  "catalog_record": {
+    "condition_id": "C002",
+    "name_specialty": "Pérdida de tamaño/fuerza/resistencia muscular / muscular",
+    "description_spaceflight": "Microgravedad descarga musculatura y puede reducir fuerza y resistencia funcionales.",
+    "risks_symptoms": "Desuso, ejercicio insuficiente; debilidad funcional.",
+    "biomarkers_sensors_tests": "Fuerza, dinamometría/ejercicio resistivo, rendimiento funcional.",
+    "baselines_environment_interactions": "Baseline por grupo muscular y método; gravedad y programa de ejercicio.",
+    "primary_evidence": "S01, S04. citeturn6view1turn12search3",
+    "limits_authorizations_state": "No combinar pruebas/grupos incompatibles. `ES`."
+  },
+  "clinical_pathway_profile_as_published": "**P:** ejercicio resistivo `[ES]`; **M:** fuerza mismo grupo/método; **Q:** impedir comparación heterogénea; **D:** ratio actual/preflight y requisito 80 % `[S01]`; **A/DD:** lesión, dolor, nutrición, neurológico; **T:** human review si deterioro funcional; **I:** plan autorizado; **R:** retornar hacia baseline `[S01]`; **F:** repetir prueba; **G:** sin predictor validado.",
+  "coverage_states": {
+    "prevention": "ES",
+    "monitoring": "ES",
+    "data_quality": "ES",
+    "detection": "ES",
+    "assessment": "RV",
+    "differential_diagnosis": "RV",
+    "triage": "RMA",
+    "intervention_authorized": "RMA",
+    "recovery": "ES",
+    "follow_up": "ES",
+    "prognosis": "RO"
+  },
+  "source_ids": [
+    "S01",
+    "S04"
+  ],
+  "NOTICE": "Pathway text is an outline; not an authorized diagnostic or treatment protocol."
+}

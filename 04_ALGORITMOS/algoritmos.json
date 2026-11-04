@@ -1,0 +1,86 @@
+[
+  {
+    "algorithm_id": "ALG001",
+    "purpose": "Baseline personal robusto",
+    "equations_inputs_outputs": "mediana \\(m=\\mathrm{median}(x_i)\\); MAD \\(=\\mathrm{median}(|x_i-m|)\\). Inputs: mediciones preflight comparables. Output: baseline + dispersión.",
+    "parameters_assumptions": "No mezclar métodos/unidades/contextos. Número mínimo de observaciones = configuración del protocolo, no inventarlo.",
+    "validation_tests": "Método estadístico `ENGINEERING_CHOICE`; MAD documentado por NIST. citeturn16search3"
+  },
+  {
+    "algorithm_id": "ALG002",
+    "purpose": "Retención respecto a baseline",
+    "equations_inputs_outputs": "\\(R=100\\times x_{actual}/x_{baseline}\\).",
+    "parameters_assumptions": "Baseline >0, misma variable/método/unidad.",
+    "validation_tests": "Fórmula de ingeniería que implementa requisitos de conservación NASA para aerobic/muscle/bone. citeturn6view1turn6view2"
+  },
+  {
+    "algorithm_id": "ALG003",
+    "purpose": "Promedio temporal ponderado",
+    "equations_inputs_outputs": "\\(\\bar x_T=\\sum_i x_i\\Delta t_i/\\sum_i\\Delta t_i\\).",
+    "parameters_assumptions": "Cobertura temporal válida; no sustituir muestras faltantes silenciosamente.",
+    "validation_tests": "Necesario para V2 6004, promedio de 1 h de ppCO₂. citeturn19search4"
+  },
+  {
+    "algorithm_id": "ALG004",
+    "purpose": "Tendencia longitudinal",
+    "equations_inputs_outputs": "regresión \\(x_t=\\beta_0+\\beta_1t+\\epsilon\\); salida pendiente + incertidumbre.",
+    "parameters_assumptions": "No asumir causalidad; comparar fase/contexto.",
+    "validation_tests": "`ENGINEERING_CHOICE`; NASA exige conservar registros para análisis de tendencias. citeturn5view4"
+  },
+  {
+    "algorithm_id": "ALG005",
+    "purpose": "EWMA",
+    "equations_inputs_outputs": "\\(z_t=\\lambda x_t+(1-\\lambda)z_{t-1}\\).",
+    "parameters_assumptions": "\\(\\lambda\\) configurable; no convertir valores estadísticos por defecto en umbrales médicos.",
+    "validation_tests": "Técnica SPC, no criterio clínico NASA. citeturn16search0"
+  },
+  {
+    "algorithm_id": "ALG006",
+    "purpose": "Z-score / robust z",
+    "equations_inputs_outputs": "\\(z=(x-\\mu)/s\\); robusto \\(z_r=0.6745(x-\\mathrm{median})/MAD\\).",
+    "parameters_assumptions": "Solo distribución/contexto apropiados.",
+    "validation_tests": "`ENGINEERING_CHOICE`; fórmula NIST. citeturn16search2turn16search3"
+  },
+  {
+    "algorithm_id": "ALG007",
+    "purpose": "CUSUM para cambio persistente",
+    "equations_inputs_outputs": "acumulación de desviaciones positivas/negativas respecto a objetivo.",
+    "parameters_assumptions": "Referencia y decisión configurables; no usar parámetros genéricos clínicamente.",
+    "validation_tests": "Técnica de detección estadística; NIST. citeturn16search1"
+  },
+  {
+    "algorithm_id": "ALG008",
+    "purpose": "Fusión multisensor conservadora",
+    "equations_inputs_outputs": "combina únicamente observaciones temporalmente compatibles y con calidad válida; discrepancia → `CONFLICTING_DATA`.",
+    "parameters_assumptions": "Sin pesos clínicos hasta validación; provenance obligatorio.",
+    "validation_tests": "`ENGINEERING_CHOICE`, `REQUIRES_VALIDATION`."
+  },
+  {
+    "algorithm_id": "ALG009",
+    "purpose": "Política de missing data",
+    "equations_inputs_outputs": "ningún imputado para reglas normativas salvo que la propia regla lo permita; input obligatorio ausente → `INCONCLUSIVE`.",
+    "parameters_assumptions": "Diferenciar `MISSING`, `NOT_MEASURED`, `INVALID`, `STALE`.",
+    "validation_tests": "`ENGINEERING_CHOICE`; diseñado para evitar falsa certeza."
+  },
+  {
+    "algorithm_id": "ALG010",
+    "purpose": "Normalización dimensional",
+    "equations_inputs_outputs": "conversión solo entre unidades dimensionalmente equivalentes y conversiones registradas.",
+    "parameters_assumptions": "mSv, mGy, mGy-Eq no intercambiables sin modelo dosimétrico.",
+    "validation_tests": "`ENGINEERING_CHOICE` + requisito de preservar semántica de radiación. citeturn6view3"
+  },
+  {
+    "algorithm_id": "ALG011",
+    "purpose": "Quality gate",
+    "equations_inputs_outputs": "validación de sensor → rango técnico → timestamp → calibración → contexto → completitud.",
+    "parameters_assumptions": "Umbrales de calidad solo si provienen del dispositivo/protocolo.",
+    "validation_tests": "`ENGINEERING_CHOICE`; no inventar 90/95 % de calidad."
+  },
+  {
+    "algorithm_id": "ALG012",
+    "purpose": "Máquina de estados de episodio",
+    "equations_inputs_outputs": "`MONITORING→FINDING→ASSESSMENT→TRIAGE→AUTHORIZED_ACTION→RECOVERY→FOLLOW_UP→CLOSED`.",
+    "parameters_assumptions": "Transición terapéutica requiere `authorization_token`.",
+    "validation_tests": "Arquitectura `ENGINEERING_CHOICE`; apropiada para autonomía médica restringida."
+  }
+]

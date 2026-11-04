@@ -1,0 +1,258 @@
+{
+  "schema_version": "1.0.0",
+  "criteria": [
+    {
+      "criterion_id": "CRIT-DM-ADA-2026",
+      "condition_id": "DM",
+      "version": "2026.1",
+      "population": "NONPREGNANT_ADULT",
+      "source_ids": ["SRC-ADA-DX-2026"],
+      "inputs": [
+        "a1c_percent",
+        "fasting_plasma_glucose_mg_dl",
+        "fasting_hours",
+        "ogtt_2h_plasma_glucose_mg_dl",
+        "ogtt_glucose_load_g",
+        "random_plasma_glucose_mg_dl",
+        "classic_hyperglycemia_symptoms",
+        "hyperglycemic_crisis",
+        "assay_quality"
+      ],
+      "logic": {
+        "qualifying_paths": [
+          {
+            "id": "A1C",
+            "all_of": [
+              {"field": "a1c_percent", "op": ">=", "value": 6.5},
+              {"field": "assay_quality.a1c_valid", "op": "==", "value": true}
+            ]
+          },
+          {
+            "id": "FPG",
+            "all_of": [
+              {"field": "fasting_plasma_glucose_mg_dl", "op": ">=", "value": 126},
+              {"field": "fasting_hours", "op": ">=", "value": 8}
+            ]
+          },
+          {
+            "id": "OGTT",
+            "all_of": [
+              {"field": "ogtt_2h_plasma_glucose_mg_dl", "op": ">=", "value": 200},
+              {"field": "ogtt_glucose_load_g", "op": "==", "value": 75}
+            ]
+          },
+          {
+            "id": "RANDOM_SYMPTOMATIC",
+            "all_of": [
+              {"field": "random_plasma_glucose_mg_dl", "op": ">=", "value": 200},
+              {
+                "any_of": [
+                  {"field": "classic_hyperglycemia_symptoms", "op": "==", "value": true},
+                  {"field": "hyperglycemic_crisis", "op": "==", "value": true}
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "confirmation": {
+        "RANDOM_SYMPTOMATIC": "NOT_REQUIRED",
+        "other_paths": "TWO_ABNORMAL_RESULTS_REQUIRED_IF_NO_UNEQUIVOCAL_HYPERGLYCEMIA",
+        "discordant_tests": "REPEAT_TEST_ABOVE_DIAGNOSTIC_CUTPOINT"
+      },
+      "measurement_quality": {
+        "glucose_sample": "VENOUS_PLASMA_FOR_DIAGNOSTIC_THRESHOLDS",
+        "a1c": "NGSP_CERTIFIED_DCCT_STANDARDIZED_OR_VALID_DIAGNOSTIC_METHOD",
+        "cgm": "NOT_DIAGNOSTIC"
+      },
+      "space_applicability": "REQUIRES_SPACE_SPECIFIC_VALIDATION"
+    },
+    {
+      "criterion_id": "CRIT-DKA-2024",
+      "condition_id": "DKA",
+      "version": "2024.1",
+      "population": "ADULT",
+      "source_ids": ["SRC-DKA-2024"],
+      "logic": {
+        "all_of": [
+          {
+            "any_of": [
+              {"field": "known_diabetes", "op": "==", "value": true},
+              {"field": "plasma_glucose_mg_dl", "op": ">=", "value": 200}
+            ]
+          },
+          {
+            "any_of": [
+              {"field": "beta_hydroxybutyrate_mmol_l", "op": ">=", "value": 3.0},
+              {"field": "urine_ketones_plus", "op": ">=", "value": 2}
+            ]
+          },
+          {
+            "any_of": [
+              {"field": "venous_pH", "op": "<", "value": 7.3},
+              {"field": "bicarbonate_mmol_l", "op": "<", "value": 18}
+            ]
+          }
+        ]
+      },
+      "required_components": ["DIABETES_OR_HYPERGLYCEMIA", "KETOSIS", "ACIDOSIS"],
+      "preferred_ketone_test": "BETA_HYDROXYBUTYRATE",
+      "anion_gap_primary_diagnostic_criterion": false,
+      "resolution": {
+        "all_of": [
+          {"field": "beta_hydroxybutyrate_mmol_l", "op": "<", "value": 0.6},
+          {
+            "any_of": [
+              {"field": "venous_pH", "op": ">=", "value": 7.3},
+              {"field": "bicarbonate_mmol_l", "op": ">=", "value": 18}
+            ]
+          }
+        ]
+      },
+      "space_applicability": "REQUIRES_SPACE_SPECIFIC_VALIDATION"
+    },
+    {
+      "criterion_id": "CRIT-OH-AHA-2024",
+      "condition_id": "ORTHOSTATIC_HYPOTENSION",
+      "version": "2024.1",
+      "population": "ADULT",
+      "source_ids": ["SRC-AHA-OH-2024"],
+      "context": {
+        "requires_gravity_supporting_upright_transition": true,
+        "standing_window_minutes": 3
+      },
+      "logic": {
+        "any_of": [
+          {"derived_field": "delta_sbp_mm_hg", "op": "<=", "value": -20},
+          {"derived_field": "delta_dbp_mm_hg", "op": "<=", "value": -10}
+        ]
+      },
+      "measurement_quality": {
+        "baseline_and_upright_bp_required": true,
+        "time_since_upright_required": true,
+        "sustained_reduction_required": true
+      },
+      "etiology_confirmed_by_criterion": false,
+      "space_applicability": "CONTEXT_DEPENDENT"
+    },
+    {
+      "criterion_id": "CRIT-POTS-HRS-NIH",
+      "condition_id": "POTS",
+      "version": "2015-2021.1",
+      "population": "ADULT",
+      "source_ids": ["SRC-HRS-POTS-2015", "SRC-NIH-POTS-2021"],
+      "logic": {
+        "all_of": [
+          {"derived_field": "sustained_delta_hr_bpm", "op": ">=", "value": 30},
+          {"field": "upright_window_minutes", "op": "<=", "value": 10},
+          {"field": "orthostatic_hypotension_present", "op": "==", "value": false},
+          {"field": "orthostatic_symptoms_frequent", "op": "==", "value": true},
+          {"field": "symptoms_improve_supine", "op": "==", "value": true},
+          {"field": "symptom_duration_months", "op": ">=", "value": 3},
+          {"field": "alternative_cause_present", "op": "==", "value": false}
+        ]
+      },
+      "alternative_causes": [
+        "DEHYDRATION",
+        "RECENT_BLOOD_LOSS",
+        "ANEMIA",
+        "FEVER",
+        "INFECTION",
+        "PAIN",
+        "HYPERTHYROIDISM",
+        "PHEOCHROMOCYTOMA",
+        "CARDIOACTIVE_OR_SYMPATHOMIMETIC_DRUG",
+        "SEVERE_DECONDITIONING"
+      ],
+      "space_applicability": "REQUIRES_SPACE_SPECIFIC_VALIDATION"
+    },
+    {
+      "criterion_id": "CRIT-AKI-KDIGO-2012",
+      "condition_id": "AKI",
+      "version": "2012.final",
+      "population": "ADULT",
+      "source_ids": ["SRC-KDIGO-AKI-2012"],
+      "logic": {
+        "any_of": [
+          {
+            "derived_field": "serum_creatinine_delta_mg_dl_48h",
+            "op": ">=",
+            "value": 0.3
+          },
+          {
+            "derived_field": "serum_creatinine_ratio_to_baseline_7d",
+            "op": ">=",
+            "value": 1.5
+          },
+          {
+            "all_of": [
+              {"field": "urine_output_ml_kg_h", "op": "<", "value": 0.5},
+              {"field": "urine_output_duration_h", "op": ">=", "value": 6}
+            ]
+          }
+        ]
+      },
+      "staging": [
+        {
+          "stage": 1,
+          "creatinine": "1.5-1.9x baseline OR increase >=0.3 mg/dL",
+          "urine_output": "<0.5 mL/kg/h for 6-12 h"
+        },
+        {
+          "stage": 2,
+          "creatinine": "2.0-2.9x baseline",
+          "urine_output": "<0.5 mL/kg/h for >=12 h"
+        },
+        {
+          "stage": 3,
+          "creatinine": ">=3.0x baseline OR >=4.0 mg/dL OR RRT initiated",
+          "urine_output": "<0.3 mL/kg/h for >=24 h OR anuria >=12 h"
+        }
+      ],
+      "missing_baseline_policy": "DO_NOT_INVENT_BASELINE",
+      "space_applicability": "REQUIRES_SPACE_SPECIFIC_VALIDATION"
+    },
+    {
+      "criterion_id": "CRIT-ANAPH-WAO-2020",
+      "condition_id": "ANAPHYLAXIS",
+      "version": "2020.1",
+      "population": "ADULT",
+      "source_ids": ["SRC-WAO-ANAPH-2020"],
+      "logic": {
+        "any_of": [
+          {
+            "id": "WAO_PATH_1",
+            "all_of": [
+              {"field": "acute_onset_minutes_to_hours", "op": "==", "value": true},
+              {"field": "skin_or_mucosal_involvement", "op": "==", "value": true},
+              {
+                "any_of": [
+                  {"field": "respiratory_compromise", "op": "==", "value": true},
+                  {"field": "reduced_bp_or_end_organ_symptoms", "op": "==", "value": true},
+                  {"field": "severe_gi_symptoms", "op": "==", "value": true}
+                ]
+              }
+            ]
+          },
+          {
+            "id": "WAO_PATH_2",
+            "all_of": [
+              {"field": "acute_onset_minutes_to_hours", "op": "==", "value": true},
+              {"field": "known_or_highly_probable_allergen", "op": "==", "value": true},
+              {
+                "any_of": [
+                  {"field": "adult_sbp_mm_hg", "op": "<", "value": 90},
+                  {"derived_field": "sbp_drop_percent", "op": ">", "value": 30},
+                  {"field": "bronchospasm", "op": "==", "value": true},
+                  {"field": "laryngeal_involvement", "op": "==", "value": true}
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "confirmation": "NO_LAB_CONFIRMATION_REQUIRED_BEFORE_EMERGENCY_MANAGEMENT",
+      "space_applicability": "APPLICABLE_WITH_LIMITATIONS"
+    }
+  ]
+}

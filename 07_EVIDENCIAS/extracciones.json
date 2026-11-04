@@ -1,0 +1,194 @@
+[
+  {
+    "evidence_id": "E001",
+    "source_id": "S01",
+    "locator": "PDF p.32; §4.1.1, V1 4001",
+    "evidence": "“at or above 32.9 ml/min/kg”",
+    "applicability": "mL/min/kg; crew con EVA en microgravedad",
+    "mapping": "C001; R-AER-01. citeturn6view0"
+  },
+  {
+    "evidence_id": "E002",
+    "source_id": "S01",
+    "locator": "sección V1 4002; página exacta en esta recuperación `NOT_FOUND`",
+    "evidence": "Requisito: VO₂max ≥36,5 para condiciones previstas de EVA en superficie extraterrestre.",
+    "applicability": "mL/min/kg",
+    "mapping": "C001; R-AER-02. citeturn5view0"
+  },
+  {
+    "evidence_id": "E003",
+    "source_id": "S01",
+    "locator": "V1 4003; página exacta `NOT_FOUND`",
+    "evidence": "Requisito: capacidad aeróbica inflight ≥80 % preflight.",
+    "applicability": "% baseline",
+    "mapping": "C001; R-AER-03. citeturn5view0"
+  },
+  {
+    "evidence_id": "E004",
+    "source_id": "S01",
+    "locator": "PDF p.38; §4.6, V1 4023/4024; Table 4.6-1",
+    "evidence": "Fuerza inflight debe conservar ≥80 % preflight; tabla define requisitos preflight por actividad.",
+    "applicability": "% baseline / múltiplos BW",
+    "mapping": "C002. citeturn6view1"
+  },
+  {
+    "evidence_id": "E005",
+    "source_id": "S01",
+    "locator": "PDF p.39; §4.7, V1 4027",
+    "evidence": "BMD hip/spine ≥95 %; femoral neck ≥90 % del preflight.",
+    "applicability": "% baseline",
+    "mapping": "C003. citeturn6view2"
+  },
+  {
+    "evidence_id": "E006",
+    "source_id": "S01",
+    "locator": "PDF p.40; §4.8, V1 4030",
+    "evidence": "“less than 600 mSv”",
+    "applicability": "mSv effective career dose",
+    "mapping": "C032; R-RAD-01. citeturn6view3"
+  },
+  {
+    "evidence_id": "E007",
+    "source_id": "S02",
+    "locator": "§6.2, V2 6004; PDF Rev F page `NOT_FOUND`",
+    "evidence": "promedio de 1 h ppCO₂ ≤3 mmHg",
+    "applicability": "mmHg; habitable volume",
+    "mapping": "C027; R-CO2-01. citeturn10search0turn19search4"
+  },
+  {
+    "evidence_id": "E008",
+    "source_id": "S02",
+    "locator": "§6.2, V2 6006; PDF page `NOT_FOUND`",
+    "evidence": "rango de presión para exposición humana indefinida: 34,5 kPa < P ≤103 kPa.",
+    "applicability": "kPa / psia",
+    "mapping": "C026/C030/ambiental. citeturn10search0"
+  },
+  {
+    "evidence_id": "E009",
+    "source_id": "S02",
+    "locator": "§7.4.3, V2 7042",
+    "evidence": "El sistema debe proporcionar contramedidas contra intolerancia ortostática en transición de ingravidez a gravedad/Az.",
+    "applicability": "requisito funcional",
+    "mapping": "C005/C043. citeturn19search2"
+  },
+  {
+    "evidence_id": "E010",
+    "source_id": "S35",
+    "locator": "NASA risk page; PDF page `NOT_FOUND`",
+    "evidence": "En 11 tripulantes estudiados, 6 mostraron flujo yugular estancado/reverso; uno tuvo trombo oclusivo tratado inflight.",
+    "applicability": "n=11; flight ~day 50",
+    "mapping": "C006; investigación, no umbral. citeturn27search0"
+  },
+  {
+    "evidence_id": "E011",
+    "source_id": "S06",
+    "locator": "2025 bone risk record; página `NOT_FOUND`",
+    "evidence": "Vuelo largo >90–100 días se asoció con mayor tasa relativa de fracturas de cadera/columna postflight; QCT añade información no captada por DXA.",
+    "applicability": "astronautas LD",
+    "mapping": "C003; seguimiento/risk modeling. citeturn11search7"
+  },
+  {
+    "evidence_id": "E012",
+    "source_id": "S07",
+    "locator": "NASA SANS risk page",
+    "evidence": "NASA informa cambios SANS en más de la mitad de tripulantes en alguna manifestación; mecanismo y consecuencias siguen bajo estudio.",
+    "applicability": "crew spaceflight",
+    "mapping": "C009. citeturn11search2"
+  },
+  {
+    "evidence_id": "E013",
+    "source_id": "S09",
+    "locator": "NASA immune risk",
+    "evidence": "Reactivación de virus latentes está documentada y se correlaciona con cambios inmunes; susceptibilidad clínica final aún incierta.",
+    "applicability": "astronautas",
+    "mapping": "C018/C019. citeturn12search0"
+  },
+  {
+    "evidence_id": "E014",
+    "source_id": "S10",
+    "locator": "NASA sleep risk",
+    "evidence": "Sueño reducido/circadiano y carga de trabajo son riesgos para desempeño y salud.",
+    "applicability": "crew",
+    "mapping": "C012-C015. citeturn12search1"
+  },
+  {
+    "evidence_id": "E015",
+    "source_id": "S11",
+    "locator": "NASA sensorimotor risk",
+    "evidence": "Altered gravity afecta vestibular, marcha, postura y control motor, especialmente alrededor de transiciones G.",
+    "applicability": "crew",
+    "mapping": "C010/C011/C043. citeturn12search2"
+  },
+  {
+    "evidence_id": "E016",
+    "source_id": "S14",
+    "locator": "NASA hypoxia risk",
+    "evidence": "Hipoxia leve puede causar confusión, cefalea, alteración visual y del sueño; NASA sigue investigando tolerancia en ambientes exploration.",
+    "applicability": "exploration atmosphere",
+    "mapping": "C026/C015. citeturn18search10"
+  },
+  {
+    "evidence_id": "E017",
+    "source_id": "S36",
+    "locator": "NASA DCS",
+    "evidence": "Ante síntomas DCS durante EVA, NASA describe finalización segura pero rápida de la EVA y retorno al ambiente presurizado; protocolos detallados son mission-specific.",
+    "applicability": "EVA",
+    "mapping": "C030. citeturn27search1"
+  },
+  {
+    "evidence_id": "E018",
+    "source_id": "S15",
+    "locator": "NASA medication risk",
+    "evidence": "Spaceflight puede modificar estabilidad/eficacia y PK/PD respecto a Tierra.",
+    "applicability": "long-duration exploration",
+    "mapping": "C040. citeturn18search5"
+  },
+  {
+    "evidence_id": "E019",
+    "source_id": "S17",
+    "locator": "NASA IMM 2026",
+    "evidence": "IMM evalúa >100 condiciones y recursos mediante simulaciones Monte Carlo para escenarios de misión.",
+    "applicability": "mission planning",
+    "mapping": "Todas condiciones agudas; no diagnóstico. citeturn21search1"
+  },
+  {
+    "evidence_id": "E020",
+    "source_id": "S34",
+    "locator": "pp.70–80, *J Appl Physiol* 139(1), 2025",
+    "evidence": "Estudio postflight de standing con/sin compression garment tras vuelo de larga duración.",
+    "applicability": "astronautas/cosmonautas; postflight",
+    "mapping": "C005; no trasladar como prueba microgravity. citeturn26search0turn26search2"
+  },
+  {
+    "evidence_id": "E021",
+    "source_id": "S37",
+    "locator": "NASA toxic risk DAG",
+    "evidence": "Exposición tóxica puede requerir monitorización ambiental y fisiológica y afectar varios sistemas.",
+    "applicability": "crew/habitat",
+    "mapping": "C028/C041; episode fusion. citeturn27search7"
+  },
+  {
+    "evidence_id": "E022",
+    "source_id": "S38",
+    "locator": "NASA hearing risk",
+    "evidence": "Ruido puede afectar audición, sueño, comunicación y rendimiento.",
+    "applicability": "ISS/spaceflight",
+    "mapping": "C035. citeturn27search3"
+  },
+  {
+    "evidence_id": "E023",
+    "source_id": "S17",
+    "locator": "IMM documentation",
+    "evidence": "IMM integra incidencia, duración, recursos y deterioro funcional; validation studies muestran predicción imperfecta.",
+    "applicability": "STS/ISS",
+    "mapping": "planificación/prognosis research. citeturn21search4turn21search17"
+  },
+  {
+    "evidence_id": "E024",
+    "source_id": "S19",
+    "locator": "ExMC accepted condition list",
+    "evidence": "Exploración requiere identificar condiciones y subset tratable, luego mapear capacidades al sistema.",
+    "applicability": "exploration missions",
+    "mapping": "arquitectura de pathway/authorization. citeturn21search13turn21search18"
+  }
+]

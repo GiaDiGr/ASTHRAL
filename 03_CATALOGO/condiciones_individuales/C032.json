@@ -1,0 +1,32 @@
+{
+  "condition_id": "C032",
+  "catalog_record": {
+    "condition_id": "C032",
+    "name_specialty": "Exposición acumulada a radiación ionizante/carcinogénesis / radiobiología",
+    "description_spaceflight": "Riesgo de cáncer y otros efectos obliga a seguimiento dosimétrico.",
+    "risks_symptoms": "GCR/SPE/duración/escudo.",
+    "biomarkers_sensors_tests": "Dosimetría efectiva y órgano-específica.",
+    "baselines_environment_interactions": "Dosis acumulada previa; entorno de radiación.",
+    "primary_evidence": "S01, S16. citeturn6view3turn18search9",
+    "limits_authorizations_state": "Dosis ≠ diagnóstico de cáncer; conversiones dosimétricas deben ser válidas. `ES`."
+  },
+  "clinical_pathway_profile_as_published": "**P:** ALARA y shielding; **M:** dosimetría; **Q:** tipo de dosis/unidad/órgano; **D:** acumulación vs límites; **A:** exposición, no cáncer; **DD:** N/A para cumplimiento; **T:** evento radiológico separado; **I:** reducción de exposición según misión; **R/F:** vigilancia de carrera; **G:** modelos de riesgo independientes.",
+  "coverage_states": {
+    "prevention": "ES",
+    "monitoring": "ES",
+    "data_quality": "ES",
+    "detection": "ES",
+    "assessment": "RV",
+    "differential_diagnosis": "NA",
+    "triage": "RMA",
+    "intervention_authorized": "RMA",
+    "recovery": "NA",
+    "follow_up": "ES",
+    "prognosis": "RV"
+  },
+  "source_ids": [
+    "S01",
+    "S16"
+  ],
+  "NOTICE": "Pathway text is an outline; not an authorized diagnostic or treatment protocol."
+}

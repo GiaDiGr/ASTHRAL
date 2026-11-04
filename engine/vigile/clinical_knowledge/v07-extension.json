@@ -1,0 +1,121 @@
+{
+  "version": "0.7.0",
+  "sources": [
+    {
+      "source_id": "SRC-ADA-HYPO-2026",
+      "organization": "American Diabetes Association",
+      "title": "6. Glycemic Goals, Hypoglycemia, and Hyperglycemic Crises: Standards of Care in Diabetes—2026",
+      "year": 2026,
+      "doi": "10.2337/dc26-S006",
+      "url": "https://doi.org/10.2337/dc26-S006",
+      "section": "Hypoglycemia; Table 6.4",
+      "verification": "VERIFIED",
+      "type": "CLINICAL_STANDARD",
+      "verified_date": "2026-10-20",
+      "verification_method": "Original publisher and PMC indexed full-text sections; not independent clinical validation",
+      "population_scope": "Adults with known diabetes; research interpretation only"
+    }
+  ],
+  "criteria": [
+    {
+      "criterion_id": "CRIT-HYPO-ADA-2026",
+      "condition_id": "HYPOGLYCEMIA",
+      "version": "2026.1-restricted-adult-diabetes",
+      "population": "ADULT_WITH_KNOWN_DIABETES",
+      "source_ids": [
+        "SRC-ADA-HYPO-2026"
+      ],
+      "logic": {
+        "all_of": [
+          {
+            "field": "known_diabetes",
+            "op": "==",
+            "value": true
+          },
+          {
+            "any_of": [
+              {
+                "field": "plasma_glucose_mg_dl",
+                "op": "<",
+                "value": 70
+              },
+              {
+                "field": "capillary_glucose_mg_dl",
+                "op": "<",
+                "value": 70
+              },
+              {
+                "all_of": [
+                  {
+                    "field": "altered_mental_or_physical_status",
+                    "op": "==",
+                    "value": true
+                  },
+                  {
+                    "field": "assistance_required_for_hypoglycemia",
+                    "op": "==",
+                    "value": true
+                  },
+                  {
+                    "field": "hypoglycemia_event_clinically_attributed",
+                    "op": "==",
+                    "value": true
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "space_applicability": "REQUIRES_SPACE_SPECIFIC_VALIDATION",
+      "classification": {
+        "level_1": "54 <= glucose < 70 mg/dL",
+        "level_2": "glucose < 54 mg/dL",
+        "level_3": "Clinically attributed severe event with altered mental/physical function requiring assistance, independent of measured glucose"
+      },
+      "limitations": [
+        "NOT_ETIOLOGIC_DIAGNOSIS",
+        "CGM_ALONE_NOT_USED_IN_THIS_RESTRICTED_ROUTE",
+        "NO_FIXED_RECHECK_INTERVAL_WITHOUT_CONTEXT",
+        "NO_NONDIABETIC_HYPOGLYCEMIA_DIAGNOSIS"
+      ]
+    }
+  ],
+  "protocols": [
+    {
+      "protocol_id": "PROT-HYPO-REVIEW-2026",
+      "source_ids": [
+        "SRC-ADA-HYPO-2026"
+      ],
+      "required_resources": [
+        "verified_glucose_measurement",
+        "qualified_medical_review"
+      ],
+      "purpose": "Review only; no doses or execution",
+      "mission_approved": false
+    }
+  ],
+  "tests": [
+    {
+      "test_id": "TEST-HYPO-GLUCOSE",
+      "source_ids": [
+        "SRC-ADA-HYPO-2026"
+      ],
+      "purpose": "Obtain or verify blood glucose with suitable method"
+    },
+    {
+      "test_id": "TEST-HYPO-CONTEXT",
+      "source_ids": [
+        "SRC-ADA-HYPO-2026"
+      ],
+      "purpose": "Assess altered function, assistance, diabetes and plausible causes"
+    },
+    {
+      "test_id": "TEST-HYPO-RECHECK",
+      "source_ids": [
+        "SRC-ADA-HYPO-2026"
+      ],
+      "purpose": "Repeat blood glucose and reassess; timing requires human protocol"
+    }
+  ]
+}

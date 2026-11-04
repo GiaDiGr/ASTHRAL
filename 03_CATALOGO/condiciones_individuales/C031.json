@@ -1,0 +1,31 @@
+{
+  "condition_id": "C031",
+  "catalog_record": {
+    "condition_id": "C031",
+    "name_specialty": "Barotrauma/ear-sinus block / ORL",
+    "description_spaceflight": "Condición ambiental incluida en IMM para cambios de presión.",
+    "risks_symptoms": "Cambios de presión.",
+    "biomarkers_sensors_tests": "Síntomas, examen otológico si disponible, presión.",
+    "baselines_environment_interactions": "Historia ORL.",
+    "primary_evidence": "S17. citeturn21search0turn21search1",
+    "limits_authorizations_state": "Protocolo específico no extraído. `RMA`."
+  },
+  "clinical_pathway_profile_as_published": "**P:** perfiles de presión; **M:** síntomas+presión; **Q:** cronología; **D:** screening; **A/DD:** DCS/ORL; **T/I:** médico; **R/F:** resolución; **G:** `NPA`.",
+  "coverage_states": {
+    "prevention": "ES",
+    "monitoring": "RV",
+    "data_quality": "ES",
+    "detection": "RV",
+    "assessment": "RMA",
+    "differential_diagnosis": "RMA",
+    "triage": "RMA",
+    "intervention_authorized": "RMA",
+    "recovery": "RV",
+    "follow_up": "RV",
+    "prognosis": "NPA"
+  },
+  "source_ids": [
+    "S17"
+  ],
+  "NOTICE": "Pathway text is an outline; not an authorized diagnostic or treatment protocol."
+}

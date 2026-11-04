@@ -1,0 +1,159 @@
+{
+  "rule_id": "VIGILE-ENV-002",
+  "rule_version": "1.0.0",
+  "title": "Nominal one-hour cabin ppCO2 limit",
+  "domain": "ENVIRONMENTAL_HEALTH",
+  "condition_id": "CABIN_CO2_EXPOSURE",
+  "purpose": "Evaluate the one-hour average ppCO2 in a habitable volume against the nominal NASA limit.",
+  "rule_kind": "ENVIRONMENTAL_STANDARD_COMPLIANCE",
+  "evidence_class": "NASA_STANDARD",
+  "evidence_status": "DOCUMENTED_AND_COMPUTABLE",
+  "software_validation_status": "REQUIRES_IMPLEMENTATION_VALIDATION",
+  "authorization": {
+    "evaluation": "AUTO_EVALUATION_ALLOWED",
+    "off_nominal_thresholds": "REQUIRES_MISSION_AUTHORIZATION",
+    "clinical_action": "REQUIRES_MEDICAL_AUTHORIZATION"
+  },
+  "applicability": {
+    "environment": "HABITABLE_VOLUME",
+    "mode": "NOMINAL"
+  },
+  "inputs": [
+    {
+      "name": "one_hour_average_ppco2",
+      "type": "number",
+      "canonical_unit": "mmHg",
+      "required": true
+    },
+    {
+      "name": "window_coverage_complete",
+      "type": "boolean",
+      "required": true
+    },
+    {
+      "name": "aggregation_method_validated",
+      "type": "boolean",
+      "required": true
+    },
+    {
+      "name": "compartment_id",
+      "type": "string",
+      "required": true
+    },
+    {
+      "name": "data_quality_status",
+      "type": "enum",
+      "required": true
+    }
+  ],
+  "derived_variables": [],
+  "logic": {
+    "decision": [
+      {
+        "when": "window_coverage_complete != true OR aggregation_method_validated != true OR data_quality_status != ACCEPTABLE",
+        "result": "INCONCLUSIVE"
+      },
+      {
+        "when": "one_hour_average_ppco2 <= 3",
+        "result": "PASS"
+      },
+      {
+        "when": "one_hour_average_ppco2 > 3",
+        "result": "FAIL_REQUIREMENT"
+      }
+    ]
+  },
+  "thresholds": {
+    "maximum_one_hour_average_ppco2": {
+      "value": 3,
+      "unit": "mmHg",
+      "operator": "<="
+    }
+  },
+  "temporal_window": {
+    "duration": 1,
+    "unit": "hour",
+    "aggregation": "VALIDATED_ONE_HOUR_AVERAGE",
+    "note": "The NASA requirement specifies the one-hour average but does not itself prescribe VIGILE's signal-processing implementation."
+  },
+  "confounders": [
+    "incomplete temporal coverage",
+    "local CO2 pockets",
+    "sensor drift",
+    "compartment mixing",
+    "crew activity and metabolic generation",
+    "payload CO2 generation"
+  ],
+  "missing_data_policy": "INCONCLUSIVE",
+  "data_quality_policy": "Do not calculate compliance from a single instantaneous sample when the required one-hour average cannot be established.",
+  "output": {
+    "primary": "rule_result",
+    "environmental_alert": "GENERATE_ON_FAIL",
+    "clinical_diagnosis": "NOT_DETERMINED_BY_THIS_RULE"
+  },
+  "severity_semantics": {
+    "on_failure": "NOMINAL_CO2_REQUIREMENT_NOT_MET",
+    "clinical_severity": "REQUIRES_SEPARATE_CLINICAL_ASSESSMENT"
+  },
+  "follow_up": [
+    "Trigger environmental systems review/alert.",
+    "Use mission-specific lower-level requirements for off-nominal exposure management.",
+    "Assess symptoms through a separate clinical pathway when present."
+  ],
+  "source_locators": [
+    {
+      "source_id": "NASA-STD-3001-V2-REV-F",
+      "requirement": "V2 6004",
+      "section": "6.2.1.3",
+      "printed_page": 51,
+      "pdf_page_index_0based": 50,
+      "url": "https://standards.nasa.gov/system/files/tmp/NASA-STD-3001%20Vol%202%20Rev%20F.pdf"
+    },
+    {
+      "source_id": "NASA-STD-3001-V2-REV-F",
+      "requirement": "V2 6020",
+      "section": "6.2.5.1",
+      "printed_page": 58,
+      "pdf_page_index_0based": 57,
+      "use": "ATMOSPHERIC_DATA_RECORDING"
+    }
+  ],
+  "test_cases": [
+    {
+      "id": "ENV002-T01",
+      "synthetic": true,
+      "inputs": {
+        "one_hour_average_ppco2": 3.0,
+        "window_coverage_complete": true,
+        "aggregation_method_validated": true,
+        "compartment_id": "HAB-1",
+        "data_quality_status": "ACCEPTABLE"
+      },
+      "expected": "PASS"
+    },
+    {
+      "id": "ENV002-T02",
+      "synthetic": true,
+      "inputs": {
+        "one_hour_average_ppco2": 3.01,
+        "window_coverage_complete": true,
+        "aggregation_method_validated": true,
+        "compartment_id": "HAB-1",
+        "data_quality_status": "ACCEPTABLE"
+      },
+      "expected": "FAIL_REQUIREMENT"
+    },
+    {
+      "id": "ENV002-T03",
+      "synthetic": true,
+      "inputs": {
+        "one_hour_average_ppco2": 4.0,
+        "window_coverage_complete": false,
+        "aggregation_method_validated": true,
+        "compartment_id": "HAB-1",
+        "data_quality_status": "ACCEPTABLE"
+      },
+      "expected": "INCONCLUSIVE"
+    }
+  ]
+}

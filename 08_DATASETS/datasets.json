@@ -1,0 +1,86 @@
+[
+  {
+    "dataset_id": "D001",
+    "dataset_access_url": "OSD-195 — `https://osdr.nasa.gov/bio/repo/data/studies/OSD-195`",
+    "verified_variables": "Human vastus lateralis gene expression, before/after 21-d normoxic bed rest; 14 male participants; microarray. citeturn22search0",
+    "format_license_access": "ISA metadata + microarray files; licencia específica `NOT_FOUND` en ficha recuperada.",
+    "suitability": "Analog de desacondicionamiento muscular; no validación clínica."
+  },
+  {
+    "dataset_id": "D002",
+    "dataset_access_url": "OSD-198 — `https://osdr.nasa.gov/bio/repo/data/studies/OSD-198`",
+    "verified_variables": "14 humanos, 21-d normoxic/hypoxic bed rest y hypoxic ambulation; muscle miRNA. citeturn22search1",
+    "format_license_access": "Metadata/microarray; license `NOT_FOUND`.",
+    "suitability": "Músculo + hipoxia; `ANALOG_EVIDENCE`."
+  },
+  {
+    "dataset_id": "D003",
+    "dataset_access_url": "OSD-942 — `https://osdr.nasa.gov/bio/repo/data/studies/OSD-942`",
+    "verified_variables": "70-d bed rest, baseline/control/exercise, vastus lateralis RNA; 44 samples visibles. citeturn22search2",
+    "format_license_access": "Metadata + transcriptomics; license `NOT_FOUND`.",
+    "suitability": "Contramedidas musculares / longitudinal."
+  },
+  {
+    "dataset_id": "D004",
+    "dataset_access_url": "OSD-370 — `https://osdr.nasa.gov/bio/repo/data/studies/OSD-370`",
+    "verified_variables": "Human bed rest/retraining, vastus lateralis transcriptomics, 60 samples. citeturn22search3",
+    "format_license_access": "Microarray/metadata; license `NOT_FOUND`.",
+    "suitability": "Deterioro/recuperación muscular."
+  },
+  {
+    "dataset_id": "D005",
+    "dataset_access_url": "OSD-816 — `https://osdr.nasa.gov/bio/repo/search` buscar `OSD-816`",
+    "verified_variables": "Ex vivo human retinal/translaminar system; pressure ICP:IOP, optic nerve tilt, RT-PCR/electrophysiology; release Jul 2026. citeturn23search0",
+    "format_license_access": "Acceso OSDR; licencia concreta `NOT_FOUND`.",
+    "suitability": "Investigación mecanística SANS; no astronaut clinical dataset."
+  },
+  {
+    "dataset_id": "D006",
+    "dataset_access_url": "OSD-53 — `https://osdr.nasa.gov/bio/repo/data/studies/OSD-53`",
+    "verified_variables": "Whole blood, seis astronautas pre/post vuelo corto, panel de 234 stress genes; processed data retained. citeturn23search1",
+    "format_license_access": "Microarray/process data; originales perdidos según ficha.",
+    "suitability": "Inmunidad/stress omics; muestra pequeña."
+  },
+  {
+    "dataset_id": "D007",
+    "dataset_access_url": "OSD-530 — `https://osdr.nasa.gov/bio/repo/data/studies/OSD-530`",
+    "verified_variables": "Plasma cfRNA longitudinal, seis astronautas ISS >120 días, JAXA CFE. citeturn23search2",
+    "format_license_access": "RNA-seq; licencia concreta `NOT_FOUND`.",
+    "suitability": "Longitudinal human spaceflight omics."
+  },
+  {
+    "dataset_id": "D008",
+    "dataset_access_url": "OSD-570 — `https://osdr.nasa.gov/bio/repo/data/studies/OSD-570/`",
+    "verified_variables": "Inspiration4 PBMC single-cell RNA/ATAC y T/B repertoire, cuatro tripulantes, múltiples puntos pre/post. citeturn25search1",
+    "format_license_access": "CC0-1.0; Illumina; 24 samples.",
+    "suitability": "Immune longitudinal human spaceflight; n muy pequeño."
+  },
+  {
+    "dataset_id": "D009",
+    "dataset_access_url": "OSD-656 — `https://osdr.nasa.gov/bio/repo/data/studies/OSD-656`",
+    "verified_variables": "Inspiration4 urine, 203 inflammatory/cytokine/chemokine proteins, pre/post. citeturn25search2",
+    "format_license_access": "CC0-1.0.",
+    "suitability": "Biomarcadores inflamatorios."
+  },
+  {
+    "dataset_id": "D010",
+    "dataset_access_url": "OSD-575 — `https://osdr.nasa.gov/bio/repo/data/studies/OSD-575`",
+    "verified_variables": "Serum: comprehensive metabolic panel + immune/cardiac cytokines, multiple pre/post timepoints. citeturn25search3",
+    "format_license_access": "CC0-1.0.",
+    "suitability": "Metabolismo/inmunidad/CV; exploratory validation."
+  },
+  {
+    "dataset_id": "D011",
+    "dataset_access_url": "NASA LSDA/NLSP — `https://nlsp.nasa.gov/`",
+    "verified_variables": "De-identified human research from spaceflight and analogs; incluye bed-rest campaigns y Standard Measures. citeturn24search2turn24search3",
+    "format_license_access": "Public + controlled; catalog license unspecified.",
+    "suitability": "Fuente prioritaria de datos humanos; verificar derechos dataset por dataset."
+  },
+  {
+    "dataset_id": "D012",
+    "dataset_access_url": "ESA HREDA — portal HREDA de ESA",
+    "verified_variables": "Investigaciones HRE desde 1972; datos públicos/restringidos según entrada. citeturn13search3",
+    "format_license_access": "Autenticación obligatoria según help page; licencia dataset-specific `NOT_FOUND`.",
+    "suitability": "Complemento ESA; no asumir descarga libre."
+  }
+]

@@ -1,0 +1,31 @@
+{
+  "condition_id": "C007",
+  "catalog_record": {
+    "condition_id": "C007",
+    "name_specialty": "Arritmia/evento cardiovascular agudo / cardiovascular-emergencias",
+    "description_spaceflight": "Condición incluida en el espacio de planificación médica de NASA.",
+    "risks_symptoms": "Factores personales, fisiología espacial, enfermedad aguda.",
+    "biomarkers_sensors_tests": "ECG, HR, BP, síntomas.",
+    "baselines_environment_interactions": "Baseline ECG/historia si autorizado.",
+    "primary_evidence": "S17. citeturn21search0turn21search2",
+    "limits_authorizations_state": "Protocolo de diagnóstico/tratamiento requiere autoridad médica. `RMA`."
+  },
+  "clinical_pathway_profile_as_published": "**P:** selección/baseline; **M:** ECG/HR/BP/síntomas; **Q:** señal ECG; **D:** algoritmos de dispositivo validados únicamente; **A/DD/T:** médico; **I:** bloqueado salvo protocolo de emergencia; **R/F:** registro episodio; **G:** IMM puede informar planificación, no diagnóstico.",
+  "coverage_states": {
+    "prevention": "RV",
+    "monitoring": "ES",
+    "data_quality": "ES",
+    "detection": "RV",
+    "assessment": "RMA",
+    "differential_diagnosis": "RMA",
+    "triage": "RMA",
+    "intervention_authorized": "RMA",
+    "recovery": "RV",
+    "follow_up": "RV",
+    "prognosis": "RO"
+  },
+  "source_ids": [
+    "S17"
+  ],
+  "NOTICE": "Pathway text is an outline; not an authorized diagnostic or treatment protocol."
+}

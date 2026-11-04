@@ -1,0 +1,32 @@
+{
+  "condition_id": "C029",
+  "catalog_record": {
+    "condition_id": "C029",
+    "name_specialty": "Exposición a polvo celestial/lunar / ocupacional-respiratorio",
+    "description_spaceflight": "Polvo externo puede introducirse en vehículos/hábitats de superficie.",
+    "risks_symptoms": "EVA y hábitat de superficie.",
+    "biomarkers_sensors_tests": "Monitoreo partículas/exposición, síntomas.",
+    "baselines_environment_interactions": "Exposición cero/normal; operaciones EVA.",
+    "primary_evidence": "S03, S37. citeturn27search5turn27search7",
+    "limits_authorizations_state": "Umbrales operacionales específicos no recuperados. `RV`."
+  },
+  "clinical_pathway_profile_as_published": "**P:** exclusión/mitigación de polvo; **M:** partículas/exposición; **Q:** sensor/ubicación; **D:** regla mission-specific; **A/DD:** irritación, toxicidad, infección; **T/I:** misión; **R/F:** síntomas/exposición acumulada; **G:** `RV`.",
+  "coverage_states": {
+    "prevention": "ES",
+    "monitoring": "RV",
+    "data_quality": "ES",
+    "detection": "RV",
+    "assessment": "RV",
+    "differential_diagnosis": "RV",
+    "triage": "RMA",
+    "intervention_authorized": "RMA",
+    "recovery": "RV",
+    "follow_up": "RV",
+    "prognosis": "RO"
+  },
+  "source_ids": [
+    "S03",
+    "S37"
+  ],
+  "NOTICE": "Pathway text is an outline; not an authorized diagnostic or treatment protocol."
+}

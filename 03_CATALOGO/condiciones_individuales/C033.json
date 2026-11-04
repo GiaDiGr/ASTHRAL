@@ -1,0 +1,32 @@
+{
+  "condition_id": "C033",
+  "catalog_record": {
+    "condition_id": "C033",
+    "name_specialty": "Síndrome/efectos agudos de radiación / emergencias-radiobiología",
+    "description_spaceflight": "IMM contempla radiation sickness para planificación médica.",
+    "risks_symptoms": "Evento radiológico suficientemente intenso.",
+    "biomarkers_sensors_tests": "Dosimetría, síntomas, hematología según protocolo.",
+    "baselines_environment_interactions": "Dosis previa y evento.",
+    "primary_evidence": "S17, S01. citeturn21search1turn6view3",
+    "limits_authorizations_state": "Umbrales clínicos detallados no extraídos; intervención bloqueada. `RMA`."
+  },
+  "clinical_pathway_profile_as_published": "**P:** monitoring/SPE shelter; **M:** dosis + clínica; **Q:** dosimetría compatible; **D:** thresholds ARS no consolidados aquí; **A/DD/T/I:** protocolo médico; **R/F:** hematología/órganos; **G:** blocked.",
+  "coverage_states": {
+    "prevention": "ES",
+    "monitoring": "ES",
+    "data_quality": "ES",
+    "detection": "RV",
+    "assessment": "RMA",
+    "differential_diagnosis": "RMA",
+    "triage": "RMA",
+    "intervention_authorized": "RMA",
+    "recovery": "RV",
+    "follow_up": "RV",
+    "prognosis": "RO"
+  },
+  "source_ids": [
+    "S01",
+    "S17"
+  ],
+  "NOTICE": "Pathway text is an outline; not an authorized diagnostic or treatment protocol."
+}

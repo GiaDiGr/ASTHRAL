@@ -1,0 +1,31 @@
+{
+  "condition_id": "C037",
+  "catalog_record": {
+    "condition_id": "C037",
+    "name_specialty": "Lesión/rendimiento comprometido durante EVA / medicina EVA",
+    "description_spaceflight": "EVA combina carga física, suit, DCS, hipoxia, CO₂ y fatiga.",
+    "risks_symptoms": "Suit, duración, ambiente, carga de trabajo.",
+    "biomarkers_sensors_tests": "Suit telemetry, HR, gases, síntomas/rendimiento.",
+    "baselines_environment_interactions": "Baseline funcional y perfil EVA.",
+    "primary_evidence": "S03. citeturn18search0",
+    "limits_authorizations_state": "Triaje e interrupción se rigen por reglas de misión. `RMA`."
+  },
+  "clinical_pathway_profile_as_published": "**P:** preparación EVA; **M:** suit+biomed; **Q:** tiempo y sensor sincronizados; **D:** reglas de EVA; **A/DD:** DCS/hipoxia/CO₂/lesión; **T/I:** mission control/onboard authority; **R/F:** post-EVA; **G:** task performance.",
+  "coverage_states": {
+    "prevention": "ES",
+    "monitoring": "ES",
+    "data_quality": "ES",
+    "detection": "RV",
+    "assessment": "RV",
+    "differential_diagnosis": "RV",
+    "triage": "RMA",
+    "intervention_authorized": "RMA",
+    "recovery": "RV",
+    "follow_up": "ES",
+    "prognosis": "RO"
+  },
+  "source_ids": [
+    "S03"
+  ],
+  "NOTICE": "Pathway text is an outline; not an authorized diagnostic or treatment protocol."
+}

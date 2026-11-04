@@ -1,0 +1,156 @@
+{
+  "rule_id": "VIGILE-ENV-003",
+  "rule_version": "1.0.0",
+  "title": "Total cabin pressure range for indefinite crew exposure",
+  "domain": "ENVIRONMENTAL_HEALTH",
+  "condition_id": "CABIN_PRESSURE_EXPOSURE",
+  "purpose": "Evaluate total pressure against the NASA range for indefinite crew exposure.",
+  "rule_kind": "ENVIRONMENTAL_STANDARD_COMPLIANCE",
+  "evidence_class": "NASA_STANDARD",
+  "evidence_status": "DOCUMENTED_AND_COMPUTABLE",
+  "software_validation_status": "REQUIRES_IMPLEMENTATION_VALIDATION",
+  "authorization": {
+    "evaluation": "AUTO_EVALUATION_ALLOWED",
+    "special_suited_operation_interpretation": "REQUIRES_MISSION_AUTHORIZATION",
+    "clinical_action": "REQUIRES_MEDICAL_AUTHORIZATION"
+  },
+  "applicability": {
+    "context": "INDEFINITE_CREW_EXPOSURE",
+    "limited_duration_spacesuit_or_special_operations": "NOT_COVERED_BY_THIS_RULE"
+  },
+  "inputs": [
+    {
+      "name": "total_pressure",
+      "type": "number",
+      "canonical_unit": "kPa",
+      "required": true
+    },
+    {
+      "name": "exposure_context",
+      "type": "enum",
+      "values": [
+        "INDEFINITE_CABIN",
+        "LIMITED_SPECIAL_OPERATION"
+      ],
+      "required": true
+    },
+    {
+      "name": "data_quality_status",
+      "type": "enum",
+      "required": true
+    }
+  ],
+  "derived_variables": [],
+  "logic": {
+    "decision": [
+      {
+        "when": "exposure_context != INDEFINITE_CABIN",
+        "result": "NOT_APPLICABLE"
+      },
+      {
+        "when": "data_quality_status != ACCEPTABLE",
+        "result": "INCONCLUSIVE"
+      },
+      {
+        "when": "total_pressure > 34.5 AND total_pressure <= 103",
+        "result": "PASS"
+      },
+      {
+        "when": "total_pressure <= 34.5 OR total_pressure > 103",
+        "result": "FAIL_REQUIREMENT"
+      }
+    ]
+  },
+  "thresholds": {
+    "lower_bound": {
+      "value": 34.5,
+      "unit": "kPa",
+      "operator": ">"
+    },
+    "upper_bound": {
+      "value": 103,
+      "unit": "kPa",
+      "operator": "<="
+    },
+    "equivalent_english_units": {
+      "lower": "5 psia, strict greater-than",
+      "upper": "15.0 psia, inclusive"
+    }
+  },
+  "temporal_window": {
+    "type": "INDEFINITE_EXPOSURE"
+  },
+  "confounders": [
+    "oxygen partial pressure",
+    "CO2",
+    "mission EVA architecture",
+    "special pressure operations"
+  ],
+  "missing_data_policy": "INCONCLUSIVE",
+  "data_quality_policy": "Pressure sensor value must be calibrated and associated with the crew exposure compartment.",
+  "output": {
+    "primary": "rule_result",
+    "clinical_diagnosis": "NOT_DETERMINED_BY_THIS_RULE"
+  },
+  "severity_semantics": {
+    "on_failure": "PRESSURE_EXPOSURE_REQUIREMENT_NOT_MET",
+    "clinical_severity": "REQUIRES_SEPARATE_ASSESSMENT"
+  },
+  "follow_up": [
+    "Environmental control alert and mission-protocol response.",
+    "Evaluate O2 and CO2 concurrently.",
+    "Special operations require their own authorized pressure/decompression pathway."
+  ],
+  "source_locators": [
+    {
+      "source_id": "NASA-STD-3001-V2-REV-F",
+      "requirement": "V2 6006",
+      "section": "6.2.2.1",
+      "printed_page": 52,
+      "pdf_page_index_0based": 51,
+      "url": "https://standards.nasa.gov/system/files/tmp/NASA-STD-3001%20Vol%202%20Rev%20F.pdf"
+    }
+  ],
+  "test_cases": [
+    {
+      "id": "ENV003-T01",
+      "synthetic": true,
+      "inputs": {
+        "total_pressure": 34.5,
+        "exposure_context": "INDEFINITE_CABIN",
+        "data_quality_status": "ACCEPTABLE"
+      },
+      "expected": "FAIL_REQUIREMENT"
+    },
+    {
+      "id": "ENV003-T02",
+      "synthetic": true,
+      "inputs": {
+        "total_pressure": 34.6,
+        "exposure_context": "INDEFINITE_CABIN",
+        "data_quality_status": "ACCEPTABLE"
+      },
+      "expected": "PASS"
+    },
+    {
+      "id": "ENV003-T03",
+      "synthetic": true,
+      "inputs": {
+        "total_pressure": 103.0,
+        "exposure_context": "INDEFINITE_CABIN",
+        "data_quality_status": "ACCEPTABLE"
+      },
+      "expected": "PASS"
+    },
+    {
+      "id": "ENV003-T04",
+      "synthetic": true,
+      "inputs": {
+        "total_pressure": 103.1,
+        "exposure_context": "INDEFINITE_CABIN",
+        "data_quality_status": "ACCEPTABLE"
+      },
+      "expected": "FAIL_REQUIREMENT"
+    }
+  ]
+}
