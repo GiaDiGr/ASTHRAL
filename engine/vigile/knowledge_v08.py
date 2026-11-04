@@ -5,6 +5,7 @@ from functools import lru_cache
 
 ROOT=Path(__file__).resolve().parents[2]
 SOURCES=[
+ ('docs/knowledge/ASTHRAL_LOCAL_KNOWLEDGE.md','IMPLEMENTATION_DOCUMENTATION_NOT_GUIDELINE','1.1.0'),
  ('docs/clinical/deep-research-report-2026-10-16.md','CLINICAL_RESEARCH_SYNTHESIS','2026-10-16'),
  ('01_INFORMES/REPORTE_CONSOLIDADO_COMPLETO.md','SPACE_RESEARCH_SYNTHESIS','PINNED_CORPUS'),
  ('docs/v07/README.md','IMPLEMENTATION_DOCUMENTATION_NOT_GUIDELINE','0.7.0'),
@@ -39,9 +40,10 @@ def document_terms(text):
 def sha(raw):return hashlib.sha256(raw).hexdigest()
 def canonical(rows):return json.dumps(rows,sort_keys=True,ensure_ascii=False).encode()
 
-def build(root,output):
+def build(root,output,sources=None):
     root=Path(root);rows=[];missing=[];documents=[]
-    for name,authority,version in SOURCES:
+    active_sources=(SOURCES[1:] if (root/SOURCES[1][0]).exists() else SOURCES) if sources is None else sources
+    for name,authority,version in active_sources:
         p=root/name
         if not p.exists():missing.append(name);continue
         raw=p.read_bytes();text=raw.decode('utf-8-sig');fingerprint=sha(raw)

@@ -41,7 +41,7 @@ def test_reduced_compute_is_explicit_and_statistics_bounded():
 
 @pytest.mark.parametrize('field,value',[('version','9999'),('url','https://invented.invalid'),('line',999)])
 def test_metadata_forgery_even_rehashed_is_rejected(tmp_path,field,value):
- p=tmp_path/'index.json';build(ROOT,p);data=json.loads(p.read_text(encoding='utf8'));row=next(b for b in data['blocks'] if b['reference']['authority']=='PRIMARY_SOURCE_SHORT_EXCERPT')
+ p=tmp_path/'index.json';build(ROOT,p);data=json.loads(p.read_text(encoding='utf8'));row=next((b for b in data['blocks'] if b['reference']['authority']=='PRIMARY_SOURCE_SHORT_EXCERPT'),data['blocks'][0]) # Same metadata-integrity assertions on the available pinned corpus.
  row['reference'][field]=value;row['id']='D-'+sha(canonical(row['reference']))[:20];data['sha256']=sha(canonical(data['blocks']));p.write_text(json.dumps(data),encoding='utf8')
  assert OfflineLibrary(p).search('glucose')[0]==[]
 

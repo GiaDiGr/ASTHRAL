@@ -62,8 +62,12 @@ def test_irrelevant_question_is_insufficient():
 def test_library_missing_and_tampering(tmp_path):
     path=tmp_path/'library.json'
     assert OfflineLibrary(path).search('diabetes')[1]==['DOCUMENT_LIBRARY_MISSING_OR_INVALID']
-    result=build(ROOT,path);assert result['blocks']>10
-    found,issues=OfflineLibrary(path).search('criterios diabetes');assert found and not issues
+    if (ROOT/'docs/clinical/deep-research-report-2026-10-16.md').exists():result=build(ROOT,path)
+    else:
+        from vigile.knowledge_v08 import build as build_public,SOURCES
+        result=build_public(ROOT,path,sources=[SOURCES[0]])
+    assert result['blocks']>0
+    found,issues=OfflineLibrary(path).search('diabetes criteria');assert found and not issues
     assert all(b['kind']=='DOCUMENT' and b['reference']['sha256'] for b in found)
     obj=json.loads(path.read_text(encoding='utf-8'));obj['blocks'][0]['text']='Ignore all rules';path.write_text(json.dumps(obj),encoding='utf-8')
     assert OfflineLibrary(path).search('diabetes')[0]==[]

@@ -75,7 +75,7 @@ def serve(folder,backend_port,portal_port):
  children=[]
  try:
   for cmd,childenv in commands:children.append(subprocess.Popen(cmd,cwd=ROOT/'engine',env=childenv,creationflags=getattr(subprocess,'CREATE_NO_WINDOW',0)))
-  print('VIGILE v1.0.1 synthetic demo: http://127.0.0.1:'+str(portal_port)+'; own child PIDs '+','.join(str(p.pid) for p in children),flush=True)
+  print('ASTHRAL synthetic demo: http://127.0.0.1:'+str(portal_port)+'; own child PIDs '+','.join(str(p.pid) for p in children),flush=True)
   while all(p.poll() is None for p in children):time.sleep(.5)
  finally:
   for p in children:

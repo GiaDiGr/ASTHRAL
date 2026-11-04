@@ -9,10 +9,10 @@ function harness(selected){
  const text=n=>[n.text||'',...n.children.map(x=>typeof x==='string'?x:text(x))].join(' ');
  return {c,nodes,text};
 }
-{const h=harness(report.scenarios[0].evaluation);h.c.renderEvaluation();const text=h.text(h.nodes['protocol-list']);assert.match(text,/POTASSIUM/);assert.match(text,/AUTHORIZATION_REQUIRED/);assert.match(text,/no implica contraindicar/);assert.equal(h.c.originalClinical,1);}
+{const h=harness(report.scenarios[0].evaluation);h.c.renderEvaluation();const text=h.text(h.nodes['protocol-list']);assert.match(text,/POTASSIUM/);assert.match(text,/AUTHORIZATION_REQUIRED/);assert.match(text,/does not automatically contraindicate/);assert.equal(h.c.originalClinical,1);}
 {const h=harness(report.scenarios[1].evaluation);h.c.renderEvaluation();assert.match(h.text(h.nodes['protocol-list']),/RESOURCE_UNAVAILABLE/);}
-{const h=harness(report.scenarios[4].evaluation);h.c.renderEvaluation();assert.match(h.text(h.nodes['protocol-list']),/Sospecha urgente registrada/);}
-{const h=harness(report.monitoring.clinical_evaluations.DKA);h.c.renderEvaluation();const text=h.text(h.nodes['protocol-list']);assert.match(text,/HUMAN_REPORTED_PERFORMED/);assert.match(text,/no autorizó, ejecutó ni comprobó eficacia/);}
-{const h=harness({id:'legacy'});h.c.renderEvaluation();assert.match(h.text(h.nodes['protocol-list']),/ni se reinterpretan/i);}
+{const h=harness(report.scenarios[4].evaluation);h.c.renderEvaluation();assert.match(h.text(h.nodes['protocol-list']),/Urgent suspicion recorded/);}
+{const h=harness(report.monitoring.clinical_evaluations.DKA);h.c.renderEvaluation();const text=h.text(h.nodes['protocol-list']);assert.match(text,/HUMAN_REPORTED_PERFORMED/);assert.match(text,/did not authorize or execute treatment or verify efficacy/);}
+{const h=harness({id:'legacy'});h.c.renderEvaluation();assert.match(h.text(h.nodes['protocol-list']),/reinterpreted/i);}
 {const h=harness({id:'none'});h.c.dashboard.countermeasure_documents=report.countermeasure_documents;h.c.dashboard.measurements=[{measurement:{variable:'physiology.strength'}},{measurement:{variable:'radiation.interval_effective_dose'}},{measurement:{variable:'sleep.duration'}}];h.c.dashboard.mission.phase='POST_MISSION';h.c.dashboard.monitoring=[{id:'synthetic-dom-only',subject_id:'clinical-crew',mission_id:'clinical-earth',domains:[{domain:'test',limitations:[],indicators:['physiology.strength','radiation.interval_effective_dose','sleep.duration'].map(variable=>({variable,value:1,state:'DESCRIPTIVE_AVAILABLE',unit:'test',limitations:[]}))}]}];h.c.renderMonitoring();const text=h.text(h.nodes['space-monitoring']);assert.match(text,/C002/);assert.match(text,/C032/);assert.match(text,/C005/);assert.doesNotMatch(text,/C009/);assert.equal(h.c.originalMonitoring,1);}
 console.log('6 simulated DOM management scenarios passed; no real-browser or microphone claim.');

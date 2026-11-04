@@ -26,7 +26,8 @@ class Registry:
         self.catalogs={}
         self.hashes={}
         self.issues=[]
-        manifest=json.loads((self.root/'MANIFIESTO_SHA256.json').read_text(encoding='utf-8-sig'))
+        manifest_path=self.root/('MANIFIESTO_SHA256.json' if (self.root/'MANIFIESTO_SHA256.json').exists() else 'ASTHRAL_CORPUS_SHA256.json')
+        manifest=json.loads(manifest_path.read_text(encoding='utf-8-sig'))
         for item in manifest:
             p=(self.root/item['path']).resolve()
             if not p.is_relative_to(self.root.resolve()):

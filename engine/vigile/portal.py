@@ -15,6 +15,8 @@ from .models import Model,Id
 from .local_assistant import ReaderClient,OllamaInference,answer
 from .local_protection import read_secret
 from .portal_sessions import Sessions
+from .hybrid_retrieval import HybridRetrieval,Topic
+from .english import english_result
 
 class Login(Model):code:str=Field(pattern=r'^[A-Za-z0-9_-]{24,200}$')
 class Question(Model):
@@ -24,7 +26,8 @@ class Question(Model):
  documentary:bool=False
  history_context_id:Id|None=None
  history:list[str]=Field(default_factory=list,max_length=3)
- language:Literal['en','es']='es'
+ language:Literal['en','es']='en'
+ public_topic:Topic|None=None
  @model_validator(mode='after')
  def target(self):
   if (self.evaluation_id is None)==(self.monitoring_id is None):raise ValueError('EXACTLY_ONE_EVIDENCE_TARGET_REQUIRED')
@@ -39,7 +42,7 @@ def create_portal(config,reader=None,inference=None,clock=time.monotonic,voice=N
  reader=reader or ReaderClient(config['backend_url'],read_secret(config['reader_token_file']))
  inference=inference or (ConversationalInference(config.get('model_url','http://127.0.0.1:8891'),config.get('model'),config.get('mode','FULL'),config['inference_provider'],config.get('runtime_key_file')) if config.get('inference_provider') else OllamaInference(config.get('model_url','http://127.0.0.1:8891'),config.get('model')))
  inference.structured_explanations=bool(config.get('structured_explanations',False))
- library=OfflineLibrary(config.get('library_manifest'));code=read_secret(config['access_code_file'])
+ hybrid=HybridRetrieval(config.get('online_retrieval'),lambda:getattr(inference,'mode','CRITICAL'),config.get('public_science_cache'));library=OfflineLibrary(config.get('library_manifest'));code=read_secret(config['access_code_file'])
  if len(code)<24:raise ValueError('ACCESS_CODE_TOO_SHORT')
  sessions=Sessions(config.get('session_idle_seconds',900),config.get('session_absolute_seconds',28800),clock);attempts=[];lock=threading.Lock();inference_lock=threading.Lock()
  @asynccontextmanager
@@ -47,8 +50,8 @@ def create_portal(config,reader=None,inference=None,clock=time.monotonic,voice=N
   yield
   reader.close()
   if getattr(app.state,'voice',None):app.state.voice.close()
- app=FastAPI(title='VIGILE Local Reader Portal',version='1.0.1',docs_url=None,redoc_url=None,openapi_url=None,lifespan=lifespan)
- app.state.sessions=sessions;app.state.inference=inference
+ app=FastAPI(title='ASTHRAL Local Reader Portal',version='1.1.0',docs_url=None,redoc_url=None,openapi_url=None,lifespan=lifespan)
+ app.state.sessions=sessions;app.state.inference=inference;app.state.hybrid=hybrid
  from .voice_api import install_voice
  attach_speech=install_voice(app,config,reader,inference,voice,clock)
  headers=dict(HEADERS)
@@ -131,13 +134,13 @@ def create_portal(config,reader=None,inference=None,clock=time.monotonic,voice=N
   try:
    identity=reader.get('/dashboard/identity');backend='CONNECTED' if identity['role']=='reader' else 'ACCESS_DENIED'
   except (httpx.HTTPError,RuntimeError,ValueError):backend='UNAVAILABLE_OR_ACCESS_DENIED'
-  return {'backend':backend,'portal':'CONNECTED','network':'LOOPBACK_ONLY','process_isolation':'SAME_USER_NOT_ISOLATED','assistant':inference.status(),'assistant_busy':inference_lock.locked(),'runtime':runtime_observation() if getattr(inference,'mode',None)!='CRITICAL' else {'state':'NOT_INSPECTED_IN_CRITICAL','loaded':None,'note':'NO_INFERENCE_DOES_NOT_MEAN_MEMORY_RELEASED'},'clinical_execution':'BLOCKED','version':'1.0.1'}
+  return {'backend':backend,'portal':'CONNECTED','network':'LOOPBACK_PORTAL_OPTIONAL_PUBLIC_SCIENTIFIC_EGRESS','scientific_retrieval':hybrid.status(),'process_isolation':'SAME_USER_NOT_ISOLATED','assistant':inference.status(),'assistant_busy':inference_lock.locked(),'runtime':runtime_observation() if getattr(inference,'mode',None)!='CRITICAL' else {'state':'NOT_INSPECTED_IN_CRITICAL','loaded':None,'note':'NO_INFERENCE_DOES_NOT_MEAN_MEMORY_RELEASED'},'clinical_execution':'BLOCKED','version':'1.1.0'}
  @app.post('/api/mode')
  def mode(body:OperationMode):
   if not hasattr(inference,'set_mode'):raise HTTPException(409,'CONFIGURABLE_INFERENCE_REQUIRED')
   if not inference_lock.acquire(blocking=False):raise HTTPException(429,'ASSISTANT_BUSY')
   try:
-   inference.set_mode(body.mode);return {'mode':body.mode,'clinical_rules_changed':False,'runtime_memory_note':'No inference does not imply allocated memory was released; inspection and release are explicit operations.'}
+   inference.set_mode(body.mode);hybrid.mode_changed();return {'mode':body.mode,'clinical_rules_changed':False,'runtime_memory_note':'No inference does not imply allocated memory was released; inspection and release are explicit operations.'}
   finally:inference_lock.release()
  @app.get('/api/subjects')
  def subjects():return reader.get('/dashboard/subjects')
@@ -160,7 +163,7 @@ def create_portal(config,reader=None,inference=None,clock=time.monotonic,voice=N
  def chat(body:Question,request:Request):
   if not inference_lock.acquire(blocking=False):raise HTTPException(429,'ASSISTANT_BUSY')
   try:
-   response_start=time.perf_counter()
+   body=body.model_copy(update={'language':'en'});response_start=time.perf_counter()
    before_calls=getattr(inference,'model_http_calls',None)
    if any(len(q)>1200 for q in body.history):raise HTTPException(422,'HISTORY_TOO_LARGE')
    history=body.history if body.history_context_id==(body.monitoring_id or body.evaluation_id) else []
@@ -174,15 +177,16 @@ def create_portal(config,reader=None,inference=None,clock=time.monotonic,voice=N
    result['history_used']=bool(history)
    after_calls=getattr(inference,'model_http_calls',None)
    result['inference_trace']={'model_requests_attempted':after_calls-before_calls if isinstance(before_calls,int) and isinstance(after_calls,int) else None,'explanation_accepted':bool(result.get('generated')),'request_attempt_is_not_completed_inference':True,'legacy_inference_executed_is_not_a_runtime_counter':True}
-   result=attach_speech(result,body,request)
+   result=english_result(result);result=attach_speech(result,body,request)
    result.setdefault('timings',{})['server_response_seconds']=time.perf_counter()-response_start
-   return result
   finally:inference_lock.release()
+  result['supplementary_science']=hybrid.retrieve(body.public_topic)
+  return result
  @app.get('/')
  def index():return FileResponse(assets/'index.html')
  @app.get('/assets/{name}')
  def asset(name:str):
-  if name not in ('app.js','style.css','voice-controller.js','recorder-worklet.js','management.js'):raise HTTPException(404)
+  if name not in ('app.js','style.css','voice-controller.js','recorder-worklet.js','management.js','translations.js'):raise HTTPException(404)
   return FileResponse(assets/name)
  return app
 

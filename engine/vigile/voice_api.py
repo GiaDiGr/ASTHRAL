@@ -12,7 +12,7 @@ from .voice import LocalVoice,VoiceError,MAX_WAV_BYTES
 class AudioInput(Model):
     monitoring_id:Id|None=None
     evaluation_id:Id|None=None
-    language:Literal['en','es']
+    language:Literal['en']
     audio_base64:str=Field(min_length=1,max_length=1_800_100)
     @model_validator(mode='after')
     def target(self):
@@ -96,7 +96,10 @@ def install_voice(app,config,reader,inference,voice=None,clock=time.monotonic):
         from fastapi.responses import JSONResponse
         return JSONResponse({'detail':code,'text_interface_available':True},status_code=429 if code=='VOICE_BUSY' else 503 if 'UNAVAILABLE' in code or 'FAILED' in code else 422)
     @app.get('/api/voice/status')
-    def status():return voice.status(getattr(inference,'mode','FULL')) if voice else {'configured':False,'reason':'VOICE_NOT_CONFIGURED','stt':{},'tts':{},'text_interface_available':True}
+    def status():
+        if voice:
+            status=voice.status(getattr(inference,'mode','FULL'));status['stt']={k:v for k,v in status.get('stt',{}).items() if k=='en'};status['tts']={k:v for k,v in status.get('tts',{}).items() if k=='en'};status['assistant_identity']='ASTHRAL';return status
+        return {'configured':False,'reason':'VOICE_NOT_CONFIGURED','stt':{},'tts':{},'text_interface_available':True}
     @app.post('/api/voice/transcribe')
     def transcribe(body:AudioInput):
         target(body)
@@ -104,7 +107,9 @@ def install_voice(app,config,reader,inference,voice=None,clock=time.monotonic):
         try:raw=base64.b64decode(body.audio_base64,validate=True)
         except ValueError:raise VoiceError('AUDIO_FORMAT_INVALID') from None
         if len(raw)>MAX_WAV_BYTES:raise VoiceError('AUDIO_SIZE_INVALID')
-        result=voice.transcribe(raw,body.language,getattr(inference,'mode','FULL'))
+        result=voice.transcribe(raw,'en',getattr(inference,'mode','FULL'))
+        from .english import assistant_name_alias
+        original=result['text'];result={**result,'text':assistant_name_alias(original),'raw_text':original,'assistant_name_alias_applied':assistant_name_alias(original)!=original}
         return {**result,'target_id':body.monitoring_id or body.evaluation_id,'automatic_question_submission':False,'clinical_execution':'BLOCKED'}
     @app.post('/api/voice/synthesize')
     def synthesize(body:SpeechInput,request:Request):

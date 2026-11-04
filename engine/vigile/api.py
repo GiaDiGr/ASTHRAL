@@ -27,7 +27,7 @@ def create_app(root=None, db_path=None, tokens=None):
     async def lifespan(app):
         yield
         store.close()
-    app=FastAPI(title='VIGILE Health Intelligence Engine',version='1.0.1',docs_url=None,redoc_url=None,
+    app=FastAPI(title='ASTHRAL Health Intelligence Engine',version='1.1.0',docs_url=None,redoc_url=None,
                 openapi_url=None,lifespan=lifespan)
     app.state.engine=engine
 
@@ -100,7 +100,7 @@ def create_app(root=None, db_path=None, tokens=None):
     async def conflict(request,exc): return JSONResponse({'detail':'IMMUTABLE_RECORD_CONFLICT'},status_code=409)
 
     @app.get('/health')
-    def health(): return {'status':'ok','mode':'RESEARCH_ONLY','clinical_execution':'BLOCKED','version':'1.0.1'}
+    def health(): return {'status':'ok','mode':'RESEARCH_ONLY','clinical_execution':'BLOCKED','version':'1.1.0'}
     @app.get('/openapi.json')
     def openapi(): return app.openapi()
     @app.get('/catalog/{kind}')
