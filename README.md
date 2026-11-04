@@ -48,8 +48,9 @@ Ollama is a separately installed local runtime. Do not replace the existing owne
 For a new teammate workstation, obtain the separately licensed Qwen3-4B-Instruct-2507 GGUF only from the reviewed source/version and verify the pinned SHA-256 in `docs/asthral/MODELS.md`. With an approved Ollama installation, an example import file is provided:
 
 ```powershell
-# Run only on a new approved setup, from the folder containing the separately acquired GGUF.
-ollama create vigile-qwen3-4b:latest -f path\to\ASTHRAL\engine\Modelfile.example
+# Run only on a new approved setup. Copy Modelfile.example beside the separately acquired GGUF.
+# Run from that folder; the FROM path is relative to the Modelfile.
+ollama create vigile-qwen3-4b:latest -f .\Modelfile.example
 ```
 
 Configure that workstation's local Ollama endpoint to match the example config. These are teammate setup instructions, not commands run to change the owner's installed model. ASTHRAL remains usable through deterministic and extractive fallback when Ollama is absent.
