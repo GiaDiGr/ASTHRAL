@@ -9,7 +9,7 @@ def dashboard_projection(app,engine,subject_id,mission_id):
 
 def install_dashboard_routes(app,engine):
     @app.get('/dashboard/identity')
-    def identity(request:Request): return {'role':request.state.principal.role,'id':request.state.principal.id}
+    def identity(request:Request): return {'role':request.state.principal.role,'id':request.state.principal.id,'subject_ids':request.state.principal.subject_ids,'mission_ids':request.state.principal.mission_ids}
     @app.get('/dashboard/subjects')
     def subjects(request:Request):
         p=request.state.principal

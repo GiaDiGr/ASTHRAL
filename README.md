@@ -1,5 +1,9 @@
 # ASTHRAL
 
+## ASTHRAL 1.2 personal integration candidate
+
+See the [English personal-account, voice and vector demo](docs/asthral/PERSONAL_V120.md) for offline provisioning, setup, reproducibility and deployment limits. The earlier shared-code instructions below describe the legacy synthetic demo.
+
 **Astronaut Support Tool for Health Risk Assessment and Logistics**
 
 **Offline-First Astronaut Health Monitoring and Medical Decision Support**
