@@ -59,7 +59,9 @@
     healthRecord=result.record_id||null;
     by('health-review').disabled=by('health-delete').disabled=!healthRecord;
     by('voice-send').disabled=true;
-    status(result.status==='SAVED'?'Your self-reported observation was saved. Review or correct it below.':result.status==='DRAFT'?'Private draft · '+result.observation.kind+'. Review the transcript before saving. For urgent concerns seek mission medical support.':'No health observation was saved.');
+    const observed=result.observation;
+    const reading=observed?.structured?observed.kind.replaceAll('_',' ')+' · '+observed.values.join(' over ')+' '+observed.unit:observed?.kind.replaceAll('_',' ')||'';
+    status(result.status==='SAVED'?'Saved self-reported '+reading+'. Review or correct it below.':result.status==='DRAFT'?'Private draft · '+reading+'. Review the transcript and displayed units before saving. For urgent concerns seek mission medical support.':'No health observation was saved.');
     if(result.status==='SAVED')await healthHistory();
     return;
    }

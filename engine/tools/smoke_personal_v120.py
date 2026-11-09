@@ -63,6 +63,7 @@ try:
     voice=LocalVoice()
     try:
         audio,_=voice.synthesize('My heart rate is eighty two beats per minute.','en')
+        exercise_audio,_=voice.synthesize('Record my exercise duration as twenty minutes in the past twenty four hours.','en')
         transcribed=voice.transcribe(audio,'en')
         print('VOSK',repr(transcribed['text']),transcribed['transcription_seconds'],flush=True)
     finally:
@@ -90,14 +91,28 @@ try:
             print('ASSISTANT', json.dumps({'status': reply['status'],
                                           'trace': reply.get('inference_trace'),
                                           'history_used': reply.get('history_used')}), flush=True)
+            narrative = post(a, 'assistant', monitoring_id='mission-crew-A-cycle-35',
+                             question='Compare the recorded aerobic capacity and its baseline'
+                             ).raise_for_status().json()
+            print('LOCAL NARRATIVE', json.dumps({'status': narrative['status'],
+                                                'trace': narrative.get('inference_trace')}), flush=True)
         captured=post(a,'voice/health-capture',capture_id='sapi-fixture',audio_base64=base64.b64encode(audio).decode()).raise_for_status().json()
         assert captured['status']=='DRAFT' and captured['observation']['values']==[82], captured
         saved=post(a,'voice/health-review',record_id=captured['record_id'],transcript=captured['transcript']).raise_for_status().json()
+        expected_history = [saved]
+        exercise = post(a, 'voice/health-capture', capture_id='exercise-fixture', auto_save=True,
+                        audio_base64=base64.b64encode(exercise_audio).decode()).raise_for_status().json()
+        assert exercise['status'] in ('SAVED', 'DRAFT', 'IGNORED')
+        if exercise['status']=='SAVED':
+            assert exercise['observation']['values']==[20] and exercise['observation']['kind']=='exercise_duration'
+            expected_history.insert(0, exercise)
+        print('EXERCISE CAPTURE', json.dumps({'status': exercise['status'],
+                                             'confidence': exercise.get('confidence')}), flush=True)
         assert b.get('/api/voice/health-history').json()==[]
         print('HTTP cross-user dashboard, frames, replay, assistant and voice denied; saved via real SAPI/Vosk',flush=True)
         p.terminate();p.wait(timeout=10);p=portal();wait()
         assert a.get('/api/voice/health-history').status_code==401
-        login(a,'crew-alpha',passwords[0]);assert a.get('/api/voice/health-history').json()==[saved]
+        login(a,'crew-alpha',passwords[0]);assert a.get('/api/voice/health-history').json()==expected_history
         print('PROCESS RESTART: saved event present; old cookie revoked',flush=True)
         report = json.loads((folder/'mission-report.json').read_text(encoding='utf8'))
         print('MISSION', json.dumps({'cycles': result['cycles'], 'audit_integrity': result['audit_integrity'],
