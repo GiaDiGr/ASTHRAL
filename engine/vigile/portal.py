@@ -75,7 +75,11 @@ def create_portal(config,reader=None,inference=None,clock=time.monotonic,voice=N
  if config.get('voice_enabled'):
   headers['Permissions-Policy']='camera=(), microphone=(self), geolocation=()'
   headers['Content-Security-Policy']+="; media-src 'self' blob:"
- app.add_middleware(TrustedHostMiddleware,allowed_hosts=['127.0.0.1'])
+ if config.get('public_origin_file'):
+  if not accounts:raise ValueError('PUBLIC_PERSONAL_ACCOUNTS_REQUIRED')
+  from .public_origin import PublicOrigin
+  # Install outside the request security middleware below.
+ else:app.add_middleware(TrustedHostMiddleware,allowed_hosts=['127.0.0.1'])
  def error(code,status):return JSONResponse({'detail':code},status,headers=headers)
  @app.middleware('http')
  async def secure(request,call_next):
@@ -242,10 +246,11 @@ def create_portal(config,reader=None,inference=None,clock=time.monotonic,voice=N
  def asset(name:str):
   if name not in ('app.js','style.css','voice-controller.js','recorder-worklet.js','management.js','translations.js'):raise HTTPException(404)
   return FileResponse(assets/name)
+ if config.get('public_origin_file'):app.add_middleware(PublicOrigin,path=config['public_origin_file'])
  return app
 
 def main():
  import argparse,uvicorn
  p=argparse.ArgumentParser();p.add_argument('--config',required=True,type=Path);p.add_argument('--port',type=int,default=8766);args=p.parse_args()
- uvicorn.run(create_portal(json.loads(args.config.read_text(encoding='utf8'))),host='127.0.0.1',port=args.port,access_log=False)
+ uvicorn.run(create_portal(json.loads(args.config.read_text(encoding='utf8'))),host='127.0.0.1',port=args.port,access_log=False,proxy_headers=False)
 if __name__=='__main__':main()

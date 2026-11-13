@@ -9,3 +9,5 @@ TLS verification remains enabled. The public provider uses approved fixed paths,
 SQLite, WAL and backups lack encryption. Audit/hash checks detect internal inconsistency within the design but are not an external trust anchor against storage/codespace control. Process isolation, operational identity governance, verified clinical authority, encryption and independent review remain pending. A private GitHub repository does not make unsafe content safe to upload. No treatment execution is enabled.
 
 The [v1.2 personal integration candidate](docs/asthral/PERSONAL_V120.md) adds Argon2id, exact-scope backend reader binding, revocable portal sessions and current-user DPAPI encryption of voice payloads and reader secrets. SQLite file metadata and the clinical database remain plaintext. Loopback cookies are scoped by host rather than port. Keep other local applications and same-user processes in the threat model.
+
+The public synthetic demo admits only its exact generated HTTPS hostname through a loopback proxy boundary. Read [Cloudflare deployment boundaries](docs/asthral/CLOUDFLARE_PUBLIC_DEMO.md) before exposing it. The demo never receives real medical data.

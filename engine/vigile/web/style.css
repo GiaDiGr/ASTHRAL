@@ -18,3 +18,6 @@
 .management-block{border-top:1px solid #d8d2ef;margin-top:16px;padding-top:12px}.management-block details{overflow-wrap:anywhere;margin:10px 0}#management-v101 .table-scroll{max-width:100%;overflow-x:auto}
 
 .journey{margin:16px 0}.journey-links{display:flex;flex-wrap:wrap;gap:8px}.journey button{white-space:normal;text-align:left}.indicator-guide{border-top:1px solid #dedbe6;padding:12px 0}.indicator-guide h4{margin:8px 0}.indicator-guide p{line-height:1.6}.indicator-guide details{margin:10px 0}#astronaut-guidance{overflow-wrap:anywhere}
+
+/* Public mobile demo: contain long evidence and preserve readable controls. */
+input[type=checkbox]{width:auto}button{touch-action:manipulation}pre{max-width:100%;overflow:auto}#health-history button{max-width:100%;white-space:normal;overflow-wrap:anywhere}@media(max-width:650px){input,select,textarea{font-size:16px}.login-card{padding:24px}.table-scroll,#chart-values{max-width:100%;overflow-x:auto}.connection{overflow-wrap:anywhere}.sidebar nav{max-width:100%}header>*{min-width:0}}
