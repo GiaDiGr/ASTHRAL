@@ -6,6 +6,8 @@
 
 ASTHRAL is a research prototype for NASA Space Apps Challenge 2026. It combines deterministic biomedical assessment, longitudinal astronaut monitoring, traceable local evidence, a local assistant, and optional public scientific reference retrieval. It is designed to continue functioning without Internet access. It has not been clinically, operationally, or flight validated.
 
+The SkinGuard module adds private, local skin-photo intake and a provenance-gated interface for a separately supplied lesion-localization model. No dermatology model or image dataset is bundled; until a reviewed model is configured, SkinGuard validates files and creates reports without generating predictions. See [SkinGuard scope, setup, and limits](docs/asthral/SKINGUARD.md).
+
 ## Architecture and authority
 
 ```text
@@ -25,7 +27,7 @@ The internal Python package and historical identifiers remain `vigile` for compa
 ## Requirements and Windows setup
 
 - Python 3.11 or later; the owner environment was tested with Python 3.13.
-- Existing FastAPI, Pydantic, SQLite, uvicorn, pytest, and httpx dependencies; no new runtime dependency for online retrieval.
+- FastAPI, Pydantic, Pillow, SQLite, uvicorn, pytest, and httpx. Optional ONNX Runtime is needed only for a separately supplied SkinGuard detector; no new runtime dependency is required for online retrieval.
 - Windows DPAPI and ACL support for protected demonstration credentials.
 - Node.js for simulated DOM lifecycle tests; no Node frontend build is required.
 - Optional local Ollama with `vigile-qwen3-4b:latest` at `http://127.0.0.1:8891`.
@@ -77,6 +79,22 @@ Portal: **http://127.0.0.1:8922/**. Backend: **http://127.0.0.1:8921/health**. T
 ```
 
 The seed-42 longitudinal mission retains the original two synthetic astronauts, 26 receipt checkpoints, measurements, dates, and clinical results. Follow the [English demonstration](docs/asthral/DEMO.md). Plans are not proof of completed treatment, efficacy, recovery, or authorization.
+
+## Computer Vision research modules
+
+The existing portal navigation now includes SkinGuard, OcularVision, EchoVision, and MotionGuard. Read [the Computer Vision setup and model provenance guide](docs/asthral/COMPUTER_VISION.md) before installing optional packages or model assets. Model weights stay in ignored local storage; no image dataset is bundled. SkinGuard has no compatible detector installed, so it validates and documents photos without generating lesion predictions. OcularVision, EchoVision, and MotionGuard use local research checkpoints with the scope and limits described in their reports. None is an ASTHRAL clinical validation or diagnosis.
+
+Install the optional CPU runtime from `engine/`, then explicitly select the model assets needed for the current machine:
+
+```powershell
+Set-Location engine
+.\.venv\Scripts\python.exe -m pip install --index-url https://download.pytorch.org/whl/cpu torch==2.5.1 torchvision==0.20.1
+.\.venv\Scripts\python.exe -m pip install -e ".[vision]"
+.\.venv\Scripts\python.exe tools\install_computer_vision_models.py --model oct
+.\.venv\Scripts\python.exe tools\install_computer_vision_models.py --model motion
+```
+
+EchoNet's LV segmentation checkpoint is a separate ~303 MiB download. Review its research-use and redistribution limits in the linked guide before selecting `--model echo`. Computer Vision runs in the existing portal process on port 8922; it does not start another web server or change the SLM.
 
 ## Local and optional online RAG
 

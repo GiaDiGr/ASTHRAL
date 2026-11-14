@@ -17,6 +17,8 @@ from .local_protection import read_secret
 from .portal_sessions import Sessions
 from .hybrid_retrieval import HybridRetrieval,Topic
 from .english import english_result
+from .skinguard import SkinGuardService,SkinGuardRequest,SkinGuardInputError
+from .computer_vision import ComputerVisionService,ComputerVisionError,OCTRequest,VideoRequest
 
 class Login(Model):code:str=Field(pattern=r'^[A-Za-z0-9_-]{24,200}$')
 class Question(Model):
@@ -34,7 +36,7 @@ class Question(Model):
   return self
 class OperationMode(Model):mode:Literal['FULL','LOW_POWER','CRITICAL']
 
-HEADERS={'Cache-Control':'no-store','X-Content-Type-Options':'nosniff','Referrer-Policy':'no-referrer','Permissions-Policy':'camera=(), microphone=(), geolocation=()', 'Content-Security-Policy':"default-src 'self'; script-src 'self'; style-src 'self'; img-src 'self' data:; connect-src 'self'; frame-ancestors 'none'; base-uri 'none'; form-action 'self'"}
+HEADERS={'Cache-Control':'no-store','X-Content-Type-Options':'nosniff','Referrer-Policy':'no-referrer','Permissions-Policy':'camera=(self), microphone=(), geolocation=()', 'Content-Security-Policy':"default-src 'self'; script-src 'self'; style-src 'self'; img-src 'self' data: blob:; media-src 'self' blob:; connect-src 'self'; frame-ancestors 'none'; base-uri 'none'; form-action 'self'"}
 
 def create_portal(config,reader=None,inference=None,clock=time.monotonic,voice=None):
  config=dict(config);assets=Path(__file__).with_name('web')
@@ -42,6 +44,8 @@ def create_portal(config,reader=None,inference=None,clock=time.monotonic,voice=N
  reader=reader or ReaderClient(config['backend_url'],read_secret(config['reader_token_file']))
  inference=inference or (ConversationalInference(config.get('model_url','http://127.0.0.1:8891'),config.get('model'),config.get('mode','FULL'),config['inference_provider'],config.get('runtime_key_file')) if config.get('inference_provider') else OllamaInference(config.get('model_url','http://127.0.0.1:8891'),config.get('model')))
  inference.structured_explanations=bool(config.get('structured_explanations',False))
+ skinguard=SkinGuardService()
+ computer_vision=ComputerVisionService()
  hybrid=HybridRetrieval(config.get('online_retrieval'),lambda:getattr(inference,'mode','CRITICAL'),config.get('public_science_cache'));library=OfflineLibrary(config.get('library_manifest'));code=read_secret(config['access_code_file'])
  if len(code)<24:raise ValueError('ACCESS_CODE_TOO_SHORT')
  sessions=Sessions(config.get('session_idle_seconds',900),config.get('session_absolute_seconds',28800),clock);attempts=[];lock=threading.Lock();inference_lock=threading.Lock()
@@ -50,14 +54,14 @@ def create_portal(config,reader=None,inference=None,clock=time.monotonic,voice=N
   yield
   reader.close()
   if getattr(app.state,'voice',None):app.state.voice.close()
+  computer_vision.close()
  app=FastAPI(title='ASTHRAL Local Reader Portal',version='1.1.0',docs_url=None,redoc_url=None,openapi_url=None,lifespan=lifespan)
- app.state.sessions=sessions;app.state.inference=inference;app.state.hybrid=hybrid
+ app.state.sessions=sessions;app.state.inference=inference;app.state.hybrid=hybrid;app.state.skinguard=skinguard;app.state.computer_vision=computer_vision
  from .voice_api import install_voice
  attach_speech=install_voice(app,config,reader,inference,voice,clock)
  headers=dict(HEADERS)
  if config.get('voice_enabled'):
-  headers['Permissions-Policy']='camera=(), microphone=(self), geolocation=()'
-  headers['Content-Security-Policy']+="; media-src 'self' blob:"
+  headers['Permissions-Policy']='camera=(self), microphone=(self), geolocation=()'
  app.add_middleware(TrustedHostMiddleware,allowed_hosts=['127.0.0.1'])
  def error(code,status):return JSONResponse({'detail':code},status,headers=headers)
  @app.middleware('http')
@@ -67,18 +71,19 @@ def create_portal(config,reader=None,inference=None,clock=time.monotonic,voice=N
   if request.method=='POST' and origin!=base:return error('ORIGIN_REQUIRED',403)
   if path.startswith('/api/') and origin and origin!=base:return error('ORIGIN_REJECTED',403)
   if path.startswith('/api/') and request.headers.get('sec-fetch-site')=='cross-site':return error('CROSS_SITE_REQUEST_REJECTED',403)
-  if path=='/api/voice/transcribe' and not sessions.get(request.cookies.get('vigile_session',''),False):return error('SESSION_EXPIRED_OR_REQUIRED',401)
+  vision_paths=path.startswith('/api/computer-vision/') and path.endswith('/analyze')
+  if (path in ('/api/voice/transcribe','/api/skinguard/analyze') or vision_paths) and not sessions.get(request.cookies.get('vigile_session',''),False):return error('SESSION_EXPIRED_OR_REQUIRED',401)
   if request.method=='POST':
    body=bytearray()
    async for chunk in request.stream():
     body.extend(chunk)
-    limit=1_820_000 if path=='/api/voice/transcribe' else 16384
+    limit=15_728_640 if path=='/api/skinguard/analyze' or vision_paths else 1_820_000 if path=='/api/voice/transcribe' else 16384
     if len(body)>limit:return error('PAYLOAD_TOO_LARGE',413)
    request._body=bytes(body)
   if path.startswith('/api/') and path!='/api/login':
    token=request.cookies.get('vigile_session','');session=sessions.get(token,touch=path not in ('/api/status','/api/session','/api/runtime'))
    if not session:return error('SESSION_EXPIRED_OR_REQUIRED',401)
-   if not sessions.admit(token,path in ('/api/assistant','/api/voice/transcribe','/api/voice/synthesize')):
+   if not sessions.admit(token,path in ('/api/assistant','/api/voice/transcribe','/api/voice/synthesize','/api/skinguard/analyze') or vision_paths):
     response=error('RETRY_LATER',429);response.headers['Retry-After']='60';return response
   response=await call_next(request);response.headers.update(headers);return response
  @app.exception_handler(RuntimeError)
@@ -135,6 +140,26 @@ def create_portal(config,reader=None,inference=None,clock=time.monotonic,voice=N
    identity=reader.get('/dashboard/identity');backend='CONNECTED' if identity['role']=='reader' else 'ACCESS_DENIED'
   except (httpx.HTTPError,RuntimeError,ValueError):backend='UNAVAILABLE_OR_ACCESS_DENIED'
   return {'backend':backend,'portal':'CONNECTED','network':'LOOPBACK_PORTAL_OPTIONAL_PUBLIC_SCIENTIFIC_EGRESS','scientific_retrieval':hybrid.status(),'process_isolation':'SAME_USER_NOT_ISOLATED','assistant':inference.status(),'assistant_busy':inference_lock.locked(),'runtime':runtime_observation() if getattr(inference,'mode',None)!='CRITICAL' else {'state':'NOT_INSPECTED_IN_CRITICAL','loaded':None,'note':'NO_INFERENCE_DOES_NOT_MEAN_MEMORY_RELEASED'},'clinical_execution':'BLOCKED','version':'1.1.0'}
+ @app.get('/api/skinguard/status')
+ def skinguard_status():return skinguard.status()
+ @app.post('/api/skinguard/analyze')
+ def skinguard_analyze(body:SkinGuardRequest):
+  try:return skinguard.analyze(body)
+  except SkinGuardInputError as exc:raise HTTPException(exc.status_code,exc.code)
+ @app.get('/api/computer-vision/status')
+ def computer_vision_status():return computer_vision.get_model_status()
+ @app.post('/api/computer-vision/ocular/analyze')
+ def ocularvision_analyze(body:OCTRequest):
+  try:return computer_vision.analyze_oct(body)
+  except ComputerVisionError as exc:raise HTTPException(exc.status_code,exc.code)
+ @app.post('/api/computer-vision/echo/analyze')
+ def echovision_analyze(body:VideoRequest):
+  try:return computer_vision.analyze_echo(body)
+  except ComputerVisionError as exc:raise HTTPException(exc.status_code,exc.code)
+ @app.post('/api/computer-vision/motion/analyze')
+ def motionguard_analyze(body:VideoRequest):
+  try:return computer_vision.analyze_motion(body)
+  except ComputerVisionError as exc:raise HTTPException(exc.status_code,exc.code)
  @app.post('/api/mode')
  def mode(body:OperationMode):
   if not hasattr(inference,'set_mode'):raise HTTPException(409,'CONFIGURABLE_INFERENCE_REQUIRED')
@@ -186,7 +211,7 @@ def create_portal(config,reader=None,inference=None,clock=time.monotonic,voice=N
  def index():return FileResponse(assets/'index.html')
  @app.get('/assets/{name}')
  def asset(name:str):
-  if name not in ('app.js','style.css','voice-controller.js','recorder-worklet.js','management.js','translations.js'):raise HTTPException(404)
+  if name not in ('app.js','style.css','voice-controller.js','recorder-worklet.js','management.js','translations.js','skinguard.js','computer-vision.js','astronaut-earth-login.png'):raise HTTPException(404)
   return FileResponse(assets/name)
  return app
 

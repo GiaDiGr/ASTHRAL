@@ -1,6 +1,8 @@
-import json,hashlib
+import base64,json,hashlib
+from io import BytesIO
 from pathlib import Path
 import pytest,httpx
+from PIL import Image
 from fastapi.testclient import TestClient
 from vigile.portal_demo import prepare
 from vigile.portal import create_portal
@@ -70,6 +72,31 @@ def test_session_csrf_and_secrets(services):
     assert portal.post('/api/assistant',json={'question':'write'}).status_code==403
     assert portal.get('/',headers={'Host':'evil.example'}).status_code==400
     assert portal.patch('/api/dashboard/x',json={}).status_code==403
+
+def test_skinguard_authenticated_local_intake_has_no_fake_results(services):
+    _,portal,_,config=services
+    assert portal.get('/api/skinguard/status').status_code==401
+    login(portal,config)
+    status=portal.get('/api/skinguard/status')
+    assert status.status_code==200 and status.json()['state']=='MODEL_NOT_CONFIGURED'
+    assert portal.get('/assets/skinguard.js').status_code==200
+    stream=BytesIO();Image.new('RGB',(100,80),'white').save(stream,format='PNG')
+    encoded=base64.b64encode(stream.getvalue()).decode('ascii')
+    response=portal.post('/api/skinguard/analyze',headers={'Origin':'http://127.0.0.1:8766'},json={
+        'image_data':'data:image/png;base64,'+encoded,
+        'capture_date':'2026-11-14','body_site':'left forearm','uv_context':'UNKNOWN'
+    })
+    assert response.status_code==200,response.text
+    result=response.json()
+    assert result['analysis_performed'] is False
+    assert result['detections']==[] and result['diagnosis'] is None
+    assert result['radiation_causation'] is None
+    assert 'image_data' not in result and encoded not in response.text
+
+def test_skinguard_requires_same_origin(services):
+    _,portal,_,config=services;login(portal,config)
+    response=portal.post('/api/skinguard/analyze',headers={'Origin':'https://evil.example'},json={})
+    assert response.status_code==403 and response.json()['detail']=='ORIGIN_REQUIRED'
 
 def test_reader_cannot_mutate_backend_or_escalate(dataset,services):
     backend,portal,_,config=services;token=Path(config['reader_token_file']).read_text()
@@ -142,3 +169,30 @@ def test_repeated_demo_reproduces_clinical_inputs(dataset,tmp_path):
     second=tmp_path/'repeat';prepare(ROOT,second)
     a=json.loads((dataset/'demo-report.json').read_text());b=json.loads((second/'demo-report.json').read_text())
     assert a['request_hashes']==b['request_hashes'] and a['all_replays_match'] and b['all_replays_match']
+
+def test_computer_vision_uses_existing_authenticated_portal(services):
+    _,portal,_,config=services
+    assert portal.get('/api/computer-vision/status').status_code==401
+    assert portal.get('/assets/computer-vision.js').status_code==200
+    assert portal.get('/assets/astronaut-earth-login.png').status_code==200
+    assert portal.get('/assets/astronaut-earth-login.png').headers['content-type']=='image/png'
+    page=portal.get('/').text
+    assert 'Computer Vision / Análisis de Imágenes' in page
+    assert all(f'data-view="{name}"' in page for name in ('skinguard','ocularvision','echovision','motionguard'))
+    vision_group=page[page.index('Computer Vision / Análisis de Imágenes'):]
+    assert [vision_group.index(f'data-view="{name}"') for name in ('skinguard','ocularvision','echovision','motionguard')] == sorted(vision_group.index(f'data-view="{name}"') for name in ('skinguard','ocularvision','echovision','motionguard'))
+    login(portal,config)
+    status=portal.get('/api/computer-vision/status')
+    assert status.status_code==200,status.text
+    assert set(status.json()['modules'])=={'skinguard','ocularvision','echovision','motionguard'}
+    assert portal.get('/api/skinguard/status').json()['state']=='MODEL_NOT_CONFIGURED'
+    headers={'Origin':'http://127.0.0.1:8766'}
+    corrupt='data:image/png;base64,'+base64.b64encode(b'x'*100).decode('ascii')
+    bad=portal.post('/api/computer-vision/ocular/analyze',headers=headers,json={'image_data':corrupt})
+    assert bad.status_code==422 and bad.json()['detail']=='INVALID_OR_CORRUPT_OCT_IMAGE'
+    not_a4c=portal.post('/api/computer-vision/echo/analyze',headers=headers,json={
+        'video_data':'data:video/mp4;base64,'+base64.b64encode(b'x'*100).decode('ascii'),'filename':'not-a-scan.mp4','confirm_a4c':False
+    })
+    assert not_a4c.status_code==422 and 'REQUIRES_USER_CONFIRMATION' in not_a4c.json()['detail']
+    policy=portal.get('/').headers['content-security-policy']
+    assert 'media-src \'self\' blob:' in policy and 'camera=(self)' in portal.get('/').headers['permissions-policy']
