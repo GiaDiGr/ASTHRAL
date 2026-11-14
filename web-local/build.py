@@ -2,6 +2,8 @@
 from pathlib import Path
 from types import SimpleNamespace
 import hashlib
+import base64
+import re
 import json
 import shutil
 import sqlite3
@@ -79,36 +81,87 @@ def fixtures():
         assert snapshot['profile']['synthetic'] and snapshot['mission']['synthetic']
         output.append({'id':row['id'],'snapshot':snapshot,'expected':service.compute(snapshot),
                        'origin':'FROZEN_SYNTHETIC_MISSION_INPUT'})
+    from copy import deepcopy
+    originals=list(output[:36])
+    for row in originals:
+        for variant in ('EMPTY','WRONG_UNIT','INVALID_QUALITY','FUTURE','CONTRADICTORY'):
+            snapshot=deepcopy(row['snapshot']);obs=snapshot['observations']
+            if variant=='EMPTY':obs.clear()
+            elif not obs:continue
+            elif variant=='WRONG_UNIT':
+                for o in obs:
+                    if type(o['value']) in (int,float):o['unit']='UNSUPPORTED_UNIT';break
+                else:continue
+            elif variant=='INVALID_QUALITY':
+                for o in obs:o['quality']='INVALID'
+            elif variant=='FUTURE':
+                for o in obs:o['timestamp']='2099-01-01T00:00:00Z'
+            elif variant=='CONTRADICTORY':
+                original=obs[0];other=deepcopy(original);other['id']='contradiction-'+other['id']
+                other['value']=not original['value'] if type(original['value']) is bool else original['value']+1 if type(original['value']) in (int,float) else 'CONTRADICTORY'
+                obs.append(other)
+            snapshot['request']['observations']=deepcopy(obs)
+            output.append({'id':row['id']+'-'+variant,'snapshot':snapshot,'expected':service.compute(snapshot),'origin':'EXPANDED_REFERENCE_ADVERSARIAL_INPUT'})
     store.close()
     return output
 
 def main():
+    voice=ROOT/'web-local/src/vosk.js'
+    if not voice.exists():raise ValueError('VOICE_PREPARATION_REQUIRED: run prepare_voice.py')
+    embedded=re.search(r"createBase64WorkerFactory\('([A-Za-z0-9+/=]+)'",voice.read_text(encoding='utf8'))
+    if not embedded:raise ValueError('VOICE_WORKER_LAYOUT_CHANGED')
+    worker=base64.b64decode(embedded[1]).decode()
+    if re.search(r'new\s+Function\s*\(|new_\s*\(\s*Function|\beval\s*\(',worker):raise ValueError('STALE_UNSAFE_VOICE_ARTIFACT: rerun prepare_voice.py')
+    if not all('// END '+name in worker for name in ('createNamedFunction','craftInvokerFunction','__emval_get_method_caller')):raise ValueError('VOICE_CSP_PATCH_MISSING')
     if OUT.exists():
         if OUT.resolve()!=ROOT.resolve()/'web-local'/'dist':raise ValueError('UNSAFE_BUILD_TARGET')
         shutil.rmtree(OUT)
     OUT.mkdir(exist_ok=True)
     selected=get_runtime()
-    shutil.copytree(ROOT/'web-local/src',OUT,dirs_exist_ok=True,ignore=shutil.ignore_patterns('browser_bridge.py'))
-    shutil.copytree(VENDOR,OUT/'runtime',dirs_exist_ok=True)
+    shutil.copytree(ROOT/'web-local/src',OUT,dirs_exist_ok=True,ignore=shutil.ignore_patterns('browser_bridge.py','browser_monitoring.py'))
+    (OUT/'runtime').mkdir(exist_ok=True)
+    runtime_lock=json.loads((VENDOR/'pyodide-lock.json').read_bytes())
+    runtime_files=['pyodide.js','pyodide.asm.js','pyodide.asm.wasm','python_stdlib.zip','pyodide-lock.json']+[runtime_lock['packages'][key]['file_name'] for key in selected]
+    for name in runtime_files:shutil.copyfile(VENDOR/name,OUT/'runtime'/name)
     for name in ['WEBLLM_LICENSE.txt','TRANSFORMERS_LICENSE.txt','THIRD_PARTY_NOTICES.md']:
         shutil.copyfile(ROOT/'web-local'/name,OUT/name)
     with zipfile.ZipFile(OUT/'engine.zip','w',zipfile.ZIP_DEFLATED) as archive:
-        for module in MODULES:
+        for module in sorted(source.name for source in (ROOT/'engine/vigile').glob('*.py')):
             source=ROOT/'engine/vigile'/module
             archive.writestr('vigile/'+module,source.read_bytes())
         for source in sorted((ROOT/'engine/vigile/clinical_knowledge').glob('*.json')):
             archive.writestr('vigile/clinical_knowledge/'+source.name,source.read_bytes())
-        archive.writestr('docs/knowledge/ASTHRAL_LOCAL_KNOWLEDGE.md',(ROOT/'docs/knowledge/ASTHRAL_LOCAL_KNOWLEDGE.md').read_bytes())
+        from vigile.knowledge_v08 import SOURCES
+        for name,authority,version in SOURCES:
+            source=ROOT/name
+            if source.exists():archive.writestr(name,source.read_bytes())
         import ast
         voice_source=(ROOT/'engine/vigile/health_voice.py').read_text(encoding='utf8')
         tree=ast.parse(voice_source)
         parser_parts=[ast.get_source_segment(voice_source,node) for node in tree.body if isinstance(node,ast.FunctionDef) and node.name in ('parse','number') or isinstance(node,ast.Assign) and any(isinstance(t,ast.Name) and t.id in ('PATTERNS','DIGITS','TENS') for t in node.targets)]
         archive.writestr('health_voice_parser.py','import re\n'+'\n\n'.join(parser_parts))
+        conversation=(ROOT/'engine/vigile/conversational.py').read_text(encoding='utf8')
+        parsed=ast.parse(conversation)
+        nodes=[node for node in parsed.body if isinstance(node,ast.FunctionDef) and node.name=='validate_generated' or isinstance(node,ast.Assign) and any(isinstance(t,ast.Name) and t.id in ('SYSTEM','SCHEMA','UNSAFE','MODES') for t in node.targets) or isinstance(node,ast.AugAssign) and isinstance(node.target,ast.Name) and node.target.id=='SYSTEM']
+        parts=[ast.get_source_segment(conversation,node) for node in nodes]
+        evidence=(ROOT/'engine/vigile/local_assistant.py').read_text(encoding='utf8')
+        evidence_node=next(node for node in ast.parse(evidence).body if isinstance(node,ast.FunctionDef) and node.name=='evidence_blocks')
+        helper='import re,json\n'+'\n\n'.join(parts)+'\n'+ast.get_source_segment(evidence,evidence_node)
+        archive.writestr('browser_assistant_reference.py',helper)
+        scope={};exec('import re\n'+'\n\n'.join(ast.get_source_segment(conversation,node) for node in nodes if not isinstance(node,ast.FunctionDef)),scope)
+        (OUT/'assistant-config.json').write_text(json.dumps({'system':scope['SYSTEM'],'schema':scope['SCHEMA'],'max_tokens':scope['MODES']['FULL']['max_tokens']}),encoding='utf8')
+        archive.writestr('browser_monitoring.py',(ROOT/'web-local/src/browser_monitoring.py').read_bytes())
+        manifest=json.loads((ROOT/'ASTHRAL_CORPUS_SHA256.json').read_bytes())
+        archive.writestr('ASTHRAL_CORPUS_SHA256.json',(ROOT/'ASTHRAL_CORPUS_SHA256.json').read_bytes())
+        for item in manifest:archive.writestr(item['path'],(ROOT/item['path']).read_bytes())
         archive.writestr('browser_bridge.py',(ROOT/'web-local/src/browser_bridge.py').read_bytes())
+    monitoring_fixture=json.loads((ROOT/'web-local/tests/fixtures/monitor-native-oracle.json').read_bytes())
+    (OUT/'monitor-fixture.json').write_text(json.dumps({'steps':monitoring_fixture['steps'],'source':'FROZEN_SYNTHETIC_INPUTS_ONLY_NO_EXPECTED_OUTPUTS'}),encoding='utf8')
     cases=fixtures()
     for case in cases:
         case['snapshot_json']=json.dumps(case['snapshot'],ensure_ascii=False)
         case['expected_json']=json.dumps(case['expected'],ensure_ascii=False)
+    (OUT/'demo-scenarios.json').write_text(json.dumps([{'id':row['id'],'snapshot':{key:row['snapshot'][key] for key in ('request','mission','observations')}} for row in cases[:36]],ensure_ascii=False),encoding='utf8')
     (OUT/'parity-cases.json').write_text(json.dumps(cases,ensure_ascii=False),encoding='utf8')
     statistics=[]
     from vigile.models import Measurement
@@ -122,8 +175,11 @@ def main():
     (OUT/'statistics-cases.json').write_text(json.dumps(statistics),encoding='utf8')
     from vigile.knowledge_v08 import build,SOURCES
     manifest=ROOT/'work/browser-local/corpus.json'
-    build(ROOT,manifest,sources=[SOURCES[0]])
+    build(ROOT,manifest,sources=[source for source in SOURCES if (ROOT/source[0]).exists()])
     corpus=json.loads(manifest.read_bytes())
+    (OUT/'knowledge').mkdir(exist_ok=True)
+    for document in corpus['documents']:
+        (OUT/'knowledge'/(document['sha256']+'.txt')).write_bytes((ROOT/document['document']).read_bytes())
     (OUT/'corpus.json').write_text(json.dumps(corpus),encoding='utf8')
     manifest=[]
     for path in sorted(OUT.rglob('*')):
@@ -131,10 +187,10 @@ def main():
             raw=path.read_bytes()
             if len(raw)>25*1024*1024:raise ValueError('PAGES_ASSET_LIMIT '+str(path))
             relative=path.relative_to(OUT).as_posix()
-            optional=relative.startswith(('voice-assets/','embedding-runtime/')) or relative in ('vosk.js','webllm.js')
+            optional=relative.startswith(('voice-assets/','embedding-runtime/','test-audio/')) or relative in ('vosk.js','webllm.js','parity-cases.json')
             manifest.append({'path':relative,'size':len(raw),'sha256':sha(raw),'optional':optional})
     (OUT/'assets.json').write_text(json.dumps({'version':'asthral-browser-1','files':manifest},indent=2))
-    service_worker=(ROOT/'web-local/src/sw.js').read_text(encoding='utf8').replace('__BUILD_ID__',sha((OUT/'assets.json').read_bytes())[:16])
+    service_worker=(ROOT/'web-local/src/sw.js').read_text(encoding='utf8').replace('__BUILD_ID__',sha((OUT/'assets.json').read_bytes())[:16]).replace('__ASSET_MANIFEST_SHA__',sha((OUT/'assets.json').read_bytes()))
     (OUT/'sw.js').write_text(service_worker,encoding='utf8')
     print(json.dumps({'cases':len(cases),'packages':sorted(selected),'files':len(manifest),
                       'bytes':sum(row['size'] for row in manifest),'clinical_modules':'BYTE_IDENTICAL'}))

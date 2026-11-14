@@ -23,13 +23,14 @@ export class OfflineVoice {
       parts.push(bytes);
     }
     if(!navigator.serviceWorker?.controller)throw Error('Install offline resources and reload before loading offline speech.');
-    const url=new URL('./voice-model.tar.gz',location.href).href;
-    const model=new Vosk.Model(url,-1);
+    const url=new URL('./voice-model.tar.gz?sha256='+manifest.sha256,location.href).href;
+    const model=new Vosk.Model(url,2);
+    model.on('asthral-stage',message=>this.options.message('Offline speech startup: '+message.stage));
     try {
       await new Promise((resolve,reject)=>{
         const timer=setTimeout(()=>reject(Error('Offline speech model startup timed out. Reviewed text remains available.')),45000);
         model.on('load',message=>{clearTimeout(timer);message.result?resolve():reject(Error('Offline speech model could not load.'));});
-        model.on('error',()=>{clearTimeout(timer);reject(Error('Offline speech runtime failed.'));});
+        model.on('error',message=>{clearTimeout(timer);reject(Error('Offline speech runtime failed: '+(message.error??JSON.stringify(message))));});
       });
       this.model=model;
     } catch(error) { model.terminate(); throw error; }
@@ -65,17 +66,14 @@ export class OfflineVoice {
         const finish=()=>{
           clearTimeout(timer);
           if(epoch!==this.epoch||!this.options.unlocked())return reject(Error('Recording discarded after profile lock or cancellation.'));
-          resolve({text:phrases.join(' ').trim(),words,source:'SELF_REPORTED_VOICE',automatic_save:false,finalization:'USER_REVIEW_REQUIRED'});
+          resolve({text:phrases.join(' ').trim(),words,source:'SELF_REPORTED_VOICE',automatic_save:false,finalization:'EXPLICIT_WORKER_FINAL_RESULT'});
         };
         recognizer.on('result',message=>{
           if(message.result?.text) {
             phrases.push(message.result.text);
             words.push(...(message.result.result??[]));
           }
-          // Quiet-bound completion is not treated as a proven finalization marker.
-          // Every result therefore needs explicit human review before persistence.
-          clearTimeout(timer);
-          timer=setTimeout(finish,750);
+          if(message.asthral_final)finish();
         });
         recognizer.on('error',()=>reject(Error('Offline recognizer failed.')));
         recognizer.acceptWaveformFloat(new Float32Array(samples),16000);

@@ -8,5 +8,7 @@ class Handler(SimpleHTTPRequestHandler):
         self.send_header('Cache-Control','no-store')
         super().end_headers()
 if __name__=='__main__':
+    import argparse
+    parser=argparse.ArgumentParser();parser.add_argument('--port',type=int,default=8960);args=parser.parse_args()
     root=Path(__file__).resolve().parent/'dist'
-    ThreadingHTTPServer(('127.0.0.1',8960),partial(Handler,directory=str(root))).serve_forever()
+    ThreadingHTTPServer(('127.0.0.1',args.port),partial(Handler,directory=str(root))).serve_forever()

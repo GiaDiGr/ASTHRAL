@@ -1,0 +1,22 @@
+{
+  "cardiovascular": {
+    "label": "Spaceflight cardiovascular deconditioning",
+    "query": "spaceflight cardiovascular deconditioning"
+  },
+  "muscle_bone": {
+    "label": "Spaceflight muscle and bone countermeasures",
+    "query": "spaceflight muscle bone loss countermeasures"
+  },
+  "sleep_fatigue": {
+    "label": "Spaceflight sleep and fatigue research",
+    "query": "spaceflight sleep fatigue research"
+  },
+  "radiation": {
+    "label": "Space radiation health research",
+    "query": "space radiation astronaut health research"
+  },
+  "hyperglycemic_consensus": {
+    "label": "2024 hyperglycemic crises consensus report",
+    "query": "Hyperglycemic Crises in Adults With Diabetes 2024 consensus report"
+  }
+}

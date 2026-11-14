@@ -1,0 +1,56 @@
+[
+  {
+    "id": "heart-rate",
+    "text": "record my heart rate as eighty two beats per minute right now",
+    "source": "SYNTHETIC_LOCAL_PIPER_LJSPEECH_TEST_ONLY",
+    "sample_rate": 22050,
+    "bytes": 149548,
+    "sha256": "5a26390f78f7ef4516093dfcca408a98102dc9ee49f61ed3746741a8e655898f",
+    "file": "neural-heart-rate.wav"
+  },
+  {
+    "id": "temperature",
+    "text": "record my temperature as thirty seven point two degrees celsius right now",
+    "source": "SYNTHETIC_LOCAL_PIPER_LJSPEECH_TEST_ONLY",
+    "sample_rate": 22050,
+    "bytes": 214060,
+    "sha256": "f962b1d04bfbcbb2e8d7ba89430a67b7858989ee24b1fa35f49e6e701f6a3fb1",
+    "file": "neural-temperature.wav"
+  },
+  {
+    "id": "blood-pressure",
+    "text": "record my blood pressure as one hundred twenty over eighty millimeters of mercury right now",
+    "source": "SYNTHETIC_LOCAL_PIPER_LJSPEECH_TEST_ONLY",
+    "sample_rate": 22050,
+    "bytes": 241708,
+    "sha256": "71efcb0d3c5f50d5e0eec090c4b1d68ac3b0f0fde52772e81a3dbefb80121cb4",
+    "file": "neural-blood-pressure.wav"
+  },
+  {
+    "id": "negation",
+    "text": "I have no chest pain",
+    "source": "SYNTHETIC_LOCAL_PIPER_LJSPEECH_TEST_ONLY",
+    "sample_rate": 22050,
+    "bytes": 61484,
+    "sha256": "af2045f200eab21cd1299e59333965016b7a8cd86eac5a3998a416e5ef18f4be",
+    "file": "neural-negation.wav"
+  },
+  {
+    "id": "question",
+    "text": "Do I need to record my glucose",
+    "source": "SYNTHETIC_LOCAL_PIPER_LJSPEECH_TEST_ONLY",
+    "sample_rate": 22050,
+    "bytes": 101932,
+    "sha256": "06e1afccad8e74a87881aadb4deb8385a0529fa319a423260ec6133a5243e369",
+    "file": "neural-question.wav"
+  },
+  {
+    "id": "sleep",
+    "text": "record my sleep duration as seven hours in the past twenty four hours",
+    "source": "SYNTHETIC_LOCAL_PIPER_LJSPEECH_TEST_ONLY",
+    "sample_rate": 22050,
+    "bytes": 202284,
+    "sha256": "95780ee4e9ce331bb8a2c5d0cc702d95a9ae64086e29edc9bfb2b3b4245533c0",
+    "file": "neural-sleep.wav"
+  }
+]

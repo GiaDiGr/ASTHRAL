@@ -27,3 +27,13 @@ export function hybridRank(lexical,index,query,corpusHash,revision) {
   return ranked.sort((a,b)=>(1/(60+b.lexical)+1/(60+b.semantic))-(1/(60+a.lexical)+1/(60+a.semantic)))
     .map(row=>({...row.block,local_similarity:row.score,retrieval_algorithm:'LEXICAL_GATED_BROWSER_MINILM_RRF_1'}));
 }
+export function vectorRank(verified,index,query,corpusHash,revision,limit=3){
+ if(index.corpus!==corpusHash||index.revision!==revision||index.model!=='MiniLM-L6-ONNX-q8')throw Error('Scientific index version mismatch.');
+ validateVector(query);const eligible=new Map(verified.map(b=>[b.id,b])),seen=new Set(),ranked=[];
+ for(const row of index.vectors){if(seen.has(row.id))throw Error('Duplicate scientific vector identifiers.');seen.add(row.id);validateVector(row.vector);const block=eligible.get(row.id);if(!block)throw Error('Unverified vector source.');ranked.push({...block,local_similarity:row.vector.reduce((sum,v,i)=>sum+v*query[i],0),retrieval_algorithm:'BROWSER_MINILM_VECTOR_1'});}
+ return ranked.sort((a,b)=>b.local_similarity-a.local_similarity||a.id.localeCompare(b.id)).slice(0,limit);
+}
+export function fuseRankings(lexical,semantic,limit=3){
+ const scores=new Map();for(const ranking of [lexical,semantic])ranking.forEach((block,i)=>{const prior=scores.get(block.id);scores.set(block.id,{block:prior?{...prior.block,...block}:block,score:(prior?.score??0)+1/(60+i+1)});});
+ return [...scores.values()].sort((a,b)=>b.score-a.score||a.block.id.localeCompare(b.block.id)).slice(0,limit).map(x=>({...x.block,retrieval_algorithm:'BROWSER_BM25_MINILM_RRF_2'}));
+}

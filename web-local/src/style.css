@@ -3,3 +3,5 @@
 
 section[id]{scroll-margin-top:160px} .retrieval-method{display:block;color:#b3c9df}
 @media(max-width:650px){header{position:static}#emergency-banner{top:0}section[id]{scroll-margin-top:16px}}
+
+.developer-only{display:none!important}.developer-view .developer-only{display:block!important}fieldset{border:1px solid #435a75;border-radius:12px;margin:18px 0;padding:18px;min-width:0}legend{font-weight:650;color:#b3edd9}#clinical-form fieldset{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:12px}#clinical-form fieldset legend{grid-column:1/-1}#intro .row>button:not(#explore){display:none}#advanced-settings{margin-top:24px;border-top:1px solid #435a75;padding-top:15px}#advanced-settings summary{cursor:pointer;min-height:44px}input[type=checkbox]{display:inline-block;width:auto;min-height:24px;vertical-align:middle}#monitoring>p[role=status]{padding:12px;background:#243149}#workspace>nav{position:static}#scope{overflow-wrap:anywhere}@media(max-width:650px){#clinical-form fieldset{display:block}section{padding:16px}h1{font-size:34px}}

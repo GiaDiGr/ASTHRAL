@@ -158,3 +158,22 @@
 /web-local/src/vosk.js
 
 !/web-local/*_LICENSE.txt
+
+!/web-local/voice_csp_glue.js
+
+# Exact approved retrieval sources required for a reproducible clean checkout.
+!/01_INFORMES/
+/01_INFORMES/*
+!/01_INFORMES/REPORTE_CONSOLIDADO_COMPLETO.md
+!/docs/clinical/
+/docs/clinical/*
+!/docs/clinical/deep-research-report-2026-10-16.md
+!/docs/v07/
+/docs/v07/*
+!/docs/v07/README.md
+!/docs/v07/CONTRACTS.md
+!/docs/v08/
+/docs/v08/*
+!/docs/v08/sources/
+/docs/v08/sources/*
+!/docs/v08/sources/ADA2026-short-excerpt.txt

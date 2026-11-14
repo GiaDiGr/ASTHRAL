@@ -1,10 +1,20 @@
 import {Vault} from './vault.js';
+import {initialClinicalInput} from './profile-input.js';
+import {installOffline} from './offline-install.js';
+import {auditedFetch,PRIVATE_SENTINEL} from './network-audit.js';
+const networkEvents=[];const recordNetwork=event=>{networkEvents.push(event);if(networkEvents.length>1000)networkEvents.shift();};
+window.fetch=auditedFetch(window.fetch.bind(window),recordNetwork);
+import {installPublicFeatures} from './public-science.js';
+let clearPublicFeatures=()=>{};
+import {cachePublicResources} from './public-resources.js';
+import {installExperience,human} from './experience.js';
+let experience=null;
 const $=id=>document.getElementById(id);
 const runtimeState={ready:false,seconds:null};
+const operationMetrics=[];
 let recordingEpoch=0,profileEpoch=0;
 let worker,serial=0,vault=null,owner=null,cases=[],corpus=null,stream=null;
 const waiting=new Map();
-
 function element(tag,value) {
   const node=document.createElement(tag);
   node.textContent=value;
@@ -15,6 +25,7 @@ function startWorker() {
   worker=new Worker('./worker.js?v=5');
   worker.onmessage=event=>{
     const value=event.data;
+    if(value.type==='network_audit'){recordNetwork(value.event);return;}
     if(value.type==='ready') {
       runtimeState.ready=true;
       runtimeState.seconds=value.seconds;
@@ -28,6 +39,7 @@ function startWorker() {
     const pending=waiting.get(value.id);
     if(pending) {
       waiting.delete(value.id);
+      operationMetrics.push({action:pending.action,engine_seconds:value.seconds??null,total_seconds:(performance.now()-pending.started)/1000});if(operationMetrics.length>200)operationMetrics.shift();
       if(pending.epoch!==profileEpoch)pending.reject(Error('Profile changed while the operation was pending.'));
       else value.error?pending.reject(Error(value.error)):pending.resolve(value.result);
     }
@@ -37,7 +49,7 @@ function startWorker() {
 function call(action,data) {
   return new Promise((resolve,reject)=>{
     const id=++serial;
-    waiting.set(id,{resolve,reject,epoch:profileEpoch});
+    waiting.set(id,{resolve,reject,epoch:profileEpoch,action,started:performance.now()});
     worker.postMessage({id,action,data});
   });
 }
@@ -49,10 +61,9 @@ function safe(action) {
   };
 }
 startWorker();
-
 async function resources() {
   if(cases.length) return;
-  cases=await (await fetch('./parity-cases.json')).json();
+  cases=await (await fetch('./demo-scenarios.json')).json();
   corpus=await (await fetch('./corpus.json')).json();
   $('case-list').replaceChildren(...cases.map((row,index)=>{
     const option=element('option',row.id+' · '+(row.snapshot.request.condition_id||'Differential'));
@@ -64,11 +75,30 @@ async function resources() {
 function selectCase() {
   const row=cases[Number($('case-list').value)||0];
   $('scenario').value=JSON.stringify({request:row.snapshot.request,mission:row.snapshot.mission},null,2);
+  experience?.refresh();
+  dashboardCaption('Unsaved synthetic scenario preview · not recorded measurements');
   $('metrics').replaceChildren(...row.snapshot.observations.slice(0,12).map(value=>{
     const card=document.createElement('article');
-    card.append(element('strong',value.concept),element('p',String(value.value??'Not measured')+' '+value.unit),element('small',value.timestamp+' · '+value.quality+' · '+value.method));
+    card.append(element('strong',human(value.concept)),element('p',String(value.value??'Not measured')+' '+value.unit),element('small',value.timestamp+' · '+value.quality+' · '+value.method));
     return card;
   }));
+}
+function dashboardCaption(text) {
+  let caption=$('metrics-caption');if(!caption){caption=element('p','');caption.id='metrics-caption';$('metrics').before(caption);}caption.textContent=text;
+}
+async function recordedDashboard(data,epoch) {
+  const timeline=experience?await call('timeline'):null;
+  if(epoch!==profileEpoch||!vault)return;
+  dashboardCaption('Recorded profile data · self-reports are separate from sensor-verified measurements');
+  const cards=[];
+  for(const row of (timeline?.measurement??[]).slice(-8)){
+    const m=row.measurement,card=document.createElement('article');card.append(element('strong','Recorded measurement: '+human(m.variable)),element('p',String(m.value??'Not measured')+' '+m.unit),element('small',m.timestamp+' · '+human(row.ingestion_quality??'UNKNOWN')));cards.push(card);
+  }
+  const last=data.evaluations.at(-1);
+  if(last){const card=document.createElement('article');card.append(element('strong','Last saved clinical assessment'),element('p',human(last.snapshot.request.condition_id??'Differential')+' · '+human(last.output.urgency)),element('small','Recorded assessment time: '+last.snapshot.request.as_of+' · not a live sensor reading'));cards.push(card);}
+  for(const row of data.observations.slice(-4)){const card=document.createElement('article');card.append(element('strong','Reviewed self-report · not sensor-verified'),element('p',row.text));cards.push(card);}
+  if(!cards.length)cards.push(element('p','No measurements or assessments recorded. Missing information remains unknown.'));
+  $('metrics').replaceChildren(...cards);
 }
 async function listProfiles() {
   $('profile-list').replaceChildren(...(await Vault.list()).map(row=>{
@@ -81,12 +111,18 @@ async function entered() {
   const epoch=profileEpoch;
   await resources();
   if(epoch!==profileEpoch||!vault)return;
-  $('workspace').hidden=false;
-  $('profiles').hidden=true;
-  $('lock').hidden=false;
   $('scope').textContent=(vault.temporary?'Temporary synthetic demo · memory only · ':'Encrypted synthetic local profile · ')+owner;
-  selectCase();
+  if(vault.temporary)selectCase();
+  else {
+    const saved=await call('history');
+    if(epoch!==profileEpoch||!vault)return;
+    $('scenario').value=JSON.stringify(initialClinicalInput(saved.evaluations,owner));
+    experience?.refresh();
+  }
   await history();
+  await experience?.update();
+  if(epoch!==profileEpoch||!vault)return;
+  $('workspace').hidden=false;$('profiles').hidden=true;$('lock').hidden=false;
 }
 async function persist() {
   if(!vault.temporary)await vault.save(await call('serialize'));
@@ -97,7 +133,8 @@ async function history() {
   const data=await call('history');
   if(epoch!==profileEpoch||!vault)return;
   const latest=data.evaluations.at(-1);
-  $('emergency-banner').hidden=!latest||!['EMERGENCY','URGENT'].includes(latest.output.urgency);
+  $('emergency-banner').hidden=true;
+  // Historical results stay in history; current urgency is shown with its assessment.
   $('emergency-banner').textContent=latest?latest.output.urgency+' · Last saved synthetic assessment · Human medical review required · Treatment blocked':'';
   const rows=[
     ...data.evaluations.map(row=>({label:row.output.urgency+' · '+(row.snapshot.request.condition_id||'Differential'),detail:row.output})),
@@ -107,15 +144,21 @@ async function history() {
   for(const row of rows.reverse()) {
     const article=document.createElement('article');
     const details=document.createElement('details');
+    details.className='developer-only';
     details.append(element('summary','Record and provenance'),element('pre',JSON.stringify(row.detail,null,2)));
     article.append(element('strong',row.label),details);
+    if(row.detail.source?.startsWith('SELF_REPORTED'))article.append(element('p','Self-reported information · not sensor-verified · medical review required; no text-based urgency classification.'));
     $('history-list').append(article);
   }
   if(!rows.length) $('history-list').append(element('p','No local observations or evaluations saved.'));
   $('profile-status').textContent='Unlocked · audit '+(data.audit_valid?'verified':'FAILED');
+  await recordedDashboard(data,epoch);
 }
 async function lock() {
   profileEpoch++;
+  operationMetrics.length=0;
+  experience?.clear();
+  clearPublicFeatures();
   stopRecording();
   vault?.lock();
   vault=null;
@@ -132,6 +175,7 @@ async function lock() {
   $('lock').hidden=true;
   for(const id of ['history-list','assessment','clinical-output','management','urgency','citations','answer','statistics-output','statistics-chart','metrics','model-benchmark']) $(id).replaceChildren();
   for(const id of ['observation-text','scenario','question','search-question'])$(id).value='';
+  $('voice-auto').checked=false;
   $('model-status').textContent='Profile locked · local inference released';
   status('Profile locked.');
   $('profile-status').textContent='Profile locked';
@@ -175,34 +219,40 @@ $('evaluate').onclick=safe(async()=>{
   if(!vault) throw Error('Unlock a local profile first.');
   status('Computing locally in the Python WebAssembly worker…');
   const epoch=profileEpoch;
-  const result=await call('evaluate',{snapshot:JSON.parse($('scenario').value)});
+  experience?.sync();
+  const result=await call('evaluate',{snapshot:JSON.parse($('scenario').value),use_registered_context:!document.body.classList.contains('developer-view')});
   await persist();
   if(epoch!==profileEpoch||!vault)return;
-  $('urgency').textContent=result.output.urgency+' · Treatment execution blocked';
+  $('urgency').textContent=human(result.output.urgency)+' · Synthetic assessment as of '+result.snapshot.request.as_of+' · Treatment execution blocked';
   $('urgency').className=['URGENT','EMERGENCY'].includes(result.output.urgency)?'emergency':'';
   $('assessment').replaceChildren();
   for(const [name,value] of Object.entries(result.output.results)) {
     const card=document.createElement('article');
     card.append(
-      element('h3',name),
-      element('p','Criteria '+value.diagnostic_status+' · Confirmation '+value.confirmation_status),
-      element('p','Missing required '+(value.missing_required.join(', ')||'None')),
-      element('p','Unmeasured alternatives '+(value.optional_not_measured.join(', ')||'None')),
-      element('p','Protocol safety '+(value.required_for_protocol_safety.join(', ')||'None')),
-      element('p','Protocol '+value.protocol_status)
+      element('h3',human(name)),
+      element('p',human(value.diagnostic_status)+' · '+human(value.confirmation_status)),
+      element('p','Information needed to resolve criteria (AND/OR alternatives apply): '+(value.missing_required.map(human).join(', ')||'None')),
+      element('p','Unmeasured alternatives that do not block this result: '+(value.optional_not_measured.map(human).join(', ')||'None')),
+      element('p','Invalid evidence requiring review: '+((value.invalid_required??[]).map(human).join(', ')||'None identified')),
+      element('p','Independent protocol safety information needed: '+(value.required_for_protocol_safety.map(human).join(', ')||'None')),
+      element('p',human(value.protocol_status))
     );
     $('assessment').append(card);
   }
   $('clinical-output').textContent=JSON.stringify(result,null,2);
+  const pending=element('article','Recommended tests and assessment actions (not authorized orders)');
+  for(const test of result.output.next_tests??[])pending.append(element('p',human(test.test_id??test.action??'Medical review')+' · '+human(test.priority??'review required')));
+  if((result.output.next_tests??[]).length)$('assessment').append(pending);
   const management=result.output.management||{state:'Documentary resource mapping unavailable for this context',treatment:'BLOCKED'};
   $('management').replaceChildren();
   for(const [route,guide] of Object.entries(management)) {
     const card=document.createElement('article');
-    card.append(element('strong',route),element('p','Documented reference · execution blocked'));
+    card.append(element('strong',human(route)),element('p','Documented reference · execution blocked'));
     for(const intervention of guide.interventions??[]) {
-      card.append(element('p',intervention.title+' · '+intervention.resource_status+' · '+intervention.authorization));
+      card.append(element('p','Documented option: '+human(intervention.title)+' · '+human(intervention.resource_status)+' · '+human(intervention.authorization)));
     }
     const details=document.createElement('details');
+    details.classList.add('developer-only');
     details.append(element('summary','Original guidance, resource checks and source metadata'),element('pre',JSON.stringify(guide,null,2)));
     card.append(details);
     $('management').append(card);
@@ -212,7 +262,9 @@ $('evaluate').onclick=safe(async()=>{
 $('run-parity').onclick=safe(async()=>{
   await resources();
   status('Running real Python computations against reference outputs…');
-  const result=await call('parity',{cases});
+  await cacheOptional(['parity-cases.json']);
+  const parityCases=await(await fetch('./parity-cases.json')).json();
+  const result=await call('parity',{cases:parityCases});
   $('parity').textContent=JSON.stringify(result,null,2);
   status(result.matched+'/'+result.total+' reference outputs matched.');
   window.asthralParity=result;
@@ -264,8 +316,8 @@ function renderDocs(parent,blocks) {
   if(!blocks.length) parent.append(element('p','No eligible local excerpt matched.'));
   for(const block of blocks) {
     const article=document.createElement('article');
-    article.append(element('strong',block.id),element('p',block.text),
-      element('small',block.reference.document+' · '+block.reference.authority+' · SHA-256 '+block.reference.sha256));
+    article.append(element('strong',block.id),element('p',block.display_text??block.text),
+      element('small',block.kind==='ENGINE'?'Recorded local assessment · deterministic engine':block.reference.document+' · '+block.reference.authority+' · SHA-256 '+block.reference.sha256));
     parent.append(article);
   }
 }
@@ -357,38 +409,24 @@ addEventListener('online',network);
 addEventListener('offline',network);
 network();
 listProfiles().catch(error=>status(error.message));
-$('install-offline').onclick=safe(async()=>{
-  if(!('serviceWorker'in navigator)) throw Error('Offline installation unsupported.');
-  const manifest=await (await fetch('./assets.json')).json();
-  const size=manifest.files.filter(file=>!file.optional).reduce((sum,file)=>sum+file.size,0)/1048576;
-  status('Installing '+size.toFixed(1)+' MiB of versioned application resources…');
-  const registration=await navigator.serviceWorker.register('./sw.js');
-  if(registration.installing) {
-    await new Promise((resolve,reject)=>{
-      const installing=registration.installing;
-      installing.addEventListener('statechange',()=>{
-        if(installing.state==='installed')resolve();
-        if(installing.state==='redundant')reject(Error('Offline installation failed integrity or quota checks.'));
-      });
-    });
-  }
-  if(registration.waiting) {
-    $('activate-update').hidden=false;
-    status('Verified update downloaded. Lock the profile and activate the update when ready.');
-    return;
-  }
-  await navigator.serviceWorker.ready;
-  const persistent=await navigator.storage?.persist?.();
-  status('Offline resources installed. Persistent storage '+(persistent?'granted':'not granted')+'. Test an offline reload on your device.');
-});
+let offlineInstalling=false;
+navigator.serviceWorker?.addEventListener('message',event=>{if(offlineInstalling&&event.data?.type==='OFFLINE_INSTALL_PROGRESS'){const value=event.data;$('offline-status').textContent='Installing / checking '+value.complete+' of '+value.total+' files · '+(value.bytes/1048576).toFixed(1)+' MiB verified';}});
+$('install-offline').onclick=async()=>{
+ const button=$('install-offline'),message=$('offline-status');button.disabled=true;button.textContent='Installing offline resources…';offlineInstalling=true;
+ try{const result=await installOffline({report:text=>{message.textContent=text;status(text);}});
+ if(result.update_waiting){$('activate-update').hidden=false;message.textContent='Verified update downloaded. Lock all open profiles, then activate the update.';}
+ else{$('activate-update').hidden=true;message.textContent='Offline resources verified: '+result.files+' files. '+(result.persistent?'Persistent storage granted.':'Browser storage can be evicted; retain an encrypted backup.')+' Reload this page, then test without connectivity.';}
+ status(message.textContent);
+ }catch(error){message.textContent='Offline installation failed: '+error.message;status(message.textContent);}
+ finally{offlineInstalling=false;button.disabled=false;button.textContent='Install offline resources';}
+};
 
-import {saveIndex,readIndex,hybridRank} from './vectors.js';
+import {saveIndex,readIndex,hybridRank,vectorRank,fuseRankings} from './vectors.js';
 let modelCatalog=null;
 let localGeneration=null;
 let localEmbedding=null;
 let modelEpoch=0;
 const benchmarks=[];
-
 class InferenceWorker {
   constructor(statusElement) {
     this.worker=new Worker('./ml-worker.js',{type:'module'});
@@ -397,6 +435,7 @@ class InferenceWorker {
     this.ready=false;
     this.worker.onmessage=event=>{
       const message=event.data;
+      if(message.type==='network_audit'){recordNetwork(message.event);return;}
       if(message.type==='status') {
         const progress=message.total?' · '+((message.received??0)/1048576).toFixed(1)+' / '+(message.total/1048576).toFixed(1)+' MiB':'';
         statusElement.textContent=message.state+progress+(message.text?' · '+message.text:'');
@@ -443,6 +482,7 @@ function releaseModels() {
 const originalLock=lock;
 lock=async function() {
   releaseModels();
+  benchmarks.length=0;
   await originalLock();
 };
 $('lock').onclick=safe(lock);
@@ -471,7 +511,7 @@ $('model-load').onclick=safe(async()=>{
   const result=await localGeneration.call('install',{id:$('model-choice').value});
   if(epoch!==modelEpoch) return;
   localGeneration.ready=true;
-  benchmarks.push(result);
+  benchmarks.push({...result,generated_json:undefined,text:undefined});
   $('model-status').textContent='READY · '+result.model+' · actual browser-local inference';
   $('model-benchmark').textContent=JSON.stringify(benchmarks,null,2);
 });
@@ -500,9 +540,10 @@ $('embed-load').onclick=safe(async()=>{
   const vectors=[];
   const start=performance.now();
   // The unchanged Python verifier checks provenance and quarantine before indexing.
-  for(const block of corpus.blocks) {
-    const verification=await call('search',{corpus,question:block.text,limit:corpus.blocks.length});
-    if(!verification.blocks.some(row=>row.id===block.id)) continue;
+  const verified=await call('verify_corpus',{corpus});
+  for(const block of verified.blocks) {
+    if(epoch!==modelEpoch||!vault)return;
+    $('embedding-status').textContent='Building verified local index · '+vectors.length+'/'+verified.blocks.length;
     const result=await localEmbedding.call('embed',{text:block.text});
     vectors.push({id:block.id,vector:result.vector});
   }
@@ -521,7 +562,9 @@ async function localRetrieve(question,limit=3) {
     const index=await readIndex();
     if(!index) return lexical.blocks.slice(0,limit);
     const query=await localEmbedding.call('embed',{text:question});
-    return hybridRank(lexical.blocks,index,query.vector,corpus.sha256,model.revision).slice(0,limit);
+    const verified=await call('verify_corpus',{corpus});
+    const semantic=vectorRank(verified.blocks,index,query.vector,corpus.sha256,model.revision,32);
+    return fuseRankings(lexical.blocks,semantic,limit);
   } catch(error) {
     $('embedding-status').textContent='Local lexical fallback · '+error.message;
     return lexical.blocks.slice(0,limit);
@@ -537,47 +580,41 @@ $('ask').onclick=safe(async()=>{
   await resources();
   const epoch=modelEpoch;
   const question=$('question').value;
-  const blocks=await localRetrieve(question);
+  const context=await call('assistant_context',{question});
+  if(['REFUSED_ACTION','CONTEXT_MISMATCH','INSUFFICIENT_INFORMATION'].includes(context.state)){status(human(context.state));return;}
+  const blocks=[...context.blocks.slice(0,2),...(await localRetrieve(question)).filter(b=>b.english_generation_eligible!==false).slice(0,2)];
   renderDocs($('answer'),blocks);
-  if($('mode').value!=='FULL'||!localGeneration?.ready) {
+  if($('mode').value!=='FULL'||!localGeneration?.ready||question.length>600) {
     status('Extractive local results · local text generation unavailable or disabled by energy policy.');
     return;
   }
   $('model-status').textContent='GENERATING · local GPU';
-  const result=await localGeneration.call('generate',{question,blocks});
+  const numeric=context.numeric&&/baseline|trend|change|recorded|measured|capacity|strength|sleep/i.test(question)?context.numeric:null;
+  const result=await localGeneration.call('generate',{question,blocks,explain:true,prepared_messages:numeric?.prompt.messages,prepared_schema:numeric?.prompt.schema,prepared_max_tokens:numeric?.prompt.max_tokens});
   if(epoch!==modelEpoch) return;
-  benchmarks.push(result);
-  $('model-benchmark').textContent=JSON.stringify(benchmarks,null,2);
+  const metric={...result,generated_json:undefined,text:undefined};
+  benchmarks.push(metric);
   $('model-status').textContent='READY · generation completed on this device';
-  if(result.accepted) {
-    const card=document.createElement('article');
-    card.append(element('strong','Exact source quotation selected by the local model'),
-      element('p',result.text),element('small','Source '+result.citation+' · no clinical authority'));
-    $('answer').prepend(card);
-    status('Accepted local model quotation. Engine decisions remain authoritative.');
-  } else status('Local inference completed. Generated wording failed exact citation verification; extractive results remain available.');
+  try {
+    if(result.finish_reason==='length')throw Error('TRUNCATED_MODEL_RESPONSE');
+    const generated=JSON.parse(result.generated_json);
+    const checked=numeric?await call('validate_numeric_assistant',{generated,facts:numeric.facts}):await call('validate_assistant',{generated,blocks});
+    if(epoch!==modelEpoch)return;
+    if(!checked.sentences.length)throw Error('NO_SUPPORTED_GENERATED_EXPLANATION');
+    metric.accepted=true;metric.validation_pending=false;metric.validation='PASSED_REFERENCE_VALIDATOR';
+    for(const sentence of checked.sentences){const card=document.createElement('article');card.append(element('strong','Local model explanation · human review required'),element('p',sentence.text),element('small','Sources '+sentence.evidence_ids.join(', ')+' · no clinical authority'));if(numeric)card.append(element('p','Recorded synthetic cycle: '+numeric.as_of+' · descriptive historical data, not a live sensor reading.'));$('answer').prepend(card);}
+    status('Local generation passed citation and clinical consistency gates. Deterministic results remain authoritative.');
+  } catch(error){
+    metric.accepted=false;metric.validation_pending=false;metric.validation='REJECTED_BY_REFERENCE_VALIDATOR';
+    metric.validation_error_code=['CLINICAL_CLAIM_REQUIRES_EXACT_ENGINE_TEXT','FACT_SCOPE_MISMATCH','FACT_DOES_NOT_MATCH_STORED_REFERENCE','TRUNCATED_MODEL_RESPONSE','INVALID_GENERATED_SCHEMA','INVALID_SENTENCE','INVALID_CITATION','STRUCTURED_FACT_REALIZATION_REJECTED','OPTIONAL_DATA_REQUIRES_ENGINE_SUMMARY','CLINICAL_STATE_CONTRADICTION','UNSAFE_GENERATED_TEXT','UNSUPPORTED_NUMBER','ENGINE_EXPLANATION_REQUIRES_VERBATIM_SUPPORT','DOCUMENT_CANNOT_ESTABLISH_PERSONAL_MEASUREMENTS','NO_SUPPORTED_GENERATED_EXPLANATION'].find(code=>String(error).includes(code))??(error instanceof SyntaxError?'INVALID_MODEL_JSON':'REFERENCE_VALIDATION_FAILED');
+    status('Extractive fallback: generated wording did not pass the reference safety contract.');
+  } finally {$('model-benchmark').textContent=JSON.stringify(benchmarks,null,2);}
 });
 $('mode').onchange=()=>{
   if($('mode').value!=='FULL') releaseModels();
   $('model-status').textContent=$('mode').value+' · local extractive fallback available';
 };
-
-async function cacheOptional(prefixes) {
-  const manifest=await (await fetch('./assets.json')).json();
-  const cache=await caches.open('asthral-optional-resources-v1');
-  for(const asset of manifest.files.filter(row=>prefixes.some(prefix=>row.path===prefix||row.path.startsWith(prefix)))) {
-    const url=new URL('./'+asset.path,location.href);
-    let response=await cache.match(url);
-    if(!response)response=await fetch(url);
-    if(!response.ok)throw Error('Optional runtime download failed.');
-    const bytes=await response.arrayBuffer();
-    const hash=[...new Uint8Array(await crypto.subtle.digest('SHA-256',bytes))].map(v=>v.toString(16).padStart(2,'0')).join('');
-    if(hash!==asset.sha256)throw Error('Optional runtime integrity failed.');
-    const mime=asset.path.endsWith('.js')||asset.path.endsWith('.mjs')?'text/javascript':asset.path.endsWith('.wasm')?'application/wasm':'application/octet-stream';
-    await cache.put(url,new Response(bytes,{headers:{'Content-Type':mime}}));
-  }
-}
-
+async function cacheOptional(prefixes) {return cachePublicResources(prefixes);}
 import {OfflineVoice} from './offline-voice.js';
 let voiceDraft=null;
 const offlineVoice=new OfflineVoice({
@@ -590,6 +627,8 @@ async function acceptTranscript(value) {
   if(!vault||!value?.text)return;
   const parsed=await call('parse_observation',{text:value.text});
   voiceDraft={...value,observation:parsed.observation};
+  const policy=await call('voice_policy',{...value,auto_save:$('voice-auto').checked});
+  if(policy.eligible){await call('save_observation',{...value,auto_save:true,source:'SELF_REPORTED_VOICE',validation:'AUTOMATIC_SELF_REPORT',clinical_eligibility:'NOT_AUTOMATICALLY_ASSESSED'});await persist();voiceDraft=null;$('observation-text').value='';$('voice-status').textContent=vault.temporary?'Eligible self-reported duration saved to temporary memory.':'Eligible self-reported duration committed to encrypted local storage.';return;}
   $('observation-text').value=value.text;
   $('voice-status').textContent=parsed.observation?
     'Local transcript ready · review numbers, units, negations and timing before saving.':
@@ -597,8 +636,8 @@ async function acceptTranscript(value) {
   $('record').disabled=false;
   $('stop-record').disabled=true;
 }
-$('voice-auto').disabled=true;
-$('voice-auto').closest('label').append(element('small',' · Browser recognizer finalization requires review. Automatic persistence is blocked.'));
+$('voice-auto').disabled=false;
+$('voice-auto').closest('label').append(element('small',' · Only explicit sleep/exercise reports for the past 24 hours with every word confidence at least 0.95 qualify. Physiological readings and symptoms require review.'));
 $('voice-inspect').onclick=safe(async()=>{
   const model=await (await fetch('./voice-model.json')).json();
   $('voice-status').textContent='DOWNLOAD_REQUIRED · '+model.model+' · '+(model.bytes/1048576).toFixed(1)+
@@ -680,7 +719,6 @@ $('mode').onchange=()=>{
   if($('mode').value!=='FULL')offlineVoice.close();
   policyBeforeVoice();
 };
-
 let statisticsCases=[];
 async function statisticsResources() {
   if(statisticsCases.length)return;
@@ -722,11 +760,41 @@ $('statistics-run').onclick=safe(async()=>{
 });
 const enteredBeforeStatistics=entered;
 entered=async function(){await enteredBeforeStatistics();await statisticsResources();};
-
 $('activate-update').onclick=safe(async()=>{
   if(vault)throw Error('Lock the profile before activating an application update.');
   const registration=await navigator.serviceWorker.getRegistration();
   if(!registration?.waiting)throw Error('No downloaded update is waiting.');
   navigator.serviceWorker.addEventListener('controllerchange',()=>location.reload(),{once:true});
   registration.waiting.postMessage({action:'ACTIVATE_UPDATE'});
+});
+experience=await installExperience({call,persist});
+if(vault&&cases.length){experience.refresh();await experience.update();await history();}
+clearPublicFeatures=await installPublicFeatures();
+
+const speechRegression=element('button','Run synthetic offline speech regression');speechRegression.className='developer-only';$('voice').append(speechRegression);const speechReport=element('pre','');speechReport.id='speech-regression-report';speechReport.className='developer-only';$('voice').append(speechReport);
+speechRegression.onclick=safe(async()=>{
+ if(!vault||!offlineVoice.model)throw Error('Unlock a synthetic profile and load the offline speech model first.');
+ speechRegression.disabled=true;
+ try{const manifest=await(await fetch('./test-audio/manifest.json')).json(),results=[];
+ for(const fixture of manifest){const response=await fetch('./test-audio/'+fixture.file),bytes=await response.arrayBuffer();const actual=[...new Uint8Array(await crypto.subtle.digest('SHA-256',bytes))].map(x=>x.toString(16).padStart(2,'0')).join('');if(actual!==fixture.sha256)throw Error('Synthetic audio integrity failure.');
+ const start=performance.now();const transcript=await offlineVoice.fromAudioFile(new File([bytes],fixture.file,{type:'audio/wav'}));const parsed=await call('parse_observation',{text:transcript.text}),expected=await call('parse_observation',{text:fixture.text});
+ results.push({id:fixture.id,expected:fixture.text,actual:transcript.text,seconds:(performance.now()-start)/1000,exact_transcript:fixture.text.toLowerCase()===transcript.text,structured_values_match:JSON.stringify(parsed.observation?.values??null)===JSON.stringify(expected.observation?.values??null),parsed:parsed.observation,finalization:transcript.finalization,record_saved:false});speechReport.textContent=JSON.stringify(results,null,2);}
+ status('Synthetic speech regression finished. No test audio or observations were saved. Review every mismatch.');
+ }finally{speechRegression.disabled=false;}
+});
+
+const privacyCheck=element('button','Inspect network privacy evidence');privacyCheck.className='developer-only';$('advanced-settings').append(privacyCheck);const privacyOutput=element('pre','');privacyOutput.id='network-privacy-report';privacyOutput.className='developer-only';$('advanced-settings').append(privacyOutput);
+privacyCheck.onclick=()=>{privacyOutput.textContent=JSON.stringify({observed_at:new Date().toISOString(),synthetic_sentinel:PRIVATE_SENTINEL,events:networkEvents,matching_attempts:networkEvents.filter(x=>x.contains_sentinel).length,network_writes:networkEvents.filter(x=>x.method!=='GET').length,scope:'APP_AND_MODEL_FETCH_INSTRUMENTATION_NOT_INDEPENDENT_PACKET_CAPTURE',limitations:['Redirect internals and native browser voice engines are not instrumented.','No claim against compromised same-origin code or operating system.']},null,2);};
+
+const performanceCheck=element('button','Inspect measured workflow latency');performanceCheck.className='developer-only';$('advanced-settings').append(performanceCheck);const measuredPerformance=element('pre','');measuredPerformance.id='workflow-performance-report';measuredPerformance.className='developer-only';$('advanced-settings').append(measuredPerformance);performanceCheck.onclick=()=>{measuredPerformance.textContent=JSON.stringify({observed_at:new Date().toISOString(),python_startup_seconds:runtimeState.seconds,operations:operationMetrics,peak_memory:'NOT_MEASURED',thermal_energy:'NOT_MEASURED',physical_mobile:'NOT_TESTED'},null,2);};
+
+const loadMission=element('button','Load synthetic mission observations');$('dashboard').prepend(loadMission);const missionNotice=element('p','Disposable demo only: five synthetic measurements, a personal baseline and a real monitoring cycle. No connected sensor or actual treatment is implied.');loadMission.after(missionNotice);
+loadMission.onclick=safe(async()=>{
+ if(!vault?.temporary)throw Error('Use a new temporary synthetic demo for the seeded mission. Persistent profiles are not modified by this generator.');
+ const existing=await call('timeline');if(existing.measurement.length||existing.monitoring_run.length)throw Error('This demo already contains measurements. Lock it and open a new temporary demo to start another seeded mission.');
+ loadMission.disabled=true;
+ try{const fixture=await(await fetch('./monitor-fixture.json')).json();let result;
+ for(const step of fixture.steps){const data=structuredClone(step.data);if(step.action==='ingest')Object.assign(data.measurement,{subject_id:owner,mission_id:'browser-mission'});if(step.action==='monitor')Object.assign(data,{subject_id:owner,mission_id:'browser-mission'});result=await call(step.action,data);}
+ const replay=await call('replay_monitor',{id:result.id});await persist();await experience.update();status(replay.matches?'Synthetic mission calculated and frozen cycle reproduced exactly. All treatment execution remains blocked.':'REPLAY MISMATCH — integration must stop.');
+ }finally{loadMission.disabled=false;}
 });

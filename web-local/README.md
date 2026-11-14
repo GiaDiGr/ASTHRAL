@@ -1,5 +1,7 @@
 # ASTHRAL Web — browser-local integration prototype
 
+> Current candidate: see [IMPLEMENTATION_STATUS_20261114.md](IMPLEMENTATION_STATUS_20261114.md) and [OFFLINE_INSTALL_AUDIT.md](OFFLINE_INSTALL_AUDIT.md). Feature counts and limitations below describe the earlier prototype, not the current working tree. The current candidate has 44 passing browser tests and 254-case parity; Samsung offline operation was owner-reported successful on preview decec363. Final release acceptance remains in progress.
+
 Review date: 2026-11-13 (America/Lima). Public static URL: https://asthral-web.pages.dev/ . This is a research prototype using synthetic data only; software tests are not clinical or operational validation.
 
 ## Architecture and boundaries

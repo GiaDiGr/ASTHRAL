@@ -18,3 +18,11 @@ test('stale or malformed public indexes fail closed to the caller fallback',()=>
   assert.throws(()=>validateVector(Array(384).fill(0)),/normalized/);
   assert.throws(()=>hybridRank(lexical,{...index,vectors:[index.vectors[0],index.vectors[0]]},unit(1),'hash','r1'),/Duplicate/);
 });
+import {vectorRank,fuseRankings} from '../src/vectors.js';
+test('vector retrieval can find verified sources outside lexical matches',()=>{
+ const ranked=vectorRank(lexical,index,unit(1),'hash','r1',1);
+ assert.equal(ranked[0].id,'b');
+ const hybrid=fuseRankings([lexical[0]],ranked,2);
+ assert.deepEqual(new Set(hybrid.map(b=>b.id)),new Set(['a','b']));
+ assert.throws(()=>vectorRank([lexical[0]],index,unit(1),'hash','r1'),/Unverified/);
+});
