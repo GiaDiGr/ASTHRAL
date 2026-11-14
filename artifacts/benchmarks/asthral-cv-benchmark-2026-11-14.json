@@ -1,0 +1,117 @@
+{
+  "schema_version": 1,
+  "generated_at": "2026-11-14T22:03:58.532412+00:00",
+  "purpose": "CPU load/inference latency and input/output smoke checks on deterministic, nonmedical synthetic patterns",
+  "clinical_accuracy_evaluated": false,
+  "synthetic_data_has_clinical_meaning": false,
+  "configuration": {
+    "warmup_runs_per_model": 2,
+    "measured_runs_per_model": 10,
+    "torch_cpu_threads": 4
+  },
+  "environment": {
+    "os": "Windows-10-10.0.26200-SP0",
+    "python": "3.11.9",
+    "processor": "Intel64 Family 6 Model 154 Stepping 3, GenuineIntel",
+    "numpy": "1.26.4",
+    "torch": "2.5.1+cpu",
+    "torchvision": "0.20.1+cpu",
+    "opencv": "4.11.0.86",
+    "mediapipe": "0.10.21"
+  },
+  "models": {
+    "ocularvision": {
+      "state": "WEIGHTS_PRESENT",
+      "weight_sha256": "e085d37bc04f716ee3417bbd768fa4aa392a24fb62c0371e066279e6dd7d314a",
+      "input": "synthetic 1x1x496x768 grayscale gradient",
+      "load_seconds": 0.067969,
+      "inference": {
+        "samples": 10,
+        "units": "seconds",
+        "min": 0.827071,
+        "median": 0.839127,
+        "mean": 0.839208,
+        "p95_nearest_rank": 0.85536,
+        "max": 0.85536,
+        "throughput_per_second_at_median": 1.192
+      },
+      "output": {
+        "logits_shape": [
+          1,
+          8,
+          496,
+          768
+        ],
+        "mask_shape": [
+          1,
+          496,
+          768
+        ],
+        "synthetic_output_labels": [
+          0,
+          2
+        ]
+      }
+    },
+    "echovision": {
+      "state": "WEIGHTS_PRESENT",
+      "weight_sha256": "b32ea45b8200e11298ff4021166ff8d187204fb0c27a937bcdb4c518ffcbe1ed",
+      "input": "synthetic 240x320 RGB checker/gradient frame",
+      "load_seconds": 1.685748,
+      "inference": {
+        "samples": 10,
+        "units": "seconds",
+        "min": 0.091007,
+        "median": 0.09284,
+        "mean": 0.09424,
+        "p95_nearest_rank": 0.099977,
+        "max": 0.099977,
+        "throughput_per_second_at_median": 10.771
+      },
+      "output": {
+        "mask_shape": [
+          240,
+          320
+        ],
+        "overlay_shape": [
+          240,
+          320,
+          3
+        ],
+        "synthetic_mask_occupancy_fraction": 0.078854
+      }
+    },
+    "motionguard": {
+      "state": "WEIGHTS_PRESENT",
+      "weight_sha256": "e2dab61191e2dcd0a15f943d8e3ed1dce13c82dfa597b9dd39f562975a50c3f8",
+      "input": "synthetic 240x320 RGB checker/gradient frame",
+      "load_seconds": 1.000677,
+      "inference": {
+        "samples": 10,
+        "units": "seconds",
+        "min": 0.019739,
+        "median": 0.020801,
+        "mean": 0.021054,
+        "p95_nearest_rank": 0.023195,
+        "max": 0.023195,
+        "throughput_per_second_at_median": 48.074
+      },
+      "synthetic_frame_detection": {
+        "pose_landmark_count": 0,
+        "face_landmark_count": 0,
+        "left_hand_landmark_count": 0,
+        "right_hand_landmark_count": 0
+      }
+    },
+    "skinguard": {
+      "state": "MODEL_NOT_CONFIGURED",
+      "accuracy_or_latency": null,
+      "reason": "No compatible detector weights are installed; no SkinGuard inference was run."
+    }
+  },
+  "notes": [
+    "Latency depends on this machine and the local model files; it is not a cross-machine performance claim.",
+    "Synthetic output shape, class counts, or mask occupancy are not accuracy or clinical validity metrics.",
+    "No patient data or images are read or saved by this benchmark."
+  ]
+}
