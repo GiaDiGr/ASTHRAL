@@ -6,6 +6,59 @@
 
 ASTHRAL is a research prototype for NASA Space Apps Challenge 2026. It combines deterministic biomedical assessment, longitudinal astronaut monitoring, traceable local evidence, a local assistant, and optional public scientific reference retrieval. It is designed to continue functioning without Internet access. It has not been clinically, operationally, or flight validated.
 
+## Repository map and branches
+
+`main` is the default branch and the integrated project baseline. A successful push to another branch does **not** update `main`; every branch is a separate line of commits. The branch pointers below were checked on 14 November 2026. Confirm them again before starting new work because branches can move.
+
+| Branch | Purpose and current relationship to `main` |
+|---|---|
+| [`main`](https://github.com/GiaDiGr/ASTHRAL/tree/main) | Integrated ASTHRAL baseline and browser release evidence. The current release report is [`WEB_RELEASE_20261114.md`](docs/asthral/WEB_RELEASE_20261114.md). |
+| [`feature/asthral-computer-vision`](https://github.com/GiaDiGr/ASTHRAL/tree/feature/asthral-computer-vision) | Separate workstream for SkinGuard, OcularVision, EchoVision, MotionGuard, their evaluation utilities, tests, and benchmarks. At the checked snapshot, these modules are **not integrated into `main`**. |
+| `feature/asthral-hybrid` | Earlier hybrid assistant and guarded PubMed retrieval work; its current branch tip is in `main`'s commit history. |
+| `feature/secure-voice-vector-rag` | Voice, personal sessions, and retrieval development line. Its branch tip is not in `main`'s commit history. |
+| `feature/cloudflare-mobile-demo` | Isolated synthetic mobile-demo deployment line; its branch tip is not in `main`'s commit history. |
+| `feature/browser-local-pages` | Browser-local/static-pages development line; its branch tip is not in `main`'s commit history. |
+| `feature/browser-complete-release` | Browser release-candidate line; its branch tip is not in `main`'s commit history. |
+
+These relationships describe Git history, not a guarantee that every file is absent or present: work can be copied or squashed between branches. Before reusing or merging a branch, inspect its latest commit, compare its files with the target, and check whether its commits are already included. Do not merge branches merely because their names look related.
+
+To inspect the current checkout and remote branches:
+
+```powershell
+git status --short --branch
+git branch --all --verbose
+git fetch origin --no-tags
+```
+
+For an existing checkout, update only the branch you intend to work on. Commit or otherwise preserve local work first; if the branch is clean and only behind its upstream, use a fast-forward-only update. If it is dirty or has diverged, stop and review the differences. Do not use `git reset --hard`, `git clean`, or force-push to synchronize team work. See [`CONTRIBUTING.md`](CONTRIBUTING.md) for the collaboration rules.
+
+Safe update sequence for a clean checkout with an upstream configured:
+
+```powershell
+git status --short --branch
+git branch --show-current
+git fetch origin --no-tags
+# Run only if the working tree is clean and this branch is strictly behind its upstream.
+git merge --ff-only '@{u}'
+```
+
+If local and remote commits diverged, do not run the merge command above. Preserve both histories and prepare a reviewed integration or pull request.
+
+## Guidance for AI coding assistants
+
+When an AI assistant works in this repository, use these as project instructions:
+
+1. **Establish the state first.** Confirm the repository root, active branch, upstream, and `git status`. Read this README, [`CONTRIBUTING.md`](CONTRIBUTING.md), [`SECURITY.md`](SECURITY.md), and the relevant `docs/asthral/` pages before editing. Treat the checked-out branch as the requested scope; never assume another branch's code is present.
+2. **Preserve the existing design.** The Python package and compatible internal identifiers are named `vigile`. The core lives under `engine/vigile/`; the browser application lives under `web-local/`; Python tests are under `engine/tests/`; release and research evidence is documented in `docs/asthral/` and `artifacts/`. Extend the existing API, session, storage, and UI patterns instead of creating a duplicate application or backend.
+3. **Respect the clinical authority boundary.** Deterministic, versioned rules and validated inputs produce clinical findings. The local language model and retrieval tools are supporting interfaces; they do not diagnose, change rules, authorize care, or execute treatment. Public PubMed metadata is optional, off by default, marked unreviewed, and kept outside the clinical rule engine. ASTHRAL is not clinically, operationally, or flight validated.
+4. **Do not invent evidence.** Keep synthetic software checks, local performance, and clinical evaluation clearly separate. Never present synthetic tests as clinical accuracy or fabricate model weights, dataset labels, metrics, or treatment outcomes. If an optional model or dataset is absent, report that state and leave its inference unavailable.
+5. **Protect work across computers.** Do not switch away from a dirty branch, merge another branch without reviewing its file changes, rewrite shared history, or delete files to make an update pass. If histories diverge, preserve both sides and prepare a reviewed integration rather than choosing one branch automatically.
+6. **Verify and report precisely.** Run the relevant tests from `engine/` and, for browser changes, use the browser verification procedure in the release report. State the exact branch, commands, pass/skip/fail counts, limitations, and files changed. Do not call a module complete based on a screen or a unit test alone.
+
+### Project flow at a glance
+
+Sensors or synthetic inputs are validated, then used for baselines and longitudinal trends. The deterministic clinical engine evaluates pathways and creates findings, episodes, and follow-up records. Snapshots, audit data, and replay support traceability. A scoped API serves the astronaut dashboard, local retrieval, and optional local Qwen3 inference through Ollama. Optional online retrieval is limited to approved public-topic PubMed metadata; it is not clinical evidence and cannot alter the rules. The browser release and the separate Computer Vision workstream have their own branch and verification scope.
+
 ## Architecture and authority
 
 ```text
