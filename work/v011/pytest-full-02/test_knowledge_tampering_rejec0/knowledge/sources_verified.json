@@ -1,0 +1,162 @@
+{
+  "schema_version": "1.0.0",
+  "as_of_date": "2026-10-16",
+  "sources": [
+    {
+      "source_id": "SRC-NASA-STD3001-V1-2023",
+      "organization": "NASA",
+      "title": "NASA Spaceflight Human-System Standard Volume 1 — Crew Health",
+      "year": 2023,
+      "section": "3.5 In-Mission Medical Care; V1 3004",
+      "doi": null,
+      "url": "https://www.nasa.gov/reference/3-0-health-and-medical-care/",
+      "type": "OFFICIAL_STANDARD",
+      "verification": "VERIFIED",
+      "use": ["governance", "autonomous_medical_care"]
+    },
+    {
+      "source_id": "SRC-NASA-EIMO-2025",
+      "organization": "NASA",
+      "title": "Earth-Independent Medical Operations (EIMO) Concept of Operations",
+      "year": 2025,
+      "section": "Concept of Operations / system overview",
+      "doi": null,
+      "url": "https://ntrs.nasa.gov/citations/20250000009",
+      "type": "NASA_TECHNICAL_REPORT",
+      "verification": "VERIFIED",
+      "use": ["autonomy", "clinical_decision_support"]
+    },
+    {
+      "source_id": "SRC-NASA-CDSS-2023",
+      "organization": "NASA / npj Microgravity",
+      "title": "The Value of a Spaceflight Clinical Decision Support System for Earth-Independent Medical Operations",
+      "year": 2023,
+      "section": "Full article",
+      "doi": "10.1038/s41526-023-00284-1",
+      "url": "https://ntrs.nasa.gov/citations/20220007443",
+      "type": "PEER_REVIEWED_PRIMARY",
+      "verification": "VERIFIED",
+      "use": ["autonomy", "CDSS"]
+    },
+    {
+      "source_id": "SRC-ADA-DX-2026",
+      "organization": "American Diabetes Association",
+      "title": "2. Diagnosis and Classification of Diabetes: Standards of Care in Diabetes—2026",
+      "year": 2026,
+      "section": "Table 2.1; Recommendations 2.1a–2.4; Confirming the Diagnosis",
+      "doi": "10.2337/dc26-S002",
+      "url": "https://doi.org/10.2337/dc26-S002",
+      "type": "CLINICAL_STANDARD",
+      "verification": "VERIFIED",
+      "use": ["diabetes_diagnosis"]
+    },
+    {
+      "source_id": "SRC-DKA-2024",
+      "organization": "ADA/EASD/AACE/JBDS/DTS expert panel",
+      "title": "Hyperglycemic Crises in Adults With Diabetes: A Consensus Report",
+      "year": 2024,
+      "section": "Section 3, Figure 2A, Table 2; Section 4",
+      "doi": "10.2337/dci24-0032",
+      "url": "https://doi.org/10.2337/dci24-0032",
+      "type": "MULTISOCIETY_CONSENSUS_REPORT",
+      "verification": "VERIFIED",
+      "use": ["DKA_diagnosis", "DKA_monitoring", "DKA_treatment"]
+    },
+    {
+      "source_id": "SRC-AHA-OH-2024",
+      "organization": "American Heart Association",
+      "title": "Orthostatic Hypotension in Adults With Hypertension: A Scientific Statement From the American Heart Association",
+      "year": 2024,
+      "section": "Definition and diagnostic/management discussion",
+      "doi": "10.1161/HYP.0000000000000236",
+      "url": "https://doi.org/10.1161/HYP.0000000000000236",
+      "type": "SCIENTIFIC_STATEMENT",
+      "verification": "VERIFIED",
+      "use": ["orthostatic_hypotension"]
+    },
+    {
+      "source_id": "SRC-HRS-POTS-2015",
+      "organization": "Heart Rhythm Society and collaborating societies",
+      "title": "2015 Heart Rhythm Society Expert Consensus Statement on POTS, Inappropriate Sinus Tachycardia, and Vasovagal Syncope",
+      "year": 2015,
+      "section": "Section 1 — POTS definition and treatment recommendations",
+      "doi": "10.1016/j.hrthm.2015.03.029",
+      "url": "https://www.hrsonline.org/resource/2015-heart-rhythm-society-expert-consensus-statement-diagnosis-and-treatment-postural-tachycardia/",
+      "type": "EXPERT_CONSENSUS",
+      "verification": "VERIFIED",
+      "use": ["POTS_definition", "POTS_management"]
+    },
+    {
+      "source_id": "SRC-NIH-POTS-2021",
+      "organization": "NIH expert consensus meeting participants",
+      "title": "Postural orthostatic tachycardia syndrome: State of the science and clinical care from a 2019 NIH Expert Consensus Meeting — Part 1",
+      "year": 2021,
+      "section": "Section 2 — Clinical description",
+      "doi": "10.1016/j.autneu.2021.102828",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC8455420/",
+      "type": "EXPERT_CONSENSUS_REPORT",
+      "verification": "VERIFIED",
+      "use": ["POTS_duration", "POTS_exclusions"]
+    },
+    {
+      "source_id": "SRC-KDIGO-AKI-2012",
+      "organization": "KDIGO",
+      "title": "KDIGO Clinical Practice Guideline for Acute Kidney Injury — Section 2: AKI Definition",
+      "year": 2012,
+      "section": "Chapter 2.1; Table 2",
+      "doi": "10.1038/kisup.2011.32",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC4089595/",
+      "type": "CLINICAL_GUIDELINE",
+      "verification": "VERIFIED",
+      "use": ["AKI_definition", "AKI_staging"]
+    },
+    {
+      "source_id": "SRC-KDIGO-AKI-DRAFT-2026",
+      "organization": "KDIGO",
+      "title": "KDIGO 2026 Clinical Practice Guideline for AKI and AKD — Public Review Draft",
+      "year": 2026,
+      "section": "Draft status only",
+      "doi": null,
+      "url": "https://kdigo.org/kdigo-2026-aki-akd-guideline-draft-available-for-public-review/",
+      "type": "DRAFT_GUIDELINE",
+      "verification": "DRAFT_NOT_FOR_PRODUCTION",
+      "use": ["version_monitoring"]
+    },
+    {
+      "source_id": "SRC-WAO-ANAPH-2020",
+      "organization": "World Allergy Organization",
+      "title": "World Allergy Organization Anaphylaxis Guidance 2020",
+      "year": 2020,
+      "section": "Figure 1 diagnostic criteria; Management; Table 6",
+      "doi": "10.1016/j.waojou.2020.100472",
+      "url": "https://doi.org/10.1016/j.waojou.2020.100472",
+      "type": "GUIDANCE",
+      "verification": "VERIFIED_CURRENT_DOCUMENT",
+      "use": ["anaphylaxis_diagnosis", "anaphylaxis_treatment"]
+    },
+    {
+      "source_id": "SRC-NASA-OI",
+      "organization": "NASA",
+      "title": "Fundamentals of Human Health — Orthostatic Intolerance",
+      "year": null,
+      "section": "Orthostatic Intolerance",
+      "doi": null,
+      "url": "https://www.nasa.gov/reference/fundamentals-of-human-health/",
+      "type": "NASA_OFFICIAL_REFERENCE",
+      "verification": "VERIFIED",
+      "use": ["space_orthostatic_context"]
+    },
+    {
+      "source_id": "SRC-SPACE-KIDNEY-2024",
+      "organization": "Nature Communications",
+      "title": "Cosmic kidney disease: an integrated pan-omic, physiological and morphological study into spaceflight-induced renal dysfunction",
+      "year": 2024,
+      "section": "Full article",
+      "doi": "10.1038/s41467-024-49212-1",
+      "url": "https://doi.org/10.1038/s41467-024-49212-1",
+      "type": "PRIMARY_RESEARCH",
+      "verification": "VERIFIED",
+      "use": ["space_renal_context"]
+    }
+  ]
+}

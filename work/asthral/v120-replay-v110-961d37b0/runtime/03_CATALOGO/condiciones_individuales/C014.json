@@ -1,0 +1,31 @@
+{
+  "condition_id": "C014",
+  "catalog_record": {
+    "condition_id": "C014",
+    "name_specialty": "Fatiga y sobrecarga de trabajo / factores humanos",
+    "description_spaceflight": "Carga crónica y sueño insuficiente incrementan riesgo de errores y bajo rendimiento.",
+    "risks_symptoms": "Workload, sueño, estrés.",
+    "biomarkers_sensors_tests": "Escalas, sueño, desempeño de tareas.",
+    "baselines_environment_interactions": "Baseline individual y de tarea.",
+    "primary_evidence": "S10. citeturn12search1",
+    "limits_authorizations_state": "No usar una puntuación aislada como incapacidad médica. `RV`."
+  },
+  "clinical_pathway_profile_as_published": "**P:** límites de carga programáticos; **M:** workload+sueño+rendimiento; **Q:** escalas completas y temporalmente alineadas; **D:** combinación multivariable `[RV]`; **A/DD:** sueño, enfermedad, estrés; **T:** riesgo operacional; **I:** reajuste autorizado; **R/F:** desempeño; **G:** sin predictor universal.",
+  "coverage_states": {
+    "prevention": "ES",
+    "monitoring": "ES",
+    "data_quality": "ES",
+    "detection": "RV",
+    "assessment": "RV",
+    "differential_diagnosis": "RV",
+    "triage": "RMA",
+    "intervention_authorized": "RMA",
+    "recovery": "RV",
+    "follow_up": "ES",
+    "prognosis": "RO"
+  },
+  "source_ids": [
+    "S10"
+  ],
+  "NOTICE": "Pathway text is an outline; not an authorized diagnostic or treatment protocol."
+}

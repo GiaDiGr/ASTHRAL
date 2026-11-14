@@ -1,0 +1,91 @@
+✔ browser assistant forwards the original response schema to the model runtime (40.2315ms)
+✔ typed-fact generation preserves original prepared schema, messages and token budget (2.085ms)
+✔ WebLLM caches receive exact verified public bytes before runtime initialization (41.2571ms)
+✔ corrupted approved bytes block runtime initialization instead of seeding model caches (5.4745ms)
+(node:18960) [MODULE_TYPELESS_PACKAGE_JSON] Warning: Module type of file:///C:/Users/Gianni/Desktop/Vigile/web-local/src/network-audit.js is not specified and it doesn't parse as CommonJS.
+Reparsing as ES module because module syntax was detected. This incurs a performance overhead.
+To eliminate this warning, add "type": "module" to \\?\C:\Users\Gianni\Desktop\Vigile\web-local\package.json.
+(Use `node --trace-warnings ...` to show where the warning was created)
+✔ network observer blocks synthetic private data and writes before transport (36.9431ms)
+(node:48088) [MODULE_TYPELESS_PACKAGE_JSON] Warning: Module type of file:///C:/Users/Gianni/Desktop/Vigile/web-local/src/offline-install.js is not specified and it doesn't parse as CommonJS.
+Reparsing as ES module because module syntax was detected. This incurs a performance overhead.
+To eliminate this warning, add "type": "module" to \\?\C:\Users\Gianni\Desktop\Vigile\web-local\package.json.
+(Use `node --trace-warnings ...` to show where the warning was created)
+✔ offline installation follows actual worker state transitions and reports failures (14.6113ms)
+✔ offline success requires an active worker cache-verification acknowledgment (37.0416ms)
+✔ existing active worker plus waiting update never produces a false ready result (1.2085ms)
+✔ storage permission failure does not discard a verified offline installation (1.2717ms)
+✔ cache verification failure cannot be reported as offline readiness (1.2172ms)
+(node:22564) [MODULE_TYPELESS_PACKAGE_JSON] Warning: Module type of file:///C:/Users/Gianni/Desktop/Vigile/web-local/src/profile-input.js is not specified and it doesn't parse as CommonJS.
+Reparsing as ES module because module syntax was detected. This incurs a performance overhead.
+To eliminate this warning, add "type": "module" to \\?\C:\Users\Gianni\Desktop\Vigile\web-local\package.json.
+(Use `node --trace-warnings ...` to show where the warning was created)
+✔ an empty persistent profile cannot inherit a synthetic diagnostic scenario (1.988ms)
+✔ saved inputs remain historical, owner-bound and independent from the view draft (1.5871ms)
+✔ special confirmation paths and nested OR branches expose original supported input names (0.5047ms)
+✔ derived criteria offer original raw dependencies and never editable derived results (0.2018ms)
+(node:14096) [MODULE_TYPELESS_PACKAGE_JSON] Warning: Module type of file:///C:/Users/Gianni/Desktop/Vigile/web-local/src/public-resources.js is not specified and it doesn't parse as CommonJS.
+Reparsing as ES module because module syntax was detected. This incurs a performance overhead.
+To eliminate this warning, add "type": "module" to \\?\C:\Users\Gianni\Desktop\Vigile\web-local\package.json.
+(Use `node --trace-warnings ...` to show where the warning was created)
+✔ optional runtime updates evict stale public bytes and preserve JavaScript MIME (45.711ms)
+✔ unverified replacement bytes never enter the optional cache (2.5602ms)
+(node:55436) [MODULE_TYPELESS_PACKAGE_JSON] Warning: Module type of file:///C:/Users/Gianni/Desktop/Vigile/web-local/src/public-science.js is not specified and it doesn't parse as CommonJS.
+Reparsing as ES module because module syntax was detected. This incurs a performance overhead.
+To eliminate this warning, add "type": "module" to \\?\C:\Users\Gianni\Desktop\Vigile\web-local\package.json.
+(Use `node --trace-warnings ...` to show where the warning was created)
+✔ public bibliography sends only predefined topics and bounded numeric PMIDs (34.5631ms)
+✔ mode change between metadata requests prevents the second request (0.6458ms)
+Loading annotated-types, pydantic, pydantic_core, sqlite3, typing-extensions, typing-inspection
+Loaded annotated-types, pydantic, pydantic_core, sqlite3, typing-extensions, typing-inspection
+✔ all browser WASM clinical outputs match CPython reference fixtures exactly (4551.7375ms)
+✔ SQLite serialization preserves audits and blocks foreign profile recovery (197.5091ms)
+✔ reference baseline and trend calculations run in real WASM (42.3311ms)
+✔ original voice parser extracts measurements without inventing missing units (8.2752ms)
+✔ complete monitoring cycle matches native reference and preserves episode/follow-up replay (331.6014ms)
+✔ browser acquisition rejects foreign ownership and immutable device changes (9.7122ms)
+✔ expanded approved local corpus verifies provenance and supports source-specific retrieval (1749.5606ms)
+✔ failed profile restore leaves every private action locked (83.618ms)
+✔ clinical invalid timestamps reject before persistence and preserve record count (46.8301ms)
+✔ assistant uses the original read-only safety contract and rejects invented clinical claims (43.5219ms)
+✔ automatic voice policy preserves the original duration-only confidence and intent gates (12.8208ms)
+✔ registered gravity context is authoritative in Astronaut View (49.8719ms)
+✔ management records remain unverified human reports, never engine execution (15.8239ms)
+✔ numeric assistant facts use reference finite grammar and reject changing patient values (17.9258ms)
+✔ clinical input metadata comes from the byte-identical reference derivations (24.6868ms)
+✔ Pages redirected HTML is normalized before serving a manual-mode navigation (46.1668ms)
+✔ a restarted service worker serves cached root and assets with no network (7.1973ms)
+(node:60704) [MODULE_TYPELESS_PACKAGE_JSON] Warning: Module type of file:///C:/Users/Gianni/Desktop/Vigile/web-local/src/time.js is not specified and it doesn't parse as CommonJS.
+Reparsing as ES module because module syntax was detected. This incurs a performance overhead.
+To eliminate this warning, add "type": "module" to \\?\C:\Users\Gianni\Desktop\Vigile\web-local\package.json.
+(Use `node --trace-warnings ...` to show where the warning was created)
+✔ explicit UTC form timestamps do not acquire the device local timezone (3.2688ms)
+✔ invalid calendar dates, missing timestamps and implicit timezone strings are rejected (0.507ms)
+(node:315576) [MODULE_TYPELESS_PACKAGE_JSON] Warning: Module type of file:///C:/Users/Gianni/Desktop/Vigile/web-local/src/vault.js is not specified and it doesn't parse as CommonJS.
+Reparsing as ES module because module syntax was detected. This incurs a performance overhead.
+To eliminate this warning, add "type": "module" to \\?\C:\Users\Gianni\Desktop\Vigile\web-local\package.json.
+(Use `node --trace-warnings ...` to show where the warning was created)
+✔ different local profiles have different salts and cannot unlock each other (727.3ms)
+✔ encrypted export recovers after local deletion and rejects accidental overwrite (270.5182ms)
+✔ stale tabs cannot overwrite a newer encrypted revision (410.5573ms)
+✔ tampered ciphertext fails authentication after recovery (271.6796ms)
+✔ import policies reject unsupported KDF and schema versions (130.92ms)
+✔ a profile locked while encryption is pending cannot commit the late write (270.7862ms)
+(node:58540) [MODULE_TYPELESS_PACKAGE_JSON] Warning: Module type of file:///C:/Users/Gianni/Desktop/Vigile/web-local/src/vectors.js is not specified and it doesn't parse as CommonJS.
+Reparsing as ES module because module syntax was detected. This incurs a performance overhead.
+To eliminate this warning, add "type": "module" to \\?\C:\Users\Gianni\Desktop\Vigile\web-local\package.json.
+(Use `node --trace-warnings ...` to show where the warning was created)
+✔ hybrid reranking never admits a source absent from verified lexical candidates (2.3471ms)
+✔ stale or malformed public indexes fail closed to the caller fallback (1.2755ms)
+✔ vector retrieval can find verified sources outside lexical matches (17.6578ms)
+✔ CSP-safe ABI wrappers preserve receiver, conversions, arity gates and destructor cleanup (4.7836ms)
+✔ CSP-safe ABI wrappers preserve dynamic destructor-stack and emval method calling (1.4503ms)
+✔ generated speech runtime contains the reviewed CSP-safe wrappers (33.5753ms)
+ℹ tests 49
+ℹ suites 0
+ℹ pass 49
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 13465.6488

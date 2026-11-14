@@ -1,0 +1,22 @@
+[
+  {
+    "state": "READY",
+    "model": "Qwen2.5-0.5B-Instruct-q4f16_1-MLC",
+    "init_seconds": 41.853799999982115,
+    "local_execution": true
+  },
+  {
+    "text": "Insulin-specific potassium restrictions must not be represented as a general contraindication of all DKA support.",
+    "citation": "D-54cb228d33a0aa2d36a9",
+    "accepted": true,
+    "raw_output_withheld": false,
+    "model": "Qwen2.5-0.5B-Instruct-q4f16_1-MLC",
+    "local_execution": true,
+    "time_to_first_token_seconds": 2.915,
+    "seconds": 10.159400000005961,
+    "emitted_chunks": 22,
+    "chunks_per_second": 2.1654822135152756,
+    "actual_token_throughput": "SEE_RUNTIME_STATS",
+    "runtime_stats": "prefill: 182.0627 tokens/sec, decoding: 3.0542 tokens/sec"
+  }
+]

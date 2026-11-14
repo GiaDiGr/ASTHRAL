@@ -1,0 +1,36 @@
+{
+  "synthetic": true,
+  "split": "NEW_FIXED_HELDOUT_NOT_PREVIOUS_RESERVED_BANK",
+  "cases": [
+    {
+      "id": "held-001",
+      "question": "Which public references discuss heart performance during space missions?",
+      "topic": "cardiovascular",
+      "term": "cardiovascular"
+    },
+    {
+      "id": "held-002",
+      "question": "Find reference metadata about muscle and skeletal countermeasures.",
+      "topic": "muscle_bone",
+      "term": "muscle"
+    },
+    {
+      "id": "held-003",
+      "question": "What literature covers fatigue and sleep during spaceflight?",
+      "topic": "sleep_fatigue",
+      "term": "sleep"
+    },
+    {
+      "id": "held-004",
+      "question": "Show scientific reference metadata for space radiation research.",
+      "topic": "radiation",
+      "term": "radiation"
+    },
+    {
+      "id": "held-005",
+      "question": "Find the 2024 consensus bibliography on hyperglycemic crises.",
+      "topic": "hyperglycemic_consensus",
+      "term": "hyperglycemic"
+    }
+  ]
+}

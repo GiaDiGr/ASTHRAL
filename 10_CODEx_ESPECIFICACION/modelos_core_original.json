@@ -1,0 +1,335 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://vigile.local/schema/core.json",
+  "title": "VIGILE Core Models",
+  "$defs": {
+    "EvidenceRef": {
+      "type": "object",
+      "required": [
+        "source_id",
+        "evidence_type",
+        "locator",
+        "version"
+      ],
+      "properties": {
+        "source_id": {
+          "type": "string"
+        },
+        "evidence_type": {
+          "enum": [
+            "NASA_STANDARD",
+            "SPACEFLIGHT_EVIDENCE",
+            "ANALOG_EVIDENCE",
+            "TERRESTRIAL_CLINICAL_EVIDENCE",
+            "ENGINEERING_CHOICE",
+            "RESEARCH_ONLY"
+          ]
+        },
+        "version": {
+          "type": "string"
+        },
+        "locator": {
+          "type": "object",
+          "properties": {
+            "pdf_page": {
+              "type": [
+                "integer",
+                "string"
+              ]
+            },
+            "printed_page": {
+              "type": [
+                "integer",
+                "string"
+              ]
+            },
+            "section": {
+              "type": [
+                "string",
+                "null"
+              ]
+            },
+            "requirement": {
+              "type": [
+                "string",
+                "null"
+              ]
+            },
+            "table": {
+              "type": [
+                "string",
+                "null"
+              ]
+            },
+            "figure": {
+              "type": [
+                "string",
+                "null"
+              ]
+            }
+          },
+          "additionalProperties": false
+        }
+      },
+      "additionalProperties": false
+    },
+    "Measurement": {
+      "type": "object",
+      "required": [
+        "measurement_id",
+        "subject_id",
+        "variable_id",
+        "value",
+        "unit",
+        "timestamp",
+        "quality_state",
+        "provenance"
+      ],
+      "properties": {
+        "measurement_id": {
+          "type": "string"
+        },
+        "subject_id": {
+          "type": "string"
+        },
+        "variable_id": {
+          "type": "string"
+        },
+        "value": {
+          "type": [
+            "number",
+            "string",
+            "boolean"
+          ]
+        },
+        "unit": {
+          "type": "string"
+        },
+        "timestamp": {
+          "type": "string",
+          "format": "date-time"
+        },
+        "mission_phase": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "gravity_context": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "quality_state": {
+          "enum": [
+            "VALID",
+            "INVALID",
+            "STALE",
+            "MISSING",
+            "CONFLICTING"
+          ]
+        },
+        "provenance": {
+          "type": "object",
+          "required": [
+            "source_type"
+          ],
+          "properties": {
+            "source_type": {
+              "enum": [
+                "SENSOR",
+                "LAB",
+                "MANUAL",
+                "DERIVED",
+                "QUESTIONNAIRE"
+              ]
+            },
+            "device_id": {
+              "type": [
+                "string",
+                "null"
+              ]
+            },
+            "calibration_id": {
+              "type": [
+                "string",
+                "null"
+              ]
+            },
+            "operator_id": {
+              "type": [
+                "string",
+                "null"
+              ]
+            }
+          }
+        }
+      }
+    },
+    "Rule": {
+      "type": "object",
+      "required": [
+        "rule_id",
+        "version",
+        "condition_id",
+        "inputs",
+        "logic",
+        "evidence_refs",
+        "authorization"
+      ],
+      "properties": {
+        "rule_id": {
+          "type": "string"
+        },
+        "version": {
+          "type": "string"
+        },
+        "condition_id": {
+          "type": "string"
+        },
+        "purpose": {
+          "type": "string"
+        },
+        "inputs": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "required": [
+              "variable_id",
+              "unit",
+              "required"
+            ],
+            "properties": {
+              "variable_id": {
+                "type": "string"
+              },
+              "unit": {
+                "type": "string"
+              },
+              "required": {
+                "type": "boolean"
+              }
+            }
+          }
+        },
+        "applicability": {
+          "type": "object"
+        },
+        "logic": {
+          "type": "object"
+        },
+        "missing_data_policy": {
+          "enum": [
+            "INCONCLUSIVE",
+            "RULE_DEFINED_IMPUTATION"
+          ]
+        },
+        "evidence_refs": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/EvidenceRef"
+          }
+        },
+        "authorization": {
+          "enum": [
+            "AUTOMATIC_ASSESSMENT_ONLY",
+            "REQUIRES_MISSION_AUTHORIZATION",
+            "REQUIRES_MEDICAL_AUTHORIZATION",
+            "RESEARCH_ONLY"
+          ]
+        }
+      }
+    },
+    "Finding": {
+      "type": "object",
+      "required": [
+        "finding_id",
+        "rule_id",
+        "result",
+        "timestamp"
+      ],
+      "properties": {
+        "finding_id": {
+          "type": "string"
+        },
+        "rule_id": {
+          "type": "string"
+        },
+        "result": {
+          "enum": [
+            "REQUIREMENT_MET",
+            "REQUIREMENT_NOT_MET",
+            "NO_FINDING",
+            "FINDING",
+            "INCONCLUSIVE",
+            "CONFLICTING_DATA"
+          ]
+        },
+        "diagnosis": {
+          "type": [
+            "null"
+          ]
+        },
+        "timestamp": {
+          "type": "string",
+          "format": "date-time"
+        },
+        "input_ids": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "rule_version": {
+          "type": "string"
+        },
+        "explanation": {
+          "type": "string"
+        }
+      }
+    },
+    "ClinicalEpisode": {
+      "type": "object",
+      "required": [
+        "episode_id",
+        "condition_id",
+        "state"
+      ],
+      "properties": {
+        "episode_id": {
+          "type": "string"
+        },
+        "condition_id": {
+          "type": "string"
+        },
+        "state": {
+          "enum": [
+            "MONITORING",
+            "FINDING",
+            "ASSESSMENT",
+            "TRIAGE",
+            "AUTHORIZED_ACTION",
+            "RECOVERY",
+            "FOLLOW_UP",
+            "CLOSED"
+          ]
+        },
+        "authorization_state": {
+          "enum": [
+            "NONE",
+            "MISSION_AUTHORIZED",
+            "MEDICALLY_AUTHORIZED",
+            "BLOCKED"
+          ]
+        },
+        "finding_ids": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        }
+      }
+    }
+  }
+}

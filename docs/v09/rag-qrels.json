@@ -1,0 +1,137 @@
+{
+  "index_sha256": "5c1e71873cfa6a1912acebb9e7588639f9e5bafebf67416de0fb26748d2c540f",
+  "queries": [
+    {
+      "id": "rag-01",
+      "question": "How are baselines selected and validated?",
+      "relevant_fragment_ids": [
+        "D-dda64d483a9eb444a927"
+      ],
+      "relevant_document_paths": [
+        "docs/v07/README.md"
+      ],
+      "annotation": "Narrow literal passage relevance; unlabelled fragments count nonrelevant for this bounded task, not global clinical relevance"
+    },
+    {
+      "id": "rag-02",
+      "question": "Como se elige el baseline?",
+      "relevant_fragment_ids": [
+        "D-dda64d483a9eb444a927"
+      ],
+      "relevant_document_paths": [
+        "docs/v07/README.md"
+      ],
+      "annotation": "Narrow literal passage relevance; unlabelled fragments count nonrelevant for this bounded task, not global clinical relevance"
+    },
+    {
+      "id": "rag-03",
+      "question": "How are repeated notifications handled?",
+      "relevant_fragment_ids": [
+        "D-ae65db85b3cd75fb38e4"
+      ],
+      "relevant_document_paths": [
+        "docs/v07/README.md"
+      ],
+      "annotation": "Narrow literal passage relevance; unlabelled fragments count nonrelevant for this bounded task, not global clinical relevance"
+    },
+    {
+      "id": "rag-04",
+      "question": "Como se evita repetir alertas?",
+      "relevant_fragment_ids": [
+        "D-ae65db85b3cd75fb38e4"
+      ],
+      "relevant_document_paths": [
+        "docs/v07/README.md"
+      ],
+      "annotation": "Narrow literal passage relevance; unlabelled fragments count nonrelevant for this bounded task, not global clinical relevance"
+    },
+    {
+      "id": "rag-05",
+      "question": "What radiation overlap limitations apply?",
+      "relevant_fragment_ids": [
+        "D-2fb6c076e445e50b078b"
+      ],
+      "relevant_document_paths": [
+        "docs/v07/README.md"
+      ],
+      "annotation": "Narrow literal passage relevance; unlabelled fragments count nonrelevant for this bounded task, not global clinical relevance"
+    },
+    {
+      "id": "rag-06",
+      "question": "Limitaciones de dosimetria y solapamientos",
+      "relevant_fragment_ids": [
+        "D-2fb6c076e445e50b078b"
+      ],
+      "relevant_document_paths": [
+        "docs/v07/README.md"
+      ],
+      "annotation": "Narrow literal passage relevance; unlabelled fragments count nonrelevant for this bounded task, not global clinical relevance"
+    },
+    {
+      "id": "rag-07",
+      "question": "What are hypoglycemia level one and two boundaries?",
+      "relevant_fragment_ids": [
+        "D-2397e05233f2a45e21f3"
+      ],
+      "relevant_document_paths": [
+        "docs/v08/sources/ADA2026-short-excerpt.txt"
+      ],
+      "annotation": "Narrow literal passage relevance; unlabelled fragments count nonrelevant for this bounded task, not global clinical relevance"
+    },
+    {
+      "id": "rag-08",
+      "question": "Glucosa nivel 1 y nivel 2",
+      "relevant_fragment_ids": [
+        "D-2397e05233f2a45e21f3"
+      ],
+      "relevant_document_paths": [
+        "docs/v08/sources/ADA2026-short-excerpt.txt"
+      ],
+      "annotation": "Narrow literal passage relevance; unlabelled fragments count nonrelevant for this bounded task, not global clinical relevance"
+    },
+    {
+      "id": "rag-09",
+      "question": "How are freshness and clinical windows declared?",
+      "relevant_fragment_ids": [
+        "D-2ca307e7fa544117900c"
+      ],
+      "relevant_document_paths": [
+        "docs/v07/README.md"
+      ],
+      "annotation": "Narrow literal passage relevance; unlabelled fragments count nonrelevant for this bounded task, not global clinical relevance"
+    },
+    {
+      "id": "rag-10",
+      "question": "Ventanas temporales y frescura del dispositivo",
+      "relevant_fragment_ids": [
+        "D-2ca307e7fa544117900c"
+      ],
+      "relevant_document_paths": [
+        "docs/v07/README.md"
+      ],
+      "annotation": "Narrow literal passage relevance; unlabelled fragments count nonrelevant for this bounded task, not global clinical relevance"
+    },
+    {
+      "id": "rag-11",
+      "question": "What can muscle and bone monitoring infer?",
+      "relevant_fragment_ids": [
+        "D-2fb6c076e445e50b078b"
+      ],
+      "relevant_document_paths": [
+        "docs/v07/README.md"
+      ],
+      "annotation": "Narrow literal passage relevance; unlabelled fragments count nonrelevant for this bounded task, not global clinical relevance"
+    },
+    {
+      "id": "rag-12",
+      "question": "Disponibilidad de DXA y densidad osea",
+      "relevant_fragment_ids": [
+        "D-2fb6c076e445e50b078b"
+      ],
+      "relevant_document_paths": [
+        "docs/v07/README.md"
+      ],
+      "annotation": "Narrow literal passage relevance; unlabelled fragments count nonrelevant for this bounded task, not global clinical relevance"
+    }
+  ]
+}

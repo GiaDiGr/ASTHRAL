@@ -1,0 +1,226 @@
+{
+  "development_only": true,
+  "reserved_bank_read": false,
+  "version": "after",
+  "rows": [
+    {
+      "id": "rag-01",
+      "question": "How are baselines selected and validated?",
+      "gold": [
+        "D-dda64d483a9eb444a927"
+      ],
+      "retrieved_ids": [
+        "D-dda64d483a9eb444a927",
+        "D-4c3f9f9457f479d383db",
+        "D-62dcd1e40ae451ab22ae",
+        "D-55dace85647c7ca5f5ab",
+        "D-8757bf9c3c314d996fe2"
+      ],
+      "top3": true,
+      "top5": true,
+      "seconds": 1.0255898000032175,
+      "issues": []
+    },
+    {
+      "id": "rag-02",
+      "question": "Como se elige el baseline?",
+      "gold": [
+        "D-dda64d483a9eb444a927"
+      ],
+      "retrieved_ids": [
+        "D-dda64d483a9eb444a927",
+        "D-4c3f9f9457f479d383db",
+        "D-55dace85647c7ca5f5ab",
+        "D-8757bf9c3c314d996fe2",
+        "D-1acfd53b9b06258d512d"
+      ],
+      "top3": true,
+      "top5": true,
+      "seconds": 0.35000249999575317,
+      "issues": []
+    },
+    {
+      "id": "rag-03",
+      "question": "How are repeated notifications handled?",
+      "gold": [
+        "D-ae65db85b3cd75fb38e4"
+      ],
+      "retrieved_ids": [
+        "D-0dec7aea69a4b0b71006",
+        "D-ff64fc823871f91774a9",
+        "D-ae65db85b3cd75fb38e4",
+        "D-a7ed981b1635c839de0f",
+        "D-b9a18f31960f8c1fc5e3"
+      ],
+      "top3": true,
+      "top5": true,
+      "seconds": 0.34510850001242943,
+      "issues": []
+    },
+    {
+      "id": "rag-04",
+      "question": "Como se evita repetir alertas?",
+      "gold": [
+        "D-ae65db85b3cd75fb38e4"
+      ],
+      "retrieved_ids": [
+        "D-d4e2a363f2da4a743a28",
+        "D-0dec7aea69a4b0b71006",
+        "D-b4c012c44290bd13d6f5",
+        "D-ae65db85b3cd75fb38e4",
+        "D-b0cfa77d7dcc459272cd"
+      ],
+      "top3": false,
+      "top5": true,
+      "seconds": 0.34880629999679513,
+      "issues": []
+    },
+    {
+      "id": "rag-05",
+      "question": "What radiation overlap limitations apply?",
+      "gold": [
+        "D-2fb6c076e445e50b078b"
+      ],
+      "retrieved_ids": [
+        "D-19dd0d785f0aec889ff3",
+        "D-2fb6c076e445e50b078b",
+        "D-2de46d54c7f2dd97c1c5",
+        "D-5ba0331e48afc10dc56b",
+        "D-7f2b0659e110d4312794"
+      ],
+      "top3": true,
+      "top5": true,
+      "seconds": 0.32594439999957103,
+      "issues": []
+    },
+    {
+      "id": "rag-06",
+      "question": "Limitaciones de dosimetria y solapamientos",
+      "gold": [
+        "D-2fb6c076e445e50b078b"
+      ],
+      "retrieved_ids": [
+        "D-2fb6c076e445e50b078b",
+        "D-2de46d54c7f2dd97c1c5",
+        "D-5ba0331e48afc10dc56b",
+        "D-6063971425abdc536f7f",
+        "D-7f2b0659e110d4312794"
+      ],
+      "top3": true,
+      "top5": true,
+      "seconds": 0.3266536000010092,
+      "issues": []
+    },
+    {
+      "id": "rag-07",
+      "question": "What are hypoglycemia level one and two boundaries?",
+      "gold": [
+        "D-2397e05233f2a45e21f3"
+      ],
+      "retrieved_ids": [
+        "D-2397e05233f2a45e21f3",
+        "D-4ab55ed37d4cf555d585",
+        "D-348f6f6e276875605f09",
+        "D-eb3493bcbe8c3d683dca",
+        "D-479efbd9b8a3a0b25a52"
+      ],
+      "top3": true,
+      "top5": true,
+      "seconds": 0.36965730000520125,
+      "issues": []
+    },
+    {
+      "id": "rag-08",
+      "question": "Glucosa nivel 1 y nivel 2",
+      "gold": [
+        "D-2397e05233f2a45e21f3"
+      ],
+      "retrieved_ids": [
+        "D-2397e05233f2a45e21f3",
+        "D-4ab55ed37d4cf555d585",
+        "D-348f6f6e276875605f09",
+        "D-a748aa091df9bb895f0e",
+        "D-8079716e7968c60bac6c"
+      ],
+      "top3": true,
+      "top5": true,
+      "seconds": 0.393944499999634,
+      "issues": []
+    },
+    {
+      "id": "rag-09",
+      "question": "How are freshness and clinical windows declared?",
+      "gold": [
+        "D-2ca307e7fa544117900c"
+      ],
+      "retrieved_ids": [
+        "D-2ca307e7fa544117900c",
+        "D-346bb9512337cfaa6008",
+        "D-b0cfa77d7dcc459272cd",
+        "D-ff64fc823871f91774a9",
+        "D-550983fa4595c114e10d"
+      ],
+      "top3": true,
+      "top5": true,
+      "seconds": 0.34908999998879153,
+      "issues": []
+    },
+    {
+      "id": "rag-10",
+      "question": "Ventanas temporales y frescura del dispositivo",
+      "gold": [
+        "D-2ca307e7fa544117900c"
+      ],
+      "retrieved_ids": [
+        "D-2ca307e7fa544117900c",
+        "D-346bb9512337cfaa6008",
+        "D-b0cfa77d7dcc459272cd",
+        "D-faa17b8d30d92874fe1e",
+        "D-ff64fc823871f91774a9"
+      ],
+      "top3": true,
+      "top5": true,
+      "seconds": 0.32076930000039283,
+      "issues": []
+    },
+    {
+      "id": "rag-11",
+      "question": "What can muscle and bone monitoring infer?",
+      "gold": [
+        "D-2fb6c076e445e50b078b"
+      ],
+      "retrieved_ids": [
+        "D-c189190919b5987e2353",
+        "D-c5f9a732cf62104f0489",
+        "D-b952fbb81c97cd4a4b10",
+        "D-57cc2464ec24595e297b",
+        "D-b3bb915bd5b37e00253f"
+      ],
+      "top3": false,
+      "top5": false,
+      "seconds": 0.31636909999360796,
+      "issues": []
+    },
+    {
+      "id": "rag-12",
+      "question": "Disponibilidad de DXA y densidad osea",
+      "gold": [
+        "D-2fb6c076e445e50b078b"
+      ],
+      "retrieved_ids": [
+        "D-9f556a38e25922d02aee",
+        "D-2fb6c076e445e50b078b",
+        "D-c5f9a732cf62104f0489",
+        "D-20b9ab6992407c91fc23",
+        "D-81c3cfdbdeac2698a258"
+      ],
+      "top3": true,
+      "top5": true,
+      "seconds": 0.2767943000071682,
+      "issues": []
+    }
+  ],
+  "top3_hits": 10,
+  "top5_hits": 11,
+  "unchanged_qrels_and_fragment_ids": true
+}

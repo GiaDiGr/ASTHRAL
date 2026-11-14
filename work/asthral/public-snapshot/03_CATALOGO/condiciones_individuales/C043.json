@@ -1,0 +1,33 @@
+{
+  "condition_id": "C043",
+  "catalog_record": {
+    "condition_id": "C043",
+    "name_specialty": "Incapacidad de egress/tarea tras transición de gravedad / rendimiento",
+    "description_spaceflight": "Readaptación sensorimotora/ortostática puede comprometer aterrizaje, salida y tareas críticas.",
+    "risks_symptoms": "Retorno a gravedad, desacondicionamiento.",
+    "biomarkers_sensors_tests": "Marcha, balance, HR/BP, capacidad funcional.",
+    "baselines_environment_interactions": "Preflight + fase de transición.",
+    "primary_evidence": "S03, S11, S02. citeturn27search5turn12search2turn19search2",
+    "limits_authorizations_state": "“Fit for task” necesita regla de misión. `RMA`."
+  },
+  "clinical_pathway_profile_as_published": "**P:** countermeasures/readaptation; **M:** función+ortostatismo+sensorimotor; **Q:** gravedad/tarea; **D:** task-specific gate; **A/DD:** CV/sensorimotor/músculo; **T:** no autorizar tarea si regla de misión falla; **I:** rehabilitation/countermeasure; **R/F:** re-test; **G:** misión-específico.",
+  "coverage_states": {
+    "prevention": "ES",
+    "monitoring": "ES",
+    "data_quality": "ES",
+    "detection": "RV",
+    "assessment": "RV",
+    "differential_diagnosis": "RV",
+    "triage": "RMA",
+    "intervention_authorized": "RMA",
+    "recovery": "ES",
+    "follow_up": "ES",
+    "prognosis": "RO"
+  },
+  "source_ids": [
+    "S03",
+    "S11",
+    "S02"
+  ],
+  "NOTICE": "Pathway text is an outline; not an authorized diagnostic or treatment protocol."
+}

@@ -1,0 +1,580 @@
+{
+  "schema_version": "1.0.0",
+  "cases": [
+    {
+      "id": "DM-01",
+      "route": "DM_DKA",
+      "inputs": {
+        "fpg": [
+          {"value": 132, "unit": "mg/dL", "fasting_h": 9, "valid": true},
+          {"value": 130, "unit": "mg/dL", "fasting_h": 10, "valid": true}
+        ],
+        "classic_symptoms": false
+      },
+      "expected": {
+        "diagnostic_status": "CRITERIA_MET",
+        "urgency": "ROUTINE",
+        "confirmation_status": "SATISFIED",
+        "protocol_status": "ELIGIBLE",
+        "treatment_status": "NOT_STARTED"
+      },
+      "next_tests": [],
+      "source_ids": ["SRC-ADA-DX-2026"]
+    },
+    {
+      "id": "DM-02",
+      "route": "DM_DKA",
+      "inputs": {
+        "fpg": [{"value": 130, "unit": "mg/dL", "fasting_h": 8, "valid": true}],
+        "classic_symptoms": false
+      },
+      "expected": {
+        "diagnostic_status": "SUSPECTED",
+        "urgency": "ROUTINE",
+        "confirmation_status": "REQUIRED",
+        "protocol_status": "ELIGIBLE",
+        "treatment_status": "NOT_STARTED"
+      },
+      "next_tests": ["REPEAT_VALID_DIAGNOSTIC_TEST"],
+      "source_ids": ["SRC-ADA-DX-2026"]
+    },
+    {
+      "id": "DM-03",
+      "route": "DM_DKA",
+      "inputs": {
+        "random_plasma_glucose": {"value": 220, "unit": "mg/dL", "valid": true},
+        "classic_symptoms": true
+      },
+      "expected": {
+        "diagnostic_status": "CRITERIA_MET",
+        "urgency": "PROMPT",
+        "confirmation_status": "NOT_REQUIRED",
+        "protocol_status": "ELIGIBLE",
+        "treatment_status": "NOT_STARTED"
+      },
+      "next_tests": ["ASSESS_HYPERGLYCEMIC_CRISIS_IF_INDICATED"],
+      "source_ids": ["SRC-ADA-DX-2026"]
+    },
+    {
+      "id": "DM-04",
+      "route": "DM_DKA",
+      "inputs": {
+        "cgm_interstitial_glucose": {"value": 245, "unit": "mg/dL"},
+        "diagnostic_plasma_glucose": null
+      },
+      "expected": {
+        "diagnostic_status": "INSUFFICIENT_DATA",
+        "urgency": "PROMPT",
+        "confirmation_status": "REQUIRED",
+        "protocol_status": "BLOCKED_MISSING_DATA",
+        "treatment_status": "NOT_STARTED"
+      },
+      "next_tests": ["TEST-PLASMA-GLUCOSE"],
+      "source_ids": ["SRC-ADA-DX-2026"]
+    },
+    {
+      "id": "DM-05",
+      "route": "DM_DKA",
+      "inputs": {
+        "known_diabetes": true,
+        "plasma_glucose_mg_dl": 180,
+        "beta_hydroxybutyrate_mmol_l": 4.2,
+        "venous_pH": 7.22
+      },
+      "expected": {
+        "diagnostic_status": "CRITERIA_MET",
+        "urgency": "EMERGENCY",
+        "confirmation_status": "SATISFIED",
+        "protocol_status": "BLOCKED_AUTHORIZATION",
+        "treatment_status": "NOT_STARTED"
+      },
+      "next_tests": ["POTASSIUM", "ELECTROLYTES", "CREATININE"],
+      "source_ids": ["SRC-DKA-2024"]
+    },
+    {
+      "id": "DM-06",
+      "route": "DM_DKA",
+      "inputs": {
+        "plasma_glucose_mg_dl": 310,
+        "beta_hydroxybutyrate_mmol_l": 4.0,
+        "venous_pH": null,
+        "bicarbonate_mmol_l": null
+      },
+      "expected": {
+        "diagnostic_status": "SUSPECTED",
+        "urgency": "URGENT",
+        "confirmation_status": "REQUIRED",
+        "protocol_status": "BLOCKED_MISSING_DATA",
+        "treatment_status": "NOT_STARTED"
+      },
+      "next_tests": ["TEST-VENOUS-PH-BICARB"],
+      "source_ids": ["SRC-DKA-2024"]
+    },
+
+    {
+      "id": "ORTHO-01",
+      "route": "OH_POTS",
+      "inputs": {
+        "gravity": "EARTH",
+        "baseline_bp": "125/80",
+        "bp_at_2min": "100/68"
+      },
+      "expected": {
+        "diagnostic_status": "CRITERIA_MET",
+        "urgency": "PROMPT",
+        "confirmation_status": "SATISFIED",
+        "protocol_status": "ELIGIBLE",
+        "treatment_status": "NOT_STARTED"
+      },
+      "expected_condition": "ORTHOSTATIC_HYPOTENSION",
+      "source_ids": ["SRC-AHA-OH-2024"]
+    },
+    {
+      "id": "ORTHO-02",
+      "route": "OH_POTS",
+      "inputs": {
+        "gravity": "EARTH",
+        "baseline_sbp": 120,
+        "standing_sbp": 100,
+        "standing_time_min": 3
+      },
+      "expected": {
+        "diagnostic_status": "CRITERIA_MET",
+        "urgency": "PROMPT",
+        "confirmation_status": "SATISFIED",
+        "protocol_status": "ELIGIBLE",
+        "treatment_status": "NOT_STARTED"
+      },
+      "boundary_test": true,
+      "source_ids": ["SRC-AHA-OH-2024"]
+    },
+    {
+      "id": "ORTHO-03",
+      "route": "OH_POTS",
+      "inputs": {
+        "baseline_bp": null,
+        "standing_bp": "90/60",
+        "standing_time_min": 2
+      },
+      "expected": {
+        "diagnostic_status": "INSUFFICIENT_DATA",
+        "urgency": "PROMPT",
+        "confirmation_status": "REQUIRED",
+        "protocol_status": "BLOCKED_MISSING_DATA",
+        "treatment_status": "NOT_STARTED"
+      },
+      "next_tests": ["VALID_BASELINE_AND_UPRIGHT_BP"],
+      "source_ids": ["SRC-AHA-OH-2024"]
+    },
+    {
+      "id": "ORTHO-04",
+      "route": "OH_POTS",
+      "inputs": {
+        "adult": true,
+        "delta_hr_bpm": 35,
+        "within_10_min": true,
+        "orthostatic_hypotension": false,
+        "orthostatic_symptoms": true,
+        "improve_supine": true,
+        "duration_months": 5,
+        "alternative_cause": false
+      },
+      "expected": {
+        "diagnostic_status": "CRITERIA_MET",
+        "urgency": "ROUTINE",
+        "confirmation_status": "SATISFIED",
+        "protocol_status": "ELIGIBLE",
+        "treatment_status": "NOT_STARTED"
+      },
+      "expected_condition": "POTS",
+      "source_ids": ["SRC-HRS-POTS-2015", "SRC-NIH-POTS-2021"]
+    },
+    {
+      "id": "ORTHO-05",
+      "route": "OH_POTS",
+      "inputs": {
+        "delta_hr_bpm": 40,
+        "orthostatic_hypotension": false,
+        "orthostatic_symptoms": true,
+        "duration_months": 4,
+        "dehydration": true
+      },
+      "expected": {
+        "diagnostic_status": "CRITERIA_NOT_MET",
+        "urgency": "PROMPT",
+        "confirmation_status": "NOT_APPLICABLE",
+        "protocol_status": "NOT_INDICATED",
+        "treatment_status": "NOT_STARTED"
+      },
+      "expected_condition": "POTS",
+      "differential": ["DEHYDRATION_OR_HYPOVOLEMIA"],
+      "source_ids": ["SRC-NIH-POTS-2021"]
+    },
+    {
+      "id": "ORTHO-06",
+      "route": "OH_POTS",
+      "inputs": {
+        "gravity": "FREE_MICROGRAVITY",
+        "requested_test": "STANDARD_STANDING_ORTHOSTATIC_TEST"
+      },
+      "expected": {
+        "diagnostic_status": "NOT_APPLICABLE",
+        "urgency": "ROUTINE",
+        "confirmation_status": "NOT_APPLICABLE",
+        "protocol_status": "NOT_INDICATED",
+        "treatment_status": "NOT_STARTED"
+      },
+      "source_ids": ["SRC-NASA-OI"]
+    },
+
+    {
+      "id": "AKI-01",
+      "route": "AKI",
+      "inputs": {
+        "creatinine_baseline_mg_dl": 0.9,
+        "creatinine_current_mg_dl": 1.3,
+        "elapsed_h": 40
+      },
+      "expected": {
+        "diagnostic_status": "CRITERIA_MET",
+        "urgency": "URGENT",
+        "confirmation_status": "SATISFIED",
+        "protocol_status": "ELIGIBLE",
+        "treatment_status": "NOT_STARTED"
+      },
+      "stage": 1,
+      "source_ids": ["SRC-KDIGO-AKI-2012"]
+    },
+    {
+      "id": "AKI-02",
+      "route": "AKI",
+      "inputs": {
+        "creatinine_baseline_mg_dl": 1.0,
+        "creatinine_current_mg_dl": 1.6,
+        "elapsed_days": 5
+      },
+      "expected": {
+        "diagnostic_status": "CRITERIA_MET",
+        "urgency": "URGENT",
+        "confirmation_status": "SATISFIED",
+        "protocol_status": "ELIGIBLE",
+        "treatment_status": "NOT_STARTED"
+      },
+      "stage": 1,
+      "source_ids": ["SRC-KDIGO-AKI-2012"]
+    },
+    {
+      "id": "AKI-03",
+      "route": "AKI",
+      "inputs": {
+        "urine_output_ml_kg_h": 0.4,
+        "duration_h": 7
+      },
+      "expected": {
+        "diagnostic_status": "CRITERIA_MET",
+        "urgency": "URGENT",
+        "confirmation_status": "SATISFIED",
+        "protocol_status": "ELIGIBLE",
+        "treatment_status": "NOT_STARTED"
+      },
+      "stage": 1,
+      "source_ids": ["SRC-KDIGO-AKI-2012"]
+    },
+    {
+      "id": "AKI-04",
+      "route": "AKI",
+      "inputs": {
+        "creatinine_baseline_mg_dl": 0.8,
+        "creatinine_current_mg_dl": 1.84,
+        "elapsed_days": 3
+      },
+      "expected": {
+        "diagnostic_status": "CRITERIA_MET",
+        "urgency": "URGENT",
+        "confirmation_status": "SATISFIED",
+        "protocol_status": "ELIGIBLE",
+        "treatment_status": "NOT_STARTED"
+      },
+      "stage": 2,
+      "source_ids": ["SRC-KDIGO-AKI-2012"]
+    },
+    {
+      "id": "AKI-05",
+      "route": "AKI",
+      "inputs": {
+        "creatinine_current_mg_dl": 1.3,
+        "baseline": null,
+        "prior_creatinines": [],
+        "urine_output": null
+      },
+      "expected": {
+        "diagnostic_status": "INSUFFICIENT_DATA",
+        "urgency": "PROMPT",
+        "confirmation_status": "REQUIRED",
+        "protocol_status": "BLOCKED_MISSING_DATA",
+        "treatment_status": "NOT_STARTED"
+      },
+      "next_tests": ["SERIAL_CREATININE", "URINE_OUTPUT"],
+      "source_ids": ["SRC-KDIGO-AKI-2012"]
+    },
+    {
+      "id": "AKI-06",
+      "route": "AKI",
+      "inputs": {
+        "gravity": "MICROGRAVITY",
+        "creatinine_baseline_mg_dl": 0.7,
+        "creatinine_current_mg_dl": 1.05,
+        "elapsed_days": 5
+      },
+      "expected": {
+        "diagnostic_status": "CRITERIA_MET",
+        "urgency": "URGENT",
+        "confirmation_status": "SATISFIED",
+        "protocol_status": "ELIGIBLE",
+        "treatment_status": "NOT_STARTED"
+      },
+      "space_warning": "REQUIRES_SPACE_SPECIFIC_VALIDATION",
+      "source_ids": ["SRC-KDIGO-AKI-2012", "SRC-SPACE-KIDNEY-2024"]
+    },
+
+    {
+      "id": "ANAPH-01",
+      "route": "ANAPHYLAXIS",
+      "inputs": {
+        "acute": true,
+        "skin_mucosal": true,
+        "bronchospasm": true
+      },
+      "expected": {
+        "diagnostic_status": "CRITERIA_MET",
+        "urgency": "EMERGENCY",
+        "confirmation_status": "NOT_REQUIRED",
+        "protocol_status": "BLOCKED_AUTHORIZATION",
+        "treatment_status": "NOT_STARTED"
+      },
+      "source_ids": ["SRC-WAO-ANAPH-2020"]
+    },
+    {
+      "id": "ANAPH-02",
+      "route": "ANAPHYLAXIS",
+      "inputs": {
+        "acute": true,
+        "known_allergen": true,
+        "skin_mucosal": false,
+        "adult_sbp": 82
+      },
+      "expected": {
+        "diagnostic_status": "CRITERIA_MET",
+        "urgency": "EMERGENCY",
+        "confirmation_status": "NOT_REQUIRED",
+        "protocol_status": "BLOCKED_AUTHORIZATION",
+        "treatment_status": "NOT_STARTED"
+      },
+      "source_ids": ["SRC-WAO-ANAPH-2020"]
+    },
+    {
+      "id": "ANAPH-03",
+      "route": "ANAPHYLAXIS",
+      "inputs": {
+        "acute": true,
+        "probable_allergen": true,
+        "repetitive_vomiting": true,
+        "skin_mucosal": false,
+        "respiratory": false,
+        "hypotension": false
+      },
+      "expected": {
+        "diagnostic_status": "SUSPECTED",
+        "urgency": "PROMPT",
+        "confirmation_status": "PENDING",
+        "protocol_status": "NOT_INDICATED",
+        "treatment_status": "NOT_STARTED"
+      },
+      "next_tests": ["REASSESS_SKIN_RESPIRATORY_BP_LARYNGEAL"],
+      "source_ids": ["SRC-WAO-ANAPH-2020"]
+    },
+    {
+      "id": "ANAPH-04",
+      "route": "ANAPHYLAXIS",
+      "inputs": {
+        "acute": true,
+        "skin_mucosal": true,
+        "respiratory": false,
+        "hypotension": false,
+        "severe_gi": false
+      },
+      "expected": {
+        "diagnostic_status": "CRITERIA_NOT_MET",
+        "urgency": "PROMPT",
+        "confirmation_status": "NOT_APPLICABLE",
+        "protocol_status": "NOT_INDICATED",
+        "treatment_status": "NOT_STARTED"
+      },
+      "differential": ["NON_ANAPHYLACTIC_ALLERGIC_REACTION"],
+      "source_ids": ["SRC-WAO-ANAPH-2020"]
+    },
+    {
+      "id": "ANAPH-05",
+      "route": "ANAPHYLAXIS",
+      "inputs": {
+        "acute": true,
+        "known_allergen": true,
+        "laryngeal_involvement": true,
+        "skin_mucosal": false
+      },
+      "expected": {
+        "diagnostic_status": "CRITERIA_MET",
+        "urgency": "EMERGENCY",
+        "confirmation_status": "NOT_REQUIRED",
+        "protocol_status": "BLOCKED_AUTHORIZATION",
+        "treatment_status": "NOT_STARTED"
+      },
+      "source_ids": ["SRC-WAO-ANAPH-2020"]
+    },
+    {
+      "id": "ANAPH-06",
+      "route": "ANAPHYLAXIS",
+      "inputs": {
+        "acute": true,
+        "known_allergen": true,
+        "bronchospasm": true,
+        "epinephrine_inventory_verified": false
+      },
+      "expected": {
+        "diagnostic_status": "CRITERIA_MET",
+        "urgency": "EMERGENCY",
+        "confirmation_status": "NOT_REQUIRED",
+        "protocol_status": "BLOCKED_RESOURCE",
+        "treatment_status": "NOT_STARTED"
+      },
+      "source_ids": ["SRC-WAO-ANAPH-2020"]
+    },
+
+    {
+      "id": "DIFF-01",
+      "route": "DIZZINESS_TACHYCARDIA",
+      "inputs": {
+        "dizziness": true,
+        "tachycardia": true,
+        "postural": true,
+        "delta_sbp": -25,
+        "standing_time_min": 2
+      },
+      "expected": {
+        "diagnostic_status": "CRITERIA_MET",
+        "urgency": "PROMPT",
+        "confirmation_status": "SATISFIED",
+        "protocol_status": "ELIGIBLE",
+        "treatment_status": "NOT_STARTED"
+      },
+      "top_hypothesis": "ORTHOSTATIC_HYPOTENSION",
+      "contradicted": ["POTS"],
+      "source_ids": ["SRC-AHA-OH-2024", "SRC-HRS-POTS-2015"]
+    },
+    {
+      "id": "DIFF-02",
+      "route": "DIZZINESS_TACHYCARDIA",
+      "inputs": {
+        "dizziness": true,
+        "postural_delta_hr": 36,
+        "orthostatic_hypotension": false,
+        "vomiting_last_24h": true,
+        "dehydration": true,
+        "symptom_duration_days": 1
+      },
+      "expected": {
+        "diagnostic_status": "SUSPECTED",
+        "urgency": "PROMPT",
+        "confirmation_status": "PENDING",
+        "protocol_status": "NOT_EVALUATED",
+        "treatment_status": "NOT_STARTED"
+      },
+      "top_hypothesis": "HYPOVOLEMIA",
+      "contradicted": ["POTS"],
+      "source_ids": ["SRC-NIH-POTS-2021"]
+    },
+    {
+      "id": "DIFF-03",
+      "route": "DIZZINESS_TACHYCARDIA",
+      "inputs": {
+        "tachycardia": true,
+        "dyspnea": true,
+        "known_allergen": true,
+        "bronchospasm": true
+      },
+      "expected": {
+        "diagnostic_status": "CRITERIA_MET",
+        "urgency": "EMERGENCY",
+        "confirmation_status": "NOT_REQUIRED",
+        "protocol_status": "BLOCKED_AUTHORIZATION",
+        "treatment_status": "NOT_STARTED"
+      },
+      "top_hypothesis": "ANAPHYLAXIS",
+      "source_ids": ["SRC-WAO-ANAPH-2020"]
+    },
+    {
+      "id": "DIFF-04",
+      "route": "DIZZINESS_TACHYCARDIA",
+      "inputs": {
+        "tachycardia": true,
+        "nausea": true,
+        "plasma_glucose_mg_dl": 280,
+        "beta_hydroxybutyrate": null,
+        "pH": null,
+        "bicarbonate": null
+      },
+      "expected": {
+        "diagnostic_status": "SUSPECTED",
+        "urgency": "URGENT",
+        "confirmation_status": "REQUIRED",
+        "protocol_status": "BLOCKED_MISSING_DATA",
+        "treatment_status": "NOT_STARTED"
+      },
+      "top_hypothesis": "DKA",
+      "next_tests": ["TEST-BETA-OHB", "TEST-VENOUS-PH-BICARB"],
+      "source_ids": ["SRC-DKA-2024"]
+    },
+    {
+      "id": "DIFF-05",
+      "route": "DIZZINESS_TACHYCARDIA",
+      "inputs": {
+        "dizziness": true,
+        "tachycardia": true,
+        "urine_output_ml_kg_h": 0.3,
+        "urine_output_duration_h": 8,
+        "creatinine_delta_48h_mg_dl": 0.4
+      },
+      "expected": {
+        "diagnostic_status": "CRITERIA_MET",
+        "urgency": "URGENT",
+        "confirmation_status": "SATISFIED",
+        "protocol_status": "ELIGIBLE",
+        "treatment_status": "NOT_STARTED"
+      },
+      "top_hypothesis": "AKI",
+      "secondary_hypothesis": "HYPOVOLEMIA",
+      "source_ids": ["SRC-KDIGO-AKI-2012"]
+    },
+    {
+      "id": "DIFF-06",
+      "route": "DIZZINESS_TACHYCARDIA",
+      "inputs": {
+        "dizziness": true,
+        "persistent_tachycardia": true,
+        "postural_relation": false,
+        "irregular_pulse": true
+      },
+      "expected": {
+        "diagnostic_status": "INSUFFICIENT_DATA",
+        "urgency": "URGENT",
+        "confirmation_status": "REQUIRED",
+        "protocol_status": "NOT_EVALUATED",
+        "treatment_status": "NOT_STARTED"
+      },
+      "top_hypothesis": "EXTERNAL_ARRHYTHMIA_PATHWAY",
+      "next_tests": ["TEST-ECG"],
+      "must_not_output": ["POTS_DIAGNOSIS"],
+      "source_ids": ["SRC-HRS-POTS-2015"]
+    }
+  ]
+}

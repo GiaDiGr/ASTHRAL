@@ -1,0 +1,20 @@
+{
+  "v101_archive_sha256": "d5b36de30bdc35b3422eabc91787ac1349afc80fdb2d1b510a6aa4a996cbdfa3",
+  "r2_archive_sha256": "114221aedaa8be198a8d91864544cc49dee8015de5b3b4d41e3e2908d0cc49e6",
+  "all_v101_frozen_files_match_before_changes": true,
+  "original_databases_unmodified": true,
+  "v101_backup": {
+    "format": "VIGILE_SQLITE_BACKUP_1",
+    "source": "C:\\Users\\Gianni\\Desktop\\Vigile\\engine\\data\\mission-v101-final\\vigile.sqlite3",
+    "database": "vigile.sqlite3",
+    "sha256": "368ac50324373423cb9fcd3e72e2a003a4e553a3230d8bed5020d63edb1e58c5",
+    "state": {
+      "record_sequence": 38,
+      "record_count": 38,
+      "records_hash": "7ed5d24c98b7e92df1c46588fa36a00d0e3109ba23ca44ae5a10467e89a08443",
+      "audit_sequence": 41,
+      "audit_hash": "f0262b88f5f1e79f5ee7204f8eebaf227d5ddc7dcdce3d485c31af72d7fb7239"
+    },
+    "sqlite_encryption": "NONE"
+  }
+}

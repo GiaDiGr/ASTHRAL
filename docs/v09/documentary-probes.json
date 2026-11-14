@@ -1,0 +1,184 @@
+[
+  {
+    "question": "Quote the hypoglycemia Level 1 glucose classification.",
+    "response": {
+      "status": "EXTRACTIVE_FALLBACK",
+      "documents": [
+        {
+          "id": "D-348f6f6e276875605f09",
+          "kind": "DOCUMENT",
+          "text": "\": \"REQUIRES_SPACE_SPECIFIC_VALIDATION\",\r\n      \"classification\": {\r\n        \"level_1\": \"54 <= glucose < 70 mg/dL\",\r\n        \"level_2\": \"glucose < 54 mg/dL\",\r\n        \"level_3\": \"Clinically attributed severe event with altered mental/physical function requiring assistance, independent of measured glucose\"\r\n      },\r\n      \"limitations\": [\r\n        \"NOT_ETIOLOGIC_DIAGNOSIS\",\r\n        \"CGM_ALONE_NOT_USED_IN_THIS_RESTRICTED_ROUTE\",\r\n        \"NO_FIXED_RECHECK_INTERVAL_WITHOUT_CONTEXT\",\r\n        \"NO_NONDIABETIC_HYPOGLYCEMIA_DIAGNOSIS\"\r\n      ]\r\n    }\r\n  ],\r\n  \"protocols\": [\r\n    {\r\n      \"protocol_id\": \"PROT-HYPO-REVIEW-2026\",\r\n      \"source_ids\": [\r\n        \"SRC-ADA-HYPO-2026\"\r\n      ],\r\n      \"required_resources\": [\r\n        \"verified_glucose_measurement\",\r\n        \"qualified_medical_review\"\r\n      ],\r\n      \"purpose\": \"Review only; no doses or execution\",\r\n      \"mission_approved\": false\r\n    }\r\n  ],\r\n  \"tests\": [\r\n    {\r\n      \"test_id\": \"TEST-HYPO-GLUCOSE\",\r\n      \"source_ids\": [\r\n        \"SRC-ADA-HYPO-2026\"\r\n      ],\r\n      \"purpose\": \"Obtain or verify blood glucose with suitable me",
+          "reference": {
+            "document": "engine/vigile/clinical_knowledge/v07-extension.json",
+            "sha256": "b258ff2d79ab79355f65826466c9fc3e7a52380b749ec18ef2eb4700759e4fd8",
+            "version": "2026.1",
+            "authority": "IMPLEMENTED_CRITERION_NOT_ORIGINAL_ARTICLE",
+            "char_start": 2200,
+            "char_end": 3300,
+            "line": 70
+          },
+          "retrieval_score": 9.01443
+        },
+        {
+          "id": "D-2397e05233f2a45e21f3",
+          "kind": "DOCUMENT",
+          "text": "Level 1: Glucose <70 mg/dL (<3.9 mmol/L) and ≥54 mg/dL (≥3.0 mmol/L).\r\nLevel 2: Glucose <54 mg/dL (<3.0 mmol/L).",
+          "reference": {
+            "document": "docs/v08/sources/ADA2026-short-excerpt.txt",
+            "sha256": "cb09dce1d37f61a18effc5854418767a6e13c5fe83e26a2750e5d843912cb9eb",
+            "version": "2026-table-6.4",
+            "authority": "PRIMARY_SOURCE_SHORT_EXCERPT",
+            "char_start": 0,
+            "char_end": 112,
+            "line": 1,
+            "source_id": "SRC-ADA-HYPO-2026",
+            "url": "https://doi.org/10.2337/dc26-S006",
+            "verified_date": "2026-10-21",
+            "coverage": "SHORT_EXCERPT_ONLY_NOT_FULL_TEXT"
+          },
+          "retrieval_score": 7.913073
+        },
+        {
+          "id": "D-2b8b52df39820a9c92db",
+          "kind": "DOCUMENT",
+          "text": "```json\n{\n  \"schema_version\": \"1.0.0\",\n  \"classifications\": [\n    {\n      \"condition_id\": \"DM\",\n      \"classification\": \"REQUIRES_SPACE_SPECIFIC_VALIDATION\",\n      \"terrestrial_rule_preserved\": true,\n      \"threshold_adjustment\": \"NONE\",\n      \"reason\": \"No verified space-specific diagnostic thresholds identified.\"\n    },\n    {\n      \"condition_id\": \"DKA\",\n      \"classification\": \"REQUIRES_SPACE_SPECIFIC_VALIDATION\",\n      \"terrestrial_rule_preserved\": true,\n      \"threshold_adjustment\": \"NONE\",\n      \"reason\": \"Diagnostic and treatment criteria are terrestrial; mission resources and physiology require validation.\"\n    },\n    {\n      \"condition_id\": \"ORTHOSTATIC_HYPOTENSION\",\n      \"classification\": \"CONTEXT_DEPENDENT\",\n      \"contexts\": {\n        \"FREE_MICROGRAVITY\": \"NOT_APPLICABLE\",\n        \"EARTH_GRAVITY\": \"DIRECTLY_APPLICABLE_WITH_STANDARD_CLINICAL_LIMITATIONS\",\n        \"POST_SPACEFLIGHT_GRAVITY_TRANSITION\": \"APPLICABLE_WITH_LIMITATIONS\",\n        \"PARTIAL_GRAVITY\": \"REQUIRES_SPACE_SPECIFIC_VALIDATION\"\n      },\n      \"threshold_adjustment\": \"NONE\"\n    },\n    {\n      \"condition_id",
+          "reference": {
+            "document": "docs/clinical/deep-research-report-2026-10-16.md",
+            "sha256": "38ad3ab166f25a8b46c1e1f483ba813510c34dc766171389307635ecf7e8a715",
+            "version": "2026-10-16",
+            "authority": "CLINICAL_RESEARCH_SYNTHESIS",
+            "char_start": 64298,
+            "char_end": 65398,
+            "line": 1484
+          },
+          "retrieval_score": 3.619252
+        }
+      ],
+      "quotations": [],
+      "issues": [],
+      "comparison_status": "NOT_AUTOMATICALLY_ADJUDICATED",
+      "discrepancies": [],
+      "inference_attempted": true,
+      "authority": "DOCUMENTARY_ONLY_NOT_PATIENT_STATE"
+    },
+    "raw_calls": [
+      [
+        {
+          "sentences": [
+            {
+              "evidence_ids": [
+                "D-2397e05233f2a45e21f3"
+              ],
+              "text": "Level 1: Glucose <70 mg/dL (<3.9 mmol/L) and ≥54 mg/dL (≥3.0 mmol/L)."
+            },
+            {
+              "evidence_ids": [
+                "D-348f6f6e276875605f09"
+              ],
+              "text": "classification\": {\n        \"level_1\": \"54 <= glucose < 70 mg/dL\""
+            }
+          ]
+        },
+        {
+          "elapsed_ms": 3448.741800006246,
+          "usage": {},
+          "timings": {},
+          "load_duration_ns": 13345300,
+          "total_duration_ns": 3431389500,
+          "prompt_eval_count": 1487,
+          "eval_count": 135,
+          "eval_duration_ns": 1974680000
+        }
+      ]
+    ]
+  },
+  {
+    "question": "Cita literalmente el limite de la suma de radiacion por intervalos.",
+    "response": {
+      "status": "EXTRACTIVE_FALLBACK",
+      "documents": [
+        {
+          "id": "D-2fb6c076e445e50b078b",
+          "kind": "DOCUMENT",
+          "text": "| Dominio | Capacidad actual | Fuentes existentes | Límites |\n|---|---|---|---|\n| Cardiovascular | VO2, pulso, presión, comparación personal; regla AER-003; OH/POTS según contexto | S01, S05 | Incumplimiento normativo no es diagnóstico. Prueba ortostática estándar no aplicable en microgravedad libre; gravedad parcial requiere validación. |\n| Musculoesquelético | Fuerza, densidad ósea por sitio, tendencias; regla MUS-002 | S01, S06 | DXA principalmente pre/postvuelo; no se supone disponibilidad en vuelo, diagnóstico de osteoporosis ni fractura. |\n| Radiación | Suma explícita de dosis efectiva por intervalos compatibles; cobertura completa/parcial | S01, S16 | Solapamientos, cambio de protocolo o dosímetro no verificado bloquean total. Sin convertir dosis absorbida, órgano o tasa; no extrapola dosis de carrera ni riesgo de cáncer. |\n| Sueño/comportamiento | Duración, eficiencia, reacción y escala de fatiga declarada | S10, S12 | Método y escala comparables; sin diagnóstico psiquiátrico ni umbral universal. |\n| Inmunológico | Serie de carga viral, analito/muestra identificados mediante ",
+          "reference": {
+            "document": "docs/v07/README.md",
+            "sha256": "ccdf9005a4892a004edac7d6cef95a2680b8ec594cc15ac1083f53e950e723a3",
+            "version": "0.7.0",
+            "authority": "IMPLEMENTATION_DOCUMENTATION_NOT_GUIDELINE",
+            "char_start": 4614,
+            "char_end": 5714,
+            "line": 51
+          },
+          "retrieval_score": 7.556071
+        },
+        {
+          "id": "D-a20fe68a3be9324a41ef",
+          "kind": "DOCUMENT",
+          "text": "NASA mantiene además un inventario explícito de riesgos humanos que incluye cardiovascular, VTE, sensorimotor, hueso, inmunidad, SANS, renal, músculo, capacidad aeróbica, sueño/circadiano, nutrición, CO₂, hipoxia, DCS, toxicidad, medicación, EVA, radiación, salud conductual y otros dominios. En paralelo, el Integrated Medical Model de NASA modela **más de 100 condiciones médicas**, incluidas enfermedades comunes, traumatismos y emergencias, lo que justifica que VIGILE no se limite a los riesgos fisiológicos clásicos de microgravedad. citeturn27search5turn21search0turn21search1turn21search2",
+          "reference": {
+            "document": "01_INFORMES/REPORTE_CONSOLIDADO_COMPLETO.md",
+            "sha256": "97e9fdc86925b6b973db75900e64f222c149ae3bd9cade8c182f2264c46831e5",
+            "version": "PINNED_CORPUS",
+            "authority": "SPACE_RESEARCH_SYNTHESIS",
+            "char_start": 1615,
+            "char_end": 2217,
+            "line": 11
+          },
+          "retrieval_score": 5.371478
+        },
+        {
+          "id": "D-0b72b7365e9ab58748e5",
+          "kind": "DOCUMENT",
+          "text": "ateriales/monitorización/contención; **M:** detector específico; **Q:** compuesto/calibración; **D:** límite específico de misión; **A/DD:** inhalación/dermal/ocular; **T:** emergencia; **I:** scrubber/PPE y medicina solo por protocolo; **R/F:** vigilancia; **G:** toxicante-específico. |\n| C029 | **P:** exclusión/mitigación de polvo; **M:** partículas/exposición; **Q:** sensor/ubicación; **D:** regla mission-specific; **A/DD:** irritación, toxicidad, infección; **T/I:** misión; **R/F:** síntomas/exposición acumulada; **G:** `RV`. |\n| C030 | **P:** prebreathe/atmósfera/suit autorizado; **M:** perfil presión + síntomas; **Q:** cronología de presión; **D:** DCS sospechada requiere evaluación; **A/DD:** trauma, hipoxia, barotrauma; **T:** finalizar EVA de forma segura según protocolo; **I:** misión/médico; **R/F:** vigilancia postevento; **G:** gravedad parcial incierta. |\n| C031 | **P:** perfiles de presión; **M:** síntomas+presión; **Q:** cronología; **D:** screening; **A/DD:** DCS/ORL; **T/I:** médico; **R/F:** resolución; **G:** `NPA`. |\n| C032 | **P:** ALARA y shielding; **M:** dosi",
+          "reference": {
+            "document": "01_INFORMES/REPORTE_CONSOLIDADO_COMPLETO.md",
+            "sha256": "97e9fdc86925b6b973db75900e64f222c149ae3bd9cade8c182f2264c46831e5",
+            "version": "PINNED_CORPUS",
+            "authority": "SPACE_RESEARCH_SYNTHESIS",
+            "char_start": 32992,
+            "char_end": 34092,
+            "line": 155
+          },
+          "retrieval_score": 5.352603
+        }
+      ],
+      "quotations": [],
+      "issues": [],
+      "comparison_status": "NOT_AUTOMATICALLY_ADJUDICATED",
+      "discrepancies": [],
+      "inference_attempted": true,
+      "authority": "DOCUMENTARY_ONLY_NOT_PATIENT_STATE"
+    },
+    "raw_calls": [
+      [
+        {
+          "sentences": [
+            {
+              "evidence_ids": [
+                "D-2fb6c076e445e50b078b"
+              ],
+              "text": "Suma explícita de dosis efectiva por intervalos compatibles; cobertura completa/parcial"
+            },
+            {
+              "evidence_ids": [
+                "D-0b72b7365e9ab58748e5"
+              ],
+              "text": "Suma explícita de dosis efectiva por intervalos compatibles; cobertura completa/parcial"
+            }
+          ]
+        },
+        {
+          "elapsed_ms": 2534.977799994522,
+          "usage": {},
+          "timings": {},
+          "load_duration_ns": 15250400,
+          "total_duration_ns": 2497552600,
+          "prompt_eval_count": 1571,
+          "eval_count": 118,
+          "eval_duration_ns": 1760583000
+        }
+      ]
+    ]
+  }
+]

@@ -1,0 +1,32 @@
+{
+  "condition_id": "C026",
+  "catalog_record": {
+    "condition_id": "C026",
+    "name_specialty": "Hipoxia / respiratorio-ambiental",
+    "description_spaceflight": "Atmósferas de presión reducida pueden elevar riesgo de hipoxia, especialmente en preparaciones EVA.",
+    "risks_symptoms": "ppO₂/presión, protocolos prebreathe.",
+    "biomarkers_sensors_tests": "ppO₂ ambiental, SpO₂, síntomas, rendimiento.",
+    "baselines_environment_interactions": "SpO₂ si se usa; presión/atmósfera/suit.",
+    "primary_evidence": "S14, S02. citeturn18search10turn18search8",
+    "limits_authorizations_state": "NASA continúa estudiando niveles tolerables; no inventar umbral clínico adicional. `RV`."
+  },
+  "clinical_pathway_profile_as_published": "**P:** control atmósfera/protocolo EVA; **M:** ppO₂/SpO₂/síntomas; **Q:** calibración/contexto presión; **D:** límites ambientales configurados, no umbral clínico inventado; **A/DD:** respiratorio, CO₂, perfusión; **T/I:** protocolo de misión; **R/F:** normalización; **G:** tolerancia individual `RV`.",
+  "coverage_states": {
+    "prevention": "ES",
+    "monitoring": "ES",
+    "data_quality": "ES",
+    "detection": "RV",
+    "assessment": "RV",
+    "differential_diagnosis": "RV",
+    "triage": "RMA",
+    "intervention_authorized": "RMA",
+    "recovery": "RV",
+    "follow_up": "RV",
+    "prognosis": "RO"
+  },
+  "source_ids": [
+    "S14",
+    "S02"
+  ],
+  "NOTICE": "Pathway text is an outline; not an authorized diagnostic or treatment protocol."
+}

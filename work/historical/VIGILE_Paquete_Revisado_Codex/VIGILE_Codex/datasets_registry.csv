@@ -1,0 +1,9 @@
+﻿dataset_id,landing_url,data_context,possible_use,access_validation,study_type
+NASA OS-568,https://osdr.nasa.gov/bio/repo/data/experiments/OS-568,"30-day -6° bed-rest, 19 male volunteers, preflight-like analogue","orthostatic tolerance, strength, exercise, gait etc. described in metadata",metadata verified; individual files/access not verified,ANALOG
+NASA OSD-195,,21-day bed-rest muscle gene expression,omics for mechanisms,report only; no clinical labels established,ANALOG_OMICS
+NASA OSD-198,,bed-rest with hypoxia muscle miRNA,mechanistic/environment context,report only; no clinical labels established,ANALOG_OMICS
+NASA OSD-942,,70-day bed-rest vastus lateralis,longitudinal mechanistic trends,report only; no clinical labels established,ANALOG_OMICS
+NASA OSD-946,,70-day bed-rest SPRINT exercise,countermeasure research,report only; access inspect,ANALOG
+ESA AGBRESA muscle artificial gravity,https://doi.org/10.57780/esa-3v2wrqx,60-day bed-rest and artificial gravity,neuromuscular response,ESA HREDA access/rights inspect,ANALOG
+ESA CAROT,https://doi.org/10.57780/esa-g3lxiiq,long-term bed rest,cardiovascular deconditioning,ESA HREDA access/rights inspect,ANALOG
+ESA BRAVITY2,https://doi.org/10.57780/esa-7v4u9f4,bed-rest cognitive/brain changes,cognitive trajectory,ESA HREDA access/rights inspect,ANALOG

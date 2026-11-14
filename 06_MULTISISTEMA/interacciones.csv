@@ -1,0 +1,13 @@
+interaction_id,systems,evidence_direction,implication
+MSI01,Sueño ↔ cognición/rendimiento,Sueño insuficiente/circadiano se relaciona con deterioro de rendimiento y errores. citeturn12search1,Hallazgo cognitivo debe consultar sueño antes de inferir patología neurológica.
+MSI02,Sueño/estrés ↔ inmunidad/reactivación viral,NASA identifica sueño y otros estresores entre factores relacionados con cambios inmunes/reactivación. citeturn12search7,Co-ocurrencia aumenta prioridad de evaluación; no prueba causalidad individual.
+MSI03,Microgravedad/CV ↔ ortostatismo,Cambios cardiovasculares en microgravedad contribuyen a dificultad en retorno a gravedad. citeturn11search0turn19search2,Contexto de gravedad es input obligatorio.
+MSI04,Hueso ↔ riñón,Pérdida ósea incrementa calcio circulante y es relevante para riesgo de cálculo renal. citeturn11search3turn21search15,"Compartir BMD/biomarcadores/calcio con módulo renal, sin diagnóstico automático."
+MSI05,Ejercicio ↔ aeróbico/músculo/hueso/CV,Ejercicio es contramedida central para múltiples sistemas. citeturn18search3,Un único registro de ejercicio debe alimentar varios módulos.
+MSI06,CO₂ ↔ cefalea/cognición ↔ fluid shift,NASA documenta asociación de CO₂ con cefalea y advierte que adaptación/fluid shift pueden producir síntomas similares. citeturn19search4,No atribuir cefalea automáticamente a CO₂; mostrar exposición + confusores.
+MSI07,Nutrición ↔ músculo/hueso/inmunidad/rendimiento,Nutrición adecuada es esencial para salud y rendimiento y está integrada con múltiples respuestas fisiológicas. citeturn18search2turn18search11,Nutritional context acompaña interpretación longitudinal.
+MSI08,SANS ↔ gravedad/fluid shift,SANS incluye cambios ojo/cerebro asociados al vuelo; mecanismo exacto sigue incompleto. citeturn11search2,Marcar asociaciones como hipótesis; prohibir regla causal simple.
+MSI09,EVA ↔ DCS/hipoxia/CO₂/fatiga/lesión,NASA identifica simultáneamente estos riesgos en EVA. citeturn18search0turn27search1,Crear `EVA_CONTEXT` que active conjunto de reglas y sensores.
+MSI10,Medicación ↔ fisiología/almacenamiento,"PK/PD, estabilidad y ambiente pueden alterar eficacia/toxicidad. citeturn18search5",Medication engine sólo verifica protocolo/inventario; no inventa dosis.
+MSI11,Sensorimotor ↔ egress/task performance,"Adaptación gravitatoria puede afectar marcha, coordinación, conducción/egress. citeturn12search2turn27search5",Gates de tarea deben combinar función sensorimotora y CV.
+MSI12,Tóxicos ↔ CV/respiratorio/neurológico/conductual,El DAG NASA de toxicidad describe múltiples vías orgánicas y necesidad de monitoring fisiológico + ambiental. citeturn27search7,"En una exposición, VIGILE debe abrir episodio multisistema, no silo toxicológico."

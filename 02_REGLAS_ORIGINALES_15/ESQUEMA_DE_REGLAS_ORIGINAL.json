@@ -1,0 +1,77 @@
+{
+  "rule_schema_version": "1.0.0",
+  "required_fields": [
+    "rule_id",
+    "rule_version",
+    "title",
+    "domain",
+    "condition_id",
+    "purpose",
+    "rule_kind",
+    "evidence_class",
+    "evidence_status",
+    "software_validation_status",
+    "authorization",
+    "applicability",
+    "inputs",
+    "derived_variables",
+    "logic",
+    "thresholds",
+    "temporal_window",
+    "confounders",
+    "missing_data_policy",
+    "data_quality_policy",
+    "output",
+    "severity_semantics",
+    "follow_up",
+    "source_locators",
+    "test_cases"
+  ],
+  "rule_results": [
+    "PASS",
+    "FAIL_REQUIREMENT",
+    "INCONCLUSIVE",
+    "NOT_APPLICABLE",
+    "REQUIRES_VALIDATION",
+    "REQUIRES_MISSION_AUTHORIZATION"
+  ],
+  "data_quality_states": [
+    "ACCEPTABLE",
+    "DEGRADED",
+    "INVALID",
+    "UNKNOWN"
+  ],
+  "clinical_assessment_states": [
+    "NOT_DETERMINED_BY_RULE",
+    "ASSESSMENT_REQUIRED",
+    "INCONCLUSIVE",
+    "HUMAN_REVIEW_REQUIRED"
+  ],
+  "evidence_classes": [
+    "NASA_STANDARD",
+    "NASA_OPERATIONAL_PROCEDURE",
+    "SPACEFLIGHT_PRIMARY_EVIDENCE",
+    "SPACEFLIGHT_EVIDENCE_REPORT",
+    "ANALOG_EVIDENCE",
+    "TERRESTRIAL_CLINICAL_GUIDELINE",
+    "ENGINEERING_CHOICE",
+    "RESEARCH_HYPOTHESIS"
+  ],
+  "authorization_states": [
+    "AUTO_EVALUATION_ALLOWED",
+    "REQUIRES_MISSION_AUTHORIZATION",
+    "REQUIRES_MEDICAL_AUTHORIZATION",
+    "RESEARCH_ONLY"
+  ],
+  "global_guardrails": {
+    "standard_failure_is_not_diagnosis": true,
+    "clinical_severity_separate_from_rule_result": true,
+    "missing_required_input_returns_inconclusive": true,
+    "invalid_data_returns_inconclusive": true,
+    "unvalidated_unit_conversion_forbidden": true,
+    "llm_can_modify_rule": false,
+    "llm_can_modify_threshold": false,
+    "llm_can_authorize_treatment": false,
+    "autonomous_drug_dosing_from_these_rules": false
+  }
+}

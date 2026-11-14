@@ -1,0 +1,77 @@
+{
+  "r2_archive_sha256": "114221aedaa8be198a8d91864544cc49dee8015de5b3b4d41e3e2908d0cc49e6",
+  "r2_archive_unchanged": true,
+  "clinical_knowledge_files": [
+    {
+      "path": "engine/vigile/clinical_knowledge/contraindications.json",
+      "unchanged": true,
+      "sha256": "c7b03068b4345d553e7b002c2fbdd2207ff855b6664c01b72fe96e2b6d95fcc7"
+    },
+    {
+      "path": "engine/vigile/clinical_knowledge/diagnostic_criteria.json",
+      "unchanged": true,
+      "sha256": "3aee3add20e11ace8f192969ce0ce827b1ea163e55935110cc5afdd6c016c8ee"
+    },
+    {
+      "path": "engine/vigile/clinical_knowledge/diagnostic_tests.json",
+      "unchanged": true,
+      "sha256": "ee49c8077105613c59fb8b8a5d3c61a6497616579205628462d02ac4f59d8a8d"
+    },
+    {
+      "path": "engine/vigile/clinical_knowledge/differential_rules.json",
+      "unchanged": true,
+      "sha256": "22daab629bd06ce9756d940c63b3ebbf9dca37811d29467520fc2e27bce178b7"
+    },
+    {
+      "path": "engine/vigile/clinical_knowledge/manifest.json",
+      "unchanged": true,
+      "sha256": "aebd5cf96c6892066e72c9207f87f331e29dfffe2ddeff45108e70faf4835a27"
+    },
+    {
+      "path": "engine/vigile/clinical_knowledge/sources_verified.json",
+      "unchanged": true,
+      "sha256": "2c41be379e10b0c2ba3f7077fd47a9ae138f31addee1a9a2829f3f9bd815c2cd"
+    },
+    {
+      "path": "engine/vigile/clinical_knowledge/space_applicability.json",
+      "unchanged": true,
+      "sha256": "d86e575957ab11f2abb831a1e0f64897586b0fe2ffd9aa5aee4d51bdc5df65b0"
+    },
+    {
+      "path": "engine/vigile/clinical_knowledge/synthetic_cases.json",
+      "unchanged": true,
+      "sha256": "24f2f3e3bc0cbd749167c9bdbd69765a5f36a04ad9c0691aa92efc492852ab81"
+    },
+    {
+      "path": "engine/vigile/clinical_knowledge/treatment_protocols.json",
+      "unchanged": true,
+      "sha256": "89a33123f49782318595967228cba6e7285d3f5662b5cbe7bda4df06d49130cc"
+    },
+    {
+      "path": "engine/vigile/clinical_knowledge/v07-extension.json",
+      "unchanged": true,
+      "sha256": "b258ff2d79ab79355f65826466c9fc3e7a52380b749ec18ef2eb4700759e4fd8"
+    }
+  ],
+  "diagnostic_functions": [
+    {
+      "function": "normalize",
+      "ast_unchanged": true
+    },
+    {
+      "function": "dm_confirmation",
+      "ast_unchanged": true
+    },
+    {
+      "function": "protocol_eligibility",
+      "ast_unchanged": true
+    },
+    {
+      "function": "evaluate_condition",
+      "ast_unchanged": true
+    }
+  ],
+  "clinical_knowledge_hash": "b8c568bd645154e5fd67630c7a670ca53904dc04f54904315047a89923839d4e",
+  "clinical_semantic_hash": "d2c9a8867c438505c08903d4765757fb3067ebd6381671ca6667593dfacd81bf",
+  "r2_semantic_hash": "d2c9a8867c438505c08903d4765757fb3067ebd6381671ca6667593dfacd81bf"
+}

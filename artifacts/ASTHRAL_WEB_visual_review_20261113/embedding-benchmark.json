@@ -1,0 +1,10 @@
+[
+  {
+    "state": "READY",
+    "model": "MiniLM-L6-ONNX-q8",
+    "init_seconds": 0.4775999999940395,
+    "local_execution": true,
+    "index_chunks": 6,
+    "index_seconds": 0.5563000000119209
+  }
+]

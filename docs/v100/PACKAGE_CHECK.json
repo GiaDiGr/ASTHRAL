@@ -1,0 +1,9 @@
+{
+  "path": "VIGILE-v1.0.0-r2-team-review.zip",
+  "sha256": "fd837b92f36da44fcf0593fc755a66c37334fa335c3eaae1e55453fc63c1775f",
+  "bytes": 30578239,
+  "files": 321,
+  "source_freeze_verified": true,
+  "archive_contents_verified": true,
+  "no_runtime_data_or_weights": true
+}

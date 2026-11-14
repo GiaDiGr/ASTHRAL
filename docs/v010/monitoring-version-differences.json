@@ -1,0 +1,110 @@
+[
+  {
+    "id": "A-cycle-0",
+    "differences": [
+      {
+        "path": "/0/indicators/0/normative_finding_id",
+        "old": "14c4fe04904ca90ca2d4a7921deaea47ea3bd9642da560a9f621201c969dab4e",
+        "new": "5c2042495c2e61d0634065c510cac05aaacff2f3a8693415a32fc5c56459cdb3"
+      }
+    ]
+  },
+  {
+    "id": "A-cycle-7",
+    "differences": [
+      {
+        "path": "/0/indicators/0/normative_finding_id",
+        "old": "8c327f33e4ce760ab53b1911841aeec6d803b584929a36e6cf9e52e1211d5de1",
+        "new": "196d764ea60bdfa74d417e8f91699f740ab772d91981c46b351d3bb6c460717b"
+      }
+    ]
+  },
+  {
+    "id": "A-cycle-14",
+    "differences": [
+      {
+        "path": "/0/indicators/0/normative_finding_id",
+        "old": "589055ef217bc724dc41e136f0e3f457dc735bb606e0384db161c32c699a8466",
+        "new": "67a01fcf219218ed9f8a8ef057e14c40c088122e443ce074db0d1125d52dc845"
+      }
+    ]
+  },
+  {
+    "id": "A-cycle-15",
+    "differences": []
+  },
+  {
+    "id": "A-cycle-16",
+    "differences": []
+  },
+  {
+    "id": "B-cycle-0",
+    "differences": []
+  },
+  {
+    "id": "B-cycle-repeat",
+    "differences": []
+  },
+  {
+    "id": "B-cycle-0.01",
+    "differences": []
+  },
+  {
+    "id": "B-cycle-0.02",
+    "differences": []
+  },
+  {
+    "id": "B-cycle-0.03",
+    "differences": []
+  },
+  {
+    "id": "C-cycle-0",
+    "differences": [
+      {
+        "path": "/1/indicators/0/normative_finding_id",
+        "old": "232491ef0d8b9e6a9fd318b39b345835738edbf046682c6b2745f18b9fe50b9b",
+        "new": "34770f3587d67670c50b783a989424db8a3d646b77dfa6433daa6e1ae4083ff6"
+      }
+    ]
+  },
+  {
+    "id": "C-cycle-7",
+    "differences": [
+      {
+        "path": "/1/indicators/0/normative_finding_id",
+        "old": "4bb4926c310ed6cb1b81765c8740fec80bbb08fcf68b9a1b06886b968ebcc3c6",
+        "new": "c65422864a06a23fb6e8f90612d0429c2131240dbe124f196038444cf5adc83b"
+      }
+    ]
+  },
+  {
+    "id": "C-cycle-14",
+    "differences": [
+      {
+        "path": "/1/indicators/0/normative_finding_id",
+        "old": "d0fd9f5c0ab52d980b8b7eee59fd488e7f43271239e533d8d6dc514395b217d3",
+        "new": "602267947bcf8d75fc640b6dcc8cf0e830fd03a176f25716a4c42953c9983b31"
+      }
+    ]
+  },
+  {
+    "id": "C-cycle-21",
+    "differences": [
+      {
+        "path": "/1/indicators/0/normative_finding_id",
+        "old": "2090a2d431604f381ee237de14062cf65e40923ba025345b3b42e246d4fb061b",
+        "new": "b5ddb59b6cdd82928a18e737b5fe022f38e14365baa719f6d67ec8bf78ce5e87"
+      }
+    ]
+  },
+  {
+    "id": "C-cycle-28",
+    "differences": [
+      {
+        "path": "/1/indicators/0/normative_finding_id",
+        "old": "8efeb7527d7540e14b9271b0b031e65a512b12e1a5693fbd8ab93b35acd67db6",
+        "new": "7747e19497436f82dc3435dba30b9616e8837f43da5f17a1f05118a1a7180014"
+      }
+    ]
+  }
+]

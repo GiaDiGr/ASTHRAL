@@ -1,0 +1,29 @@
+{
+  "checkpoint_sha256": "f60b913922a84464591e7b337ff0c93181bde1796b45f2372f10d3c608ecbf6d",
+  "voice_packages": {
+    "vosk": false,
+    "faster_whisper": false,
+    "whisper": false,
+    "av": false,
+    "numpy": false,
+    "soundfile": false,
+    "pyttsx3": false,
+    "comtypes": false,
+    "win32com": false
+  },
+  "installed_model_paths": [],
+  "backup": {
+    "format": "VIGILE_SQLITE_BACKUP_1",
+    "source": "C:\\Users\\Gianni\\Desktop\\Vigile\\engine\\data\\mission-v011-final\\vigile.sqlite3",
+    "database": "vigile.sqlite3",
+    "sha256": "2eb2d9f04f88cc203d4c1cc97d998350a0349548aedf9918e290b7a4e5cdd954",
+    "state": {
+      "record_sequence": 553,
+      "record_count": 553,
+      "records_hash": "efdcfc77a1cfc149ace0a4edfd3d00b56dfe916d1b0125ba9bf356c6b1f3c41d",
+      "audit_sequence": 554,
+      "audit_hash": "2a423530bea6f576a76d2bacf268a3d3f005b373ca1c0a6ad8013c73f26deb79"
+    },
+    "sqlite_encryption": "NONE"
+  }
+}

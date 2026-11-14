@@ -1,0 +1,142 @@
+{
+  "rule_id": "VIGILE-AER-002",
+  "rule_version": "1.0.0",
+  "title": "Extraterrestrial surface EVA in-mission VO2max requirement",
+  "domain": "CARDIORESPIRATORY_FITNESS",
+  "condition_id": "AEROBIC_CAPACITY_FOR_SURFACE_EVA",
+  "purpose": "Evaluate compliance with the minimum in-mission VO2max required for extraterrestrial surface EVA.",
+  "rule_kind": "STANDARD_COMPLIANCE",
+  "evidence_class": "NASA_STANDARD",
+  "evidence_status": "DOCUMENTED_AND_COMPUTABLE",
+  "software_validation_status": "REQUIRES_IMPLEMENTATION_VALIDATION",
+  "authorization": {
+    "evaluation": "AUTO_EVALUATION_ALLOWED",
+    "clinical_interpretation": "REQUIRES_MEDICAL_AUTHORIZATION",
+    "treatment": "REQUIRES_MEDICAL_AUTHORIZATION"
+  },
+  "applicability": {
+    "mission_phase": [
+      "IN_MISSION"
+    ],
+    "required_context": {
+      "extraterrestrial_surface_eva_planned_or_required": true
+    },
+    "otherwise": "NOT_APPLICABLE"
+  },
+  "inputs": [
+    {
+      "name": "vo2max_relative",
+      "type": "number",
+      "canonical_unit": "mL/min/kg",
+      "required": true
+    },
+    {
+      "name": "extraterrestrial_surface_eva_planned_or_required",
+      "type": "boolean",
+      "required": true
+    },
+    {
+      "name": "measurement_method",
+      "type": "enum",
+      "values": [
+        "DIRECT",
+        "INDIRECT"
+      ],
+      "required": true
+    },
+    {
+      "name": "data_quality_status",
+      "type": "enum",
+      "required": true
+    }
+  ],
+  "derived_variables": [],
+  "logic": {
+    "decision": [
+      {
+        "when": "extraterrestrial_surface_eva_planned_or_required == false",
+        "result": "NOT_APPLICABLE"
+      },
+      {
+        "when": "data_quality_status != ACCEPTABLE OR vo2max_relative is null",
+        "result": "INCONCLUSIVE"
+      },
+      {
+        "when": "vo2max_relative >= 36.5",
+        "result": "PASS"
+      },
+      {
+        "when": "vo2max_relative < 36.5",
+        "result": "FAIL_REQUIREMENT"
+      }
+    ]
+  },
+  "thresholds": {
+    "vo2max_relative_minimum": {
+      "value": 36.5,
+      "unit": "mL/min/kg",
+      "operator": ">="
+    }
+  },
+  "temporal_window": {
+    "type": "CURRENT_VALID_IN_MISSION_ASSESSMENT",
+    "fixed_sampling_frequency_in_source": false
+  },
+  "confounders": [
+    "measurement_method",
+    "measurement_quality",
+    "body_mass",
+    "temporary illness",
+    "acute exercise effects"
+  ],
+  "missing_data_policy": "INCONCLUSIVE",
+  "data_quality_policy": "Reject INVALID or UNKNOWN quality measurements.",
+  "output": {
+    "primary": "rule_result",
+    "clinical_assessment_status": "NOT_DETERMINED_BY_RULE",
+    "diagnosis": null
+  },
+  "severity_semantics": {
+    "on_failure": "STANDARD_NONCOMPLIANCE",
+    "clinical_severity": "NOT_DETERMINED"
+  },
+  "follow_up": [
+    "Mission/medical review.",
+    "Evaluate VIGILE-AER-003.",
+    "Do not infer disease from this threshold alone."
+  ],
+  "source_locators": [
+    {
+      "source_id": "NASA-STD-3001-V1-REV-C",
+      "requirement": "V1 4002",
+      "section": "4.1.2",
+      "printed_page": 33,
+      "pdf_page_index_0based": 32,
+      "url": "https://standards.nasa.gov/sites/default/files/standards/NASA/C//nasa-std-3001-vol-1-rev-c-signature.pdf"
+    }
+  ],
+  "test_cases": [
+    {
+      "id": "AER002-T01",
+      "synthetic": true,
+      "inputs": {
+        "vo2max_relative": 36.5,
+        "extraterrestrial_surface_eva_planned_or_required": true,
+        "measurement_method": "DIRECT",
+        "data_quality_status": "ACCEPTABLE"
+      },
+      "expected": "PASS"
+    },
+    {
+      "id": "AER002-T02",
+      "synthetic": true,
+      "inputs": {
+        "vo2max_relative": 36.4,
+        "extraterrestrial_surface_eva_planned_or_required": true,
+        "measurement_method": "INDIRECT",
+        "data_quality_status": "ACCEPTABLE"
+      },
+      "expected": "FAIL_REQUIREMENT"
+    }
+  ]
+}

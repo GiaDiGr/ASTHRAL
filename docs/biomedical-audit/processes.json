@@ -1,0 +1,27 @@
+[
+  {
+    "name": "backend",
+    "pid": 53524,
+    "args": [
+      "-m",
+      "vigile",
+      "serve",
+      "--integration-dir",
+      "C:\\Users\\Gianni\\Desktop\\Vigile\\engine\\data\\portal-biomedical-audit-final",
+      "--port",
+      "8895"
+    ]
+  },
+  {
+    "name": "portal",
+    "pid": 8448,
+    "args": [
+      "-m",
+      "vigile.portal",
+      "--config",
+      "C:\\Users\\Gianni\\Desktop\\Vigile\\engine\\data\\portal-biomedical-audit-final\\portal-config.json",
+      "--port",
+      "8896"
+    ]
+  }
+]

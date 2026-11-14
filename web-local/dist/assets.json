@@ -1,0 +1,413 @@
+{
+  "version": "asthral-browser-1",
+  "files": [
+    {
+      "path": "app.js",
+      "size": 46090,
+      "sha256": "12b6fea39bfb215a4e44ff9c0ac8df5370a5e15495cbe9fac74a6e2598175565",
+      "optional": false
+    },
+    {
+      "path": "assistant-config.json",
+      "size": 2168,
+      "sha256": "2e4568f561e0b2571a3a28f9fe926af7eb1feb49ab9d5a833a87f62b414f10eb",
+      "optional": false
+    },
+    {
+      "path": "corpus.json",
+      "size": 444064,
+      "sha256": "9deee9fff9c5bea41ab6e952f98486d16a6e360b3c9330e026d5a6b394d326e9",
+      "optional": false
+    },
+    {
+      "path": "demo-scenarios.json",
+      "size": 85214,
+      "sha256": "ee7d56b7d517b8073cca72dd3c5861a214a6076c0f85a484e7e70485926859f9",
+      "optional": false
+    },
+    {
+      "path": "embedding-runtime/ort-wasm-simd-threaded.jsep.mjs",
+      "size": 44484,
+      "sha256": "08fb86ec433c78bfb032c5d84a68b8e8e5a8d81268fa39e24314179a5767a5b9",
+      "optional": true
+    },
+    {
+      "path": "embedding-runtime/ort-wasm-simd-threaded.jsep.wasm",
+      "size": 21596019,
+      "sha256": "c46655e8a94afc45338d4cb2b840475f88e5012d524509916e505079c00bfa39",
+      "optional": true
+    },
+    {
+      "path": "embedding-runtime/transformers.min.js",
+      "size": 888173,
+      "sha256": "aa5002b70e789798da263f5f99c62bd3e8fcd0c119258a493c40c180648365fa",
+      "optional": true
+    },
+    {
+      "path": "engine.zip",
+      "size": 392971,
+      "sha256": "81049a32047f2c10fafab24a79479838277bb37d4a20a252c5043727a9544f03",
+      "optional": false
+    },
+    {
+      "path": "experience.js",
+      "size": 22685,
+      "sha256": "80f2c51bf1408bdc2c38ec8ad2bc37c9b4e4d534eb5274493265c59ad27af310",
+      "optional": false
+    },
+    {
+      "path": "icon-192.png",
+      "size": 1034,
+      "sha256": "a5b7f17bd486fe2adab8ccfe9141955c270619d5d519d9747334830d458a4fa8",
+      "optional": false
+    },
+    {
+      "path": "icon-512.png",
+      "size": 4287,
+      "sha256": "edcc43573af61afada5f76c22ee1d55a5ac8e326f8002b0a4ccd88333c107354",
+      "optional": false
+    },
+    {
+      "path": "icon.svg",
+      "size": 208,
+      "sha256": "e700f6cdf2705f29ecf2df77feb7f6aefdea94f8907b6b9f4ea2b684536a760d",
+      "optional": false
+    },
+    {
+      "path": "index.html",
+      "size": 7645,
+      "sha256": "658fe711789d626637fba5868d9fea916141a0cb84bbb002ab4caa9fd407876b",
+      "optional": false
+    },
+    {
+      "path": "knowledge/38ad3ab166f25a8b46c1e1f483ba813510c34dc766171389307635ecf7e8a715.txt",
+      "size": 103856,
+      "sha256": "38ad3ab166f25a8b46c1e1f483ba813510c34dc766171389307635ecf7e8a715",
+      "optional": false
+    },
+    {
+      "path": "knowledge/75122940173b5f70c38deeb6ca4021006df40f1dab222376671da0b1084293d6.txt",
+      "size": 6224,
+      "sha256": "75122940173b5f70c38deeb6ca4021006df40f1dab222376671da0b1084293d6",
+      "optional": false
+    },
+    {
+      "path": "knowledge/97e9fdc86925b6b973db75900e64f222c149ae3bd9cade8c182f2264c46831e5.txt",
+      "size": 96471,
+      "sha256": "97e9fdc86925b6b973db75900e64f222c149ae3bd9cade8c182f2264c46831e5",
+      "optional": false
+    },
+    {
+      "path": "knowledge/b258ff2d79ab79355f65826466c9fc3e7a52380b749ec18ef2eb4700759e4fd8.txt",
+      "size": 3727,
+      "sha256": "b258ff2d79ab79355f65826466c9fc3e7a52380b749ec18ef2eb4700759e4fd8",
+      "optional": false
+    },
+    {
+      "path": "knowledge/cb09dce1d37f61a18effc5854418767a6e13c5fe83e26a2750e5d843912cb9eb.txt",
+      "size": 116,
+      "sha256": "cb09dce1d37f61a18effc5854418767a6e13c5fe83e26a2750e5d843912cb9eb",
+      "optional": false
+    },
+    {
+      "path": "knowledge/ccdf9005a4892a004edac7d6cef95a2680b8ec594cc15ac1083f53e950e723a3.txt",
+      "size": 13293,
+      "sha256": "ccdf9005a4892a004edac7d6cef95a2680b8ec594cc15ac1083f53e950e723a3",
+      "optional": false
+    },
+    {
+      "path": "knowledge/dd9d15164c08d6a1675b74318270e46d1a3fd8ff590699fb6aa7429145466ab1.txt",
+      "size": 5345,
+      "sha256": "dd9d15164c08d6a1675b74318270e46d1a3fd8ff590699fb6aa7429145466ab1",
+      "optional": false
+    },
+    {
+      "path": "manifest.webmanifest",
+      "size": 477,
+      "sha256": "7f6ee23068eace26c03bc3b0441e3046aa6970221246dbfddc6b4ba95581ab5d",
+      "optional": false
+    },
+    {
+      "path": "ml-worker.js",
+      "size": 10253,
+      "sha256": "83cdd8722760a3dfdf9b08c2d8980bc1fe6ce89b5c6559f261bd713372d9b8ff",
+      "optional": false
+    },
+    {
+      "path": "models.json",
+      "size": 30056,
+      "sha256": "b459907d12add21137987a42dfa486ae559651cd327cdb6285c6a210814d4931",
+      "optional": false
+    },
+    {
+      "path": "monitor-fixture.json",
+      "size": 7295,
+      "sha256": "8238eb18cb74e8d2416710ab54b2faa6251dc30931bd24d83434e7f017882869",
+      "optional": false
+    },
+    {
+      "path": "network-audit.js",
+      "size": 881,
+      "sha256": "46d4444823cb04e64c5a0d1bb34bedee79f74dbe9820a2ab257fa64af9853a50",
+      "optional": false
+    },
+    {
+      "path": "offline-install.js",
+      "size": 3316,
+      "sha256": "d3d7e7dc68e2c69f6fee09356aca1eabe007b911e57f3f35e1af90e8101734b6",
+      "optional": false
+    },
+    {
+      "path": "offline-voice.js",
+      "size": 6636,
+      "sha256": "9c89ca261d30cb69d4b81221fe79ae80490e022afd3ebd7c26ba05e457c28713",
+      "optional": false
+    },
+    {
+      "path": "parity-cases.json",
+      "size": 19950628,
+      "sha256": "a74a9ee8687ea6486135517b980a110c865222b885d6047f29389bd5d066a916",
+      "optional": true
+    },
+    {
+      "path": "profile-input.js",
+      "size": 1448,
+      "sha256": "a293791a52a37ce35151144bd8cdca61c48c2619198a798d9ceaf2560b6dc8fe",
+      "optional": false
+    },
+    {
+      "path": "public-resources.js",
+      "size": 1316,
+      "sha256": "ad834412edbde920f53d2e137a3ad8c741d341f5266ce89bce313d55cfa91a45",
+      "optional": false
+    },
+    {
+      "path": "public-science.js",
+      "size": 5525,
+      "sha256": "0b344bc47923cf3fdf04beccbce1f3b872b6854edc8240143b340374401acaa6",
+      "optional": false
+    },
+    {
+      "path": "public-topics.json",
+      "size": 744,
+      "sha256": "358d9952200237eb3901ee2467466ebca5046c18c20c3e3accf59a562989dd09",
+      "optional": false
+    },
+    {
+      "path": "runtime/annotated_types-0.7.0-py3-none-any.whl",
+      "size": 11963,
+      "sha256": "107c6d0a31af3ce347cad1990976cca76373de2ef51dfbffff84fe10cb7b2c19",
+      "optional": false
+    },
+    {
+      "path": "runtime/pydantic-2.12.5-py3-none-any.whl",
+      "size": 463580,
+      "sha256": "a56b56d0a0942fbd5cf24a9c9195eb5bdfeceea17ddb3e1cd174db43be4e88dc",
+      "optional": false
+    },
+    {
+      "path": "runtime/pydantic_core-2.41.5-cp313-cp313-pyodide_2025_0_wasm32.whl",
+      "size": 1424987,
+      "sha256": "dd259177c9159a866334e2ac040aca973b8205cc884b3297cb5b2dc6bef8d629",
+      "optional": false
+    },
+    {
+      "path": "runtime/pyodide-lock.json",
+      "size": 120010,
+      "sha256": "3256ffc76388de0e37f4b34d42ab484268d1afc675179ff97b2a5bb14f84ccac",
+      "optional": false
+    },
+    {
+      "path": "runtime/pyodide.asm.js",
+      "size": 1074322,
+      "sha256": "1263f02b5b26099b96112378156f242dd98b39a8201ba7765e5fe3d455c5ce91",
+      "optional": false
+    },
+    {
+      "path": "runtime/pyodide.asm.wasm",
+      "size": 8647684,
+      "sha256": "e2f4ee75b325e35eb31bfb8c613d4dd5098f5502c156a97847686875b5025480",
+      "optional": false
+    },
+    {
+      "path": "runtime/pyodide.js",
+      "size": 18597,
+      "sha256": "718d40f1c015dd25ec724cc8fc4e2325d6a45a92ae225121ff6953f224a16f72",
+      "optional": false
+    },
+    {
+      "path": "runtime/python_stdlib.zip",
+      "size": 2423989,
+      "sha256": "4298b6ee445cb724c3973437da47789752b9e6ff4e26619026b283ec801fc46b",
+      "optional": false
+    },
+    {
+      "path": "runtime/sqlite3-1.0.0-cp313-cp313-pyodide_2025_0_wasm32.whl",
+      "size": 566301,
+      "sha256": "aab7214b987a3803fca283a8221e4b9d3274abc05d0cf506ea1a2ae7e09e3bf0",
+      "optional": false
+    },
+    {
+      "path": "runtime/typing_extensions-4.15.0-py3-none-any.whl",
+      "size": 44613,
+      "sha256": "b57583f623dd3df72e6ace8a4061c3e4f0683755165ef73b4cd44ac3df92ddb9",
+      "optional": false
+    },
+    {
+      "path": "runtime/typing_inspection-0.4.2-py3-none-any.whl",
+      "size": 14610,
+      "sha256": "5c4d0bade04cec6ac0d03c227c8bdb7c59218e4c6d759b5ac0cea5c34f6a72aa",
+      "optional": false
+    },
+    {
+      "path": "statistics-cases.json",
+      "size": 39066,
+      "sha256": "7656329be1db6bd5e3e954a881db70b2a7fd74593dcb82075175edb125d683fc",
+      "optional": false
+    },
+    {
+      "path": "style.css",
+      "size": 3454,
+      "sha256": "c328b6a0d242bb4a2821d653225f061f0c3832b13b45a3bdfe9f80d32415f224",
+      "optional": false
+    },
+    {
+      "path": "test-audio/manifest.json",
+      "size": 2024,
+      "sha256": "554bc0a6339ebe454a78a019f02879526bbbb7d80e95bbaed07f6b646e9c75cc",
+      "optional": true
+    },
+    {
+      "path": "test-audio/neural-blood-pressure.wav",
+      "size": 241708,
+      "sha256": "71efcb0d3c5f50d5e0eec090c4b1d68ac3b0f0fde52772e81a3dbefb80121cb4",
+      "optional": true
+    },
+    {
+      "path": "test-audio/neural-heart-rate.wav",
+      "size": 149548,
+      "sha256": "5a26390f78f7ef4516093dfcca408a98102dc9ee49f61ed3746741a8e655898f",
+      "optional": true
+    },
+    {
+      "path": "test-audio/neural-negation.wav",
+      "size": 61484,
+      "sha256": "af2045f200eab21cd1299e59333965016b7a8cd86eac5a3998a416e5ef18f4be",
+      "optional": true
+    },
+    {
+      "path": "test-audio/neural-question.wav",
+      "size": 101932,
+      "sha256": "06e1afccad8e74a87881aadb4deb8385a0529fa319a423260ec6133a5243e369",
+      "optional": true
+    },
+    {
+      "path": "test-audio/neural-sleep.wav",
+      "size": 202284,
+      "sha256": "95780ee4e9ce331bb8a2c5d0cc702d95a9ae64086e29edc9bfb2b3b4245533c0",
+      "optional": true
+    },
+    {
+      "path": "test-audio/neural-temperature.wav",
+      "size": 214060,
+      "sha256": "f962b1d04bfbcbb2e8d7ba89430a67b7858989ee24b1fa35f49e6e701f6a3fb1",
+      "optional": true
+    },
+    {
+      "path": "THIRD_PARTY_NOTICES.md",
+      "size": 2069,
+      "sha256": "e64288be3546ec66c3f8ab00cdf082533b65e41ae1e906bb75e302c3ed3052e4",
+      "optional": false
+    },
+    {
+      "path": "time.js",
+      "size": 481,
+      "sha256": "2f8910d8e978571a7921f2bc7c57655274d80d5fc1143572695d7797722b4881",
+      "optional": false
+    },
+    {
+      "path": "TRANSFORMERS_LICENSE.txt",
+      "size": 11358,
+      "sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30",
+      "optional": false
+    },
+    {
+      "path": "vault.js",
+      "size": 5563,
+      "sha256": "58739a6d1fc0bb2d80f6dd8c97596ea0d51acab8e1cdb6d3f928daad00032787",
+      "optional": false
+    },
+    {
+      "path": "vectors.js",
+      "size": 2976,
+      "sha256": "4fb88ec7c629cf9d98f7fb85dfca3a9ed95295b0bfc47b00d3507a2997a1d2dc",
+      "optional": false
+    },
+    {
+      "path": "voice-assets/part-00.bin",
+      "size": 8388608,
+      "sha256": "91f60b0c419510a6c02d8f11ee2b24a0d1302c52a824277b41ed01e9540c1450",
+      "optional": true
+    },
+    {
+      "path": "voice-assets/part-01.bin",
+      "size": 8388608,
+      "sha256": "c59e1f2502070fb513ae25000a40ab10c45e6fa5c595fe0175ecc8c5083e76ef",
+      "optional": true
+    },
+    {
+      "path": "voice-assets/part-02.bin",
+      "size": 8388608,
+      "sha256": "621260646b61ac7cc5dcd59f42447f15dffec65dcbfd91084cdd6091006daa08",
+      "optional": true
+    },
+    {
+      "path": "voice-assets/part-03.bin",
+      "size": 8388608,
+      "sha256": "2eb30118283c3eccb573e1b48b4e9927551d709fcff10acf3ab6fd0827089bb6",
+      "optional": true
+    },
+    {
+      "path": "voice-assets/part-04.bin",
+      "size": 7562184,
+      "sha256": "f910a61321abaab3047e28cffa27d0bca091e5adc7dbfa4dfef63d87a5483860",
+      "optional": true
+    },
+    {
+      "path": "voice-model.json",
+      "size": 1249,
+      "sha256": "f3dc7f36487a39d2153e5d5abef2ae0e03caccceb93db0c83b1d24e591daec6b",
+      "optional": false
+    },
+    {
+      "path": "voice-worklet.js",
+      "size": 238,
+      "sha256": "535412d7be4a08214773fff291c54eaac4c1d7e12f82f9c8b63d0820f9c4ff90",
+      "optional": false
+    },
+    {
+      "path": "vosk.js",
+      "size": 5803227,
+      "sha256": "a11a482bd67538a3777a457e945b929be17c0bd810dd11e0366b5b94ba84ea12",
+      "optional": true
+    },
+    {
+      "path": "webllm.js",
+      "size": 6002196,
+      "sha256": "adf78adb083a12022ca09ad1612594b4c3b44f37ab9689b82671a2344f0cd606",
+      "optional": true
+    },
+    {
+      "path": "WEBLLM_LICENSE.txt",
+      "size": 11737,
+      "sha256": "d412ab9d5ac17e6931705aac01e5a0d323da5acd2e89a2c19aa8fc05becc59ad",
+      "optional": false
+    },
+    {
+      "path": "worker.js",
+      "size": 1351,
+      "sha256": "7290e4786640eebd8bb90396e97c048af47ea3f3d32be1708bc1bf5fdb8c0c6d",
+      "optional": false
+    }
+  ]
+}

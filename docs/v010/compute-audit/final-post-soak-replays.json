@@ -1,0 +1,202 @@
+{
+  "after_soak": true,
+  "replays": [
+    {
+      "id": "ce-65acc9ab2aae40f38446416de43d3f56",
+      "matches": true,
+      "seconds": 0.03353719998267479
+    },
+    {
+      "id": "ce-681622a6d0eb4098a1f9a5d79a4a1195",
+      "matches": true,
+      "seconds": 0.02576530000078492
+    },
+    {
+      "id": "ce-fbee88aa8d0a49a79b737142db4bcc76",
+      "matches": true,
+      "seconds": 0.027976199984550476
+    },
+    {
+      "id": "ce-68c6e2082e194d2d8114f74551a5a25a",
+      "matches": true,
+      "seconds": 0.027600299974437803
+    },
+    {
+      "id": "ce-12d74ee38dd85f5b5de59754a4aa59a7",
+      "matches": true,
+      "seconds": 0.02344479999737814
+    },
+    {
+      "id": "ce-3ea7170a1ff9ca64d2a5c4d3c9eeb95b",
+      "matches": true,
+      "seconds": 0.023540199996205047
+    },
+    {
+      "id": "ce-8c60945c4d6f45236dacaed284fbb19d",
+      "matches": true,
+      "seconds": 0.0205707999994047
+    },
+    {
+      "id": "ce-95a21c7375dc35b79b8e74a289e853e2",
+      "matches": true,
+      "seconds": 0.019451400003163144
+    },
+    {
+      "id": "ce-3667c4aed507bab1023639b342acbc1d",
+      "matches": true,
+      "seconds": 0.018047999998088926
+    },
+    {
+      "id": "ce-363451e4c33baa6635f4be3630b9018d",
+      "matches": true,
+      "seconds": 0.020101200003409758
+    },
+    {
+      "id": "ce-573e9ea7e583a338b19bfecc14c1f71e",
+      "matches": true,
+      "seconds": 0.01986090000718832
+    },
+    {
+      "id": "ce-e6871477f4211b9bf2fe3ecd27701724",
+      "matches": true,
+      "seconds": 0.021288799995090812
+    },
+    {
+      "id": "ce-513fd76f0285a41160a2c82dba4acacb",
+      "matches": true,
+      "seconds": 0.018849999993108213
+    },
+    {
+      "id": "ce-735d7aaafd9198459455e72c05c83378",
+      "matches": true,
+      "seconds": 0.019660299993120134
+    },
+    {
+      "id": "A-cycle-0",
+      "matches": true,
+      "seconds": 0.0721311999950558
+    },
+    {
+      "id": "A-cycle-7",
+      "matches": true,
+      "seconds": 0.09900109999580309
+    },
+    {
+      "id": "A-cycle-14",
+      "matches": true,
+      "seconds": 0.12239049997879192
+    },
+    {
+      "id": "A-cycle-15",
+      "matches": true,
+      "seconds": 0.1327783000015188
+    },
+    {
+      "id": "A-cycle-16",
+      "matches": true,
+      "seconds": 0.13556240001344122
+    },
+    {
+      "id": "ce-25021a33553fbbe9643c2f2fc020f163",
+      "matches": true,
+      "seconds": 0.03501300001516938
+    },
+    {
+      "id": "ce-2d7b1fe54a2fd2702c75d7752efedce5",
+      "matches": true,
+      "seconds": 0.03904960001818836
+    },
+    {
+      "id": "ce-a7cd40dff4114fb0947f5858f9ec3c33",
+      "matches": true,
+      "seconds": 0.04852390001178719
+    },
+    {
+      "id": "ce-ebbf9fe889d19b37ba4806eb86dccd63",
+      "matches": true,
+      "seconds": 0.0441298000223469
+    },
+    {
+      "id": "ce-5c38fa4b4fce37b514f494ab101b3a34",
+      "matches": true,
+      "seconds": 0.03585670000757091
+    },
+    {
+      "id": "ce-cdc3b2c9cdc3d14393938b238f512f73",
+      "matches": true,
+      "seconds": 0.031139300001086667
+    },
+    {
+      "id": "ce-87da4a5fb769ae3ab0988aa8a566f3c9",
+      "matches": true,
+      "seconds": 0.02850619997479953
+    },
+    {
+      "id": "ce-00d65359e6f6197a01d96f74c857eacd",
+      "matches": true,
+      "seconds": 0.026841599988983944
+    },
+    {
+      "id": "ce-c660b2572ea10db2761777f39c319ae6",
+      "matches": true,
+      "seconds": 0.029508399980841205
+    },
+    {
+      "id": "ce-a5a54e51c4cdc6a53c19937e3442ca4a",
+      "matches": true,
+      "seconds": 0.05386829999042675
+    },
+    {
+      "id": "B-cycle-0",
+      "matches": true,
+      "seconds": 0.09039930001017638
+    },
+    {
+      "id": "B-cycle-repeat",
+      "matches": true,
+      "seconds": 0.10729949999949895
+    },
+    {
+      "id": "B-cycle-0.01",
+      "matches": true,
+      "seconds": 0.10169449998647906
+    },
+    {
+      "id": "B-cycle-0.02",
+      "matches": true,
+      "seconds": 0.12752390000969172
+    },
+    {
+      "id": "B-cycle-0.03",
+      "matches": true,
+      "seconds": 0.1786366000014823
+    },
+    {
+      "id": "C-cycle-0",
+      "matches": true,
+      "seconds": 0.11195910000242293
+    },
+    {
+      "id": "C-cycle-7",
+      "matches": true,
+      "seconds": 0.15689840001869015
+    },
+    {
+      "id": "C-cycle-14",
+      "matches": true,
+      "seconds": 0.2057992999907583
+    },
+    {
+      "id": "C-cycle-21",
+      "matches": true,
+      "seconds": 0.2342097999935504
+    },
+    {
+      "id": "C-cycle-28",
+      "matches": true,
+      "seconds": 0.2744492999918293
+    }
+  ],
+  "denied_write": 403,
+  "denied_scope": 403
+}

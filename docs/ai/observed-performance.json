@@ -1,0 +1,30 @@
+{
+  "source": "captured live execution console; raw resource sampling report was not saved before restart failure",
+  "full_startup_seconds": 9.419935500001884,
+  "full_requests_ms": [
+    4714,
+    1808,
+    2743
+  ],
+  "low_power_requests_ms": [
+    1989,
+    1887,
+    2728
+  ],
+  "critical_requests_ms": [
+    186,
+    166,
+    475
+  ],
+  "full_and_low_statuses": [
+    "ANSWERED",
+    "ANSWERED",
+    "REJECTED_OR_FAILED"
+  ],
+  "critical_status": "EXTRACTIVE_ONLY",
+  "raw_ram_vram_cpu_report_available": false,
+  "energy_measured": false,
+  "os_network_isolation_verified": false,
+  "runtime_offline_flag_used": true,
+  "client_nonloopback_denied_in_live_test": true
+}

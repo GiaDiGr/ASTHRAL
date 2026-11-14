@@ -1,0 +1,31 @@
+{
+  "condition_id": "C012",
+  "catalog_record": {
+    "condition_id": "C012",
+    "name_specialty": "Pérdida de sueño / medicina del sueño",
+    "description_spaceflight": "Sueño insuficiente compromete salud y rendimiento cognitivo.",
+    "risks_symptoms": "Carga de trabajo, ambiente, horarios, luz, ruido.",
+    "biomarkers_sensors_tests": "Duración/eficiencia, actigrafía, diarios, somnolencia.",
+    "baselines_environment_interactions": "Baseline de sueño; luz/ruido/temperatura.",
+    "primary_evidence": "S10. citeturn12search1",
+    "limits_authorizations_state": "No convertir reducción de sueño en diagnóstico psiquiátrico. `ES`."
+  },
+  "clinical_pathway_profile_as_published": "**P:** horario/luz/ambiente; **M:** duración/eficiencia/diario; **Q:** wear time y ventanas válidas; **D:** desviación personal, no diagnóstico; **A/DD:** carga, ruido, circadiano, salud mental; **T:** por deterioro funcional; **I:** contramedidas autorizadas; **R/F:** retorno al patrón; **G:** tendencia, no diagnóstico.",
+  "coverage_states": {
+    "prevention": "ES",
+    "monitoring": "ES",
+    "data_quality": "ES",
+    "detection": "RV",
+    "assessment": "RV",
+    "differential_diagnosis": "RV",
+    "triage": "RMA",
+    "intervention_authorized": "RMA",
+    "recovery": "ES",
+    "follow_up": "ES",
+    "prognosis": "RO"
+  },
+  "source_ids": [
+    "S10"
+  ],
+  "NOTICE": "Pathway text is an outline; not an authorized diagnostic or treatment protocol."
+}

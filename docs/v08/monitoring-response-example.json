@@ -1,0 +1,485 @@
+{
+  "status": "EXTRACTIVE_ONLY",
+  "run_id": "C-cycle-28",
+  "evaluation_id": null,
+  "as_of": "2026-09-29T12:00:00+00:00",
+  "mode": "CRITICAL",
+  "message": "Resultados del motor separados de documentación y texto generado. / Engine results are separate from documents and generated text.",
+  "answer": [
+    {
+      "id": "M1",
+      "kind": "ENGINE",
+      "category": "LIMITATION",
+      "text": "Monitorización experimental / Experimental monitoring. Cambios numéricos no equivalen a empeoramiento clínico / numeric changes are not clinical worsening. No diagnóstico firmado, no tratamiento autorizado. / No signed diagnosis or treatment authorization.",
+      "reference": {
+        "run_id": "C-cycle-28",
+        "as_of": "2026-09-29T12:00:00+00:00",
+        "output_hash": "def2bd17cabd53d43dbc76b3a63c2c7c030c19ac4f647a90fd560691419c4ae7"
+      }
+    },
+    {
+      "id": "M13",
+      "kind": "ENGINE",
+      "category": "RADIATION",
+      "text": "Radiación / radiation: COMPLETE_WINDOW; dosis efectiva registrada / recorded effective dose 2.8 mSv; cobertura / coverage 2419200.0 seconds. Solo intervalos registrados, no dosis de vida ni diagnóstico / recorded intervals only, not lifetime dose or diagnosis.",
+      "reference": {
+        "run_id": "C-cycle-28",
+        "as_of": "2026-09-29T12:00:00+00:00",
+        "output_hash": "def2bd17cabd53d43dbc76b3a63c2c7c030c19ac4f647a90fd560691419c4ae7",
+        "source_ids": [
+          "S01",
+          "S16"
+        ]
+      }
+    },
+    {
+      "id": "M10",
+      "kind": "ENGINE",
+      "category": "LIMITATION",
+      "text": "RADIATION: limitaciones / limitations: NO_ORGAN_DOSE_OR_RATE_CONVERSION_TO_EFFECTIVE_DOSE, MEASURED_DOSE_NOT_CANCER_DIAGNOSIS, WINDOW_SUM_NOT_LIFETIME_DOSE.",
+      "reference": {
+        "run_id": "C-cycle-28",
+        "as_of": "2026-09-29T12:00:00+00:00",
+        "output_hash": "def2bd17cabd53d43dbc76b3a63c2c7c030c19ac4f647a90fd560691419c4ae7",
+        "domain": "RADIATION",
+        "source_ids": [
+          "S01",
+          "S16"
+        ]
+      }
+    },
+    {
+      "id": "M11",
+      "kind": "ENGINE",
+      "category": "DESCRIPTIVE",
+      "text": "radiation.interval_effective_dose: estado / state DESCRIPTIVE_AVAILABLE; valor / value 0.7 mSv. Calidad / quality: [].",
+      "reference": {
+        "run_id": "C-cycle-28",
+        "as_of": "2026-09-29T12:00:00+00:00",
+        "output_hash": "def2bd17cabd53d43dbc76b3a63c2c7c030c19ac4f647a90fd560691419c4ae7",
+        "variable": "radiation.interval_effective_dose",
+        "measurement_id": "C-radiation-interval_effective_dose-21",
+        "source_ids": [
+          "S01",
+          "S16"
+        ]
+      }
+    },
+    {
+      "id": "M12",
+      "kind": "ENGINE",
+      "category": "TREND",
+      "text": "radiation.interval_effective_dose: pendiente / slope 0.0 mSv/day; EWMA/CUSUM por observación / per observation; RESEARCH_ONLY. No umbral clínico / no clinical threshold.",
+      "reference": {
+        "run_id": "C-cycle-28",
+        "as_of": "2026-09-29T12:00:00+00:00",
+        "output_hash": "def2bd17cabd53d43dbc76b3a63c2c7c030c19ac4f647a90fd560691419c4ae7",
+        "variable": "radiation.interval_effective_dose",
+        "source_ids": [
+          "S01",
+          "S16"
+        ]
+      }
+    },
+    {
+      "id": "M15",
+      "kind": "ENGINE",
+      "category": "LIMITATION",
+      "text": "SLEEP_BEHAVIOR: limitaciones / limitations: WEAR_TIME_DIARY_TEST_VERSION_REQUIRED, NO_PSYCHIATRIC_DIAGNOSIS, FATIGUE_SCALE_MUST_MATCH_PROTOCOL.",
+      "reference": {
+        "run_id": "C-cycle-28",
+        "as_of": "2026-09-29T12:00:00+00:00",
+        "output_hash": "def2bd17cabd53d43dbc76b3a63c2c7c030c19ac4f647a90fd560691419c4ae7",
+        "domain": "SLEEP_BEHAVIOR",
+        "source_ids": [
+          "S10",
+          "S12"
+        ]
+      }
+    },
+    {
+      "id": "M22",
+      "kind": "ENGINE",
+      "category": "LIMITATION",
+      "text": "IMMUNE: limitaciones / limitations: ANALYTE_MUST_BE_IDENTIFIED_IN_SITE_AND_PROTOCOL, LAB_CAPABILITY_NOT_ASSUMED, PCR_TREND_NOT_REACTIVATION_DIAGNOSIS, NO_VERIFIED_SPACE_THRESHOLD.",
+      "reference": {
+        "run_id": "C-cycle-28",
+        "as_of": "2026-09-29T12:00:00+00:00",
+        "output_hash": "def2bd17cabd53d43dbc76b3a63c2c7c030c19ac4f647a90fd560691419c4ae7",
+        "domain": "IMMUNE",
+        "source_ids": [
+          "S09"
+        ]
+      }
+    },
+    {
+      "id": "M26",
+      "kind": "ENGINE",
+      "category": "LIMITATION",
+      "text": "ELECTROLYTES_OXYGENATION: limitaciones / limitations: DESCRIPTIVE_ONLY_NO_UNIVERSAL_THRESHOLD, POTASSIUM_DKA_SAFETY_REMAINS_SEPARATE, OXIMETRY_PERFUSION_MOTION_PRESSURE_CONTEXT_REQUIRED, AMBIENT_OXYGEN_NOT_ARTERIAL_OXYGENATION.",
+      "reference": {
+        "run_id": "C-cycle-28",
+        "as_of": "2026-09-29T12:00:00+00:00",
+        "output_hash": "def2bd17cabd53d43dbc76b3a63c2c7c030c19ac4f647a90fd560691419c4ae7",
+        "domain": "ELECTROLYTES_OXYGENATION",
+        "source_ids": [
+          "S14",
+          "SRC-DKA-2024"
+        ]
+      }
+    },
+    {
+      "id": "M3",
+      "kind": "ENGINE",
+      "category": "LIMITATION",
+      "text": "CARDIOVASCULAR: limitaciones / limitations: HEMODYNAMIC_TREND_NOT_ETIOLOGY, UPRIGHT_TEST_NOT_APPLICABLE_IN_FREE_MICROGRAVITY, MEASUREMENT_POSTURE_PROTOCOL_REQUIRED.",
+      "reference": {
+        "run_id": "C-cycle-28",
+        "as_of": "2026-09-29T12:00:00+00:00",
+        "output_hash": "def2bd17cabd53d43dbc76b3a63c2c7c030c19ac4f647a90fd560691419c4ae7",
+        "domain": "CARDIOVASCULAR",
+        "source_ids": [
+          "S01",
+          "S05"
+        ]
+      }
+    },
+    {
+      "id": "M5",
+      "kind": "ENGINE",
+      "category": "LIMITATION",
+      "text": "MUSCULOSKELETAL: limitaciones / limitations: DXA_MAINLY_GROUND_PRE_POST_NOT_ASSUMED_AVAILABLE_IN_FLIGHT, MATCH_SITE_AND_METHOD, TREND_NOT_FRACTURE_DIAGNOSIS.",
+      "reference": {
+        "run_id": "C-cycle-28",
+        "as_of": "2026-09-29T12:00:00+00:00",
+        "output_hash": "def2bd17cabd53d43dbc76b3a63c2c7c030c19ac4f647a90fd560691419c4ae7",
+        "domain": "MUSCULOSKELETAL",
+        "source_ids": [
+          "S01",
+          "S06"
+        ]
+      }
+    },
+    {
+      "id": "M9",
+      "kind": "ENGINE",
+      "category": "DATA_SUFFICIENCY",
+      "text": "RADIATION: indicadores faltantes / missing indicators: radiation.career_spaceflight. Fase / phase: IN_MISSION; gravedad / gravity: MICROGRAVITY.",
+      "reference": {
+        "run_id": "C-cycle-28",
+        "as_of": "2026-09-29T12:00:00+00:00",
+        "output_hash": "def2bd17cabd53d43dbc76b3a63c2c7c030c19ac4f647a90fd560691419c4ae7",
+        "domain": "RADIATION",
+        "source_ids": [
+          "S01",
+          "S16"
+        ]
+      }
+    }
+  ],
+  "retrieved": [
+    {
+      "id": "M1",
+      "kind": "ENGINE",
+      "category": "LIMITATION",
+      "text": "Monitorización experimental / Experimental monitoring. Cambios numéricos no equivalen a empeoramiento clínico / numeric changes are not clinical worsening. No diagnóstico firmado, no tratamiento autorizado. / No signed diagnosis or treatment authorization.",
+      "reference": {
+        "run_id": "C-cycle-28",
+        "as_of": "2026-09-29T12:00:00+00:00",
+        "output_hash": "def2bd17cabd53d43dbc76b3a63c2c7c030c19ac4f647a90fd560691419c4ae7"
+      }
+    },
+    {
+      "id": "M13",
+      "kind": "ENGINE",
+      "category": "RADIATION",
+      "text": "Radiación / radiation: COMPLETE_WINDOW; dosis efectiva registrada / recorded effective dose 2.8 mSv; cobertura / coverage 2419200.0 seconds. Solo intervalos registrados, no dosis de vida ni diagnóstico / recorded intervals only, not lifetime dose or diagnosis.",
+      "reference": {
+        "run_id": "C-cycle-28",
+        "as_of": "2026-09-29T12:00:00+00:00",
+        "output_hash": "def2bd17cabd53d43dbc76b3a63c2c7c030c19ac4f647a90fd560691419c4ae7",
+        "source_ids": [
+          "S01",
+          "S16"
+        ]
+      }
+    },
+    {
+      "id": "M10",
+      "kind": "ENGINE",
+      "category": "LIMITATION",
+      "text": "RADIATION: limitaciones / limitations: NO_ORGAN_DOSE_OR_RATE_CONVERSION_TO_EFFECTIVE_DOSE, MEASURED_DOSE_NOT_CANCER_DIAGNOSIS, WINDOW_SUM_NOT_LIFETIME_DOSE.",
+      "reference": {
+        "run_id": "C-cycle-28",
+        "as_of": "2026-09-29T12:00:00+00:00",
+        "output_hash": "def2bd17cabd53d43dbc76b3a63c2c7c030c19ac4f647a90fd560691419c4ae7",
+        "domain": "RADIATION",
+        "source_ids": [
+          "S01",
+          "S16"
+        ]
+      }
+    },
+    {
+      "id": "M11",
+      "kind": "ENGINE",
+      "category": "DESCRIPTIVE",
+      "text": "radiation.interval_effective_dose: estado / state DESCRIPTIVE_AVAILABLE; valor / value 0.7 mSv. Calidad / quality: [].",
+      "reference": {
+        "run_id": "C-cycle-28",
+        "as_of": "2026-09-29T12:00:00+00:00",
+        "output_hash": "def2bd17cabd53d43dbc76b3a63c2c7c030c19ac4f647a90fd560691419c4ae7",
+        "variable": "radiation.interval_effective_dose",
+        "measurement_id": "C-radiation-interval_effective_dose-21",
+        "source_ids": [
+          "S01",
+          "S16"
+        ]
+      }
+    },
+    {
+      "id": "M12",
+      "kind": "ENGINE",
+      "category": "TREND",
+      "text": "radiation.interval_effective_dose: pendiente / slope 0.0 mSv/day; EWMA/CUSUM por observación / per observation; RESEARCH_ONLY. No umbral clínico / no clinical threshold.",
+      "reference": {
+        "run_id": "C-cycle-28",
+        "as_of": "2026-09-29T12:00:00+00:00",
+        "output_hash": "def2bd17cabd53d43dbc76b3a63c2c7c030c19ac4f647a90fd560691419c4ae7",
+        "variable": "radiation.interval_effective_dose",
+        "source_ids": [
+          "S01",
+          "S16"
+        ]
+      }
+    },
+    {
+      "id": "M15",
+      "kind": "ENGINE",
+      "category": "LIMITATION",
+      "text": "SLEEP_BEHAVIOR: limitaciones / limitations: WEAR_TIME_DIARY_TEST_VERSION_REQUIRED, NO_PSYCHIATRIC_DIAGNOSIS, FATIGUE_SCALE_MUST_MATCH_PROTOCOL.",
+      "reference": {
+        "run_id": "C-cycle-28",
+        "as_of": "2026-09-29T12:00:00+00:00",
+        "output_hash": "def2bd17cabd53d43dbc76b3a63c2c7c030c19ac4f647a90fd560691419c4ae7",
+        "domain": "SLEEP_BEHAVIOR",
+        "source_ids": [
+          "S10",
+          "S12"
+        ]
+      }
+    },
+    {
+      "id": "M22",
+      "kind": "ENGINE",
+      "category": "LIMITATION",
+      "text": "IMMUNE: limitaciones / limitations: ANALYTE_MUST_BE_IDENTIFIED_IN_SITE_AND_PROTOCOL, LAB_CAPABILITY_NOT_ASSUMED, PCR_TREND_NOT_REACTIVATION_DIAGNOSIS, NO_VERIFIED_SPACE_THRESHOLD.",
+      "reference": {
+        "run_id": "C-cycle-28",
+        "as_of": "2026-09-29T12:00:00+00:00",
+        "output_hash": "def2bd17cabd53d43dbc76b3a63c2c7c030c19ac4f647a90fd560691419c4ae7",
+        "domain": "IMMUNE",
+        "source_ids": [
+          "S09"
+        ]
+      }
+    },
+    {
+      "id": "M26",
+      "kind": "ENGINE",
+      "category": "LIMITATION",
+      "text": "ELECTROLYTES_OXYGENATION: limitaciones / limitations: DESCRIPTIVE_ONLY_NO_UNIVERSAL_THRESHOLD, POTASSIUM_DKA_SAFETY_REMAINS_SEPARATE, OXIMETRY_PERFUSION_MOTION_PRESSURE_CONTEXT_REQUIRED, AMBIENT_OXYGEN_NOT_ARTERIAL_OXYGENATION.",
+      "reference": {
+        "run_id": "C-cycle-28",
+        "as_of": "2026-09-29T12:00:00+00:00",
+        "output_hash": "def2bd17cabd53d43dbc76b3a63c2c7c030c19ac4f647a90fd560691419c4ae7",
+        "domain": "ELECTROLYTES_OXYGENATION",
+        "source_ids": [
+          "S14",
+          "SRC-DKA-2024"
+        ]
+      }
+    },
+    {
+      "id": "M3",
+      "kind": "ENGINE",
+      "category": "LIMITATION",
+      "text": "CARDIOVASCULAR: limitaciones / limitations: HEMODYNAMIC_TREND_NOT_ETIOLOGY, UPRIGHT_TEST_NOT_APPLICABLE_IN_FREE_MICROGRAVITY, MEASUREMENT_POSTURE_PROTOCOL_REQUIRED.",
+      "reference": {
+        "run_id": "C-cycle-28",
+        "as_of": "2026-09-29T12:00:00+00:00",
+        "output_hash": "def2bd17cabd53d43dbc76b3a63c2c7c030c19ac4f647a90fd560691419c4ae7",
+        "domain": "CARDIOVASCULAR",
+        "source_ids": [
+          "S01",
+          "S05"
+        ]
+      }
+    },
+    {
+      "id": "M5",
+      "kind": "ENGINE",
+      "category": "LIMITATION",
+      "text": "MUSCULOSKELETAL: limitaciones / limitations: DXA_MAINLY_GROUND_PRE_POST_NOT_ASSUMED_AVAILABLE_IN_FLIGHT, MATCH_SITE_AND_METHOD, TREND_NOT_FRACTURE_DIAGNOSIS.",
+      "reference": {
+        "run_id": "C-cycle-28",
+        "as_of": "2026-09-29T12:00:00+00:00",
+        "output_hash": "def2bd17cabd53d43dbc76b3a63c2c7c030c19ac4f647a90fd560691419c4ae7",
+        "domain": "MUSCULOSKELETAL",
+        "source_ids": [
+          "S01",
+          "S06"
+        ]
+      }
+    },
+    {
+      "id": "M9",
+      "kind": "ENGINE",
+      "category": "DATA_SUFFICIENCY",
+      "text": "RADIATION: indicadores faltantes / missing indicators: radiation.career_spaceflight. Fase / phase: IN_MISSION; gravedad / gravity: MICROGRAVITY.",
+      "reference": {
+        "run_id": "C-cycle-28",
+        "as_of": "2026-09-29T12:00:00+00:00",
+        "output_hash": "def2bd17cabd53d43dbc76b3a63c2c7c030c19ac4f647a90fd560691419c4ae7",
+        "domain": "RADIATION",
+        "source_ids": [
+          "S01",
+          "S16"
+        ]
+      }
+    },
+    {
+      "id": "D-2fb6c076e445e50b078b",
+      "kind": "DOCUMENT",
+      "text": "| Dominio | Capacidad actual | Fuentes existentes | Límites |\n|---|---|---|---|\n| Cardiovascular | VO2, pulso, presión, comparación personal; regla AER-003; OH/POTS según contexto | S01, S05 | Incumplimiento normativo no es diagnóstico. Prueba ortostática estándar no aplicable en microgravedad libre; gravedad parcial requiere validación. |\n| Musculoesquelético | Fuerza, densidad ósea por sitio, tendencias; regla MUS-002 | S01, S06 | DXA principalmente pre/postvuelo; no se supone disponibilidad en vuelo, diagnóstico de osteoporosis ni fractura. |\n| Radiación | Suma explícita de dosis efectiva por intervalos compatibles; cobertura completa/parcial | S01, S16 | Solapamientos, cambio de protocolo o dosímetro no verificado bloquean total. Sin convertir dosis absorbida, órgano o tasa; no extrapola dosis de carrera ni riesgo de cáncer. |\n| Sueño/comportamiento | Duración, eficiencia, reacción y escala de fatiga declarada | S10, S12 | Método y escala comparables; sin diagnóstico psiquiátrico ni umbral universal. |\n| Inmunológico | Serie de carga viral, analito/muestra identificados mediante ",
+      "reference": {
+        "document": "docs/v07/README.md",
+        "sha256": "ccdf9005a4892a004edac7d6cef95a2680b8ec594cc15ac1083f53e950e723a3",
+        "version": "0.7.0",
+        "authority": "IMPLEMENTATION_DOCUMENTATION_NOT_GUIDELINE",
+        "char_start": 4614,
+        "char_end": 5714,
+        "line": 51
+      },
+      "retrieval_score": 5.848535
+    },
+    {
+      "id": "D-b8605c91c85ed9492120",
+      "kind": "DOCUMENT",
+      "text": "```text\nvigile/\n  evidence/\n    sources.json\n    extractions.json\n    revisions.json\n  clinical/\n    conditions.json\n    pathways/\n    interactions.json\n    sensors.json\n  rules/\n    normative/\n    research_only/\n    schemas/\n  algorithms/\n  datasets/\n    registry.json\n    adapters/\n  engine/\n    quality/\n    baseline/\n    trend/\n    rules/\n    multisystem/\n    episodes/\n    pathways/\n    authorization/\n    audit/\n  rag/\n  api/\n  tests/\n    unit/\n    rule_boundaries/\n    synthetic_clinical/\n    context/\n    authorization/\n    provenance/\n  docs/\n    EVIDENCE_TRACEABILITY.md\n    CLINICAL_COVERAGE.md\n    VALIDATION_STATUS.md\n    LIMITATIONS.md\n    HANDOFF.md\n```",
+      "reference": {
+        "document": "01_INFORMES/REPORTE_CONSOLIDADO_COMPLETO.md",
+        "sha256": "97e9fdc86925b6b973db75900e64f222c149ae3bd9cade8c182f2264c46831e5",
+        "version": "PINNED_CORPUS",
+        "authority": "SPACE_RESEARCH_SYNTHESIS",
+        "char_start": 89841,
+        "char_end": 90509,
+        "line": 1016
+      },
+      "retrieval_score": 4.925944
+    },
+    {
+      "id": "D-1f23d6f8aa942512d374",
+      "kind": "DOCUMENT",
+      "text": "RAGReadAPI\n  retrieve_evidence(query, filters) -> EvidenceChunk[]\n  explain_finding(finding_id) -> GroundingBundle\n  # no write method to RuleEngine or AuthorizationEngine\n```",
+      "reference": {
+        "document": "01_INFORMES/REPORTE_CONSOLIDADO_COMPLETO.md",
+        "sha256": "97e9fdc86925b6b973db75900e64f222c149ae3bd9cade8c182f2264c46831e5",
+        "version": "PINNED_CORPUS",
+        "authority": "SPACE_RESEARCH_SYNTHESIS",
+        "char_start": 83262,
+        "char_end": 83437,
+        "line": 856
+      },
+      "retrieval_score": 4.555704
+    }
+  ],
+  "generated": [],
+  "documents": [
+    {
+      "id": "D-2fb6c076e445e50b078b",
+      "kind": "DOCUMENT",
+      "text": "| Dominio | Capacidad actual | Fuentes existentes | Límites |\n|---|---|---|---|\n| Cardiovascular | VO2, pulso, presión, comparación personal; regla AER-003; OH/POTS según contexto | S01, S05 | Incumplimiento normativo no es diagnóstico. Prueba ortostática estándar no aplicable en microgravedad libre; gravedad parcial requiere validación. |\n| Musculoesquelético | Fuerza, densidad ósea por sitio, tendencias; regla MUS-002 | S01, S06 | DXA principalmente pre/postvuelo; no se supone disponibilidad en vuelo, diagnóstico de osteoporosis ni fractura. |\n| Radiación | Suma explícita de dosis efectiva por intervalos compatibles; cobertura completa/parcial | S01, S16 | Solapamientos, cambio de protocolo o dosímetro no verificado bloquean total. Sin convertir dosis absorbida, órgano o tasa; no extrapola dosis de carrera ni riesgo de cáncer. |\n| Sueño/comportamiento | Duración, eficiencia, reacción y escala de fatiga declarada | S10, S12 | Método y escala comparables; sin diagnóstico psiquiátrico ni umbral universal. |\n| Inmunológico | Serie de carga viral, analito/muestra identificados mediante ",
+      "reference": {
+        "document": "docs/v07/README.md",
+        "sha256": "ccdf9005a4892a004edac7d6cef95a2680b8ec594cc15ac1083f53e950e723a3",
+        "version": "0.7.0",
+        "authority": "IMPLEMENTATION_DOCUMENTATION_NOT_GUIDELINE",
+        "char_start": 4614,
+        "char_end": 5714,
+        "line": 51
+      },
+      "retrieval_score": 5.848535
+    },
+    {
+      "id": "D-b8605c91c85ed9492120",
+      "kind": "DOCUMENT",
+      "text": "```text\nvigile/\n  evidence/\n    sources.json\n    extractions.json\n    revisions.json\n  clinical/\n    conditions.json\n    pathways/\n    interactions.json\n    sensors.json\n  rules/\n    normative/\n    research_only/\n    schemas/\n  algorithms/\n  datasets/\n    registry.json\n    adapters/\n  engine/\n    quality/\n    baseline/\n    trend/\n    rules/\n    multisystem/\n    episodes/\n    pathways/\n    authorization/\n    audit/\n  rag/\n  api/\n  tests/\n    unit/\n    rule_boundaries/\n    synthetic_clinical/\n    context/\n    authorization/\n    provenance/\n  docs/\n    EVIDENCE_TRACEABILITY.md\n    CLINICAL_COVERAGE.md\n    VALIDATION_STATUS.md\n    LIMITATIONS.md\n    HANDOFF.md\n```",
+      "reference": {
+        "document": "01_INFORMES/REPORTE_CONSOLIDADO_COMPLETO.md",
+        "sha256": "97e9fdc86925b6b973db75900e64f222c149ae3bd9cade8c182f2264c46831e5",
+        "version": "PINNED_CORPUS",
+        "authority": "SPACE_RESEARCH_SYNTHESIS",
+        "char_start": 89841,
+        "char_end": 90509,
+        "line": 1016
+      },
+      "retrieval_score": 4.925944
+    },
+    {
+      "id": "D-1f23d6f8aa942512d374",
+      "kind": "DOCUMENT",
+      "text": "RAGReadAPI\n  retrieve_evidence(query, filters) -> EvidenceChunk[]\n  explain_finding(finding_id) -> GroundingBundle\n  # no write method to RuleEngine or AuthorizationEngine\n```",
+      "reference": {
+        "document": "01_INFORMES/REPORTE_CONSOLIDADO_COMPLETO.md",
+        "sha256": "97e9fdc86925b6b973db75900e64f222c149ae3bd9cade8c182f2264c46831e5",
+        "version": "PINNED_CORPUS",
+        "authority": "SPACE_RESEARCH_SYNTHESIS",
+        "char_start": 83262,
+        "char_end": 83437,
+        "line": 856
+      },
+      "retrieval_score": 4.555704
+    }
+  ],
+  "document_issues": [],
+  "sources": [
+    {
+      "document": "docs/v07/README.md",
+      "sha256": "ccdf9005a4892a004edac7d6cef95a2680b8ec594cc15ac1083f53e950e723a3",
+      "version": "0.7.0",
+      "authority": "IMPLEMENTATION_DOCUMENTATION_NOT_GUIDELINE",
+      "char_start": 4614,
+      "char_end": 5714,
+      "line": 51
+    },
+    {
+      "document": "01_INFORMES/REPORTE_CONSOLIDADO_COMPLETO.md",
+      "sha256": "97e9fdc86925b6b973db75900e64f222c149ae3bd9cade8c182f2264c46831e5",
+      "version": "PINNED_CORPUS",
+      "authority": "SPACE_RESEARCH_SYNTHESIS",
+      "char_start": 89841,
+      "char_end": 90509,
+      "line": 1016
+    },
+    {
+      "document": "01_INFORMES/REPORTE_CONSOLIDADO_COMPLETO.md",
+      "sha256": "97e9fdc86925b6b973db75900e64f222c149ae3bd9cade8c182f2264c46831e5",
+      "version": "PINNED_CORPUS",
+      "authority": "SPACE_RESEARCH_SYNTHESIS",
+      "char_start": 83262,
+      "char_end": 83437,
+      "line": 856
+    }
+  ],
+  "inference_attempted": false,
+  "inference_executed": false,
+  "clinical_execution": "BLOCKED",
+  "authority": "DETERMINISTIC_ENGINE_ONLY",
+  "clinical_validation": false,
+  "limitations": [
+    "DOCUMENTS_DO_NOT_OVERRIDE_ENGINE",
+    "SEMANTIC_VERIFICATION_IS_NOT_CLINICAL_VALIDATION",
+    "UNKNOWN_UNDETECTED_ERRORS_REQUIRE_INDEPENDENT_REVIEW"
+  ]
+}

@@ -1,0 +1,49 @@
+{
+  "real_http_loopback": true,
+  "health": {
+    "status": "ok",
+    "mode": "RESEARCH_ONLY",
+    "clinical_execution": "BLOCKED",
+    "version": "1.0.0"
+  },
+  "scoped_subjects": 2,
+  "reader_write_denied_status": 403,
+  "origin_rejected_status": 403,
+  "portal_version": "1.0.0",
+  "voice_status": {
+    "stt": {
+      "en": {
+        "available": true,
+        "model": "vosk-model-small-en-us-0.15",
+        "load_verified": false
+      },
+      "es": {
+        "available": true,
+        "model": "vosk-model-small-es-0.42",
+        "load_verified": false
+      }
+    },
+    "tts": {
+      "en": {
+        "available": true,
+        "voice": "Microsoft David Desktop"
+      },
+      "es": {
+        "available": true,
+        "voice": "Microsoft Helena Desktop"
+      }
+    },
+    "mode": "FULL",
+    "busy": false,
+    "resource_admitted": true,
+    "voice_profile": "SAME_CPU_PROFILE_NO_PROVEN_LOW_POWER_REDUCTION",
+    "llm_required": false,
+    "audio_retention": "MEMORY_ONLY_NO_RECORDING_FILES",
+    "max_seconds": 40,
+    "max_wav_bytes": 1350000,
+    "stt_accuracy": "NOT_MEDICALLY_VALIDATED",
+    "process_isolation": "SAME_USER_NOT_A_SECURITY_BOUNDARY"
+  },
+  "credentials_cookies_omitted": true,
+  "physical_microphone_test": false
+}

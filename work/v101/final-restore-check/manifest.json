@@ -1,0 +1,14 @@
+{
+  "format": "VIGILE_SQLITE_BACKUP_1",
+  "source": "C:\\Users\\Gianni\\Desktop\\Vigile\\work\\v101\\final-db-backup\\vigile.sqlite3",
+  "database": "vigile.sqlite3",
+  "sha256": "368ac50324373423cb9fcd3e72e2a003a4e553a3230d8bed5020d63edb1e58c5",
+  "state": {
+    "record_sequence": 38,
+    "record_count": 38,
+    "records_hash": "7ed5d24c98b7e92df1c46588fa36a00d0e3109ba23ca44ae5a10467e89a08443",
+    "audit_sequence": 41,
+    "audit_hash": "f0262b88f5f1e79f5ee7204f8eebaf227d5ddc7dcdce3d485c31af72d7fb7239"
+  },
+  "sqlite_encryption": "NONE"
+}

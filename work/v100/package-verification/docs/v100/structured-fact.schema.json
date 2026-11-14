@@ -1,0 +1,165 @@
+{
+  "additionalProperties": false,
+  "properties": {
+    "id": {
+      "title": "Id",
+      "type": "string"
+    },
+    "subject_id": {
+      "title": "Subject Id",
+      "type": "string"
+    },
+    "mission_id": {
+      "title": "Mission Id",
+      "type": "string"
+    },
+    "target_id": {
+      "title": "Target Id",
+      "type": "string"
+    },
+    "as_of": {
+      "title": "As Of",
+      "type": "string"
+    },
+    "variable": {
+      "title": "Variable",
+      "type": "string"
+    },
+    "value": {
+      "title": "Value",
+      "type": "string"
+    },
+    "unit": {
+      "title": "Unit",
+      "type": "string"
+    },
+    "baseline": {
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Baseline"
+    },
+    "original_value": {
+      "title": "Original Value",
+      "type": "number"
+    },
+    "original_baseline": {
+      "anyOf": [
+        {
+          "type": "number"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Original Baseline"
+    },
+    "comparison_basis": {
+      "default": "PERSONAL_BASELINE",
+      "title": "Comparison Basis",
+      "type": "string"
+    },
+    "comparison_target_id": {
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Comparison Target Id"
+    },
+    "comparison_as_of": {
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Comparison As Of"
+    },
+    "comparison_output_hash": {
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Comparison Output Hash"
+    },
+    "rounding": {
+      "default": "DISPLAY_ONLY_HALF_EVEN_3_DECIMALS",
+      "title": "Rounding",
+      "type": "string"
+    },
+    "evidence_ids": {
+      "items": {
+        "type": "string"
+      },
+      "title": "Evidence Ids",
+      "type": "array"
+    },
+    "source_ids": {
+      "items": {
+        "type": "string"
+      },
+      "title": "Source Ids",
+      "type": "array"
+    },
+    "measurement_ids": {
+      "items": {
+        "type": "string"
+      },
+      "title": "Measurement Ids",
+      "type": "array"
+    },
+    "input_hash": {
+      "title": "Input Hash",
+      "type": "string"
+    },
+    "output_hash": {
+      "title": "Output Hash",
+      "type": "string"
+    },
+    "limitations": {
+      "items": {
+        "type": "string"
+      },
+      "title": "Limitations",
+      "type": "array"
+    }
+  },
+  "required": [
+    "id",
+    "subject_id",
+    "mission_id",
+    "target_id",
+    "as_of",
+    "variable",
+    "value",
+    "unit",
+    "original_value",
+    "evidence_ids",
+    "source_ids",
+    "measurement_ids",
+    "input_hash",
+    "output_hash"
+  ],
+  "title": "Fact",
+  "type": "object"
+}

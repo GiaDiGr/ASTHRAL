@@ -1,0 +1,122 @@
+[
+  {
+    "test_id": "TC001",
+    "inputs": "mission=`microgravity_EVA`; VO₂max=32.9 mL/min/kg",
+    "expected_output": "`REQUIREMENT_MET`",
+    "rule_justification": "R-AER-01; límite inclusivo. citeturn6view0"
+  },
+  {
+    "test_id": "TC002",
+    "inputs": "misma misión; VO₂max=32.8",
+    "expected_output": "`REQUIREMENT_NOT_MET`; `diagnosis=null`",
+    "rule_justification": "Incumplimiento no es enfermedad."
+  },
+  {
+    "test_id": "TC003",
+    "inputs": "mission=`extraterrestrial_surface_EVA`; VO₂max=36.5",
+    "expected_output": "`REQUIREMENT_MET`",
+    "rule_justification": "R-AER-02. citeturn5view0"
+  },
+  {
+    "test_id": "TC004",
+    "inputs": "baseline VO₂=45; current=35.99",
+    "expected_output": "retention=79.98%; `REQUIREMENT_NOT_MET`",
+    "rule_justification": "R-AER-03."
+  },
+  {
+    "test_id": "TC005",
+    "inputs": "current VO₂=35; baseline absent",
+    "expected_output": "`INCONCLUSIVE:MISSING_BASELINE`",
+    "rule_justification": "Prohibido inventar baseline."
+  },
+  {
+    "test_id": "TC006",
+    "inputs": "muscle baseline=100; current=80 same method/group",
+    "expected_output": "80%; `REQUIREMENT_MET`",
+    "rule_justification": "V1 4024. citeturn6view1"
+  },
+  {
+    "test_id": "TC007",
+    "inputs": "hip BMD baseline=1.00; current=.949",
+    "expected_output": "94.9%; `REQUIREMENT_NOT_MET`; no `fracture_risk=high` automático",
+    "rule_justification": "V1 4027. citeturn6view2"
+  },
+  {
+    "test_id": "TC008",
+    "inputs": "ppCO₂: breve pico 4 mmHg; rolling 1-h avg=2.8",
+    "expected_output": "`REQUIREMENT_MET`",
+    "rule_justification": "V2 6004 usa promedio horario, no máximo instantáneo. citeturn19search4"
+  },
+  {
+    "test_id": "TC009",
+    "inputs": "rolling 1-h ppCO₂=3.01 mmHg con cobertura válida",
+    "expected_output": "`REQUIREMENT_NOT_MET`; abrir environmental finding",
+    "rule_justification": "V2 6004."
+  },
+  {
+    "test_id": "TC010",
+    "inputs": "cabin P=34.5 kPa",
+    "expected_output": "`REQUIREMENT_NOT_MET`",
+    "rule_justification": "Requisito es >34.5 kPa. citeturn10search0"
+  },
+  {
+    "test_id": "TC011",
+    "inputs": "career effective dose=600 mSv",
+    "expected_output": "`REQUIREMENT_NOT_MET`",
+    "rule_justification": "V1 4030 exige <600 mSv. citeturn6view3"
+  },
+  {
+    "test_id": "TC012",
+    "inputs": "organ dose input=`200 mGy`; rule expects mSv effective",
+    "expected_output": "`INCONCLUSIVE:DIMENSIONAL_MISMATCH`",
+    "rule_justification": "No conversión automática."
+  },
+  {
+    "test_id": "TC013",
+    "inputs": "dos sensores CO₂ válidos discrepan más allá de tolerancia técnica configurada",
+    "expected_output": "`CONFLICTING_DATA`; no rule verdict",
+    "rule_justification": "ALG008/ALG011."
+  },
+  {
+    "test_id": "TC014",
+    "inputs": "user requests postflight standing protocol mientras mission gravity=`0g`",
+    "expected_output": "`BLOCKED_CONTEXT_NOT_APPLICABLE`",
+    "rule_justification": "No extrapolar evaluación postflight a microgravedad. citeturn26search0"
+  },
+  {
+    "test_id": "TC015",
+    "inputs": "LLM genera “duplica la dosis” de un fármaco",
+    "expected_output": "rechazar acción; `BLOCKED_NO_AUTHORIZATION`; auditar intento",
+    "rule_justification": "C040/S15."
+  },
+  {
+    "test_id": "TC016",
+    "inputs": "sueño cae vs baseline + peor reaction time + ppCO₂ normal",
+    "expected_output": "`MULTISYSTEM_FINDING`; assessment sleep/fatigue; no etiología única",
+    "rule_justification": "MSI01."
+  },
+  {
+    "test_id": "TC017",
+    "inputs": "headache + ppCO₂ 3.4 one-hour + poor sleep",
+    "expected_output": "environmental noncompliance + clinical assessment; no diagnosis `CO2_poisoning`",
+    "rule_justification": "CO₂ puede coexistir con otros confusores. citeturn19search4"
+  },
+  {
+    "test_id": "TC018",
+    "inputs": "ultrasound entry documents suspected occlusive jugular thrombus",
+    "expected_output": "`HUMAN_MEDICAL_REVIEW_REQUIRED`; therapy blocked",
+    "rule_justification": "VTE requiere decisión clínica. citeturn27search0"
+  },
+  {
+    "test_id": "TC019",
+    "inputs": "EVA + new compatible DCS symptoms",
+    "expected_output": "activate mission DCS pathway; `AUTHORIZED_PROTOCOL_REQUIRED`; no invented treatment",
+    "rule_justification": "NASA describe retorno a pressurized environment, detalles mission-specific. citeturn27search1"
+  },
+  {
+    "test_id": "TC020",
+    "inputs": "battery/sensor outage deletes 40 min of intended 60-min CO₂ window",
+    "expected_output": "`INCONCLUSIVE:INSUFFICIENT_TEMPORAL_COVERAGE`",
+    "rule_justification": "No completar huecos silenciosamente."
+  }
+]

@@ -1,0 +1,38 @@
+{
+  "en": [
+    "Microgravity.",
+    "Hypoglycemia.",
+    "Diabetic ketoacidosis.",
+    "Orthostatic hypotension.",
+    "Radiation exposure.",
+    "Heart rate.",
+    "Personal baseline.",
+    "Potassium.",
+    "Oxygen saturation.",
+    "VIGILE, how has my physical condition changed during the mission?",
+    "VIGILE, why am I receiving this medical alert?",
+    "What information is missing from my evaluation?",
+    "Glucose is one hundred eighty milligrams per deciliter.",
+    "Venous p H is seven point two two.",
+    "Treatment is not authorized. The protocol is blocked.",
+    "A missing measurement is not a normal result."
+  ],
+  "es": [
+    "Microgravedad.",
+    "Hipoglucemia.",
+    "Cetoacidosis diabética.",
+    "Hipotensión ortostática.",
+    "Exposición a radiación.",
+    "Frecuencia cardíaca.",
+    "Valor basal personal.",
+    "Potasio.",
+    "Saturación de oxígeno.",
+    "VIGILE, cómo cambió mi condición física durante la misión?",
+    "VIGILE, por qué recibo esta alerta médica?",
+    "Qué cambió desde mi última evaluación?",
+    "La glucosa es ciento ochenta miligramos por decilitro.",
+    "El p H venoso es siete coma veintidós.",
+    "El tratamiento no está autorizado. El protocolo está bloqueado.",
+    "Un dato ausente no es un resultado normal."
+  ]
+}

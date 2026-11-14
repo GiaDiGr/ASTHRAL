@@ -1,0 +1,1841 @@
+[
+  {
+    "mode": "FULL",
+    "question": "¿Qué datos faltan?",
+    "elapsed_ms": 10215,
+    "reply": {
+      "status": "DETERMINISTIC_DATA_SUFFICIENCY",
+      "inference_executed": false,
+      "inference_attempted": false,
+      "message": "Clasificación emitida directamente por el motor; sin reinterpretación del LLM.",
+      "retrieved": [
+        {
+          "id": "E2",
+          "kind": "ENGINE",
+          "text": "DKA: suficiencia de datos. Estado del motor: CRITERIA_MET. Datos pendientes para resolver ramas indeterminadas: ninguno. Las opciones siguen la lógica AND/OR; esta lista no significa que deban medirse todas. Alternativas no medidas que no bloquean este resultado: bicarbonato, cetonas urinarias. Datos inválidos que impiden resolver ramas: ninguno. Datos pendientes para seguridad del protocolo: potasio. Protocolo: BLOCKED_MISSING_DATA. La seguridad terapéutica es independiente de los criterios diagnósticos. Cumplir criterios no es un diagnóstico firmado ni autoriza tratamiento.",
+          "reference": {
+            "evaluation_id": "ce-1b577d42a72d4916a97390cecc4dbc64",
+            "condition_id": "DKA",
+            "source_ids": [
+              "SRC-DKA-2024"
+            ],
+            "input_hash": "c2c168db768e4e73e298159fd80df2c4c39e057eda6aa5dc915abd27ccef4723"
+          },
+          "clinical_contract": {
+            "diagnostic_status": "CRITERIA_MET",
+            "missing_required": [],
+            "optional_not_measured": [
+              "bicarbonate_mmol_l",
+              "urine_ketones_plus"
+            ],
+            "required_for_protocol_safety": [
+              "potassium_mmol_l"
+            ]
+          }
+        }
+      ],
+      "answer": [
+        {
+          "id": "E2",
+          "kind": "ENGINE",
+          "text": "DKA: suficiencia de datos. Estado del motor: CRITERIA_MET. Datos pendientes para resolver ramas indeterminadas: ninguno. Las opciones siguen la lógica AND/OR; esta lista no significa que deban medirse todas. Alternativas no medidas que no bloquean este resultado: bicarbonato, cetonas urinarias. Datos inválidos que impiden resolver ramas: ninguno. Datos pendientes para seguridad del protocolo: potasio. Protocolo: BLOCKED_MISSING_DATA. La seguridad terapéutica es independiente de los criterios diagnósticos. Cumplir criterios no es un diagnóstico firmado ni autoriza tratamiento.",
+          "reference": {
+            "evaluation_id": "ce-1b577d42a72d4916a97390cecc4dbc64",
+            "condition_id": "DKA",
+            "source_ids": [
+              "SRC-DKA-2024"
+            ],
+            "input_hash": "c2c168db768e4e73e298159fd80df2c4c39e057eda6aa5dc915abd27ccef4723"
+          },
+          "clinical_contract": {
+            "diagnostic_status": "CRITERIA_MET",
+            "missing_required": [],
+            "optional_not_measured": [
+              "bicarbonate_mmol_l",
+              "urine_ketones_plus"
+            ],
+            "required_for_protocol_safety": [
+              "potassium_mmol_l"
+            ]
+          }
+        }
+      ],
+      "sources": [
+        {
+          "source": {
+            "source_id": "SRC-DKA-2024",
+            "organization": "ADA/EASD/AACE/JBDS/DTS expert panel",
+            "title": "Hyperglycemic Crises in Adults With Diabetes: A Consensus Report",
+            "year": 2024,
+            "section": "Section 3, Figure 2A, Table 2; Section 4",
+            "doi": "10.2337/dci24-0032",
+            "url": "https://doi.org/10.2337/dci24-0032",
+            "type": "MULTISOCIETY_CONSENSUS_REPORT",
+            "verification": "VERIFIED",
+            "use": [
+              "DKA_diagnosis",
+              "DKA_monitoring",
+              "DKA_treatment"
+            ]
+          },
+          "source_status": "PINNED_VERIFIED_AT_REPORT_DATE_NOT_CONTINUOUSLY_VERIFIED"
+        }
+      ],
+      "model_status": {
+        "available": true,
+        "reason": "LOCAL_MODEL_READY",
+        "model": "vigile-qwen3-4b:latest",
+        "mode": "FULL",
+        "provider": "ollama"
+      },
+      "evaluation_id": "ce-1b577d42a72d4916a97390cecc4dbc64",
+      "generated": [],
+      "mode": "FULL",
+      "document_issues": [],
+      "consistency_policy": "ENGINE_DATA_REQUIREMENTS_ONLY"
+    }
+  },
+  {
+    "mode": "FULL",
+    "question": "¿Son necesarios bicarbonato y cetonas urinarias para cumplir los criterios?",
+    "elapsed_ms": 245,
+    "reply": {
+      "status": "DETERMINISTIC_DATA_SUFFICIENCY",
+      "inference_executed": false,
+      "inference_attempted": false,
+      "message": "Clasificación emitida directamente por el motor; sin reinterpretación del LLM.",
+      "retrieved": [
+        {
+          "id": "E2",
+          "kind": "ENGINE",
+          "text": "DKA: suficiencia de datos. Estado del motor: CRITERIA_MET. Datos pendientes para resolver ramas indeterminadas: ninguno. Las opciones siguen la lógica AND/OR; esta lista no significa que deban medirse todas. Alternativas no medidas que no bloquean este resultado: bicarbonato, cetonas urinarias. Datos inválidos que impiden resolver ramas: ninguno. Datos pendientes para seguridad del protocolo: potasio. Protocolo: BLOCKED_MISSING_DATA. La seguridad terapéutica es independiente de los criterios diagnósticos. Cumplir criterios no es un diagnóstico firmado ni autoriza tratamiento.",
+          "reference": {
+            "evaluation_id": "ce-1b577d42a72d4916a97390cecc4dbc64",
+            "condition_id": "DKA",
+            "source_ids": [
+              "SRC-DKA-2024"
+            ],
+            "input_hash": "c2c168db768e4e73e298159fd80df2c4c39e057eda6aa5dc915abd27ccef4723"
+          },
+          "clinical_contract": {
+            "diagnostic_status": "CRITERIA_MET",
+            "missing_required": [],
+            "optional_not_measured": [
+              "bicarbonate_mmol_l",
+              "urine_ketones_plus"
+            ],
+            "required_for_protocol_safety": [
+              "potassium_mmol_l"
+            ]
+          }
+        }
+      ],
+      "answer": [
+        {
+          "id": "E2",
+          "kind": "ENGINE",
+          "text": "DKA: suficiencia de datos. Estado del motor: CRITERIA_MET. Datos pendientes para resolver ramas indeterminadas: ninguno. Las opciones siguen la lógica AND/OR; esta lista no significa que deban medirse todas. Alternativas no medidas que no bloquean este resultado: bicarbonato, cetonas urinarias. Datos inválidos que impiden resolver ramas: ninguno. Datos pendientes para seguridad del protocolo: potasio. Protocolo: BLOCKED_MISSING_DATA. La seguridad terapéutica es independiente de los criterios diagnósticos. Cumplir criterios no es un diagnóstico firmado ni autoriza tratamiento.",
+          "reference": {
+            "evaluation_id": "ce-1b577d42a72d4916a97390cecc4dbc64",
+            "condition_id": "DKA",
+            "source_ids": [
+              "SRC-DKA-2024"
+            ],
+            "input_hash": "c2c168db768e4e73e298159fd80df2c4c39e057eda6aa5dc915abd27ccef4723"
+          },
+          "clinical_contract": {
+            "diagnostic_status": "CRITERIA_MET",
+            "missing_required": [],
+            "optional_not_measured": [
+              "bicarbonate_mmol_l",
+              "urine_ketones_plus"
+            ],
+            "required_for_protocol_safety": [
+              "potassium_mmol_l"
+            ]
+          }
+        }
+      ],
+      "sources": [
+        {
+          "source": {
+            "source_id": "SRC-DKA-2024",
+            "organization": "ADA/EASD/AACE/JBDS/DTS expert panel",
+            "title": "Hyperglycemic Crises in Adults With Diabetes: A Consensus Report",
+            "year": 2024,
+            "section": "Section 3, Figure 2A, Table 2; Section 4",
+            "doi": "10.2337/dci24-0032",
+            "url": "https://doi.org/10.2337/dci24-0032",
+            "type": "MULTISOCIETY_CONSENSUS_REPORT",
+            "verification": "VERIFIED",
+            "use": [
+              "DKA_diagnosis",
+              "DKA_monitoring",
+              "DKA_treatment"
+            ]
+          },
+          "source_status": "PINNED_VERIFIED_AT_REPORT_DATE_NOT_CONTINUOUSLY_VERIFIED"
+        }
+      ],
+      "model_status": {
+        "available": true,
+        "reason": "LOCAL_MODEL_READY",
+        "model": "vigile-qwen3-4b:latest",
+        "mode": "FULL",
+        "provider": "ollama"
+      },
+      "evaluation_id": "ce-1b577d42a72d4916a97390cecc4dbc64",
+      "generated": [],
+      "mode": "FULL",
+      "document_issues": [],
+      "consistency_policy": "ENGINE_DATA_REQUIREMENTS_ONLY"
+    }
+  },
+  {
+    "mode": "FULL",
+    "question": "¿Por qué está bloqueado el protocolo?",
+    "elapsed_ms": 8723,
+    "reply": {
+      "status": "ANSWERED",
+      "inference_executed": true,
+      "inference_attempted": true,
+      "message": "Explicación generada por un modelo local, vinculada a evidencia. No es una decisión clínica ni una autorización.",
+      "retrieved": [
+        {
+          "id": "E1",
+          "kind": "ENGINE",
+          "text": "DKA: diagnóstico CRITERIA_MET; urgencia EMERGENCY; confirmación SATISFIED. Cumplir criterios no equivale a diagnóstico clínico firmado.",
+          "reference": {
+            "evaluation_id": "ce-1b577d42a72d4916a97390cecc4dbc64",
+            "condition_id": "DKA",
+            "source_ids": [
+              "SRC-DKA-2024"
+            ],
+            "input_hash": "c2c168db768e4e73e298159fd80df2c4c39e057eda6aa5dc915abd27ccef4723"
+          },
+          "logic_trace": {
+            "truth_state": "TRUE",
+            "operator": "all_of",
+            "children": [
+              {
+                "truth_state": "TRUE",
+                "operator": "any_of",
+                "children": [
+                  {
+                    "truth_state": "TRUE",
+                    "field": "known_diabetes",
+                    "operator": "==",
+                    "expected": true,
+                    "actual": true
+                  },
+                  {
+                    "truth_state": "FALSE",
+                    "field": "plasma_glucose_mg_dl",
+                    "operator": ">=",
+                    "expected": 200,
+                    "actual": 180.0
+                  }
+                ]
+              },
+              {
+                "truth_state": "TRUE",
+                "operator": "any_of",
+                "children": [
+                  {
+                    "truth_state": "TRUE",
+                    "field": "beta_hydroxybutyrate_mmol_l",
+                    "operator": ">=",
+                    "expected": 3.0,
+                    "actual": 4.2
+                  },
+                  {
+                    "truth_state": "UNKNOWN",
+                    "field": "urine_ketones_plus",
+                    "operator": ">=",
+                    "expected": 2,
+                    "actual": null
+                  }
+                ]
+              },
+              {
+                "truth_state": "TRUE",
+                "operator": "any_of",
+                "children": [
+                  {
+                    "truth_state": "TRUE",
+                    "field": "venous_pH",
+                    "operator": "<",
+                    "expected": 7.3,
+                    "actual": 7.22
+                  },
+                  {
+                    "truth_state": "UNKNOWN",
+                    "field": "bicarbonate_mmol_l",
+                    "operator": "<",
+                    "expected": 18,
+                    "actual": null
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "id": "E2",
+          "kind": "ENGINE",
+          "text": "DKA: suficiencia de datos. Estado del motor: CRITERIA_MET. Datos pendientes para resolver ramas indeterminadas: ninguno. Las opciones siguen la lógica AND/OR; esta lista no significa que deban medirse todas. Alternativas no medidas que no bloquean este resultado: bicarbonato, cetonas urinarias. Datos inválidos que impiden resolver ramas: ninguno. Datos pendientes para seguridad del protocolo: potasio. Protocolo: BLOCKED_MISSING_DATA. La seguridad terapéutica es independiente de los criterios diagnósticos. Cumplir criterios no es un diagnóstico firmado ni autoriza tratamiento.",
+          "reference": {
+            "evaluation_id": "ce-1b577d42a72d4916a97390cecc4dbc64",
+            "condition_id": "DKA",
+            "source_ids": [
+              "SRC-DKA-2024"
+            ],
+            "input_hash": "c2c168db768e4e73e298159fd80df2c4c39e057eda6aa5dc915abd27ccef4723"
+          },
+          "clinical_contract": {
+            "diagnostic_status": "CRITERIA_MET",
+            "missing_required": [],
+            "optional_not_measured": [
+              "bicarbonate_mmol_l",
+              "urine_ketones_plus"
+            ],
+            "required_for_protocol_safety": [
+              "potassium_mmol_l"
+            ]
+          }
+        },
+        {
+          "id": "E3",
+          "kind": "ENGINE",
+          "text": "DKA: protocolo BLOCKED_MISSING_DATA. Motivos de bloqueo: BLOCKED_MISSING_DATA:POTASSIUM, BLOCKED_RESOURCE, BLOCKED_AUTHORIZATION. Recursos faltantes: validated_glucose_measurement, potassium_measurement, electrolytes, beta_hydroxybutyrate, venous_pH_or_bicarbonate, IV_access_capability, IV_fluid_capability, insulin_inventory, continuous_or_frequent_monitoring. Tratamiento: NOT_STARTED.",
+          "reference": {
+            "evaluation_id": "ce-1b577d42a72d4916a97390cecc4dbc64",
+            "condition_id": "DKA",
+            "source_ids": [
+              "SRC-DKA-2024"
+            ],
+            "input_hash": "c2c168db768e4e73e298159fd80df2c4c39e057eda6aa5dc915abd27ccef4723"
+          }
+        }
+      ],
+      "answer": [
+        {
+          "id": "E2",
+          "kind": "ENGINE",
+          "text": "DKA: suficiencia de datos. Estado del motor: CRITERIA_MET. Datos pendientes para resolver ramas indeterminadas: ninguno. Las opciones siguen la lógica AND/OR; esta lista no significa que deban medirse todas. Alternativas no medidas que no bloquean este resultado: bicarbonato, cetonas urinarias. Datos inválidos que impiden resolver ramas: ninguno. Datos pendientes para seguridad del protocolo: potasio. Protocolo: BLOCKED_MISSING_DATA. La seguridad terapéutica es independiente de los criterios diagnósticos. Cumplir criterios no es un diagnóstico firmado ni autoriza tratamiento.",
+          "reference": {
+            "evaluation_id": "ce-1b577d42a72d4916a97390cecc4dbc64",
+            "condition_id": "DKA",
+            "source_ids": [
+              "SRC-DKA-2024"
+            ],
+            "input_hash": "c2c168db768e4e73e298159fd80df2c4c39e057eda6aa5dc915abd27ccef4723"
+          },
+          "clinical_contract": {
+            "diagnostic_status": "CRITERIA_MET",
+            "missing_required": [],
+            "optional_not_measured": [
+              "bicarbonate_mmol_l",
+              "urine_ketones_plus"
+            ],
+            "required_for_protocol_safety": [
+              "potassium_mmol_l"
+            ]
+          }
+        },
+        {
+          "id": "E3",
+          "kind": "ENGINE",
+          "text": "DKA: protocolo BLOCKED_MISSING_DATA. Motivos de bloqueo: BLOCKED_MISSING_DATA:POTASSIUM, BLOCKED_RESOURCE, BLOCKED_AUTHORIZATION. Recursos faltantes: validated_glucose_measurement, potassium_measurement, electrolytes, beta_hydroxybutyrate, venous_pH_or_bicarbonate, IV_access_capability, IV_fluid_capability, insulin_inventory, continuous_or_frequent_monitoring. Tratamiento: NOT_STARTED.",
+          "reference": {
+            "evaluation_id": "ce-1b577d42a72d4916a97390cecc4dbc64",
+            "condition_id": "DKA",
+            "source_ids": [
+              "SRC-DKA-2024"
+            ],
+            "input_hash": "c2c168db768e4e73e298159fd80df2c4c39e057eda6aa5dc915abd27ccef4723"
+          }
+        }
+      ],
+      "sources": [
+        {
+          "source": {
+            "source_id": "SRC-DKA-2024",
+            "organization": "ADA/EASD/AACE/JBDS/DTS expert panel",
+            "title": "Hyperglycemic Crises in Adults With Diabetes: A Consensus Report",
+            "year": 2024,
+            "section": "Section 3, Figure 2A, Table 2; Section 4",
+            "doi": "10.2337/dci24-0032",
+            "url": "https://doi.org/10.2337/dci24-0032",
+            "type": "MULTISOCIETY_CONSENSUS_REPORT",
+            "verification": "VERIFIED",
+            "use": [
+              "DKA_diagnosis",
+              "DKA_monitoring",
+              "DKA_treatment"
+            ]
+          },
+          "source_status": "PINNED_VERIFIED_AT_REPORT_DATE_NOT_CONTINUOUSLY_VERIFIED"
+        }
+      ],
+      "model_status": {
+        "available": true,
+        "reason": "LOCAL_MODEL_READY",
+        "model": "vigile-qwen3-4b:latest",
+        "mode": "FULL",
+        "provider": "ollama"
+      },
+      "evaluation_id": "ce-1b577d42a72d4916a97390cecc4dbc64",
+      "generated": [
+        {
+          "text": "El protocolo está bloqueado porque falta el dato de potasio para garantizar la seguridad terapéutica.",
+          "evidence_ids": [
+            "E2"
+          ],
+          "kind": "MODEL_EXPLANATION",
+          "references": [
+            {
+              "evaluation_id": "ce-1b577d42a72d4916a97390cecc4dbc64",
+              "condition_id": "DKA",
+              "source_ids": [
+                "SRC-DKA-2024"
+              ],
+              "input_hash": "c2c168db768e4e73e298159fd80df2c4c39e057eda6aa5dc915abd27ccef4723"
+            }
+          ]
+        },
+        {
+          "text": "El protocolo está bloqueado por la falta de recursos como mediciones de glucosa validadas, potasio y acceso a líquidos intravenosos.",
+          "evidence_ids": [
+            "E3"
+          ],
+          "kind": "MODEL_EXPLANATION",
+          "references": [
+            {
+              "evaluation_id": "ce-1b577d42a72d4916a97390cecc4dbc64",
+              "condition_id": "DKA",
+              "source_ids": [
+                "SRC-DKA-2024"
+              ],
+              "input_hash": "c2c168db768e4e73e298159fd80df2c4c39e057eda6aa5dc915abd27ccef4723"
+            }
+          ]
+        }
+      ],
+      "mode": "FULL",
+      "document_issues": [],
+      "metrics": {
+        "elapsed_ms": 7810.809699993115,
+        "usage": {},
+        "timings": {},
+        "load_duration_ns": 5678833000,
+        "verification": {
+          "elapsed_ms": 672.4801000091247,
+          "usage": {},
+          "timings": {},
+          "load_duration_ns": 33540800
+        }
+      },
+      "grounding": "CITATIONS_AND_LOCAL_MODEL_CHECK_NOT_CLINICAL_VALIDATION"
+    }
+  },
+  {
+    "mode": "FULL",
+    "question": "Explica los criterios cumplidos.",
+    "elapsed_ms": 2914,
+    "reply": {
+      "status": "REJECTED_OR_FAILED",
+      "inference_executed": false,
+      "inference_attempted": true,
+      "message": "Salida no sustentada o inferencia fallida. Se conserva la consulta extractiva y el motor no se modifica.",
+      "retrieved": [
+        {
+          "id": "E1",
+          "kind": "ENGINE",
+          "text": "DKA: diagnóstico CRITERIA_MET; urgencia EMERGENCY; confirmación SATISFIED. Cumplir criterios no equivale a diagnóstico clínico firmado.",
+          "reference": {
+            "evaluation_id": "ce-1b577d42a72d4916a97390cecc4dbc64",
+            "condition_id": "DKA",
+            "source_ids": [
+              "SRC-DKA-2024"
+            ],
+            "input_hash": "c2c168db768e4e73e298159fd80df2c4c39e057eda6aa5dc915abd27ccef4723"
+          },
+          "logic_trace": {
+            "truth_state": "TRUE",
+            "operator": "all_of",
+            "children": [
+              {
+                "truth_state": "TRUE",
+                "operator": "any_of",
+                "children": [
+                  {
+                    "truth_state": "TRUE",
+                    "field": "known_diabetes",
+                    "operator": "==",
+                    "expected": true,
+                    "actual": true
+                  },
+                  {
+                    "truth_state": "FALSE",
+                    "field": "plasma_glucose_mg_dl",
+                    "operator": ">=",
+                    "expected": 200,
+                    "actual": 180.0
+                  }
+                ]
+              },
+              {
+                "truth_state": "TRUE",
+                "operator": "any_of",
+                "children": [
+                  {
+                    "truth_state": "TRUE",
+                    "field": "beta_hydroxybutyrate_mmol_l",
+                    "operator": ">=",
+                    "expected": 3.0,
+                    "actual": 4.2
+                  },
+                  {
+                    "truth_state": "UNKNOWN",
+                    "field": "urine_ketones_plus",
+                    "operator": ">=",
+                    "expected": 2,
+                    "actual": null
+                  }
+                ]
+              },
+              {
+                "truth_state": "TRUE",
+                "operator": "any_of",
+                "children": [
+                  {
+                    "truth_state": "TRUE",
+                    "field": "venous_pH",
+                    "operator": "<",
+                    "expected": 7.3,
+                    "actual": 7.22
+                  },
+                  {
+                    "truth_state": "UNKNOWN",
+                    "field": "bicarbonate_mmol_l",
+                    "operator": "<",
+                    "expected": 18,
+                    "actual": null
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "id": "E2",
+          "kind": "ENGINE",
+          "text": "DKA: suficiencia de datos. Estado del motor: CRITERIA_MET. Datos pendientes para resolver ramas indeterminadas: ninguno. Las opciones siguen la lógica AND/OR; esta lista no significa que deban medirse todas. Alternativas no medidas que no bloquean este resultado: bicarbonato, cetonas urinarias. Datos inválidos que impiden resolver ramas: ninguno. Datos pendientes para seguridad del protocolo: potasio. Protocolo: BLOCKED_MISSING_DATA. La seguridad terapéutica es independiente de los criterios diagnósticos. Cumplir criterios no es un diagnóstico firmado ni autoriza tratamiento.",
+          "reference": {
+            "evaluation_id": "ce-1b577d42a72d4916a97390cecc4dbc64",
+            "condition_id": "DKA",
+            "source_ids": [
+              "SRC-DKA-2024"
+            ],
+            "input_hash": "c2c168db768e4e73e298159fd80df2c4c39e057eda6aa5dc915abd27ccef4723"
+          },
+          "clinical_contract": {
+            "diagnostic_status": "CRITERIA_MET",
+            "missing_required": [],
+            "optional_not_measured": [
+              "bicarbonate_mmol_l",
+              "urine_ketones_plus"
+            ],
+            "required_for_protocol_safety": [
+              "potassium_mmol_l"
+            ]
+          }
+        },
+        {
+          "id": "E4",
+          "kind": "ENGINE",
+          "text": "DKA: criterio known_diabetes == True; observado True; satisfecho.",
+          "reference": {
+            "evaluation_id": "ce-1b577d42a72d4916a97390cecc4dbc64",
+            "condition_id": "DKA",
+            "source_ids": [
+              "SRC-DKA-2024"
+            ],
+            "input_hash": "c2c168db768e4e73e298159fd80df2c4c39e057eda6aa5dc915abd27ccef4723"
+          }
+        },
+        {
+          "id": "E5",
+          "kind": "ENGINE",
+          "text": "DKA: criterio plasma_glucose_mg_dl >= 200; observado 180.0; no satisfecho.",
+          "reference": {
+            "evaluation_id": "ce-1b577d42a72d4916a97390cecc4dbc64",
+            "condition_id": "DKA",
+            "source_ids": [
+              "SRC-DKA-2024"
+            ],
+            "input_hash": "c2c168db768e4e73e298159fd80df2c4c39e057eda6aa5dc915abd27ccef4723"
+          }
+        },
+        {
+          "id": "E6",
+          "kind": "ENGINE",
+          "text": "DKA: criterio beta_hydroxybutyrate_mmol_l >= 3.0; observado 4.2; satisfecho.",
+          "reference": {
+            "evaluation_id": "ce-1b577d42a72d4916a97390cecc4dbc64",
+            "condition_id": "DKA",
+            "source_ids": [
+              "SRC-DKA-2024"
+            ],
+            "input_hash": "c2c168db768e4e73e298159fd80df2c4c39e057eda6aa5dc915abd27ccef4723"
+          }
+        },
+        {
+          "id": "E7",
+          "kind": "ENGINE",
+          "text": "DKA: criterio venous_pH < 7.3; observado 7.22; satisfecho.",
+          "reference": {
+            "evaluation_id": "ce-1b577d42a72d4916a97390cecc4dbc64",
+            "condition_id": "DKA",
+            "source_ids": [
+              "SRC-DKA-2024"
+            ],
+            "input_hash": "c2c168db768e4e73e298159fd80df2c4c39e057eda6aa5dc915abd27ccef4723"
+          }
+        }
+      ],
+      "answer": [],
+      "sources": [
+        {
+          "source": {
+            "source_id": "SRC-DKA-2024",
+            "organization": "ADA/EASD/AACE/JBDS/DTS expert panel",
+            "title": "Hyperglycemic Crises in Adults With Diabetes: A Consensus Report",
+            "year": 2024,
+            "section": "Section 3, Figure 2A, Table 2; Section 4",
+            "doi": "10.2337/dci24-0032",
+            "url": "https://doi.org/10.2337/dci24-0032",
+            "type": "MULTISOCIETY_CONSENSUS_REPORT",
+            "verification": "VERIFIED",
+            "use": [
+              "DKA_diagnosis",
+              "DKA_monitoring",
+              "DKA_treatment"
+            ]
+          },
+          "source_status": "PINNED_VERIFIED_AT_REPORT_DATE_NOT_CONTINUOUSLY_VERIFIED"
+        }
+      ],
+      "model_status": {
+        "available": true,
+        "reason": "LOCAL_MODEL_READY",
+        "model": "vigile-qwen3-4b:latest",
+        "mode": "FULL",
+        "provider": "ollama"
+      },
+      "evaluation_id": "ce-1b577d42a72d4916a97390cecc4dbc64",
+      "generated": [],
+      "mode": "FULL",
+      "document_issues": [
+        "NO_MATCHING_DOCUMENT_EXCERPT"
+      ]
+    }
+  },
+  {
+    "mode": "LOW_POWER",
+    "question": "¿Qué datos faltan?",
+    "elapsed_ms": 246,
+    "reply": {
+      "status": "DETERMINISTIC_DATA_SUFFICIENCY",
+      "inference_executed": false,
+      "inference_attempted": false,
+      "message": "Clasificación emitida directamente por el motor; sin reinterpretación del LLM.",
+      "retrieved": [
+        {
+          "id": "E2",
+          "kind": "ENGINE",
+          "text": "DKA: suficiencia de datos. Estado del motor: CRITERIA_MET. Datos pendientes para resolver ramas indeterminadas: ninguno. Las opciones siguen la lógica AND/OR; esta lista no significa que deban medirse todas. Alternativas no medidas que no bloquean este resultado: bicarbonato, cetonas urinarias. Datos inválidos que impiden resolver ramas: ninguno. Datos pendientes para seguridad del protocolo: potasio. Protocolo: BLOCKED_MISSING_DATA. La seguridad terapéutica es independiente de los criterios diagnósticos. Cumplir criterios no es un diagnóstico firmado ni autoriza tratamiento.",
+          "reference": {
+            "evaluation_id": "ce-1b577d42a72d4916a97390cecc4dbc64",
+            "condition_id": "DKA",
+            "source_ids": [
+              "SRC-DKA-2024"
+            ],
+            "input_hash": "c2c168db768e4e73e298159fd80df2c4c39e057eda6aa5dc915abd27ccef4723"
+          },
+          "clinical_contract": {
+            "diagnostic_status": "CRITERIA_MET",
+            "missing_required": [],
+            "optional_not_measured": [
+              "bicarbonate_mmol_l",
+              "urine_ketones_plus"
+            ],
+            "required_for_protocol_safety": [
+              "potassium_mmol_l"
+            ]
+          }
+        }
+      ],
+      "answer": [
+        {
+          "id": "E2",
+          "kind": "ENGINE",
+          "text": "DKA: suficiencia de datos. Estado del motor: CRITERIA_MET. Datos pendientes para resolver ramas indeterminadas: ninguno. Las opciones siguen la lógica AND/OR; esta lista no significa que deban medirse todas. Alternativas no medidas que no bloquean este resultado: bicarbonato, cetonas urinarias. Datos inválidos que impiden resolver ramas: ninguno. Datos pendientes para seguridad del protocolo: potasio. Protocolo: BLOCKED_MISSING_DATA. La seguridad terapéutica es independiente de los criterios diagnósticos. Cumplir criterios no es un diagnóstico firmado ni autoriza tratamiento.",
+          "reference": {
+            "evaluation_id": "ce-1b577d42a72d4916a97390cecc4dbc64",
+            "condition_id": "DKA",
+            "source_ids": [
+              "SRC-DKA-2024"
+            ],
+            "input_hash": "c2c168db768e4e73e298159fd80df2c4c39e057eda6aa5dc915abd27ccef4723"
+          },
+          "clinical_contract": {
+            "diagnostic_status": "CRITERIA_MET",
+            "missing_required": [],
+            "optional_not_measured": [
+              "bicarbonate_mmol_l",
+              "urine_ketones_plus"
+            ],
+            "required_for_protocol_safety": [
+              "potassium_mmol_l"
+            ]
+          }
+        }
+      ],
+      "sources": [
+        {
+          "source": {
+            "source_id": "SRC-DKA-2024",
+            "organization": "ADA/EASD/AACE/JBDS/DTS expert panel",
+            "title": "Hyperglycemic Crises in Adults With Diabetes: A Consensus Report",
+            "year": 2024,
+            "section": "Section 3, Figure 2A, Table 2; Section 4",
+            "doi": "10.2337/dci24-0032",
+            "url": "https://doi.org/10.2337/dci24-0032",
+            "type": "MULTISOCIETY_CONSENSUS_REPORT",
+            "verification": "VERIFIED",
+            "use": [
+              "DKA_diagnosis",
+              "DKA_monitoring",
+              "DKA_treatment"
+            ]
+          },
+          "source_status": "PINNED_VERIFIED_AT_REPORT_DATE_NOT_CONTINUOUSLY_VERIFIED"
+        }
+      ],
+      "model_status": {
+        "available": true,
+        "reason": "LOCAL_MODEL_READY",
+        "model": "vigile-qwen3-4b:latest",
+        "mode": "LOW_POWER",
+        "provider": "ollama"
+      },
+      "evaluation_id": "ce-1b577d42a72d4916a97390cecc4dbc64",
+      "generated": [],
+      "mode": "LOW_POWER",
+      "document_issues": [],
+      "consistency_policy": "ENGINE_DATA_REQUIREMENTS_ONLY"
+    }
+  },
+  {
+    "mode": "LOW_POWER",
+    "question": "¿Son necesarios bicarbonato y cetonas urinarias para cumplir los criterios?",
+    "elapsed_ms": 238,
+    "reply": {
+      "status": "DETERMINISTIC_DATA_SUFFICIENCY",
+      "inference_executed": false,
+      "inference_attempted": false,
+      "message": "Clasificación emitida directamente por el motor; sin reinterpretación del LLM.",
+      "retrieved": [
+        {
+          "id": "E2",
+          "kind": "ENGINE",
+          "text": "DKA: suficiencia de datos. Estado del motor: CRITERIA_MET. Datos pendientes para resolver ramas indeterminadas: ninguno. Las opciones siguen la lógica AND/OR; esta lista no significa que deban medirse todas. Alternativas no medidas que no bloquean este resultado: bicarbonato, cetonas urinarias. Datos inválidos que impiden resolver ramas: ninguno. Datos pendientes para seguridad del protocolo: potasio. Protocolo: BLOCKED_MISSING_DATA. La seguridad terapéutica es independiente de los criterios diagnósticos. Cumplir criterios no es un diagnóstico firmado ni autoriza tratamiento.",
+          "reference": {
+            "evaluation_id": "ce-1b577d42a72d4916a97390cecc4dbc64",
+            "condition_id": "DKA",
+            "source_ids": [
+              "SRC-DKA-2024"
+            ],
+            "input_hash": "c2c168db768e4e73e298159fd80df2c4c39e057eda6aa5dc915abd27ccef4723"
+          },
+          "clinical_contract": {
+            "diagnostic_status": "CRITERIA_MET",
+            "missing_required": [],
+            "optional_not_measured": [
+              "bicarbonate_mmol_l",
+              "urine_ketones_plus"
+            ],
+            "required_for_protocol_safety": [
+              "potassium_mmol_l"
+            ]
+          }
+        }
+      ],
+      "answer": [
+        {
+          "id": "E2",
+          "kind": "ENGINE",
+          "text": "DKA: suficiencia de datos. Estado del motor: CRITERIA_MET. Datos pendientes para resolver ramas indeterminadas: ninguno. Las opciones siguen la lógica AND/OR; esta lista no significa que deban medirse todas. Alternativas no medidas que no bloquean este resultado: bicarbonato, cetonas urinarias. Datos inválidos que impiden resolver ramas: ninguno. Datos pendientes para seguridad del protocolo: potasio. Protocolo: BLOCKED_MISSING_DATA. La seguridad terapéutica es independiente de los criterios diagnósticos. Cumplir criterios no es un diagnóstico firmado ni autoriza tratamiento.",
+          "reference": {
+            "evaluation_id": "ce-1b577d42a72d4916a97390cecc4dbc64",
+            "condition_id": "DKA",
+            "source_ids": [
+              "SRC-DKA-2024"
+            ],
+            "input_hash": "c2c168db768e4e73e298159fd80df2c4c39e057eda6aa5dc915abd27ccef4723"
+          },
+          "clinical_contract": {
+            "diagnostic_status": "CRITERIA_MET",
+            "missing_required": [],
+            "optional_not_measured": [
+              "bicarbonate_mmol_l",
+              "urine_ketones_plus"
+            ],
+            "required_for_protocol_safety": [
+              "potassium_mmol_l"
+            ]
+          }
+        }
+      ],
+      "sources": [
+        {
+          "source": {
+            "source_id": "SRC-DKA-2024",
+            "organization": "ADA/EASD/AACE/JBDS/DTS expert panel",
+            "title": "Hyperglycemic Crises in Adults With Diabetes: A Consensus Report",
+            "year": 2024,
+            "section": "Section 3, Figure 2A, Table 2; Section 4",
+            "doi": "10.2337/dci24-0032",
+            "url": "https://doi.org/10.2337/dci24-0032",
+            "type": "MULTISOCIETY_CONSENSUS_REPORT",
+            "verification": "VERIFIED",
+            "use": [
+              "DKA_diagnosis",
+              "DKA_monitoring",
+              "DKA_treatment"
+            ]
+          },
+          "source_status": "PINNED_VERIFIED_AT_REPORT_DATE_NOT_CONTINUOUSLY_VERIFIED"
+        }
+      ],
+      "model_status": {
+        "available": true,
+        "reason": "LOCAL_MODEL_READY",
+        "model": "vigile-qwen3-4b:latest",
+        "mode": "LOW_POWER",
+        "provider": "ollama"
+      },
+      "evaluation_id": "ce-1b577d42a72d4916a97390cecc4dbc64",
+      "generated": [],
+      "mode": "LOW_POWER",
+      "document_issues": [],
+      "consistency_policy": "ENGINE_DATA_REQUIREMENTS_ONLY"
+    }
+  },
+  {
+    "mode": "LOW_POWER",
+    "question": "¿Por qué está bloqueado el protocolo?",
+    "elapsed_ms": 10611,
+    "reply": {
+      "status": "ANSWERED",
+      "inference_executed": true,
+      "inference_attempted": true,
+      "message": "Explicación generada por un modelo local, vinculada a evidencia. No es una decisión clínica ni una autorización.",
+      "retrieved": [
+        {
+          "id": "E1",
+          "kind": "ENGINE",
+          "text": "DKA: diagnóstico CRITERIA_MET; urgencia EMERGENCY; confirmación SATISFIED. Cumplir criterios no equivale a diagnóstico clínico firmado.",
+          "reference": {
+            "evaluation_id": "ce-1b577d42a72d4916a97390cecc4dbc64",
+            "condition_id": "DKA",
+            "source_ids": [
+              "SRC-DKA-2024"
+            ],
+            "input_hash": "c2c168db768e4e73e298159fd80df2c4c39e057eda6aa5dc915abd27ccef4723"
+          },
+          "logic_trace": {
+            "truth_state": "TRUE",
+            "operator": "all_of",
+            "children": [
+              {
+                "truth_state": "TRUE",
+                "operator": "any_of",
+                "children": [
+                  {
+                    "truth_state": "TRUE",
+                    "field": "known_diabetes",
+                    "operator": "==",
+                    "expected": true,
+                    "actual": true
+                  },
+                  {
+                    "truth_state": "FALSE",
+                    "field": "plasma_glucose_mg_dl",
+                    "operator": ">=",
+                    "expected": 200,
+                    "actual": 180.0
+                  }
+                ]
+              },
+              {
+                "truth_state": "TRUE",
+                "operator": "any_of",
+                "children": [
+                  {
+                    "truth_state": "TRUE",
+                    "field": "beta_hydroxybutyrate_mmol_l",
+                    "operator": ">=",
+                    "expected": 3.0,
+                    "actual": 4.2
+                  },
+                  {
+                    "truth_state": "UNKNOWN",
+                    "field": "urine_ketones_plus",
+                    "operator": ">=",
+                    "expected": 2,
+                    "actual": null
+                  }
+                ]
+              },
+              {
+                "truth_state": "TRUE",
+                "operator": "any_of",
+                "children": [
+                  {
+                    "truth_state": "TRUE",
+                    "field": "venous_pH",
+                    "operator": "<",
+                    "expected": 7.3,
+                    "actual": 7.22
+                  },
+                  {
+                    "truth_state": "UNKNOWN",
+                    "field": "bicarbonate_mmol_l",
+                    "operator": "<",
+                    "expected": 18,
+                    "actual": null
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "id": "E2",
+          "kind": "ENGINE",
+          "text": "DKA: suficiencia de datos. Estado del motor: CRITERIA_MET. Datos pendientes para resolver ramas indeterminadas: ninguno. Las opciones siguen la lógica AND/OR; esta lista no significa que deban medirse todas. Alternativas no medidas que no bloquean este resultado: bicarbonato, cetonas urinarias. Datos inválidos que impiden resolver ramas: ninguno. Datos pendientes para seguridad del protocolo: potasio. Protocolo: BLOCKED_MISSING_DATA. La seguridad terapéutica es independiente de los criterios diagnósticos. Cumplir criterios no es un diagnóstico firmado ni autoriza tratamiento.",
+          "reference": {
+            "evaluation_id": "ce-1b577d42a72d4916a97390cecc4dbc64",
+            "condition_id": "DKA",
+            "source_ids": [
+              "SRC-DKA-2024"
+            ],
+            "input_hash": "c2c168db768e4e73e298159fd80df2c4c39e057eda6aa5dc915abd27ccef4723"
+          },
+          "clinical_contract": {
+            "diagnostic_status": "CRITERIA_MET",
+            "missing_required": [],
+            "optional_not_measured": [
+              "bicarbonate_mmol_l",
+              "urine_ketones_plus"
+            ],
+            "required_for_protocol_safety": [
+              "potassium_mmol_l"
+            ]
+          }
+        },
+        {
+          "id": "E3",
+          "kind": "ENGINE",
+          "text": "DKA: protocolo BLOCKED_MISSING_DATA. Motivos de bloqueo: BLOCKED_MISSING_DATA:POTASSIUM, BLOCKED_RESOURCE, BLOCKED_AUTHORIZATION. Recursos faltantes: validated_glucose_measurement, potassium_measurement, electrolytes, beta_hydroxybutyrate, venous_pH_or_bicarbonate, IV_access_capability, IV_fluid_capability, insulin_inventory, continuous_or_frequent_monitoring. Tratamiento: NOT_STARTED.",
+          "reference": {
+            "evaluation_id": "ce-1b577d42a72d4916a97390cecc4dbc64",
+            "condition_id": "DKA",
+            "source_ids": [
+              "SRC-DKA-2024"
+            ],
+            "input_hash": "c2c168db768e4e73e298159fd80df2c4c39e057eda6aa5dc915abd27ccef4723"
+          }
+        }
+      ],
+      "answer": [
+        {
+          "id": "E2",
+          "kind": "ENGINE",
+          "text": "DKA: suficiencia de datos. Estado del motor: CRITERIA_MET. Datos pendientes para resolver ramas indeterminadas: ninguno. Las opciones siguen la lógica AND/OR; esta lista no significa que deban medirse todas. Alternativas no medidas que no bloquean este resultado: bicarbonato, cetonas urinarias. Datos inválidos que impiden resolver ramas: ninguno. Datos pendientes para seguridad del protocolo: potasio. Protocolo: BLOCKED_MISSING_DATA. La seguridad terapéutica es independiente de los criterios diagnósticos. Cumplir criterios no es un diagnóstico firmado ni autoriza tratamiento.",
+          "reference": {
+            "evaluation_id": "ce-1b577d42a72d4916a97390cecc4dbc64",
+            "condition_id": "DKA",
+            "source_ids": [
+              "SRC-DKA-2024"
+            ],
+            "input_hash": "c2c168db768e4e73e298159fd80df2c4c39e057eda6aa5dc915abd27ccef4723"
+          },
+          "clinical_contract": {
+            "diagnostic_status": "CRITERIA_MET",
+            "missing_required": [],
+            "optional_not_measured": [
+              "bicarbonate_mmol_l",
+              "urine_ketones_plus"
+            ],
+            "required_for_protocol_safety": [
+              "potassium_mmol_l"
+            ]
+          }
+        },
+        {
+          "id": "E3",
+          "kind": "ENGINE",
+          "text": "DKA: protocolo BLOCKED_MISSING_DATA. Motivos de bloqueo: BLOCKED_MISSING_DATA:POTASSIUM, BLOCKED_RESOURCE, BLOCKED_AUTHORIZATION. Recursos faltantes: validated_glucose_measurement, potassium_measurement, electrolytes, beta_hydroxybutyrate, venous_pH_or_bicarbonate, IV_access_capability, IV_fluid_capability, insulin_inventory, continuous_or_frequent_monitoring. Tratamiento: NOT_STARTED.",
+          "reference": {
+            "evaluation_id": "ce-1b577d42a72d4916a97390cecc4dbc64",
+            "condition_id": "DKA",
+            "source_ids": [
+              "SRC-DKA-2024"
+            ],
+            "input_hash": "c2c168db768e4e73e298159fd80df2c4c39e057eda6aa5dc915abd27ccef4723"
+          }
+        }
+      ],
+      "sources": [
+        {
+          "source": {
+            "source_id": "SRC-DKA-2024",
+            "organization": "ADA/EASD/AACE/JBDS/DTS expert panel",
+            "title": "Hyperglycemic Crises in Adults With Diabetes: A Consensus Report",
+            "year": 2024,
+            "section": "Section 3, Figure 2A, Table 2; Section 4",
+            "doi": "10.2337/dci24-0032",
+            "url": "https://doi.org/10.2337/dci24-0032",
+            "type": "MULTISOCIETY_CONSENSUS_REPORT",
+            "verification": "VERIFIED",
+            "use": [
+              "DKA_diagnosis",
+              "DKA_monitoring",
+              "DKA_treatment"
+            ]
+          },
+          "source_status": "PINNED_VERIFIED_AT_REPORT_DATE_NOT_CONTINUOUSLY_VERIFIED"
+        }
+      ],
+      "model_status": {
+        "available": true,
+        "reason": "LOCAL_MODEL_READY",
+        "model": "vigile-qwen3-4b:latest",
+        "mode": "LOW_POWER",
+        "provider": "ollama"
+      },
+      "evaluation_id": "ce-1b577d42a72d4916a97390cecc4dbc64",
+      "generated": [
+        {
+          "text": "El protocolo está bloqueado porque falta el valor de potasio para garantizar la seguridad terapéutica.",
+          "evidence_ids": [
+            "E2"
+          ],
+          "kind": "MODEL_EXPLANATION",
+          "references": [
+            {
+              "evaluation_id": "ce-1b577d42a72d4916a97390cecc4dbc64",
+              "condition_id": "DKA",
+              "source_ids": [
+                "SRC-DKA-2024"
+              ],
+              "input_hash": "c2c168db768e4e73e298159fd80df2c4c39e057eda6aa5dc915abd27ccef4723"
+            }
+          ]
+        },
+        {
+          "text": "El protocolo está bloqueado por la falta de recursos como mediciones de glucosa validadas, potasio y acceso a líquidos intravenosos.",
+          "evidence_ids": [
+            "E3"
+          ],
+          "kind": "MODEL_EXPLANATION",
+          "references": [
+            {
+              "evaluation_id": "ce-1b577d42a72d4916a97390cecc4dbc64",
+              "condition_id": "DKA",
+              "source_ids": [
+                "SRC-DKA-2024"
+              ],
+              "input_hash": "c2c168db768e4e73e298159fd80df2c4c39e057eda6aa5dc915abd27ccef4723"
+            }
+          ]
+        }
+      ],
+      "mode": "LOW_POWER",
+      "document_issues": [],
+      "metrics": {
+        "elapsed_ms": 9774.277400021674,
+        "usage": {},
+        "timings": {},
+        "load_duration_ns": 7703745200,
+        "verification": {
+          "elapsed_ms": 623.5205999983009,
+          "usage": {},
+          "timings": {},
+          "load_duration_ns": 26098500
+        }
+      },
+      "grounding": "CITATIONS_AND_LOCAL_MODEL_CHECK_NOT_CLINICAL_VALIDATION"
+    }
+  },
+  {
+    "mode": "LOW_POWER",
+    "question": "Explica los criterios cumplidos.",
+    "elapsed_ms": 2565,
+    "reply": {
+      "status": "REJECTED_OR_FAILED",
+      "inference_executed": false,
+      "inference_attempted": true,
+      "message": "Salida no sustentada o inferencia fallida. Se conserva la consulta extractiva y el motor no se modifica.",
+      "retrieved": [
+        {
+          "id": "E1",
+          "kind": "ENGINE",
+          "text": "DKA: diagnóstico CRITERIA_MET; urgencia EMERGENCY; confirmación SATISFIED. Cumplir criterios no equivale a diagnóstico clínico firmado.",
+          "reference": {
+            "evaluation_id": "ce-1b577d42a72d4916a97390cecc4dbc64",
+            "condition_id": "DKA",
+            "source_ids": [
+              "SRC-DKA-2024"
+            ],
+            "input_hash": "c2c168db768e4e73e298159fd80df2c4c39e057eda6aa5dc915abd27ccef4723"
+          },
+          "logic_trace": {
+            "truth_state": "TRUE",
+            "operator": "all_of",
+            "children": [
+              {
+                "truth_state": "TRUE",
+                "operator": "any_of",
+                "children": [
+                  {
+                    "truth_state": "TRUE",
+                    "field": "known_diabetes",
+                    "operator": "==",
+                    "expected": true,
+                    "actual": true
+                  },
+                  {
+                    "truth_state": "FALSE",
+                    "field": "plasma_glucose_mg_dl",
+                    "operator": ">=",
+                    "expected": 200,
+                    "actual": 180.0
+                  }
+                ]
+              },
+              {
+                "truth_state": "TRUE",
+                "operator": "any_of",
+                "children": [
+                  {
+                    "truth_state": "TRUE",
+                    "field": "beta_hydroxybutyrate_mmol_l",
+                    "operator": ">=",
+                    "expected": 3.0,
+                    "actual": 4.2
+                  },
+                  {
+                    "truth_state": "UNKNOWN",
+                    "field": "urine_ketones_plus",
+                    "operator": ">=",
+                    "expected": 2,
+                    "actual": null
+                  }
+                ]
+              },
+              {
+                "truth_state": "TRUE",
+                "operator": "any_of",
+                "children": [
+                  {
+                    "truth_state": "TRUE",
+                    "field": "venous_pH",
+                    "operator": "<",
+                    "expected": 7.3,
+                    "actual": 7.22
+                  },
+                  {
+                    "truth_state": "UNKNOWN",
+                    "field": "bicarbonate_mmol_l",
+                    "operator": "<",
+                    "expected": 18,
+                    "actual": null
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "id": "E2",
+          "kind": "ENGINE",
+          "text": "DKA: suficiencia de datos. Estado del motor: CRITERIA_MET. Datos pendientes para resolver ramas indeterminadas: ninguno. Las opciones siguen la lógica AND/OR; esta lista no significa que deban medirse todas. Alternativas no medidas que no bloquean este resultado: bicarbonato, cetonas urinarias. Datos inválidos que impiden resolver ramas: ninguno. Datos pendientes para seguridad del protocolo: potasio. Protocolo: BLOCKED_MISSING_DATA. La seguridad terapéutica es independiente de los criterios diagnósticos. Cumplir criterios no es un diagnóstico firmado ni autoriza tratamiento.",
+          "reference": {
+            "evaluation_id": "ce-1b577d42a72d4916a97390cecc4dbc64",
+            "condition_id": "DKA",
+            "source_ids": [
+              "SRC-DKA-2024"
+            ],
+            "input_hash": "c2c168db768e4e73e298159fd80df2c4c39e057eda6aa5dc915abd27ccef4723"
+          },
+          "clinical_contract": {
+            "diagnostic_status": "CRITERIA_MET",
+            "missing_required": [],
+            "optional_not_measured": [
+              "bicarbonate_mmol_l",
+              "urine_ketones_plus"
+            ],
+            "required_for_protocol_safety": [
+              "potassium_mmol_l"
+            ]
+          }
+        },
+        {
+          "id": "E4",
+          "kind": "ENGINE",
+          "text": "DKA: criterio known_diabetes == True; observado True; satisfecho.",
+          "reference": {
+            "evaluation_id": "ce-1b577d42a72d4916a97390cecc4dbc64",
+            "condition_id": "DKA",
+            "source_ids": [
+              "SRC-DKA-2024"
+            ],
+            "input_hash": "c2c168db768e4e73e298159fd80df2c4c39e057eda6aa5dc915abd27ccef4723"
+          }
+        },
+        {
+          "id": "E5",
+          "kind": "ENGINE",
+          "text": "DKA: criterio plasma_glucose_mg_dl >= 200; observado 180.0; no satisfecho.",
+          "reference": {
+            "evaluation_id": "ce-1b577d42a72d4916a97390cecc4dbc64",
+            "condition_id": "DKA",
+            "source_ids": [
+              "SRC-DKA-2024"
+            ],
+            "input_hash": "c2c168db768e4e73e298159fd80df2c4c39e057eda6aa5dc915abd27ccef4723"
+          }
+        },
+        {
+          "id": "E6",
+          "kind": "ENGINE",
+          "text": "DKA: criterio beta_hydroxybutyrate_mmol_l >= 3.0; observado 4.2; satisfecho.",
+          "reference": {
+            "evaluation_id": "ce-1b577d42a72d4916a97390cecc4dbc64",
+            "condition_id": "DKA",
+            "source_ids": [
+              "SRC-DKA-2024"
+            ],
+            "input_hash": "c2c168db768e4e73e298159fd80df2c4c39e057eda6aa5dc915abd27ccef4723"
+          }
+        },
+        {
+          "id": "E7",
+          "kind": "ENGINE",
+          "text": "DKA: criterio venous_pH < 7.3; observado 7.22; satisfecho.",
+          "reference": {
+            "evaluation_id": "ce-1b577d42a72d4916a97390cecc4dbc64",
+            "condition_id": "DKA",
+            "source_ids": [
+              "SRC-DKA-2024"
+            ],
+            "input_hash": "c2c168db768e4e73e298159fd80df2c4c39e057eda6aa5dc915abd27ccef4723"
+          }
+        }
+      ],
+      "answer": [],
+      "sources": [
+        {
+          "source": {
+            "source_id": "SRC-DKA-2024",
+            "organization": "ADA/EASD/AACE/JBDS/DTS expert panel",
+            "title": "Hyperglycemic Crises in Adults With Diabetes: A Consensus Report",
+            "year": 2024,
+            "section": "Section 3, Figure 2A, Table 2; Section 4",
+            "doi": "10.2337/dci24-0032",
+            "url": "https://doi.org/10.2337/dci24-0032",
+            "type": "MULTISOCIETY_CONSENSUS_REPORT",
+            "verification": "VERIFIED",
+            "use": [
+              "DKA_diagnosis",
+              "DKA_monitoring",
+              "DKA_treatment"
+            ]
+          },
+          "source_status": "PINNED_VERIFIED_AT_REPORT_DATE_NOT_CONTINUOUSLY_VERIFIED"
+        }
+      ],
+      "model_status": {
+        "available": true,
+        "reason": "LOCAL_MODEL_READY",
+        "model": "vigile-qwen3-4b:latest",
+        "mode": "LOW_POWER",
+        "provider": "ollama"
+      },
+      "evaluation_id": "ce-1b577d42a72d4916a97390cecc4dbc64",
+      "generated": [],
+      "mode": "LOW_POWER",
+      "document_issues": [
+        "NO_MATCHING_DOCUMENT_EXCERPT"
+      ]
+    }
+  },
+  {
+    "mode": "CRITICAL",
+    "question": "¿Qué datos faltan?",
+    "elapsed_ms": 177,
+    "reply": {
+      "status": "EXTRACTIVE_ONLY",
+      "inference_executed": false,
+      "inference_attempted": false,
+      "message": "Clasificación emitida directamente por el motor; sin reinterpretación del LLM.",
+      "retrieved": [
+        {
+          "id": "E2",
+          "kind": "ENGINE",
+          "text": "DKA: suficiencia de datos. Estado del motor: CRITERIA_MET. Datos pendientes para resolver ramas indeterminadas: ninguno. Las opciones siguen la lógica AND/OR; esta lista no significa que deban medirse todas. Alternativas no medidas que no bloquean este resultado: bicarbonato, cetonas urinarias. Datos inválidos que impiden resolver ramas: ninguno. Datos pendientes para seguridad del protocolo: potasio. Protocolo: BLOCKED_MISSING_DATA. La seguridad terapéutica es independiente de los criterios diagnósticos. Cumplir criterios no es un diagnóstico firmado ni autoriza tratamiento.",
+          "reference": {
+            "evaluation_id": "ce-1b577d42a72d4916a97390cecc4dbc64",
+            "condition_id": "DKA",
+            "source_ids": [
+              "SRC-DKA-2024"
+            ],
+            "input_hash": "c2c168db768e4e73e298159fd80df2c4c39e057eda6aa5dc915abd27ccef4723"
+          },
+          "clinical_contract": {
+            "diagnostic_status": "CRITERIA_MET",
+            "missing_required": [],
+            "optional_not_measured": [
+              "bicarbonate_mmol_l",
+              "urine_ketones_plus"
+            ],
+            "required_for_protocol_safety": [
+              "potassium_mmol_l"
+            ]
+          }
+        }
+      ],
+      "answer": [
+        {
+          "id": "E2",
+          "kind": "ENGINE",
+          "text": "DKA: suficiencia de datos. Estado del motor: CRITERIA_MET. Datos pendientes para resolver ramas indeterminadas: ninguno. Las opciones siguen la lógica AND/OR; esta lista no significa que deban medirse todas. Alternativas no medidas que no bloquean este resultado: bicarbonato, cetonas urinarias. Datos inválidos que impiden resolver ramas: ninguno. Datos pendientes para seguridad del protocolo: potasio. Protocolo: BLOCKED_MISSING_DATA. La seguridad terapéutica es independiente de los criterios diagnósticos. Cumplir criterios no es un diagnóstico firmado ni autoriza tratamiento.",
+          "reference": {
+            "evaluation_id": "ce-1b577d42a72d4916a97390cecc4dbc64",
+            "condition_id": "DKA",
+            "source_ids": [
+              "SRC-DKA-2024"
+            ],
+            "input_hash": "c2c168db768e4e73e298159fd80df2c4c39e057eda6aa5dc915abd27ccef4723"
+          },
+          "clinical_contract": {
+            "diagnostic_status": "CRITERIA_MET",
+            "missing_required": [],
+            "optional_not_measured": [
+              "bicarbonate_mmol_l",
+              "urine_ketones_plus"
+            ],
+            "required_for_protocol_safety": [
+              "potassium_mmol_l"
+            ]
+          }
+        }
+      ],
+      "sources": [
+        {
+          "source": {
+            "source_id": "SRC-DKA-2024",
+            "organization": "ADA/EASD/AACE/JBDS/DTS expert panel",
+            "title": "Hyperglycemic Crises in Adults With Diabetes: A Consensus Report",
+            "year": 2024,
+            "section": "Section 3, Figure 2A, Table 2; Section 4",
+            "doi": "10.2337/dci24-0032",
+            "url": "https://doi.org/10.2337/dci24-0032",
+            "type": "MULTISOCIETY_CONSENSUS_REPORT",
+            "verification": "VERIFIED",
+            "use": [
+              "DKA_diagnosis",
+              "DKA_monitoring",
+              "DKA_treatment"
+            ]
+          },
+          "source_status": "PINNED_VERIFIED_AT_REPORT_DATE_NOT_CONTINUOUSLY_VERIFIED"
+        }
+      ],
+      "model_status": {
+        "available": false,
+        "reason": "CRITICAL_LLM_DISABLED",
+        "mode": "CRITICAL",
+        "provider": "ollama"
+      },
+      "evaluation_id": "ce-1b577d42a72d4916a97390cecc4dbc64",
+      "generated": [],
+      "mode": "CRITICAL",
+      "document_issues": [],
+      "consistency_policy": "ENGINE_DATA_REQUIREMENTS_ONLY"
+    }
+  },
+  {
+    "mode": "CRITICAL",
+    "question": "¿Son necesarios bicarbonato y cetonas urinarias para cumplir los criterios?",
+    "elapsed_ms": 169,
+    "reply": {
+      "status": "EXTRACTIVE_ONLY",
+      "inference_executed": false,
+      "inference_attempted": false,
+      "message": "Clasificación emitida directamente por el motor; sin reinterpretación del LLM.",
+      "retrieved": [
+        {
+          "id": "E2",
+          "kind": "ENGINE",
+          "text": "DKA: suficiencia de datos. Estado del motor: CRITERIA_MET. Datos pendientes para resolver ramas indeterminadas: ninguno. Las opciones siguen la lógica AND/OR; esta lista no significa que deban medirse todas. Alternativas no medidas que no bloquean este resultado: bicarbonato, cetonas urinarias. Datos inválidos que impiden resolver ramas: ninguno. Datos pendientes para seguridad del protocolo: potasio. Protocolo: BLOCKED_MISSING_DATA. La seguridad terapéutica es independiente de los criterios diagnósticos. Cumplir criterios no es un diagnóstico firmado ni autoriza tratamiento.",
+          "reference": {
+            "evaluation_id": "ce-1b577d42a72d4916a97390cecc4dbc64",
+            "condition_id": "DKA",
+            "source_ids": [
+              "SRC-DKA-2024"
+            ],
+            "input_hash": "c2c168db768e4e73e298159fd80df2c4c39e057eda6aa5dc915abd27ccef4723"
+          },
+          "clinical_contract": {
+            "diagnostic_status": "CRITERIA_MET",
+            "missing_required": [],
+            "optional_not_measured": [
+              "bicarbonate_mmol_l",
+              "urine_ketones_plus"
+            ],
+            "required_for_protocol_safety": [
+              "potassium_mmol_l"
+            ]
+          }
+        }
+      ],
+      "answer": [
+        {
+          "id": "E2",
+          "kind": "ENGINE",
+          "text": "DKA: suficiencia de datos. Estado del motor: CRITERIA_MET. Datos pendientes para resolver ramas indeterminadas: ninguno. Las opciones siguen la lógica AND/OR; esta lista no significa que deban medirse todas. Alternativas no medidas que no bloquean este resultado: bicarbonato, cetonas urinarias. Datos inválidos que impiden resolver ramas: ninguno. Datos pendientes para seguridad del protocolo: potasio. Protocolo: BLOCKED_MISSING_DATA. La seguridad terapéutica es independiente de los criterios diagnósticos. Cumplir criterios no es un diagnóstico firmado ni autoriza tratamiento.",
+          "reference": {
+            "evaluation_id": "ce-1b577d42a72d4916a97390cecc4dbc64",
+            "condition_id": "DKA",
+            "source_ids": [
+              "SRC-DKA-2024"
+            ],
+            "input_hash": "c2c168db768e4e73e298159fd80df2c4c39e057eda6aa5dc915abd27ccef4723"
+          },
+          "clinical_contract": {
+            "diagnostic_status": "CRITERIA_MET",
+            "missing_required": [],
+            "optional_not_measured": [
+              "bicarbonate_mmol_l",
+              "urine_ketones_plus"
+            ],
+            "required_for_protocol_safety": [
+              "potassium_mmol_l"
+            ]
+          }
+        }
+      ],
+      "sources": [
+        {
+          "source": {
+            "source_id": "SRC-DKA-2024",
+            "organization": "ADA/EASD/AACE/JBDS/DTS expert panel",
+            "title": "Hyperglycemic Crises in Adults With Diabetes: A Consensus Report",
+            "year": 2024,
+            "section": "Section 3, Figure 2A, Table 2; Section 4",
+            "doi": "10.2337/dci24-0032",
+            "url": "https://doi.org/10.2337/dci24-0032",
+            "type": "MULTISOCIETY_CONSENSUS_REPORT",
+            "verification": "VERIFIED",
+            "use": [
+              "DKA_diagnosis",
+              "DKA_monitoring",
+              "DKA_treatment"
+            ]
+          },
+          "source_status": "PINNED_VERIFIED_AT_REPORT_DATE_NOT_CONTINUOUSLY_VERIFIED"
+        }
+      ],
+      "model_status": {
+        "available": false,
+        "reason": "CRITICAL_LLM_DISABLED",
+        "mode": "CRITICAL",
+        "provider": "ollama"
+      },
+      "evaluation_id": "ce-1b577d42a72d4916a97390cecc4dbc64",
+      "generated": [],
+      "mode": "CRITICAL",
+      "document_issues": [],
+      "consistency_policy": "ENGINE_DATA_REQUIREMENTS_ONLY"
+    }
+  },
+  {
+    "mode": "CRITICAL",
+    "question": "¿Por qué está bloqueado el protocolo?",
+    "elapsed_ms": 204,
+    "reply": {
+      "status": "EXTRACTIVE_ONLY",
+      "inference_executed": false,
+      "inference_attempted": false,
+      "message": "Modo CRITICAL: LLM desactivado. Consulta extractiva; el motor clínico permanece independiente.",
+      "retrieved": [
+        {
+          "id": "E1",
+          "kind": "ENGINE",
+          "text": "DKA: diagnóstico CRITERIA_MET; urgencia EMERGENCY; confirmación SATISFIED. Cumplir criterios no equivale a diagnóstico clínico firmado.",
+          "reference": {
+            "evaluation_id": "ce-1b577d42a72d4916a97390cecc4dbc64",
+            "condition_id": "DKA",
+            "source_ids": [
+              "SRC-DKA-2024"
+            ],
+            "input_hash": "c2c168db768e4e73e298159fd80df2c4c39e057eda6aa5dc915abd27ccef4723"
+          },
+          "logic_trace": {
+            "truth_state": "TRUE",
+            "operator": "all_of",
+            "children": [
+              {
+                "truth_state": "TRUE",
+                "operator": "any_of",
+                "children": [
+                  {
+                    "truth_state": "TRUE",
+                    "field": "known_diabetes",
+                    "operator": "==",
+                    "expected": true,
+                    "actual": true
+                  },
+                  {
+                    "truth_state": "FALSE",
+                    "field": "plasma_glucose_mg_dl",
+                    "operator": ">=",
+                    "expected": 200,
+                    "actual": 180.0
+                  }
+                ]
+              },
+              {
+                "truth_state": "TRUE",
+                "operator": "any_of",
+                "children": [
+                  {
+                    "truth_state": "TRUE",
+                    "field": "beta_hydroxybutyrate_mmol_l",
+                    "operator": ">=",
+                    "expected": 3.0,
+                    "actual": 4.2
+                  },
+                  {
+                    "truth_state": "UNKNOWN",
+                    "field": "urine_ketones_plus",
+                    "operator": ">=",
+                    "expected": 2,
+                    "actual": null
+                  }
+                ]
+              },
+              {
+                "truth_state": "TRUE",
+                "operator": "any_of",
+                "children": [
+                  {
+                    "truth_state": "TRUE",
+                    "field": "venous_pH",
+                    "operator": "<",
+                    "expected": 7.3,
+                    "actual": 7.22
+                  },
+                  {
+                    "truth_state": "UNKNOWN",
+                    "field": "bicarbonate_mmol_l",
+                    "operator": "<",
+                    "expected": 18,
+                    "actual": null
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "id": "E2",
+          "kind": "ENGINE",
+          "text": "DKA: suficiencia de datos. Estado del motor: CRITERIA_MET. Datos pendientes para resolver ramas indeterminadas: ninguno. Las opciones siguen la lógica AND/OR; esta lista no significa que deban medirse todas. Alternativas no medidas que no bloquean este resultado: bicarbonato, cetonas urinarias. Datos inválidos que impiden resolver ramas: ninguno. Datos pendientes para seguridad del protocolo: potasio. Protocolo: BLOCKED_MISSING_DATA. La seguridad terapéutica es independiente de los criterios diagnósticos. Cumplir criterios no es un diagnóstico firmado ni autoriza tratamiento.",
+          "reference": {
+            "evaluation_id": "ce-1b577d42a72d4916a97390cecc4dbc64",
+            "condition_id": "DKA",
+            "source_ids": [
+              "SRC-DKA-2024"
+            ],
+            "input_hash": "c2c168db768e4e73e298159fd80df2c4c39e057eda6aa5dc915abd27ccef4723"
+          },
+          "clinical_contract": {
+            "diagnostic_status": "CRITERIA_MET",
+            "missing_required": [],
+            "optional_not_measured": [
+              "bicarbonate_mmol_l",
+              "urine_ketones_plus"
+            ],
+            "required_for_protocol_safety": [
+              "potassium_mmol_l"
+            ]
+          }
+        },
+        {
+          "id": "E3",
+          "kind": "ENGINE",
+          "text": "DKA: protocolo BLOCKED_MISSING_DATA. Motivos de bloqueo: BLOCKED_MISSING_DATA:POTASSIUM, BLOCKED_RESOURCE, BLOCKED_AUTHORIZATION. Recursos faltantes: validated_glucose_measurement, potassium_measurement, electrolytes, beta_hydroxybutyrate, venous_pH_or_bicarbonate, IV_access_capability, IV_fluid_capability, insulin_inventory, continuous_or_frequent_monitoring. Tratamiento: NOT_STARTED.",
+          "reference": {
+            "evaluation_id": "ce-1b577d42a72d4916a97390cecc4dbc64",
+            "condition_id": "DKA",
+            "source_ids": [
+              "SRC-DKA-2024"
+            ],
+            "input_hash": "c2c168db768e4e73e298159fd80df2c4c39e057eda6aa5dc915abd27ccef4723"
+          }
+        }
+      ],
+      "answer": [],
+      "sources": [
+        {
+          "source": {
+            "source_id": "SRC-DKA-2024",
+            "organization": "ADA/EASD/AACE/JBDS/DTS expert panel",
+            "title": "Hyperglycemic Crises in Adults With Diabetes: A Consensus Report",
+            "year": 2024,
+            "section": "Section 3, Figure 2A, Table 2; Section 4",
+            "doi": "10.2337/dci24-0032",
+            "url": "https://doi.org/10.2337/dci24-0032",
+            "type": "MULTISOCIETY_CONSENSUS_REPORT",
+            "verification": "VERIFIED",
+            "use": [
+              "DKA_diagnosis",
+              "DKA_monitoring",
+              "DKA_treatment"
+            ]
+          },
+          "source_status": "PINNED_VERIFIED_AT_REPORT_DATE_NOT_CONTINUOUSLY_VERIFIED"
+        }
+      ],
+      "model_status": {
+        "available": false,
+        "reason": "CRITICAL_LLM_DISABLED",
+        "mode": "CRITICAL",
+        "provider": "ollama"
+      },
+      "evaluation_id": "ce-1b577d42a72d4916a97390cecc4dbc64",
+      "generated": [],
+      "mode": "CRITICAL",
+      "document_issues": []
+    }
+  },
+  {
+    "mode": "CRITICAL",
+    "question": "Explica los criterios cumplidos.",
+    "elapsed_ms": 237,
+    "reply": {
+      "status": "EXTRACTIVE_ONLY",
+      "inference_executed": false,
+      "inference_attempted": false,
+      "message": "Modo CRITICAL: LLM desactivado. Consulta extractiva; el motor clínico permanece independiente.",
+      "retrieved": [
+        {
+          "id": "E1",
+          "kind": "ENGINE",
+          "text": "DKA: diagnóstico CRITERIA_MET; urgencia EMERGENCY; confirmación SATISFIED. Cumplir criterios no equivale a diagnóstico clínico firmado.",
+          "reference": {
+            "evaluation_id": "ce-1b577d42a72d4916a97390cecc4dbc64",
+            "condition_id": "DKA",
+            "source_ids": [
+              "SRC-DKA-2024"
+            ],
+            "input_hash": "c2c168db768e4e73e298159fd80df2c4c39e057eda6aa5dc915abd27ccef4723"
+          },
+          "logic_trace": {
+            "truth_state": "TRUE",
+            "operator": "all_of",
+            "children": [
+              {
+                "truth_state": "TRUE",
+                "operator": "any_of",
+                "children": [
+                  {
+                    "truth_state": "TRUE",
+                    "field": "known_diabetes",
+                    "operator": "==",
+                    "expected": true,
+                    "actual": true
+                  },
+                  {
+                    "truth_state": "FALSE",
+                    "field": "plasma_glucose_mg_dl",
+                    "operator": ">=",
+                    "expected": 200,
+                    "actual": 180.0
+                  }
+                ]
+              },
+              {
+                "truth_state": "TRUE",
+                "operator": "any_of",
+                "children": [
+                  {
+                    "truth_state": "TRUE",
+                    "field": "beta_hydroxybutyrate_mmol_l",
+                    "operator": ">=",
+                    "expected": 3.0,
+                    "actual": 4.2
+                  },
+                  {
+                    "truth_state": "UNKNOWN",
+                    "field": "urine_ketones_plus",
+                    "operator": ">=",
+                    "expected": 2,
+                    "actual": null
+                  }
+                ]
+              },
+              {
+                "truth_state": "TRUE",
+                "operator": "any_of",
+                "children": [
+                  {
+                    "truth_state": "TRUE",
+                    "field": "venous_pH",
+                    "operator": "<",
+                    "expected": 7.3,
+                    "actual": 7.22
+                  },
+                  {
+                    "truth_state": "UNKNOWN",
+                    "field": "bicarbonate_mmol_l",
+                    "operator": "<",
+                    "expected": 18,
+                    "actual": null
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "id": "E2",
+          "kind": "ENGINE",
+          "text": "DKA: suficiencia de datos. Estado del motor: CRITERIA_MET. Datos pendientes para resolver ramas indeterminadas: ninguno. Las opciones siguen la lógica AND/OR; esta lista no significa que deban medirse todas. Alternativas no medidas que no bloquean este resultado: bicarbonato, cetonas urinarias. Datos inválidos que impiden resolver ramas: ninguno. Datos pendientes para seguridad del protocolo: potasio. Protocolo: BLOCKED_MISSING_DATA. La seguridad terapéutica es independiente de los criterios diagnósticos. Cumplir criterios no es un diagnóstico firmado ni autoriza tratamiento.",
+          "reference": {
+            "evaluation_id": "ce-1b577d42a72d4916a97390cecc4dbc64",
+            "condition_id": "DKA",
+            "source_ids": [
+              "SRC-DKA-2024"
+            ],
+            "input_hash": "c2c168db768e4e73e298159fd80df2c4c39e057eda6aa5dc915abd27ccef4723"
+          },
+          "clinical_contract": {
+            "diagnostic_status": "CRITERIA_MET",
+            "missing_required": [],
+            "optional_not_measured": [
+              "bicarbonate_mmol_l",
+              "urine_ketones_plus"
+            ],
+            "required_for_protocol_safety": [
+              "potassium_mmol_l"
+            ]
+          }
+        },
+        {
+          "id": "E4",
+          "kind": "ENGINE",
+          "text": "DKA: criterio known_diabetes == True; observado True; satisfecho.",
+          "reference": {
+            "evaluation_id": "ce-1b577d42a72d4916a97390cecc4dbc64",
+            "condition_id": "DKA",
+            "source_ids": [
+              "SRC-DKA-2024"
+            ],
+            "input_hash": "c2c168db768e4e73e298159fd80df2c4c39e057eda6aa5dc915abd27ccef4723"
+          }
+        },
+        {
+          "id": "E5",
+          "kind": "ENGINE",
+          "text": "DKA: criterio plasma_glucose_mg_dl >= 200; observado 180.0; no satisfecho.",
+          "reference": {
+            "evaluation_id": "ce-1b577d42a72d4916a97390cecc4dbc64",
+            "condition_id": "DKA",
+            "source_ids": [
+              "SRC-DKA-2024"
+            ],
+            "input_hash": "c2c168db768e4e73e298159fd80df2c4c39e057eda6aa5dc915abd27ccef4723"
+          }
+        },
+        {
+          "id": "E6",
+          "kind": "ENGINE",
+          "text": "DKA: criterio beta_hydroxybutyrate_mmol_l >= 3.0; observado 4.2; satisfecho.",
+          "reference": {
+            "evaluation_id": "ce-1b577d42a72d4916a97390cecc4dbc64",
+            "condition_id": "DKA",
+            "source_ids": [
+              "SRC-DKA-2024"
+            ],
+            "input_hash": "c2c168db768e4e73e298159fd80df2c4c39e057eda6aa5dc915abd27ccef4723"
+          }
+        },
+        {
+          "id": "E7",
+          "kind": "ENGINE",
+          "text": "DKA: criterio venous_pH < 7.3; observado 7.22; satisfecho.",
+          "reference": {
+            "evaluation_id": "ce-1b577d42a72d4916a97390cecc4dbc64",
+            "condition_id": "DKA",
+            "source_ids": [
+              "SRC-DKA-2024"
+            ],
+            "input_hash": "c2c168db768e4e73e298159fd80df2c4c39e057eda6aa5dc915abd27ccef4723"
+          }
+        }
+      ],
+      "answer": [],
+      "sources": [
+        {
+          "source": {
+            "source_id": "SRC-DKA-2024",
+            "organization": "ADA/EASD/AACE/JBDS/DTS expert panel",
+            "title": "Hyperglycemic Crises in Adults With Diabetes: A Consensus Report",
+            "year": 2024,
+            "section": "Section 3, Figure 2A, Table 2; Section 4",
+            "doi": "10.2337/dci24-0032",
+            "url": "https://doi.org/10.2337/dci24-0032",
+            "type": "MULTISOCIETY_CONSENSUS_REPORT",
+            "verification": "VERIFIED",
+            "use": [
+              "DKA_diagnosis",
+              "DKA_monitoring",
+              "DKA_treatment"
+            ]
+          },
+          "source_status": "PINNED_VERIFIED_AT_REPORT_DATE_NOT_CONTINUOUSLY_VERIFIED"
+        }
+      ],
+      "model_status": {
+        "available": false,
+        "reason": "CRITICAL_LLM_DISABLED",
+        "mode": "CRITICAL",
+        "provider": "ollama"
+      },
+      "evaluation_id": "ce-1b577d42a72d4916a97390cecc4dbc64",
+      "generated": [],
+      "mode": "CRITICAL",
+      "document_issues": [
+        "NO_MATCHING_DOCUMENT_EXCERPT"
+      ]
+    }
+  }
+]

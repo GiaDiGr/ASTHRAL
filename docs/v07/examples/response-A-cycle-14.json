@@ -1,0 +1,1093 @@
+{
+  "id": "A-cycle-14",
+  "subject_id": "v07-crew-A",
+  "mission_id": "v07-mission-A",
+  "previous_run_id": "A-cycle-7",
+  "as_of": "2026-09-15T12:00:00+00:00",
+  "mode": "EXPERIMENTAL_NOT_CLINICALLY_VALIDATED",
+  "domains": [
+    {
+      "domain": "CARDIOVASCULAR",
+      "available_indicators": [
+        "physiology.vo2max",
+        "physiology.heart_rate"
+      ],
+      "missing_indicators": [
+        "adult_sbp_mm_hg",
+        "upright_sbp_mm_hg"
+      ],
+      "indicators": [
+        {
+          "variable": "physiology.vo2max",
+          "unit": "mL/min/kg",
+          "state": "DESCRIPTIVE_AVAILABLE",
+          "latest_measurement_id": "A-physiology-vo2max-14",
+          "value": 39.0,
+          "valid_count": 3,
+          "quality_issues": [],
+          "baseline_comparison": {
+            "baseline_id": "A-baseline-0",
+            "baseline_value": 50.0,
+            "absolute_change": -11.0,
+            "retention_percent": 78.0,
+            "interpretation": "DESCRIPTIVE_NOT_DIAGNOSTIC"
+          },
+          "trend": {
+            "slope_per_day": -0.6428571428571429,
+            "cadence_semantics": "PER_OBSERVATION_NOT_TIME_NORMALIZED",
+            "trace": [
+              {
+                "ewma": 48.0,
+                "cusum_positive": 0.0,
+                "cusum_negative": 0.0,
+                "statistical_signal": null
+              },
+              {
+                "ewma": 46.0,
+                "cusum_positive": 0.0,
+                "cusum_negative": -4.0,
+                "statistical_signal": null
+              },
+              {
+                "ewma": 42.5,
+                "cusum_positive": 0.0,
+                "cusum_negative": -13.0,
+                "statistical_signal": null
+              }
+            ],
+            "status": "RESEARCH_ONLY",
+            "input_ids": [
+              "A-physiology-vo2max-0",
+              "A-physiology-vo2max-7",
+              "A-physiology-vo2max-14"
+            ],
+            "maximum_observed_gap_seconds": 604800.0
+          },
+          "normative_finding_id": "3a51f59088eafb4a9224ad38249edc01acebf40e4bf311ffa4080fec93a60f44",
+          "source_ids": [
+            "S01",
+            "S05"
+          ],
+          "limitations": [
+            "EXPERIMENTAL_NOT_CLINICALLY_VALIDATED",
+            "NO_IMPUTATION",
+            "NO_VERIFIED_CLINICAL_CHANGE_THRESHOLD"
+          ]
+        },
+        {
+          "variable": "physiology.heart_rate",
+          "unit": "bpm",
+          "state": "DESCRIPTIVE_AVAILABLE",
+          "latest_measurement_id": "A-physiology-heart_rate-14",
+          "value": 79.0,
+          "valid_count": 3,
+          "quality_issues": [],
+          "baseline_comparison": null,
+          "trend": {
+            "slope_per_day": 1.0,
+            "cadence_semantics": "PER_OBSERVATION_NOT_TIME_NORMALIZED",
+            "trace": [
+              {
+                "ewma": 65.0,
+                "cusum_positive": 0.0,
+                "cusum_negative": 0.0,
+                "statistical_signal": null
+              },
+              {
+                "ewma": 68.5,
+                "cusum_positive": 7.0,
+                "cusum_negative": 0.0,
+                "statistical_signal": null
+              },
+              {
+                "ewma": 73.75,
+                "cusum_positive": 21.0,
+                "cusum_negative": 0.0,
+                "statistical_signal": null
+              }
+            ],
+            "status": "RESEARCH_ONLY",
+            "input_ids": [
+              "A-physiology-heart_rate-0",
+              "A-physiology-heart_rate-7",
+              "A-physiology-heart_rate-14"
+            ],
+            "maximum_observed_gap_seconds": 604800.0
+          },
+          "normative_finding_id": null,
+          "source_ids": [
+            "S01",
+            "S05"
+          ],
+          "limitations": [
+            "EXPERIMENTAL_NOT_CLINICALLY_VALIDATED",
+            "NO_IMPUTATION",
+            "NO_VERIFIED_CLINICAL_CHANGE_THRESHOLD"
+          ]
+        },
+        {
+          "variable": "adult_sbp_mm_hg",
+          "unit": "mmHg",
+          "state": "NOT_MEASURED",
+          "latest_measurement_id": null,
+          "value": null,
+          "valid_count": 0,
+          "quality_issues": [],
+          "baseline_comparison": null,
+          "trend": null,
+          "normative_finding_id": null,
+          "source_ids": [
+            "S01",
+            "S05"
+          ],
+          "limitations": [
+            "EXPERIMENTAL_NOT_CLINICALLY_VALIDATED",
+            "NO_IMPUTATION",
+            "NO_VERIFIED_CLINICAL_CHANGE_THRESHOLD"
+          ]
+        },
+        {
+          "variable": "upright_sbp_mm_hg",
+          "unit": "mmHg",
+          "state": "NOT_MEASURED",
+          "latest_measurement_id": null,
+          "value": null,
+          "valid_count": 0,
+          "quality_issues": [],
+          "baseline_comparison": null,
+          "trend": null,
+          "normative_finding_id": null,
+          "source_ids": [
+            "S01",
+            "S05"
+          ],
+          "limitations": [
+            "EXPERIMENTAL_NOT_CLINICALLY_VALIDATED",
+            "NO_IMPUTATION",
+            "NO_VERIFIED_CLINICAL_CHANGE_THRESHOLD"
+          ]
+        }
+      ],
+      "source_ids": [
+        "S01",
+        "S05"
+      ],
+      "method": "PERSONAL_BASELINE_AND_EXISTING_DESCRIPTIVE_STATISTICS",
+      "phase": "IN_MISSION",
+      "gravity": "MICROGRAVITY",
+      "applicability": "DESCRIPTIVE_MONITORING_ONLY",
+      "limitations": [
+        "HEMODYNAMIC_TREND_NOT_ETIOLOGY",
+        "UPRIGHT_TEST_NOT_APPLICABLE_IN_FREE_MICROGRAVITY",
+        "MEASUREMENT_POSTURE_PROTOCOL_REQUIRED"
+      ],
+      "accumulated_dose": null
+    },
+    {
+      "domain": "MUSCULOSKELETAL",
+      "available_indicators": [],
+      "missing_indicators": [
+        "physiology.strength",
+        "bone.hip_bmd",
+        "bone.lumbar_bmd"
+      ],
+      "indicators": [
+        {
+          "variable": "physiology.strength",
+          "unit": "N",
+          "state": "NOT_MEASURED",
+          "latest_measurement_id": null,
+          "value": null,
+          "valid_count": 0,
+          "quality_issues": [],
+          "baseline_comparison": null,
+          "trend": null,
+          "normative_finding_id": null,
+          "source_ids": [
+            "S01",
+            "S06"
+          ],
+          "limitations": [
+            "EXPERIMENTAL_NOT_CLINICALLY_VALIDATED",
+            "NO_IMPUTATION",
+            "NO_VERIFIED_CLINICAL_CHANGE_THRESHOLD"
+          ]
+        },
+        {
+          "variable": "bone.hip_bmd",
+          "unit": "g/cm2",
+          "state": "NOT_MEASURED",
+          "latest_measurement_id": null,
+          "value": null,
+          "valid_count": 0,
+          "quality_issues": [],
+          "baseline_comparison": null,
+          "trend": null,
+          "normative_finding_id": null,
+          "source_ids": [
+            "S01",
+            "S06"
+          ],
+          "limitations": [
+            "EXPERIMENTAL_NOT_CLINICALLY_VALIDATED",
+            "NO_IMPUTATION",
+            "NO_VERIFIED_CLINICAL_CHANGE_THRESHOLD"
+          ]
+        },
+        {
+          "variable": "bone.lumbar_bmd",
+          "unit": "g/cm2",
+          "state": "NOT_MEASURED",
+          "latest_measurement_id": null,
+          "value": null,
+          "valid_count": 0,
+          "quality_issues": [],
+          "baseline_comparison": null,
+          "trend": null,
+          "normative_finding_id": null,
+          "source_ids": [
+            "S01",
+            "S06"
+          ],
+          "limitations": [
+            "EXPERIMENTAL_NOT_CLINICALLY_VALIDATED",
+            "NO_IMPUTATION",
+            "NO_VERIFIED_CLINICAL_CHANGE_THRESHOLD"
+          ]
+        }
+      ],
+      "source_ids": [
+        "S01",
+        "S06"
+      ],
+      "method": "PERSONAL_BASELINE_AND_EXISTING_DESCRIPTIVE_STATISTICS",
+      "phase": "IN_MISSION",
+      "gravity": "MICROGRAVITY",
+      "applicability": "DESCRIPTIVE_MONITORING_ONLY",
+      "limitations": [
+        "DXA_MAINLY_GROUND_PRE_POST_NOT_ASSUMED_AVAILABLE_IN_FLIGHT",
+        "MATCH_SITE_AND_METHOD",
+        "TREND_NOT_FRACTURE_DIAGNOSIS"
+      ],
+      "accumulated_dose": null
+    },
+    {
+      "domain": "RADIATION",
+      "available_indicators": [],
+      "missing_indicators": [
+        "radiation.interval_effective_dose",
+        "radiation.career_spaceflight"
+      ],
+      "indicators": [
+        {
+          "variable": "radiation.interval_effective_dose",
+          "unit": "mSv",
+          "state": "NOT_MEASURED",
+          "latest_measurement_id": null,
+          "value": null,
+          "valid_count": 0,
+          "quality_issues": [],
+          "baseline_comparison": null,
+          "trend": null,
+          "normative_finding_id": null,
+          "source_ids": [
+            "S01",
+            "S16"
+          ],
+          "limitations": [
+            "EXPERIMENTAL_NOT_CLINICALLY_VALIDATED",
+            "NO_IMPUTATION",
+            "NO_VERIFIED_CLINICAL_CHANGE_THRESHOLD"
+          ]
+        },
+        {
+          "variable": "radiation.career_spaceflight",
+          "unit": "mSv",
+          "state": "NOT_MEASURED",
+          "latest_measurement_id": null,
+          "value": null,
+          "valid_count": 0,
+          "quality_issues": [],
+          "baseline_comparison": null,
+          "trend": null,
+          "normative_finding_id": null,
+          "source_ids": [
+            "S01",
+            "S16"
+          ],
+          "limitations": [
+            "EXPERIMENTAL_NOT_CLINICALLY_VALIDATED",
+            "NO_IMPUTATION",
+            "NO_VERIFIED_CLINICAL_CHANGE_THRESHOLD"
+          ]
+        }
+      ],
+      "source_ids": [
+        "S01",
+        "S16"
+      ],
+      "method": "PERSONAL_BASELINE_AND_EXISTING_DESCRIPTIVE_STATISTICS",
+      "phase": "IN_MISSION",
+      "gravity": "MICROGRAVITY",
+      "applicability": "DESCRIPTIVE_MONITORING_ONLY",
+      "limitations": [
+        "NO_ORGAN_DOSE_OR_RATE_CONVERSION_TO_EFFECTIVE_DOSE",
+        "MEASURED_DOSE_NOT_CANCER_DIAGNOSIS",
+        "WINDOW_SUM_NOT_LIFETIME_DOSE"
+      ],
+      "accumulated_dose": {
+        "state": "NOT_MEASURED",
+        "effective_dose_mSv": null,
+        "coverage_seconds": 0,
+        "issues": [],
+        "interpretation": "RECORDED_INTERVALS_ONLY_NOT_LIFETIME_DOSE_OR_DIAGNOSIS"
+      }
+    },
+    {
+      "domain": "SLEEP_BEHAVIOR",
+      "available_indicators": [],
+      "missing_indicators": [
+        "sleep.duration",
+        "sleep.efficiency",
+        "cognition.reaction_time",
+        "behavior.fatigue_score"
+      ],
+      "indicators": [
+        {
+          "variable": "sleep.duration",
+          "unit": "h",
+          "state": "NOT_MEASURED",
+          "latest_measurement_id": null,
+          "value": null,
+          "valid_count": 0,
+          "quality_issues": [],
+          "baseline_comparison": null,
+          "trend": null,
+          "normative_finding_id": null,
+          "source_ids": [
+            "S10",
+            "S12"
+          ],
+          "limitations": [
+            "EXPERIMENTAL_NOT_CLINICALLY_VALIDATED",
+            "NO_IMPUTATION",
+            "NO_VERIFIED_CLINICAL_CHANGE_THRESHOLD"
+          ]
+        },
+        {
+          "variable": "sleep.efficiency",
+          "unit": "%",
+          "state": "NOT_MEASURED",
+          "latest_measurement_id": null,
+          "value": null,
+          "valid_count": 0,
+          "quality_issues": [],
+          "baseline_comparison": null,
+          "trend": null,
+          "normative_finding_id": null,
+          "source_ids": [
+            "S10",
+            "S12"
+          ],
+          "limitations": [
+            "EXPERIMENTAL_NOT_CLINICALLY_VALIDATED",
+            "NO_IMPUTATION",
+            "NO_VERIFIED_CLINICAL_CHANGE_THRESHOLD"
+          ]
+        },
+        {
+          "variable": "cognition.reaction_time",
+          "unit": "ms",
+          "state": "NOT_MEASURED",
+          "latest_measurement_id": null,
+          "value": null,
+          "valid_count": 0,
+          "quality_issues": [],
+          "baseline_comparison": null,
+          "trend": null,
+          "normative_finding_id": null,
+          "source_ids": [
+            "S10",
+            "S12"
+          ],
+          "limitations": [
+            "EXPERIMENTAL_NOT_CLINICALLY_VALIDATED",
+            "NO_IMPUTATION",
+            "NO_VERIFIED_CLINICAL_CHANGE_THRESHOLD"
+          ]
+        },
+        {
+          "variable": "behavior.fatigue_score",
+          "unit": "1",
+          "state": "NOT_MEASURED",
+          "latest_measurement_id": null,
+          "value": null,
+          "valid_count": 0,
+          "quality_issues": [],
+          "baseline_comparison": null,
+          "trend": null,
+          "normative_finding_id": null,
+          "source_ids": [
+            "S10",
+            "S12"
+          ],
+          "limitations": [
+            "EXPERIMENTAL_NOT_CLINICALLY_VALIDATED",
+            "NO_IMPUTATION",
+            "NO_VERIFIED_CLINICAL_CHANGE_THRESHOLD"
+          ]
+        }
+      ],
+      "source_ids": [
+        "S10",
+        "S12"
+      ],
+      "method": "PERSONAL_BASELINE_AND_EXISTING_DESCRIPTIVE_STATISTICS",
+      "phase": "IN_MISSION",
+      "gravity": "MICROGRAVITY",
+      "applicability": "DESCRIPTIVE_MONITORING_ONLY",
+      "limitations": [
+        "WEAR_TIME_DIARY_TEST_VERSION_REQUIRED",
+        "NO_PSYCHIATRIC_DIAGNOSIS",
+        "FATIGUE_SCALE_MUST_MATCH_PROTOCOL"
+      ],
+      "accumulated_dose": null
+    },
+    {
+      "domain": "IMMUNE",
+      "available_indicators": [],
+      "missing_indicators": [
+        "immune.viral_load"
+      ],
+      "indicators": [
+        {
+          "variable": "immune.viral_load",
+          "unit": "copies/mL",
+          "state": "NOT_MEASURED",
+          "latest_measurement_id": null,
+          "value": null,
+          "valid_count": 0,
+          "quality_issues": [],
+          "baseline_comparison": null,
+          "trend": null,
+          "normative_finding_id": null,
+          "source_ids": [
+            "S09"
+          ],
+          "limitations": [
+            "EXPERIMENTAL_NOT_CLINICALLY_VALIDATED",
+            "NO_IMPUTATION",
+            "NO_VERIFIED_CLINICAL_CHANGE_THRESHOLD"
+          ]
+        }
+      ],
+      "source_ids": [
+        "S09"
+      ],
+      "method": "PERSONAL_BASELINE_AND_EXISTING_DESCRIPTIVE_STATISTICS",
+      "phase": "IN_MISSION",
+      "gravity": "MICROGRAVITY",
+      "applicability": "DESCRIPTIVE_MONITORING_ONLY",
+      "limitations": [
+        "ANALYTE_MUST_BE_IDENTIFIED_IN_SITE_AND_PROTOCOL",
+        "LAB_CAPABILITY_NOT_ASSUMED",
+        "PCR_TREND_NOT_REACTIVATION_DIAGNOSIS",
+        "NO_VERIFIED_SPACE_THRESHOLD"
+      ],
+      "accumulated_dose": null
+    },
+    {
+      "domain": "ELECTROLYTES_OXYGENATION",
+      "available_indicators": [],
+      "missing_indicators": [
+        "potassium_mmol_l",
+        "physiology.spo2",
+        "environment.ppo2"
+      ],
+      "indicators": [
+        {
+          "variable": "potassium_mmol_l",
+          "unit": "mmol/L",
+          "state": "NOT_MEASURED",
+          "latest_measurement_id": null,
+          "value": null,
+          "valid_count": 0,
+          "quality_issues": [],
+          "baseline_comparison": null,
+          "trend": null,
+          "normative_finding_id": null,
+          "source_ids": [
+            "S14",
+            "SRC-DKA-2024"
+          ],
+          "limitations": [
+            "EXPERIMENTAL_NOT_CLINICALLY_VALIDATED",
+            "NO_IMPUTATION",
+            "NO_VERIFIED_CLINICAL_CHANGE_THRESHOLD"
+          ]
+        },
+        {
+          "variable": "physiology.spo2",
+          "unit": "%",
+          "state": "NOT_MEASURED",
+          "latest_measurement_id": null,
+          "value": null,
+          "valid_count": 0,
+          "quality_issues": [],
+          "baseline_comparison": null,
+          "trend": null,
+          "normative_finding_id": null,
+          "source_ids": [
+            "S14",
+            "SRC-DKA-2024"
+          ],
+          "limitations": [
+            "EXPERIMENTAL_NOT_CLINICALLY_VALIDATED",
+            "NO_IMPUTATION",
+            "NO_VERIFIED_CLINICAL_CHANGE_THRESHOLD"
+          ]
+        },
+        {
+          "variable": "environment.ppo2",
+          "unit": "kPa",
+          "state": "NOT_MEASURED",
+          "latest_measurement_id": null,
+          "value": null,
+          "valid_count": 0,
+          "quality_issues": [],
+          "baseline_comparison": null,
+          "trend": null,
+          "normative_finding_id": null,
+          "source_ids": [
+            "S14",
+            "SRC-DKA-2024"
+          ],
+          "limitations": [
+            "EXPERIMENTAL_NOT_CLINICALLY_VALIDATED",
+            "NO_IMPUTATION",
+            "NO_VERIFIED_CLINICAL_CHANGE_THRESHOLD"
+          ]
+        }
+      ],
+      "source_ids": [
+        "S14",
+        "SRC-DKA-2024"
+      ],
+      "method": "PERSONAL_BASELINE_AND_EXISTING_DESCRIPTIVE_STATISTICS",
+      "phase": "IN_MISSION",
+      "gravity": "MICROGRAVITY",
+      "applicability": "DESCRIPTIVE_MONITORING_ONLY",
+      "limitations": [
+        "DESCRIPTIVE_ONLY_NO_UNIVERSAL_THRESHOLD",
+        "POTASSIUM_DKA_SAFETY_REMAINS_SEPARATE",
+        "OXIMETRY_PERFUSION_MOTION_PRESSURE_CONTEXT_REQUIRED",
+        "AMBIENT_OXYGEN_NOT_ARTERIAL_OXYGENATION"
+      ],
+      "accumulated_dose": null
+    }
+  ],
+  "clinical_evaluations": {
+    "ORTHOSTATIC_HYPOTENSION": {
+      "id": "ce-3667c4aed507bab1023639b342acbc1d",
+      "parent_id": "ce-8c60945c4d6f45236dacaed284fbb19d",
+      "results": {
+        "ORTHOSTATIC_HYPOTENSION": {
+          "condition_id": "ORTHOSTATIC_HYPOTENSION",
+          "diagnostic_status": "NOT_APPLICABLE",
+          "urgency": "ROUTINE",
+          "confirmation_status": "NOT_APPLICABLE",
+          "protocol_status": "NOT_INDICATED",
+          "treatment_status": "NOT_STARTED",
+          "criterion_id": "CRIT-OH-AHA-2024",
+          "criterion_version": "2024.1",
+          "source_ids": [
+            "SRC-AHA-OH-2024"
+          ],
+          "source_statuses": {
+            "SRC-AHA-OH-2024": "PINNED_VERIFIED_AT_REPORT_DATE_NOT_CONTINUOUSLY_VERIFIED"
+          },
+          "evaluation_tree": {
+            "operator": "all_of",
+            "state": null,
+            "truth_state": "UNKNOWN",
+            "path": "root",
+            "logic_version": "four-state-1",
+            "children": [
+              {
+                "operator": "any_of",
+                "state": null,
+                "truth_state": "UNKNOWN",
+                "path": "root/0",
+                "logic_version": "four-state-1",
+                "children": [
+                  {
+                    "operator": "<=",
+                    "state": null,
+                    "truth_state": "UNKNOWN",
+                    "field": "delta_sbp_mm_hg",
+                    "expected": -20,
+                    "actual": null,
+                    "path": "root/0/0",
+                    "logic_version": "four-state-1",
+                    "reasons": [
+                      "NOT_AVAILABLE"
+                    ],
+                    "required_for_resolution": true,
+                    "nonblocking_ancestor": null
+                  },
+                  {
+                    "operator": "<=",
+                    "state": null,
+                    "truth_state": "UNKNOWN",
+                    "field": "delta_dbp_mm_hg",
+                    "expected": -10,
+                    "actual": null,
+                    "path": "root/0/1",
+                    "logic_version": "four-state-1",
+                    "reasons": [
+                      "NOT_AVAILABLE"
+                    ],
+                    "required_for_resolution": true,
+                    "nonblocking_ancestor": null
+                  }
+                ],
+                "decisive_children": [
+                  "root/0/0",
+                  "root/0/1"
+                ],
+                "required_for_resolution": true
+              },
+              {
+                "operator": "<=",
+                "state": null,
+                "truth_state": "UNKNOWN",
+                "field": "upright_window_minutes",
+                "expected": 3,
+                "actual": null,
+                "path": "root/1",
+                "logic_version": "four-state-1",
+                "reasons": [
+                  "NOT_AVAILABLE"
+                ],
+                "required_for_resolution": true,
+                "nonblocking_ancestor": null
+              },
+              {
+                "operator": "==",
+                "state": null,
+                "truth_state": "UNKNOWN",
+                "field": "sustained_reduction",
+                "expected": true,
+                "actual": null,
+                "path": "root/2",
+                "logic_version": "four-state-1",
+                "reasons": [
+                  "NOT_AVAILABLE"
+                ],
+                "required_for_resolution": true,
+                "nonblocking_ancestor": null
+              }
+            ],
+            "decisive_children": [
+              "root/0",
+              "root/1",
+              "root/2"
+            ],
+            "required_for_resolution": true
+          },
+          "missing_fields": [
+            "delta_dbp_mm_hg",
+            "delta_sbp_mm_hg",
+            "sustained_reduction",
+            "upright_window_minutes"
+          ],
+          "missing_required": [
+            "delta_dbp_mm_hg",
+            "delta_sbp_mm_hg",
+            "sustained_reduction",
+            "upright_window_minutes"
+          ],
+          "optional_not_measured": [],
+          "required_for_protocol_safety": [],
+          "invalid_required": [],
+          "invalid_fields": [],
+          "missing_requirement_semantics": "UNRESOLVED_CANDIDATES_RESPECT_AND_OR_NOT_ALL_MANDATORY",
+          "data_requirement_version": "four-state-1",
+          "data_issues": [],
+          "space_applicability": "NOT_APPLICABLE",
+          "limitations": [
+            "RESEARCH_ONLY",
+            "TERRESTRIAL_CRITERIA_NOT_SPACE_VALIDATION",
+            "CRITERIA_NOT_MET_DOES_NOT_EXCLUDE_DISEASE",
+            "MANUAL_OBSERVATIONS_USE_DECLARED_WINDOW_NOT_VALIDATED_FRESHNESS",
+            "MEASUREMENT_CONTEXT_ATTESTED_NOT_INDEPENDENTLY_VERIFIED",
+            "URGENCY_RESEARCH_POLICY_NOT_VALIDATED_TRIAGE",
+            "STANDARD_UPRIGHT_TEST_UNSUPPORTED_IN_FREE_MICROGRAVITY"
+          ],
+          "protocol": {
+            "protocol_id": "PROT-OH-POTS-INITIAL",
+            "indication_supported": false,
+            "status": "NOT_INDICATED",
+            "block_reasons": [
+              "NOT_INDICATED",
+              "BLOCKED_AUTHORIZATION"
+            ],
+            "required_for_protocol_safety": [],
+            "missing_resources": [],
+            "authorization": "NO_VERIFIED_MISSION_POLICY",
+            "automatic_execution": false
+          },
+          "metadata": {
+            "hypoglycemia_level_minimum_supported": null,
+            "aki_stage": null,
+            "aki_stage_is_minimum_supported": false,
+            "resolution_status": null,
+            "disease_excluded": false,
+            "clinical_validation": "NOT_VALIDATED",
+            "derivation_inputs": {}
+          }
+        }
+      },
+      "differential": [
+        {
+          "condition_id": "ORTHOSTATIC_HYPOTENSION",
+          "reported_condition_id": "ORTHOSTATIC_HYPOTENSION",
+          "tier": "NOT_EVALUABLE",
+          "diagnostic_status": "NOT_APPLICABLE",
+          "support": [],
+          "contradictions": [],
+          "criteria_implemented": true,
+          "source_ids": [
+            "SRC-AHA-OH-2024"
+          ],
+          "external_evaluation_required": false,
+          "urgency": "ROUTINE"
+        }
+      ],
+      "next_tests": [],
+      "urgency": "ROUTINE",
+      "treatment_status": "NOT_STARTED",
+      "presentation_protocol": null,
+      "input_hash": "7077dca58266f87d27c960baf594ef60f457fbd54e65050e60369be3346077f1",
+      "knowledge_hash": "b8c568bd645154e5fd67630c7a670ca53904dc04f54904315047a89923839d4e",
+      "knowledge_version": "0.7.0",
+      "implementation_hash": "d4d5475981df7b1874c511f3ed51678ecf7d19b44997f6fee92cf275da3bd321",
+      "output_hash": "fa788c564845b8bbdef1e42042eebecc07fa797218c6ae13ecce8d0269c3b23b"
+    },
+    "POTS": {
+      "id": "ce-363451e4c33baa6635f4be3630b9018d",
+      "parent_id": "ce-95a21c7375dc35b79b8e74a289e853e2",
+      "results": {
+        "POTS": {
+          "condition_id": "POTS",
+          "diagnostic_status": "NOT_APPLICABLE",
+          "urgency": "ROUTINE",
+          "confirmation_status": "NOT_APPLICABLE",
+          "protocol_status": "NOT_INDICATED",
+          "treatment_status": "NOT_STARTED",
+          "criterion_id": "CRIT-POTS-HRS-NIH",
+          "criterion_version": "2015-2021.1",
+          "source_ids": [
+            "SRC-HRS-POTS-2015",
+            "SRC-NIH-POTS-2021"
+          ],
+          "source_statuses": {
+            "SRC-HRS-POTS-2015": "PINNED_VERIFIED_AT_REPORT_DATE_NOT_CONTINUOUSLY_VERIFIED",
+            "SRC-NIH-POTS-2021": "PINNED_VERIFIED_AT_REPORT_DATE_NOT_CONTINUOUSLY_VERIFIED"
+          },
+          "evaluation_tree": {
+            "operator": "all_of",
+            "state": null,
+            "truth_state": "UNKNOWN",
+            "path": "root",
+            "logic_version": "four-state-1",
+            "children": [
+              {
+                "operator": ">=",
+                "state": null,
+                "truth_state": "UNKNOWN",
+                "field": "sustained_delta_hr_bpm",
+                "expected": 30,
+                "actual": null,
+                "path": "root/0",
+                "logic_version": "four-state-1",
+                "reasons": [
+                  "NOT_AVAILABLE"
+                ],
+                "required_for_resolution": true,
+                "nonblocking_ancestor": null
+              },
+              {
+                "operator": "<=",
+                "state": null,
+                "truth_state": "UNKNOWN",
+                "field": "upright_window_minutes",
+                "expected": 10,
+                "actual": null,
+                "path": "root/1",
+                "logic_version": "four-state-1",
+                "reasons": [
+                  "NOT_AVAILABLE"
+                ],
+                "required_for_resolution": true,
+                "nonblocking_ancestor": null
+              },
+              {
+                "operator": "==",
+                "state": null,
+                "truth_state": "UNKNOWN",
+                "field": "orthostatic_hypotension_present",
+                "expected": false,
+                "actual": null,
+                "path": "root/2",
+                "logic_version": "four-state-1",
+                "reasons": [
+                  "NOT_AVAILABLE"
+                ],
+                "required_for_resolution": true,
+                "nonblocking_ancestor": null
+              },
+              {
+                "operator": "==",
+                "state": null,
+                "truth_state": "UNKNOWN",
+                "field": "orthostatic_symptoms_frequent",
+                "expected": true,
+                "actual": null,
+                "path": "root/3",
+                "logic_version": "four-state-1",
+                "reasons": [
+                  "NOT_AVAILABLE"
+                ],
+                "required_for_resolution": true,
+                "nonblocking_ancestor": null
+              },
+              {
+                "operator": "==",
+                "state": null,
+                "truth_state": "UNKNOWN",
+                "field": "symptoms_improve_supine",
+                "expected": true,
+                "actual": null,
+                "path": "root/4",
+                "logic_version": "four-state-1",
+                "reasons": [
+                  "NOT_AVAILABLE"
+                ],
+                "required_for_resolution": true,
+                "nonblocking_ancestor": null
+              },
+              {
+                "operator": ">=",
+                "state": null,
+                "truth_state": "UNKNOWN",
+                "field": "symptom_duration_months",
+                "expected": 3,
+                "actual": null,
+                "path": "root/5",
+                "logic_version": "four-state-1",
+                "reasons": [
+                  "NOT_AVAILABLE"
+                ],
+                "required_for_resolution": true,
+                "nonblocking_ancestor": null
+              },
+              {
+                "operator": "==",
+                "state": null,
+                "truth_state": "UNKNOWN",
+                "field": "alternative_cause_present",
+                "expected": false,
+                "actual": null,
+                "path": "root/6",
+                "logic_version": "four-state-1",
+                "reasons": [
+                  "NOT_AVAILABLE"
+                ],
+                "required_for_resolution": true,
+                "nonblocking_ancestor": null
+              }
+            ],
+            "decisive_children": [
+              "root/0",
+              "root/1",
+              "root/2",
+              "root/3",
+              "root/4",
+              "root/5",
+              "root/6"
+            ],
+            "required_for_resolution": true
+          },
+          "missing_fields": [
+            "alternative_cause_present",
+            "orthostatic_hypotension_present",
+            "orthostatic_symptoms_frequent",
+            "sustained_delta_hr_bpm",
+            "symptom_duration_months",
+            "symptoms_improve_supine",
+            "upright_window_minutes"
+          ],
+          "missing_required": [
+            "alternative_cause_present",
+            "orthostatic_hypotension_present",
+            "orthostatic_symptoms_frequent",
+            "sustained_delta_hr_bpm",
+            "symptom_duration_months",
+            "symptoms_improve_supine",
+            "upright_window_minutes"
+          ],
+          "optional_not_measured": [],
+          "required_for_protocol_safety": [],
+          "invalid_required": [],
+          "invalid_fields": [],
+          "missing_requirement_semantics": "UNRESOLVED_CANDIDATES_RESPECT_AND_OR_NOT_ALL_MANDATORY",
+          "data_requirement_version": "four-state-1",
+          "data_issues": [],
+          "space_applicability": "NOT_APPLICABLE",
+          "limitations": [
+            "RESEARCH_ONLY",
+            "TERRESTRIAL_CRITERIA_NOT_SPACE_VALIDATION",
+            "CRITERIA_NOT_MET_DOES_NOT_EXCLUDE_DISEASE",
+            "MANUAL_OBSERVATIONS_USE_DECLARED_WINDOW_NOT_VALIDATED_FRESHNESS",
+            "MEASUREMENT_CONTEXT_ATTESTED_NOT_INDEPENDENTLY_VERIFIED",
+            "URGENCY_RESEARCH_POLICY_NOT_VALIDATED_TRIAGE",
+            "STANDARD_UPRIGHT_TEST_UNSUPPORTED_IN_FREE_MICROGRAVITY"
+          ],
+          "protocol": {
+            "protocol_id": "PROT-OH-POTS-INITIAL",
+            "indication_supported": false,
+            "status": "NOT_INDICATED",
+            "block_reasons": [
+              "NOT_INDICATED",
+              "BLOCKED_AUTHORIZATION"
+            ],
+            "required_for_protocol_safety": [],
+            "missing_resources": [],
+            "authorization": "NO_VERIFIED_MISSION_POLICY",
+            "automatic_execution": false
+          },
+          "metadata": {
+            "hypoglycemia_level_minimum_supported": null,
+            "aki_stage": null,
+            "aki_stage_is_minimum_supported": false,
+            "resolution_status": null,
+            "disease_excluded": false,
+            "clinical_validation": "NOT_VALIDATED",
+            "derivation_inputs": {}
+          }
+        }
+      },
+      "differential": [
+        {
+          "condition_id": "POTS",
+          "reported_condition_id": "POTS",
+          "tier": "NOT_EVALUABLE",
+          "diagnostic_status": "NOT_APPLICABLE",
+          "support": [],
+          "contradictions": [],
+          "criteria_implemented": true,
+          "source_ids": [
+            "SRC-HRS-POTS-2015",
+            "SRC-NIH-POTS-2021"
+          ],
+          "external_evaluation_required": false,
+          "urgency": "ROUTINE"
+        }
+      ],
+      "next_tests": [],
+      "urgency": "ROUTINE",
+      "treatment_status": "NOT_STARTED",
+      "presentation_protocol": null,
+      "input_hash": "c717b39891c73262900980804c4a7d24b1857385b8e5aebac191c9dced6e20aa",
+      "knowledge_hash": "b8c568bd645154e5fd67630c7a670ca53904dc04f54904315047a89923839d4e",
+      "knowledge_version": "0.7.0",
+      "implementation_hash": "d4d5475981df7b1874c511f3ed51678ecf7d19b44997f6fee92cf275da3bd321",
+      "output_hash": "880a9fdb20384d375b6cf1d403dd70b179ccb61e93f160515983f56307feb60c"
+    }
+  },
+  "events": [
+    {
+      "id": "me-4ec53057e41167001756d207ced97f2e",
+      "key": "norm:physiology.vo2max",
+      "kind": "NORMATIVE_REQUIREMENT",
+      "state": "REQUIREMENT_NOT_MET",
+      "urgency": "ROUTINE",
+      "notify": true,
+      "reason": "NEW_OR_CHANGED_STATE",
+      "evidence_ids": [
+        "A-baseline-0",
+        "A-physiology-vo2max-14"
+      ],
+      "source_ids": [
+        "S01",
+        "S05"
+      ],
+      "diagnosis": null,
+      "clinical_execution": "BLOCKED"
+    },
+    {
+      "id": "me-7646a676dd15338c95a870763eb25bdd",
+      "key": "clinical:ORTHOSTATIC_HYPOTENSION",
+      "kind": "CLINICAL_CRITERIA",
+      "state": "NOT_APPLICABLE",
+      "urgency": "ROUTINE",
+      "notify": false,
+      "reason": "UNCHANGED_STATE_NO_REPEAT_NOTIFICATION",
+      "evidence_ids": [],
+      "source_ids": [
+        "SRC-AHA-OH-2024"
+      ],
+      "diagnosis": null,
+      "clinical_execution": "BLOCKED"
+    },
+    {
+      "id": "me-54a967b72e92c133dfaf8c9e8e3736c9",
+      "key": "clinical:POTS",
+      "kind": "CLINICAL_CRITERIA",
+      "state": "NOT_APPLICABLE",
+      "urgency": "ROUTINE",
+      "notify": false,
+      "reason": "UNCHANGED_STATE_NO_REPEAT_NOTIFICATION",
+      "evidence_ids": [],
+      "source_ids": [
+        "SRC-HRS-POTS-2015",
+        "SRC-NIH-POTS-2021"
+      ],
+      "diagnosis": null,
+      "clinical_execution": "BLOCKED"
+    }
+  ],
+  "episode_ids": {},
+  "followup_ids": [],
+  "clinical_context_id": "A-context",
+  "event_states": {
+    "norm:physiology.vo2max": {
+      "fingerprint": "2c3c0cf93b46608318d6a92ba6a3f402244dedb39419fd3cc768004a2bb7a9e0",
+      "evidence_ids": [
+        "A-baseline-0",
+        "A-physiology-vo2max-14"
+      ],
+      "state": "REQUIREMENT_NOT_MET",
+      "urgency": "ROUTINE"
+    },
+    "clinical:ORTHOSTATIC_HYPOTENSION": {
+      "fingerprint": "153e28689366579833ca458e834d7e86f35faacc3a09a306e4b450a75d26348b",
+      "evidence_ids": [],
+      "state": "NOT_APPLICABLE",
+      "urgency": "ROUTINE"
+    },
+    "clinical:POTS": {
+      "fingerprint": "778a297f78d0afdeafda7627249f1bc0c3c0500b1c350d3679db68087a17caad",
+      "evidence_ids": [],
+      "state": "NOT_APPLICABLE",
+      "urgency": "ROUTINE"
+    }
+  },
+  "input_hash": "8344bb49c05692b64ee99b2bb1cb54694f39ab1ca369aad5573d873bb2bcd170",
+  "output_hash": "f95fe219e6d52b05762c34ec4743889054b5e0f0701b43117c3ffb03ed39798a",
+  "implementation_hash": "d4d5475981df7b1874c511f3ed51678ecf7d19b44997f6fee92cf275da3bd321",
+  "knowledge_hash": "b8c568bd645154e5fd67630c7a670ca53904dc04f54904315047a89923839d4e",
+  "policy_reference": "V07_SYNTHETIC_SOFTWARE_POLICY_NOT_A_CLINICAL_PROTOCOL",
+  "clinical_execution": "BLOCKED"
+}

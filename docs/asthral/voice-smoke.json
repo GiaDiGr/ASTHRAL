@@ -1,0 +1,14 @@
+{
+  "automated_synthetic_SAPI_to_Vosk_test": true,
+  "human_microphone_used": false,
+  "human_listening_acceptance": false,
+  "text": "ASTHRAL, what is my recorded baseline?",
+  "raw_transcript": "as thrill what is my recorded baseline",
+  "name_alias_result": "ASTHRAL what is my recorded baseline",
+  "stt_model": "vosk-model-small-en-us-0.15",
+  "tts_voice": "Microsoft David Desktop",
+  "transcription_seconds": 1.1183427999999367,
+  "synthesis_seconds": 0.933595299999979,
+  "audio_written_to_disk": false,
+  "total_seconds": 2.9236197999998694
+}

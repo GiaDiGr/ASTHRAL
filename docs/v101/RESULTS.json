@@ -1,0 +1,98 @@
+{
+  "version": "1.0.1",
+  "date": "2026-10-31",
+  "status": "TECHNICALLY_INTEGRABLE_SYNTHETIC_RESEARCH_SUPPORT",
+  "clinical_execution": "BLOCKED",
+  "clinical_validation": false,
+  "operational_or_flight_validation": false,
+  "implementation_hash": "5d4434a8a7fe572c29e8100fc428b6ca705fe0e9f9fd26ca9638521000633b77",
+  "knowledge_hash": "b8c568bd645154e5fd67630c7a670ca53904dc04f54904315047a89923839d4e",
+  "code_archive_sha256": "d5b36de30bdc35b3422eabc91787ac1349afc80fdb2d1b510a6aa4a996cbdfa3",
+  "source_freeze_verified_after_tests": true,
+  "full_suite": {
+    "tests": "687",
+    "failures": "0",
+    "errors": "0",
+    "skipped": "0",
+    "time": "463.526",
+    "timestamp": "2026-10-31T12:06:51.882455-05:00"
+  },
+  "warnings": [
+    {
+      "category": "StarletteDeprecationWarning",
+      "message": "httpx with starlette.testclient deprecated; existing dependency retained, no installation or dependency change"
+    }
+  ],
+  "new_targeted_tests": {
+    "tests": "54",
+    "failures": "0",
+    "errors": "0",
+    "skipped": "0",
+    "time": "8.327",
+    "timestamp": "2026-10-31T12:04:07.928969-05:00"
+  },
+  "simulated_DOM_scenarios": 6,
+  "original_synthetic_cases_compared": 30,
+  "semantic_hash_equal_to_R2": "d2c9a8867c438505c08903d4765757fb3067ebd6381671ca6667593dfacd81bf",
+  "clinical_knowledge_files_unchanged": 10,
+  "unchanged_clinical_functions": [
+    {
+      "function": "normalize",
+      "ast_unchanged": true
+    },
+    {
+      "function": "dm_confirmation",
+      "ast_unchanged": true
+    },
+    {
+      "function": "protocol_eligibility",
+      "ast_unchanged": true
+    },
+    {
+      "function": "evaluate_condition",
+      "ast_unchanged": true
+    }
+  ],
+  "archived_r2_replays": 76,
+  "archived_r2_all_matches": true,
+  "demo": {
+    "scenarios": 5,
+    "inventory_versions": 4,
+    "clinical_replays": 11,
+    "monitoring_replays": 1,
+    "all_match": true,
+    "human_records": 5,
+    "audit_valid": true,
+    "verified_backup_and_restored_replays": true,
+    "no_real_treatment_administered": true
+  },
+  "live_HTTP": {
+    "real_loopback_http": true,
+    "version": "1.0.1",
+    "reader_dashboard_and_management_asset": true,
+    "frozen_frame": "v101-management-frame",
+    "inventory_version": 4,
+    "management_records": 5,
+    "urgency": "EMERGENCY",
+    "clinical_execution": "BLOCKED",
+    "cross_origin_status": 403,
+    "credentials_and_cookies_omitted": true,
+    "real_browser_visual_inspection": "UNAVAILABLE_CUA_KERNEL_ASSETS_PATH_ERROR",
+    "physical_voice_test": false
+  },
+  "backend_reader_GETs_verified": 4,
+  "backend_reader_write_status": 403,
+  "powershell_external_reader_example_verified": true,
+  "browser_visual_QA": "PENDING_CUA_KERNEL_ASSET_INITIALIZATION_ERROR",
+  "physical_voice_QA": "PENDING_FROM_R2_NOT_RETESTED",
+  "LLM_new_generation_test": "NOT_PERFORMED_NO_NEW_LLM_FEATURES_OR_RESERVED_BANK_REUSE",
+  "new_dependencies": [],
+  "security_limits": [
+    "SQLITE_WAL_BACKUPS_NOT_ENCRYPTED",
+    "SAME_USER_PROCESSES_NOT_ISOLATED",
+    "STORAGE_CONTROL_CAN_REWRITE_HASH_CHAIN",
+    "NO_VERIFIED_MISSION_MEDICAL_AUTHORITY"
+  ],
+  "clinical_pending_review": "CLINICAL_REVIEW.md",
+  "development_failures": "Earlier development XML retained separately; fixture token length/lineage and DOM text assertion corrected; final run is final-tests.xml"
+}

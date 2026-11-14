@@ -1,0 +1,1406 @@
+{
+  "profiles": {
+    "FULL": {
+      "warmup": {
+        "generated": [
+          {
+            "text": "The baseline value for VO2 max is 50.0 mL/min/kg.",
+            "evidence_ids": [
+              "M5"
+            ],
+            "kind": "MODEL_EXPLANATION",
+            "references": [
+              {
+                "run_id": "A-cycle-14",
+                "as_of": "2026-09-15T12:00:00+00:00",
+                "output_hash": "e2aa6636a58b7a1ed96914cf66f35f1e5ae1cdcfdd95818f7ab2759cfafa14ac",
+                "variable": "physiology.vo2max",
+                "baseline_id": "A-baseline-0",
+                "source_ids": [
+                  "S01",
+                  "S05"
+                ]
+              }
+            ]
+          },
+          {
+            "text": "The baseline value for heart rate shows a daily slope of 1.0 bpm/day.",
+            "evidence_ids": [
+              "M8"
+            ],
+            "kind": "MODEL_EXPLANATION",
+            "references": [
+              {
+                "run_id": "A-cycle-14",
+                "as_of": "2026-09-15T12:00:00+00:00",
+                "output_hash": "e2aa6636a58b7a1ed96914cf66f35f1e5ae1cdcfdd95818f7ab2759cfafa14ac",
+                "variable": "physiology.heart_rate",
+                "source_ids": [
+                  "S01",
+                  "S05"
+                ]
+              }
+            ]
+          }
+        ],
+        "status": "ANSWERED",
+        "inference_executed": true,
+        "metrics": {
+          "elapsed_ms": 1879.4417000026442,
+          "usage": {},
+          "timings": {},
+          "load_duration_ns": 25718700,
+          "total_duration_ns": 1863661700,
+          "prompt_eval_count": 1361,
+          "eval_count": 71,
+          "eval_duration_ns": 1067730000,
+          "verification": {
+            "elapsed_ms": 509.55880001129117,
+            "usage": {},
+            "timings": {},
+            "load_duration_ns": 15406700,
+            "total_duration_ns": 481519300,
+            "prompt_eval_count": 263,
+            "eval_count": 6,
+            "eval_duration_ns": 131604000
+          }
+        },
+        "grounding": "CITATIONS_AND_LOCAL_MODEL_CHECK_NOT_CLINICAL_VALIDATION"
+      },
+      "rows": [
+        {
+          "monotonic": 100686.1390198,
+          "available_ram_bytes": 3133546496,
+          "processes": [
+            {
+              "pid": 44472,
+              "working_set_bytes": 60399616,
+              "private_bytes": 81625088,
+              "cpu_seconds": 9.734375
+            },
+            {
+              "pid": 48912,
+              "working_set_bytes": 7761920,
+              "private_bytes": 1454080,
+              "cpu_seconds": 0.046875
+            },
+            {
+              "pid": 26224,
+              "working_set_bytes": 8635297792,
+              "private_bytes": 12529500160,
+              "cpu_seconds": 57.9375
+            },
+            {
+              "pid": 13072,
+              "working_set_bytes": 7806976,
+              "private_bytes": 1531904,
+              "cpu_seconds": 0.015625
+            },
+            {
+              "pid": 48900,
+              "working_set_bytes": 50315264,
+              "private_bytes": 33923072,
+              "cpu_seconds": 0.4375
+            }
+          ],
+          "energy": "NOT_MEASURED",
+          "gpu_global": {
+            "vram_used_MiB": 3527,
+            "gpu_utilization_percent": 0,
+            "memory_utilization_percent": 0
+          }
+        },
+        {
+          "monotonic": 100687.2383094,
+          "available_ram_bytes": 3308253184,
+          "processes": [
+            {
+              "pid": 44472,
+              "working_set_bytes": 60456960,
+              "private_bytes": 81657856,
+              "cpu_seconds": 9.734375
+            },
+            {
+              "pid": 48912,
+              "working_set_bytes": 7761920,
+              "private_bytes": 1454080,
+              "cpu_seconds": 0.046875
+            },
+            {
+              "pid": 26224,
+              "working_set_bytes": 8463884288,
+              "private_bytes": 12357664768,
+              "cpu_seconds": 59.0
+            },
+            {
+              "pid": 13072,
+              "working_set_bytes": 7806976,
+              "private_bytes": 1531904,
+              "cpu_seconds": 0.015625
+            },
+            {
+              "pid": 48900,
+              "working_set_bytes": 50778112,
+              "private_bytes": 34258944,
+              "cpu_seconds": 0.453125
+            }
+          ],
+          "energy": "NOT_MEASURED",
+          "gpu_global": {
+            "vram_used_MiB": 3527,
+            "gpu_utilization_percent": 94,
+            "memory_utilization_percent": 99
+          }
+        },
+        {
+          "monotonic": 100688.3156247,
+          "available_ram_bytes": 3301584896,
+          "processes": [
+            {
+              "pid": 44472,
+              "working_set_bytes": 60960768,
+              "private_bytes": 82337792,
+              "cpu_seconds": 9.8125
+            },
+            {
+              "pid": 48912,
+              "working_set_bytes": 7761920,
+              "private_bytes": 1454080,
+              "cpu_seconds": 0.046875
+            },
+            {
+              "pid": 26224,
+              "working_set_bytes": 8463941632,
+              "private_bytes": 12357664768,
+              "cpu_seconds": 60.03125
+            },
+            {
+              "pid": 13072,
+              "working_set_bytes": 7806976,
+              "private_bytes": 1531904,
+              "cpu_seconds": 0.015625
+            },
+            {
+              "pid": 48900,
+              "working_set_bytes": 51253248,
+              "private_bytes": 34447360,
+              "cpu_seconds": 0.46875
+            }
+          ],
+          "energy": "NOT_MEASURED",
+          "gpu_global": {
+            "vram_used_MiB": 3527,
+            "gpu_utilization_percent": 77,
+            "memory_utilization_percent": 82
+          }
+        },
+        {
+          "monotonic": 100689.4003385,
+          "available_ram_bytes": 3312975872,
+          "processes": [
+            {
+              "pid": 44472,
+              "working_set_bytes": 60989440,
+              "private_bytes": 82337792,
+              "cpu_seconds": 9.875
+            },
+            {
+              "pid": 48912,
+              "working_set_bytes": 7761920,
+              "private_bytes": 1454080,
+              "cpu_seconds": 0.046875
+            },
+            {
+              "pid": 26224,
+              "working_set_bytes": 8465113088,
+              "private_bytes": 12367417344,
+              "cpu_seconds": 61.0625
+            },
+            {
+              "pid": 13072,
+              "working_set_bytes": 7806976,
+              "private_bytes": 1531904,
+              "cpu_seconds": 0.015625
+            },
+            {
+              "pid": 48900,
+              "working_set_bytes": 52363264,
+              "private_bytes": 35454976,
+              "cpu_seconds": 0.5
+            }
+          ],
+          "energy": "NOT_MEASURED",
+          "gpu_global": {
+            "vram_used_MiB": 3527,
+            "gpu_utilization_percent": 93,
+            "memory_utilization_percent": 98
+          }
+        },
+        {
+          "monotonic": 100690.4971528,
+          "available_ram_bytes": 3305037824,
+          "processes": [
+            {
+              "pid": 44472,
+              "working_set_bytes": 60989440,
+              "private_bytes": 82337792,
+              "cpu_seconds": 9.890625
+            },
+            {
+              "pid": 48912,
+              "working_set_bytes": 7761920,
+              "private_bytes": 1454080,
+              "cpu_seconds": 0.046875
+            },
+            {
+              "pid": 26224,
+              "working_set_bytes": 8463929344,
+              "private_bytes": 12357664768,
+              "cpu_seconds": 62.15625
+            },
+            {
+              "pid": 13072,
+              "working_set_bytes": 7806976,
+              "private_bytes": 1531904,
+              "cpu_seconds": 0.015625
+            },
+            {
+              "pid": 48900,
+              "working_set_bytes": 52568064,
+              "private_bytes": 35725312,
+              "cpu_seconds": 0.515625
+            }
+          ],
+          "energy": "NOT_MEASURED",
+          "gpu_global": {
+            "vram_used_MiB": 3527,
+            "gpu_utilization_percent": 73,
+            "memory_utilization_percent": 77
+          }
+        },
+        {
+          "monotonic": 100691.5834195,
+          "available_ram_bytes": 3315732480,
+          "processes": [
+            {
+              "pid": 44472,
+              "working_set_bytes": 61009920,
+              "private_bytes": 82337792,
+              "cpu_seconds": 9.90625
+            },
+            {
+              "pid": 48912,
+              "working_set_bytes": 7761920,
+              "private_bytes": 1454080,
+              "cpu_seconds": 0.046875
+            },
+            {
+              "pid": 26224,
+              "working_set_bytes": 8463982592,
+              "private_bytes": 12357664768,
+              "cpu_seconds": 63.203125
+            },
+            {
+              "pid": 13072,
+              "working_set_bytes": 7806976,
+              "private_bytes": 1531904,
+              "cpu_seconds": 0.015625
+            },
+            {
+              "pid": 48900,
+              "working_set_bytes": 52576256,
+              "private_bytes": 35725312,
+              "cpu_seconds": 0.546875
+            }
+          ],
+          "energy": "NOT_MEASURED",
+          "gpu_global": {
+            "vram_used_MiB": 3527,
+            "gpu_utilization_percent": 93,
+            "memory_utilization_percent": 99
+          }
+        },
+        {
+          "monotonic": 100692.6556452,
+          "available_ram_bytes": 3318980608,
+          "processes": [
+            {
+              "pid": 44472,
+              "working_set_bytes": 61304832,
+              "private_bytes": 82665472,
+              "cpu_seconds": 9.96875
+            },
+            {
+              "pid": 48912,
+              "working_set_bytes": 7761920,
+              "private_bytes": 1454080,
+              "cpu_seconds": 0.046875
+            },
+            {
+              "pid": 26224,
+              "working_set_bytes": 8463835136,
+              "private_bytes": 12355358720,
+              "cpu_seconds": 64.171875
+            },
+            {
+              "pid": 13072,
+              "working_set_bytes": 7806976,
+              "private_bytes": 1531904,
+              "cpu_seconds": 0.015625
+            },
+            {
+              "pid": 48900,
+              "working_set_bytes": 52645888,
+              "private_bytes": 35794944,
+              "cpu_seconds": 0.578125
+            }
+          ],
+          "energy": "NOT_MEASURED",
+          "gpu_global": {
+            "vram_used_MiB": 3527,
+            "gpu_utilization_percent": 92,
+            "memory_utilization_percent": 97
+          }
+        },
+        {
+          "monotonic": 100693.7418806,
+          "available_ram_bytes": 3288354816,
+          "processes": [
+            {
+              "pid": 44472,
+              "working_set_bytes": 61382656,
+              "private_bytes": 82706432,
+              "cpu_seconds": 9.984375
+            },
+            {
+              "pid": 48912,
+              "working_set_bytes": 7761920,
+              "private_bytes": 1454080,
+              "cpu_seconds": 0.046875
+            },
+            {
+              "pid": 26224,
+              "working_set_bytes": 8463839232,
+              "private_bytes": 12356399104,
+              "cpu_seconds": 65.140625
+            },
+            {
+              "pid": 13072,
+              "working_set_bytes": 7806976,
+              "private_bytes": 1531904,
+              "cpu_seconds": 0.015625
+            },
+            {
+              "pid": 48900,
+              "working_set_bytes": 53268480,
+              "private_bytes": 36253696,
+              "cpu_seconds": 0.625
+            }
+          ],
+          "energy": "NOT_MEASURED",
+          "gpu_global": {
+            "vram_used_MiB": 3527,
+            "gpu_utilization_percent": 13,
+            "memory_utilization_percent": 13
+          }
+        },
+        {
+          "monotonic": 100694.8429786,
+          "available_ram_bytes": 3290116096,
+          "processes": [
+            {
+              "pid": 44472,
+              "working_set_bytes": 61382656,
+              "private_bytes": 82706432,
+              "cpu_seconds": 10.0
+            },
+            {
+              "pid": 48912,
+              "working_set_bytes": 7761920,
+              "private_bytes": 1454080,
+              "cpu_seconds": 0.046875
+            },
+            {
+              "pid": 26224,
+              "working_set_bytes": 8463904768,
+              "private_bytes": 12356399104,
+              "cpu_seconds": 66.265625
+            },
+            {
+              "pid": 13072,
+              "working_set_bytes": 7806976,
+              "private_bytes": 1531904,
+              "cpu_seconds": 0.015625
+            },
+            {
+              "pid": 48900,
+              "working_set_bytes": 53514240,
+              "private_bytes": 36593664,
+              "cpu_seconds": 0.640625
+            }
+          ],
+          "energy": "NOT_MEASURED",
+          "gpu_global": {
+            "vram_used_MiB": 3527,
+            "gpu_utilization_percent": 94,
+            "memory_utilization_percent": 99
+          }
+        }
+      ],
+      "requests": [
+        {
+          "seconds": 1.5794322000001557,
+          "error_type": "ValueError"
+        },
+        {
+          "seconds": 1.4121412000095006,
+          "error_type": "ValueError"
+        },
+        {
+          "seconds": 1.4238827000081073,
+          "error_type": "ValueError"
+        },
+        {
+          "seconds": 1.4413810999976704,
+          "error_type": "ValueError"
+        },
+        {
+          "seconds": 1.4807422000012593,
+          "error_type": "ValueError"
+        },
+        {
+          "seconds": 1.4255293999885907,
+          "error_type": "ValueError"
+        }
+      ],
+      "loaded": {
+        "models": [
+          {
+            "name": "vigile-qwen3-4b:latest",
+            "model": "vigile-qwen3-4b:latest",
+            "size": 3571386941,
+            "digest": "f7b39a48ac98f35a1c5f030ed3543d34e0cbeb5fff525096c3a8ab94e03d4b00",
+            "details": {
+              "parent_model": "",
+              "format": "gguf",
+              "family": "qwen3",
+              "families": [
+                "qwen3"
+              ],
+              "parameter_size": "4.0B",
+              "quantization_level": "Q4_K_M"
+            },
+            "expires_at": "2026-10-22T22:08:08.9634636-05:00",
+            "size_vram": 3571386941,
+            "context_length": 6144,
+            "runner": "llamacpp"
+          }
+        ]
+      },
+      "target_pids": [
+        44472,
+        48912,
+        26224,
+        13072,
+        48900
+      ]
+    },
+    "LOW_POWER": {
+      "warmup": {
+        "generated": [
+          {
+            "text": "The baseline value for VO2 max is 50.0 mL/min/kg.",
+            "evidence_ids": [
+              "M5"
+            ],
+            "kind": "MODEL_EXPLANATION",
+            "references": [
+              {
+                "run_id": "A-cycle-14",
+                "as_of": "2026-09-15T12:00:00+00:00",
+                "output_hash": "e2aa6636a58b7a1ed96914cf66f35f1e5ae1cdcfdd95818f7ab2759cfafa14ac",
+                "variable": "physiology.vo2max",
+                "baseline_id": "A-baseline-0",
+                "source_ids": [
+                  "S01",
+                  "S05"
+                ]
+              }
+            ]
+          },
+          {
+            "text": "The baseline value for heart rate shows a daily slope of 1.0 bpm/day.",
+            "evidence_ids": [
+              "M8"
+            ],
+            "kind": "MODEL_EXPLANATION",
+            "references": [
+              {
+                "run_id": "A-cycle-14",
+                "as_of": "2026-09-15T12:00:00+00:00",
+                "output_hash": "e2aa6636a58b7a1ed96914cf66f35f1e5ae1cdcfdd95818f7ab2759cfafa14ac",
+                "variable": "physiology.heart_rate",
+                "source_ids": [
+                  "S01",
+                  "S05"
+                ]
+              }
+            ]
+          }
+        ],
+        "status": "ANSWERED",
+        "inference_executed": true,
+        "metrics": {
+          "elapsed_ms": 6443.658200005302,
+          "usage": {},
+          "timings": {},
+          "load_duration_ns": 5016362000,
+          "total_duration_ns": 6427434700,
+          "prompt_eval_count": 1361,
+          "eval_count": 71,
+          "eval_duration_ns": 972970000,
+          "verification": {
+            "elapsed_ms": 518.3092999941437,
+            "usage": {},
+            "timings": {},
+            "load_duration_ns": 40357400,
+            "total_duration_ns": 460411200,
+            "prompt_eval_count": 263,
+            "eval_count": 6,
+            "eval_duration_ns": 120086000
+          }
+        },
+        "grounding": "CITATIONS_AND_LOCAL_MODEL_CHECK_NOT_CLINICAL_VALIDATION"
+      },
+      "rows": [
+        {
+          "monotonic": 100702.8752186,
+          "available_ram_bytes": 10835292160,
+          "processes": [
+            {
+              "pid": 44472,
+              "working_set_bytes": 61825024,
+              "private_bytes": 82857984,
+              "cpu_seconds": 10.234375
+            },
+            {
+              "pid": 48912,
+              "working_set_bytes": 7761920,
+              "private_bytes": 1454080,
+              "cpu_seconds": 0.046875
+            },
+            {
+              "pid": 38644,
+              "working_set_bytes": 1004457984,
+              "private_bytes": 4206804992,
+              "cpu_seconds": 3.21875
+            },
+            {
+              "pid": 46016,
+              "working_set_bytes": 7696384,
+              "private_bytes": 1486848,
+              "cpu_seconds": 0.015625
+            },
+            {
+              "pid": 48900,
+              "working_set_bytes": 54747136,
+              "private_bytes": 38256640,
+              "cpu_seconds": 0.75
+            }
+          ],
+          "energy": "NOT_MEASURED",
+          "gpu_global": {
+            "vram_used_MiB": 2851,
+            "gpu_utilization_percent": 0,
+            "memory_utilization_percent": 0
+          }
+        },
+        {
+          "monotonic": 100703.9574919,
+          "available_ram_bytes": 11006320640,
+          "processes": [
+            {
+              "pid": 44472,
+              "working_set_bytes": 61825024,
+              "private_bytes": 82857984,
+              "cpu_seconds": 10.265625
+            },
+            {
+              "pid": 48912,
+              "working_set_bytes": 7761920,
+              "private_bytes": 1454080,
+              "cpu_seconds": 0.046875
+            },
+            {
+              "pid": 38644,
+              "working_set_bytes": 833171456,
+              "private_bytes": 3998248960,
+              "cpu_seconds": 4.28125
+            },
+            {
+              "pid": 46016,
+              "working_set_bytes": 7696384,
+              "private_bytes": 1486848,
+              "cpu_seconds": 0.015625
+            },
+            {
+              "pid": 48900,
+              "working_set_bytes": 54886400,
+              "private_bytes": 38285312,
+              "cpu_seconds": 0.765625
+            }
+          ],
+          "energy": "NOT_MEASURED",
+          "gpu_global": {
+            "vram_used_MiB": 2851,
+            "gpu_utilization_percent": 93,
+            "memory_utilization_percent": 99
+          }
+        },
+        {
+          "monotonic": 100705.0576339,
+          "available_ram_bytes": 10998005760,
+          "processes": [
+            {
+              "pid": 44472,
+              "working_set_bytes": 61829120,
+              "private_bytes": 82857984,
+              "cpu_seconds": 10.34375
+            },
+            {
+              "pid": 48912,
+              "working_set_bytes": 7761920,
+              "private_bytes": 1454080,
+              "cpu_seconds": 0.046875
+            },
+            {
+              "pid": 38644,
+              "working_set_bytes": 833806336,
+              "private_bytes": 3998904320,
+              "cpu_seconds": 5.125
+            },
+            {
+              "pid": 46016,
+              "working_set_bytes": 7696384,
+              "private_bytes": 1486848,
+              "cpu_seconds": 0.015625
+            },
+            {
+              "pid": 48900,
+              "working_set_bytes": 55193600,
+              "private_bytes": 38531072,
+              "cpu_seconds": 0.78125
+            }
+          ],
+          "energy": "NOT_MEASURED",
+          "gpu_global": {
+            "vram_used_MiB": 2851,
+            "gpu_utilization_percent": 93,
+            "memory_utilization_percent": 98
+          }
+        },
+        {
+          "monotonic": 100706.1437503,
+          "available_ram_bytes": 10824626176,
+          "processes": [
+            {
+              "pid": 44472,
+              "working_set_bytes": 61829120,
+              "private_bytes": 82857984,
+              "cpu_seconds": 10.375
+            },
+            {
+              "pid": 48912,
+              "working_set_bytes": 7761920,
+              "private_bytes": 1454080,
+              "cpu_seconds": 0.046875
+            },
+            {
+              "pid": 38644,
+              "working_set_bytes": 1010204672,
+              "private_bytes": 4175638528,
+              "cpu_seconds": 6.09375
+            },
+            {
+              "pid": 46016,
+              "working_set_bytes": 7696384,
+              "private_bytes": 1486848,
+              "cpu_seconds": 0.015625
+            },
+            {
+              "pid": 48900,
+              "working_set_bytes": 55488512,
+              "private_bytes": 38653952,
+              "cpu_seconds": 0.828125
+            }
+          ],
+          "energy": "NOT_MEASURED",
+          "gpu_global": {
+            "vram_used_MiB": 2851,
+            "gpu_utilization_percent": 33,
+            "memory_utilization_percent": 14
+          }
+        },
+        {
+          "monotonic": 100707.2325489,
+          "available_ram_bytes": 11006169088,
+          "processes": [
+            {
+              "pid": 44472,
+              "working_set_bytes": 61829120,
+              "private_bytes": 82857984,
+              "cpu_seconds": 10.40625
+            },
+            {
+              "pid": 48912,
+              "working_set_bytes": 7761920,
+              "private_bytes": 1454080,
+              "cpu_seconds": 0.046875
+            },
+            {
+              "pid": 38644,
+              "working_set_bytes": 834154496,
+              "private_bytes": 3999256576,
+              "cpu_seconds": 7.171875
+            },
+            {
+              "pid": 46016,
+              "working_set_bytes": 7696384,
+              "private_bytes": 1486848,
+              "cpu_seconds": 0.015625
+            },
+            {
+              "pid": 48900,
+              "working_set_bytes": 55984128,
+              "private_bytes": 38940672,
+              "cpu_seconds": 0.875
+            }
+          ],
+          "energy": "NOT_MEASURED",
+          "gpu_global": {
+            "vram_used_MiB": 2851,
+            "gpu_utilization_percent": 92,
+            "memory_utilization_percent": 98
+          }
+        },
+        {
+          "monotonic": 100708.3209078,
+          "available_ram_bytes": 10995462144,
+          "processes": [
+            {
+              "pid": 44472,
+              "working_set_bytes": 61829120,
+              "private_bytes": 82857984,
+              "cpu_seconds": 10.46875
+            },
+            {
+              "pid": 48912,
+              "working_set_bytes": 7761920,
+              "private_bytes": 1454080,
+              "cpu_seconds": 0.046875
+            },
+            {
+              "pid": 38644,
+              "working_set_bytes": 834199552,
+              "private_bytes": 3999289344,
+              "cpu_seconds": 8.0625
+            },
+            {
+              "pid": 46016,
+              "working_set_bytes": 7696384,
+              "private_bytes": 1486848,
+              "cpu_seconds": 0.015625
+            },
+            {
+              "pid": 48900,
+              "working_set_bytes": 56012800,
+              "private_bytes": 38940672,
+              "cpu_seconds": 0.921875
+            }
+          ],
+          "energy": "NOT_MEASURED",
+          "gpu_global": {
+            "vram_used_MiB": 2851,
+            "gpu_utilization_percent": 52,
+            "memory_utilization_percent": 44
+          }
+        },
+        {
+          "monotonic": 100709.4048312,
+          "available_ram_bytes": 10826424320,
+          "processes": [
+            {
+              "pid": 44472,
+              "working_set_bytes": 61919232,
+              "private_bytes": 82948096,
+              "cpu_seconds": 10.53125
+            },
+            {
+              "pid": 48912,
+              "working_set_bytes": 7761920,
+              "private_bytes": 1454080,
+              "cpu_seconds": 0.046875
+            },
+            {
+              "pid": 38644,
+              "working_set_bytes": 1005727744,
+              "private_bytes": 4171141120,
+              "cpu_seconds": 9.03125
+            },
+            {
+              "pid": 46016,
+              "working_set_bytes": 7696384,
+              "private_bytes": 1486848,
+              "cpu_seconds": 0.015625
+            },
+            {
+              "pid": 48900,
+              "working_set_bytes": 56029184,
+              "private_bytes": 38940672,
+              "cpu_seconds": 0.953125
+            }
+          ],
+          "energy": "NOT_MEASURED",
+          "gpu_global": {
+            "vram_used_MiB": 2851,
+            "gpu_utilization_percent": 76,
+            "memory_utilization_percent": 81
+          }
+        },
+        {
+          "monotonic": 100710.5034488,
+          "available_ram_bytes": 10992295936,
+          "processes": [
+            {
+              "pid": 44472,
+              "working_set_bytes": 62218240,
+              "private_bytes": 83398656,
+              "cpu_seconds": 10.609375
+            },
+            {
+              "pid": 48912,
+              "working_set_bytes": 7761920,
+              "private_bytes": 1454080,
+              "cpu_seconds": 0.046875
+            },
+            {
+              "pid": 38644,
+              "working_set_bytes": 834461696,
+              "private_bytes": 3999555584,
+              "cpu_seconds": 10.109375
+            },
+            {
+              "pid": 46016,
+              "working_set_bytes": 7696384,
+              "private_bytes": 1486848,
+              "cpu_seconds": 0.015625
+            },
+            {
+              "pid": 48900,
+              "working_set_bytes": 56123392,
+              "private_bytes": 39989248,
+              "cpu_seconds": 0.984375
+            }
+          ],
+          "energy": "NOT_MEASURED",
+          "gpu_global": {
+            "vram_used_MiB": 2851,
+            "gpu_utilization_percent": 94,
+            "memory_utilization_percent": 99
+          }
+        },
+        {
+          "monotonic": 100711.5910224,
+          "available_ram_bytes": 10995179520,
+          "processes": [
+            {
+              "pid": 44472,
+              "working_set_bytes": 62263296,
+              "private_bytes": 83398656,
+              "cpu_seconds": 10.640625
+            },
+            {
+              "pid": 48912,
+              "working_set_bytes": 7761920,
+              "private_bytes": 1454080,
+              "cpu_seconds": 0.046875
+            },
+            {
+              "pid": 38644,
+              "working_set_bytes": 834469888,
+              "private_bytes": 3999571968,
+              "cpu_seconds": 11.0
+            },
+            {
+              "pid": 46016,
+              "working_set_bytes": 7696384,
+              "private_bytes": 1486848,
+              "cpu_seconds": 0.015625
+            },
+            {
+              "pid": 48900,
+              "working_set_bytes": 55640064,
+              "private_bytes": 40030208,
+              "cpu_seconds": 1.03125
+            }
+          ],
+          "energy": "NOT_MEASURED",
+          "gpu_global": {
+            "vram_used_MiB": 2851,
+            "gpu_utilization_percent": 86,
+            "memory_utilization_percent": 91
+          }
+        }
+      ],
+      "requests": [
+        {
+          "seconds": 1.7358744000084698,
+          "response": {
+            "generated": [
+              {
+                "text": "The baseline value for VO2 max is 50.0 mL/min/kg.",
+                "evidence_ids": [
+                  "M5"
+                ],
+                "kind": "MODEL_EXPLANATION",
+                "references": [
+                  {
+                    "run_id": "A-cycle-14",
+                    "as_of": "2026-09-15T12:00:00+00:00",
+                    "output_hash": "e2aa6636a58b7a1ed96914cf66f35f1e5ae1cdcfdd95818f7ab2759cfafa14ac",
+                    "variable": "physiology.vo2max",
+                    "baseline_id": "A-baseline-0",
+                    "source_ids": [
+                      "S01",
+                      "S05"
+                    ]
+                  }
+                ]
+              },
+              {
+                "text": "The baseline value for heart rate shows a daily slope of 1.0 bpm/day.",
+                "evidence_ids": [
+                  "M8"
+                ],
+                "kind": "MODEL_EXPLANATION",
+                "references": [
+                  {
+                    "run_id": "A-cycle-14",
+                    "as_of": "2026-09-15T12:00:00+00:00",
+                    "output_hash": "e2aa6636a58b7a1ed96914cf66f35f1e5ae1cdcfdd95818f7ab2759cfafa14ac",
+                    "variable": "physiology.heart_rate",
+                    "source_ids": [
+                      "S01",
+                      "S05"
+                    ]
+                  }
+                ]
+              }
+            ],
+            "status": "ANSWERED",
+            "inference_executed": true,
+            "metrics": {
+              "elapsed_ms": 1280.1732999942033,
+              "usage": {},
+              "timings": {},
+              "load_duration_ns": 17405900,
+              "total_duration_ns": 1256519900,
+              "prompt_eval_count": 1361,
+              "eval_count": 71,
+              "eval_duration_ns": 1088838000,
+              "verification": {
+                "elapsed_ms": 454.6970999945188,
+                "usage": {},
+                "timings": {},
+                "load_duration_ns": 33364500,
+                "total_duration_ns": 379232800,
+                "prompt_eval_count": 263,
+                "eval_count": 6,
+                "eval_duration_ns": 118734000
+              }
+            },
+            "grounding": "CITATIONS_AND_LOCAL_MODEL_CHECK_NOT_CLINICAL_VALIDATION"
+          }
+        },
+        {
+          "seconds": 1.6676928000088083,
+          "response": {
+            "generated": [
+              {
+                "text": "The baseline value for VO2 max is 50.0 mL/min/kg.",
+                "evidence_ids": [
+                  "M5"
+                ],
+                "kind": "MODEL_EXPLANATION",
+                "references": [
+                  {
+                    "run_id": "A-cycle-14",
+                    "as_of": "2026-09-15T12:00:00+00:00",
+                    "output_hash": "e2aa6636a58b7a1ed96914cf66f35f1e5ae1cdcfdd95818f7ab2759cfafa14ac",
+                    "variable": "physiology.vo2max",
+                    "baseline_id": "A-baseline-0",
+                    "source_ids": [
+                      "S01",
+                      "S05"
+                    ]
+                  }
+                ]
+              },
+              {
+                "text": "The baseline value for heart rate shows a daily slope of 1.0 bpm/day.",
+                "evidence_ids": [
+                  "M8"
+                ],
+                "kind": "MODEL_EXPLANATION",
+                "references": [
+                  {
+                    "run_id": "A-cycle-14",
+                    "as_of": "2026-09-15T12:00:00+00:00",
+                    "output_hash": "e2aa6636a58b7a1ed96914cf66f35f1e5ae1cdcfdd95818f7ab2759cfafa14ac",
+                    "variable": "physiology.heart_rate",
+                    "source_ids": [
+                      "S01",
+                      "S05"
+                    ]
+                  }
+                ]
+              }
+            ],
+            "status": "ANSWERED",
+            "inference_executed": true,
+            "metrics": {
+              "elapsed_ms": 1213.7397000042256,
+              "usage": {},
+              "timings": {},
+              "load_duration_ns": 20968600,
+              "total_duration_ns": 1187801300,
+              "prompt_eval_count": 1361,
+              "eval_count": 71,
+              "eval_duration_ns": 1017249000,
+              "verification": {
+                "elapsed_ms": 453.24770000297576,
+                "usage": {},
+                "timings": {},
+                "load_duration_ns": 32492800,
+                "total_duration_ns": 390815000,
+                "prompt_eval_count": 263,
+                "eval_count": 6,
+                "eval_duration_ns": 120794000
+              }
+            },
+            "grounding": "CITATIONS_AND_LOCAL_MODEL_CHECK_NOT_CLINICAL_VALIDATION"
+          }
+        },
+        {
+          "seconds": 1.5604781000001822,
+          "response": {
+            "generated": [
+              {
+                "text": "The baseline value for VO2 max is 50.0 mL/min/kg.",
+                "evidence_ids": [
+                  "M5"
+                ],
+                "kind": "MODEL_EXPLANATION",
+                "references": [
+                  {
+                    "run_id": "A-cycle-14",
+                    "as_of": "2026-09-15T12:00:00+00:00",
+                    "output_hash": "e2aa6636a58b7a1ed96914cf66f35f1e5ae1cdcfdd95818f7ab2759cfafa14ac",
+                    "variable": "physiology.vo2max",
+                    "baseline_id": "A-baseline-0",
+                    "source_ids": [
+                      "S01",
+                      "S05"
+                    ]
+                  }
+                ]
+              },
+              {
+                "text": "The baseline value for heart rate shows a daily slope of 1.0 bpm/day.",
+                "evidence_ids": [
+                  "M8"
+                ],
+                "kind": "MODEL_EXPLANATION",
+                "references": [
+                  {
+                    "run_id": "A-cycle-14",
+                    "as_of": "2026-09-15T12:00:00+00:00",
+                    "output_hash": "e2aa6636a58b7a1ed96914cf66f35f1e5ae1cdcfdd95818f7ab2759cfafa14ac",
+                    "variable": "physiology.heart_rate",
+                    "source_ids": [
+                      "S01",
+                      "S05"
+                    ]
+                  }
+                ]
+              }
+            ],
+            "status": "ANSWERED",
+            "inference_executed": true,
+            "metrics": {
+              "elapsed_ms": 1172.1373000036692,
+              "usage": {},
+              "timings": {},
+              "load_duration_ns": 14881300,
+              "total_duration_ns": 1154185600,
+              "prompt_eval_count": 1361,
+              "eval_count": 71,
+              "eval_duration_ns": 1016134000,
+              "verification": {
+                "elapsed_ms": 387.7587000024505,
+                "usage": {},
+                "timings": {},
+                "load_duration_ns": 18093100,
+                "total_duration_ns": 343203800,
+                "prompt_eval_count": 263,
+                "eval_count": 6,
+                "eval_duration_ns": 121632000
+              }
+            },
+            "grounding": "CITATIONS_AND_LOCAL_MODEL_CHECK_NOT_CLINICAL_VALIDATION"
+          }
+        },
+        {
+          "seconds": 1.698410300014075,
+          "response": {
+            "generated": [
+              {
+                "text": "The baseline value for VO2 max is 50.0 mL/min/kg.",
+                "evidence_ids": [
+                  "M5"
+                ],
+                "kind": "MODEL_EXPLANATION",
+                "references": [
+                  {
+                    "run_id": "A-cycle-14",
+                    "as_of": "2026-09-15T12:00:00+00:00",
+                    "output_hash": "e2aa6636a58b7a1ed96914cf66f35f1e5ae1cdcfdd95818f7ab2759cfafa14ac",
+                    "variable": "physiology.vo2max",
+                    "baseline_id": "A-baseline-0",
+                    "source_ids": [
+                      "S01",
+                      "S05"
+                    ]
+                  }
+                ]
+              },
+              {
+                "text": "The baseline value for heart rate shows a daily slope of 1.0 bpm/day.",
+                "evidence_ids": [
+                  "M8"
+                ],
+                "kind": "MODEL_EXPLANATION",
+                "references": [
+                  {
+                    "run_id": "A-cycle-14",
+                    "as_of": "2026-09-15T12:00:00+00:00",
+                    "output_hash": "e2aa6636a58b7a1ed96914cf66f35f1e5ae1cdcfdd95818f7ab2759cfafa14ac",
+                    "variable": "physiology.heart_rate",
+                    "source_ids": [
+                      "S01",
+                      "S05"
+                    ]
+                  }
+                ]
+              }
+            ],
+            "status": "ANSWERED",
+            "inference_executed": true,
+            "metrics": {
+              "elapsed_ms": 1244.5854999969015,
+              "usage": {},
+              "timings": {},
+              "load_duration_ns": 15203300,
+              "total_duration_ns": 1198527100,
+              "prompt_eval_count": 1361,
+              "eval_count": 71,
+              "eval_duration_ns": 1035281999,
+              "verification": {
+                "elapsed_ms": 453.19410000229254,
+                "usage": {},
+                "timings": {},
+                "load_duration_ns": 32897700,
+                "total_duration_ns": 397615500,
+                "prompt_eval_count": 263,
+                "eval_count": 6,
+                "eval_duration_ns": 119920000
+              }
+            },
+            "grounding": "CITATIONS_AND_LOCAL_MODEL_CHECK_NOT_CLINICAL_VALIDATION"
+          }
+        },
+        {
+          "seconds": 1.563492999994196,
+          "response": {
+            "generated": [
+              {
+                "text": "The baseline value for VO2 max is 50.0 mL/min/kg.",
+                "evidence_ids": [
+                  "M5"
+                ],
+                "kind": "MODEL_EXPLANATION",
+                "references": [
+                  {
+                    "run_id": "A-cycle-14",
+                    "as_of": "2026-09-15T12:00:00+00:00",
+                    "output_hash": "e2aa6636a58b7a1ed96914cf66f35f1e5ae1cdcfdd95818f7ab2759cfafa14ac",
+                    "variable": "physiology.vo2max",
+                    "baseline_id": "A-baseline-0",
+                    "source_ids": [
+                      "S01",
+                      "S05"
+                    ]
+                  }
+                ]
+              },
+              {
+                "text": "The baseline value for heart rate shows a daily slope of 1.0 bpm/day.",
+                "evidence_ids": [
+                  "M8"
+                ],
+                "kind": "MODEL_EXPLANATION",
+                "references": [
+                  {
+                    "run_id": "A-cycle-14",
+                    "as_of": "2026-09-15T12:00:00+00:00",
+                    "output_hash": "e2aa6636a58b7a1ed96914cf66f35f1e5ae1cdcfdd95818f7ab2759cfafa14ac",
+                    "variable": "physiology.heart_rate",
+                    "source_ids": [
+                      "S01",
+                      "S05"
+                    ]
+                  }
+                ]
+              }
+            ],
+            "status": "ANSWERED",
+            "inference_executed": true,
+            "metrics": {
+              "elapsed_ms": 1175.1087000011466,
+              "usage": {},
+              "timings": {},
+              "load_duration_ns": 14548000,
+              "total_duration_ns": 1156816100,
+              "prompt_eval_count": 1361,
+              "eval_count": 71,
+              "eval_duration_ns": 1012399000,
+              "verification": {
+                "elapsed_ms": 387.56519999878947,
+                "usage": {},
+                "timings": {},
+                "load_duration_ns": 15201700,
+                "total_duration_ns": 354902500,
+                "prompt_eval_count": 263,
+                "eval_count": 6,
+                "eval_duration_ns": 115349000
+              }
+            },
+            "grounding": "CITATIONS_AND_LOCAL_MODEL_CHECK_NOT_CLINICAL_VALIDATION"
+          }
+        },
+        {
+          "seconds": 1.600206300005084,
+          "response": {
+            "generated": [
+              {
+                "text": "The baseline value for VO2 max is 50.0 mL/min/kg.",
+                "evidence_ids": [
+                  "M5"
+                ],
+                "kind": "MODEL_EXPLANATION",
+                "references": [
+                  {
+                    "run_id": "A-cycle-14",
+                    "as_of": "2026-09-15T12:00:00+00:00",
+                    "output_hash": "e2aa6636a58b7a1ed96914cf66f35f1e5ae1cdcfdd95818f7ab2759cfafa14ac",
+                    "variable": "physiology.vo2max",
+                    "baseline_id": "A-baseline-0",
+                    "source_ids": [
+                      "S01",
+                      "S05"
+                    ]
+                  }
+                ]
+              },
+              {
+                "text": "The baseline value for heart rate shows a daily slope of 1.0 bpm/day.",
+                "evidence_ids": [
+                  "M8"
+                ],
+                "kind": "MODEL_EXPLANATION",
+                "references": [
+                  {
+                    "run_id": "A-cycle-14",
+                    "as_of": "2026-09-15T12:00:00+00:00",
+                    "output_hash": "e2aa6636a58b7a1ed96914cf66f35f1e5ae1cdcfdd95818f7ab2759cfafa14ac",
+                    "variable": "physiology.heart_rate",
+                    "source_ids": [
+                      "S01",
+                      "S05"
+                    ]
+                  }
+                ]
+              }
+            ],
+            "status": "ANSWERED",
+            "inference_executed": true,
+            "metrics": {
+              "elapsed_ms": 1239.350599993486,
+              "usage": {},
+              "timings": {},
+              "load_duration_ns": 15844800,
+              "total_duration_ns": 1218539400,
+              "prompt_eval_count": 1361,
+              "eval_count": 71,
+              "eval_duration_ns": 1011733000,
+              "verification": {
+                "elapsed_ms": 360.22599998977967,
+                "usage": {},
+                "timings": {},
+                "load_duration_ns": 16258000,
+                "total_duration_ns": 337944900,
+                "prompt_eval_count": 263,
+                "eval_count": 6,
+                "eval_duration_ns": 111981000
+              }
+            },
+            "grounding": "CITATIONS_AND_LOCAL_MODEL_CHECK_NOT_CLINICAL_VALIDATION"
+          }
+        }
+      ],
+      "loaded": {
+        "models": [
+          {
+            "name": "vigile-qwen3-4b:latest",
+            "model": "vigile-qwen3-4b:latest",
+            "size": 2876160081,
+            "digest": "f7b39a48ac98f35a1c5f030ed3543d34e0cbeb5fff525096c3a8ab94e03d4b00",
+            "details": {
+              "parent_model": "",
+              "format": "gguf",
+              "family": "qwen3",
+              "families": [
+                "qwen3"
+              ],
+              "parameter_size": "4.0B",
+              "quantization_level": "Q4_K_M"
+            },
+            "expires_at": "2026-10-22T22:03:56.7616421-05:00",
+            "size_vram": 2876160081,
+            "context_length": 2048,
+            "runner": "llamacpp"
+          }
+        ]
+      },
+      "target_pids": [
+        44472,
+        48912,
+        38644,
+        46016,
+        48900
+      ]
+    }
+  },
+  "note": "Warm stable runner process, PIDs include Ollama descendants and observer. Working sets are per-process, not additive unique RAM. Global GPU utilization includes other applications.",
+  "energy": "NOT_MEASURED"
+}

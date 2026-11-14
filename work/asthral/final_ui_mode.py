@@ -1,0 +1,11 @@
+from pathlib import Path
+R=Path(__file__).resolve().parents[2];p=R/'engine/vigile/web/app.js';s=p.read_text(encoding='utf8')
+old="await api('mode',{mode:requested});operationModeState=requested;const s=await api('status');"
+new="await api('mode',{mode:requested});chatGeneration++;document.getElementById('science-results')?.replaceChildren();operationModeState=requested;const s=await api('status');if(document.getElementById('science-status'))document.getElementById('science-status').textContent=s.scientific_retrieval?.network_permitted?'Local Knowledge · Online Scientific Retrieval Enabled':'Local Knowledge · Online Retrieval Disabled';"
+assert old in s;s=s.replace(old,new);p.write_text(s,encoding='utf8')
+p=R/'engine/tests/astronaut_ui_unit.cjs';s=p.read_text(encoding='utf8');needle=" console.log(JSON.stringify({simulated_DOM_cases:passed"
+extra=""" h=harness(frames.a35);let resolvePending;h.c.pending=new Promise(r=>{resolvePending=r;});h.run(\"api=async function(path){if(path==='assistant')return pending;if(path==='mode')return {};return {assistant:{mode:'LOW_POWER',reason:'REDUCED_LOCAL'},runtime:{loaded:false},scientific_retrieval:{network_permitted:false}}};\");const pendingAnswer=h.run(\"ask('What changed from baseline?')\");h.nodes['operation-mode'].value='LOW_POWER';await h.nodes['operation-mode'].onchange();resolvePending({message:'STALE_OLD_ANSWER',retrieved:[],generated:[],supplementary_science:{status:'REMOTE_OPTIONAL',documents:[]}});await pendingAnswer;assert.doesNotMatch(h.text('chat-answer'),/STALE_OLD_ANSWER/);assert.match(h.text('science-status'),/Online Retrieval Disabled/);assert.equal(h.text('science-results'),'');passed++;
+"""
+assert needle in s;s=s.replace(needle,extra+needle);p.write_text(s,encoding='utf8')
+p=R/'engine/tests/test_astronaut_ux_v101.py';s=p.read_text(encoding='utf8').replace("['simulated_DOM_cases']==12","['simulated_DOM_cases']==13");p.write_text(s,encoding='utf8')
+print('UI mode changes invalidate pending supplementary responses and update online status')

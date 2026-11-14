@@ -1,0 +1,84 @@
+{
+  "restored_from_verified_backup": true,
+  "original_and_live_databases_not_modified": true,
+  "clinical": [
+    {
+      "id": "ce-1476d1a83b2b42bcba0e919cb3b9605b",
+      "matches": true,
+      "input_hash": "0de4fd6f675564c15338804957ce137a507762e6f16d373119f4eedd7afc984f",
+      "knowledge_hash": "b8c568bd645154e5fd67630c7a670ca53904dc04f54904315047a89923839d4e"
+    },
+    {
+      "id": "ce-96f13e5faca544adb1ca054713171db4",
+      "matches": true,
+      "input_hash": "d9fe16fd5353aa2d7b18796954ed945f5be69ab4385a02522c87ac9c41e050f8",
+      "knowledge_hash": "b8c568bd645154e5fd67630c7a670ca53904dc04f54904315047a89923839d4e"
+    },
+    {
+      "id": "ce-8fe15d8eba054447ab4c25998f159a15",
+      "matches": true,
+      "input_hash": "04896e1511efd4b83b4c4c9d18bd2c06da7158f787969cc6106e4cd7c1101d4e",
+      "knowledge_hash": "b8c568bd645154e5fd67630c7a670ca53904dc04f54904315047a89923839d4e"
+    },
+    {
+      "id": "ce-6060bc9df6c8495faaf7a72818ab4448",
+      "matches": true,
+      "input_hash": "b52a46c1d1491f941c724d887828514a3bf17fa9e6108ca4378129c5f3bc743c",
+      "knowledge_hash": "b8c568bd645154e5fd67630c7a670ca53904dc04f54904315047a89923839d4e"
+    },
+    {
+      "id": "ce-3c641024d9314de6806a585cb74dcc01",
+      "matches": true,
+      "input_hash": "94b6730b31a7558691c0610abf99d74067fe5758d364390bd1421ecc82869b90",
+      "knowledge_hash": "b8c568bd645154e5fd67630c7a670ca53904dc04f54904315047a89923839d4e"
+    },
+    {
+      "id": "ce-2dd523468fdd445b95c061209699176e",
+      "matches": true,
+      "input_hash": "cd042fbf8919471a32179c77d262202decd427051b68d5220f3b873ccc78ded0",
+      "knowledge_hash": "b8c568bd645154e5fd67630c7a670ca53904dc04f54904315047a89923839d4e"
+    },
+    {
+      "id": "ce-979d74b3b3a04653a58ca47aa88ce410",
+      "matches": true,
+      "input_hash": "d199e08bb047f4205d4e5ea382bff9aeb03b4db205ee6c696fabfa489d128e79",
+      "knowledge_hash": "b8c568bd645154e5fd67630c7a670ca53904dc04f54904315047a89923839d4e"
+    },
+    {
+      "id": "ce-fa94afca1771435d94f3941dc88e46ee",
+      "matches": true,
+      "input_hash": "7289e55cc0d26304afcb0c4a8a75e09db653b99f2879d4890b2de2f0abdbfe83",
+      "knowledge_hash": "b8c568bd645154e5fd67630c7a670ca53904dc04f54904315047a89923839d4e"
+    },
+    {
+      "id": "ce-8f0d352c8ae04134a19ca9349d725082",
+      "matches": true,
+      "input_hash": "bfc084d3b4911b4870aab72ab0123c77f48134085a4a336dad1c2a5ff5d79ac0",
+      "knowledge_hash": "b8c568bd645154e5fd67630c7a670ca53904dc04f54904315047a89923839d4e"
+    },
+    {
+      "id": "ce-26cbe746e1d7bd792389dc4dbedd2fc2",
+      "matches": true,
+      "input_hash": "291caeeb5aeafb32e0edf448a16387ff684aabf7333eb3dbeb0a8143dec5123e",
+      "knowledge_hash": "b8c568bd645154e5fd67630c7a670ca53904dc04f54904315047a89923839d4e"
+    },
+    {
+      "id": "ce-a5a0adb3cf59b194d4a40ab83384a8c1",
+      "matches": true,
+      "input_hash": "109d84d850aca1756d6658234f009043ffcbae6161bb6d7d6ad82e4434ea9e52",
+      "knowledge_hash": "b8c568bd645154e5fd67630c7a670ca53904dc04f54904315047a89923839d4e"
+    }
+  ],
+  "monitoring": [
+    {
+      "id": "v101-management-cycle",
+      "matches": true,
+      "scope": "FULL_FROZEN_CYCLE_REEXECUTION",
+      "clinical_validation": false
+    }
+  ],
+  "audit_valid": true,
+  "network_connection_factory_blocked": true,
+  "clinical_execution": "BLOCKED",
+  "clinical_validation": false
+}

@@ -1,0 +1,82 @@
+{
+  "new_heldout_cases": 5,
+  "previous_reserved_bank_reused": false,
+  "cases": [
+    {
+      "id": "held-001",
+      "local_blocks": 2,
+      "local_lexical_topic_hit": false,
+      "hybrid_lexical_topic_hit": true,
+      "remote_metadata_schema_and_canonical_citation_valid": true,
+      "local_latency_ms": 55.713400000058755,
+      "mocked_online_latency_ms": 1.6786000001047796,
+      "cache_delivery": "CACHE_NOT_LIVE",
+      "provider_requests": 2,
+      "remote_review_status_preserved": true,
+      "model_invocations": 0,
+      "generated_clinical_claims": 0
+    },
+    {
+      "id": "held-002",
+      "local_blocks": 2,
+      "local_lexical_topic_hit": false,
+      "hybrid_lexical_topic_hit": true,
+      "remote_metadata_schema_and_canonical_citation_valid": true,
+      "local_latency_ms": 2.5402999999641906,
+      "mocked_online_latency_ms": 1.3734000003751134,
+      "cache_delivery": "CACHE_NOT_LIVE",
+      "provider_requests": 2,
+      "remote_review_status_preserved": true,
+      "model_invocations": 0,
+      "generated_clinical_claims": 0
+    },
+    {
+      "id": "held-003",
+      "local_blocks": 2,
+      "local_lexical_topic_hit": true,
+      "hybrid_lexical_topic_hit": true,
+      "remote_metadata_schema_and_canonical_citation_valid": true,
+      "local_latency_ms": 2.120400000421796,
+      "mocked_online_latency_ms": 1.1856999999508844,
+      "cache_delivery": "CACHE_NOT_LIVE",
+      "provider_requests": 2,
+      "remote_review_status_preserved": true,
+      "model_invocations": 0,
+      "generated_clinical_claims": 0
+    },
+    {
+      "id": "held-004",
+      "local_blocks": 2,
+      "local_lexical_topic_hit": true,
+      "hybrid_lexical_topic_hit": true,
+      "remote_metadata_schema_and_canonical_citation_valid": true,
+      "local_latency_ms": 1.8685000000004948,
+      "mocked_online_latency_ms": 0.9159999999610591,
+      "cache_delivery": "CACHE_NOT_LIVE",
+      "provider_requests": 2,
+      "remote_review_status_preserved": true,
+      "model_invocations": 0,
+      "generated_clinical_claims": 0
+    },
+    {
+      "id": "held-005",
+      "local_blocks": 1,
+      "local_lexical_topic_hit": true,
+      "hybrid_lexical_topic_hit": true,
+      "remote_metadata_schema_and_canonical_citation_valid": true,
+      "local_latency_ms": 1.5203999996629136,
+      "mocked_online_latency_ms": 2.8992000002290297,
+      "cache_delivery": "CACHE_NOT_LIVE",
+      "provider_requests": 2,
+      "remote_review_status_preserved": true,
+      "model_invocations": 0,
+      "generated_clinical_claims": 0
+    }
+  ],
+  "local_hit_rate": 0.6,
+  "hybrid_hit_rate": 1.0,
+  "scope": "Software lexical topic/citation evaluation using explicitly synthetic provider fixtures. Not independent clinical relevance review, real publication relevance, or free-generation validation. Live PubMed smoke is separate.",
+  "unsupported_claim_metric": "Zero generated clinical claims by construction; not proof of source truth.",
+  "energy_measured": false,
+  "resources": "No model loaded by this evaluation; no claim of reduced electrical power."
+}

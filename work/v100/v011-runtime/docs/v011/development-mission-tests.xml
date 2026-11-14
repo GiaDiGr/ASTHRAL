@@ -1,0 +1,10 @@
+<?xml version='1.0' encoding='utf-8'?>
+<testsuites name="pytest tests"><testsuite name="pytest" errors="0" failures="1" skipped="0" tests="1" time="26.906" timestamp="2026-10-24T19:33:12.753105-05:00" hostname="Gianni"><testcase classname="tests.test_mission_v011" name="test_historical_receipt_scope_and_phase" time="26.120"><failure message="assert (set())">mission = (&lt;starlette.testclient.TestClient object at 0x000001B41C681A90&gt;, {'format': 'VIGILE_INTEGRATED_MISSION_1', 'seed': 42,...euJ7PnzqOtpwR3NDO0', '[REDACTED_EPHEMERAL_PYTEST_CREDENTIAL]', '[REDACTED_EPHEMERAL_PYTEST_CREDENTIAL]', ...)
+
+    def test_historical_receipt_scope_and_phase(mission):
+        early=frame(mission,SUBJECTS[0],14);later=frame(mission,SUBJECTS[0],21)
+        late_ids={r['measurement']['id'] for r in later['measurements'] if r['measurement']['timestamp']==(START+timedelta(days=11)).isoformat()}
+&gt;       assert late_ids and not late_ids&amp;{r['measurement']['id'] for r in early['measurements']}
+E       assert (set())
+
+tests\test_mission_v011.py:41: AssertionError</failure></testcase></testsuite></testsuites>

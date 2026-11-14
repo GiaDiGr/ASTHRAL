@@ -1,0 +1,38 @@
+{
+  "acl": {
+    "path": "C:\\Users\\Gianni\\Desktop\\Vigile\\engine\\data\\portal-v0100-integrated",
+    "user_sid": "S-1-5-21-4266034318-2299397883-1611257766-1001",
+    "scope": "CURRENT_USER_AND_SYSTEM",
+    "same_user_processes_isolated": false
+  },
+  "backup": {
+    "format": "VIGILE_SQLITE_BACKUP_1",
+    "source": "C:\\Users\\Gianni\\Desktop\\Vigile\\engine\\data\\portal-v0100-integrated\\vigile.sqlite3",
+    "database": "vigile.sqlite3",
+    "sha256": "1ef3163c8fdeecbf42f9a2eb6c2b25d6c45bd9d583318abd58656c0d995ac6f8",
+    "state": {
+      "record_sequence": 244,
+      "record_count": 244,
+      "records_hash": "6782696de2c725d1db9c12bc1760ca6e0bab77b28dc255905bcddb120e079d1d",
+      "audit_sequence": 246,
+      "audit_hash": "a8e0e228e8ab6d649c12cc3250db211db1f368ed1ed8c7db18b88c9326f6b65e"
+    },
+    "sqlite_encryption": "NONE"
+  },
+  "anchor": {
+    "valid": true,
+    "anchored_prefix": {
+      "record_sequence": 244,
+      "record_count": 244,
+      "records_hash": "6782696de2c725d1db9c12bc1760ca6e0bab77b28dc255905bcddb120e079d1d",
+      "audit_sequence": 246,
+      "audit_hash": "a8e0e228e8ab6d649c12cc3250db211db1f368ed1ed8c7db18b88c9326f6b65e"
+    },
+    "latest_checkpoint": {
+      "sequence": 246,
+      "hash": "a8e0e228e8ab6d649c12cc3250db211db1f368ed1ed8c7db18b88c9326f6b65e"
+    },
+    "protection": "DB_ONLY_TAMPERING_DETECTION_NOT_SAME_USER_COMPROMISE"
+  },
+  "database_encrypted": false
+}

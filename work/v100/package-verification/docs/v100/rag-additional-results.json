@@ -1,0 +1,152 @@
+{
+  "rows": [
+    {
+      "id": "additional-1",
+      "question": "Where does the engine document personal baseline eligibility and selection?",
+      "relevant_fragment_ids": [
+        "D-dda64d483a9eb444a927"
+      ],
+      "annotation": "Developer-authored literal passage relevance assigned before retrieval; not independent clinical adjudication",
+      "retrieved_ids": [
+        "D-e0c63d62844d64ebabf1",
+        "D-9f2cf12b92be36ff286c",
+        "D-c2422a0453df5cf53406",
+        "D-dda64d483a9eb444a927",
+        "D-19748be088e8b42cafcd"
+      ],
+      "top3": false,
+      "top5": true,
+      "issues": []
+    },
+    {
+      "id": "additional-2",
+      "question": "¿Dónde se documenta la selección y validez de una referencia personal basal?",
+      "relevant_fragment_ids": [
+        "D-dda64d483a9eb444a927"
+      ],
+      "annotation": "Developer-authored literal passage relevance assigned before retrieval; not independent clinical adjudication",
+      "retrieved_ids": [
+        "D-e0c63d62844d64ebabf1",
+        "D-dda64d483a9eb444a927",
+        "D-4c3f9f9457f479d383db",
+        "D-6efe3aebf556e97dd96b",
+        "D-77216b4977691cd1f6d7"
+      ],
+      "top3": true,
+      "top5": true,
+      "issues": []
+    },
+    {
+      "id": "additional-3",
+      "question": "How does the event mechanism suppress duplicate notifications?",
+      "relevant_fragment_ids": [
+        "D-ae65db85b3cd75fb38e4"
+      ],
+      "annotation": "Developer-authored literal passage relevance assigned before retrieval; not independent clinical adjudication",
+      "retrieved_ids": [
+        "D-897814c1d24767f3b849",
+        "D-0dec7aea69a4b0b71006",
+        "D-9f2cf12b92be36ff286c",
+        "D-a276fe7ea1723f886b45",
+        "D-ae65db85b3cd75fb38e4"
+      ],
+      "top3": false,
+      "top5": true,
+      "issues": []
+    },
+    {
+      "id": "additional-4",
+      "question": "¿Se notifica otra vez un evento idéntico sin cambios?",
+      "relevant_fragment_ids": [
+        "D-ae65db85b3cd75fb38e4"
+      ],
+      "annotation": "Developer-authored literal passage relevance assigned before retrieval; not independent clinical adjudication",
+      "retrieved_ids": [
+        "D-aec1fb8d5f55e354fbad",
+        "D-20b9ab6992407c91fc23",
+        "D-3fd78ebfccde9fd0b25c",
+        "D-bef00bdf71d7886c1f3c",
+        "D-52eb9861ed345be754d1"
+      ],
+      "top3": false,
+      "top5": false,
+      "issues": []
+    },
+    {
+      "id": "additional-5",
+      "question": "What numeric capillary glucose boundaries define level 1 and level 2 hypoglycemia?",
+      "relevant_fragment_ids": [
+        "D-2397e05233f2a45e21f3"
+      ],
+      "annotation": "Developer-authored literal passage relevance assigned before retrieval; not independent clinical adjudication",
+      "retrieved_ids": [
+        "D-2397e05233f2a45e21f3",
+        "D-4ab55ed37d4cf555d585",
+        "D-a276fe7ea1723f886b45",
+        "D-348f6f6e276875605f09",
+        "D-20b9ab6992407c91fc23"
+      ],
+      "top3": true,
+      "top5": true,
+      "issues": []
+    },
+    {
+      "id": "additional-6",
+      "question": "¿Cuáles son los límites de glucosa capilar para los niveles de hipoglucemia?",
+      "relevant_fragment_ids": [
+        "D-2397e05233f2a45e21f3"
+      ],
+      "annotation": "Developer-authored literal passage relevance assigned before retrieval; not independent clinical adjudication",
+      "retrieved_ids": [
+        "D-4ab55ed37d4cf555d585",
+        "D-2397e05233f2a45e21f3",
+        "D-348f6f6e276875605f09",
+        "D-a276fe7ea1723f886b45",
+        "D-eb3493bcbe8c3d683dca"
+      ],
+      "top3": true,
+      "top5": true,
+      "issues": []
+    },
+    {
+      "id": "additional-7",
+      "question": "Explain stale sensor values and the declared clinical time window.",
+      "relevant_fragment_ids": [
+        "D-2ca307e7fa544117900c"
+      ],
+      "annotation": "Developer-authored literal passage relevance assigned before retrieval; not independent clinical adjudication",
+      "retrieved_ids": [
+        "D-2ca307e7fa544117900c",
+        "D-8b932a5e188475296f94",
+        "D-b0cfa77d7dcc459272cd",
+        "D-03dc8a774d4a82c9f13e",
+        "D-bc0b268b521ffa02fc22"
+      ],
+      "top3": true,
+      "top5": true,
+      "issues": []
+    },
+    {
+      "id": "additional-8",
+      "question": "Does the muscle and bone module assume a DXA device is present?",
+      "relevant_fragment_ids": [
+        "D-2fb6c076e445e50b078b"
+      ],
+      "annotation": "Developer-authored literal passage relevance assigned before retrieval; not independent clinical adjudication",
+      "retrieved_ids": [
+        "D-c5f9a732cf62104f0489",
+        "D-9f556a38e25922d02aee",
+        "D-c189190919b5987e2353",
+        "D-9f2cf12b92be36ff286c",
+        "D-f03eaafe70948759b84c"
+      ],
+      "top3": false,
+      "top5": false,
+      "issues": []
+    }
+  ],
+  "top3_hits": 4,
+  "top5_hits": 6,
+  "total": 8,
+  "used_for_further_tuning": false
+}

@@ -1,0 +1,1142 @@
+{
+  "clinical_validation": false,
+  "selected_runtime_pid": 44472,
+  "explicit_unload": {
+    "released": true,
+    "loaded": {
+      "models": []
+    }
+  },
+  "runtime_physically_unavailable": true,
+  "down_FULL": {
+    "status": "EXTRACTIVE_ONLY",
+    "run_id": "A-cycle-14",
+    "evaluation_id": null,
+    "as_of": "2026-09-15T12:00:00+00:00",
+    "mode": "FULL",
+    "message": "Resultados del motor separados de documentaci\u00f3n y texto generado. / Engine results are separate from documents and generated text.",
+    "answer": [
+      {
+        "id": "M1",
+        "kind": "ENGINE",
+        "category": "LIMITATION",
+        "text": "Monitorizaci\u00f3n experimental / Experimental monitoring. Cambios num\u00e9ricos no equivalen a empeoramiento cl\u00ednico / numeric changes are not clinical worsening. No diagn\u00f3stico firmado, no tratamiento autorizado. / No signed diagnosis or treatment authorization.",
+        "reference": {
+          "run_id": "A-cycle-14",
+          "as_of": "2026-09-15T12:00:00+00:00",
+          "output_hash": "e2aa6636a58b7a1ed96914cf66f35f1e5ae1cdcfdd95818f7ab2759cfafa14ac"
+        }
+      },
+      {
+        "id": "M5",
+        "kind": "ENGINE",
+        "category": "BASELINE",
+        "text": "physiology.vo2max: baseline 50.0 mL/min/kg; cambio absoluto / absolute change -11.0; retenci\u00f3n / retention 78.0%. Descriptivo, no diagn\u00f3stico / descriptive, not diagnosis.",
+        "reference": {
+          "run_id": "A-cycle-14",
+          "as_of": "2026-09-15T12:00:00+00:00",
+          "output_hash": "e2aa6636a58b7a1ed96914cf66f35f1e5ae1cdcfdd95818f7ab2759cfafa14ac",
+          "variable": "physiology.vo2max",
+          "baseline_id": "A-baseline-0",
+          "source_ids": [
+            "S01",
+            "S05"
+          ]
+        }
+      },
+      {
+        "id": "M24",
+        "kind": "ENGINE",
+        "category": "CHANGE",
+        "text": "Cambio desde revisi\u00f3n anterior / change since previous review: {\"variable\": \"physiology.vo2max\", \"previous\": 44.0, \"current\": 39.0, \"previous_state\": \"DESCRIPTIVE_AVAILABLE\", \"current_state\": \"DESCRIPTIVE_AVAILABLE\"}",
+        "reference": {
+          "run_id": "A-cycle-14",
+          "as_of": "2026-09-15T12:00:00+00:00",
+          "output_hash": "e2aa6636a58b7a1ed96914cf66f35f1e5ae1cdcfdd95818f7ab2759cfafa14ac",
+          "previous_run_id": "A-cycle-7"
+        }
+      },
+      {
+        "id": "M6",
+        "kind": "ENGINE",
+        "category": "TREND",
+        "text": "physiology.vo2max: pendiente / slope -0.6428571428571429 mL/min/kg/day; EWMA/CUSUM por observaci\u00f3n / per observation; RESEARCH_ONLY. No umbral cl\u00ednico / no clinical threshold.",
+        "reference": {
+          "run_id": "A-cycle-14",
+          "as_of": "2026-09-15T12:00:00+00:00",
+          "output_hash": "e2aa6636a58b7a1ed96914cf66f35f1e5ae1cdcfdd95818f7ab2759cfafa14ac",
+          "variable": "physiology.vo2max",
+          "source_ids": [
+            "S01",
+            "S05"
+          ]
+        }
+      },
+      {
+        "id": "M25",
+        "kind": "ENGINE",
+        "category": "CHANGE",
+        "text": "Cambio desde revisi\u00f3n anterior / change since previous review: {\"variable\": \"physiology.heart_rate\", \"previous\": 72.0, \"current\": 79.0, \"previous_state\": \"DESCRIPTIVE_AVAILABLE\", \"current_state\": \"DESCRIPTIVE_AVAILABLE\"}",
+        "reference": {
+          "run_id": "A-cycle-14",
+          "as_of": "2026-09-15T12:00:00+00:00",
+          "output_hash": "e2aa6636a58b7a1ed96914cf66f35f1e5ae1cdcfdd95818f7ab2759cfafa14ac",
+          "previous_run_id": "A-cycle-7"
+        }
+      },
+      {
+        "id": "M8",
+        "kind": "ENGINE",
+        "category": "TREND",
+        "text": "physiology.heart_rate: pendiente / slope 1.0 bpm/day; EWMA/CUSUM por observaci\u00f3n / per observation; RESEARCH_ONLY. No umbral cl\u00ednico / no clinical threshold.",
+        "reference": {
+          "run_id": "A-cycle-14",
+          "as_of": "2026-09-15T12:00:00+00:00",
+          "output_hash": "e2aa6636a58b7a1ed96914cf66f35f1e5ae1cdcfdd95818f7ab2759cfafa14ac",
+          "variable": "physiology.heart_rate",
+          "source_ids": [
+            "S01",
+            "S05"
+          ]
+        }
+      },
+      {
+        "id": "C-29",
+        "kind": "DOCUMENT",
+        "text": "{\"criterion_id\": \"CRIT-OH-AHA-2024\", \"condition_id\": \"ORTHOSTATIC_HYPOTENSION\", \"version\": \"2024.1\", \"population\": \"ADULT\", \"source_ids\": [\"SRC-AHA-OH-2024\"], \"context\": {\"requires_gravity_supporting_upright_transition\": true, \"standing_window_minutes\": 3}, \"logic\": {\"any_of\": [{\"derived_field\": \"delta_sbp_mm_hg\", \"op\": \"<=\", \"value\": -20}, {\"derived_field\": \"delta_dbp_mm_hg\", \"op\": \"<=\", \"value\": -10}]}, \"measurement_quality\": {\"baseline_and_upright_bp_required\": true, \"time_since_upright_required\": true, \"sustained_reduction_required\": true}, \"etiology_confirmed_by_criterion\": false, \"space_applicability\": \"CONTEXT_DEPENDENT\"}",
+        "reference": {
+          "criterion_id": "CRIT-OH-AHA-2024",
+          "source_ids": [
+            "SRC-AHA-OH-2024"
+          ],
+          "version": "2024.1"
+        },
+        "category": "IMPLEMENTED_CRITERION"
+      },
+      {
+        "id": "M13",
+        "kind": "ENGINE",
+        "category": "RADIATION",
+        "text": "Radiaci\u00f3n / radiation: NOT_MEASURED; dosis efectiva registrada / recorded effective dose None mSv; cobertura / coverage 0 seconds. Solo intervalos registrados, no dosis de vida ni diagn\u00f3stico / recorded intervals only, not lifetime dose or diagnosis.",
+        "reference": {
+          "run_id": "A-cycle-14",
+          "as_of": "2026-09-15T12:00:00+00:00",
+          "output_hash": "e2aa6636a58b7a1ed96914cf66f35f1e5ae1cdcfdd95818f7ab2759cfafa14ac",
+          "source_ids": [
+            "S01",
+            "S16"
+          ]
+        }
+      }
+    ],
+    "retrieved": [
+      {
+        "id": "M1",
+        "kind": "ENGINE",
+        "category": "LIMITATION",
+        "text": "Monitorizaci\u00f3n experimental / Experimental monitoring. Cambios num\u00e9ricos no equivalen a empeoramiento cl\u00ednico / numeric changes are not clinical worsening. No diagn\u00f3stico firmado, no tratamiento autorizado. / No signed diagnosis or treatment authorization.",
+        "reference": {
+          "run_id": "A-cycle-14",
+          "as_of": "2026-09-15T12:00:00+00:00",
+          "output_hash": "e2aa6636a58b7a1ed96914cf66f35f1e5ae1cdcfdd95818f7ab2759cfafa14ac"
+        }
+      },
+      {
+        "id": "M5",
+        "kind": "ENGINE",
+        "category": "BASELINE",
+        "text": "physiology.vo2max: baseline 50.0 mL/min/kg; cambio absoluto / absolute change -11.0; retenci\u00f3n / retention 78.0%. Descriptivo, no diagn\u00f3stico / descriptive, not diagnosis.",
+        "reference": {
+          "run_id": "A-cycle-14",
+          "as_of": "2026-09-15T12:00:00+00:00",
+          "output_hash": "e2aa6636a58b7a1ed96914cf66f35f1e5ae1cdcfdd95818f7ab2759cfafa14ac",
+          "variable": "physiology.vo2max",
+          "baseline_id": "A-baseline-0",
+          "source_ids": [
+            "S01",
+            "S05"
+          ]
+        }
+      },
+      {
+        "id": "M24",
+        "kind": "ENGINE",
+        "category": "CHANGE",
+        "text": "Cambio desde revisi\u00f3n anterior / change since previous review: {\"variable\": \"physiology.vo2max\", \"previous\": 44.0, \"current\": 39.0, \"previous_state\": \"DESCRIPTIVE_AVAILABLE\", \"current_state\": \"DESCRIPTIVE_AVAILABLE\"}",
+        "reference": {
+          "run_id": "A-cycle-14",
+          "as_of": "2026-09-15T12:00:00+00:00",
+          "output_hash": "e2aa6636a58b7a1ed96914cf66f35f1e5ae1cdcfdd95818f7ab2759cfafa14ac",
+          "previous_run_id": "A-cycle-7"
+        }
+      },
+      {
+        "id": "M6",
+        "kind": "ENGINE",
+        "category": "TREND",
+        "text": "physiology.vo2max: pendiente / slope -0.6428571428571429 mL/min/kg/day; EWMA/CUSUM por observaci\u00f3n / per observation; RESEARCH_ONLY. No umbral cl\u00ednico / no clinical threshold.",
+        "reference": {
+          "run_id": "A-cycle-14",
+          "as_of": "2026-09-15T12:00:00+00:00",
+          "output_hash": "e2aa6636a58b7a1ed96914cf66f35f1e5ae1cdcfdd95818f7ab2759cfafa14ac",
+          "variable": "physiology.vo2max",
+          "source_ids": [
+            "S01",
+            "S05"
+          ]
+        }
+      },
+      {
+        "id": "M25",
+        "kind": "ENGINE",
+        "category": "CHANGE",
+        "text": "Cambio desde revisi\u00f3n anterior / change since previous review: {\"variable\": \"physiology.heart_rate\", \"previous\": 72.0, \"current\": 79.0, \"previous_state\": \"DESCRIPTIVE_AVAILABLE\", \"current_state\": \"DESCRIPTIVE_AVAILABLE\"}",
+        "reference": {
+          "run_id": "A-cycle-14",
+          "as_of": "2026-09-15T12:00:00+00:00",
+          "output_hash": "e2aa6636a58b7a1ed96914cf66f35f1e5ae1cdcfdd95818f7ab2759cfafa14ac",
+          "previous_run_id": "A-cycle-7"
+        }
+      },
+      {
+        "id": "M8",
+        "kind": "ENGINE",
+        "category": "TREND",
+        "text": "physiology.heart_rate: pendiente / slope 1.0 bpm/day; EWMA/CUSUM por observaci\u00f3n / per observation; RESEARCH_ONLY. No umbral cl\u00ednico / no clinical threshold.",
+        "reference": {
+          "run_id": "A-cycle-14",
+          "as_of": "2026-09-15T12:00:00+00:00",
+          "output_hash": "e2aa6636a58b7a1ed96914cf66f35f1e5ae1cdcfdd95818f7ab2759cfafa14ac",
+          "variable": "physiology.heart_rate",
+          "source_ids": [
+            "S01",
+            "S05"
+          ]
+        }
+      },
+      {
+        "id": "C-29",
+        "kind": "DOCUMENT",
+        "text": "{\"criterion_id\": \"CRIT-OH-AHA-2024\", \"condition_id\": \"ORTHOSTATIC_HYPOTENSION\", \"version\": \"2024.1\", \"population\": \"ADULT\", \"source_ids\": [\"SRC-AHA-OH-2024\"], \"context\": {\"requires_gravity_supporting_upright_transition\": true, \"standing_window_minutes\": 3}, \"logic\": {\"any_of\": [{\"derived_field\": \"delta_sbp_mm_hg\", \"op\": \"<=\", \"value\": -20}, {\"derived_field\": \"delta_dbp_mm_hg\", \"op\": \"<=\", \"value\": -10}]}, \"measurement_quality\": {\"baseline_and_upright_bp_required\": true, \"time_since_upright_required\": true, \"sustained_reduction_required\": true}, \"etiology_confirmed_by_criterion\": false, \"space_applicability\": \"CONTEXT_DEPENDENT\"}",
+        "reference": {
+          "criterion_id": "CRIT-OH-AHA-2024",
+          "source_ids": [
+            "SRC-AHA-OH-2024"
+          ],
+          "version": "2024.1"
+        },
+        "category": "IMPLEMENTED_CRITERION"
+      },
+      {
+        "id": "M13",
+        "kind": "ENGINE",
+        "category": "RADIATION",
+        "text": "Radiaci\u00f3n / radiation: NOT_MEASURED; dosis efectiva registrada / recorded effective dose None mSv; cobertura / coverage 0 seconds. Solo intervalos registrados, no dosis de vida ni diagn\u00f3stico / recorded intervals only, not lifetime dose or diagnosis.",
+        "reference": {
+          "run_id": "A-cycle-14",
+          "as_of": "2026-09-15T12:00:00+00:00",
+          "output_hash": "e2aa6636a58b7a1ed96914cf66f35f1e5ae1cdcfdd95818f7ab2759cfafa14ac",
+          "source_ids": [
+            "S01",
+            "S16"
+          ]
+        }
+      },
+      {
+        "id": "D-8b932a5e188475296f94",
+        "kind": "DOCUMENT",
+        "text": "```text\nfunction robust_baseline(values):\n    valid = [x for x in values if x.quality == VALID and comparable_context(x)]\n    if insufficient_by_protocol(valid):\n        return INCONCLUSIVE",
+        "reference": {
+          "document": "01_INFORMES/REPORTE_CONSOLIDADO_COMPLETO.md",
+          "sha256": "97e9fdc86925b6b973db75900e64f222c149ae3bd9cade8c182f2264c46831e5",
+          "version": "PINNED_CORPUS",
+          "authority": "SPACE_RESEARCH_SYNTHESIS",
+          "char_start": 42184,
+          "char_end": 42373,
+          "line": 231
+        },
+        "retrieval_score": 7.310044
+      },
+      {
+        "id": "D-ac4d718dabd389d747ae",
+        "kind": "DOCUMENT",
+        "text": "tor_training\"],\n      \"missing_behavior\": \"UNKNOWN\"\n    },\n    {\n      \"test_id\": \"TEST-VENOUS-PH-BICARB\",\n      \"measure\": [\"venous_pH\", \"bicarbonate\"],\n      \"canonical_unit\": [\"pH\", \"mmol/L\"],\n      \"diagnostic_use\": [\"DKA\"],\n      \"missing_behavior\": \"UNKNOWN\"\n    },\n    {\n      \"test_id\": \"TEST-ORTHOSTATIC-BP-HR\",\n      \"measure\": [\"blood_pressure\", \"heart_rate\"],\n      \"diagnostic_use\": [\"ORTHOSTATIC_HYPOTENSION\", \"POTS\"],\n      \"quality\": [\n        \"gravity_context_recorded\",\n        \"baseline_position_recorded\",\n        \"upright_time_recorded\",\n        \"valid_BP_device\",\n        \"valid_HR_device\"\n      ],\n      \"missing_behavior\": \"UNKNOWN\"\n    },\n    {\n      \"test_id\": \"TEST-POTS-EXCLUSIONS\",\n      \"measure\": \"clinical_exclusion_set\",\n      \"diagnostic_use\": [\"POTS\"],\n      \"required_review\": [\n        \"dehydration\",\n        \"recent_blood_loss\",\n        \"anemia\",\n        \"fever\",\n        \"infection\",\n        \"pain\",\n        \"hyperthyroidism\",\n        \"medications\",\n        \"severe_deconditioning\"\n      ],\n      \"missing_behavior\": \"UNRESOLVED_EXCLUSION\"\n    },\n    {\n      \"t",
+        "reference": {
+          "document": "docs/clinical/deep-research-report-2026-10-16.md",
+          "sha256": "38ad3ab166f25a8b46c1e1f483ba813510c34dc766171389307635ecf7e8a715",
+          "version": "2026-10-16",
+          "authority": "CLINICAL_RESEARCH_SYNTHESIS",
+          "char_start": 53354,
+          "char_end": 54454,
+          "line": 1153
+        },
+        "retrieval_score": 5.691468
+      },
+      {
+        "id": "D-1f23d6f8aa942512d374",
+        "kind": "DOCUMENT",
+        "text": "RAGReadAPI\n  retrieve_evidence(query, filters) -> EvidenceChunk[]\n  explain_finding(finding_id) -> GroundingBundle\n  # no write method to RuleEngine or AuthorizationEngine\n```",
+        "reference": {
+          "document": "01_INFORMES/REPORTE_CONSOLIDADO_COMPLETO.md",
+          "sha256": "97e9fdc86925b6b973db75900e64f222c149ae3bd9cade8c182f2264c46831e5",
+          "version": "PINNED_CORPUS",
+          "authority": "SPACE_RESEARCH_SYNTHESIS",
+          "char_start": 83262,
+          "char_end": 83437,
+          "line": 856
+        },
+        "retrieval_score": 4.555704
+      }
+    ],
+    "generated": [],
+    "documents": [
+      {
+        "id": "D-8b932a5e188475296f94",
+        "kind": "DOCUMENT",
+        "text": "```text\nfunction robust_baseline(values):\n    valid = [x for x in values if x.quality == VALID and comparable_context(x)]\n    if insufficient_by_protocol(valid):\n        return INCONCLUSIVE",
+        "reference": {
+          "document": "01_INFORMES/REPORTE_CONSOLIDADO_COMPLETO.md",
+          "sha256": "97e9fdc86925b6b973db75900e64f222c149ae3bd9cade8c182f2264c46831e5",
+          "version": "PINNED_CORPUS",
+          "authority": "SPACE_RESEARCH_SYNTHESIS",
+          "char_start": 42184,
+          "char_end": 42373,
+          "line": 231
+        },
+        "retrieval_score": 7.310044
+      },
+      {
+        "id": "D-ac4d718dabd389d747ae",
+        "kind": "DOCUMENT",
+        "text": "tor_training\"],\n      \"missing_behavior\": \"UNKNOWN\"\n    },\n    {\n      \"test_id\": \"TEST-VENOUS-PH-BICARB\",\n      \"measure\": [\"venous_pH\", \"bicarbonate\"],\n      \"canonical_unit\": [\"pH\", \"mmol/L\"],\n      \"diagnostic_use\": [\"DKA\"],\n      \"missing_behavior\": \"UNKNOWN\"\n    },\n    {\n      \"test_id\": \"TEST-ORTHOSTATIC-BP-HR\",\n      \"measure\": [\"blood_pressure\", \"heart_rate\"],\n      \"diagnostic_use\": [\"ORTHOSTATIC_HYPOTENSION\", \"POTS\"],\n      \"quality\": [\n        \"gravity_context_recorded\",\n        \"baseline_position_recorded\",\n        \"upright_time_recorded\",\n        \"valid_BP_device\",\n        \"valid_HR_device\"\n      ],\n      \"missing_behavior\": \"UNKNOWN\"\n    },\n    {\n      \"test_id\": \"TEST-POTS-EXCLUSIONS\",\n      \"measure\": \"clinical_exclusion_set\",\n      \"diagnostic_use\": [\"POTS\"],\n      \"required_review\": [\n        \"dehydration\",\n        \"recent_blood_loss\",\n        \"anemia\",\n        \"fever\",\n        \"infection\",\n        \"pain\",\n        \"hyperthyroidism\",\n        \"medications\",\n        \"severe_deconditioning\"\n      ],\n      \"missing_behavior\": \"UNRESOLVED_EXCLUSION\"\n    },\n    {\n      \"t",
+        "reference": {
+          "document": "docs/clinical/deep-research-report-2026-10-16.md",
+          "sha256": "38ad3ab166f25a8b46c1e1f483ba813510c34dc766171389307635ecf7e8a715",
+          "version": "2026-10-16",
+          "authority": "CLINICAL_RESEARCH_SYNTHESIS",
+          "char_start": 53354,
+          "char_end": 54454,
+          "line": 1153
+        },
+        "retrieval_score": 5.691468
+      },
+      {
+        "id": "D-1f23d6f8aa942512d374",
+        "kind": "DOCUMENT",
+        "text": "RAGReadAPI\n  retrieve_evidence(query, filters) -> EvidenceChunk[]\n  explain_finding(finding_id) -> GroundingBundle\n  # no write method to RuleEngine or AuthorizationEngine\n```",
+        "reference": {
+          "document": "01_INFORMES/REPORTE_CONSOLIDADO_COMPLETO.md",
+          "sha256": "97e9fdc86925b6b973db75900e64f222c149ae3bd9cade8c182f2264c46831e5",
+          "version": "PINNED_CORPUS",
+          "authority": "SPACE_RESEARCH_SYNTHESIS",
+          "char_start": 83262,
+          "char_end": 83437,
+          "line": 856
+        },
+        "retrieval_score": 4.555704
+      }
+    ],
+    "document_issues": [],
+    "sources": [
+      {
+        "document": "01_INFORMES/REPORTE_CONSOLIDADO_COMPLETO.md",
+        "sha256": "97e9fdc86925b6b973db75900e64f222c149ae3bd9cade8c182f2264c46831e5",
+        "version": "PINNED_CORPUS",
+        "authority": "SPACE_RESEARCH_SYNTHESIS",
+        "char_start": 42184,
+        "char_end": 42373,
+        "line": 231
+      },
+      {
+        "document": "docs/clinical/deep-research-report-2026-10-16.md",
+        "sha256": "38ad3ab166f25a8b46c1e1f483ba813510c34dc766171389307635ecf7e8a715",
+        "version": "2026-10-16",
+        "authority": "CLINICAL_RESEARCH_SYNTHESIS",
+        "char_start": 53354,
+        "char_end": 54454,
+        "line": 1153
+      },
+      {
+        "document": "01_INFORMES/REPORTE_CONSOLIDADO_COMPLETO.md",
+        "sha256": "97e9fdc86925b6b973db75900e64f222c149ae3bd9cade8c182f2264c46831e5",
+        "version": "PINNED_CORPUS",
+        "authority": "SPACE_RESEARCH_SYNTHESIS",
+        "char_start": 83262,
+        "char_end": 83437,
+        "line": 856
+      }
+    ],
+    "inference_attempted": false,
+    "inference_executed": false,
+    "clinical_execution": "BLOCKED",
+    "authority": "DETERMINISTIC_ENGINE_ONLY",
+    "clinical_validation": false,
+    "limitations": [
+      "DOCUMENTS_DO_NOT_OVERRIDE_ENGINE",
+      "SEMANTIC_VERIFICATION_IS_NOT_CLINICAL_VALIDATION",
+      "UNKNOWN_UNDETECTED_ERRORS_REQUIRE_INDEPENDENT_REVIEW"
+    ],
+    "context": {
+      "subject_id": "v07-crew-A",
+      "mission_id": "v07-mission-A",
+      "target_id": "A-cycle-14"
+    },
+    "history_used": false
+  },
+  "down_CRITICAL": {
+    "status": "EXTRACTIVE_ONLY",
+    "run_id": "A-cycle-14",
+    "evaluation_id": null,
+    "as_of": "2026-09-15T12:00:00+00:00",
+    "mode": "CRITICAL",
+    "message": "Resultados del motor separados de documentaci\u00f3n y texto generado. / Engine results are separate from documents and generated text.",
+    "answer": [
+      {
+        "id": "M1",
+        "kind": "ENGINE",
+        "category": "LIMITATION",
+        "text": "Monitorizaci\u00f3n experimental / Experimental monitoring. Cambios num\u00e9ricos no equivalen a empeoramiento cl\u00ednico / numeric changes are not clinical worsening. No diagn\u00f3stico firmado, no tratamiento autorizado. / No signed diagnosis or treatment authorization.",
+        "reference": {
+          "run_id": "A-cycle-14",
+          "as_of": "2026-09-15T12:00:00+00:00",
+          "output_hash": "e2aa6636a58b7a1ed96914cf66f35f1e5ae1cdcfdd95818f7ab2759cfafa14ac"
+        }
+      },
+      {
+        "id": "M5",
+        "kind": "ENGINE",
+        "category": "BASELINE",
+        "text": "physiology.vo2max: baseline 50.0 mL/min/kg; cambio absoluto / absolute change -11.0; retenci\u00f3n / retention 78.0%. Descriptivo, no diagn\u00f3stico / descriptive, not diagnosis.",
+        "reference": {
+          "run_id": "A-cycle-14",
+          "as_of": "2026-09-15T12:00:00+00:00",
+          "output_hash": "e2aa6636a58b7a1ed96914cf66f35f1e5ae1cdcfdd95818f7ab2759cfafa14ac",
+          "variable": "physiology.vo2max",
+          "baseline_id": "A-baseline-0",
+          "source_ids": [
+            "S01",
+            "S05"
+          ]
+        }
+      },
+      {
+        "id": "M24",
+        "kind": "ENGINE",
+        "category": "CHANGE",
+        "text": "Cambio desde revisi\u00f3n anterior / change since previous review: {\"variable\": \"physiology.vo2max\", \"previous\": 44.0, \"current\": 39.0, \"previous_state\": \"DESCRIPTIVE_AVAILABLE\", \"current_state\": \"DESCRIPTIVE_AVAILABLE\"}",
+        "reference": {
+          "run_id": "A-cycle-14",
+          "as_of": "2026-09-15T12:00:00+00:00",
+          "output_hash": "e2aa6636a58b7a1ed96914cf66f35f1e5ae1cdcfdd95818f7ab2759cfafa14ac",
+          "previous_run_id": "A-cycle-7"
+        }
+      },
+      {
+        "id": "M6",
+        "kind": "ENGINE",
+        "category": "TREND",
+        "text": "physiology.vo2max: pendiente / slope -0.6428571428571429 mL/min/kg/day; EWMA/CUSUM por observaci\u00f3n / per observation; RESEARCH_ONLY. No umbral cl\u00ednico / no clinical threshold.",
+        "reference": {
+          "run_id": "A-cycle-14",
+          "as_of": "2026-09-15T12:00:00+00:00",
+          "output_hash": "e2aa6636a58b7a1ed96914cf66f35f1e5ae1cdcfdd95818f7ab2759cfafa14ac",
+          "variable": "physiology.vo2max",
+          "source_ids": [
+            "S01",
+            "S05"
+          ]
+        }
+      },
+      {
+        "id": "M25",
+        "kind": "ENGINE",
+        "category": "CHANGE",
+        "text": "Cambio desde revisi\u00f3n anterior / change since previous review: {\"variable\": \"physiology.heart_rate\", \"previous\": 72.0, \"current\": 79.0, \"previous_state\": \"DESCRIPTIVE_AVAILABLE\", \"current_state\": \"DESCRIPTIVE_AVAILABLE\"}",
+        "reference": {
+          "run_id": "A-cycle-14",
+          "as_of": "2026-09-15T12:00:00+00:00",
+          "output_hash": "e2aa6636a58b7a1ed96914cf66f35f1e5ae1cdcfdd95818f7ab2759cfafa14ac",
+          "previous_run_id": "A-cycle-7"
+        }
+      },
+      {
+        "id": "M8",
+        "kind": "ENGINE",
+        "category": "TREND",
+        "text": "physiology.heart_rate: pendiente / slope 1.0 bpm/day; EWMA/CUSUM por observaci\u00f3n / per observation; RESEARCH_ONLY. No umbral cl\u00ednico / no clinical threshold.",
+        "reference": {
+          "run_id": "A-cycle-14",
+          "as_of": "2026-09-15T12:00:00+00:00",
+          "output_hash": "e2aa6636a58b7a1ed96914cf66f35f1e5ae1cdcfdd95818f7ab2759cfafa14ac",
+          "variable": "physiology.heart_rate",
+          "source_ids": [
+            "S01",
+            "S05"
+          ]
+        }
+      },
+      {
+        "id": "C-29",
+        "kind": "DOCUMENT",
+        "text": "{\"criterion_id\": \"CRIT-OH-AHA-2024\", \"condition_id\": \"ORTHOSTATIC_HYPOTENSION\", \"version\": \"2024.1\", \"population\": \"ADULT\", \"source_ids\": [\"SRC-AHA-OH-2024\"], \"context\": {\"requires_gravity_supporting_upright_transition\": true, \"standing_window_minutes\": 3}, \"logic\": {\"any_of\": [{\"derived_field\": \"delta_sbp_mm_hg\", \"op\": \"<=\", \"value\": -20}, {\"derived_field\": \"delta_dbp_mm_hg\", \"op\": \"<=\", \"value\": -10}]}, \"measurement_quality\": {\"baseline_and_upright_bp_required\": true, \"time_since_upright_required\": true, \"sustained_reduction_required\": true}, \"etiology_confirmed_by_criterion\": false, \"space_applicability\": \"CONTEXT_DEPENDENT\"}",
+        "reference": {
+          "criterion_id": "CRIT-OH-AHA-2024",
+          "source_ids": [
+            "SRC-AHA-OH-2024"
+          ],
+          "version": "2024.1"
+        },
+        "category": "IMPLEMENTED_CRITERION"
+      },
+      {
+        "id": "M13",
+        "kind": "ENGINE",
+        "category": "RADIATION",
+        "text": "Radiaci\u00f3n / radiation: NOT_MEASURED; dosis efectiva registrada / recorded effective dose None mSv; cobertura / coverage 0 seconds. Solo intervalos registrados, no dosis de vida ni diagn\u00f3stico / recorded intervals only, not lifetime dose or diagnosis.",
+        "reference": {
+          "run_id": "A-cycle-14",
+          "as_of": "2026-09-15T12:00:00+00:00",
+          "output_hash": "e2aa6636a58b7a1ed96914cf66f35f1e5ae1cdcfdd95818f7ab2759cfafa14ac",
+          "source_ids": [
+            "S01",
+            "S16"
+          ]
+        }
+      }
+    ],
+    "retrieved": [
+      {
+        "id": "M1",
+        "kind": "ENGINE",
+        "category": "LIMITATION",
+        "text": "Monitorizaci\u00f3n experimental / Experimental monitoring. Cambios num\u00e9ricos no equivalen a empeoramiento cl\u00ednico / numeric changes are not clinical worsening. No diagn\u00f3stico firmado, no tratamiento autorizado. / No signed diagnosis or treatment authorization.",
+        "reference": {
+          "run_id": "A-cycle-14",
+          "as_of": "2026-09-15T12:00:00+00:00",
+          "output_hash": "e2aa6636a58b7a1ed96914cf66f35f1e5ae1cdcfdd95818f7ab2759cfafa14ac"
+        }
+      },
+      {
+        "id": "M5",
+        "kind": "ENGINE",
+        "category": "BASELINE",
+        "text": "physiology.vo2max: baseline 50.0 mL/min/kg; cambio absoluto / absolute change -11.0; retenci\u00f3n / retention 78.0%. Descriptivo, no diagn\u00f3stico / descriptive, not diagnosis.",
+        "reference": {
+          "run_id": "A-cycle-14",
+          "as_of": "2026-09-15T12:00:00+00:00",
+          "output_hash": "e2aa6636a58b7a1ed96914cf66f35f1e5ae1cdcfdd95818f7ab2759cfafa14ac",
+          "variable": "physiology.vo2max",
+          "baseline_id": "A-baseline-0",
+          "source_ids": [
+            "S01",
+            "S05"
+          ]
+        }
+      },
+      {
+        "id": "M24",
+        "kind": "ENGINE",
+        "category": "CHANGE",
+        "text": "Cambio desde revisi\u00f3n anterior / change since previous review: {\"variable\": \"physiology.vo2max\", \"previous\": 44.0, \"current\": 39.0, \"previous_state\": \"DESCRIPTIVE_AVAILABLE\", \"current_state\": \"DESCRIPTIVE_AVAILABLE\"}",
+        "reference": {
+          "run_id": "A-cycle-14",
+          "as_of": "2026-09-15T12:00:00+00:00",
+          "output_hash": "e2aa6636a58b7a1ed96914cf66f35f1e5ae1cdcfdd95818f7ab2759cfafa14ac",
+          "previous_run_id": "A-cycle-7"
+        }
+      },
+      {
+        "id": "M6",
+        "kind": "ENGINE",
+        "category": "TREND",
+        "text": "physiology.vo2max: pendiente / slope -0.6428571428571429 mL/min/kg/day; EWMA/CUSUM por observaci\u00f3n / per observation; RESEARCH_ONLY. No umbral cl\u00ednico / no clinical threshold.",
+        "reference": {
+          "run_id": "A-cycle-14",
+          "as_of": "2026-09-15T12:00:00+00:00",
+          "output_hash": "e2aa6636a58b7a1ed96914cf66f35f1e5ae1cdcfdd95818f7ab2759cfafa14ac",
+          "variable": "physiology.vo2max",
+          "source_ids": [
+            "S01",
+            "S05"
+          ]
+        }
+      },
+      {
+        "id": "M25",
+        "kind": "ENGINE",
+        "category": "CHANGE",
+        "text": "Cambio desde revisi\u00f3n anterior / change since previous review: {\"variable\": \"physiology.heart_rate\", \"previous\": 72.0, \"current\": 79.0, \"previous_state\": \"DESCRIPTIVE_AVAILABLE\", \"current_state\": \"DESCRIPTIVE_AVAILABLE\"}",
+        "reference": {
+          "run_id": "A-cycle-14",
+          "as_of": "2026-09-15T12:00:00+00:00",
+          "output_hash": "e2aa6636a58b7a1ed96914cf66f35f1e5ae1cdcfdd95818f7ab2759cfafa14ac",
+          "previous_run_id": "A-cycle-7"
+        }
+      },
+      {
+        "id": "M8",
+        "kind": "ENGINE",
+        "category": "TREND",
+        "text": "physiology.heart_rate: pendiente / slope 1.0 bpm/day; EWMA/CUSUM por observaci\u00f3n / per observation; RESEARCH_ONLY. No umbral cl\u00ednico / no clinical threshold.",
+        "reference": {
+          "run_id": "A-cycle-14",
+          "as_of": "2026-09-15T12:00:00+00:00",
+          "output_hash": "e2aa6636a58b7a1ed96914cf66f35f1e5ae1cdcfdd95818f7ab2759cfafa14ac",
+          "variable": "physiology.heart_rate",
+          "source_ids": [
+            "S01",
+            "S05"
+          ]
+        }
+      },
+      {
+        "id": "C-29",
+        "kind": "DOCUMENT",
+        "text": "{\"criterion_id\": \"CRIT-OH-AHA-2024\", \"condition_id\": \"ORTHOSTATIC_HYPOTENSION\", \"version\": \"2024.1\", \"population\": \"ADULT\", \"source_ids\": [\"SRC-AHA-OH-2024\"], \"context\": {\"requires_gravity_supporting_upright_transition\": true, \"standing_window_minutes\": 3}, \"logic\": {\"any_of\": [{\"derived_field\": \"delta_sbp_mm_hg\", \"op\": \"<=\", \"value\": -20}, {\"derived_field\": \"delta_dbp_mm_hg\", \"op\": \"<=\", \"value\": -10}]}, \"measurement_quality\": {\"baseline_and_upright_bp_required\": true, \"time_since_upright_required\": true, \"sustained_reduction_required\": true}, \"etiology_confirmed_by_criterion\": false, \"space_applicability\": \"CONTEXT_DEPENDENT\"}",
+        "reference": {
+          "criterion_id": "CRIT-OH-AHA-2024",
+          "source_ids": [
+            "SRC-AHA-OH-2024"
+          ],
+          "version": "2024.1"
+        },
+        "category": "IMPLEMENTED_CRITERION"
+      },
+      {
+        "id": "M13",
+        "kind": "ENGINE",
+        "category": "RADIATION",
+        "text": "Radiaci\u00f3n / radiation: NOT_MEASURED; dosis efectiva registrada / recorded effective dose None mSv; cobertura / coverage 0 seconds. Solo intervalos registrados, no dosis de vida ni diagn\u00f3stico / recorded intervals only, not lifetime dose or diagnosis.",
+        "reference": {
+          "run_id": "A-cycle-14",
+          "as_of": "2026-09-15T12:00:00+00:00",
+          "output_hash": "e2aa6636a58b7a1ed96914cf66f35f1e5ae1cdcfdd95818f7ab2759cfafa14ac",
+          "source_ids": [
+            "S01",
+            "S16"
+          ]
+        }
+      },
+      {
+        "id": "D-8b932a5e188475296f94",
+        "kind": "DOCUMENT",
+        "text": "```text\nfunction robust_baseline(values):\n    valid = [x for x in values if x.quality == VALID and comparable_context(x)]\n    if insufficient_by_protocol(valid):\n        return INCONCLUSIVE",
+        "reference": {
+          "document": "01_INFORMES/REPORTE_CONSOLIDADO_COMPLETO.md",
+          "sha256": "97e9fdc86925b6b973db75900e64f222c149ae3bd9cade8c182f2264c46831e5",
+          "version": "PINNED_CORPUS",
+          "authority": "SPACE_RESEARCH_SYNTHESIS",
+          "char_start": 42184,
+          "char_end": 42373,
+          "line": 231
+        },
+        "retrieval_score": 7.310044
+      }
+    ],
+    "generated": [],
+    "documents": [
+      {
+        "id": "D-8b932a5e188475296f94",
+        "kind": "DOCUMENT",
+        "text": "```text\nfunction robust_baseline(values):\n    valid = [x for x in values if x.quality == VALID and comparable_context(x)]\n    if insufficient_by_protocol(valid):\n        return INCONCLUSIVE",
+        "reference": {
+          "document": "01_INFORMES/REPORTE_CONSOLIDADO_COMPLETO.md",
+          "sha256": "97e9fdc86925b6b973db75900e64f222c149ae3bd9cade8c182f2264c46831e5",
+          "version": "PINNED_CORPUS",
+          "authority": "SPACE_RESEARCH_SYNTHESIS",
+          "char_start": 42184,
+          "char_end": 42373,
+          "line": 231
+        },
+        "retrieval_score": 7.310044
+      }
+    ],
+    "document_issues": [],
+    "sources": [
+      {
+        "document": "01_INFORMES/REPORTE_CONSOLIDADO_COMPLETO.md",
+        "sha256": "97e9fdc86925b6b973db75900e64f222c149ae3bd9cade8c182f2264c46831e5",
+        "version": "PINNED_CORPUS",
+        "authority": "SPACE_RESEARCH_SYNTHESIS",
+        "char_start": 42184,
+        "char_end": 42373,
+        "line": 231
+      }
+    ],
+    "inference_attempted": false,
+    "inference_executed": false,
+    "clinical_execution": "BLOCKED",
+    "authority": "DETERMINISTIC_ENGINE_ONLY",
+    "clinical_validation": false,
+    "limitations": [
+      "DOCUMENTS_DO_NOT_OVERRIDE_ENGINE",
+      "SEMANTIC_VERIFICATION_IS_NOT_CLINICAL_VALIDATION",
+      "UNKNOWN_UNDETECTED_ERRORS_REQUIRE_INDEPENDENT_REVIEW"
+    ],
+    "context": {
+      "subject_id": "v07-crew-A",
+      "mission_id": "v07-mission-A",
+      "target_id": "A-cycle-14"
+    },
+    "history_used": false
+  },
+  "backend_health_while_runtime_down": {
+    "status": "ok",
+    "mode": "RESEARCH_ONLY",
+    "clinical_execution": "BLOCKED",
+    "version": "0.9.0"
+  },
+  "runtime_restart_seconds_n1": 8.896473000000697,
+  "restarted": {
+    "pid": 48092,
+    "version": {
+      "version": "0.40.6"
+    },
+    "cloud_enabled": false
+  },
+  "recovered_response": {
+    "status": "ANSWERED",
+    "run_id": "A-cycle-14",
+    "evaluation_id": null,
+    "as_of": "2026-09-15T12:00:00+00:00",
+    "mode": "FULL",
+    "message": "Resultados del motor separados de documentaci\u00f3n y texto generado. / Engine results are separate from documents and generated text.",
+    "answer": [
+      {
+        "id": "M1",
+        "kind": "ENGINE",
+        "category": "LIMITATION",
+        "text": "Monitorizaci\u00f3n experimental / Experimental monitoring. Cambios num\u00e9ricos no equivalen a empeoramiento cl\u00ednico / numeric changes are not clinical worsening. No diagn\u00f3stico firmado, no tratamiento autorizado. / No signed diagnosis or treatment authorization.",
+        "reference": {
+          "run_id": "A-cycle-14",
+          "as_of": "2026-09-15T12:00:00+00:00",
+          "output_hash": "e2aa6636a58b7a1ed96914cf66f35f1e5ae1cdcfdd95818f7ab2759cfafa14ac"
+        }
+      },
+      {
+        "id": "M5",
+        "kind": "ENGINE",
+        "category": "BASELINE",
+        "text": "physiology.vo2max: baseline 50.0 mL/min/kg; cambio absoluto / absolute change -11.0; retenci\u00f3n / retention 78.0%. Descriptivo, no diagn\u00f3stico / descriptive, not diagnosis.",
+        "reference": {
+          "run_id": "A-cycle-14",
+          "as_of": "2026-09-15T12:00:00+00:00",
+          "output_hash": "e2aa6636a58b7a1ed96914cf66f35f1e5ae1cdcfdd95818f7ab2759cfafa14ac",
+          "variable": "physiology.vo2max",
+          "baseline_id": "A-baseline-0",
+          "source_ids": [
+            "S01",
+            "S05"
+          ]
+        }
+      },
+      {
+        "id": "M24",
+        "kind": "ENGINE",
+        "category": "CHANGE",
+        "text": "Cambio desde revisi\u00f3n anterior / change since previous review: {\"variable\": \"physiology.vo2max\", \"previous\": 44.0, \"current\": 39.0, \"previous_state\": \"DESCRIPTIVE_AVAILABLE\", \"current_state\": \"DESCRIPTIVE_AVAILABLE\"}",
+        "reference": {
+          "run_id": "A-cycle-14",
+          "as_of": "2026-09-15T12:00:00+00:00",
+          "output_hash": "e2aa6636a58b7a1ed96914cf66f35f1e5ae1cdcfdd95818f7ab2759cfafa14ac",
+          "previous_run_id": "A-cycle-7"
+        }
+      },
+      {
+        "id": "M6",
+        "kind": "ENGINE",
+        "category": "TREND",
+        "text": "physiology.vo2max: pendiente / slope -0.6428571428571429 mL/min/kg/day; EWMA/CUSUM por observaci\u00f3n / per observation; RESEARCH_ONLY. No umbral cl\u00ednico / no clinical threshold.",
+        "reference": {
+          "run_id": "A-cycle-14",
+          "as_of": "2026-09-15T12:00:00+00:00",
+          "output_hash": "e2aa6636a58b7a1ed96914cf66f35f1e5ae1cdcfdd95818f7ab2759cfafa14ac",
+          "variable": "physiology.vo2max",
+          "source_ids": [
+            "S01",
+            "S05"
+          ]
+        }
+      },
+      {
+        "id": "M25",
+        "kind": "ENGINE",
+        "category": "CHANGE",
+        "text": "Cambio desde revisi\u00f3n anterior / change since previous review: {\"variable\": \"physiology.heart_rate\", \"previous\": 72.0, \"current\": 79.0, \"previous_state\": \"DESCRIPTIVE_AVAILABLE\", \"current_state\": \"DESCRIPTIVE_AVAILABLE\"}",
+        "reference": {
+          "run_id": "A-cycle-14",
+          "as_of": "2026-09-15T12:00:00+00:00",
+          "output_hash": "e2aa6636a58b7a1ed96914cf66f35f1e5ae1cdcfdd95818f7ab2759cfafa14ac",
+          "previous_run_id": "A-cycle-7"
+        }
+      },
+      {
+        "id": "M8",
+        "kind": "ENGINE",
+        "category": "TREND",
+        "text": "physiology.heart_rate: pendiente / slope 1.0 bpm/day; EWMA/CUSUM por observaci\u00f3n / per observation; RESEARCH_ONLY. No umbral cl\u00ednico / no clinical threshold.",
+        "reference": {
+          "run_id": "A-cycle-14",
+          "as_of": "2026-09-15T12:00:00+00:00",
+          "output_hash": "e2aa6636a58b7a1ed96914cf66f35f1e5ae1cdcfdd95818f7ab2759cfafa14ac",
+          "variable": "physiology.heart_rate",
+          "source_ids": [
+            "S01",
+            "S05"
+          ]
+        }
+      },
+      {
+        "id": "C-29",
+        "kind": "DOCUMENT",
+        "text": "{\"criterion_id\": \"CRIT-OH-AHA-2024\", \"condition_id\": \"ORTHOSTATIC_HYPOTENSION\", \"version\": \"2024.1\", \"population\": \"ADULT\", \"source_ids\": [\"SRC-AHA-OH-2024\"], \"context\": {\"requires_gravity_supporting_upright_transition\": true, \"standing_window_minutes\": 3}, \"logic\": {\"any_of\": [{\"derived_field\": \"delta_sbp_mm_hg\", \"op\": \"<=\", \"value\": -20}, {\"derived_field\": \"delta_dbp_mm_hg\", \"op\": \"<=\", \"value\": -10}]}, \"measurement_quality\": {\"baseline_and_upright_bp_required\": true, \"time_since_upright_required\": true, \"sustained_reduction_required\": true}, \"etiology_confirmed_by_criterion\": false, \"space_applicability\": \"CONTEXT_DEPENDENT\"}",
+        "reference": {
+          "criterion_id": "CRIT-OH-AHA-2024",
+          "source_ids": [
+            "SRC-AHA-OH-2024"
+          ],
+          "version": "2024.1"
+        },
+        "category": "IMPLEMENTED_CRITERION"
+      },
+      {
+        "id": "M13",
+        "kind": "ENGINE",
+        "category": "RADIATION",
+        "text": "Radiaci\u00f3n / radiation: NOT_MEASURED; dosis efectiva registrada / recorded effective dose None mSv; cobertura / coverage 0 seconds. Solo intervalos registrados, no dosis de vida ni diagn\u00f3stico / recorded intervals only, not lifetime dose or diagnosis.",
+        "reference": {
+          "run_id": "A-cycle-14",
+          "as_of": "2026-09-15T12:00:00+00:00",
+          "output_hash": "e2aa6636a58b7a1ed96914cf66f35f1e5ae1cdcfdd95818f7ab2759cfafa14ac",
+          "source_ids": [
+            "S01",
+            "S16"
+          ]
+        }
+      }
+    ],
+    "retrieved": [
+      {
+        "id": "M1",
+        "kind": "ENGINE",
+        "category": "LIMITATION",
+        "text": "Monitorizaci\u00f3n experimental / Experimental monitoring. Cambios num\u00e9ricos no equivalen a empeoramiento cl\u00ednico / numeric changes are not clinical worsening. No diagn\u00f3stico firmado, no tratamiento autorizado. / No signed diagnosis or treatment authorization.",
+        "reference": {
+          "run_id": "A-cycle-14",
+          "as_of": "2026-09-15T12:00:00+00:00",
+          "output_hash": "e2aa6636a58b7a1ed96914cf66f35f1e5ae1cdcfdd95818f7ab2759cfafa14ac"
+        }
+      },
+      {
+        "id": "M5",
+        "kind": "ENGINE",
+        "category": "BASELINE",
+        "text": "physiology.vo2max: baseline 50.0 mL/min/kg; cambio absoluto / absolute change -11.0; retenci\u00f3n / retention 78.0%. Descriptivo, no diagn\u00f3stico / descriptive, not diagnosis.",
+        "reference": {
+          "run_id": "A-cycle-14",
+          "as_of": "2026-09-15T12:00:00+00:00",
+          "output_hash": "e2aa6636a58b7a1ed96914cf66f35f1e5ae1cdcfdd95818f7ab2759cfafa14ac",
+          "variable": "physiology.vo2max",
+          "baseline_id": "A-baseline-0",
+          "source_ids": [
+            "S01",
+            "S05"
+          ]
+        }
+      },
+      {
+        "id": "M24",
+        "kind": "ENGINE",
+        "category": "CHANGE",
+        "text": "Cambio desde revisi\u00f3n anterior / change since previous review: {\"variable\": \"physiology.vo2max\", \"previous\": 44.0, \"current\": 39.0, \"previous_state\": \"DESCRIPTIVE_AVAILABLE\", \"current_state\": \"DESCRIPTIVE_AVAILABLE\"}",
+        "reference": {
+          "run_id": "A-cycle-14",
+          "as_of": "2026-09-15T12:00:00+00:00",
+          "output_hash": "e2aa6636a58b7a1ed96914cf66f35f1e5ae1cdcfdd95818f7ab2759cfafa14ac",
+          "previous_run_id": "A-cycle-7"
+        }
+      },
+      {
+        "id": "M6",
+        "kind": "ENGINE",
+        "category": "TREND",
+        "text": "physiology.vo2max: pendiente / slope -0.6428571428571429 mL/min/kg/day; EWMA/CUSUM por observaci\u00f3n / per observation; RESEARCH_ONLY. No umbral cl\u00ednico / no clinical threshold.",
+        "reference": {
+          "run_id": "A-cycle-14",
+          "as_of": "2026-09-15T12:00:00+00:00",
+          "output_hash": "e2aa6636a58b7a1ed96914cf66f35f1e5ae1cdcfdd95818f7ab2759cfafa14ac",
+          "variable": "physiology.vo2max",
+          "source_ids": [
+            "S01",
+            "S05"
+          ]
+        }
+      },
+      {
+        "id": "M25",
+        "kind": "ENGINE",
+        "category": "CHANGE",
+        "text": "Cambio desde revisi\u00f3n anterior / change since previous review: {\"variable\": \"physiology.heart_rate\", \"previous\": 72.0, \"current\": 79.0, \"previous_state\": \"DESCRIPTIVE_AVAILABLE\", \"current_state\": \"DESCRIPTIVE_AVAILABLE\"}",
+        "reference": {
+          "run_id": "A-cycle-14",
+          "as_of": "2026-09-15T12:00:00+00:00",
+          "output_hash": "e2aa6636a58b7a1ed96914cf66f35f1e5ae1cdcfdd95818f7ab2759cfafa14ac",
+          "previous_run_id": "A-cycle-7"
+        }
+      },
+      {
+        "id": "M8",
+        "kind": "ENGINE",
+        "category": "TREND",
+        "text": "physiology.heart_rate: pendiente / slope 1.0 bpm/day; EWMA/CUSUM por observaci\u00f3n / per observation; RESEARCH_ONLY. No umbral cl\u00ednico / no clinical threshold.",
+        "reference": {
+          "run_id": "A-cycle-14",
+          "as_of": "2026-09-15T12:00:00+00:00",
+          "output_hash": "e2aa6636a58b7a1ed96914cf66f35f1e5ae1cdcfdd95818f7ab2759cfafa14ac",
+          "variable": "physiology.heart_rate",
+          "source_ids": [
+            "S01",
+            "S05"
+          ]
+        }
+      },
+      {
+        "id": "C-29",
+        "kind": "DOCUMENT",
+        "text": "{\"criterion_id\": \"CRIT-OH-AHA-2024\", \"condition_id\": \"ORTHOSTATIC_HYPOTENSION\", \"version\": \"2024.1\", \"population\": \"ADULT\", \"source_ids\": [\"SRC-AHA-OH-2024\"], \"context\": {\"requires_gravity_supporting_upright_transition\": true, \"standing_window_minutes\": 3}, \"logic\": {\"any_of\": [{\"derived_field\": \"delta_sbp_mm_hg\", \"op\": \"<=\", \"value\": -20}, {\"derived_field\": \"delta_dbp_mm_hg\", \"op\": \"<=\", \"value\": -10}]}, \"measurement_quality\": {\"baseline_and_upright_bp_required\": true, \"time_since_upright_required\": true, \"sustained_reduction_required\": true}, \"etiology_confirmed_by_criterion\": false, \"space_applicability\": \"CONTEXT_DEPENDENT\"}",
+        "reference": {
+          "criterion_id": "CRIT-OH-AHA-2024",
+          "source_ids": [
+            "SRC-AHA-OH-2024"
+          ],
+          "version": "2024.1"
+        },
+        "category": "IMPLEMENTED_CRITERION"
+      },
+      {
+        "id": "M13",
+        "kind": "ENGINE",
+        "category": "RADIATION",
+        "text": "Radiaci\u00f3n / radiation: NOT_MEASURED; dosis efectiva registrada / recorded effective dose None mSv; cobertura / coverage 0 seconds. Solo intervalos registrados, no dosis de vida ni diagn\u00f3stico / recorded intervals only, not lifetime dose or diagnosis.",
+        "reference": {
+          "run_id": "A-cycle-14",
+          "as_of": "2026-09-15T12:00:00+00:00",
+          "output_hash": "e2aa6636a58b7a1ed96914cf66f35f1e5ae1cdcfdd95818f7ab2759cfafa14ac",
+          "source_ids": [
+            "S01",
+            "S16"
+          ]
+        }
+      },
+      {
+        "id": "D-8b932a5e188475296f94",
+        "kind": "DOCUMENT",
+        "text": "```text\nfunction robust_baseline(values):\n    valid = [x for x in values if x.quality == VALID and comparable_context(x)]\n    if insufficient_by_protocol(valid):\n        return INCONCLUSIVE",
+        "reference": {
+          "document": "01_INFORMES/REPORTE_CONSOLIDADO_COMPLETO.md",
+          "sha256": "97e9fdc86925b6b973db75900e64f222c149ae3bd9cade8c182f2264c46831e5",
+          "version": "PINNED_CORPUS",
+          "authority": "SPACE_RESEARCH_SYNTHESIS",
+          "char_start": 42184,
+          "char_end": 42373,
+          "line": 231
+        },
+        "retrieval_score": 7.310044
+      },
+      {
+        "id": "D-ac4d718dabd389d747ae",
+        "kind": "DOCUMENT",
+        "text": "tor_training\"],\n      \"missing_behavior\": \"UNKNOWN\"\n    },\n    {\n      \"test_id\": \"TEST-VENOUS-PH-BICARB\",\n      \"measure\": [\"venous_pH\", \"bicarbonate\"],\n      \"canonical_unit\": [\"pH\", \"mmol/L\"],\n      \"diagnostic_use\": [\"DKA\"],\n      \"missing_behavior\": \"UNKNOWN\"\n    },\n    {\n      \"test_id\": \"TEST-ORTHOSTATIC-BP-HR\",\n      \"measure\": [\"blood_pressure\", \"heart_rate\"],\n      \"diagnostic_use\": [\"ORTHOSTATIC_HYPOTENSION\", \"POTS\"],\n      \"quality\": [\n        \"gravity_context_recorded\",\n        \"baseline_position_recorded\",\n        \"upright_time_recorded\",\n        \"valid_BP_device\",\n        \"valid_HR_device\"\n      ],\n      \"missing_behavior\": \"UNKNOWN\"\n    },\n    {\n      \"test_id\": \"TEST-POTS-EXCLUSIONS\",\n      \"measure\": \"clinical_exclusion_set\",\n      \"diagnostic_use\": [\"POTS\"],\n      \"required_review\": [\n        \"dehydration\",\n        \"recent_blood_loss\",\n        \"anemia\",\n        \"fever\",\n        \"infection\",\n        \"pain\",\n        \"hyperthyroidism\",\n        \"medications\",\n        \"severe_deconditioning\"\n      ],\n      \"missing_behavior\": \"UNRESOLVED_EXCLUSION\"\n    },\n    {\n      \"t",
+        "reference": {
+          "document": "docs/clinical/deep-research-report-2026-10-16.md",
+          "sha256": "38ad3ab166f25a8b46c1e1f483ba813510c34dc766171389307635ecf7e8a715",
+          "version": "2026-10-16",
+          "authority": "CLINICAL_RESEARCH_SYNTHESIS",
+          "char_start": 53354,
+          "char_end": 54454,
+          "line": 1153
+        },
+        "retrieval_score": 5.691468
+      },
+      {
+        "id": "D-1f23d6f8aa942512d374",
+        "kind": "DOCUMENT",
+        "text": "RAGReadAPI\n  retrieve_evidence(query, filters) -> EvidenceChunk[]\n  explain_finding(finding_id) -> GroundingBundle\n  # no write method to RuleEngine or AuthorizationEngine\n```",
+        "reference": {
+          "document": "01_INFORMES/REPORTE_CONSOLIDADO_COMPLETO.md",
+          "sha256": "97e9fdc86925b6b973db75900e64f222c149ae3bd9cade8c182f2264c46831e5",
+          "version": "PINNED_CORPUS",
+          "authority": "SPACE_RESEARCH_SYNTHESIS",
+          "char_start": 83262,
+          "char_end": 83437,
+          "line": 856
+        },
+        "retrieval_score": 4.555704
+      }
+    ],
+    "generated": [
+      {
+        "text": "The baseline value for VO2 max is 50.0 mL/min/kg, as recorded in the descriptive data.",
+        "evidence_ids": [
+          "M5"
+        ],
+        "kind": "MODEL_EXPLANATION",
+        "references": [
+          {
+            "run_id": "A-cycle-14",
+            "as_of": "2026-09-15T12:00:00+00:00",
+            "output_hash": "e2aa6636a58b7a1ed96914cf66f35f1e5ae1cdcfdd95818f7ab2759cfafa14ac",
+            "variable": "physiology.vo2max",
+            "baseline_id": "A-baseline-0",
+            "source_ids": [
+              "S01",
+              "S05"
+            ]
+          }
+        ]
+      },
+      {
+        "text": "The baseline value for heart rate is 72.0 bpm, as recorded in the descriptive data.",
+        "evidence_ids": [
+          "M25"
+        ],
+        "kind": "MODEL_EXPLANATION",
+        "references": [
+          {
+            "run_id": "A-cycle-14",
+            "as_of": "2026-09-15T12:00:00+00:00",
+            "output_hash": "e2aa6636a58b7a1ed96914cf66f35f1e5ae1cdcfdd95818f7ab2759cfafa14ac",
+            "previous_run_id": "A-cycle-7"
+          }
+        ]
+      }
+    ],
+    "documents": [
+      {
+        "id": "D-8b932a5e188475296f94",
+        "kind": "DOCUMENT",
+        "text": "```text\nfunction robust_baseline(values):\n    valid = [x for x in values if x.quality == VALID and comparable_context(x)]\n    if insufficient_by_protocol(valid):\n        return INCONCLUSIVE",
+        "reference": {
+          "document": "01_INFORMES/REPORTE_CONSOLIDADO_COMPLETO.md",
+          "sha256": "97e9fdc86925b6b973db75900e64f222c149ae3bd9cade8c182f2264c46831e5",
+          "version": "PINNED_CORPUS",
+          "authority": "SPACE_RESEARCH_SYNTHESIS",
+          "char_start": 42184,
+          "char_end": 42373,
+          "line": 231
+        },
+        "retrieval_score": 7.310044
+      },
+      {
+        "id": "D-ac4d718dabd389d747ae",
+        "kind": "DOCUMENT",
+        "text": "tor_training\"],\n      \"missing_behavior\": \"UNKNOWN\"\n    },\n    {\n      \"test_id\": \"TEST-VENOUS-PH-BICARB\",\n      \"measure\": [\"venous_pH\", \"bicarbonate\"],\n      \"canonical_unit\": [\"pH\", \"mmol/L\"],\n      \"diagnostic_use\": [\"DKA\"],\n      \"missing_behavior\": \"UNKNOWN\"\n    },\n    {\n      \"test_id\": \"TEST-ORTHOSTATIC-BP-HR\",\n      \"measure\": [\"blood_pressure\", \"heart_rate\"],\n      \"diagnostic_use\": [\"ORTHOSTATIC_HYPOTENSION\", \"POTS\"],\n      \"quality\": [\n        \"gravity_context_recorded\",\n        \"baseline_position_recorded\",\n        \"upright_time_recorded\",\n        \"valid_BP_device\",\n        \"valid_HR_device\"\n      ],\n      \"missing_behavior\": \"UNKNOWN\"\n    },\n    {\n      \"test_id\": \"TEST-POTS-EXCLUSIONS\",\n      \"measure\": \"clinical_exclusion_set\",\n      \"diagnostic_use\": [\"POTS\"],\n      \"required_review\": [\n        \"dehydration\",\n        \"recent_blood_loss\",\n        \"anemia\",\n        \"fever\",\n        \"infection\",\n        \"pain\",\n        \"hyperthyroidism\",\n        \"medications\",\n        \"severe_deconditioning\"\n      ],\n      \"missing_behavior\": \"UNRESOLVED_EXCLUSION\"\n    },\n    {\n      \"t",
+        "reference": {
+          "document": "docs/clinical/deep-research-report-2026-10-16.md",
+          "sha256": "38ad3ab166f25a8b46c1e1f483ba813510c34dc766171389307635ecf7e8a715",
+          "version": "2026-10-16",
+          "authority": "CLINICAL_RESEARCH_SYNTHESIS",
+          "char_start": 53354,
+          "char_end": 54454,
+          "line": 1153
+        },
+        "retrieval_score": 5.691468
+      },
+      {
+        "id": "D-1f23d6f8aa942512d374",
+        "kind": "DOCUMENT",
+        "text": "RAGReadAPI\n  retrieve_evidence(query, filters) -> EvidenceChunk[]\n  explain_finding(finding_id) -> GroundingBundle\n  # no write method to RuleEngine or AuthorizationEngine\n```",
+        "reference": {
+          "document": "01_INFORMES/REPORTE_CONSOLIDADO_COMPLETO.md",
+          "sha256": "97e9fdc86925b6b973db75900e64f222c149ae3bd9cade8c182f2264c46831e5",
+          "version": "PINNED_CORPUS",
+          "authority": "SPACE_RESEARCH_SYNTHESIS",
+          "char_start": 83262,
+          "char_end": 83437,
+          "line": 856
+        },
+        "retrieval_score": 4.555704
+      }
+    ],
+    "document_issues": [],
+    "sources": [
+      {
+        "document": "01_INFORMES/REPORTE_CONSOLIDADO_COMPLETO.md",
+        "sha256": "97e9fdc86925b6b973db75900e64f222c149ae3bd9cade8c182f2264c46831e5",
+        "version": "PINNED_CORPUS",
+        "authority": "SPACE_RESEARCH_SYNTHESIS",
+        "char_start": 42184,
+        "char_end": 42373,
+        "line": 231
+      },
+      {
+        "document": "docs/clinical/deep-research-report-2026-10-16.md",
+        "sha256": "38ad3ab166f25a8b46c1e1f483ba813510c34dc766171389307635ecf7e8a715",
+        "version": "2026-10-16",
+        "authority": "CLINICAL_RESEARCH_SYNTHESIS",
+        "char_start": 53354,
+        "char_end": 54454,
+        "line": 1153
+      },
+      {
+        "document": "01_INFORMES/REPORTE_CONSOLIDADO_COMPLETO.md",
+        "sha256": "97e9fdc86925b6b973db75900e64f222c149ae3bd9cade8c182f2264c46831e5",
+        "version": "PINNED_CORPUS",
+        "authority": "SPACE_RESEARCH_SYNTHESIS",
+        "char_start": 83262,
+        "char_end": 83437,
+        "line": 856
+      }
+    ],
+    "inference_attempted": true,
+    "inference_executed": true,
+    "clinical_execution": "BLOCKED",
+    "authority": "DETERMINISTIC_ENGINE_ONLY",
+    "clinical_validation": false,
+    "limitations": [
+      "DOCUMENTS_DO_NOT_OVERRIDE_ENGINE",
+      "SEMANTIC_VERIFICATION_IS_NOT_CLINICAL_VALIDATION",
+      "UNKNOWN_UNDETECTED_ERRORS_REQUIRE_INDEPENDENT_REVIEW"
+    ],
+    "context": {
+      "subject_id": "v07-crew-A",
+      "mission_id": "v07-mission-A",
+      "target_id": "A-cycle-14"
+    },
+    "metrics": {
+      "elapsed_ms": 4635.966700006975,
+      "usage": {},
+      "timings": {},
+      "load_duration_ns": 2896673600,
+      "total_duration_ns": 4617229300,
+      "prompt_eval_count": 1765,
+      "eval_count": 82,
+      "eval_duration_ns": 1165399000,
+      "verification": {
+        "elapsed_ms": 548.4511000104249,
+        "usage": {},
+        "timings": {},
+        "load_duration_ns": 23279200,
+        "total_duration_ns": 515618600,
+        "prompt_eval_count": 291,
+        "eval_count": 6,
+        "eval_duration_ns": 156985000
+      }
+    },
+    "grounding": "CITATIONS_AND_LOCAL_MODEL_CHECK_NOT_CLINICAL_VALIDATION",
+    "history_used": false
+  },
+  "status": {
+    "backend": "CONNECTED",
+    "network": "LOOPBACK_ONLY",
+    "assistant": {
+      "available": true,
+      "reason": "LOCAL_MODEL_READY",
+      "model": "vigile-qwen3-4b:latest",
+      "mode": "FULL",
+      "provider": "ollama"
+    },
+    "clinical_execution": "BLOCKED",
+    "version": "0.9.0"
+  }
+}

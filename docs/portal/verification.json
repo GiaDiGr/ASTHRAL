@@ -1,0 +1,17 @@
+{
+  "baseline_tests": 251,
+  "final": {
+    "name": "pytest",
+    "errors": "0",
+    "failures": "0",
+    "skipped": "0",
+    "tests": "275",
+    "time": "32.238",
+    "timestamp": "2026-10-16T19:43:33.090469-05:00",
+    "hostname": "Gianni"
+  },
+  "new_test_cases": 24,
+  "preserved_files": 106,
+  "real_inference_tested": false,
+  "clinical_validation": false
+}

@@ -1,0 +1,254 @@
+[
+  {
+    "variable": "VO₂max",
+    "units": "mL/min/kg",
+    "sensor_type_test": "ergoespirometría/directa o método indirecto autorizado",
+    "frequency": "MISSION_DEFINED",
+    "space_viability": "Demostrada como variable operativa",
+    "quality_artifacts": "mismo método/contexto; ejercicio y motivación confunden",
+    "baseline": "Sí"
+  },
+  {
+    "variable": "Fuerza muscular",
+    "units": "N, kgf o múltiplo BW según test",
+    "sensor_type_test": "dinamometría/equipo resistivo",
+    "frequency": "MISSION_DEFINED",
+    "space_viability": "Alta",
+    "quality_artifacts": "mismo ejercicio, grupo y técnica",
+    "baseline": "Sí"
+  },
+  {
+    "variable": "BMD cadera",
+    "units": "g/cm² / porcentaje baseline",
+    "sensor_type_test": "DXA",
+    "frequency": "pre/post según programa",
+    "space_viability": "Principalmente ground",
+    "quality_artifacts": "posicionamiento/equipo/región",
+    "baseline": "Sí"
+  },
+  {
+    "variable": "BMD columna L1-L4",
+    "units": "g/cm²",
+    "sensor_type_test": "DXA",
+    "frequency": "programada",
+    "space_viability": "Principalmente ground",
+    "quality_artifacts": "igual",
+    "baseline": "Sí"
+  },
+  {
+    "variable": "BMD cuello femoral",
+    "units": "g/cm²",
+    "sensor_type_test": "DXA",
+    "frequency": "programada",
+    "space_viability": "Principalmente ground",
+    "quality_artifacts": "igual",
+    "baseline": "Sí"
+  },
+  {
+    "variable": "QCT óseo",
+    "units": "volumétrica según protocolo",
+    "sensor_type_test": "CT/QCT",
+    "frequency": "programada",
+    "space_viability": "Ground; implementación vigilancia en evolución",
+    "quality_artifacts": "mismo protocolo/segmentación",
+    "baseline": "Sí"
+  },
+  {
+    "variable": "Dosis efectiva",
+    "units": "mSv",
+    "sensor_type_test": "dosímetro/modelo dosimétrico",
+    "frequency": "continua/acumulativa",
+    "space_viability": "Alta",
+    "quality_artifacts": "provenance y conversión",
+    "baseline": "Dosis acumulada"
+  },
+  {
+    "variable": "Dosis órgano",
+    "units": "mGy o mGy-Eq según requisito",
+    "sensor_type_test": "dosimetría",
+    "frequency": "exposición/evento",
+    "space_viability": "Alta",
+    "quality_artifacts": "nunca mezclar magnitudes",
+    "baseline": "Historial"
+  },
+  {
+    "variable": "ppCO₂",
+    "units": "mmHg",
+    "sensor_type_test": "monitor ambiental",
+    "frequency": "continuo",
+    "space_viability": "Requerida",
+    "quality_artifacts": "calibración, ubicación, cobertura temporal",
+    "baseline": "No clínico"
+  },
+  {
+    "variable": "ppO₂",
+    "units": "kPa/mmHg según sistema",
+    "sensor_type_test": "monitor ambiental",
+    "frequency": "continuo",
+    "space_viability": "Requerida",
+    "quality_artifacts": "presión total/contexto",
+    "baseline": "No"
+  },
+  {
+    "variable": "Presión cabina",
+    "units": "kPa/psia",
+    "sensor_type_test": "sensor atmosférico",
+    "frequency": "continuo",
+    "space_viability": "Requerida",
+    "quality_artifacts": "calibración/compartimento",
+    "baseline": "No"
+  },
+  {
+    "variable": "Temperatura",
+    "units": "°C",
+    "sensor_type_test": "ambiental",
+    "frequency": "continuo",
+    "space_viability": "Requerida",
+    "quality_artifacts": "ubicación",
+    "baseline": "No"
+  },
+  {
+    "variable": "Humedad relativa",
+    "units": "%",
+    "sensor_type_test": "ambiental",
+    "frequency": "continuo",
+    "space_viability": "Requerida",
+    "quality_artifacts": "sensor/condensación",
+    "baseline": "No"
+  },
+  {
+    "variable": "Frecuencia cardiaca",
+    "units": "bpm",
+    "sensor_type_test": "ECG/PPG",
+    "frequency": "continuo o protocolo",
+    "space_viability": "Alta",
+    "quality_artifacts": "movimiento/PPG perfusión",
+    "baseline": "Sí"
+  },
+  {
+    "variable": "ECG",
+    "units": "mV / ritmo",
+    "sensor_type_test": "electrodos",
+    "frequency": "evento/protocolo",
+    "space_viability": "Alta",
+    "quality_artifacts": "artefacto movimiento/contacto",
+    "baseline": "Sí"
+  },
+  {
+    "variable": "Presión arterial",
+    "units": "mmHg",
+    "sensor_type_test": "cuff/beat-to-beat según protocolo",
+    "frequency": "MISSION_DEFINED",
+    "space_viability": "Alta",
+    "quality_artifacts": "postura, gravedad, cuff",
+    "baseline": "Sí"
+  },
+  {
+    "variable": "SpO₂",
+    "units": "%",
+    "sensor_type_test": "oximetría",
+    "frequency": "evento/protocolo",
+    "space_viability": "Alta",
+    "quality_artifacts": "movimiento/perfusión",
+    "baseline": "Deseable"
+  },
+  {
+    "variable": "Sueño",
+    "units": "min/h, eficiencia",
+    "sensor_type_test": "actigrafía + diario",
+    "frequency": "longitudinal",
+    "space_viability": "Alta",
+    "quality_artifacts": "wear time/actividad/algoritmo",
+    "baseline": "Sí"
+  },
+  {
+    "variable": "Cognición",
+    "units": "tiempo/precisión",
+    "sensor_type_test": "test digital validado",
+    "frequency": "programada",
+    "space_viability": "Alta",
+    "quality_artifacts": "práctica, versión, dispositivo",
+    "baseline": "Sí"
+  },
+  {
+    "variable": "Agudeza visual/refracción",
+    "units": "unidades específicas",
+    "sensor_type_test": "optometría",
+    "frequency": "programada",
+    "space_viability": "Alta",
+    "quality_artifacts": "protocolo consistente",
+    "baseline": "Sí"
+  },
+  {
+    "variable": "Retina/nervio óptico",
+    "units": "μm/imágenes",
+    "sensor_type_test": "OCT/fondo",
+    "frequency": "programada",
+    "space_viability": "Dependiente hardware",
+    "quality_artifacts": "alineación/segmentación",
+    "baseline": "Sí"
+  },
+  {
+    "variable": "IOP",
+    "units": "mmHg",
+    "sensor_type_test": "tonometría",
+    "frequency": "MISSION_DEFINED",
+    "space_viability": "Dependiente hardware",
+    "quality_artifacts": "método/posición",
+    "baseline": "Sí"
+  },
+  {
+    "variable": "Flujo yugular",
+    "units": "velocidad/dirección",
+    "sensor_type_test": "ultrasound",
+    "frequency": "indicado/investigación",
+    "space_viability": "Demostrada en vuelo",
+    "quality_artifacts": "operador/ángulo/respiración",
+    "baseline": "Preferible"
+  },
+  {
+    "variable": "Volumen vesical/riñón",
+    "units": "mL/imagen",
+    "sensor_type_test": "ultrasound",
+    "frequency": "indicado",
+    "space_viability": "Ultrasound usado en ISS",
+    "quality_artifacts": "operador/segmentación",
+    "baseline": "Opcional"
+  },
+  {
+    "variable": "Química urinaria",
+    "units": "analito-específica",
+    "sensor_type_test": "laboratorio",
+    "frequency": "protocolo",
+    "space_viability": "Dependiente capacidad",
+    "quality_artifacts": "colección, tiempo, volumen",
+    "baseline": "Sí"
+  },
+  {
+    "variable": "Biomarcadores inmunes",
+    "units": "analito-específica",
+    "sensor_type_test": "sangre/saliva/orina",
+    "frequency": "investigación/protocolo",
+    "space_viability": "Muestreo demostrado",
+    "quality_artifacts": "preanalítica, lote, storage",
+    "baseline": "Sí"
+  },
+  {
+    "variable": "Ruido",
+    "units": "dBA/SPL/frecuencia",
+    "sensor_type_test": "dosímetro acústico",
+    "frequency": "continuo/periodic",
+    "space_viability": "Alta",
+    "quality_artifacts": "calibración/frecuencia/ubicación",
+    "baseline": "Ambiental"
+  },
+  {
+    "variable": "Exposición tóxica",
+    "units": "agente-específica",
+    "sensor_type_test": "detector ambiental",
+    "frequency": "continuo/evento",
+    "space_viability": "Agente-dependiente",
+    "quality_artifacts": "calibración/cross-sensitivity",
+    "baseline": "Ambiental"
+  }
+]

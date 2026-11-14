@@ -1,0 +1,543 @@
+{
+  "protocol": "INDEPENDENT_POST_LOAD_READ_REPLAY_PERMISSIONS",
+  "clinical_validation": false,
+  "replays": [
+    {
+      "kind": "clinical",
+      "id": "ce-65acc9ab2aae40f38446416de43d3f56",
+      "status": 200,
+      "seconds": 0.026681799994548783,
+      "result": {
+        "id": "ce-65acc9ab2aae40f38446416de43d3f56",
+        "matches": true,
+        "input_hash": "c2c168db768e4e73e298159fd80df2c4c39e057eda6aa5dc915abd27ccef4723",
+        "knowledge_hash": "b8c568bd645154e5fd67630c7a670ca53904dc04f54904315047a89923839d4e"
+      }
+    },
+    {
+      "kind": "clinical",
+      "id": "ce-681622a6d0eb4098a1f9a5d79a4a1195",
+      "status": 200,
+      "seconds": 0.019352300005266443,
+      "result": {
+        "id": "ce-681622a6d0eb4098a1f9a5d79a4a1195",
+        "matches": true,
+        "input_hash": "c8bffe7d9e75f0894aa4f70ab7f24824a30a1f89cbba6dc0a15a6bec29ffc48f",
+        "knowledge_hash": "b8c568bd645154e5fd67630c7a670ca53904dc04f54904315047a89923839d4e"
+      }
+    },
+    {
+      "kind": "clinical",
+      "id": "ce-fbee88aa8d0a49a79b737142db4bcc76",
+      "status": 200,
+      "seconds": 0.0326028999988921,
+      "result": {
+        "id": "ce-fbee88aa8d0a49a79b737142db4bcc76",
+        "matches": true,
+        "input_hash": "a0f8ec0ff9f76084b9e43fd64bd6d26316d239b14dcfc9bd29cf8aa7d2536444",
+        "knowledge_hash": "b8c568bd645154e5fd67630c7a670ca53904dc04f54904315047a89923839d4e"
+      }
+    },
+    {
+      "kind": "clinical",
+      "id": "ce-68c6e2082e194d2d8114f74551a5a25a",
+      "status": 200,
+      "seconds": 0.018593600019812584,
+      "result": {
+        "id": "ce-68c6e2082e194d2d8114f74551a5a25a",
+        "matches": true,
+        "input_hash": "87dde14afc07761856fca1b42a73f0ab68de39cdb170797b90c91b766f6d99b9",
+        "knowledge_hash": "b8c568bd645154e5fd67630c7a670ca53904dc04f54904315047a89923839d4e"
+      }
+    },
+    {
+      "kind": "clinical",
+      "id": "ce-12d74ee38dd85f5b5de59754a4aa59a7",
+      "status": 200,
+      "seconds": 0.02828530000988394,
+      "result": {
+        "id": "ce-12d74ee38dd85f5b5de59754a4aa59a7",
+        "matches": true,
+        "input_hash": "12a2f53ceb6b439865a4adf0e55d9bd4eb9ae9d11f7196622312a84e73220e09",
+        "knowledge_hash": "b8c568bd645154e5fd67630c7a670ca53904dc04f54904315047a89923839d4e"
+      }
+    },
+    {
+      "kind": "clinical",
+      "id": "ce-3ea7170a1ff9ca64d2a5c4d3c9eeb95b",
+      "status": 200,
+      "seconds": 0.026917299983324483,
+      "result": {
+        "id": "ce-3ea7170a1ff9ca64d2a5c4d3c9eeb95b",
+        "matches": true,
+        "input_hash": "271bf1e4e9a415906791fc0c515677b0503f2db4424a0df2d9a733edc1681eda",
+        "knowledge_hash": "b8c568bd645154e5fd67630c7a670ca53904dc04f54904315047a89923839d4e"
+      }
+    },
+    {
+      "kind": "clinical",
+      "id": "ce-8c60945c4d6f45236dacaed284fbb19d",
+      "status": 200,
+      "seconds": 0.021518499997910112,
+      "result": {
+        "id": "ce-8c60945c4d6f45236dacaed284fbb19d",
+        "matches": true,
+        "input_hash": "2dc3442e681c8228c03cb785cd273e188059ea2cfbc9e0fcf692b455dda49846",
+        "knowledge_hash": "b8c568bd645154e5fd67630c7a670ca53904dc04f54904315047a89923839d4e"
+      }
+    },
+    {
+      "kind": "clinical",
+      "id": "ce-95a21c7375dc35b79b8e74a289e853e2",
+      "status": 200,
+      "seconds": 0.023681599996052682,
+      "result": {
+        "id": "ce-95a21c7375dc35b79b8e74a289e853e2",
+        "matches": true,
+        "input_hash": "426731d203a744915d28352503b1f9d69309427ade846b1d8457b63b6dcb9bdd",
+        "knowledge_hash": "b8c568bd645154e5fd67630c7a670ca53904dc04f54904315047a89923839d4e"
+      }
+    },
+    {
+      "kind": "clinical",
+      "id": "ce-3667c4aed507bab1023639b342acbc1d",
+      "status": 200,
+      "seconds": 0.022603100020205602,
+      "result": {
+        "id": "ce-3667c4aed507bab1023639b342acbc1d",
+        "matches": true,
+        "input_hash": "7077dca58266f87d27c960baf594ef60f457fbd54e65050e60369be3346077f1",
+        "knowledge_hash": "b8c568bd645154e5fd67630c7a670ca53904dc04f54904315047a89923839d4e"
+      }
+    },
+    {
+      "kind": "clinical",
+      "id": "ce-363451e4c33baa6635f4be3630b9018d",
+      "status": 200,
+      "seconds": 0.02307910000672564,
+      "result": {
+        "id": "ce-363451e4c33baa6635f4be3630b9018d",
+        "matches": true,
+        "input_hash": "c717b39891c73262900980804c4a7d24b1857385b8e5aebac191c9dced6e20aa",
+        "knowledge_hash": "b8c568bd645154e5fd67630c7a670ca53904dc04f54904315047a89923839d4e"
+      }
+    },
+    {
+      "kind": "clinical",
+      "id": "ce-573e9ea7e583a338b19bfecc14c1f71e",
+      "status": 200,
+      "seconds": 0.023462999990442768,
+      "result": {
+        "id": "ce-573e9ea7e583a338b19bfecc14c1f71e",
+        "matches": true,
+        "input_hash": "a147dc5d0d57d628e507da09f6643e4d4bef8a582aafcaa05c2c7c7395bff112",
+        "knowledge_hash": "b8c568bd645154e5fd67630c7a670ca53904dc04f54904315047a89923839d4e"
+      }
+    },
+    {
+      "kind": "clinical",
+      "id": "ce-e6871477f4211b9bf2fe3ecd27701724",
+      "status": 200,
+      "seconds": 0.020022100012283772,
+      "result": {
+        "id": "ce-e6871477f4211b9bf2fe3ecd27701724",
+        "matches": true,
+        "input_hash": "8524348a23b106e6fb169f3919f6e2ce9c1fa9507c0f7355cc72a201c330d15a",
+        "knowledge_hash": "b8c568bd645154e5fd67630c7a670ca53904dc04f54904315047a89923839d4e"
+      }
+    },
+    {
+      "kind": "clinical",
+      "id": "ce-513fd76f0285a41160a2c82dba4acacb",
+      "status": 200,
+      "seconds": 0.02738880002289079,
+      "result": {
+        "id": "ce-513fd76f0285a41160a2c82dba4acacb",
+        "matches": true,
+        "input_hash": "f363861d39c8dd4bdf716ba085af993e1f9b9829e5b5168122cf49da0515fed1",
+        "knowledge_hash": "b8c568bd645154e5fd67630c7a670ca53904dc04f54904315047a89923839d4e"
+      }
+    },
+    {
+      "kind": "clinical",
+      "id": "ce-735d7aaafd9198459455e72c05c83378",
+      "status": 200,
+      "seconds": 0.04040830000303686,
+      "result": {
+        "id": "ce-735d7aaafd9198459455e72c05c83378",
+        "matches": true,
+        "input_hash": "96683823f3ac05bbc19f5944195db64b3fdedaf9663fff950a7cbd97f372e471",
+        "knowledge_hash": "b8c568bd645154e5fd67630c7a670ca53904dc04f54904315047a89923839d4e"
+      }
+    },
+    {
+      "kind": "monitoring",
+      "id": "A-cycle-0",
+      "status": 200,
+      "seconds": 0.08362510000006296,
+      "result": {
+        "id": "A-cycle-0",
+        "matches": true,
+        "scope": "FULL_FROZEN_CYCLE_REEXECUTION",
+        "clinical_validation": false
+      }
+    },
+    {
+      "kind": "monitoring",
+      "id": "A-cycle-7",
+      "status": 200,
+      "seconds": 0.12028809997718781,
+      "result": {
+        "id": "A-cycle-7",
+        "matches": true,
+        "scope": "FULL_FROZEN_CYCLE_REEXECUTION",
+        "clinical_validation": false
+      }
+    },
+    {
+      "kind": "monitoring",
+      "id": "A-cycle-14",
+      "status": 200,
+      "seconds": 0.12411140001495369,
+      "result": {
+        "id": "A-cycle-14",
+        "matches": true,
+        "scope": "FULL_FROZEN_CYCLE_REEXECUTION",
+        "clinical_validation": false
+      }
+    },
+    {
+      "kind": "monitoring",
+      "id": "A-cycle-15",
+      "status": 200,
+      "seconds": 0.11129890001029707,
+      "result": {
+        "id": "A-cycle-15",
+        "matches": true,
+        "scope": "FULL_FROZEN_CYCLE_REEXECUTION",
+        "clinical_validation": false
+      }
+    },
+    {
+      "kind": "monitoring",
+      "id": "A-cycle-16",
+      "status": 200,
+      "seconds": 0.12363289998029359,
+      "result": {
+        "id": "A-cycle-16",
+        "matches": true,
+        "scope": "FULL_FROZEN_CYCLE_REEXECUTION",
+        "clinical_validation": false
+      }
+    },
+    {
+      "kind": "clinical",
+      "id": "ce-25021a33553fbbe9643c2f2fc020f163",
+      "status": 200,
+      "seconds": 0.029528699989896268,
+      "result": {
+        "id": "ce-25021a33553fbbe9643c2f2fc020f163",
+        "matches": true,
+        "input_hash": "6b2fc1fd330879e4e8537af7c8fcd0efdeb315b0c725abb6b3e4e5ed6cdde135",
+        "knowledge_hash": "b8c568bd645154e5fd67630c7a670ca53904dc04f54904315047a89923839d4e"
+      }
+    },
+    {
+      "kind": "clinical",
+      "id": "ce-2d7b1fe54a2fd2702c75d7752efedce5",
+      "status": 200,
+      "seconds": 0.026919600000837818,
+      "result": {
+        "id": "ce-2d7b1fe54a2fd2702c75d7752efedce5",
+        "matches": true,
+        "input_hash": "1627b974184262d3b2575f7af0f768e5bbb5be1a53e466c2a9827649f4592ac8",
+        "knowledge_hash": "b8c568bd645154e5fd67630c7a670ca53904dc04f54904315047a89923839d4e"
+      }
+    },
+    {
+      "kind": "clinical",
+      "id": "ce-a7cd40dff4114fb0947f5858f9ec3c33",
+      "status": 200,
+      "seconds": 0.02700960001675412,
+      "result": {
+        "id": "ce-a7cd40dff4114fb0947f5858f9ec3c33",
+        "matches": true,
+        "input_hash": "6b2fc1fd330879e4e8537af7c8fcd0efdeb315b0c725abb6b3e4e5ed6cdde135",
+        "knowledge_hash": "b8c568bd645154e5fd67630c7a670ca53904dc04f54904315047a89923839d4e"
+      }
+    },
+    {
+      "kind": "clinical",
+      "id": "ce-ebbf9fe889d19b37ba4806eb86dccd63",
+      "status": 200,
+      "seconds": 0.02743929999996908,
+      "result": {
+        "id": "ce-ebbf9fe889d19b37ba4806eb86dccd63",
+        "matches": true,
+        "input_hash": "1627b974184262d3b2575f7af0f768e5bbb5be1a53e466c2a9827649f4592ac8",
+        "knowledge_hash": "b8c568bd645154e5fd67630c7a670ca53904dc04f54904315047a89923839d4e"
+      }
+    },
+    {
+      "kind": "clinical",
+      "id": "ce-5c38fa4b4fce37b514f494ab101b3a34",
+      "status": 200,
+      "seconds": 0.030314600007841364,
+      "result": {
+        "id": "ce-5c38fa4b4fce37b514f494ab101b3a34",
+        "matches": true,
+        "input_hash": "e3e6ff805ab72046ecca51af94e96deb11a072714f304290d09204f7bcd3da69",
+        "knowledge_hash": "b8c568bd645154e5fd67630c7a670ca53904dc04f54904315047a89923839d4e"
+      }
+    },
+    {
+      "kind": "clinical",
+      "id": "ce-cdc3b2c9cdc3d14393938b238f512f73",
+      "status": 200,
+      "seconds": 0.029878900008043274,
+      "result": {
+        "id": "ce-cdc3b2c9cdc3d14393938b238f512f73",
+        "matches": true,
+        "input_hash": "d65c1f890a13a95d29cdfb090dcc5d85cb1727b4e56a0e75e1d45f5529d9f86a",
+        "knowledge_hash": "b8c568bd645154e5fd67630c7a670ca53904dc04f54904315047a89923839d4e"
+      }
+    },
+    {
+      "kind": "clinical",
+      "id": "ce-87da4a5fb769ae3ab0988aa8a566f3c9",
+      "status": 200,
+      "seconds": 0.029059299995424226,
+      "result": {
+        "id": "ce-87da4a5fb769ae3ab0988aa8a566f3c9",
+        "matches": true,
+        "input_hash": "589b5a403c1d75978256029ec0c5709791c96dfb8dbeb27d7fc433464762df69",
+        "knowledge_hash": "b8c568bd645154e5fd67630c7a670ca53904dc04f54904315047a89923839d4e"
+      }
+    },
+    {
+      "kind": "clinical",
+      "id": "ce-00d65359e6f6197a01d96f74c857eacd",
+      "status": 200,
+      "seconds": 0.02676820001215674,
+      "result": {
+        "id": "ce-00d65359e6f6197a01d96f74c857eacd",
+        "matches": true,
+        "input_hash": "dff8aa04f051a2a806e8ce23905dba8f33f8077d1d108e8fb1b1441012f76b26",
+        "knowledge_hash": "b8c568bd645154e5fd67630c7a670ca53904dc04f54904315047a89923839d4e"
+      }
+    },
+    {
+      "kind": "clinical",
+      "id": "ce-c660b2572ea10db2761777f39c319ae6",
+      "status": 200,
+      "seconds": 0.026745500013930723,
+      "result": {
+        "id": "ce-c660b2572ea10db2761777f39c319ae6",
+        "matches": true,
+        "input_hash": "a9af6925c6ea8ab4098a79023b392cd9d1cf4ddf228968d98f1ceca10b265336",
+        "knowledge_hash": "b8c568bd645154e5fd67630c7a670ca53904dc04f54904315047a89923839d4e"
+      }
+    },
+    {
+      "kind": "clinical",
+      "id": "ce-a5a54e51c4cdc6a53c19937e3442ca4a",
+      "status": 200,
+      "seconds": 0.030308799992781132,
+      "result": {
+        "id": "ce-a5a54e51c4cdc6a53c19937e3442ca4a",
+        "matches": true,
+        "input_hash": "ee690c6f5098215be2fa377937b5bf699fe81e2ce53cf757401d0535825fb0da",
+        "knowledge_hash": "b8c568bd645154e5fd67630c7a670ca53904dc04f54904315047a89923839d4e"
+      }
+    },
+    {
+      "kind": "monitoring",
+      "id": "B-cycle-0",
+      "status": 200,
+      "seconds": 0.10940199997276068,
+      "result": {
+        "id": "B-cycle-0",
+        "matches": true,
+        "scope": "FULL_FROZEN_CYCLE_REEXECUTION",
+        "clinical_validation": false
+      }
+    },
+    {
+      "kind": "monitoring",
+      "id": "B-cycle-repeat",
+      "status": 200,
+      "seconds": 0.08749299999908544,
+      "result": {
+        "id": "B-cycle-repeat",
+        "matches": true,
+        "scope": "FULL_FROZEN_CYCLE_REEXECUTION",
+        "clinical_validation": false
+      }
+    },
+    {
+      "kind": "monitoring",
+      "id": "B-cycle-0.01",
+      "status": 200,
+      "seconds": 0.09281549998559058,
+      "result": {
+        "id": "B-cycle-0.01",
+        "matches": true,
+        "scope": "FULL_FROZEN_CYCLE_REEXECUTION",
+        "clinical_validation": false
+      }
+    },
+    {
+      "kind": "monitoring",
+      "id": "B-cycle-0.02",
+      "status": 200,
+      "seconds": 0.1042617000057362,
+      "result": {
+        "id": "B-cycle-0.02",
+        "matches": true,
+        "scope": "FULL_FROZEN_CYCLE_REEXECUTION",
+        "clinical_validation": false
+      }
+    },
+    {
+      "kind": "monitoring",
+      "id": "B-cycle-0.03",
+      "status": 200,
+      "seconds": 0.1166850000154227,
+      "result": {
+        "id": "B-cycle-0.03",
+        "matches": true,
+        "scope": "FULL_FROZEN_CYCLE_REEXECUTION",
+        "clinical_validation": false
+      }
+    },
+    {
+      "kind": "monitoring",
+      "id": "C-cycle-0",
+      "status": 200,
+      "seconds": 0.09594279999146238,
+      "result": {
+        "id": "C-cycle-0",
+        "matches": true,
+        "scope": "FULL_FROZEN_CYCLE_REEXECUTION",
+        "clinical_validation": false
+      }
+    },
+    {
+      "kind": "monitoring",
+      "id": "C-cycle-7",
+      "status": 200,
+      "seconds": 0.12050930000259541,
+      "result": {
+        "id": "C-cycle-7",
+        "matches": true,
+        "scope": "FULL_FROZEN_CYCLE_REEXECUTION",
+        "clinical_validation": false
+      }
+    },
+    {
+      "kind": "monitoring",
+      "id": "C-cycle-14",
+      "status": 200,
+      "seconds": 0.15763719999813475,
+      "result": {
+        "id": "C-cycle-14",
+        "matches": true,
+        "scope": "FULL_FROZEN_CYCLE_REEXECUTION",
+        "clinical_validation": false
+      }
+    },
+    {
+      "kind": "monitoring",
+      "id": "C-cycle-21",
+      "status": 200,
+      "seconds": 0.2174702999764122,
+      "result": {
+        "id": "C-cycle-21",
+        "matches": true,
+        "scope": "FULL_FROZEN_CYCLE_REEXECUTION",
+        "clinical_validation": false
+      }
+    },
+    {
+      "kind": "monitoring",
+      "id": "C-cycle-28",
+      "status": 200,
+      "seconds": 0.25872819998767227,
+      "result": {
+        "id": "C-cycle-28",
+        "matches": true,
+        "scope": "FULL_FROZEN_CYCLE_REEXECUTION",
+        "clinical_validation": false
+      }
+    }
+  ],
+  "clinical_read_seconds": [
+    0.01753199999802746,
+    0.023950499977217987,
+    0.029930299991974607,
+    0.0178654000046663,
+    0.024654899985762313,
+    0.027374800003599375,
+    0.029433300020173192,
+    0.028570800001034513,
+    0.024567100015701726,
+    0.02760810000472702,
+    0.026897500007180497,
+    0.020087199984118342,
+    0.026748500007670373,
+    0.025647400005254894,
+    0.024806000001262873,
+    0.024630999978398904,
+    0.02036749999388121,
+    0.021836700005223975,
+    0.02498289998038672,
+    0.027503799996338785,
+    0.028179499990073964,
+    0.030969499988714233,
+    0.02277209999738261,
+    0.03203329999814741,
+    0.029457900003762916,
+    0.033357500011334196,
+    0.04033769998932257,
+    0.027302200003759935,
+    0.028904000006150454,
+    0.030354299989994615,
+    0.028799799998523667,
+    0.027513799985172227,
+    0.02998170000500977,
+    0.030425499979173765,
+    0.026443400012794882,
+    0.02496510001947172,
+    0.024542200000723824,
+    0.02993879999849014,
+    0.026371499989181757,
+    0.025815800006967038,
+    0.026974700012942776,
+    0.028266600013012066,
+    0.02383609997923486,
+    0.027785700018284842,
+    0.02545710001140833,
+    0.026223400025628507,
+    0.025548100005835295,
+    0.024323099991306663,
+    0.024470399977872148,
+    0.028606200008653104,
+    0.02615780002088286,
+    0.02810160000808537,
+    0.028284899977734312,
+    0.024042300006840378,
+    0.02410740000777878,
+    0.023929799994220957,
+    0.02493850002065301,
+    0.026018100004876032,
+    0.030464299983577803,
+    0.029392399999778718
+  ],
+  "denied_write": 403,
+  "denied_other_subject": 403,
+  "audit_valid": true,
+  "checkpoint": {
+    "sequence": 250,
+    "hash": "0e193dc1ebab2c4bb3af4ba89d2705b2e63e2e12fa06c98386f1383712ba327a"
+  }
+}

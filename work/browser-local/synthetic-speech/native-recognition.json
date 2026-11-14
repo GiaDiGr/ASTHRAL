@@ -1,0 +1,446 @@
+[
+  {
+    "fixture": "blood-pressure.wav",
+    "native_transcript": "record my blood pressure at one hundred when the already millimeter not mercury right now",
+    "words": [
+      {
+        "conf": 0.571889,
+        "end": 0.45,
+        "start": 0.03,
+        "word": "record"
+      },
+      {
+        "conf": 1.0,
+        "end": 0.6,
+        "start": 0.45,
+        "word": "my"
+      },
+      {
+        "conf": 1.0,
+        "end": 0.93,
+        "start": 0.6,
+        "word": "blood"
+      },
+      {
+        "conf": 1.0,
+        "end": 1.426698,
+        "start": 0.93,
+        "word": "pressure"
+      },
+      {
+        "conf": 0.556602,
+        "end": 1.59,
+        "start": 1.44,
+        "word": "at"
+      },
+      {
+        "conf": 1.0,
+        "end": 1.89,
+        "start": 1.59,
+        "word": "one"
+      },
+      {
+        "conf": 1.0,
+        "end": 2.43,
+        "start": 1.92,
+        "word": "hundred"
+      },
+      {
+        "conf": 0.678772,
+        "end": 2.79,
+        "start": 2.49,
+        "word": "when"
+      },
+      {
+        "conf": 0.678772,
+        "end": 2.97,
+        "start": 2.82,
+        "word": "the"
+      },
+      {
+        "conf": 0.854907,
+        "end": 3.54,
+        "start": 2.97,
+        "word": "already"
+      },
+      {
+        "conf": 1.0,
+        "end": 4.055636,
+        "start": 3.54,
+        "word": "millimeter"
+      },
+      {
+        "conf": 1.0,
+        "end": 4.26,
+        "start": 4.08,
+        "word": "not"
+      },
+      {
+        "conf": 1.0,
+        "end": 4.8,
+        "start": 4.26,
+        "word": "mercury"
+      },
+      {
+        "conf": 1.0,
+        "end": 5.13,
+        "start": 4.8,
+        "word": "right"
+      },
+      {
+        "conf": 1.0,
+        "end": 5.58,
+        "start": 5.13,
+        "word": "now"
+      }
+    ]
+  },
+  {
+    "fixture": "heart-rate.wav",
+    "native_transcript": "record my heart rate i made it to be permitted right now",
+    "words": [
+      {
+        "conf": 0.436883,
+        "end": 0.45,
+        "start": 0.03,
+        "word": "record"
+      },
+      {
+        "conf": 1.0,
+        "end": 0.63,
+        "start": 0.451879,
+        "word": "my"
+      },
+      {
+        "conf": 1.0,
+        "end": 0.96,
+        "start": 0.63,
+        "word": "heart"
+      },
+      {
+        "conf": 1.0,
+        "end": 1.29,
+        "start": 0.96,
+        "word": "rate"
+      },
+      {
+        "conf": 0.731748,
+        "end": 1.38,
+        "start": 1.29,
+        "word": "i"
+      },
+      {
+        "conf": 1.0,
+        "end": 1.71,
+        "start": 1.396095,
+        "word": "made"
+      },
+      {
+        "conf": 1.0,
+        "end": 1.83,
+        "start": 1.71,
+        "word": "it"
+      },
+      {
+        "conf": 1.0,
+        "end": 2.04,
+        "start": 1.83,
+        "word": "to"
+      },
+      {
+        "conf": 1.0,
+        "end": 2.31,
+        "start": 2.04,
+        "word": "be"
+      },
+      {
+        "conf": 0.871831,
+        "end": 2.94,
+        "start": 2.46,
+        "word": "permitted"
+      },
+      {
+        "conf": 1.0,
+        "end": 3.3,
+        "start": 2.97,
+        "word": "right"
+      },
+      {
+        "conf": 1.0,
+        "end": 3.75,
+        "start": 3.3,
+        "word": "now"
+      }
+    ]
+  },
+  {
+    "fixture": "negation.wav",
+    "native_transcript": "have no can't pay",
+    "words": [
+      {
+        "conf": 0.865376,
+        "end": 0.36,
+        "start": 0.087321,
+        "word": "have"
+      },
+      {
+        "conf": 1.0,
+        "end": 0.6,
+        "start": 0.36,
+        "word": "no"
+      },
+      {
+        "conf": 0.4445,
+        "end": 0.93,
+        "start": 0.6,
+        "word": "can't"
+      },
+      {
+        "conf": 0.631846,
+        "end": 1.35,
+        "start": 1.02,
+        "word": "pay"
+      }
+    ]
+  },
+  {
+    "fixture": "question.wav",
+    "native_transcript": "i need a retard my minute else",
+    "words": [
+      {
+        "conf": 0.878998,
+        "end": 0.3,
+        "start": 0.19709,
+        "word": "i"
+      },
+      {
+        "conf": 0.878998,
+        "end": 0.6,
+        "start": 0.3,
+        "word": "need"
+      },
+      {
+        "conf": 0.714622,
+        "end": 0.75,
+        "start": 0.69,
+        "word": "a"
+      },
+      {
+        "conf": 0.455928,
+        "end": 1.23,
+        "start": 0.75,
+        "word": "retard"
+      },
+      {
+        "conf": 0.407486,
+        "end": 1.360596,
+        "start": 1.23,
+        "word": "my"
+      },
+      {
+        "conf": 0.380562,
+        "end": 1.74,
+        "start": 1.360596,
+        "word": "minute"
+      },
+      {
+        "conf": 0.30056,
+        "end": 1.95,
+        "start": 1.77,
+        "word": "else"
+      }
+    ]
+  },
+  {
+    "fixture": "sleep.wav",
+    "native_transcript": "you my sleep duration have am an hour and in the path when the or our",
+    "words": [
+      {
+        "conf": 0.357834,
+        "end": 0.39,
+        "start": 0.27,
+        "word": "you"
+      },
+      {
+        "conf": 0.642166,
+        "end": 0.63,
+        "start": 0.469582,
+        "word": "my"
+      },
+      {
+        "conf": 1.0,
+        "end": 1.02,
+        "start": 0.640735,
+        "word": "sleep"
+      },
+      {
+        "conf": 1.0,
+        "end": 1.59,
+        "start": 1.02,
+        "word": "duration"
+      },
+      {
+        "conf": 0.58044,
+        "end": 1.74,
+        "start": 1.59,
+        "word": "have"
+      },
+      {
+        "conf": 0.706229,
+        "end": 2.024764,
+        "start": 1.83,
+        "word": "am"
+      },
+      {
+        "conf": 1.0,
+        "end": 2.13356,
+        "start": 2.024764,
+        "word": "an"
+      },
+      {
+        "conf": 1.0,
+        "end": 2.43,
+        "start": 2.181187,
+        "word": "hour"
+      },
+      {
+        "conf": 0.69441,
+        "end": 2.516235,
+        "start": 2.43,
+        "word": "and"
+      },
+      {
+        "conf": 1.0,
+        "end": 2.64,
+        "start": 2.516235,
+        "word": "in"
+      },
+      {
+        "conf": 1.0,
+        "end": 2.73,
+        "start": 2.64,
+        "word": "the"
+      },
+      {
+        "conf": 0.422839,
+        "end": 3.12,
+        "start": 2.73,
+        "word": "path"
+      },
+      {
+        "conf": 0.804238,
+        "end": 3.48,
+        "start": 3.15,
+        "word": "when"
+      },
+      {
+        "conf": 0.767291,
+        "end": 3.69,
+        "start": 3.54,
+        "word": "the"
+      },
+      {
+        "conf": 0.49177,
+        "end": 3.994786,
+        "start": 3.72,
+        "word": "or"
+      },
+      {
+        "conf": 0.790206,
+        "end": 4.35,
+        "start": 4.02,
+        "word": "our"
+      }
+    ]
+  },
+  {
+    "fixture": "temperature.wav",
+    "native_transcript": "you're my temperature and thirty am and point to daydream lv of right now",
+    "words": [
+      {
+        "conf": 0.341662,
+        "end": 0.39,
+        "start": 0.27,
+        "word": "you're"
+      },
+      {
+        "conf": 1.0,
+        "end": 0.6,
+        "start": 0.45,
+        "word": "my"
+      },
+      {
+        "conf": 1.0,
+        "end": 1.271368,
+        "start": 0.6,
+        "word": "temperature"
+      },
+      {
+        "conf": 0.564929,
+        "end": 1.47,
+        "start": 1.29,
+        "word": "and"
+      },
+      {
+        "conf": 1.0,
+        "end": 1.89,
+        "start": 1.477473,
+        "word": "thirty"
+      },
+      {
+        "conf": 1.0,
+        "end": 2.19,
+        "start": 1.89,
+        "word": "am"
+      },
+      {
+        "conf": 1.0,
+        "end": 2.34,
+        "start": 2.19,
+        "word": "and"
+      },
+      {
+        "conf": 0.670433,
+        "end": 2.7,
+        "start": 2.34,
+        "word": "point"
+      },
+      {
+        "conf": 1.0,
+        "end": 3.049825,
+        "start": 2.82,
+        "word": "to"
+      },
+      {
+        "conf": 0.600127,
+        "end": 3.51,
+        "start": 3.06,
+        "word": "daydream"
+      },
+      {
+        "conf": 0.664438,
+        "end": 3.99,
+        "start": 3.6,
+        "word": "lv"
+      },
+      {
+        "conf": 0.843083,
+        "end": 4.11,
+        "start": 3.99,
+        "word": "of"
+      },
+      {
+        "conf": 1.0,
+        "end": 4.41,
+        "start": 4.11,
+        "word": "right"
+      },
+      {
+        "conf": 1.0,
+        "end": 4.89,
+        "start": 4.41,
+        "word": "now"
+      }
+    ]
+  }
+]

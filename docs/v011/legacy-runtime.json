@@ -1,0 +1,16 @@
+{
+  "archive": "C:\\Users\\Gianni\\Desktop\\Vigile\\work\\v011\\v010-runtime",
+  "pids": [
+    49404,
+    60012
+  ],
+  "ports": [
+    8895,
+    8896
+  ],
+  "health": [
+    200,
+    200
+  ],
+  "ollama_unchanged": true
+}

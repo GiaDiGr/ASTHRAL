@@ -1,0 +1,26 @@
+[
+  {
+    "source_id": "S01",
+    "original_rule_source_id": "NASA-STD-3001-V1-REV-C",
+    "revision": "C",
+    "date": "2023-09-15",
+    "url": "https://standards.nasa.gov/standard/NASA/NASA-STD-3001_VOL_1",
+    "verification": "NTSS revision metadata checked; all individual thresholds NOT independently revalidated in this implementation",
+    "clinical_authorization": false
+  },
+  {
+    "source_id": "S02",
+    "original_rule_source_id": "NASA-STD-3001-V2-REV-F",
+    "revision": "F",
+    "date": "2026-07-14",
+    "url": "https://standards.nasa.gov/system/files/tmp/NASA-STD-3001%20Vol%202%20Rev%20F.pdf",
+    "verification": "PDF title/revision checked; requirement V2 6004 p.51 and V2 6020 p.58 located",
+    "clinical_authorization": false
+  },
+  {
+    "source_id": "NASA-HRP-FRACTURE-EVIDENCE-REPORT-2024",
+    "document_id": "20240005190",
+    "verification": "Original locator retained; not silently equated to S06 risk record (2025)",
+    "clinical_authorization": false
+  }
+]

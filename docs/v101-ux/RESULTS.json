@@ -1,0 +1,89 @@
+{
+  "variant": "VIGILE_1.0.1_ASTRONAUT_UX",
+  "date": "2026-11-02",
+  "runtime_implementation_hash": "5d4434a8a7fe572c29e8100fc428b6ca705fe0e9f9fd26ca9638521000633b77",
+  "clinical_execution": "BLOCKED",
+  "clinical_validation": false,
+  "full_suite": {
+    "tests": "692",
+    "failures": "0",
+    "errors": "0",
+    "skipped": "0",
+    "time": "344.267",
+    "timestamp": "2026-11-02T19:15:06.633940-05:00"
+  },
+  "final_targeted": {
+    "tests": "59",
+    "failures": "0",
+    "errors": "0",
+    "skipped": "0",
+    "time": "54.471",
+    "timestamp": "2026-11-02T19:17:55.806032-05:00"
+  },
+  "distinct_new_pytest_tests": 5,
+  "simulated_DOM_cases_new": 12,
+  "simulated_DOM_cases_management_regression": 6,
+  "simulated_DOM_cases_are_not_additional_pytest_counts": true,
+  "warnings": [
+    "Existing Starlette/httpx deprecation; no dependency changes"
+  ],
+  "test_source_note": "Full regression suite completed. Final presentation-only direct prevention navigation adjustment separately covered by the final 59 targeted tests; no Python engine or knowledge changes.",
+  "mission": {
+    "subjects": 2,
+    "cycles": 26,
+    "checkpoints_verified": 26,
+    "clinical_replays": 50,
+    "monitoring_replays": 26,
+    "all_replays_match": true,
+    "audit_valid": true,
+    "semantic_hash_equal_to_R2": "f81b333c7f06a9f1262e5b2b953c768e46f7d4c846b9cbbad2f3cabf042f1c76",
+    "requests_equal_except_existing_v101_resource_policy_default": true,
+    "no_synthetic_values_or_timestamps_changed": true
+  },
+  "offline_modes": {
+    "modes": [
+      "FULL",
+      "LOW_POWER",
+      "CRITICAL"
+    ],
+    "outputs_unchanged": true,
+    "questions": 8,
+    "model_requests": 0,
+    "external_connection_factory_blocked": true,
+    "physical_disconnect_test": false
+  },
+  "loopback_http": {
+    "checkpoint_reads": 5,
+    "reader_write_status": 403,
+    "cross_astronaut_frame_status": 403,
+    "cross_origin_status": 403,
+    "assets_served": true
+  },
+  "visual_QA": {
+    "status": "PENDING",
+    "error": "failed to write kernel assets: Impossibile trovare il percorso specificato. (os error 3)",
+    "attempts": 2,
+    "kernel_reset": true,
+    "no_browser_was_opened": true,
+    "manual_checklist": "MANUAL_VISUAL_QA.md"
+  },
+  "physical_voice_QA": "PENDING_UNCHANGED",
+  "new_Internet_RAG": "NOT_IMPLEMENTED_DOCUMENTED_CONTRACT_ONLY",
+  "Ollama_and_Norton_changes": false,
+  "new_dependencies": [],
+  "preserved_r2_and_v101_archives": true,
+  "code_archive_verified": true,
+  "demo_backup_verified": true,
+  "development_corrections": [
+    "Verifier used frame root id instead of index.id; corrected and verification rerun successfully.",
+    "Document generation lacked tzdata; used explicit UTC-05 for original Lima 2026 dates, without installing dependencies."
+  ],
+  "pending_human_review": [
+    "Real visual/accessibility/responsive inspection",
+    "Physical offline navigation demonstration",
+    "Clinical discrepancies retained in docs/v101/CLINICAL_REVIEW.md",
+    "Physical voice QA if used",
+    "Operational isolation/encryption/verified mission authority"
+  ],
+  "readiness": "SYNTHETIC_RESEARCH_DEMONSTRATION_PREPARED_VISUAL_HUMAN_QA_PENDING"
+}

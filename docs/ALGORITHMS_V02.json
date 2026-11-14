@@ -1,0 +1,74 @@
+[
+  {
+    "algorithm_id": "ALG001",
+    "software_status": "Operativo descriptivo",
+    "scope_and_limits": "Mediana/MAD preflight; versiones, vigencia, retirada, trazas; mínimos y protocolo explícitos. No recalibración cruzada.",
+    "clinical_validation": "NOT_VALIDATED"
+  },
+  {
+    "algorithm_id": "ALG002",
+    "software_status": "Operativo descriptivo y simulación",
+    "scope_and_limits": "Retención con referencia positiva y comparable; diferencias/z contra baseline en tendencias. Sin punto de corte clínico nuevo.",
+    "clinical_validation": "NOT_VALIDATED"
+  },
+  {
+    "algorithm_id": "ALG003",
+    "software_status": "Operativo restringido",
+    "scope_and_limits": "CO2: medias declaradas de intervalos contiguos, un dispositivo, 3600 s completos. Sin interpolación ni muestras puntuales mantenidas.",
+    "clinical_validation": "NOT_VALIDATED"
+  },
+  {
+    "algorithm_id": "ALG004",
+    "software_status": "Operativo descriptivo",
+    "scope_and_limits": "OLS pendiente por día y error estándar si n≥3; exige tiempos distintos. Error estándar bajo supuestos OLS, sin corrección de autocorrelación.",
+    "clinical_validation": "NOT_VALIDATED"
+  },
+  {
+    "algorithm_id": "ALG005",
+    "software_status": "Operativo descriptivo",
+    "scope_and_limits": "EWMA lambda explícita; inicio primera observación o referencia explícita. Cadencia por observación, no por tiempo transcurrido.",
+    "clinical_validation": "NOT_VALIDATED"
+  },
+  {
+    "algorithm_id": "ALG006",
+    "software_status": "Operativo descriptivo",
+    "scope_and_limits": "Z y robust z dentro de serie o respecto a baseline; varianza/MAD cero devuelve null. No detector diagnóstico.",
+    "clinical_validation": "NOT_VALIDATED"
+  },
+  {
+    "algorithm_id": "ALG007",
+    "software_status": "Operativo descriptivo",
+    "scope_and_limits": "CUSUM bilateral con objetivo/allowance explícitos; señal estadística solo con decision_limit explícito. Sin selección clínica de parámetros.",
+    "clinical_validation": "NOT_VALIDATED"
+  },
+  {
+    "algorithm_id": "ALG008",
+    "software_status": "Parcial conservador",
+    "scope_and_limits": "Control de discrepancias multisensor con tolerancia/alineación declaradas; bloquea conflictos. Sin fusión ponderada ni cross-calibration.",
+    "clinical_validation": "NOT_VALIDATED"
+  },
+  {
+    "algorithm_id": "ALG009",
+    "software_status": "Operativo conservador",
+    "scope_and_limits": "Sin imputación: MISSING, NOT_MEASURED, INVALID, STALE y referencias ausentes; informe de calidad persistido.",
+    "clinical_validation": "NOT_VALIDATED"
+  },
+  {
+    "algorithm_id": "ALG010",
+    "software_status": "Operativo para tabla explícita",
+    "scope_and_limits": "Conversiones dimensionales enumeradas; dosis efectiva, absorbida y equivalente de órgano separadas. Sin conversión universal/análitos.",
+    "clinical_validation": "NOT_VALIDATED"
+  },
+  {
+    "algorithm_id": "ALG011",
+    "software_status": "Operativo para datos escalares declarados",
+    "scope_and_limits": "Rangos técnicos, tiempos, método, calibración, contexto y comparabilidad. No certifica sensores ni detecta artefactos de señal cruda.",
+    "clinical_validation": "NOT_VALIDATED"
+  },
+  {
+    "algorithm_id": "ALG012",
+    "software_status": "Parcial con bloqueos clínicos",
+    "scope_and_limits": "Estados humanos, anexos, concurrencia optimista, seguimiento y vencimientos. TRIAGE/AUTHORIZED_ACTION/diagnóstico bloqueados.",
+    "clinical_validation": "NOT_VALIDATED"
+  }
+]

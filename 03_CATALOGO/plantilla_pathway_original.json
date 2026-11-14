@@ -1,0 +1,24 @@
+{
+  "condition_id": "Cxxx",
+  "stages": {
+    "prevention": {
+      "inputs": [],
+      "measurements": [],
+      "algorithm": null,
+      "decision_logic": "",
+      "output": "",
+      "sources": [],
+      "validation_state": "EVIDENCE_SUPPORTED"
+    },
+    "monitoring": {},
+    "data_quality": {},
+    "detection": {},
+    "assessment": {},
+    "differential_diagnosis": {},
+    "triage": {},
+    "intervention_authorized": {},
+    "recovery": {},
+    "follow_up": {},
+    "prognosis": {}
+  }
+}

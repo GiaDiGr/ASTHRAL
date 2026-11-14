@@ -1,0 +1,32 @@
+{
+  "condition_id": "C039",
+  "catalog_record": {
+    "condition_id": "C039",
+    "name_specialty": "Patología/emergencia dental / odontología",
+    "description_spaceflight": "IMM utiliza historia dental y contempla daño, caries/abscesos.",
+    "risks_symptoms": "Restauraciones previas, trauma, enfermedad dental.",
+    "biomarkers_sensors_tests": "Historia, examen/imágenes según recursos.",
+    "baselines_environment_interactions": "Evaluación dental preflight.",
+    "primary_evidence": "S17, S19. citeturn21search0turn21search4",
+    "limits_authorizations_state": "Contenido operacional completo de tratamiento no consolidado. `RMA`."
+  },
+  "clinical_pathway_profile_as_published": "**P:** dental clearance; **M:** dolor/lesión; **Q:** documentación; **D:** screening; **A/DD:** caries, absceso, trauma; **T/I:** médico/dental autorizado; **R/F:** dolor/infección/función; **G:** no automático.",
+  "coverage_states": {
+    "prevention": "ES",
+    "monitoring": "RV",
+    "data_quality": "ES",
+    "detection": "RV",
+    "assessment": "RMA",
+    "differential_diagnosis": "RMA",
+    "triage": "RMA",
+    "intervention_authorized": "RMA",
+    "recovery": "RV",
+    "follow_up": "RV",
+    "prognosis": "NPA"
+  },
+  "source_ids": [
+    "S17",
+    "S19"
+  ],
+  "NOTICE": "Pathway text is an outline; not an authorized diagnostic or treatment protocol."
+}

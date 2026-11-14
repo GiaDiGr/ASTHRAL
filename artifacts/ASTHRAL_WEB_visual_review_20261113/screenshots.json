@@ -1,0 +1,162 @@
+[
+  {
+    "file": "initial-pages-landing-panel.jpg",
+    "sha256": "f746d1ed4864e918a0b2b68cce94962d839eefddb31592b7a7c6932d24c1d955",
+    "width_px": 1265,
+    "height_px": 712,
+    "browser": "Desktop IAB Chromium 157 on Windows",
+    "physical_device": false,
+    "data": "SYNTHETIC_ONLY",
+    "note": "Actual JPEG bytes from browser screenshot API, preserved without conversion; responsive viewport is not physical-device certification."
+  },
+  {
+    "file": "local-ai-accepted-quotation-narrow-panel.jpg",
+    "sha256": "383c2fa6d917d274d98b35e9ae6d2d31aab33ef89c2afa014d3b03be4177e802",
+    "width_px": 304,
+    "height_px": 529,
+    "browser": "Desktop IAB Chromium 157 on Windows",
+    "physical_device": false,
+    "data": "SYNTHETIC_ONLY",
+    "note": "Actual JPEG bytes from browser screenshot API, preserved without conversion; responsive viewport is not physical-device certification."
+  },
+  {
+    "file": "local-hybrid-citations.jpg",
+    "sha256": "ce17d0c68a01133cce711fc1ea0a55d31899e4981e76fb43bd1b84d1e13e7409",
+    "width_px": 375,
+    "height_px": 811,
+    "browser": "Desktop IAB Chromium 157 on Windows",
+    "physical_device": false,
+    "data": "SYNTHETIC_ONLY",
+    "note": "Actual JPEG bytes from browser screenshot API, preserved without conversion; responsive viewport is not physical-device certification."
+  },
+  {
+    "file": "pages-assessment-tablet-viewport-768.jpg",
+    "sha256": "c7a48ae47541e23323692a07f460a525a8e95bfed43a8d87ac19bb2c9fe43b49",
+    "width_px": 753,
+    "height_px": 1004,
+    "browser": "Desktop IAB Chromium 157 on Windows",
+    "physical_device": false,
+    "data": "SYNTHETIC_ONLY",
+    "note": "Actual JPEG bytes from browser screenshot API, preserved without conversion; responsive viewport is not physical-device certification."
+  },
+  {
+    "file": "pages-citations-desktop-1440.jpg",
+    "sha256": "63c37001597297bd0389fae514f2795daf8c1281eb3ffea0838ec6c2ff2f6895",
+    "width_px": 1425,
+    "height_px": 990,
+    "browser": "Desktop IAB Chromium 157 on Windows",
+    "physical_device": false,
+    "data": "SYNTHETIC_ONLY",
+    "note": "Actual JPEG bytes from browser screenshot API, preserved without conversion; responsive viewport is not physical-device certification."
+  },
+  {
+    "file": "pages-critical-fallback-desktop-1440.jpg",
+    "sha256": "63c37001597297bd0389fae514f2795daf8c1281eb3ffea0838ec6c2ff2f6895",
+    "width_px": 1425,
+    "height_px": 990,
+    "browser": "Desktop IAB Chromium 157 on Windows",
+    "physical_device": false,
+    "data": "SYNTHETIC_ONLY",
+    "note": "Actual JPEG bytes from browser screenshot API, preserved without conversion; responsive viewport is not physical-device certification."
+  },
+  {
+    "file": "pages-dashboard-desktop-1440.jpg",
+    "sha256": "6ac6f3dac183d914483a4fe46d1d052e4c6293aeb917cae6906f170d137c5e5e",
+    "width_px": 1425,
+    "height_px": 990,
+    "browser": "Desktop IAB Chromium 157 on Windows",
+    "physical_device": false,
+    "data": "SYNTHETIC_ONLY",
+    "note": "Actual JPEG bytes from browser screenshot API, preserved without conversion; responsive viewport is not physical-device certification."
+  },
+  {
+    "file": "pages-dka-desktop-1440.jpg",
+    "sha256": "572c3ee70ee7d90e0bd78f52975e6925bd3e8735d54d8c51407c508c9e41a8c4",
+    "width_px": 1425,
+    "height_px": 990,
+    "browser": "Desktop IAB Chromium 157 on Windows",
+    "physical_device": false,
+    "data": "SYNTHETIC_ONLY",
+    "note": "Actual JPEG bytes from browser screenshot API, preserved without conversion; responsive viewport is not physical-device certification."
+  },
+  {
+    "file": "pages-guidance-resources-desktop-1440.jpg",
+    "sha256": "90613deb23777dee8126618357a8a21f637d8d590f81ddaf246878f05aaffed8",
+    "width_px": 1425,
+    "height_px": 990,
+    "browser": "Desktop IAB Chromium 157 on Windows",
+    "physical_device": false,
+    "data": "SYNTHETIC_ONLY",
+    "note": "Actual JPEG bytes from browser screenshot API, preserved without conversion; responsive viewport is not physical-device certification."
+  },
+  {
+    "file": "pages-history-android-viewport-360.jpg",
+    "sha256": "b6f0e7c0c1af350b5d900802a83cabd03bfc2293a8183ac3c436d37ee0224e8b",
+    "width_px": 345,
+    "height_px": 767,
+    "browser": "Desktop IAB Chromium 157 on Windows",
+    "physical_device": false,
+    "data": "SYNTHETIC_ONLY",
+    "note": "Actual JPEG bytes from browser screenshot API, preserved without conversion; responsive viewport is not physical-device certification."
+  },
+  {
+    "file": "pages-history-desktop-1440.jpg",
+    "sha256": "e8ecc26e7370b7bc59b8bacb9bac1908593dc2b11e86f4764332123924fe25a3",
+    "width_px": 1425,
+    "height_px": 990,
+    "browser": "Desktop IAB Chromium 157 on Windows",
+    "physical_device": false,
+    "data": "SYNTHETIC_ONLY",
+    "note": "Actual JPEG bytes from browser screenshot API, preserved without conversion; responsive viewport is not physical-device certification."
+  },
+  {
+    "file": "pages-landing-android-viewport-360.jpg",
+    "sha256": "045ddebd2243d9288d6c070aec7c18ea2a8d8d4cbce594d48f7ebe5292b23950",
+    "width_px": 345,
+    "height_px": 800,
+    "browser": "Desktop IAB Chromium 157 on Windows",
+    "physical_device": false,
+    "data": "SYNTHETIC_ONLY",
+    "note": "Actual JPEG bytes from browser screenshot API, preserved without conversion; responsive viewport is not physical-device certification."
+  },
+  {
+    "file": "pages-landing-desktop-1440.jpg",
+    "sha256": "d3fd2ffca3d46e9ae0eff2e31bee3a0f5cae0521f0dc12a7491d9f23ef8855d9",
+    "width_px": 1425,
+    "height_px": 990,
+    "browser": "Desktop IAB Chromium 157 on Windows",
+    "physical_device": false,
+    "data": "SYNTHETIC_ONLY",
+    "note": "Actual JPEG bytes from browser screenshot API, preserved without conversion; responsive viewport is not physical-device certification."
+  },
+  {
+    "file": "pages-model-options-desktop-1440.jpg",
+    "sha256": "d4deaf49f3c0d55b11ebbf88f935b12b437ddefcfc9626ded64ad779783c1218",
+    "width_px": 1425,
+    "height_px": 990,
+    "browser": "Desktop IAB Chromium 157 on Windows",
+    "physical_device": false,
+    "data": "SYNTHETIC_ONLY",
+    "note": "Actual JPEG bytes from browser screenshot API, preserved without conversion; responsive viewport is not physical-device certification."
+  },
+  {
+    "file": "pages-profile-lock-iphone-viewport-390.jpg",
+    "sha256": "e3be4f232bfb74ac942ef6667bf517457901cc6994b08acc0de9bf50658cb7c6",
+    "width_px": 375,
+    "height_px": 811,
+    "browser": "Desktop IAB Chromium 157 on Windows",
+    "physical_device": false,
+    "data": "SYNTHETIC_ONLY",
+    "note": "Actual JPEG bytes from browser screenshot API, preserved without conversion; responsive viewport is not physical-device certification."
+  },
+  {
+    "file": "pages-voice-android-viewport-360.jpg",
+    "sha256": "b31b5f3f22c82024a77048a20a2c6fc7852376b230baa7048d62a3f6e44e6532",
+    "width_px": 345,
+    "height_px": 767,
+    "browser": "Desktop IAB Chromium 157 on Windows",
+    "physical_device": false,
+    "data": "SYNTHETIC_ONLY",
+    "note": "Actual JPEG bytes from browser screenshot API, preserved without conversion; responsive viewport is not physical-device certification."
+  }
+]

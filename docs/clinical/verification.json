@@ -1,0 +1,73 @@
+{
+  "baseline": {
+    "passed": 172,
+    "seconds": 43.41
+  },
+  "final": {
+    "name": "pytest",
+    "errors": "0",
+    "failures": "0",
+    "skipped": "0",
+    "tests": "251",
+    "time": "57.845",
+    "timestamp": "2026-10-16T12:54:03.121578-05:00",
+    "hostname": "Gianni"
+  },
+  "new_tests": 79,
+  "warnings": [
+    "Starlette HTTPX TestClient deprecation"
+  ],
+  "case_ids": [
+    "DM-01",
+    "DM-02",
+    "DM-03",
+    "DM-04",
+    "DM-05",
+    "DM-06",
+    "ORTHO-01",
+    "ORTHO-02",
+    "ORTHO-03",
+    "ORTHO-04",
+    "ORTHO-05",
+    "ORTHO-06",
+    "AKI-01",
+    "AKI-02",
+    "AKI-03",
+    "AKI-04",
+    "AKI-05",
+    "AKI-06",
+    "ANAPH-01",
+    "ANAPH-02",
+    "ANAPH-03",
+    "ANAPH-04",
+    "ANAPH-05",
+    "ANAPH-06",
+    "DIFF-01",
+    "DIFF-02",
+    "DIFF-03",
+    "DIFF-04",
+    "DIFF-05",
+    "DIFF-06"
+  ],
+  "performance": {
+    "clinical_validation": false,
+    "transport": "FastAPI ASGI HTTP TestClient; no external network calls",
+    "request_count": 28,
+    "latency_ms_median": 11.705199984135106,
+    "latency_ms_max": 78.72169997426681,
+    "python_peak_tracemalloc_bytes": 7316752,
+    "sqlite_bytes": 229376,
+    "knowledge_hash": "cb0dc5bba91e4861f2395d5cf9514e6a75de95709feb105fb6866041812c44ae",
+    "all_replays_match": true,
+    "reader_write_denied": true,
+    "request_hashes": {
+      "dka": "fddda5afb4a3918b4d3597a5afc27cc6c109e5502d88ccbaf3252e8b0249c3bb",
+      "anaphylaxis": "ea6b89b4f02f6a36fa30e67f0acf8d1778420d2fe201d5106ae45920822cd635",
+      "dizziness": "6b600dddfacfb52ba8f96185b9504792ce5ed38a643de2c4bae13bbdbd6be80d"
+    },
+    "outputs": "C:\\Users\\Gianni\\Desktop\\Vigile\\docs\\clinical\\demo-final"
+  },
+  "originals_unchanged": 106,
+  "report_copy_sha256": "38ad3ab166f25a8b46c1e1f483ba813510c34dc766171389307635ecf7e8a715",
+  "clinical_validation": false
+}

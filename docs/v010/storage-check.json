@@ -1,0 +1,48 @@
+{
+  "old_audit": true,
+  "new_audit": true,
+  "acl": {
+    "path": "C:\\Users\\Gianni\\Desktop\\Vigile\\engine\\data\\portal-v0100-release",
+    "user_sid": "S-1-5-21-4266034318-2299397883-1611257766-1001",
+    "scope": "CURRENT_USER_AND_SYSTEM",
+    "same_user_processes_isolated": false
+  },
+  "sqlite": {
+    "active_store": "STANDARD_SQLITE",
+    "active_database_encrypted": false,
+    "sqlite_cipher_version": null,
+    "sqlcipher_provider_available": false,
+    "migration": "BLOCKED_PENDING_DEPENDENCY_AND_VERIFIED_MIGRATION"
+  },
+  "old_clinical": 24,
+  "new_clinical": 24,
+  "anchor": {
+    "valid": true,
+    "anchored_prefix": {
+      "record_sequence": 244,
+      "record_count": 244,
+      "records_hash": "18a326957cfd0fe96ed08438168268c38a968547e759b22735533feded3efbd3",
+      "audit_sequence": 246,
+      "audit_hash": "365c672ac07159daed8828779924bad91797c52a79c95b8a53e42edd321e9799"
+    },
+    "latest_checkpoint": {
+      "sequence": 246,
+      "hash": "365c672ac07159daed8828779924bad91797c52a79c95b8a53e42edd321e9799"
+    },
+    "protection": "DB_ONLY_TAMPERING_DETECTION_NOT_SAME_USER_COMPROMISE"
+  },
+  "backup": {
+    "format": "VIGILE_SQLITE_BACKUP_1",
+    "source": "C:\\Users\\Gianni\\Desktop\\Vigile\\engine\\data\\portal-v0100-release\\vigile.sqlite3",
+    "database": "vigile.sqlite3",
+    "sha256": "7a0439ba635c43ffc36243ae404132c49af5c02a3b4d5afd114ec5f82c02ce7e",
+    "state": {
+      "record_sequence": 244,
+      "record_count": 244,
+      "records_hash": "18a326957cfd0fe96ed08438168268c38a968547e759b22735533feded3efbd3",
+      "audit_sequence": 246,
+      "audit_hash": "365c672ac07159daed8828779924bad91797c52a79c95b8a53e42edd321e9799"
+    },
+    "sqlite_encryption": "NONE"
+  }
+}

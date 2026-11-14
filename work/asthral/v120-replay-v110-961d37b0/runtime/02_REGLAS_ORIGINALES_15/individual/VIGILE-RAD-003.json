@@ -1,0 +1,135 @@
+{
+  "rule_id": "VIGILE-RAD-003",
+  "rule_version": "1.0.0",
+  "title": "Nuclear-technology radiation exposure limit",
+  "domain": "RADIATION",
+  "condition_id": "NUCLEAR_TECHNOLOGY_IONIZING_EXPOSURE",
+  "purpose": "Evaluate ionizing-radiation exposure attributable to onboard nuclear technologies against the mission-year limit.",
+  "rule_kind": "SPACE_PERMISSIBLE_EXPOSURE_LIMIT",
+  "evidence_class": "NASA_STANDARD",
+  "evidence_status": "DOCUMENTED_AND_COMPUTABLE_AFTER_MISSION_PRORATION_DEFINITION",
+  "software_validation_status": "REQUIRES_IMPLEMENTATION_VALIDATION",
+  "authorization": {
+    "evaluation": "AUTO_EVALUATION_ALLOWED",
+    "mission_year_proration_method": "REQUIRES_MISSION_AUTHORIZATION",
+    "clinical_action": "REQUIRES_MEDICAL_AUTHORIZATION"
+  },
+  "applicability": {
+    "nuclear_technology_emitting_ionizing_radiation_present": true
+  },
+  "inputs": [
+    {
+      "name": "nuclear_technology_effective_dose",
+      "type": "number",
+      "canonical_unit": "mSv",
+      "required": true
+    },
+    {
+      "name": "mission_year_equivalent",
+      "type": "number",
+      "required": true,
+      "note": "Must use the approved program convention for prorating/extrapolating mission duration."
+    }
+  ],
+  "derived_variables": [
+    {
+      "name": "prorated_limit_mSv",
+      "formula": "20 * mission_year_equivalent",
+      "unit": "mSv"
+    }
+  ],
+  "logic": {
+    "preconditions": [
+      "mission_year_equivalent > 0"
+    ],
+    "decision": [
+      {
+        "when": "nuclear_technology_effective_dose < prorated_limit_mSv",
+        "result": "PASS"
+      },
+      {
+        "when": "nuclear_technology_effective_dose >= prorated_limit_mSv",
+        "result": "FAIL_REQUIREMENT"
+      }
+    ]
+  },
+  "thresholds": {
+    "annualized_effective_dose": {
+      "value": 20,
+      "unit": "mSv/mission-year",
+      "operator": "<"
+    }
+  },
+  "temporal_window": {
+    "type": "MISSION_DURATION_PRORATED"
+  },
+  "confounders": [
+    "mission-year convention",
+    "shielding",
+    "time near source",
+    "EVA fraction",
+    "source geometry"
+  ],
+  "missing_data_policy": "INCONCLUSIVE",
+  "data_quality_policy": "Do not silently assume 365 or 365.25 days as the mission-year convention unless the mission configuration explicitly defines it.",
+  "output": {
+    "primary": "rule_result",
+    "derived": "prorated_limit_mSv",
+    "clinical_assessment_status": "NOT_DETERMINED_BY_RULE"
+  },
+  "severity_semantics": {
+    "on_failure": "NUCLEAR_TECHNOLOGY_RADIATION_REQUIREMENT_NOT_MET",
+    "clinical_severity": "NOT_DETERMINED"
+  },
+  "follow_up": [
+    "ALARA and engineering review.",
+    "Review source shielding and crew timeline.",
+    "Medical evaluation under authorized radiation protocol if actual crew exposure is involved."
+  ],
+  "source_locators": [
+    {
+      "source_id": "NASA-STD-3001-V1-REV-C",
+      "requirement": "V1 4032",
+      "section": "4.8.4",
+      "printed_pages": [
+        43,
+        44
+      ],
+      "pdf_page_indices_0based": [
+        42,
+        43
+      ],
+      "url": "https://standards.nasa.gov/sites/default/files/standards/NASA/C//nasa-std-3001-vol-1-rev-c-signature.pdf"
+    }
+  ],
+  "test_cases": [
+    {
+      "id": "RAD003-T01",
+      "synthetic": true,
+      "inputs": {
+        "nuclear_technology_effective_dose": 19.9,
+        "mission_year_equivalent": 1.0
+      },
+      "expected": "PASS"
+    },
+    {
+      "id": "RAD003-T02",
+      "synthetic": true,
+      "inputs": {
+        "nuclear_technology_effective_dose": 20.0,
+        "mission_year_equivalent": 1.0
+      },
+      "expected": "FAIL_REQUIREMENT"
+    },
+    {
+      "id": "RAD003-T03",
+      "synthetic": true,
+      "inputs": {
+        "nuclear_technology_effective_dose": 10.0,
+        "mission_year_equivalent": 0.5
+      },
+      "expected": "FAIL_REQUIREMENT",
+      "reason": "The standard uses a strict less-than criterion."
+    }
+  ]
+}

@@ -1,0 +1,371 @@
+{
+  "version": "0.8.0",
+  "implementation_hash": "fb940e6f35764a3b060665269a4272f80038f724a830c0ac1e0441e89fdb15dd",
+  "knowledge_hash": "b8c568bd645154e5fd67630c7a670ca53904dc04f54904315047a89923839d4e",
+  "files": [
+    {
+      "path": "engine/vigile/adapters.py",
+      "sha256": "8d2b7e6815a0301559da09b01553af574c662eb5cf21ff22dc261fb8fc6cbd89",
+      "change": "UNCHANGED"
+    },
+    {
+      "path": "engine/vigile/ai_evaluation.py",
+      "sha256": "2dc8718f7ac744f02c14c8193dbc9b6ed4b1d9e0004497e7c078747e1677a6c7",
+      "change": "ADDED"
+    },
+    {
+      "path": "engine/vigile/algorithms.py",
+      "sha256": "983fe436222ee786dc444fe637dd3921498cbdaae627a007fd00a852ad6b5590",
+      "change": "UNCHANGED"
+    },
+    {
+      "path": "engine/vigile/api.py",
+      "sha256": "acae624daea3375721822f435d1c227a8387330a4be3f1dc4e124e7933bfccdc",
+      "change": "MODIFIED"
+    },
+    {
+      "path": "engine/vigile/clinical_api.py",
+      "sha256": "a9a5427b8fe352ec44e446884ead36cebe898a00887cc98d784c33ca92b716cb",
+      "change": "UNCHANGED"
+    },
+    {
+      "path": "engine/vigile/clinical_contracts.py",
+      "sha256": "2514a9ce8b6dc04f67652f361580497b77d1c4ec95355a886d14fa63e9e3b71c",
+      "change": "UNCHANGED"
+    },
+    {
+      "path": "engine/vigile/clinical_demo.py",
+      "sha256": "a920006fc576f59cf1a8342d99081a14bcd16a18052968d1936aa7f2eeb9fc92",
+      "change": "UNCHANGED"
+    },
+    {
+      "path": "engine/vigile/clinical_differential.py",
+      "sha256": "a19c7cb21897d8d6359e100e24995a937d0e8edca360febf9cc985b426e80d91",
+      "change": "UNCHANGED"
+    },
+    {
+      "path": "engine/vigile/clinical_engine.py",
+      "sha256": "1104e8e0d41d41c357412cf5e800128e1607c7867d0b50526b9e73f3509ec806",
+      "change": "UNCHANGED"
+    },
+    {
+      "path": "engine/vigile/clinical_knowledge.py",
+      "sha256": "ffb6316fd90abe2cc70071cd201a401e6cee7bc30e55c7b9f26e0c74e7ef08f5",
+      "change": "UNCHANGED"
+    },
+    {
+      "path": "engine/vigile/clinical_logic.py",
+      "sha256": "9a3705bbf259489b1de9d0ea436ce57908ee5bd5476e7144dcb5819bb5f8e665",
+      "change": "UNCHANGED"
+    },
+    {
+      "path": "engine/vigile/clinical_models.py",
+      "sha256": "7f4cc40c77f77e1edab8eda2650697776b2607b2bf56286ca71499bd14b1cdd7",
+      "change": "UNCHANGED"
+    },
+    {
+      "path": "engine/vigile/clinical_simulator.py",
+      "sha256": "780efe1e8f7e53f5ea4589a64f0fc86004cad660c1ad583d4e1b995823d6ef55",
+      "change": "UNCHANGED"
+    },
+    {
+      "path": "engine/vigile/conversational.py",
+      "sha256": "a567faea23eee2ef657d65f4ebc2f4a8d455136a33f6c307c889f49ed9832218",
+      "change": "UNCHANGED"
+    },
+    {
+      "path": "engine/vigile/credentials.py",
+      "sha256": "5e84fa82d14324acb303238f1072e56cbdc6f36f69a5aff47cef91583df30a72",
+      "change": "UNCHANGED"
+    },
+    {
+      "path": "engine/vigile/dashboard_api.py",
+      "sha256": "a73de5389e8160d0b7367016f213c49fd94b18885ea07ed63477e25fa3014d45",
+      "change": "UNCHANGED"
+    },
+    {
+      "path": "engine/vigile/demo.py",
+      "sha256": "6c7b3433bef72e1cd022f472e7f792463a5fed332d934f51c21a20863c93f179",
+      "change": "UNCHANGED"
+    },
+    {
+      "path": "engine/vigile/extensions.py",
+      "sha256": "c258fdc0ac16ddc0a4648a94019d0af184ea4bcf2eda8c8ece778e47b877559d",
+      "change": "UNCHANGED"
+    },
+    {
+      "path": "engine/vigile/integration.py",
+      "sha256": "3b4d4e204d225ad9599724cda3ea9f9e67206eb3d52f6e9d11f020c1df94e440",
+      "change": "UNCHANGED"
+    },
+    {
+      "path": "engine/vigile/knowledge_v08.py",
+      "sha256": "9fdb432b0b8fccab4f0d8fb96648b02824f346fe020f4a17e06188895450f7eb",
+      "change": "ADDED"
+    },
+    {
+      "path": "engine/vigile/local_assistant.py",
+      "sha256": "d1a85377616ba04605c953ea8ea3b5b6732a9119fd55d8904ae6813dd680ce46",
+      "change": "MODIFIED"
+    },
+    {
+      "path": "engine/vigile/local_runtime.py",
+      "sha256": "a2874c9a5d046f9c04db9ecd7b6e178fc5adfbdbb1877b63696eb275a7276a08",
+      "change": "UNCHANGED"
+    },
+    {
+      "path": "engine/vigile/longitudinal_assistant.py",
+      "sha256": "442a689d468017046fe3a914482af81296420055e272d4aa7a01c05bfcdc12c3",
+      "change": "ADDED"
+    },
+    {
+      "path": "engine/vigile/models.py",
+      "sha256": "c8bbac4e9f29bbf504666d20b63a64b098515bb80e166a305a660a4b08ee8765",
+      "change": "UNCHANGED"
+    },
+    {
+      "path": "engine/vigile/monitoring.py",
+      "sha256": "26b008149dc664fc39c8dba34dd5a9322f96c05573164083f138ae0f64cf743b",
+      "change": "MODIFIED"
+    },
+    {
+      "path": "engine/vigile/monitoring_demo.py",
+      "sha256": "03a700743e8de4943eb3e535b276bc24152326fd87e17cff6b4877eda2f56ec6",
+      "change": "UNCHANGED"
+    },
+    {
+      "path": "engine/vigile/monitoring_models.py",
+      "sha256": "23027365d3614c8b4e9c91a0c381c282664b133305da01d10d9ca88f92227344",
+      "change": "MODIFIED"
+    },
+    {
+      "path": "engine/vigile/monitoring_portal_demo.py",
+      "sha256": "204e5ff05bdeb2b11af3d4ddd6ff72c47c0748973eda111a26650acc1590f610",
+      "change": "UNCHANGED"
+    },
+    {
+      "path": "engine/vigile/offline_library.py",
+      "sha256": "9a91108bdc9f8767a595f7f7a44d9c21fa307e13092f46d7f4444cab8f17c410",
+      "change": "MODIFIED"
+    },
+    {
+      "path": "engine/vigile/pathways.py",
+      "sha256": "9d349d467beadeccf202b5fbbf533640adef6930998a862d24dcc47e6a523747",
+      "change": "UNCHANGED"
+    },
+    {
+      "path": "engine/vigile/portal.py",
+      "sha256": "419dfba9996c0e62a253495083bcb1ed47cea49579052f18b40b58d50931219b",
+      "change": "MODIFIED"
+    },
+    {
+      "path": "engine/vigile/portal_demo.py",
+      "sha256": "d314ea8eb790662f3ac9ac670a70b4d2eb9e0815bf3d583570cd17def2ba424b",
+      "change": "UNCHANGED"
+    },
+    {
+      "path": "engine/vigile/quality.py",
+      "sha256": "c2615e137b638b198fa34aed949e295a941627254015fa0be650df752ac060d4",
+      "change": "UNCHANGED"
+    },
+    {
+      "path": "engine/vigile/registry.py",
+      "sha256": "0203e80997e20ad0fed2757be2046d62e0ebdbce2fe23554c1ea42bef55cbd34",
+      "change": "UNCHANGED"
+    },
+    {
+      "path": "engine/vigile/rules.py",
+      "sha256": "a80f37fa03730de692afd77b7d248265bbceb15b5a912eb976bc0e9682641f20",
+      "change": "UNCHANGED"
+    },
+    {
+      "path": "engine/vigile/security.py",
+      "sha256": "4bcfc6cda010f773b45191981fef2e60f2022a05e219c287c33163760caefba8",
+      "change": "UNCHANGED"
+    },
+    {
+      "path": "engine/vigile/service.py",
+      "sha256": "1a6811e50c948c4312ce83395b3d5aaca7598d563e0e346ca174df4f4f0bf3f1",
+      "change": "UNCHANGED"
+    },
+    {
+      "path": "engine/vigile/simulator.py",
+      "sha256": "42b01a2c697ee50d8320e7c0eb7501e3cbe21ae7a229ea3da8eeb882c918bbf8",
+      "change": "UNCHANGED"
+    },
+    {
+      "path": "engine/vigile/store.py",
+      "sha256": "861d46f4d071fed5cb1edd5e4db3b58f1dd6830739499dd7fb80b3ea20613af7",
+      "change": "UNCHANGED"
+    },
+    {
+      "path": "engine/vigile/__init__.py",
+      "sha256": "c838729e2a0e7854b4c093e321b110dff99b2398328bfa03fc61bfea753fc906",
+      "change": "UNCHANGED"
+    },
+    {
+      "path": "engine/vigile/__main__.py",
+      "sha256": "d0f1e771a9ba6f40c4c13c134ade1f7d88f3fa70f34b780f903fc94b5da5672a",
+      "change": "UNCHANGED"
+    },
+    {
+      "path": "engine/vigile/clinical_knowledge/contraindications.json",
+      "sha256": "c7b03068b4345d553e7b002c2fbdd2207ff855b6664c01b72fe96e2b6d95fcc7",
+      "change": "UNCHANGED"
+    },
+    {
+      "path": "engine/vigile/clinical_knowledge/diagnostic_criteria.json",
+      "sha256": "3aee3add20e11ace8f192969ce0ce827b1ea163e55935110cc5afdd6c016c8ee",
+      "change": "UNCHANGED"
+    },
+    {
+      "path": "engine/vigile/clinical_knowledge/diagnostic_tests.json",
+      "sha256": "ee49c8077105613c59fb8b8a5d3c61a6497616579205628462d02ac4f59d8a8d",
+      "change": "UNCHANGED"
+    },
+    {
+      "path": "engine/vigile/clinical_knowledge/differential_rules.json",
+      "sha256": "22daab629bd06ce9756d940c63b3ebbf9dca37811d29467520fc2e27bce178b7",
+      "change": "UNCHANGED"
+    },
+    {
+      "path": "engine/vigile/clinical_knowledge/manifest.json",
+      "sha256": "aebd5cf96c6892066e72c9207f87f331e29dfffe2ddeff45108e70faf4835a27",
+      "change": "UNCHANGED"
+    },
+    {
+      "path": "engine/vigile/clinical_knowledge/sources_verified.json",
+      "sha256": "2c41be379e10b0c2ba3f7077fd47a9ae138f31addee1a9a2829f3f9bd815c2cd",
+      "change": "UNCHANGED"
+    },
+    {
+      "path": "engine/vigile/clinical_knowledge/space_applicability.json",
+      "sha256": "d86e575957ab11f2abb831a1e0f64897586b0fe2ffd9aa5aee4d51bdc5df65b0",
+      "change": "UNCHANGED"
+    },
+    {
+      "path": "engine/vigile/clinical_knowledge/synthetic_cases.json",
+      "sha256": "24f2f3e3bc0cbd749167c9bdbd69765a5f36a04ad9c0691aa92efc492852ab81",
+      "change": "UNCHANGED"
+    },
+    {
+      "path": "engine/vigile/clinical_knowledge/treatment_protocols.json",
+      "sha256": "89a33123f49782318595967228cba6e7285d3f5662b5cbe7bda4df06d49130cc",
+      "change": "UNCHANGED"
+    },
+    {
+      "path": "engine/vigile/clinical_knowledge/v07-extension.json",
+      "sha256": "b258ff2d79ab79355f65826466c9fc3e7a52380b749ec18ef2eb4700759e4fd8",
+      "change": "UNCHANGED"
+    },
+    {
+      "path": "engine/vigile/web/app.js",
+      "sha256": "4df428cb565061d220ab10b5f03dbe351abc3aeec65bb20b85fb90af70771012",
+      "change": "MODIFIED"
+    },
+    {
+      "path": "engine/vigile/web/index.html",
+      "sha256": "a58aa487668f07737cd9b48e2b832e59d8a3c05beec977f8afd13204fbaafc6a",
+      "change": "MODIFIED"
+    },
+    {
+      "path": "engine/vigile/web/style.css",
+      "sha256": "79aff26a4cfc222e9129735124faa72179c4e22099ab9bfbafa5079fbe743ade",
+      "change": "UNCHANGED"
+    },
+    {
+      "path": "engine/tests/conftest.py",
+      "sha256": "8d4e6cb45981cc41cb92ae46ffb62c5906a782f22452f1fa541a3d7271c9b904",
+      "change": "UNCHANGED"
+    },
+    {
+      "path": "engine/tests/test_api.py",
+      "sha256": "359f4828c5510d437a8d8bc4c1ce9e311a76cb6c1b074ca18cf2d61952a05e38",
+      "change": "UNCHANGED"
+    },
+    {
+      "path": "engine/tests/test_biomedical_audit.py",
+      "sha256": "0e629bf2914707c8a94ff64a255918797a536981f90978dbf21a130d7b1e9acc",
+      "change": "UNCHANGED"
+    },
+    {
+      "path": "engine/tests/test_clinical.py",
+      "sha256": "ba6a6cd3754bdff4ea475188df9f81c7e8c978c3acf56a9bbd9095b99bf6a3e5",
+      "change": "UNCHANGED"
+    },
+    {
+      "path": "engine/tests/test_clinical_consistency.py",
+      "sha256": "bca06e00466d32a462ae78652eaa92f7fa1ad3aff277c200164d426c9866338b",
+      "change": "UNCHANGED"
+    },
+    {
+      "path": "engine/tests/test_conversational.py",
+      "sha256": "4a9ef1871e4cafe33fd4776d2395db22d7303c0fad4bab0a1e9d3148ae5a1037",
+      "change": "UNCHANGED"
+    },
+    {
+      "path": "engine/tests/test_integration_edges.py",
+      "sha256": "0e3d83606370ba58e21632f47c8868d35c313ba5bfee1aa4620f712b229ae051",
+      "change": "UNCHANGED"
+    },
+    {
+      "path": "engine/tests/test_integration_release.py",
+      "sha256": "0e70cebf9f6ac4a7d58841ed7e9eaafbba48c2c5b0ed2ce290024ebbed1023db",
+      "change": "UNCHANGED"
+    },
+    {
+      "path": "engine/tests/test_monitoring.py",
+      "sha256": "d3f30883e8229a48d9eeb5505f5247d91e232186a723c453c36fa61179821a03",
+      "change": "UNCHANGED"
+    },
+    {
+      "path": "engine/tests/test_original_rules.py",
+      "sha256": "b3ea9817bc86ed9be85401853521c727d7407e000283ce0d268c69aa2c9afd51",
+      "change": "UNCHANGED"
+    },
+    {
+      "path": "engine/tests/test_portal.py",
+      "sha256": "372ea133a8d108f38d14224c618adf71e8a14e9de22542d92c2ee9d1f1544c4b",
+      "change": "UNCHANGED"
+    },
+    {
+      "path": "engine/tests/test_safety.py",
+      "sha256": "d31a9a250e6ac91a571c9fe1e6e66f59d0060455694ff64e56a643b06482ad4f",
+      "change": "UNCHANGED"
+    },
+    {
+      "path": "engine/tests/test_synthetic_cases.py",
+      "sha256": "bda942f60734c1332502de795eb8bd398f8fa946a89afad8edca83b3bac21077",
+      "change": "UNCHANGED"
+    },
+    {
+      "path": "engine/tests/test_v02.py",
+      "sha256": "677a8b17d8d11bc9629ac5c325715910284e3eded500a3203b54db5601d80b48",
+      "change": "UNCHANGED"
+    },
+    {
+      "path": "engine/tests/test_v08_ai.py",
+      "sha256": "ca97ecbb12029df9eaf46ad28856846485a99d5370564c27ad01f6a8d409b5f2",
+      "change": "ADDED"
+    },
+    {
+      "path": "engine/tests/test_v08_biomedical.py",
+      "sha256": "e9ae83f16b37d5c322b2789c256a471b9509d48af5140af8a8226e3806311366",
+      "change": "ADDED"
+    },
+    {
+      "path": "engine/pyproject.toml",
+      "sha256": "ab2a29134794a95b0afe28575f2dbfa66a95095e2a02beabb45dc2e2043c9d9e",
+      "change": "MODIFIED"
+    }
+  ],
+  "dependencies": {
+    "fastapi": "0.143.1",
+    "pydantic": "2.14.1",
+    "uvicorn": "0.54.0",
+    "httpx": "0.28.1",
+    "pytest": "9.1.1"
+  },
+  "python": "3.13.16 (tags/v3.13.16:cbc944f, Sep 30 2026, 19:17:50) [MSC v.1944 64 bit (AMD64)]",
+  "clinical_validation": false
+}

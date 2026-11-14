@@ -1,0 +1,147 @@
+{
+  "rule_id": "VIGILE-ENV-004",
+  "rule_version": "1.0.0",
+  "title": "Internal vehicle pressure rate-of-change requirement",
+  "domain": "ENVIRONMENTAL_HEALTH",
+  "condition_id": "PRESSURE_CHANGE_AND_BAROTRAUMA_RISK",
+  "purpose": "Evaluate the rate of pressure change when total pressure change exceeds 1 psi.",
+  "rule_kind": "ENVIRONMENTAL_STANDARD_COMPLIANCE",
+  "evidence_class": "NASA_STANDARD",
+  "evidence_status": "DOCUMENTED_AND_COMPUTABLE_WITH_VALIDATED_SIGNAL_PROCESSING",
+  "software_validation_status": "REQUIRES_IMPLEMENTATION_VALIDATION",
+  "authorization": {
+    "evaluation": "AUTO_EVALUATION_ALLOWED",
+    "signal_processing_method": "REQUIRES_MISSION_AUTHORIZATION",
+    "clinical_action": "REQUIRES_MEDICAL_AUTHORIZATION"
+  },
+  "applicability": {
+    "condition": "absolute_total_pressure_change > 1.0 psi"
+  },
+  "inputs": [
+    {
+      "name": "absolute_total_pressure_change",
+      "type": "number",
+      "canonical_unit": "psi",
+      "required": true
+    },
+    {
+      "name": "maximum_absolute_pressure_change_rate",
+      "type": "number",
+      "canonical_unit": "psi/min",
+      "required": true
+    },
+    {
+      "name": "rate_calculation_method_validated",
+      "type": "boolean",
+      "required": true
+    },
+    {
+      "name": "data_quality_status",
+      "type": "enum",
+      "required": true
+    }
+  ],
+  "derived_variables": [],
+  "logic": {
+    "decision": [
+      {
+        "when": "absolute_total_pressure_change <= 1.0",
+        "result": "NOT_APPLICABLE"
+      },
+      {
+        "when": "rate_calculation_method_validated != true OR data_quality_status != ACCEPTABLE",
+        "result": "INCONCLUSIVE"
+      },
+      {
+        "when": "maximum_absolute_pressure_change_rate <= 13.5",
+        "result": "PASS"
+      },
+      {
+        "when": "maximum_absolute_pressure_change_rate > 13.5",
+        "result": "FAIL_REQUIREMENT"
+      }
+    ]
+  },
+  "thresholds": {
+    "trigger_total_pressure_change": {
+      "value": 1.0,
+      "unit": "psi",
+      "operator": ">"
+    },
+    "maximum_rate": {
+      "value": 13.5,
+      "unit": "psi/min",
+      "operator": "<="
+    }
+  },
+  "temporal_window": {
+    "type": "PRESSURE_CHANGE_EVENT"
+  },
+  "confounders": [
+    "sensor sampling rate",
+    "filtering",
+    "derivative noise",
+    "event segmentation",
+    "sensor latency"
+  ],
+  "missing_data_policy": "INCONCLUSIVE",
+  "data_quality_policy": "The maximum rate must be calculated using a validated pressure-signal processing method with sufficient temporal resolution.",
+  "output": {
+    "primary": "rule_result",
+    "barotrauma_diagnosis": "NOT_DETERMINED_BY_THIS_RULE"
+  },
+  "severity_semantics": {
+    "on_failure": "PRESSURE_RATE_REQUIREMENT_NOT_MET",
+    "clinical_severity": "NOT_DETERMINED"
+  },
+  "follow_up": [
+    "Trigger environmental/pressure-system review.",
+    "Apply the separate V2 6150 barotrauma-prevention requirement where applicable.",
+    "Evaluate crew symptoms separately; this engineering threshold alone does not diagnose barotrauma or DCS."
+  ],
+  "source_locators": [
+    {
+      "source_id": "NASA-STD-3001-V2-REV-F",
+      "requirement": "V2 6007",
+      "section": "6.2.2.2",
+      "printed_page": 53,
+      "pdf_page_index_0based": 52,
+      "url": "https://standards.nasa.gov/system/files/tmp/NASA-STD-3001%20Vol%202%20Rev%20F.pdf"
+    }
+  ],
+  "test_cases": [
+    {
+      "id": "ENV004-T01",
+      "synthetic": true,
+      "inputs": {
+        "absolute_total_pressure_change": 0.9,
+        "maximum_absolute_pressure_change_rate": 20.0,
+        "rate_calculation_method_validated": true,
+        "data_quality_status": "ACCEPTABLE"
+      },
+      "expected": "NOT_APPLICABLE"
+    },
+    {
+      "id": "ENV004-T02",
+      "synthetic": true,
+      "inputs": {
+        "absolute_total_pressure_change": 1.1,
+        "maximum_absolute_pressure_change_rate": 13.5,
+        "rate_calculation_method_validated": true,
+        "data_quality_status": "ACCEPTABLE"
+      },
+      "expected": "PASS"
+    },
+    {
+      "id": "ENV004-T03",
+      "synthetic": true,
+      "inputs": {
+        "absolute_total_pressure_change": 1.1,
+        "maximum_absolute_pressure_change_rate": 13.6,
+        "rate_calculation_method_validated": true,
+        "data_quality_status": "ACCEPTABLE"
+      },
+      "expected": "FAIL_REQUIREMENT"
+    }
+  ]
+}

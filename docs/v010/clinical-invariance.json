@@ -1,0 +1,480 @@
+{
+  "clinical": [
+    {
+      "old_id": "ce-65acc9ab2aae40f38446416de43d3f56",
+      "new_id": "ce-a675237d71a249c3af8d2236ee532816",
+      "equal_fields": [
+        "results",
+        "urgency",
+        "next_tests",
+        "differential",
+        "presentation_protocol",
+        "treatment_status",
+        "knowledge_hash"
+      ],
+      "differences": []
+    },
+    {
+      "old_id": "ce-681622a6d0eb4098a1f9a5d79a4a1195",
+      "new_id": "ce-0411bba4c6e54421b41d7e65748ed6a7",
+      "equal_fields": [
+        "results",
+        "urgency",
+        "next_tests",
+        "differential",
+        "presentation_protocol",
+        "treatment_status",
+        "knowledge_hash"
+      ],
+      "differences": []
+    },
+    {
+      "old_id": "ce-fbee88aa8d0a49a79b737142db4bcc76",
+      "new_id": "ce-31d90358d2c643de98718cbcd63ae014",
+      "equal_fields": [
+        "results",
+        "urgency",
+        "next_tests",
+        "differential",
+        "presentation_protocol",
+        "treatment_status",
+        "knowledge_hash"
+      ],
+      "differences": []
+    },
+    {
+      "old_id": "ce-68c6e2082e194d2d8114f74551a5a25a",
+      "new_id": "ce-5b4676db41bd498ebcbb0da1855c1c69",
+      "equal_fields": [
+        "results",
+        "urgency",
+        "next_tests",
+        "differential",
+        "presentation_protocol",
+        "treatment_status",
+        "knowledge_hash"
+      ],
+      "differences": []
+    },
+    {
+      "old_id": "ce-12d74ee38dd85f5b5de59754a4aa59a7",
+      "new_id": "ce-12d74ee38dd85f5b5de59754a4aa59a7",
+      "equal_fields": [
+        "results",
+        "urgency",
+        "next_tests",
+        "differential",
+        "presentation_protocol",
+        "treatment_status",
+        "knowledge_hash"
+      ],
+      "differences": []
+    },
+    {
+      "old_id": "ce-3ea7170a1ff9ca64d2a5c4d3c9eeb95b",
+      "new_id": "ce-3ea7170a1ff9ca64d2a5c4d3c9eeb95b",
+      "equal_fields": [
+        "results",
+        "urgency",
+        "next_tests",
+        "differential",
+        "presentation_protocol",
+        "treatment_status",
+        "knowledge_hash"
+      ],
+      "differences": []
+    },
+    {
+      "old_id": "ce-8c60945c4d6f45236dacaed284fbb19d",
+      "new_id": "ce-8c60945c4d6f45236dacaed284fbb19d",
+      "equal_fields": [
+        "results",
+        "urgency",
+        "next_tests",
+        "differential",
+        "presentation_protocol",
+        "treatment_status",
+        "knowledge_hash"
+      ],
+      "differences": []
+    },
+    {
+      "old_id": "ce-95a21c7375dc35b79b8e74a289e853e2",
+      "new_id": "ce-95a21c7375dc35b79b8e74a289e853e2",
+      "equal_fields": [
+        "results",
+        "urgency",
+        "next_tests",
+        "differential",
+        "presentation_protocol",
+        "treatment_status",
+        "knowledge_hash"
+      ],
+      "differences": []
+    },
+    {
+      "old_id": "ce-3667c4aed507bab1023639b342acbc1d",
+      "new_id": "ce-3667c4aed507bab1023639b342acbc1d",
+      "equal_fields": [
+        "results",
+        "urgency",
+        "next_tests",
+        "differential",
+        "presentation_protocol",
+        "treatment_status",
+        "knowledge_hash"
+      ],
+      "differences": []
+    },
+    {
+      "old_id": "ce-363451e4c33baa6635f4be3630b9018d",
+      "new_id": "ce-363451e4c33baa6635f4be3630b9018d",
+      "equal_fields": [
+        "results",
+        "urgency",
+        "next_tests",
+        "differential",
+        "presentation_protocol",
+        "treatment_status",
+        "knowledge_hash"
+      ],
+      "differences": []
+    },
+    {
+      "old_id": "ce-573e9ea7e583a338b19bfecc14c1f71e",
+      "new_id": "ce-573e9ea7e583a338b19bfecc14c1f71e",
+      "equal_fields": [
+        "results",
+        "urgency",
+        "next_tests",
+        "differential",
+        "presentation_protocol",
+        "treatment_status",
+        "knowledge_hash"
+      ],
+      "differences": []
+    },
+    {
+      "old_id": "ce-e6871477f4211b9bf2fe3ecd27701724",
+      "new_id": "ce-e6871477f4211b9bf2fe3ecd27701724",
+      "equal_fields": [
+        "results",
+        "urgency",
+        "next_tests",
+        "differential",
+        "presentation_protocol",
+        "treatment_status",
+        "knowledge_hash"
+      ],
+      "differences": []
+    },
+    {
+      "old_id": "ce-513fd76f0285a41160a2c82dba4acacb",
+      "new_id": "ce-513fd76f0285a41160a2c82dba4acacb",
+      "equal_fields": [
+        "results",
+        "urgency",
+        "next_tests",
+        "differential",
+        "presentation_protocol",
+        "treatment_status",
+        "knowledge_hash"
+      ],
+      "differences": []
+    },
+    {
+      "old_id": "ce-735d7aaafd9198459455e72c05c83378",
+      "new_id": "ce-735d7aaafd9198459455e72c05c83378",
+      "equal_fields": [
+        "results",
+        "urgency",
+        "next_tests",
+        "differential",
+        "presentation_protocol",
+        "treatment_status",
+        "knowledge_hash"
+      ],
+      "differences": []
+    },
+    {
+      "old_id": "ce-25021a33553fbbe9643c2f2fc020f163",
+      "new_id": "ce-25021a33553fbbe9643c2f2fc020f163",
+      "equal_fields": [
+        "results",
+        "urgency",
+        "next_tests",
+        "differential",
+        "presentation_protocol",
+        "treatment_status",
+        "knowledge_hash"
+      ],
+      "differences": []
+    },
+    {
+      "old_id": "ce-2d7b1fe54a2fd2702c75d7752efedce5",
+      "new_id": "ce-2d7b1fe54a2fd2702c75d7752efedce5",
+      "equal_fields": [
+        "results",
+        "urgency",
+        "next_tests",
+        "differential",
+        "presentation_protocol",
+        "treatment_status",
+        "knowledge_hash"
+      ],
+      "differences": []
+    },
+    {
+      "old_id": "ce-a7cd40dff4114fb0947f5858f9ec3c33",
+      "new_id": "ce-a7cd40dff4114fb0947f5858f9ec3c33",
+      "equal_fields": [
+        "results",
+        "urgency",
+        "next_tests",
+        "differential",
+        "presentation_protocol",
+        "treatment_status",
+        "knowledge_hash"
+      ],
+      "differences": []
+    },
+    {
+      "old_id": "ce-ebbf9fe889d19b37ba4806eb86dccd63",
+      "new_id": "ce-ebbf9fe889d19b37ba4806eb86dccd63",
+      "equal_fields": [
+        "results",
+        "urgency",
+        "next_tests",
+        "differential",
+        "presentation_protocol",
+        "treatment_status",
+        "knowledge_hash"
+      ],
+      "differences": []
+    },
+    {
+      "old_id": "ce-5c38fa4b4fce37b514f494ab101b3a34",
+      "new_id": "ce-5c38fa4b4fce37b514f494ab101b3a34",
+      "equal_fields": [
+        "results",
+        "urgency",
+        "next_tests",
+        "differential",
+        "presentation_protocol",
+        "treatment_status",
+        "knowledge_hash"
+      ],
+      "differences": []
+    },
+    {
+      "old_id": "ce-cdc3b2c9cdc3d14393938b238f512f73",
+      "new_id": "ce-cdc3b2c9cdc3d14393938b238f512f73",
+      "equal_fields": [
+        "results",
+        "urgency",
+        "next_tests",
+        "differential",
+        "presentation_protocol",
+        "treatment_status",
+        "knowledge_hash"
+      ],
+      "differences": []
+    },
+    {
+      "old_id": "ce-87da4a5fb769ae3ab0988aa8a566f3c9",
+      "new_id": "ce-87da4a5fb769ae3ab0988aa8a566f3c9",
+      "equal_fields": [
+        "results",
+        "urgency",
+        "next_tests",
+        "differential",
+        "presentation_protocol",
+        "treatment_status",
+        "knowledge_hash"
+      ],
+      "differences": []
+    },
+    {
+      "old_id": "ce-00d65359e6f6197a01d96f74c857eacd",
+      "new_id": "ce-00d65359e6f6197a01d96f74c857eacd",
+      "equal_fields": [
+        "results",
+        "urgency",
+        "next_tests",
+        "differential",
+        "presentation_protocol",
+        "treatment_status",
+        "knowledge_hash"
+      ],
+      "differences": []
+    },
+    {
+      "old_id": "ce-c660b2572ea10db2761777f39c319ae6",
+      "new_id": "ce-c660b2572ea10db2761777f39c319ae6",
+      "equal_fields": [
+        "results",
+        "urgency",
+        "next_tests",
+        "differential",
+        "presentation_protocol",
+        "treatment_status",
+        "knowledge_hash"
+      ],
+      "differences": []
+    },
+    {
+      "old_id": "ce-a5a54e51c4cdc6a53c19937e3442ca4a",
+      "new_id": "ce-a5a54e51c4cdc6a53c19937e3442ca4a",
+      "equal_fields": [
+        "results",
+        "urgency",
+        "next_tests",
+        "differential",
+        "presentation_protocol",
+        "treatment_status",
+        "knowledge_hash"
+      ],
+      "differences": []
+    }
+  ],
+  "clinical_counts_equal": true,
+  "old_audit_valid": true,
+  "new_audit_valid": true,
+  "monitoring": [
+    {
+      "old_id": "A-cycle-0",
+      "new_id": "A-cycle-0",
+      "equal": {
+        "domains": false,
+        "events": true,
+        "relations": true
+      }
+    },
+    {
+      "old_id": "A-cycle-7",
+      "new_id": "A-cycle-7",
+      "equal": {
+        "domains": false,
+        "events": true,
+        "relations": true
+      }
+    },
+    {
+      "old_id": "A-cycle-14",
+      "new_id": "A-cycle-14",
+      "equal": {
+        "domains": false,
+        "events": true,
+        "relations": true
+      }
+    },
+    {
+      "old_id": "A-cycle-15",
+      "new_id": "A-cycle-15",
+      "equal": {
+        "domains": true,
+        "events": true,
+        "relations": true
+      }
+    },
+    {
+      "old_id": "A-cycle-16",
+      "new_id": "A-cycle-16",
+      "equal": {
+        "domains": true,
+        "events": true,
+        "relations": true
+      }
+    },
+    {
+      "old_id": "B-cycle-0",
+      "new_id": "B-cycle-0",
+      "equal": {
+        "domains": true,
+        "events": true,
+        "relations": true
+      }
+    },
+    {
+      "old_id": "B-cycle-repeat",
+      "new_id": "B-cycle-repeat",
+      "equal": {
+        "domains": true,
+        "events": true,
+        "relations": true
+      }
+    },
+    {
+      "old_id": "B-cycle-0.01",
+      "new_id": "B-cycle-0.01",
+      "equal": {
+        "domains": true,
+        "events": true,
+        "relations": true
+      }
+    },
+    {
+      "old_id": "B-cycle-0.02",
+      "new_id": "B-cycle-0.02",
+      "equal": {
+        "domains": true,
+        "events": true,
+        "relations": true
+      }
+    },
+    {
+      "old_id": "B-cycle-0.03",
+      "new_id": "B-cycle-0.03",
+      "equal": {
+        "domains": true,
+        "events": true,
+        "relations": true
+      }
+    },
+    {
+      "old_id": "C-cycle-0",
+      "new_id": "C-cycle-0",
+      "equal": {
+        "domains": false,
+        "events": true,
+        "relations": true
+      }
+    },
+    {
+      "old_id": "C-cycle-7",
+      "new_id": "C-cycle-7",
+      "equal": {
+        "domains": false,
+        "events": true,
+        "relations": true
+      }
+    },
+    {
+      "old_id": "C-cycle-14",
+      "new_id": "C-cycle-14",
+      "equal": {
+        "domains": false,
+        "events": true,
+        "relations": true
+      }
+    },
+    {
+      "old_id": "C-cycle-21",
+      "new_id": "C-cycle-21",
+      "equal": {
+        "domains": false,
+        "events": true,
+        "relations": true
+      }
+    },
+    {
+      "old_id": "C-cycle-28",
+      "new_id": "C-cycle-28",
+      "equal": {
+        "domains": false,
+        "events": true,
+        "relations": true
+      }
+    }
+  ]
+}

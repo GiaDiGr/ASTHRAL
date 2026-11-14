@@ -1,0 +1,51 @@
+[
+  {
+    "source": "ADA2026",
+    "pmc": "PMC12690183",
+    "url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC12690183/fullTextXML",
+    "status": "UNAVAILABLE",
+    "error": "ConnectError"
+  },
+  {
+    "source": "DKA2024",
+    "pmc": "PMC11272983",
+    "url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC11272983/fullTextXML",
+    "status": "UNAVAILABLE",
+    "error": "ConnectError"
+  },
+  {
+    "source": "AHA2024",
+    "pmc": "PMC11067441",
+    "url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC11067441/fullTextXML",
+    "status": "UNAVAILABLE",
+    "error": "ConnectError"
+  },
+  {
+    "source": "HRS2015",
+    "pmc": "PMC5267948",
+    "url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC5267948/fullTextXML",
+    "status": "UNAVAILABLE",
+    "error": "ConnectError"
+  },
+  {
+    "source": "NIH2021",
+    "pmc": "PMC8455420",
+    "url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC8455420/fullTextXML",
+    "status": "UNAVAILABLE",
+    "error": "ConnectError"
+  },
+  {
+    "source": "KDIGO2012",
+    "pmc": "PMC4089595",
+    "url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC4089595/fullTextXML",
+    "status": "UNAVAILABLE",
+    "error": "ConnectError"
+  },
+  {
+    "source": "WAO2020",
+    "pmc": "PMC7607509",
+    "url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC7607509/fullTextXML",
+    "status": "UNAVAILABLE",
+    "error": "ConnectError"
+  }
+]

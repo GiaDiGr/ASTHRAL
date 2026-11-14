@@ -1,0 +1,31 @@
+{
+  "condition_id": "C017",
+  "catalog_record": {
+    "condition_id": "C017",
+    "name_specialty": "Deterioro de trabajo en equipo/adaptación psicosocial / factores humanos",
+    "description_spaceflight": "Mala coordinación/comunicación puede afectar seguridad y misión.",
+    "risks_symptoms": "Aislamiento, conflicto, carga de trabajo.",
+    "biomarkers_sensors_tests": "Indicadores de equipo, autorreportes, desempeño colectivo.",
+    "baselines_environment_interactions": "Perfil de equipo y misión.",
+    "primary_evidence": "S12. citeturn18search7turn27search5",
+    "limits_authorizations_state": "No patologizar desacuerdos ni inferir estados mentales ocultos. `RO`."
+  },
+  "clinical_pathway_profile_as_published": "**P:** selección/entrenamiento de equipo; **M:** desempeño/comunicación; **Q:** evitar vigilancia invasiva no autorizada; **D:** patrones de misión; **A:** factores humanos; **DD:** no patologizar; **T/I:** organizational support; **R/F:** resiliencia del equipo; **G:** research-only.",
+  "coverage_states": {
+    "prevention": "ES",
+    "monitoring": "RV",
+    "data_quality": "ES",
+    "detection": "RO",
+    "assessment": "RV",
+    "differential_diagnosis": "RV",
+    "triage": "RMA",
+    "intervention_authorized": "RMA",
+    "recovery": "RV",
+    "follow_up": "RV",
+    "prognosis": "RO"
+  },
+  "source_ids": [
+    "S12"
+  ],
+  "NOTICE": "Pathway text is an outline; not an authorized diagnostic or treatment protocol."
+}

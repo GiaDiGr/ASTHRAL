@@ -1,0 +1,10 @@
+{
+  "tests": 490,
+  "failures": 0,
+  "errors": 0,
+  "skipped": 0,
+  "seconds": 97.365,
+  "added_tests": 30,
+  "warning": "Starlette TestClient/httpx deprecation; not a test failure",
+  "clinical_validation": false
+}

@@ -1,0 +1,124 @@
+{
+  "audit-before.json": {
+    "summary": {
+      "cases": 36,
+      "passed": 27,
+      "transport_errors": 1,
+      "generated_answers": 13,
+      "rag_queries": 12,
+      "rag_macro": {
+        "3": {
+          "fragment_precision": 0.1111111111111111,
+          "fragment_recall": 0.3333333333333333,
+          "document_hit": 0.5
+        },
+        "5": {
+          "fragment_precision": 0.13333333333333333,
+          "fragment_recall": 0.6666666666666666,
+          "document_hit": 0.9166666666666666
+        }
+      }
+    },
+    "statuses": {
+      "ANSWERED": 13,
+      "EXTRACTIVE_FALLBACK": 8,
+      "DETERMINISTIC_DATA_SUFFICIENCY": 5,
+      "INSUFFICIENT_INFORMATION": 7,
+      "RemoteProtocolError": 1,
+      "REFUSED_ACTION": 1,
+      "REJECTED_OR_FAILED": 1
+    },
+    "reader_retries": "NOT_INSTRUMENTED"
+  },
+  "audit-final-full.json": {
+    "summary": {
+      "cases": 36,
+      "passed": 36,
+      "transport_errors": 0,
+      "generated_answers": 5,
+      "rag_queries": 12,
+      "rag_macro": {
+        "3": {
+          "fragment_precision": 0.1111111111111111,
+          "fragment_recall": 0.3333333333333333,
+          "document_hit": 0.5
+        },
+        "5": {
+          "fragment_precision": 0.13333333333333333,
+          "fragment_recall": 0.6666666666666666,
+          "document_hit": 0.9166666666666666
+        }
+      }
+    },
+    "statuses": {
+      "ANSWERED": 5,
+      "EXTRACTIVE_FALLBACK": 13,
+      "DETERMINISTIC_DATA_SUFFICIENCY": 7,
+      "CONTEXT_MISMATCH": 2,
+      "REFUSED_ACTION": 5,
+      "INSUFFICIENT_INFORMATION": 2,
+      "REJECTED_OR_FAILED": 2
+    },
+    "reader_retries": 0
+  },
+  "audit-after-low.json": {
+    "summary": {
+      "cases": 36,
+      "passed": 36,
+      "transport_errors": 0,
+      "generated_answers": 5,
+      "rag_queries": 12,
+      "rag_macro": {
+        "3": {
+          "fragment_precision": 0.1111111111111111,
+          "fragment_recall": 0.3333333333333333,
+          "document_hit": 0.5
+        },
+        "5": {
+          "fragment_precision": 0.13333333333333333,
+          "fragment_recall": 0.6666666666666666,
+          "document_hit": 0.9166666666666666
+        }
+      }
+    },
+    "statuses": {
+      "ANSWERED": 5,
+      "EXTRACTIVE_FALLBACK": 13,
+      "DETERMINISTIC_DATA_SUFFICIENCY": 7,
+      "CONTEXT_MISMATCH": 2,
+      "REFUSED_ACTION": 5,
+      "INSUFFICIENT_INFORMATION": 2,
+      "REJECTED_OR_FAILED": 2
+    },
+    "reader_retries": "NOT_INSTRUMENTED"
+  },
+  "audit-after-critical.json": {
+    "summary": {
+      "cases": 36,
+      "passed": 36,
+      "transport_errors": 0,
+      "generated_answers": 0,
+      "rag_queries": 12,
+      "rag_macro": {
+        "3": {
+          "fragment_precision": 0.1111111111111111,
+          "fragment_recall": 0.3333333333333333,
+          "document_hit": 0.5
+        },
+        "5": {
+          "fragment_precision": 0.13333333333333333,
+          "fragment_recall": 0.6666666666666666,
+          "document_hit": 0.9166666666666666
+        }
+      }
+    },
+    "statuses": {
+      "EXTRACTIVE_ONLY": 22,
+      "DETERMINISTIC_DATA_SUFFICIENCY": 5,
+      "CONTEXT_MISMATCH": 2,
+      "REFUSED_ACTION": 5,
+      "INSUFFICIENT_INFORMATION": 2
+    },
+    "reader_retries": "NOT_INSTRUMENTED"
+  }
+}

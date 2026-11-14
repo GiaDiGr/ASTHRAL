@@ -1,0 +1,33 @@
+{
+  "question": "Level 2 Glucose mmol classification",
+  "response": {
+    "status": "EXTRACTIVE_FALLBACK",
+    "documents": [
+      {
+        "id": "D-2397e05233f2a45e21f3",
+        "kind": "DOCUMENT",
+        "text": "Level 1: Glucose <70 mg/dL (<3.9 mmol/L) and ≥54 mg/dL (≥3.0 mmol/L).\r\nLevel 2: Glucose <54 mg/dL (<3.0 mmol/L).",
+        "reference": {
+          "document": "docs/v08/sources/ADA2026-short-excerpt.txt",
+          "sha256": "cb09dce1d37f61a18effc5854418767a6e13c5fe83e26a2750e5d843912cb9eb",
+          "version": "2026-table-6.4",
+          "authority": "PRIMARY_SOURCE_SHORT_EXCERPT",
+          "char_start": 0,
+          "char_end": 112,
+          "line": 1,
+          "source_id": "SRC-ADA-HYPO-2026",
+          "url": "https://doi.org/10.2337/dc26-S006",
+          "verified_date": "2026-10-21",
+          "coverage": "SHORT_EXCERPT_ONLY_NOT_FULL_TEXT"
+        },
+        "retrieval_score": 11.315946
+      }
+    ],
+    "quotations": [],
+    "issues": [],
+    "comparison_status": "NOT_AUTOMATICALLY_ADJUDICATED",
+    "discrepancies": [],
+    "inference_attempted": true,
+    "authority": "DOCUMENTARY_ONLY_NOT_PATIENT_STATE"
+  }
+}

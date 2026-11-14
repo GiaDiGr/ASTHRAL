@@ -1,0 +1,429 @@
+{
+  "synthetic_only": true,
+  "clinical_validation": false,
+  "monitoring_http_replays": 15,
+  "clinical_http_replays": 20,
+  "reader_write_denied": true,
+  "scope_enforced": true,
+  "persisted_records_unchanged": true,
+  "audit_valid": true,
+  "dashboard_cycles_B": 5,
+  "read_list_latencies_ms": [
+    67.96000001486391,
+    68.57440003659576,
+    67.73949996568263
+  ],
+  "ollama_configuration_unchanged": true,
+  "model_present": "vigile-qwen3-4b:latest",
+  "assistant_sufficiency": {
+    "status": "DETERMINISTIC_DATA_SUFFICIENCY",
+    "inference_executed": false,
+    "inference_attempted": false,
+    "message": "Clasificación emitida directamente por el motor; sin reinterpretación del LLM.",
+    "retrieved": [
+      {
+        "id": "E2",
+        "kind": "ENGINE",
+        "text": "HYPOGLYCEMIA: suficiencia de datos. Estado del motor: CRITERIA_MET. Datos pendientes para resolver ramas indeterminadas: ninguno. Las opciones siguen la lógica AND/OR; esta lista no significa que deban medirse todas. Alternativas no medidas que no bloquean este resultado: altered mental or physical status, assistance required for hypoglycemia, capillary glucose mg dl, hypoglycemia event clinically attributed. Datos inválidos que impiden resolver ramas: ninguno. Datos pendientes para seguridad del protocolo: ninguno. Protocolo: BLOCKED_RESOURCE. La seguridad terapéutica es independiente de los criterios diagnósticos. Cumplir criterios no es un diagnóstico firmado ni autoriza tratamiento.",
+        "reference": {
+          "evaluation_id": "ce-2d7b1fe54a2fd2702c75d7752efedce5",
+          "condition_id": "HYPOGLYCEMIA",
+          "source_ids": [
+            "SRC-ADA-HYPO-2026"
+          ],
+          "input_hash": "1627b974184262d3b2575f7af0f768e5bbb5be1a53e466c2a9827649f4592ac8"
+        },
+        "clinical_contract": {
+          "diagnostic_status": "CRITERIA_MET",
+          "missing_required": [],
+          "optional_not_measured": [
+            "altered_mental_or_physical_status",
+            "assistance_required_for_hypoglycemia",
+            "capillary_glucose_mg_dl",
+            "hypoglycemia_event_clinically_attributed"
+          ],
+          "required_for_protocol_safety": []
+        }
+      }
+    ],
+    "answer": [
+      {
+        "id": "E2",
+        "kind": "ENGINE",
+        "text": "HYPOGLYCEMIA: suficiencia de datos. Estado del motor: CRITERIA_MET. Datos pendientes para resolver ramas indeterminadas: ninguno. Las opciones siguen la lógica AND/OR; esta lista no significa que deban medirse todas. Alternativas no medidas que no bloquean este resultado: altered mental or physical status, assistance required for hypoglycemia, capillary glucose mg dl, hypoglycemia event clinically attributed. Datos inválidos que impiden resolver ramas: ninguno. Datos pendientes para seguridad del protocolo: ninguno. Protocolo: BLOCKED_RESOURCE. La seguridad terapéutica es independiente de los criterios diagnósticos. Cumplir criterios no es un diagnóstico firmado ni autoriza tratamiento.",
+        "reference": {
+          "evaluation_id": "ce-2d7b1fe54a2fd2702c75d7752efedce5",
+          "condition_id": "HYPOGLYCEMIA",
+          "source_ids": [
+            "SRC-ADA-HYPO-2026"
+          ],
+          "input_hash": "1627b974184262d3b2575f7af0f768e5bbb5be1a53e466c2a9827649f4592ac8"
+        },
+        "clinical_contract": {
+          "diagnostic_status": "CRITERIA_MET",
+          "missing_required": [],
+          "optional_not_measured": [
+            "altered_mental_or_physical_status",
+            "assistance_required_for_hypoglycemia",
+            "capillary_glucose_mg_dl",
+            "hypoglycemia_event_clinically_attributed"
+          ],
+          "required_for_protocol_safety": []
+        }
+      }
+    ],
+    "sources": [
+      {
+        "source": {
+          "source_id": "SRC-ADA-HYPO-2026",
+          "organization": "American Diabetes Association",
+          "title": "6. Glycemic Goals, Hypoglycemia, and Hyperglycemic Crises: Standards of Care in Diabetes—2026",
+          "year": 2026,
+          "doi": "10.2337/dc26-S006",
+          "url": "https://doi.org/10.2337/dc26-S006",
+          "section": "Hypoglycemia; Table 6.4",
+          "verification": "VERIFIED",
+          "type": "CLINICAL_STANDARD",
+          "verified_date": "2026-10-20",
+          "verification_method": "Original publisher and PMC indexed full-text sections; not independent clinical validation",
+          "population_scope": "Adults with known diabetes; research interpretation only"
+        },
+        "source_status": "PINNED_VERIFIED_AT_REPORT_DATE_NOT_CONTINUOUSLY_VERIFIED"
+      }
+    ],
+    "model_status": {
+      "available": true,
+      "reason": "LOCAL_MODEL_READY",
+      "model": "vigile-qwen3-4b:latest",
+      "mode": "FULL",
+      "provider": "ollama"
+    },
+    "evaluation_id": "ce-2d7b1fe54a2fd2702c75d7752efedce5",
+    "generated": [],
+    "mode": "FULL",
+    "document_issues": [],
+    "consistency_policy": "ENGINE_DATA_REQUIREMENTS_ONLY"
+  },
+  "assistant_generation": {
+    "status": "ANSWERED",
+    "inference_executed": true,
+    "inference_attempted": true,
+    "message": "Explicación generada por un modelo local, vinculada a evidencia. No es una decisión clínica ni una autorización.",
+    "retrieved": [
+      {
+        "id": "E1",
+        "kind": "ENGINE",
+        "text": "HYPOGLYCEMIA: diagnóstico CRITERIA_MET; urgencia URGENT; confirmación SATISFIED. Cumplir criterios no equivale a diagnóstico clínico firmado.",
+        "reference": {
+          "evaluation_id": "ce-2d7b1fe54a2fd2702c75d7752efedce5",
+          "condition_id": "HYPOGLYCEMIA",
+          "source_ids": [
+            "SRC-ADA-HYPO-2026"
+          ],
+          "input_hash": "1627b974184262d3b2575f7af0f768e5bbb5be1a53e466c2a9827649f4592ac8"
+        },
+        "logic_trace": {
+          "truth_state": "TRUE",
+          "operator": "all_of",
+          "children": [
+            {
+              "truth_state": "TRUE",
+              "field": "known_diabetes",
+              "operator": "==",
+              "expected": true,
+              "actual": true
+            },
+            {
+              "truth_state": "TRUE",
+              "operator": "any_of",
+              "children": [
+                {
+                  "truth_state": "TRUE",
+                  "field": "plasma_glucose_mg_dl",
+                  "operator": "<",
+                  "expected": 70,
+                  "actual": 50.0
+                },
+                {
+                  "truth_state": "UNKNOWN",
+                  "field": "capillary_glucose_mg_dl",
+                  "operator": "<",
+                  "expected": 70,
+                  "actual": null
+                },
+                {
+                  "truth_state": "UNKNOWN",
+                  "operator": "all_of",
+                  "children": [
+                    {
+                      "truth_state": "UNKNOWN",
+                      "field": "altered_mental_or_physical_status",
+                      "operator": "==",
+                      "expected": true,
+                      "actual": null
+                    },
+                    {
+                      "truth_state": "UNKNOWN",
+                      "field": "assistance_required_for_hypoglycemia",
+                      "operator": "==",
+                      "expected": true,
+                      "actual": null
+                    },
+                    {
+                      "truth_state": "UNKNOWN",
+                      "field": "hypoglycemia_event_clinically_attributed",
+                      "operator": "==",
+                      "expected": true,
+                      "actual": null
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      },
+      {
+        "id": "E2",
+        "kind": "ENGINE",
+        "text": "HYPOGLYCEMIA: suficiencia de datos. Estado del motor: CRITERIA_MET. Datos pendientes para resolver ramas indeterminadas: ninguno. Las opciones siguen la lógica AND/OR; esta lista no significa que deban medirse todas. Alternativas no medidas que no bloquean este resultado: altered mental or physical status, assistance required for hypoglycemia, capillary glucose mg dl, hypoglycemia event clinically attributed. Datos inválidos que impiden resolver ramas: ninguno. Datos pendientes para seguridad del protocolo: ninguno. Protocolo: BLOCKED_RESOURCE. La seguridad terapéutica es independiente de los criterios diagnósticos. Cumplir criterios no es un diagnóstico firmado ni autoriza tratamiento.",
+        "reference": {
+          "evaluation_id": "ce-2d7b1fe54a2fd2702c75d7752efedce5",
+          "condition_id": "HYPOGLYCEMIA",
+          "source_ids": [
+            "SRC-ADA-HYPO-2026"
+          ],
+          "input_hash": "1627b974184262d3b2575f7af0f768e5bbb5be1a53e466c2a9827649f4592ac8"
+        },
+        "clinical_contract": {
+          "diagnostic_status": "CRITERIA_MET",
+          "missing_required": [],
+          "optional_not_measured": [
+            "altered_mental_or_physical_status",
+            "assistance_required_for_hypoglycemia",
+            "capillary_glucose_mg_dl",
+            "hypoglycemia_event_clinically_attributed"
+          ],
+          "required_for_protocol_safety": []
+        }
+      },
+      {
+        "id": "E4",
+        "kind": "ENGINE",
+        "text": "HYPOGLYCEMIA: criterio known_diabetes == True; observado True; satisfecho.",
+        "reference": {
+          "evaluation_id": "ce-2d7b1fe54a2fd2702c75d7752efedce5",
+          "condition_id": "HYPOGLYCEMIA",
+          "source_ids": [
+            "SRC-ADA-HYPO-2026"
+          ],
+          "input_hash": "1627b974184262d3b2575f7af0f768e5bbb5be1a53e466c2a9827649f4592ac8"
+        }
+      },
+      {
+        "id": "E5",
+        "kind": "ENGINE",
+        "text": "HYPOGLYCEMIA: criterio plasma_glucose_mg_dl < 70; observado 50.0; satisfecho.",
+        "reference": {
+          "evaluation_id": "ce-2d7b1fe54a2fd2702c75d7752efedce5",
+          "condition_id": "HYPOGLYCEMIA",
+          "source_ids": [
+            "SRC-ADA-HYPO-2026"
+          ],
+          "input_hash": "1627b974184262d3b2575f7af0f768e5bbb5be1a53e466c2a9827649f4592ac8"
+        }
+      }
+    ],
+    "answer": [
+      {
+        "id": "E1",
+        "kind": "ENGINE",
+        "text": "HYPOGLYCEMIA: diagnóstico CRITERIA_MET; urgencia URGENT; confirmación SATISFIED. Cumplir criterios no equivale a diagnóstico clínico firmado.",
+        "reference": {
+          "evaluation_id": "ce-2d7b1fe54a2fd2702c75d7752efedce5",
+          "condition_id": "HYPOGLYCEMIA",
+          "source_ids": [
+            "SRC-ADA-HYPO-2026"
+          ],
+          "input_hash": "1627b974184262d3b2575f7af0f768e5bbb5be1a53e466c2a9827649f4592ac8"
+        },
+        "logic_trace": {
+          "truth_state": "TRUE",
+          "operator": "all_of",
+          "children": [
+            {
+              "truth_state": "TRUE",
+              "field": "known_diabetes",
+              "operator": "==",
+              "expected": true,
+              "actual": true
+            },
+            {
+              "truth_state": "TRUE",
+              "operator": "any_of",
+              "children": [
+                {
+                  "truth_state": "TRUE",
+                  "field": "plasma_glucose_mg_dl",
+                  "operator": "<",
+                  "expected": 70,
+                  "actual": 50.0
+                },
+                {
+                  "truth_state": "UNKNOWN",
+                  "field": "capillary_glucose_mg_dl",
+                  "operator": "<",
+                  "expected": 70,
+                  "actual": null
+                },
+                {
+                  "truth_state": "UNKNOWN",
+                  "operator": "all_of",
+                  "children": [
+                    {
+                      "truth_state": "UNKNOWN",
+                      "field": "altered_mental_or_physical_status",
+                      "operator": "==",
+                      "expected": true,
+                      "actual": null
+                    },
+                    {
+                      "truth_state": "UNKNOWN",
+                      "field": "assistance_required_for_hypoglycemia",
+                      "operator": "==",
+                      "expected": true,
+                      "actual": null
+                    },
+                    {
+                      "truth_state": "UNKNOWN",
+                      "field": "hypoglycemia_event_clinically_attributed",
+                      "operator": "==",
+                      "expected": true,
+                      "actual": null
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      },
+      {
+        "id": "E2",
+        "kind": "ENGINE",
+        "text": "HYPOGLYCEMIA: suficiencia de datos. Estado del motor: CRITERIA_MET. Datos pendientes para resolver ramas indeterminadas: ninguno. Las opciones siguen la lógica AND/OR; esta lista no significa que deban medirse todas. Alternativas no medidas que no bloquean este resultado: altered mental or physical status, assistance required for hypoglycemia, capillary glucose mg dl, hypoglycemia event clinically attributed. Datos inválidos que impiden resolver ramas: ninguno. Datos pendientes para seguridad del protocolo: ninguno. Protocolo: BLOCKED_RESOURCE. La seguridad terapéutica es independiente de los criterios diagnósticos. Cumplir criterios no es un diagnóstico firmado ni autoriza tratamiento.",
+        "reference": {
+          "evaluation_id": "ce-2d7b1fe54a2fd2702c75d7752efedce5",
+          "condition_id": "HYPOGLYCEMIA",
+          "source_ids": [
+            "SRC-ADA-HYPO-2026"
+          ],
+          "input_hash": "1627b974184262d3b2575f7af0f768e5bbb5be1a53e466c2a9827649f4592ac8"
+        },
+        "clinical_contract": {
+          "diagnostic_status": "CRITERIA_MET",
+          "missing_required": [],
+          "optional_not_measured": [
+            "altered_mental_or_physical_status",
+            "assistance_required_for_hypoglycemia",
+            "capillary_glucose_mg_dl",
+            "hypoglycemia_event_clinically_attributed"
+          ],
+          "required_for_protocol_safety": []
+        }
+      }
+    ],
+    "sources": [
+      {
+        "source": {
+          "source_id": "SRC-ADA-HYPO-2026",
+          "organization": "American Diabetes Association",
+          "title": "6. Glycemic Goals, Hypoglycemia, and Hyperglycemic Crises: Standards of Care in Diabetes—2026",
+          "year": 2026,
+          "doi": "10.2337/dc26-S006",
+          "url": "https://doi.org/10.2337/dc26-S006",
+          "section": "Hypoglycemia; Table 6.4",
+          "verification": "VERIFIED",
+          "type": "CLINICAL_STANDARD",
+          "verified_date": "2026-10-20",
+          "verification_method": "Original publisher and PMC indexed full-text sections; not independent clinical validation",
+          "population_scope": "Adults with known diabetes; research interpretation only"
+        },
+        "source_status": "PINNED_VERIFIED_AT_REPORT_DATE_NOT_CONTINUOUSLY_VERIFIED"
+      }
+    ],
+    "model_status": {
+      "available": true,
+      "reason": "LOCAL_MODEL_READY",
+      "model": "vigile-qwen3-4b:latest",
+      "mode": "FULL",
+      "provider": "ollama"
+    },
+    "evaluation_id": "ce-2d7b1fe54a2fd2702c75d7752efedce5",
+    "generated": [
+      {
+        "text": "El criterio evaluado es la hipoglucemia, con diagnóstico CRITERIA_MET.",
+        "evidence_ids": [
+          "E1"
+        ],
+        "kind": "MODEL_EXPLANATION",
+        "references": [
+          {
+            "evaluation_id": "ce-2d7b1fe54a2fd2702c75d7752efedce5",
+            "condition_id": "HYPOGLYCEMIA",
+            "source_ids": [
+              "SRC-ADA-HYPO-2026"
+            ],
+            "input_hash": "1627b974184262d3b2575f7af0f768e5bbb5be1a53e466c2a9827649f4592ac8"
+          }
+        ]
+      },
+      {
+        "text": "El motor considera que se cumplen los criterios para hipoglucemia, aunque algunos datos como el estado mental o la glucosa capilar no están disponibles.",
+        "evidence_ids": [
+          "E2"
+        ],
+        "kind": "MODEL_EXPLANATION",
+        "references": [
+          {
+            "evaluation_id": "ce-2d7b1fe54a2fd2702c75d7752efedce5",
+            "condition_id": "HYPOGLYCEMIA",
+            "source_ids": [
+              "SRC-ADA-HYPO-2026"
+            ],
+            "input_hash": "1627b974184262d3b2575f7af0f768e5bbb5be1a53e466c2a9827649f4592ac8"
+          }
+        ]
+      }
+    ],
+    "mode": "FULL",
+    "document_issues": [],
+    "metrics": {
+      "elapsed_ms": 2080.301399983,
+      "usage": {},
+      "timings": {},
+      "load_duration_ns": 18818500,
+      "verification": {
+        "elapsed_ms": 2367.1628999873064,
+        "usage": {},
+        "timings": {},
+        "load_duration_ns": 15960500
+      }
+    },
+    "grounding": "CITATIONS_AND_LOCAL_MODEL_CHECK_NOT_CLINICAL_VALIDATION"
+  },
+  "inference_seconds": 4.911901300016325,
+  "portal_status": {
+    "backend": "CONNECTED",
+    "network": "LOOPBACK_ONLY",
+    "assistant": {
+      "available": true,
+      "reason": "LOCAL_MODEL_READY",
+      "model": "vigile-qwen3-4b:latest",
+      "mode": "FULL",
+      "provider": "ollama"
+    },
+    "clinical_execution": "BLOCKED",
+    "version": "0.8.0"
+  }
+}

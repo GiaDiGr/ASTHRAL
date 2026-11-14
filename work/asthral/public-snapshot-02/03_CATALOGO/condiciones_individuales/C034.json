@@ -1,0 +1,31 @@
+{
+  "condition_id": "C034",
+  "catalog_record": {
+    "condition_id": "C034",
+    "name_specialty": "Radiación no ionizante / ambiental",
+    "description_spaceflight": "HSRB mantiene riesgo específico por NIR.",
+    "risks_symptoms": "Fuentes electromagnéticas/ópticas según misión.",
+    "biomarkers_sensors_tests": "Dosimetría/monitorización específica a fuente.",
+    "baselines_environment_interactions": "Exposición nominal.",
+    "primary_evidence": "S03. citeturn27search5",
+    "limits_authorizations_state": "Límites específicos no recuperados. `RV`."
+  },
+  "clinical_pathway_profile_as_published": "**P:** control de fuentes; **M:** exposición; **Q:** frecuencia/espectro; **D:** límites específicos no consolidados; **A/DD/T/I:** misión/médico; **R/F:** exposición; **G:** `RV`.",
+  "coverage_states": {
+    "prevention": "ES",
+    "monitoring": "RV",
+    "data_quality": "ES",
+    "detection": "RV",
+    "assessment": "RV",
+    "differential_diagnosis": "RV",
+    "triage": "RMA",
+    "intervention_authorized": "RMA",
+    "recovery": "RV",
+    "follow_up": "RV",
+    "prognosis": "RO"
+  },
+  "source_ids": [
+    "S03"
+  ],
+  "NOTICE": "Pathway text is an outline; not an authorized diagnostic or treatment protocol."
+}

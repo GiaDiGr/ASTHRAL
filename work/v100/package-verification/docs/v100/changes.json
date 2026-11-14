@@ -1,0 +1,176 @@
+{
+  "changes": [
+    {
+      "path": "engine/data/mission-v100-r2/portal-config.json",
+      "change": "NEW",
+      "sha256": "e8d5874d29ea56d583544d831a35b2dc2306fb8a022273ad11f39af24df9d83e"
+    },
+    {
+      "path": "engine/local_ai/library-v080.json",
+      "change": "NEW",
+      "sha256": "21ff74530f433d0c0b10651a1bb83b673f6c0514ac00f1e2fe9a8c364a6623c0"
+    },
+    {
+      "path": "engine/pyproject.toml",
+      "change": "MODIFIED",
+      "before_sha256": "29374cb507edfaf712d88d9a2bed65afe3ce2bba5f7ada173ebcd7adcec47e25",
+      "sha256": "37d4e0b9ecd8e3ec6f969b122ac5d638321c6c2578e68a6cb0d7ed9d06866c27"
+    },
+    {
+      "path": "engine/requirements-v100.lock.txt",
+      "change": "NEW",
+      "sha256": "6593ec3ef8ec60e17e796647698675625d58c17640229322c6e79ae68ae4338c"
+    },
+    {
+      "path": "engine/tests/test_voice_v100.py",
+      "change": "NEW",
+      "sha256": "f0465ffd09cdcf5a57e2f57a824965c159d4a80f65bde028dd1a11e48249347a"
+    },
+    {
+      "path": "engine/tests/voice_ui_unit.cjs",
+      "change": "NEW",
+      "sha256": "90da127ecb6ef353fbb5e6d534c399585ba3c6ee25c9cd8c1b33a0b2c01b899c"
+    },
+    {
+      "path": "engine/tools/evaluate_reserved_once.py",
+      "change": "NEW",
+      "sha256": "222305ca894e3dbc625004ab8902a45ab9eb37e821b3cdcd854337e5a29f46f1"
+    },
+    {
+      "path": "engine/tools/setup_voice.py",
+      "change": "NEW",
+      "sha256": "33cc817af24fbcd364143ee4767bf459ee087a706a8434fcf5b4b6ddb6024aa8"
+    },
+    {
+      "path": "engine/vigile/api.py",
+      "change": "MODIFIED",
+      "before_sha256": "e0ddb32cd77de023519439ca60a770a1f2fa806b34298a8b90060884cf0c4027",
+      "sha256": "4eac91e4acb500073bb07818f67ea4fe0d00755aecf9b1ff0a217bd245a6c218"
+    },
+    {
+      "path": "engine/vigile/assistant_safety.py",
+      "change": "MODIFIED",
+      "before_sha256": "a3b41824eece60e118a3a49ec497a890a980e89ad9a16f8ebffd08767ca8ac4f",
+      "sha256": "a0a1e1a7b71c03b47a921ebfb21e7ae6bb0210e8bffd6202ef8518538c841849"
+    },
+    {
+      "path": "engine/vigile/clinical_api.py",
+      "change": "MODIFIED",
+      "before_sha256": "a9a5427b8fe352ec44e446884ead36cebe898a00887cc98d784c33ca92b716cb",
+      "sha256": "646f04e58b6de30bab71ab7a5c87b6ef3ec7c5ecd247ce29d754a6322b6e928e"
+    },
+    {
+      "path": "engine/vigile/inference_failures.py",
+      "change": "MODIFIED",
+      "before_sha256": "27ca8029e3588c39d9b5fc48916ed0d7972c3808f34992ddfba2e5469305f424",
+      "sha256": "54115f93109bc0b12bf06640ee96439281897357cd3da86c72d56507eda46e7a"
+    },
+    {
+      "path": "engine/vigile/knowledge_v08.py",
+      "change": "MODIFIED",
+      "before_sha256": "58dcd238931c6c9fc9a345e641baf98227e9b54c63350537f945551828836c22",
+      "sha256": "f0ccfcb9233818ef837e63c672b0363396e8ca8157bf2d8b491e6a151132f83b"
+    },
+    {
+      "path": "engine/vigile/local_assistant.py",
+      "change": "MODIFIED",
+      "before_sha256": "9117cce15911d80ea7fd5c15de75d05bc964ca3c0e712d597e32e93259f4ee1f",
+      "sha256": "450f5e99375b946cb29edbac1fc2c54e633c8d97336cecad83012c989302fa80"
+    },
+    {
+      "path": "engine/vigile/longitudinal_assistant.py",
+      "change": "MODIFIED",
+      "before_sha256": "0e0dd2ef6829fce7984decaed1101625bf23c7f429ee2c609b1f16355ec56b45",
+      "sha256": "453925f1292fb807c89cd4a39271db97208d63bb9be166674a8cac91344bc342"
+    },
+    {
+      "path": "engine/vigile/mission_frames.py",
+      "change": "MODIFIED",
+      "before_sha256": "30ae3dd06236d636ec351bd7086dcad726ba11838f64fdcbe3d9c993c7cf9f8d",
+      "sha256": "219c8923ca0140d4019dc762258cd7644dc8b2b2d0314cd5e073fcce9947c5df"
+    },
+    {
+      "path": "engine/vigile/monitoring.py",
+      "change": "MODIFIED",
+      "before_sha256": "02405a21afb2d05932a208cffb9b2dc85399fdd3610d33a1f08d31c45b10f567",
+      "sha256": "e32c2bcda14042014b554ce2352ab9e212800ca7fcfc589f74f6d103dfa92cc8"
+    },
+    {
+      "path": "engine/vigile/portal.py",
+      "change": "MODIFIED",
+      "before_sha256": "e5ed3ea643440ef71fd5f03531c014827d4c2e560a34f1cd4c1998c1a0c89526",
+      "sha256": "3dfcb4326b684fdd1b2914d54f0ca87ab5517bba60652f7a383ec0e6ff8f5b2d"
+    },
+    {
+      "path": "engine/vigile/product_demo.py",
+      "change": "NEW",
+      "sha256": "3d92a8ba995a90812d3064348da72a9dc1ec92ef7a0fac93fcd120826035fc88"
+    },
+    {
+      "path": "engine/vigile/retrieval_bm25.py",
+      "change": "NEW",
+      "sha256": "164be2c18526be25e01abd47e8c0edf87179c9334517d03c5150af31e11598f7"
+    },
+    {
+      "path": "engine/vigile/service.py",
+      "change": "MODIFIED",
+      "before_sha256": "79d099924d2fb88fd2b8320a09bf1282ba5254da3758c0c4f604c962f65d7bac",
+      "sha256": "de9fa4c02f03ea5f205dd744935e87fb9285a4f2a48930673e23cda21672d056"
+    },
+    {
+      "path": "engine/vigile/structured_facts.py",
+      "change": "NEW",
+      "sha256": "c118a7268acf3027595579348caf336f32c2c0239421be59f124f35bc3e9db14"
+    },
+    {
+      "path": "engine/vigile/voice.py",
+      "change": "NEW",
+      "sha256": "8715ff27a1d60115223659d4b720a4c0c98150c9c21e236a8f903215b4f26f38"
+    },
+    {
+      "path": "engine/vigile/voice_api.py",
+      "change": "NEW",
+      "sha256": "4af0fcd91f3134ef49b8d6d3d783db0b2d780f5bda9f4a5bb3e05b98b116dd04"
+    },
+    {
+      "path": "engine/vigile/voice_assets/models.json",
+      "change": "NEW",
+      "sha256": "5b50404041654697cb72a2f46b84e3ec0d0907699b749886d5801b504f696b34"
+    },
+    {
+      "path": "engine/vigile/voice_assets/sapi.ps1",
+      "change": "NEW",
+      "sha256": "65d0857cd6d06d573f9f17730c31eaf75b368387572a2b40cf65e3cac0a207af"
+    },
+    {
+      "path": "engine/vigile/web/app.js",
+      "change": "MODIFIED",
+      "before_sha256": "7b19aa8616595f1046b8d9254db324b1f056697fcbedd6eac942ac8b4fc240fe",
+      "sha256": "aeb087e4e576d61072f958544986cee5325df7c6ac9187f22bf12410b79bb31d"
+    },
+    {
+      "path": "engine/vigile/web/index.html",
+      "change": "MODIFIED",
+      "before_sha256": "1b78d605029862e30b682cd175107137faf3f580bb23a26617fe7704b95907f5",
+      "sha256": "b49db9060b8b8e9ba4b178fb97913254a0337b96cceb82a97e929b0b79e0535b"
+    },
+    {
+      "path": "engine/vigile/web/recorder-worklet.js",
+      "change": "NEW",
+      "sha256": "4ca8182be376cdd1add3e8ddb2b9cbdaf894fd184aa55cde5ba4cce9b6589e78"
+    },
+    {
+      "path": "engine/vigile/web/style.css",
+      "change": "MODIFIED",
+      "before_sha256": "c13425935d1a105cb8af9a7bf841d73829eeec7554e63ace9964fe31ecec24c8",
+      "sha256": "b990e54b6e3265480eab777a09b8cc310b26b93e4c1e1619600da4ee306cf297"
+    },
+    {
+      "path": "engine/vigile/web/voice-controller.js",
+      "change": "NEW",
+      "sha256": "4029bedcb05652b00c6375a27482c7b9951f56626b6f376e25ae21cfcbbd9802"
+    }
+  ],
+  "original_corpus_manifest_verified": true,
+  "clinical_knowledge_unchanged": true
+}

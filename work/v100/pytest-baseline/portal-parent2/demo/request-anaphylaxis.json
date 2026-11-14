@@ -1,0 +1,58 @@
+{
+  "subject_id": "clinical-crew",
+  "mission_id": "clinical-earth",
+  "condition_id": "ANAPHYLAXIS",
+  "presentation_id": null,
+  "population": "NONPREGNANT_ADULT",
+  "age_years": null,
+  "as_of": "2026-10-16T12:00:00Z",
+  "window_start": "2026-10-16T11:00:00Z",
+  "observations": [
+    {
+      "id": "acute_onset_minutes_to_hours-collection",
+      "concept": "acute_onset_minutes_to_hours",
+      "value": true,
+      "unit": "1",
+      "timestamp": "2026-10-16T12:00:00Z",
+      "quality": "VALID",
+      "method": "SYNTHETIC_OBSERVATION",
+      "sample_id": "collection",
+      "provenance": "SYNTHETIC_REPORT_ADAPTER_NOT_CLINICAL_VALIDATION"
+    },
+    {
+      "id": "known_or_highly_probable_allergen-collection",
+      "concept": "known_or_highly_probable_allergen",
+      "value": true,
+      "unit": "1",
+      "timestamp": "2026-10-16T12:00:00Z",
+      "quality": "VALID",
+      "method": "SYNTHETIC_OBSERVATION",
+      "sample_id": "collection",
+      "provenance": "SYNTHETIC_REPORT_ADAPTER_NOT_CLINICAL_VALIDATION"
+    },
+    {
+      "id": "laryngeal_involvement-collection",
+      "concept": "laryngeal_involvement",
+      "value": true,
+      "unit": "1",
+      "timestamp": "2026-10-16T12:00:00Z",
+      "quality": "VALID",
+      "method": "SYNTHETIC_OBSERVATION",
+      "sample_id": "collection",
+      "provenance": "SYNTHETIC_REPORT_ADAPTER_NOT_CLINICAL_VALIDATION"
+    },
+    {
+      "id": "skin_or_mucosal_involvement-collection",
+      "concept": "skin_or_mucosal_involvement",
+      "value": false,
+      "unit": "1",
+      "timestamp": "2026-10-16T12:00:00Z",
+      "quality": "VALID",
+      "method": "SYNTHETIC_OBSERVATION",
+      "sample_id": "collection",
+      "provenance": "SYNTHETIC_REPORT_ADAPTER_NOT_CLINICAL_VALIDATION"
+    }
+  ],
+  "measurement_bindings": [],
+  "resources": {}
+}

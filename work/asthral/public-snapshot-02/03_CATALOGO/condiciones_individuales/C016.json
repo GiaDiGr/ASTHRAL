@@ -1,0 +1,31 @@
+{
+  "condition_id": "C016",
+  "catalog_record": {
+    "condition_id": "C016",
+    "name_specialty": "Cambios conductuales/psiquiátricos / salud conductual",
+    "description_spaceflight": "Aislamiento, distancia y otros estresores pueden comprometer bienestar y desempeño.",
+    "risks_symptoms": "Aislamiento, estrés, sueño, conflicto.",
+    "biomarkers_sensors_tests": "Cuestionarios autorizados, entrevistas, cambios conductuales.",
+    "baselines_environment_interactions": "Baseline conductual cuando sea ético/operacionalmente autorizado.",
+    "primary_evidence": "S12. citeturn18search7",
+    "limits_authorizations_state": "Datos altamente sensibles; diagnóstico requiere profesional. `RMA`."
+  },
+  "clinical_pathway_profile_as_published": "**P:** apoyo conductual/privacidad; **M:** instrumentos autorizados; **Q:** confidencialidad y validez; **D:** señales predefinidas, no inferencia LLM; **A/DD:** profesional; **T:** protocolo médico; **I:** bloqueado sin autoridad; **R/F:** seguimiento confidencial; **G:** no scoring autónomo de pronóstico.",
+  "coverage_states": {
+    "prevention": "ES",
+    "monitoring": "RV",
+    "data_quality": "ES",
+    "detection": "RV",
+    "assessment": "RMA",
+    "differential_diagnosis": "RMA",
+    "triage": "RMA",
+    "intervention_authorized": "RMA",
+    "recovery": "RV",
+    "follow_up": "RV",
+    "prognosis": "RO"
+  },
+  "source_ids": [
+    "S12"
+  ],
+  "NOTICE": "Pathway text is an outline; not an authorized diagnostic or treatment protocol."
+}

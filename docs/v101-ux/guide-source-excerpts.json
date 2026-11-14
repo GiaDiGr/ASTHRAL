@@ -1,0 +1,141 @@
+{
+  "C001": {
+    "name": "Capacidad aeróbica reducida / fisiología cardiovascular",
+    "context": "Pérdida de rendimiento cardiorrespiratorio que puede comprometer EVA y tareas físicas.",
+    "source_ids": [
+      "S01",
+      "S04"
+    ]
+  },
+  "C002": {
+    "name": "Pérdida de tamaño/fuerza/resistencia muscular / muscular",
+    "context": "Microgravedad descarga musculatura y puede reducir fuerza y resistencia funcionales.",
+    "source_ids": [
+      "S01",
+      "S04"
+    ]
+  },
+  "C003": {
+    "name": "Pérdida ósea y riesgo de fractura / óseo",
+    "context": "Alteraciones esqueléticas y de resistencia ósea durante exposición a gravedad reducida.",
+    "source_ids": [
+      "S01",
+      "S06"
+    ]
+  },
+  "C005": {
+    "name": "Intolerancia ortostática / cardiovascular-autonómica",
+    "context": "Riesgo principalmente en transición a gravedad/reentrada/aterrizaje.",
+    "source_ids": [
+      "S02",
+      "S05",
+      "S34"
+    ]
+  },
+  "C012": {
+    "name": "Pérdida de sueño / medicina del sueño",
+    "context": "Sueño insuficiente compromete salud y rendimiento cognitivo.",
+    "source_ids": [
+      "S10"
+    ]
+  },
+  "C014": {
+    "name": "Fatiga y sobrecarga de trabajo / factores humanos",
+    "context": "Carga crónica y sueño insuficiente incrementan riesgo de errores y bajo rendimiento.",
+    "source_ids": [
+      "S10"
+    ]
+  },
+  "C015": {
+    "name": "Deterioro cognitivo funcional / neurocognición",
+    "context": "Atención, reacción y decisión pueden verse afectados por sueño, hipoxia, CO₂ y otros factores.",
+    "source_ids": [
+      "S10",
+      "S14",
+      "S27"
+    ]
+  },
+  "C019": {
+    "name": "Reactivación viral latente / infeccioso-inmunológico",
+    "context": "Reactivación viral ha sido observada durante vuelo y se relaciona con cambios inmunes.",
+    "source_ids": [
+      "S09"
+    ]
+  },
+  "C032": {
+    "name": "Exposición acumulada a radiación ionizante/carcinogénesis / radiobiología",
+    "context": "Riesgo de cáncer y otros efectos obliga a seguimiento dosimétrico.",
+    "source_ids": [
+      "S01",
+      "S16"
+    ]
+  },
+  "sources": {
+    "S01": {
+      "source_id": "S01",
+      "source": "NASA-STD-3001 Volume 1, Crew Health, Rev C",
+      "type_date": "`NASA_STANDARD`, 15-09-2023, activo. citeturn19search0turn20view1",
+      "priority_utility": "P0. Aeróbico, músculo, hueso, radiación, operaciones médicas, registros."
+    },
+    "S02": {
+      "source_id": "S02",
+      "source": "NASA-STD-3001 Volume 2, Human Factors, Habitability, and Environmental Health, Rev F",
+      "type_date": "`NASA_STANDARD`, 14-07-2026 según índice NTSS. citeturn19search1turn19search3",
+      "priority_utility": "P0. Ambiente, atmósfera, habitabilidad, ortostatismo, EVA."
+    },
+    "S04": {
+      "source_id": "S04",
+      "source": "NASA HHC Spaceflight Risks",
+      "type_date": "Riesgo fisiológico/contramedidas. citeturn18search3",
+      "priority_utility": "P0. Fitness, hueso, SANS, inmunidad, DCS, EVA."
+    },
+    "S05": {
+      "source_id": "S05",
+      "source": "NASA Cardiovascular Adaptations Risk",
+      "type_date": "`SPACEFLIGHT_EVIDENCE`. citeturn11search0",
+      "priority_utility": "P0. Cardiovascular/ortostatismo."
+    },
+    "S06": {
+      "source_id": "S06",
+      "source": "NASA Bone Fracture / Bone Changes Risk Record",
+      "type_date": "`SPACEFLIGHT_EVIDENCE`. citeturn11search1turn11search7",
+      "priority_utility": "P0. BMD, QCT, fractura."
+    },
+    "S09": {
+      "source_id": "S09",
+      "source": "NASA Altered Immune Response",
+      "type_date": "`SPACEFLIGHT_EVIDENCE`. citeturn12search0turn12search7",
+      "priority_utility": "P0. Inmunidad/reactivación."
+    },
+    "S10": {
+      "source_id": "S10",
+      "source": "NASA Sleep/Circadian/Workload Risk",
+      "type_date": "`SPACEFLIGHT_EVIDENCE`. citeturn12search1",
+      "priority_utility": "P0. Sueño, circadiano, fatiga."
+    },
+    "S14": {
+      "source_id": "S14",
+      "source": "NASA Risk of Hypoxia",
+      "type_date": "Riesgo oficial. citeturn18search10",
+      "priority_utility": "P0. Hipoxia/atmósfera EVA."
+    },
+    "S16": {
+      "source_id": "S16",
+      "source": "NASA Space Radiation Risks",
+      "type_date": "Riesgo oficial. citeturn18search9",
+      "priority_utility": "P0. Radiación/cáncer."
+    },
+    "S27": {
+      "source_id": "S27",
+      "source": "OSD-198",
+      "type_date": "21 d bed rest + hypoxia, músculo, humanos. citeturn22search1",
+      "priority_utility": "P1 dataset."
+    },
+    "S34": {
+      "source_id": "S34",
+      "source": "Lee et al., *J Appl Physiol* 2025, standing ± compression after long-duration flight",
+      "type_date": "Peer reviewed, DOI 10.1152/japplphysiol.00646.2024. citeturn26search0turn26search2",
+      "priority_utility": "P1. Ortostatismo postflight."
+    }
+  }
+}

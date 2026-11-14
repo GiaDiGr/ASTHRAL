@@ -1,0 +1,64 @@
+{
+  "id": "B-cycle-0",
+  "subject_id": "v07-crew-B",
+  "mission_id": "v07-mission-B",
+  "previous_run_id": null,
+  "as_of": "2026-09-01T12:00:00Z",
+  "history_start": "2026-09-01T12:00:00Z",
+  "clinical_window_start": "2026-09-01T12:00:00Z",
+  "clinical_context_id": "B-context",
+  "policy_reference": "V07_SYNTHETIC_SOFTWARE_POLICY_NOT_A_CLINICAL_PROTOCOL",
+  "population": "NONPREGNANT_ADULT",
+  "age_years": 35,
+  "measurements": [
+    {
+      "id": "B-plasma_glucose_mg_dl-0",
+      "subject_id": "v07-crew-B",
+      "mission_id": "v07-mission-B",
+      "variable": "plasma_glucose_mg_dl",
+      "value": 50.0,
+      "unit": "mg/dL",
+      "timestamp": "2026-09-01T12:00:00Z",
+      "interval_end": null,
+      "device_id": "dev-B-0",
+      "calibration_id": "cal-dev-B-0",
+      "method": "VENOUS_PLASMA",
+      "protocol": "V07_SYNTHETIC_SOFTWARE_POLICY_NOT_A_CLINICAL_PROTOCOL",
+      "site": null,
+      "compartment": null,
+      "phase": "IN_MISSION",
+      "reported_quality": "ACCEPTABLE",
+      "synthetic": true,
+      "provenance": "DETERMINISTIC_SYNTHETIC_NOT_CLINICAL"
+    }
+  ],
+  "observations": [
+    {
+      "id": "known_diabetes-B-0",
+      "concept": "known_diabetes",
+      "value": true,
+      "unit": "1",
+      "timestamp": "2026-09-01T12:00:00Z",
+      "quality": "VALID",
+      "method": "SYNTHETIC_OBSERVATION",
+      "sample_id": "B-0",
+      "provenance": "SYNTHETIC_REPORT_ADAPTER_NOT_CLINICAL_VALIDATION"
+    },
+    {
+      "id": "recent_reduced_intake-B-0",
+      "concept": "recent_reduced_intake",
+      "value": true,
+      "unit": "1",
+      "timestamp": "2026-09-01T12:00:00Z",
+      "quality": "VALID",
+      "method": "SYNTHETIC_OBSERVATION",
+      "sample_id": "B-0",
+      "provenance": "SYNTHETIC_REPORT_ADAPTER_NOT_CLINICAL_VALIDATION"
+    }
+  ],
+  "sample_ids": {},
+  "baseline_ids": [],
+  "followup_at": "2026-09-02T12:00:00Z",
+  "ewma_lambda": 0.5,
+  "cusum_allowance": 0.0
+}

@@ -1,0 +1,25 @@
+{
+  "reader": {
+    "authorized_findings": 12,
+    "inconclusive": 7,
+    "existing_reasons": [
+      "INSUFFICIENT_TEMPORAL_COVERAGE",
+      "NOT_MEASURED",
+      "INVALID",
+      "INVALID_CALIBRATION",
+      "DIMENSIONAL_MISMATCH",
+      "OUTSIDE_TECHNICAL_RANGE",
+      "PHASE_MISMATCH"
+    ],
+    "clinical_activation": "BLOCKED"
+  },
+  "frontend": {
+    "profiles": 1,
+    "measurements": 38,
+    "baselines": 2,
+    "trends": 2,
+    "episodes": 2,
+    "findings": 12,
+    "replay_after_http_restart": true
+  }
+}

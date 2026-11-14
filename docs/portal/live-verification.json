@@ -1,0 +1,44 @@
+{
+  "transport": "Real TCP HTTP loopback, HTTPX client to BFF to backend",
+  "requests_measured": 9,
+  "latency_ms_median": 44.07480001100339,
+  "latency_ms_max": 344.733299993095,
+  "scenarios": [
+    {
+      "evaluation_id": "ce-48301c5706c84f958b481e195101166a",
+      "condition": "DKA",
+      "presentation": null,
+      "urgency": "EMERGENCY",
+      "assistant": "UNAVAILABLE"
+    },
+    {
+      "evaluation_id": "ce-e20c82f548bd4ed498050729c4bed597",
+      "condition": "ANAPHYLAXIS",
+      "presentation": null,
+      "urgency": "EMERGENCY",
+      "assistant": "UNAVAILABLE"
+    },
+    {
+      "evaluation_id": "ce-632e641b9f7248138320f662760ed087",
+      "condition": null,
+      "presentation": "PRES-DIZZINESS-TACHYCARDIA",
+      "urgency": "URGENT",
+      "assistant": "UNAVAILABLE"
+    },
+    {
+      "evaluation_id": "ce-86a6fcbf547040ccb03fd821e06150ed",
+      "condition": "DKA",
+      "presentation": null,
+      "urgency": "EMERGENCY",
+      "assistant": "UNAVAILABLE"
+    }
+  ],
+  "replays_match": true,
+  "reader_write_denied": true,
+  "scope_denied": true,
+  "csrf_denied": true,
+  "audit_valid": true,
+  "real_llm_inference_executed": false,
+  "clinical_validation": false,
+  "sqlite_bytes": 262144
+}

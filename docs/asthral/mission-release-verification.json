@@ -1,0 +1,708 @@
+{
+  "format": "VIGILE_ASTRONAUT_UX_VERIFICATION_1",
+  "frames": [
+    {
+      "frame": "frame-mission-crew-A-cycle--7",
+      "scope": {
+        "mission_id": "mission-v011",
+        "subject_id": "mission-crew-A"
+      },
+      "snapshot_hash": "8c7b71a1160f8193ea84673df2ca803e689a5b953bf1f357dacfd182cc253068",
+      "matches": true
+    },
+    {
+      "frame": "frame-mission-crew-B-cycle--7",
+      "scope": {
+        "mission_id": "mission-v011",
+        "subject_id": "mission-crew-B"
+      },
+      "snapshot_hash": "3c1c52ccc2ff0fe1c5cc10c1e0a9c6b243702cff9588d399f22d4f6eaa2e7e77",
+      "matches": true
+    },
+    {
+      "frame": "frame-mission-crew-A-cycle--5",
+      "scope": {
+        "mission_id": "mission-v011",
+        "subject_id": "mission-crew-A"
+      },
+      "snapshot_hash": "085124973920c9a07130f60f39f070850fa7f2f62bc58d077ed1cac4218a905f",
+      "matches": true
+    },
+    {
+      "frame": "frame-mission-crew-B-cycle--5",
+      "scope": {
+        "mission_id": "mission-v011",
+        "subject_id": "mission-crew-B"
+      },
+      "snapshot_hash": "5c3284bae307ad3a60dfb84f899f494b730bc7f07526abb45a7004f6706b4e9e",
+      "matches": true
+    },
+    {
+      "frame": "frame-mission-crew-A-cycle--3",
+      "scope": {
+        "mission_id": "mission-v011",
+        "subject_id": "mission-crew-A"
+      },
+      "snapshot_hash": "49b10b78cfc8b0fe6b141d9ea51267a25328de2ccdf6b2991bf5bc6bb85374e7",
+      "matches": true
+    },
+    {
+      "frame": "frame-mission-crew-B-cycle--3",
+      "scope": {
+        "mission_id": "mission-v011",
+        "subject_id": "mission-crew-B"
+      },
+      "snapshot_hash": "ca41ae3b243f037e262c028b3f099b95bd23d1b612da6d3fb727e881d75480e5",
+      "matches": true
+    },
+    {
+      "frame": "frame-mission-crew-A-cycle-0",
+      "scope": {
+        "mission_id": "mission-v011",
+        "subject_id": "mission-crew-A"
+      },
+      "snapshot_hash": "7faa57ea6e97baf0d33f73a3256f1c35b2b5d19bb29963ee7b929dd94a46976d",
+      "matches": true
+    },
+    {
+      "frame": "frame-mission-crew-B-cycle-0",
+      "scope": {
+        "mission_id": "mission-v011",
+        "subject_id": "mission-crew-B"
+      },
+      "snapshot_hash": "ad466c2af33abf5623fd0f3b1ad21b93aea8c0d8662fb5bd3510ab53c0c761fe",
+      "matches": true
+    },
+    {
+      "frame": "frame-mission-crew-A-cycle-7",
+      "scope": {
+        "mission_id": "mission-v011",
+        "subject_id": "mission-crew-A"
+      },
+      "snapshot_hash": "d9f2308164da69aeea0c6bf32e567420611510fa40f93372712399e4a6757743",
+      "matches": true
+    },
+    {
+      "frame": "frame-mission-crew-B-cycle-7",
+      "scope": {
+        "mission_id": "mission-v011",
+        "subject_id": "mission-crew-B"
+      },
+      "snapshot_hash": "b7076abc84dd07ae454cf97ac1e3e310374db442f4955e415d214a015d07c648",
+      "matches": true
+    },
+    {
+      "frame": "frame-mission-crew-A-cycle-14",
+      "scope": {
+        "mission_id": "mission-v011",
+        "subject_id": "mission-crew-A"
+      },
+      "snapshot_hash": "8fee20d5977d574c44a396f9abe64a93e4ce526711875d99dfe7817278c0b724",
+      "matches": true
+    },
+    {
+      "frame": "frame-mission-crew-B-cycle-14",
+      "scope": {
+        "mission_id": "mission-v011",
+        "subject_id": "mission-crew-B"
+      },
+      "snapshot_hash": "4717099944270261a7892a42b782cb022d91583bfe08710d0f6f3c3e51e5d425",
+      "matches": true
+    },
+    {
+      "frame": "frame-mission-crew-A-cycle-18",
+      "scope": {
+        "mission_id": "mission-v011",
+        "subject_id": "mission-crew-A"
+      },
+      "snapshot_hash": "05a84e8c728f4132a35e0a9ef2154a1a94c43346923b932fc40a2bab7138226d",
+      "matches": true
+    },
+    {
+      "frame": "frame-mission-crew-B-cycle-18",
+      "scope": {
+        "mission_id": "mission-v011",
+        "subject_id": "mission-crew-B"
+      },
+      "snapshot_hash": "3ee0a611b872c95c3f5d126ed314d25ea24e11ab9617f782cdd16970eb45d76f",
+      "matches": true
+    },
+    {
+      "frame": "frame-mission-crew-A-cycle-18p1",
+      "scope": {
+        "mission_id": "mission-v011",
+        "subject_id": "mission-crew-A"
+      },
+      "snapshot_hash": "efe49b6001a2a643c8908eeb612f075a6f1c7431447fe278e084a69a2b180c05",
+      "matches": true
+    },
+    {
+      "frame": "frame-mission-crew-B-cycle-18p1",
+      "scope": {
+        "mission_id": "mission-v011",
+        "subject_id": "mission-crew-B"
+      },
+      "snapshot_hash": "2fa7e968e8865a50d8be2f646143e00a8c2b1a09fe600a0ce666aacf1a63ca7e",
+      "matches": true
+    },
+    {
+      "frame": "frame-mission-crew-A-cycle-21",
+      "scope": {
+        "mission_id": "mission-v011",
+        "subject_id": "mission-crew-A"
+      },
+      "snapshot_hash": "b02dcdf32fe30b585343d89be5bc7c3273f4feb3f1b87eb76cdb98264170d487",
+      "matches": true
+    },
+    {
+      "frame": "frame-mission-crew-B-cycle-21",
+      "scope": {
+        "mission_id": "mission-v011",
+        "subject_id": "mission-crew-B"
+      },
+      "snapshot_hash": "5d7ed6aad23bd3460bc1c7bc402d860d44b708b1e63f6debd11bc5febe2d3193",
+      "matches": true
+    },
+    {
+      "frame": "frame-mission-crew-A-cycle-28",
+      "scope": {
+        "mission_id": "mission-v011",
+        "subject_id": "mission-crew-A"
+      },
+      "snapshot_hash": "77eb20fdeb542a8bc358bc63bf5aa345a6fd48ed9e5adc000c2e762ed06a199d",
+      "matches": true
+    },
+    {
+      "frame": "frame-mission-crew-B-cycle-28",
+      "scope": {
+        "mission_id": "mission-v011",
+        "subject_id": "mission-crew-B"
+      },
+      "snapshot_hash": "4d3ad8175378889624c8d3c6ecf8cd1819d42502c2580860d3099fa3e3584b17",
+      "matches": true
+    },
+    {
+      "frame": "frame-mission-crew-A-cycle-35",
+      "scope": {
+        "mission_id": "mission-v011",
+        "subject_id": "mission-crew-A"
+      },
+      "snapshot_hash": "c875f2001ebaf8c5271d52634a84f501dccd36ecbec5f571ab2c543bf9e18b2f",
+      "matches": true
+    },
+    {
+      "frame": "frame-mission-crew-B-cycle-35",
+      "scope": {
+        "mission_id": "mission-v011",
+        "subject_id": "mission-crew-B"
+      },
+      "snapshot_hash": "23d2338762d1437d3123299199ce923530a6da9f60a77c0be2cf61d6d8ced3a3",
+      "matches": true
+    },
+    {
+      "frame": "frame-mission-crew-A-cycle-42",
+      "scope": {
+        "mission_id": "mission-v011",
+        "subject_id": "mission-crew-A"
+      },
+      "snapshot_hash": "8c8cf4e97524a590ed5ff36563c7ce107dc6032b3d4141d1417afb782b348fb6",
+      "matches": true
+    },
+    {
+      "frame": "frame-mission-crew-B-cycle-42",
+      "scope": {
+        "mission_id": "mission-v011",
+        "subject_id": "mission-crew-B"
+      },
+      "snapshot_hash": "12a9b60a0e5e47fa2e8f37e2d1bd4a9f0b314d44cefab2f76aa9c363aaa0e98b",
+      "matches": true
+    },
+    {
+      "frame": "frame-mission-crew-A-cycle-47",
+      "scope": {
+        "mission_id": "mission-v011",
+        "subject_id": "mission-crew-A"
+      },
+      "snapshot_hash": "cbc2485a00c02242d9c7c58606a063c4222a6b4390f1904e1670de370105befe",
+      "matches": true
+    },
+    {
+      "frame": "frame-mission-crew-B-cycle-47",
+      "scope": {
+        "mission_id": "mission-v011",
+        "subject_id": "mission-crew-B"
+      },
+      "snapshot_hash": "1d316b352bee4db24d5169754972b94d23a66edd1c19670cbf8ff15e3fa55d1b",
+      "matches": true
+    }
+  ],
+  "reader_write_status": 403,
+  "cross_astronaut_frame_status": 403,
+  "clinical_replays": [
+    {
+      "id": "ce-89a19c727b40aff053364c62242b656c",
+      "matches": true,
+      "input_hash": "baa2cc081f1c3c1366375bb236a2d234d871190a6eec2fd2611a81458402f5c0",
+      "knowledge_hash": "b8c568bd645154e5fd67630c7a670ca53904dc04f54904315047a89923839d4e"
+    },
+    {
+      "id": "ce-10adb4314171b9d5e4ad1b0a24cdce9e",
+      "matches": true,
+      "input_hash": "c85a5fec5c1937509e21dec02a42a6c85453d4542324b8a6bd2a506e199e2c26",
+      "knowledge_hash": "b8c568bd645154e5fd67630c7a670ca53904dc04f54904315047a89923839d4e"
+    },
+    {
+      "id": "ce-790a1af87a094402977ca98590185b8c",
+      "matches": true,
+      "input_hash": "f5eb14a966873d6d314d620e0e8015f3f76fcd6636a5b729fea452614b01d3ec",
+      "knowledge_hash": "b8c568bd645154e5fd67630c7a670ca53904dc04f54904315047a89923839d4e"
+    },
+    {
+      "id": "ce-085eb6e6be5dc747da9d3ecfaaa2958d",
+      "matches": true,
+      "input_hash": "45320ce164c6769939738de8e04a320eaf9a1cc789888c505ccc3a28e9c7bb47",
+      "knowledge_hash": "b8c568bd645154e5fd67630c7a670ca53904dc04f54904315047a89923839d4e"
+    },
+    {
+      "id": "ce-bf828f0a877ce5a032e57dfae34b8687",
+      "matches": true,
+      "input_hash": "cb08e2c90cfb3a164f8bbd29aab33229c1431e27cb4ab789915d05247ac73340",
+      "knowledge_hash": "b8c568bd645154e5fd67630c7a670ca53904dc04f54904315047a89923839d4e"
+    },
+    {
+      "id": "ce-e1722a472f9d32de83cbfad3572cddd0",
+      "matches": true,
+      "input_hash": "2060f52cfa71c1175d38c6bcbd6ed1f36d075cb47a0237236862841d996e27cc",
+      "knowledge_hash": "b8c568bd645154e5fd67630c7a670ca53904dc04f54904315047a89923839d4e"
+    },
+    {
+      "id": "ce-18e3ab0ced2c4293a630b7414780a280",
+      "matches": true,
+      "input_hash": "74f7ac51695a66b4b6e9c95135b213160bb876d7cbaf62cd0f2ea590f1ddaf58",
+      "knowledge_hash": "b8c568bd645154e5fd67630c7a670ca53904dc04f54904315047a89923839d4e"
+    },
+    {
+      "id": "ce-c5fe479ea1d6f04fc3a3d0534c93b13b",
+      "matches": true,
+      "input_hash": "62187e2c45261f6a9efb8afe9397f83d3fa1fe8228a06cc1742e709713b99be6",
+      "knowledge_hash": "b8c568bd645154e5fd67630c7a670ca53904dc04f54904315047a89923839d4e"
+    },
+    {
+      "id": "ce-2f6b0d66590e4febe0e6745d4f45db62",
+      "matches": true,
+      "input_hash": "25087ff52ed3d5f5438dcf68cd423429d5469a36d0acaa08f2414bc30d3c70a3",
+      "knowledge_hash": "b8c568bd645154e5fd67630c7a670ca53904dc04f54904315047a89923839d4e"
+    },
+    {
+      "id": "ce-7b4e452dccc9c2b8de6d69ab318b2980",
+      "matches": true,
+      "input_hash": "8536c1d1da421008d1ae6c2fa72c56dd8eb36b0ec553e6062182961f1891d44b",
+      "knowledge_hash": "b8c568bd645154e5fd67630c7a670ca53904dc04f54904315047a89923839d4e"
+    },
+    {
+      "id": "ce-3f01717a4989cc841cd1899134ad10ac",
+      "matches": true,
+      "input_hash": "552232c672bfa4990877347a5f1036ed5f941d4198bcab793ef4db00b4185a30",
+      "knowledge_hash": "b8c568bd645154e5fd67630c7a670ca53904dc04f54904315047a89923839d4e"
+    },
+    {
+      "id": "ce-c9a14f8218f3bcabc394df84181bd27f",
+      "matches": true,
+      "input_hash": "c59673552db95dea187afed322e756ca9c536cf4f94ddf3575903897f6af4cb9",
+      "knowledge_hash": "b8c568bd645154e5fd67630c7a670ca53904dc04f54904315047a89923839d4e"
+    },
+    {
+      "id": "ce-fa196860725b5768f0ee932d416a3d39",
+      "matches": true,
+      "input_hash": "0940919a078c9abb75ca5534caaa83acacc83f8dab2295cf415e9abfa976977e",
+      "knowledge_hash": "b8c568bd645154e5fd67630c7a670ca53904dc04f54904315047a89923839d4e"
+    },
+    {
+      "id": "ce-53c094e162fea548b324246ae15107f1",
+      "matches": true,
+      "input_hash": "70a90f3afdb425aad3cdeec9d9ca2c3bbd032c28a3b3c1dc174d08e20701b642",
+      "knowledge_hash": "b8c568bd645154e5fd67630c7a670ca53904dc04f54904315047a89923839d4e"
+    },
+    {
+      "id": "ce-11b3b66f092c5bd994565462e23d77db",
+      "matches": true,
+      "input_hash": "4aa23686f0d9e9a96b6a3b8a24980ee9c3ab6f2492a96c72492b8a6ce961e717",
+      "knowledge_hash": "b8c568bd645154e5fd67630c7a670ca53904dc04f54904315047a89923839d4e"
+    },
+    {
+      "id": "ce-6f65acd014e5bba6c2c369b725bbc759",
+      "matches": true,
+      "input_hash": "7e26da2adb5428d04e6f7ff2bfa38eafb46ff4ad395b3094aa27a192ab0369ad",
+      "knowledge_hash": "b8c568bd645154e5fd67630c7a670ca53904dc04f54904315047a89923839d4e"
+    },
+    {
+      "id": "ce-1d8c30ba85900e7212af0ce4bc2337ed",
+      "matches": true,
+      "input_hash": "0b829de8a075530585544c79821512c09ec753cc276b41de3ef39531b6dce31c",
+      "knowledge_hash": "b8c568bd645154e5fd67630c7a670ca53904dc04f54904315047a89923839d4e"
+    },
+    {
+      "id": "ce-6e83df35ff88ce81e96699b127204453",
+      "matches": true,
+      "input_hash": "3d01dc0f9d60c1e784f3d15de179757ad596f1f15f18863a3d1d3e4352a95b11",
+      "knowledge_hash": "b8c568bd645154e5fd67630c7a670ca53904dc04f54904315047a89923839d4e"
+    },
+    {
+      "id": "ce-705f4366b0a3476ebb6c739e7a581a77",
+      "matches": true,
+      "input_hash": "d9065a6fd205d9a18f9672ac38e1f9eaa2dc5b9e31728337d56b9401606d18d5",
+      "knowledge_hash": "b8c568bd645154e5fd67630c7a670ca53904dc04f54904315047a89923839d4e"
+    },
+    {
+      "id": "ce-31e4964f9d811b860bf65113f7a234f0",
+      "matches": true,
+      "input_hash": "46682e63c86b943e023075ea294c243b35224919e787458d6a02afec83f6d9c9",
+      "knowledge_hash": "b8c568bd645154e5fd67630c7a670ca53904dc04f54904315047a89923839d4e"
+    },
+    {
+      "id": "ce-e5eacc1a2aff89131abff094d62f6fc1",
+      "matches": true,
+      "input_hash": "7023fb74e526b2f4c4baf6ca9816b633cb4001c67d52f239eebb40de33d2957a",
+      "knowledge_hash": "b8c568bd645154e5fd67630c7a670ca53904dc04f54904315047a89923839d4e"
+    },
+    {
+      "id": "ce-16077d0959d6ddea3541d4a5f039bccd",
+      "matches": true,
+      "input_hash": "41b25b68077164acd26b148d44f905b648a10a91a42ad843de5e52af64256d28",
+      "knowledge_hash": "b8c568bd645154e5fd67630c7a670ca53904dc04f54904315047a89923839d4e"
+    },
+    {
+      "id": "ce-221df73f0af2ba70de297fcbef1979e1",
+      "matches": true,
+      "input_hash": "aa50777d96722694fcdbaf595dbc82cc12cbab28cf28dbb79773d6050d84be7d",
+      "knowledge_hash": "b8c568bd645154e5fd67630c7a670ca53904dc04f54904315047a89923839d4e"
+    },
+    {
+      "id": "ce-d61e51efc3cbcf142fb17eafda1df6fb",
+      "matches": true,
+      "input_hash": "f9490f11b496bc7429c6d24885d8619ce9131c6d0ca43aa4fcc18a518acd5269",
+      "knowledge_hash": "b8c568bd645154e5fd67630c7a670ca53904dc04f54904315047a89923839d4e"
+    },
+    {
+      "id": "ce-fbb2f57af69af43b379506af5d8cda65",
+      "matches": true,
+      "input_hash": "4b1f5e5b5672971042b177405dcfe7acd54ad9ca06b88be144c57946ec281e36",
+      "knowledge_hash": "b8c568bd645154e5fd67630c7a670ca53904dc04f54904315047a89923839d4e"
+    },
+    {
+      "id": "ce-83335045875f4a0506f0e02ef1ff32ad",
+      "matches": true,
+      "input_hash": "2732186a9637ced46c2ec204ce1f6c8e13fca9f018060c493c7c063b3de75665",
+      "knowledge_hash": "b8c568bd645154e5fd67630c7a670ca53904dc04f54904315047a89923839d4e"
+    },
+    {
+      "id": "ce-ed5bf1da1f122b079f146ec9761a31c9",
+      "matches": true,
+      "input_hash": "c192987fa18ffbe793af4a19238f84ab6f900b53f80226840e8952284e83d464",
+      "knowledge_hash": "b8c568bd645154e5fd67630c7a670ca53904dc04f54904315047a89923839d4e"
+    },
+    {
+      "id": "ce-69c48a723f4aedc6a5c21a4ea0eff3d3",
+      "matches": true,
+      "input_hash": "5d79609b9433ff8d01c64a4e5b8a03c20702e8dc64d0511058af02654cc2c2ad",
+      "knowledge_hash": "b8c568bd645154e5fd67630c7a670ca53904dc04f54904315047a89923839d4e"
+    },
+    {
+      "id": "ce-262e1b413a1c240e8634d9142ac03eae",
+      "matches": true,
+      "input_hash": "6695861a93ff91b65428643d8d8ed9c73f51b0813913ab859a8aebde32de8025",
+      "knowledge_hash": "b8c568bd645154e5fd67630c7a670ca53904dc04f54904315047a89923839d4e"
+    },
+    {
+      "id": "ce-7e34fabc4228a583028672583dccf4fc",
+      "matches": true,
+      "input_hash": "a2a3e3a83a2cb56cca9e6e1fc18b63618a475f11fe7af5e8fa5e807ce08a59ed",
+      "knowledge_hash": "b8c568bd645154e5fd67630c7a670ca53904dc04f54904315047a89923839d4e"
+    },
+    {
+      "id": "ce-561d02107257a6b493fa5b9b089553bf",
+      "matches": true,
+      "input_hash": "e1f5c13cfe1f486f7d1c9e7d995cdba0c27fabae1d4fbbde7e974eba3b3c3fda",
+      "knowledge_hash": "b8c568bd645154e5fd67630c7a670ca53904dc04f54904315047a89923839d4e"
+    },
+    {
+      "id": "ce-cabdd95ddfb233227aa75f9fb49a7cc5",
+      "matches": true,
+      "input_hash": "6ad1ed049c3418617a5fd5ec093a1c765e67bebc6380f062d78b935f09bf93ae",
+      "knowledge_hash": "b8c568bd645154e5fd67630c7a670ca53904dc04f54904315047a89923839d4e"
+    },
+    {
+      "id": "ce-7dcd632105511eedf7804b0a49f8f6f5",
+      "matches": true,
+      "input_hash": "088a154881e7f5d256443ae19f2475148846b4f31f480ed669aa25d6716545fa",
+      "knowledge_hash": "b8c568bd645154e5fd67630c7a670ca53904dc04f54904315047a89923839d4e"
+    },
+    {
+      "id": "ce-aa91f722e512966bee75e2d22422fa3b",
+      "matches": true,
+      "input_hash": "b356457890b8edd687e9f598b57636f7e592d640e8999ed4aab28ed59118b24f",
+      "knowledge_hash": "b8c568bd645154e5fd67630c7a670ca53904dc04f54904315047a89923839d4e"
+    },
+    {
+      "id": "ce-36234ffd0539258eb1925537c6f79da5",
+      "matches": true,
+      "input_hash": "8179478da89d7aaa84191dd936c9071e2dbb181f1a4d5ed98280628e434bfefe",
+      "knowledge_hash": "b8c568bd645154e5fd67630c7a670ca53904dc04f54904315047a89923839d4e"
+    },
+    {
+      "id": "ce-1b8ba6fadec1c4225d9dacfc6814bff8",
+      "matches": true,
+      "input_hash": "9064b9028fce635bb037a50959e500915d5642dcbcb17da255c1b473358100f3",
+      "knowledge_hash": "b8c568bd645154e5fd67630c7a670ca53904dc04f54904315047a89923839d4e"
+    },
+    {
+      "id": "ce-d02e45ac6accea0432c02aa5097ca194",
+      "matches": true,
+      "input_hash": "dc3d279d53b7cd624c8b68730dde6e791545981ab2d3e369253e78878a8c2686",
+      "knowledge_hash": "b8c568bd645154e5fd67630c7a670ca53904dc04f54904315047a89923839d4e"
+    },
+    {
+      "id": "ce-250008eb8d1e870442ea02b66d40a735",
+      "matches": true,
+      "input_hash": "24b2484acc0a1ac5eb4de29f488309bce758cc6cf499921cff3000e6589edbf5",
+      "knowledge_hash": "b8c568bd645154e5fd67630c7a670ca53904dc04f54904315047a89923839d4e"
+    },
+    {
+      "id": "ce-aeef2d590db5a07e6829d911fb842ce1",
+      "matches": true,
+      "input_hash": "70da1b3682c9ff1ad8780e6130bc7f7ff188eaa5b97a2966d85033d54573e90b",
+      "knowledge_hash": "b8c568bd645154e5fd67630c7a670ca53904dc04f54904315047a89923839d4e"
+    },
+    {
+      "id": "ce-4e341ab6f991db99d45b66bbf1e2f855",
+      "matches": true,
+      "input_hash": "180363c6554de8b59b55a7be3b4c8bd103dbf6fadd2b7464ca5996c7bec26a76",
+      "knowledge_hash": "b8c568bd645154e5fd67630c7a670ca53904dc04f54904315047a89923839d4e"
+    },
+    {
+      "id": "ce-1f7fb1b09433821e04fe538d07506bc6",
+      "matches": true,
+      "input_hash": "09bc44e7146691b333ef8a97248c47d890ebaec88ff6890ac26a80deea61aa43",
+      "knowledge_hash": "b8c568bd645154e5fd67630c7a670ca53904dc04f54904315047a89923839d4e"
+    },
+    {
+      "id": "ce-87b8e4a47feaba46afdc33f1aed9b8cf",
+      "matches": true,
+      "input_hash": "41ad67117d89ff777cc7bea0194f418dd73970d68ce400b6f425888e11a199ca",
+      "knowledge_hash": "b8c568bd645154e5fd67630c7a670ca53904dc04f54904315047a89923839d4e"
+    },
+    {
+      "id": "ce-e845911a6798431190924275b6da315b",
+      "matches": true,
+      "input_hash": "e8bca78581a6e7c8b851425b149eca230000cc515e93c60d8710ed7affbbfdee",
+      "knowledge_hash": "b8c568bd645154e5fd67630c7a670ca53904dc04f54904315047a89923839d4e"
+    },
+    {
+      "id": "ce-61aab825f7c61a5c129b947963a99165",
+      "matches": true,
+      "input_hash": "b1654b926cf8358255b6e0df6fa77bfe2a7f4e65fb812f9ef2ede5f6b438e062",
+      "knowledge_hash": "b8c568bd645154e5fd67630c7a670ca53904dc04f54904315047a89923839d4e"
+    },
+    {
+      "id": "ce-cc512ba08ed8c7f8751bab0ff4c00a1e",
+      "matches": true,
+      "input_hash": "1ee1fdd8b3c5e96d4a252a2be839ee27c96a43ccad5f709f178e49957df3f4aa",
+      "knowledge_hash": "b8c568bd645154e5fd67630c7a670ca53904dc04f54904315047a89923839d4e"
+    },
+    {
+      "id": "ce-1844dab51033d6f7e0e712ef2783e50d",
+      "matches": true,
+      "input_hash": "5ae89b166f64244b276d0d97655f8fe048b2c08628c58083812c5d1cedb0cc19",
+      "knowledge_hash": "b8c568bd645154e5fd67630c7a670ca53904dc04f54904315047a89923839d4e"
+    },
+    {
+      "id": "ce-de9bfec9adc63d61660d383e66d06a12",
+      "matches": true,
+      "input_hash": "c722f9cabce5c8c5c7a265b6fb7244d501822410e5efd14c5453bc977ac2ed36",
+      "knowledge_hash": "b8c568bd645154e5fd67630c7a670ca53904dc04f54904315047a89923839d4e"
+    },
+    {
+      "id": "ce-1fb027fd329cc03102e26e6097bd3810",
+      "matches": true,
+      "input_hash": "c33a2e9364445f1ce86eec434294d6a157ae9d3519fdd3d965530c55ad612b2b",
+      "knowledge_hash": "b8c568bd645154e5fd67630c7a670ca53904dc04f54904315047a89923839d4e"
+    },
+    {
+      "id": "ce-0e898a5aebd7219ff93a7da06d84dc86",
+      "matches": true,
+      "input_hash": "2a61f58ebbe40d4cbc51f5639cfc83c258f581313121d45f14f7e55f960c7e77",
+      "knowledge_hash": "b8c568bd645154e5fd67630c7a670ca53904dc04f54904315047a89923839d4e"
+    },
+    {
+      "id": "ce-3bc1c3e3e55409f9f45cd3ad4077737a",
+      "matches": true,
+      "input_hash": "0e2813f745278b3def3c41965467e6e0763eaaa1cea4670ca4028af6edc5ec8a",
+      "knowledge_hash": "b8c568bd645154e5fd67630c7a670ca53904dc04f54904315047a89923839d4e"
+    }
+  ],
+  "monitoring_replays": [
+    {
+      "id": "mission-crew-A-cycle--7",
+      "matches": true,
+      "scope": "FULL_FROZEN_CYCLE_REEXECUTION",
+      "clinical_validation": false
+    },
+    {
+      "id": "mission-crew-B-cycle--7",
+      "matches": true,
+      "scope": "FULL_FROZEN_CYCLE_REEXECUTION",
+      "clinical_validation": false
+    },
+    {
+      "id": "mission-crew-A-cycle--5",
+      "matches": true,
+      "scope": "FULL_FROZEN_CYCLE_REEXECUTION",
+      "clinical_validation": false
+    },
+    {
+      "id": "mission-crew-B-cycle--5",
+      "matches": true,
+      "scope": "FULL_FROZEN_CYCLE_REEXECUTION",
+      "clinical_validation": false
+    },
+    {
+      "id": "mission-crew-A-cycle--3",
+      "matches": true,
+      "scope": "FULL_FROZEN_CYCLE_REEXECUTION",
+      "clinical_validation": false
+    },
+    {
+      "id": "mission-crew-B-cycle--3",
+      "matches": true,
+      "scope": "FULL_FROZEN_CYCLE_REEXECUTION",
+      "clinical_validation": false
+    },
+    {
+      "id": "mission-crew-A-cycle-0",
+      "matches": true,
+      "scope": "FULL_FROZEN_CYCLE_REEXECUTION",
+      "clinical_validation": false
+    },
+    {
+      "id": "mission-crew-B-cycle-0",
+      "matches": true,
+      "scope": "FULL_FROZEN_CYCLE_REEXECUTION",
+      "clinical_validation": false
+    },
+    {
+      "id": "mission-crew-A-cycle-7",
+      "matches": true,
+      "scope": "FULL_FROZEN_CYCLE_REEXECUTION",
+      "clinical_validation": false
+    },
+    {
+      "id": "mission-crew-B-cycle-7",
+      "matches": true,
+      "scope": "FULL_FROZEN_CYCLE_REEXECUTION",
+      "clinical_validation": false
+    },
+    {
+      "id": "mission-crew-A-cycle-14",
+      "matches": true,
+      "scope": "FULL_FROZEN_CYCLE_REEXECUTION",
+      "clinical_validation": false
+    },
+    {
+      "id": "mission-crew-B-cycle-14",
+      "matches": true,
+      "scope": "FULL_FROZEN_CYCLE_REEXECUTION",
+      "clinical_validation": false
+    },
+    {
+      "id": "mission-crew-A-cycle-18",
+      "matches": true,
+      "scope": "FULL_FROZEN_CYCLE_REEXECUTION",
+      "clinical_validation": false
+    },
+    {
+      "id": "mission-crew-B-cycle-18",
+      "matches": true,
+      "scope": "FULL_FROZEN_CYCLE_REEXECUTION",
+      "clinical_validation": false
+    },
+    {
+      "id": "mission-crew-A-cycle-18p1",
+      "matches": true,
+      "scope": "FULL_FROZEN_CYCLE_REEXECUTION",
+      "clinical_validation": false
+    },
+    {
+      "id": "mission-crew-B-cycle-18p1",
+      "matches": true,
+      "scope": "FULL_FROZEN_CYCLE_REEXECUTION",
+      "clinical_validation": false
+    },
+    {
+      "id": "mission-crew-A-cycle-21",
+      "matches": true,
+      "scope": "FULL_FROZEN_CYCLE_REEXECUTION",
+      "clinical_validation": false
+    },
+    {
+      "id": "mission-crew-B-cycle-21",
+      "matches": true,
+      "scope": "FULL_FROZEN_CYCLE_REEXECUTION",
+      "clinical_validation": false
+    },
+    {
+      "id": "mission-crew-A-cycle-28",
+      "matches": true,
+      "scope": "FULL_FROZEN_CYCLE_REEXECUTION",
+      "clinical_validation": false
+    },
+    {
+      "id": "mission-crew-B-cycle-28",
+      "matches": true,
+      "scope": "FULL_FROZEN_CYCLE_REEXECUTION",
+      "clinical_validation": false
+    },
+    {
+      "id": "mission-crew-A-cycle-35",
+      "matches": true,
+      "scope": "FULL_FROZEN_CYCLE_REEXECUTION",
+      "clinical_validation": false
+    },
+    {
+      "id": "mission-crew-B-cycle-35",
+      "matches": true,
+      "scope": "FULL_FROZEN_CYCLE_REEXECUTION",
+      "clinical_validation": false
+    },
+    {
+      "id": "mission-crew-A-cycle-42",
+      "matches": true,
+      "scope": "FULL_FROZEN_CYCLE_REEXECUTION",
+      "clinical_validation": false
+    },
+    {
+      "id": "mission-crew-B-cycle-42",
+      "matches": true,
+      "scope": "FULL_FROZEN_CYCLE_REEXECUTION",
+      "clinical_validation": false
+    },
+    {
+      "id": "mission-crew-A-cycle-47",
+      "matches": true,
+      "scope": "FULL_FROZEN_CYCLE_REEXECUTION",
+      "clinical_validation": false
+    },
+    {
+      "id": "mission-crew-B-cycle-47",
+      "matches": true,
+      "scope": "FULL_FROZEN_CYCLE_REEXECUTION",
+      "clinical_validation": false
+    }
+  ],
+  "audit_valid": true,
+  "clinical_execution": "BLOCKED",
+  "clinical_validation": false,
+  "visual_QA": "PENDING_TOOL_INITIALIZATION_FAILURE",
+  "inference_requests": 0,
+  "source_of_data": "UNCHANGED_V011_SEED_42",
+  "implementation_hash": "0afee93407b54baafbef1dd2c4692d190be2030a0bc8ac980eaf8b48d46d1e27"
+}

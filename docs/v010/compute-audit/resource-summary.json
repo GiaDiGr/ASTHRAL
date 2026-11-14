@@ -1,0 +1,146 @@
+[
+  {
+    "session": 1,
+    "mode": "FULL",
+    "sample_count": 19,
+    "ollama_pids": [
+      48092,
+      1776,
+      50580,
+      54724
+    ],
+    "working_set_peak_bytes": 1127903232,
+    "private_peak_bytes": 5029670912,
+    "cpu_seconds_during_sample": 11.265625,
+    "sample_duration_seconds": 12.199406600004295,
+    "gpu_global_vram_min_max_MiB": [
+      3519,
+      3519
+    ],
+    "gpu_global_utilization_min_max_percent": [
+      0,
+      89
+    ],
+    "available_ram_min_bytes": 10996359168
+  },
+  {
+    "session": 1,
+    "mode": "LOW_POWER",
+    "sample_count": 20,
+    "ollama_pids": [
+      48092,
+      1776,
+      20996,
+      33040
+    ],
+    "working_set_peak_bytes": 1113849856,
+    "private_peak_bytes": 4295643136,
+    "cpu_seconds_during_sample": 11.890625,
+    "sample_duration_seconds": 12.856542399997124,
+    "gpu_global_vram_min_max_MiB": [
+      2851,
+      2851
+    ],
+    "gpu_global_utilization_min_max_percent": [
+      0,
+      85
+    ],
+    "available_ram_min_bytes": 11002880000
+  },
+  {
+    "session": 2,
+    "mode": "FULL",
+    "sample_count": 20,
+    "ollama_pids": [
+      48092,
+      1776,
+      48924,
+      57048
+    ],
+    "working_set_peak_bytes": 1146232832,
+    "private_peak_bytes": 5029965824,
+    "cpu_seconds_during_sample": 12.109375,
+    "sample_duration_seconds": 13.173796199989738,
+    "gpu_global_vram_min_max_MiB": [
+      3519,
+      3519
+    ],
+    "gpu_global_utilization_min_max_percent": [
+      0,
+      86
+    ],
+    "available_ram_min_bytes": 10907963392
+  },
+  {
+    "session": 2,
+    "mode": "LOW_POWER",
+    "sample_count": 20,
+    "ollama_pids": [
+      48092,
+      1776,
+      37484,
+      5616
+    ],
+    "working_set_peak_bytes": 1114083328,
+    "private_peak_bytes": 4297523200,
+    "cpu_seconds_during_sample": 12.21875,
+    "sample_duration_seconds": 13.726952500001062,
+    "gpu_global_vram_min_max_MiB": [
+      2851,
+      2851
+    ],
+    "gpu_global_utilization_min_max_percent": [
+      0,
+      89
+    ],
+    "available_ram_min_bytes": 10999189504
+  },
+  {
+    "session": 3,
+    "mode": "FULL",
+    "sample_count": 20,
+    "ollama_pids": [
+      48092,
+      1776,
+      55908,
+      42300
+    ],
+    "working_set_peak_bytes": 1145188352,
+    "private_peak_bytes": 5031010304,
+    "cpu_seconds_during_sample": 12.6875,
+    "sample_duration_seconds": 14.0893456999911,
+    "gpu_global_vram_min_max_MiB": [
+      3519,
+      3519
+    ],
+    "gpu_global_utilization_min_max_percent": [
+      0,
+      87
+    ],
+    "available_ram_min_bytes": 10875109376
+  },
+  {
+    "session": 3,
+    "mode": "LOW_POWER",
+    "sample_count": 20,
+    "ollama_pids": [
+      48092,
+      1776,
+      38212,
+      45780
+    ],
+    "working_set_peak_bytes": 1114456064,
+    "private_peak_bytes": 4294217728,
+    "cpu_seconds_during_sample": 12.953125,
+    "sample_duration_seconds": 14.381325099995593,
+    "gpu_global_vram_min_max_MiB": [
+      2851,
+      2851
+    ],
+    "gpu_global_utilization_min_max_percent": [
+      0,
+      83
+    ],
+    "available_ram_min_bytes": 10888028160
+  }
+]

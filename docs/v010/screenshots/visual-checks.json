@@ -1,0 +1,52 @@
+[
+  {
+    "pageWidth": 375,
+    "requirements": "Árbol de criterios · Cetoacidosis diabética\nDato\tCriterio\tObservado\tResultado\nDiabetes conocida\t== true\ttrue\tSatisfecho\nGlucosa plasmática\t>= 200\t180\tNo satisfecho\nBeta-hidroxibutirato\t>= 3\t4.2\tSatisfecho\nCetonas urinarias\t>= 2\tAusente\tDesconocido\npH venoso\t< 7.3\t7.22\tSatisfecho\nBicarbonato\t< 18\tAusente\tDesconocido\n\nDatos para resolver ramas indeterminadas (alternativas según AND/OR): Ninguno\n\nAlternativas no medidas, no bloqueantes para este árbol: Bicarbonato, Cetonas urinarias\n\nDatos inválidos que impiden resolver ramas: Ninguno clasificado\n\nPendientes para seguridad del protocolo: Potasio\n\nLimitaciones: RESEARCH_ONLY · TERRESTRIAL_CRITERIA_NOT_SPACE_VALIDATION · CRITERIA_NOT_MET_DOES_NOT_EXCLUDE_DISEASE · MANUAL_OBSERVATIONS_USE_DECLARED_WINDOW_NOT_VALIDATED_FRESHNESS · MEASUREMENT_CONTEXT_ATTESTED_NOT_INDEPENDENTLY_VERIFIED · URGENCY_RESEARCH_POLICY_NOT_VALIDATED_TRIAGE",
+    "states": "Cetoacidosis diabética\nEstado diagnóstico\nCriterios cumplidos\nUrgencia\nEmergencia\nConfirmación\nSatisfecha\nProtocolo\nBloqueado: datos\nTratamiento\nNo iniciado\n\nAplicabilidad espacial: Requiere validación espacial específica",
+    "view": "clinical",
+    "width": 390
+  },
+  {
+    "context": "monitoring",
+    "mode": "LOW_POWER",
+    "pageWidth": 375,
+    "response": "Resultados del motor separados de documentación y texto generado. / Engine results are separate from documents and generated text.\n\nIntentos del modelo y aceptación de la explicación\nEXPLICACIÓN GENERADA · MODELO LOCAL\n\nBaselines for physiology.vo2max are set at 50.0 mL/min/kg and are derived from source data S01 and S05.\n\nReferencias: M5\n\nThe trend for physiology.vo2max is monitored using an EWMA/CUSUM method per observation, but no clinical threshold is defined.\n\nReferencias: M6\n\nLa comprobación de citas y soporte no equivale a validación clínica.\n\nInferencia: 7267 ms · LOW_POWER\nExtractos recuperados · pertinencia no validada · 1\n\n```json { \"schema_version\": \"1.0.0\", \"tests\": [ { \"test_id\": \"TEST-PLASMA-GLUCOSE\", \"measure\": \"plasma_glucose\", \"canonical_unit\": \"mg/dL\", \"alternatives\": [\"mmol/L\"], \"conversion\": \"mmol/L * 18 ≈ mg/dL\", \"diagnostic_use\": [\"DM\", \"DKA\"], \"quality\": [\"sample_type_recorded\", \"fasting_status_when_required\"], \"missing_behavior\": \"UNKNOWN\" }, { \"test_id\": \"TEST-A1C\", \"measure\": \"A1C\", \"canonical_unit\": \"%\", \"diagnostic_use\": [\"DM\"], \"quality\": [\"validated_diagnostic_method\", \"assay_interference_assessed_when_discordant\"], \"missing_behavior\": \"UNKNOWN\" }, { \"test_id\": \"TEST-OGTT-75G\", \"measure\": \"2h_plasma_glucose\", \"canonical_unit\": \"mg/dL\", \"diagnostic_use\": [\"DM\"], \"quality\": [\"75_g_glucose_load\", \"2h_timing_valid\"], \"missing_behavior\": \"UNKNOWN\" }, { \"test_id\": \"TEST-BETA-OHB\", \"measure\": \"beta_hydroxybutyrate\", \"canonical_unit\": \"mmol/L\", \"diagnostic_use\": [\"DKA\"], \"quality\": [\"device_or_lab_valid\", \"opera\n\ndocs/clinical/deep-research-report-2026-10-16.md · CLINICAL_RESEARCH_SYNTHESIS · 2026-10-16\nVer fuente exacta\nFragmento exacto y procedencia\n{\n  \"id\": \"D-b4b6a5ecab00b815f4ce\",\n  \"kind\": \"DOCUMENT\",\n  \"text\": \"```json\\n{\\n  \\\"schema_version\\\": \\\"1.0.0\\\",\\n  \\\"tests\\\": [\\n    {\\n      \\\"test_id\\\": \\\"TEST-PLASMA-GLUCOSE\\\",\\n      \\\"measure\\\": \\\"plasma_glucose\\\",\\n      \\\"canonical_unit\\\": \\\"mg/dL\\\",\\n      \\\"alternatives\\\": [\\\"mmol/L\\\"],\\n      \\\"conversion\\\": \\\"mmol/L * 18 ≈ mg/dL\\\",\\n      \\\"diagnostic_use\\\": [\\\"DM\\\", \\\"DKA\\\"],\\n      \\\"quality\\\": [\\\"sample_type_recorded\\\", \\\"fasting_status_when_required\\\"],\\n      \\\"missing_behavior\\\": \\\"UNKNOWN\\\"\\n    },\\n    {\\n      \\\"test_id\\\": \\\"TEST-A1C\\\",\\n      \\\"measure\\\": \\\"A1C\\\",\\n      \\\"canonical_unit\\\": \\\"%\\\",\\n      \\\"diagnostic_use\\\": [\\\"DM\\\"],\\n      \\\"quality\\\": [\\\"validated_diagnostic_method\\\", \\\"assay_interference_assessed_when_discordant\\\"],\\n      \\\"missing_behavior\\\": \\\"UNKNOWN\\\"\\n    },\\n    {\\n      \\\"test_id\\\": \\\"TEST-OGTT-75G\\\",\\n      \\\"measure\\\": \\\"2h_plasma_glucose\\\",\\n      \\\"canonical_unit\\\": \\\"mg/dL\\\",\\n      \\\"diagnostic_use\\\": [\\\"DM\\\"],\\n      \\\"quality\\\": [\\\"75_g_glucose_load\\\", \\\"2h_timing_valid\\\"],\\n      \\\"missing_behavior\\\": \\\"UNKNOWN\\\"\\n    },\\n    {\\n      \\\"test_id\\\": \\\"TEST-BETA-OHB\\\",\\n      \\\"measure\\\": \\\"beta_hydroxybutyrate\\\",\\n      \\\"canonical_unit\\\": \\\"mmol/L\\\",\\n      \\\"diagnostic_use\\\": [\\\"DKA\\\"],\\n      \\\"quality\\\": [\\\"device_or_lab_valid\\\", \\\"opera\",\n  \"reference\": {\n    \"document\": \"docs/clinical/deep-research-report-2026-10-16.md\",\n    \"sha256\": \"38ad3ab166f25a8b46c1e1f483ba813510c34dc766171389307635ecf7e8a715\",\n    \"version\": \"2026-10-16\",\n    \"authority\": \"CLINICAL_RESEARCH_SYNTHESIS\",\n    \"char_start\": 52254,\n    \"char_end\": 53354,\n    \"line\": 1118\n  },\n  \"relevance\": \"NOT_INDEPENDENTLY_VALIDATED\",\n  \"authority_is_not_patient_state\": true\n}\nRESULTADOS Y DOCUMENTOS CITADOS\nRESULTADO DEL MOTOR\n\nMonitorización experimental / Experimental monitoring. Cambios numéricos no equivalen a empeoramiento clínico / numeric changes are not clinical worsening. No diagnóstico firmado, no tratamiento autorizado. / No signed diagnosis or treatment authorization.\n\nReferencia: A-cycle-14\nRESULTADO DEL MOTOR\n\nphysiology.vo2max: baseline 50.0 mL/min/kg; cambio absoluto / absolute change -11.0; retención / retention 78.0%. Descriptivo, no diagnóstico / descriptive, not diagnosis.\n\nReferencia: A-cycle-14\nRESULTADO DEL MOTOR\n\nCambio desde revisión anterior / change since previous review: {\"variable\": \"physiology.vo2max\", \"previous\": 44.0, \"current\": 39.0, \"previous_state\": \"DESCRIPTIVE_AVAILABLE\", \"current_state\": \"DESCRIPTIVE_AVAILABLE\"}\n\nReferencia: A-cycle-14\nRESULTADO DEL MOTOR\n\nphysiology.vo2max: pendiente / slope -0.6428571428571429 mL/min/kg/day; EWMA/CUSUM por observación / per observation; RESEARCH_ONLY. No umbral clínico / no clinical threshold.\n\nReferencia: A-cycle-14\nRESULTADO DEL MOTOR\n\nCambio desde revisión anterior / change since previous review: {\"variable\": \"physiology.heart_rate\", \"previous\": 72.0, \"current\": 79.0, \"previous_state\": \"DESCRIPTIVE_AVAILABLE\", \"current_state\": \"DESCRIPTIVE_AVAILABLE\"}\n\nReferencia: A-cycle-14\nRESULTADO DEL MOTOR\n\nphysiology.heart_rate: pendiente / slope 1.0 bpm/day; EWMA/CUSUM por observación / per observation; RESEARCH_ONLY. No umbral clínico / no clinical threshold.\n\nReferencia: A-cycle-14\nDOCUMENTACIÓN\n\n{\"criterion_id\": \"CRIT-OH-AHA-2024\", \"condition_id\": \"ORTHOSTATIC_HYPOTENSION\", \"version\": \"2024.1\", \"population\": \"ADULT\", \"source_ids\": [\"SRC-AHA-OH-2024\"], \"context\": {\"requires_gravity_supporting_upright_transition\": true, \"standing_window_minutes\": 3}, \"logic\": {\"any_of\": [{\"derived_field\": \"delta_sbp_mm_hg\", \"op\": \"<=\", \"value\": -20}, {\"derived_field\": \"delta_dbp_mm_hg\", \"op\": \"<=\", \"value\": -10}]}, \"measurement_quality\": {\"baseline_and_upright_bp_required\": true, \"time_since_upright_required\": true, \"sustained_reduction_required\": true}, \"etiology_confirmed_by_criterion\": false, \"space_applicability\": \"CONTEXT_DEPENDENT\"}\n\nReferencia: CRIT-OH-AHA-2024",
+    "view": "assistant",
+    "width": 390
+  },
+  {
+    "episodeCards": 9,
+    "pageWidth": 375,
+    "replayCleared": true,
+    "view": "followup",
+    "width": 390
+  },
+  {
+    "chatCleared": true,
+    "label": "Contexto de vigilancia: B-cycle-0.03",
+    "selector": "monitoring",
+    "view": "assistant-context"
+  },
+  {
+    "label": "Evaluación clínica activa: Cetoacidosis diabética · ce-d4421c0acf5b4200bdc5c322e9b8971c",
+    "pageWidth": 304,
+    "response": "Clasificación emitida directamente por el motor; sin reinterpretación del LLM.\n\nIntentos del modelo y aceptación de la explicación\nEVIDENCIA RECUPERADA · sin explicación generada\nRESULTADO DEL MOTOR\nResultado técnico exacto y metadatos\nReferencia: ce-d4421c0acf5b4200bdc5c322e9b8971c\nRESULTADO DEL MOTOR\n\nDKA: suficiencia de datos. Estado del motor: CRITERIA_MET. Datos pendientes para resolver ramas indeterminadas: ninguno. Las opciones siguen la lógica AND/OR; esta lista no significa que deban medirse todas. Alternativas no medidas que no bloquean este resultado: bicarbonato, cetonas urinarias. Datos inválidos que impiden resolver ramas: ninguno. Datos pendientes para seguridad del protocolo: potasio. Protocolo: BLOCKED_MISSING_DATA. La seguridad terapéutica es independiente de los criterios diagnósticos. Cumplir criterios no es un diagnóstico firmado ni autoriza tratamiento.\n\nReferencia: ce-d4421c0acf5b4200bdc5c322e9b8971c",
+    "view": "final-dka-assistant",
+    "width": 319
+  },
+  {
+    "chart": "37.4\n42.1\n46.9\n51.6\n1/9/2026, 7:00:00 a. m. PET\n15/9/2026, 7:00:00 a. m. PET\n\nPuntos observados · mL/min/kg · línea discontinua: baseline personal",
+    "pageWidth": 304,
+    "table": "Valores observados · Capacidad aeróbica · 3 muestras\nFecha\tValor\tUnidad\tCalidad\tID de muestra\n1/9/2026, 7:00:00 a. m. PET\t48\tmL/min/kg\tVALID\tA-physiology-vo2max-0\n8/9/2026, 7:00:00 a. m. PET\t44\tmL/min/kg\tVALID\tA-physiology-vo2max-7\n15/9/2026, 7:00:00 a. m. PET\t39\tmL/min/kg\tVALID\tA-physiology-vo2max-14",
+    "variable": "physiology.vo2max",
+    "view": "chart-table-regression",
+    "width": 319
+  },
+  {
+    "pageWidth": 304,
+    "table": "Valores observados · Frecuencia cardíaca · 3 muestras\nFecha\tValor\tUnidad\tCalidad\tID de muestra\n1/9/2026, 7:00:00 a. m. PET\t65\tbpm\tVALID\tA-physiology-heart_rate-0\n8/9/2026, 7:00:00 a. m. PET\t72\tbpm\tVALID\tA-physiology-heart_rate-7\n15/9/2026, 7:00:00 a. m. PET\t79\tbpm\tVALID\tA-physiology-heart_rate-14",
+    "variable": "physiology.heart_rate",
+    "view": "chart-table-heart-rate",
+    "width": 319
+  }
+]

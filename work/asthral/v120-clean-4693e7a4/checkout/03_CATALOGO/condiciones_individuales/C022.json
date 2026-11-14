@@ -1,0 +1,31 @@
+{
+  "condition_id": "C022",
+  "catalog_record": {
+    "condition_id": "C022",
+    "name_specialty": "Retención urinaria / urología",
+    "description_spaceflight": "Riesgo HSRB explícito y condición relevante en asistencia autónoma.",
+    "risks_symptoms": "Medicación, fisiología, obstrucción u otros factores.",
+    "biomarkers_sensors_tests": "Síntomas, volumen vesical/ultrasonido si disponible.",
+    "baselines_environment_interactions": "Historia urológica.",
+    "primary_evidence": "S03. citeturn27search5",
+    "limits_authorizations_state": "Umbrales y procedimientos operacionales públicos insuficientes. `NPA`."
+  },
+  "clinical_pathway_profile_as_published": "**P:** revisión de riesgo; **M:** síntomas/volumen vesical; **Q:** ultrasonido si utilizado; **D:** reglas clínicas `NPA`; **A/DD/T/I:** médico; **R/F:** vaciamiento/recurrencia; **G:** no disponible.",
+  "coverage_states": {
+    "prevention": "RV",
+    "monitoring": "RV",
+    "data_quality": "ES",
+    "detection": "NPA",
+    "assessment": "RMA",
+    "differential_diagnosis": "RMA",
+    "triage": "RMA",
+    "intervention_authorized": "RMA",
+    "recovery": "RV",
+    "follow_up": "RV",
+    "prognosis": "RO"
+  },
+  "source_ids": [
+    "S03"
+  ],
+  "NOTICE": "Pathway text is an outline; not an authorized diagnostic or treatment protocol."
+}

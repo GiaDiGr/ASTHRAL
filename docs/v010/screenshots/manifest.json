@@ -1,0 +1,74 @@
+[
+  {
+    "file": "desktop-dka-criteria.png",
+    "bytes": 44145,
+    "sha256": "169d9c85a4a252b5e6c7843c7adb0c3c79edac3e55d993dbd45da7315c667c2f",
+    "format_magic": "ffd8ffe000104a46"
+  },
+  {
+    "file": "desktop-dka.png",
+    "bytes": 49756,
+    "sha256": "fe61c08a1b87ed0a00b3551a441637c6471cd1987a62586963f72445a18e769e",
+    "format_magic": "ffd8ffe000104a46"
+  },
+  {
+    "file": "desktop-monitoring.png",
+    "bytes": 52597,
+    "sha256": "12382fde76eda2507909eb975f0d10922ca5aed6dd5504002c69667cc7b59adf",
+    "format_magic": "ffd8ffe000104a46"
+  },
+  {
+    "file": "desktop-overview.png",
+    "bytes": 48058,
+    "sha256": "5824a28a20b843914ddd6408a7f23065b1993d7ec0d8860d7faa16a06adf83b3",
+    "format_magic": "ffd8ffe000104a46"
+  },
+  {
+    "file": "narrow-assistant-outage.png",
+    "bytes": 113329,
+    "sha256": "e1cbcef578ff9db35abfef9905227142b14024c15ec107a7d72567c2a1e70e13",
+    "format_magic": "ffd8ffe000104a46"
+  },
+  {
+    "file": "narrow-assistant-sources.png",
+    "bytes": 57931,
+    "sha256": "5000966f83bff0d3a1117e2c8e298e9ee6c76609c61325dd2595903385f7e8c2",
+    "format_magic": "ffd8ffe000104a46"
+  },
+  {
+    "file": "narrow-chart-table.png",
+    "bytes": 18980,
+    "sha256": "073e1da78229b81abb09595fd12f8e2559f0da217f9d7237e319161db5d72e70",
+    "format_magic": "ffd8ffe000104a46"
+  },
+  {
+    "file": "narrow-dka-assistant.png",
+    "bytes": 27774,
+    "sha256": "745f62b29a0378b1fe789cf106a20b040266aa62f92c9ccb7c3b53e758d9ef14",
+    "format_magic": "ffd8ffe000104a46"
+  },
+  {
+    "file": "narrow-dka.png",
+    "bytes": 34227,
+    "sha256": "7e7182450540e1b4e16d02e621b2ecfbd297bc5da22c94f130571b75efb5c9af",
+    "format_magic": "ffd8ffe000104a46"
+  },
+  {
+    "file": "narrow-episodes.png",
+    "bytes": 31273,
+    "sha256": "43bd974123dde3def0d958a13833fbeffd84f2f01e35b07f28ac3b2c483c6a90",
+    "format_magic": "ffd8ffe000104a46"
+  },
+  {
+    "file": "narrow-history-replay.png",
+    "bytes": 27424,
+    "sha256": "3fa39b220020dcc686d71b4114f84ba5dabfe2e73ca009b539c91b8ae275378c",
+    "format_magic": "ffd8ffe000104a46"
+  },
+  {
+    "file": "narrow-monitoring.png",
+    "bytes": 25244,
+    "sha256": "76854c1e045c4429b5f005f1f1d51c329165fd40e5d58e273014317a996d56c7",
+    "format_magic": "ffd8ffe000104a46"
+  }
+]

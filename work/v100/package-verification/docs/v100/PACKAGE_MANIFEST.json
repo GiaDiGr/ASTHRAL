@@ -1,0 +1,1622 @@
+{
+  "format": "VIGILE_REVIEW_PACKAGE_1",
+  "date": "2026-10-27",
+  "scope": "Internal team review; original research documents retain their original rights; not a public redistribution license",
+  "files": [
+    {
+      "path": "01_INFORMES/15_REGLAS_ENTREGA_ORIGINAL_COMPLETA.md",
+      "bytes": 87747,
+      "sha256": "3acdc0ab22f14eedcf64dfa230a7a83ab35dcc0c912ba4296e22b7c48194f96a"
+    },
+    {
+      "path": "01_INFORMES/INVESTIGACION_INTERMEDIA.md",
+      "bytes": 24690,
+      "sha256": "85c282647644eda4958d1e3af7678fdfc3b68f5c7fc33b50fd8d064744b093cd"
+    },
+    {
+      "path": "01_INFORMES/PRIMERA_INVESTIGACION_ITALIANO.md",
+      "bytes": 46400,
+      "sha256": "d725272a7450751e4061057328f12c6e592b9847c62984cff0c79e84808f6021"
+    },
+    {
+      "path": "01_INFORMES/REPORTE_CONSOLIDADO_COMPLETO.md",
+      "bytes": 96471,
+      "sha256": "97e9fdc86925b6b973db75900e64f222c149ae3bd9cade8c182f2264c46831e5"
+    },
+    {
+      "path": "01_INFORMES/SEGUNDA_INVESTIGACION_CON_ZIP_NO_RECUPERADO.md",
+      "bytes": 31165,
+      "sha256": "e26d6294752ec67289b9a42089b1ea26343572ad58d50052c71958054b440519"
+    },
+    {
+      "path": "02_REGLAS_ORIGINALES_15/ESQUEMA_DE_REGLAS_ORIGINAL.json",
+      "bytes": 1854,
+      "sha256": "6ec5dd1a5df786f80093f68f1d7db5151deeb9721bd4b0101cd5972afd19a63e"
+    },
+    {
+      "path": "02_REGLAS_ORIGINALES_15/POLITICA_DE_SEPARACION_CLINICA.json",
+      "bytes": 804,
+      "sha256": "e4d4dcaadfe6f0e525402dfe5e61abc26490f24a3dfd557273a4ff0b60cced5c"
+    },
+    {
+      "path": "02_REGLAS_ORIGINALES_15/REGLAS_15_ORIGINALES.json",
+      "bytes": 70236,
+      "sha256": "1ef299cab4f06eb9f17095af804a5589dabbc7b718d49cccaf0a66ba47f93070"
+    },
+    {
+      "path": "02_REGLAS_ORIGINALES_15/individual/VIGILE-AER-001.json",
+      "bytes": 4121,
+      "sha256": "47fc68dd5226ee8cb3720859cd166445b707c237ad9c89a43fac5fb65750cce4"
+    },
+    {
+      "path": "02_REGLAS_ORIGINALES_15/individual/VIGILE-AER-002.json",
+      "bytes": 3835,
+      "sha256": "8423641570b5c1ebe530c38524a9eb51e999c6acf7557405c8bce2100430c2d6"
+    },
+    {
+      "path": "02_REGLAS_ORIGINALES_15/individual/VIGILE-AER-003.json",
+      "bytes": 4601,
+      "sha256": "1de1bc027ac34516373d5fa8a151c5ef3d681afad82a47ea4dec3f49813e92bc"
+    },
+    {
+      "path": "02_REGLAS_ORIGINALES_15/individual/VIGILE-BONE-001.json",
+      "bytes": 5170,
+      "sha256": "43278a12022534ceffb1ff9305e001825e46aa112bce13d1df5227f9c62794f7"
+    },
+    {
+      "path": "02_REGLAS_ORIGINALES_15/individual/VIGILE-ENV-001.json",
+      "bytes": 4004,
+      "sha256": "0a8a9faa3291017be7784eab3170ff473741725dac14e735004c825a3a1b1b06"
+    },
+    {
+      "path": "02_REGLAS_ORIGINALES_15/individual/VIGILE-ENV-002.json",
+      "bytes": 4615,
+      "sha256": "fc9a15e905f12e66b36b57d8f3ae03c403ab5ef2b6a40f46ecb604cfd1e43d23"
+    },
+    {
+      "path": "02_REGLAS_ORIGINALES_15/individual/VIGILE-ENV-003.json",
+      "bytes": 4264,
+      "sha256": "ab56f7b032581ea1e4c821d96edbad0b4643e18b41d766c6224ba70ffd588126"
+    },
+    {
+      "path": "02_REGLAS_ORIGINALES_15/individual/VIGILE-ENV-004.json",
+      "bytes": 4321,
+      "sha256": "f292d06e5428dfd9e929ed8f6a94e7ef3180b2d5be387c8f87c192971bf77acd"
+    },
+    {
+      "path": "02_REGLAS_ORIGINALES_15/individual/VIGILE-MUS-001.json",
+      "bytes": 5480,
+      "sha256": "7381d40546901740657f43c55653451c012ebb0a8e210c31052d16c655084fc9"
+    },
+    {
+      "path": "02_REGLAS_ORIGINALES_15/individual/VIGILE-MUS-002.json",
+      "bytes": 3879,
+      "sha256": "bbe6f662153b1820013cced85311ae9372c9ee6887a56cd3d419764adb8c3391"
+    },
+    {
+      "path": "02_REGLAS_ORIGINALES_15/individual/VIGILE-NUT-001.json",
+      "bytes": 4675,
+      "sha256": "370568fd8ecb393a6551a1cc7a1d3390b4197c44ccf7ddf160454c9f439318af"
+    },
+    {
+      "path": "02_REGLAS_ORIGINALES_15/individual/VIGILE-RAD-001.json",
+      "bytes": 4661,
+      "sha256": "595e5bc352b602e1055b0bbe49dacc82c602aa13d6be0e34f68a04455ebec949"
+    },
+    {
+      "path": "02_REGLAS_ORIGINALES_15/individual/VIGILE-RAD-002.json",
+      "bytes": 3261,
+      "sha256": "ec0117d1577c93f26292b6558dbac8bbb3674c1cdc640e2bc99c7d166f098998"
+    },
+    {
+      "path": "02_REGLAS_ORIGINALES_15/individual/VIGILE-RAD-003.json",
+      "bytes": 3886,
+      "sha256": "15db94f095e0b8a45fe748dd1a833d014485daa6168f3aa4c310d9709dd9cf02"
+    },
+    {
+      "path": "02_REGLAS_ORIGINALES_15/individual/VIGILE-RAD-004.json",
+      "bytes": 4839,
+      "sha256": "083cb546fc04e0fa1b05f01c8005cb1bfaeae51d07b038ddce57b318da976224"
+    },
+    {
+      "path": "02_REGLAS_ORIGINALES_15/inventario_10_reconstruidas.csv",
+      "bytes": 1165,
+      "sha256": "e8212ce60dfefab8c81ef3cf1a5975f544fc012c6a2efe14ff30d9a69bdc82bb"
+    },
+    {
+      "path": "02_REGLAS_ORIGINALES_15/inventario_10_reconstruidas.json",
+      "bytes": 1962,
+      "sha256": "ed616242651bf6cac1682179b3cc539fc065b1ac62ea80ff8bfcc6f73f5810ba"
+    },
+    {
+      "path": "02_REGLAS_ORIGINALES_15/inventario_15_reglas.csv",
+      "bytes": 2668,
+      "sha256": "558ed4ce3327a21c591210247086a23ca2093bc93da2d82637ee36862be7d6f6"
+    },
+    {
+      "path": "02_REGLAS_ORIGINALES_15/posibles_correspondencias_sin_validar.csv",
+      "bytes": 1023,
+      "sha256": "e03207809e81172659c7f3f30b44f21648d85eedd6733dc6d42f23b70e7595d7"
+    },
+    {
+      "path": "02_REGLAS_ORIGINALES_15/posibles_correspondencias_sin_validar.json",
+      "bytes": 1960,
+      "sha256": "0f21fa5e7cecd31f044da1c0112ace330f7daa0f0520f20218da3e50acdba79f"
+    },
+    {
+      "path": "03_CATALOGO/condiciones.csv",
+      "bytes": 17833,
+      "sha256": "4192592a220c8d68457924cebbc52414d5084bfc38e90ac70ee22a14703350a8"
+    },
+    {
+      "path": "03_CATALOGO/condiciones.json",
+      "bytes": 28833,
+      "sha256": "49d656178e420bad1b9dc0ce7150de9501227f3147308719d8d4b65954842320"
+    },
+    {
+      "path": "03_CATALOGO/condiciones_con_rutas_y_cobertura.json",
+      "bytes": 68315,
+      "sha256": "30e2475b28f83c38de6af7e3609ee7548e8a362234455c4a167879e8c34278eb"
+    },
+    {
+      "path": "03_CATALOGO/condiciones_individuales/C001.json",
+      "bytes": 1804,
+      "sha256": "1b3ff9cfbf6d27a3f0ea7451e3afd74f52c5c9ae20c9fe8e833dc5f8502f4672"
+    },
+    {
+      "path": "03_CATALOGO/condiciones_individuales/C002.json",
+      "bytes": 1624,
+      "sha256": "ae380e568a8332c6e871265194e49437e95f6b3730fa1351165efa2fb88fffb8"
+    },
+    {
+      "path": "03_CATALOGO/condiciones_individuales/C003.json",
+      "bytes": 1650,
+      "sha256": "599cd7be4525e14f1825da9834ffc29ac25929dfdd5bcf629762243a1d90e491"
+    },
+    {
+      "path": "03_CATALOGO/condiciones_individuales/C004.json",
+      "bytes": 1499,
+      "sha256": "032c737a62a211eb8f91eb46635a2f82fb01564f8226a63597e7cdcd46757c90"
+    },
+    {
+      "path": "03_CATALOGO/condiciones_individuales/C005.json",
+      "bytes": 1749,
+      "sha256": "2c612c5a4bf4398ee16fbe4f50511cb4fd593c059a566420da53cfdf5ddbf957"
+    },
+    {
+      "path": "03_CATALOGO/condiciones_individuales/C006.json",
+      "bytes": 1642,
+      "sha256": "4dba4c1fe56d8798d73127aea564928dd039496c77706970d08504961c1ae75f"
+    },
+    {
+      "path": "03_CATALOGO/condiciones_individuales/C007.json",
+      "bytes": 1464,
+      "sha256": "c0d50a4d300892a28673a6a7bfd7892ad13e7488f3d8218e374ed0a4e8a44628"
+    },
+    {
+      "path": "03_CATALOGO/condiciones_individuales/C008.json",
+      "bytes": 1415,
+      "sha256": "c02d48ed95ffd2c37e4febb10c25469b418933a87b8e0f7e7b862b0979381aeb"
+    },
+    {
+      "path": "03_CATALOGO/condiciones_individuales/C009.json",
+      "bytes": 1624,
+      "sha256": "c02cc7bce38bc923d468bb58c975e7f04f36134d14c6c63c2212cb7b710296e2"
+    },
+    {
+      "path": "03_CATALOGO/condiciones_individuales/C010.json",
+      "bytes": 1493,
+      "sha256": "047e84c650d66d9a5659cc4b5ce3b67bf847b27878e38b0d11a19b1171bf666e"
+    },
+    {
+      "path": "03_CATALOGO/condiciones_individuales/C011.json",
+      "bytes": 1549,
+      "sha256": "1360f3962671ce403967f48825f70b3552a7f903fd1bbf7f1f5a029123ebb3de"
+    },
+    {
+      "path": "03_CATALOGO/condiciones_individuales/C012.json",
+      "bytes": 1482,
+      "sha256": "b945c31e03f6c704d0949f41f5a5058e3b9b280ea115dc1046d6a178976e43ca"
+    },
+    {
+      "path": "03_CATALOGO/condiciones_individuales/C013.json",
+      "bytes": 1370,
+      "sha256": "a5b6b08f6c3ddb964704645ce10da446c4ed6a6200429233294ec107140f8568"
+    },
+    {
+      "path": "03_CATALOGO/condiciones_individuales/C014.json",
+      "bytes": 1446,
+      "sha256": "15c1f15f3d26039f42bb51e26ec2c19f707950d55ac13e365bee9f63b97c2af8"
+    },
+    {
+      "path": "03_CATALOGO/condiciones_individuales/C015.json",
+      "bytes": 1567,
+      "sha256": "ede1b6c19ded2ff64f12f36a2afeaf21d870dd2a1d0574721938041832831092"
+    },
+    {
+      "path": "03_CATALOGO/condiciones_individuales/C016.json",
+      "bytes": 1523,
+      "sha256": "9c60b36aa137f7c1443fef19947fad37b0e85ba8b090348059f97fb443bb3e7a"
+    },
+    {
+      "path": "03_CATALOGO/condiciones_individuales/C017.json",
+      "bytes": 1477,
+      "sha256": "7051741e75dcb58406f5e1bf44b87cba80659c8c4a99e375ded9f69cd12d50d4"
+    },
+    {
+      "path": "03_CATALOGO/condiciones_individuales/C018.json",
+      "bytes": 1479,
+      "sha256": "1950bba3f1b09cd27eb1d1afe6e3427fef3028c59052ede341ff79b08c48403b"
+    },
+    {
+      "path": "03_CATALOGO/condiciones_individuales/C019.json",
+      "bytes": 1401,
+      "sha256": "92e87d84f05e6b0a64e8919d7f76a2c5efeb1dd28a3c73d4d18ac20bd1d0e059"
+    },
+    {
+      "path": "03_CATALOGO/condiciones_individuales/C020.json",
+      "bytes": 1522,
+      "sha256": "7ea15bc4d622740461ae3b7edf04b947d42594f66c8532432380da1f15451e6b"
+    },
+    {
+      "path": "03_CATALOGO/condiciones_individuales/C021.json",
+      "bytes": 1479,
+      "sha256": "9c29a63a31764cbded5f646905a9f8b6b992337b0f8f32d206ef13a93ecd5987"
+    },
+    {
+      "path": "03_CATALOGO/condiciones_individuales/C022.json",
+      "bytes": 1344,
+      "sha256": "4dfe81bdf590344ce5bc0d8fd08892c4d0db0d21723a5ed8b5f8f4eceb9b7cff"
+    },
+    {
+      "path": "03_CATALOGO/condiciones_individuales/C023.json",
+      "bytes": 1587,
+      "sha256": "ea6a134f851540ce20c93e3b14ffa876174e22011ec4e53469c52e78c71f59d2"
+    },
+    {
+      "path": "03_CATALOGO/condiciones_individuales/C024.json",
+      "bytes": 1422,
+      "sha256": "893cdda8f6c26d413bf890c75263f69bc10dbb639b82884557320f85d61c7d6a"
+    },
+    {
+      "path": "03_CATALOGO/condiciones_individuales/C025.json",
+      "bytes": 1406,
+      "sha256": "a8bb5a66bf143817323f3ebe629afbc72f357f747d7395c5c6e8333c34acebd9"
+    },
+    {
+      "path": "03_CATALOGO/condiciones_individuales/C026.json",
+      "bytes": 1540,
+      "sha256": "952f6b6769bbb39174b36b449804d3f9dc519896b5d74818993919f71ab1ca2e"
+    },
+    {
+      "path": "03_CATALOGO/condiciones_individuales/C027.json",
+      "bytes": 1644,
+      "sha256": "32d0822dc2786fabb359a1a2346d56017dd5354c13c780c7db5867cfd986a01c"
+    },
+    {
+      "path": "03_CATALOGO/condiciones_individuales/C028.json",
+      "bytes": 1532,
+      "sha256": "87231dc81a36b23f33f547c325f6fb25308fe0a0bc8e90e1264f6bbf8da28853"
+    },
+    {
+      "path": "03_CATALOGO/condiciones_individuales/C029.json",
+      "bytes": 1420,
+      "sha256": "7f3361f012a46357fe8027780c45a9eb2811f09db0c317ef94baf2b007d2f3ed"
+    },
+    {
+      "path": "03_CATALOGO/condiciones_individuales/C030.json",
+      "bytes": 1586,
+      "sha256": "d6e530297c43ad618a2ff1117c9e8d9ffd26baf74d98b89c0d8f5a838a72df39"
+    },
+    {
+      "path": "03_CATALOGO/condiciones_individuales/C031.json",
+      "bytes": 1243,
+      "sha256": "54e5b579c22583f7ca3943b64a8230bc4bef85623e97522c0b4388015e4b5c21"
+    },
+    {
+      "path": "03_CATALOGO/condiciones_individuales/C032.json",
+      "bytes": 1548,
+      "sha256": "9935bdb95e397b46cd0c787aa2d68fe540d341d6c7480db249095125ab07d849"
+    },
+    {
+      "path": "03_CATALOGO/condiciones_individuales/C033.json",
+      "bytes": 1403,
+      "sha256": "663c793566be30f50e9004e3d67fda03f9187538dcfa19c9163d26c26ef4a927"
+    },
+    {
+      "path": "03_CATALOGO/condiciones_individuales/C034.json",
+      "bytes": 1261,
+      "sha256": "338cfba401287983ffc497590e8e8bda47657110ccdd4b6835ae1d67e0045284"
+    },
+    {
+      "path": "03_CATALOGO/condiciones_individuales/C035.json",
+      "bytes": 1475,
+      "sha256": "c4e881634bee0d1c964a5f7c94bd798c822bd30fd2974d496b78b7e24141c314"
+    },
+    {
+      "path": "03_CATALOGO/condiciones_individuales/C036.json",
+      "bytes": 1322,
+      "sha256": "a4f06c43a02b1a037f5162a9bc1d91dbcfd0cb6e296d25953bf3791de04da102"
+    },
+    {
+      "path": "03_CATALOGO/condiciones_individuales/C037.json",
+      "bytes": 1372,
+      "sha256": "9a02258d9221be66a4ba2e5b9fb47b19916685b9d31706cdf0a2836b6d8fb760"
+    },
+    {
+      "path": "03_CATALOGO/condiciones_individuales/C038.json",
+      "bytes": 1426,
+      "sha256": "da3944cc72998ae3ea5ed7305670c6408aceebb50ee02e36090319ed100d11ff"
+    },
+    {
+      "path": "03_CATALOGO/condiciones_individuales/C039.json",
+      "bytes": 1384,
+      "sha256": "46a50c1b00d670c656f028803530d8b33239a9bd5594c7a6a00fd53c4d022a8c"
+    },
+    {
+      "path": "03_CATALOGO/condiciones_individuales/C040.json",
+      "bytes": 1543,
+      "sha256": "f4678e6b464b591258f7f7528588e5107f7acdc4f7b98a1749c2e3aff1b16f74"
+    },
+    {
+      "path": "03_CATALOGO/condiciones_individuales/C041.json",
+      "bytes": 1443,
+      "sha256": "a6b8486d3314a98f20fc67e90382d2e6ec29cd9f08dbc8aa392734a409cc7f0a"
+    },
+    {
+      "path": "03_CATALOGO/condiciones_individuales/C042.json",
+      "bytes": 1294,
+      "sha256": "7cfe62e24407727c86d7b558c849f75682c3e5faebc9256890a7d2a2c362ed1b"
+    },
+    {
+      "path": "03_CATALOGO/condiciones_individuales/C043.json",
+      "bytes": 1538,
+      "sha256": "6d7d311439fb34045fc699fe1e873d600ced8ee7e6ac3ffb159154c0a2305172"
+    },
+    {
+      "path": "03_CATALOGO/condiciones_individuales/C044.json",
+      "bytes": 1508,
+      "sha256": "2cee5f08bc730dc70779b16512992706b550703b529c09db1781935a108ebf42"
+    },
+    {
+      "path": "03_CATALOGO/matriz_cobertura_44x11.csv",
+      "bytes": 2185,
+      "sha256": "520c00bcbdd2c8a2d0867b0cffaceeb03edba64f1200e19c79674929eed99dc0"
+    },
+    {
+      "path": "03_CATALOGO/matriz_cobertura_44x11.json",
+      "bytes": 10193,
+      "sha256": "033a922d9e6f53e72df032b4938ff49b1c88430dd77faec70da9d9051f3a7a20"
+    },
+    {
+      "path": "03_CATALOGO/plantilla_pathway_original.json",
+      "bytes": 499,
+      "sha256": "9b4cecf6d50760815efd2e7b47cf949093176cd2931ca85a54645cf0c2c750b1"
+    },
+    {
+      "path": "03_CATALOGO/rutas_clinicas.csv",
+      "bytes": 13358,
+      "sha256": "01cfad60e5a06a7ed65e7d2a782824d8f1f63f1d009e78babb5559e3b76f651a"
+    },
+    {
+      "path": "03_CATALOGO/rutas_clinicas.json",
+      "bytes": 15739,
+      "sha256": "c38f91a88ecee1d7964be2d3965d020d1d0a2506207e5fafb27ec2824abd66a5"
+    },
+    {
+      "path": "04_ALGORITMOS/algoritmos.csv",
+      "bytes": 3298,
+      "sha256": "8f60431215e27a34a76a15a5b75d5b7e2ddd64d3045fbda9162147b1af3c1d45"
+    },
+    {
+      "path": "04_ALGORITMOS/algoritmos.json",
+      "bytes": 4950,
+      "sha256": "6f6e4a0d57025a51c87fa3dfed2a41df6c17f89cdd4345389cc4f7e97a15d882"
+    },
+    {
+      "path": "05_SENSORES/sensores_biomarcadores.csv",
+      "bytes": 3116,
+      "sha256": "a69354ef5fd143d84ef4ffb8efa4bb9cfba58f2afb15d781690ba9545044fc7b"
+    },
+    {
+      "path": "05_SENSORES/sensores_biomarcadores.json",
+      "bytes": 7553,
+      "sha256": "1c74e54850a52323f1e41ab264051066bf54be182ed6a932761600c156d2cdfd"
+    },
+    {
+      "path": "06_MULTISISTEMA/interacciones.csv",
+      "bytes": 2948,
+      "sha256": "b77824720a768a274adc22d5d67561f0ae4bc33a49e7e3049d52cddb3059f5e7"
+    },
+    {
+      "path": "06_MULTISISTEMA/interacciones.json",
+      "bytes": 4100,
+      "sha256": "a24e8f894b79bf441b9402110fd5d22e235ea5ba8efa02871a442eaeebc4de46"
+    },
+    {
+      "path": "07_EVIDENCIAS/enlaces_fuente_por_investigacion.csv",
+      "bytes": 72411,
+      "sha256": "4a0e332556594426b3036b3db32911091d68cbd51ab98a3626fce2edc34d040d"
+    },
+    {
+      "path": "07_EVIDENCIAS/enlaces_fuente_por_investigacion.json",
+      "bytes": 725635,
+      "sha256": "58069e1cb2f8f2d69d8dfc0d2d7ac91247ea8d7be086ebc5c2d2a7eeb1dd0e75"
+    },
+    {
+      "path": "07_EVIDENCIAS/extracciones.csv",
+      "bytes": 4872,
+      "sha256": "e95710852fc03abc03dd9290f1d038b3e0413ae1045915183dfa9a38c7c6d9ae"
+    },
+    {
+      "path": "07_EVIDENCIAS/extracciones.json",
+      "bytes": 7849,
+      "sha256": "4bd8c5c7a525ab8c5f6530c6adb1563bed343f10f336be0be09f34d6c4d2e7b6"
+    },
+    {
+      "path": "07_EVIDENCIAS/fuentes.csv",
+      "bytes": 5032,
+      "sha256": "a1c519188b2d1c71b109426115acd851cc08bc9360c8d1fc73bb133543873d5d"
+    },
+    {
+      "path": "07_EVIDENCIAS/fuentes.json",
+      "bytes": 8408,
+      "sha256": "c4d5013b9f8dd7ca082c0290d6649c8ac57d5b54a36b1d9d4d442bd0f3338d17"
+    },
+    {
+      "path": "08_DATASETS/datasets.csv",
+      "bytes": 3486,
+      "sha256": "4c29ec1522db9b7822816cdbc1c1ffd56fbd53765facb78d3b7ea5dae5f3fac4"
+    },
+    {
+      "path": "08_DATASETS/datasets.json",
+      "bytes": 5065,
+      "sha256": "8f3f6863c2746fc0ea2a196d6ffe579d86bd6f857cc7d1f8cfbaa27043942bc7"
+    },
+    {
+      "path": "09_TESTS/casos_sinteticos.csv",
+      "bytes": 2837,
+      "sha256": "26ac7eb7788298944fbefe48ecf196a0659851541fae0e141e3c1743bff001f8"
+    },
+    {
+      "path": "09_TESTS/casos_sinteticos.json",
+      "bytes": 4725,
+      "sha256": "b8c1abf3b4e3adcd4bbb0de61d430b69af7be55bbd7ee5b140c1828db6e17261"
+    },
+    {
+      "path": "10_CODEx_ESPECIFICACION/PROMPT_PARA_CODEX.md",
+      "bytes": 6304,
+      "sha256": "1360098cc011caaedd093bfa63acf391eb753d0cd72a09ddfebaa88cd9235ef3"
+    },
+    {
+      "path": "10_CODEx_ESPECIFICACION/modelos_core_original.json",
+      "bytes": 7138,
+      "sha256": "c1343415dc62446edc2ef77176c6d450d2138c590f0c9c3ee65d587b4e9b0b04"
+    },
+    {
+      "path": "10_CODEx_ESPECIFICACION/regla_ejemplo_co2_original.json",
+      "bytes": 1261,
+      "sha256": "bcf80cbdb491357adc68be729b69fe7c1dc2432d6fd3f8e3d428e0de7722e8c3"
+    },
+    {
+      "path": "99_MATERIALES_HISTORICOS_SOLO_REFERENCIA/PROMPT_FINAL_CODEX_VIGILE.md",
+      "bytes": 20081,
+      "sha256": "7df84cf7611f4570d9c6c2b9f4d7d660cea0de53dda0b7bb7e732cfe9d31c27e"
+    },
+    {
+      "path": "99_MATERIALES_HISTORICOS_SOLO_REFERENCIA/VIGILE_Investigacion_RECUPERADA_PARCIAL.zip",
+      "bytes": 74221,
+      "sha256": "95f3156cd94c6fd8c38784782da39a2dd57098f82abec477d13836bfe8b0de7b"
+    },
+    {
+      "path": "99_MATERIALES_HISTORICOS_SOLO_REFERENCIA/VIGILE_PROMPT_CODEX_POST_DEEP_RESEARCH.md",
+      "bytes": 17765,
+      "sha256": "ef319f17b5871c18a6e015725c01772ae5c1e2e71a9bdd2c8a8b834a19914bd8"
+    },
+    {
+      "path": "99_MATERIALES_HISTORICOS_SOLO_REFERENCIA/VIGILE_Paquete_Revisado_Codex.zip",
+      "bytes": 46861,
+      "sha256": "2c2904026fc72cf4a552df0f4ccf675d46321680bb722cb16a378f37f0eb50be"
+    },
+    {
+      "path": "LEEME_PRIMERO.md",
+      "bytes": 3615,
+      "sha256": "595201fa3dfa11db8c3e87c25044142ae1d00f1f0b484eeba32a2131f109d57b"
+    },
+    {
+      "path": "MANIFIESTO_CONTEOS.json",
+      "bytes": 868,
+      "sha256": "dbb1dc3b2c0fc63644846b9dcf9606419da3103de551d4a1a1e41a9468398484"
+    },
+    {
+      "path": "MANIFIESTO_SHA256.json",
+      "bytes": 17972,
+      "sha256": "e40403f7afaac53ef0a6f1f46fcd80f177c9ccb8d3bb43caa94e04c7a671037f"
+    },
+    {
+      "path": "VIGILE_v100_START_HERE.md",
+      "bytes": 425,
+      "sha256": "2e943eaa446b244e6da452ddf83e830f618d87c9e9046ba81e62b5ff0451b864"
+    },
+    {
+      "path": "docs/clinical/deep-research-report-2026-10-16.md",
+      "bytes": 103856,
+      "sha256": "38ad3ab166f25a8b46c1e1f483ba813510c34dc766171389307635ecf7e8a715"
+    },
+    {
+      "path": "docs/v011/A_FULLSTACK_AUDIT.md",
+      "bytes": 5464,
+      "sha256": "2cd09e7352e56720504b708a94aa5ae53369cec2388f8e6052103c0a3caf96c8"
+    },
+    {
+      "path": "docs/v011/B_INTEGRATED_MISSION.md",
+      "bytes": 7224,
+      "sha256": "6ef7b2c3dd576c5c88e328d4f8ad7ec4f14a53c7ea75e596bd2b937a08f2ac57"
+    },
+    {
+      "path": "docs/v011/DEMO.md",
+      "bytes": 2654,
+      "sha256": "f46f323289c2ad6c49e955cf260f09bd829962d22463eaa5be29aa789a11a0a7"
+    },
+    {
+      "path": "docs/v011/INTEGRATION_CONTRACTS.md",
+      "bytes": 6556,
+      "sha256": "4f7cffae3c7a73afbc55aab0c18bef51aa7251f8bb37238b37ec8375d465de0e"
+    },
+    {
+      "path": "docs/v011/README.md",
+      "bytes": 6202,
+      "sha256": "b5c8fdf209dcd028a27e96717f754d4031a4a10ecc2ef6f7b2c3371bf30e8fe8"
+    },
+    {
+      "path": "docs/v07/CONTRACTS.md",
+      "bytes": 5345,
+      "sha256": "dd9d15164c08d6a1675b74318270e46d1a3fd8ff590699fb6aa7429145466ab1"
+    },
+    {
+      "path": "docs/v07/README.md",
+      "bytes": 13293,
+      "sha256": "ccdf9005a4892a004edac7d6cef95a2680b8ec594cc15ac1083f53e950e723a3"
+    },
+    {
+      "path": "docs/v08/sources/ADA2026-short-excerpt.txt",
+      "bytes": 116,
+      "sha256": "cb09dce1d37f61a18effc5854418767a6e13c5fe83e26a2750e5d843912cb9eb"
+    },
+    {
+      "path": "docs/v09/audit-bank.json",
+      "bytes": 7304,
+      "sha256": "c1b9721063d1f720174e5b4527884a0c0a2dfb4db8725475e5199b2d407a26dc"
+    },
+    {
+      "path": "docs/v09/rag-qrels.json",
+      "bytes": 4995,
+      "sha256": "28e63470ad0f2f2b02ea08d1d75fe2474fb9e35c783116424e00e41b7b146acd"
+    },
+    {
+      "path": "docs/v100/AUDIT.md",
+      "bytes": 6587,
+      "sha256": "ed0b0512e49d0323ab04e1429c2a94f7a78026d003bbdee06782573ccde49832"
+    },
+    {
+      "path": "docs/v100/CANDIDATE_FREEZE.json",
+      "bytes": 12319,
+      "sha256": "56fa0af9646fffc44dd2755f86d0fc6844835c08cd8958556e35d7cf70b6bf3f"
+    },
+    {
+      "path": "docs/v100/CANDIDATE_R1_FREEZE.json",
+      "bytes": 12111,
+      "sha256": "0c7c8e9fe8a8950d97598c021391c056c57e2850bd606f9b5bf391efc8b0ef65"
+    },
+    {
+      "path": "docs/v100/CANDIDATE_R2_FREEZE.json",
+      "bytes": 12319,
+      "sha256": "56fa0af9646fffc44dd2755f86d0fc6844835c08cd8958556e35d7cf70b6bf3f"
+    },
+    {
+      "path": "docs/v100/DEMO.md",
+      "bytes": 2910,
+      "sha256": "82b8872557a559ce1bb05d5df489c39a922e7a892cb18bbaa80d341e1fe625c4"
+    },
+    {
+      "path": "docs/v100/HUMAN_REVIEW.md",
+      "bytes": 2516,
+      "sha256": "4e82657d640902780e12b6ed076b82918a5aef25bbfd34a815ec79ad09934003"
+    },
+    {
+      "path": "docs/v100/INTEGRATION_CONTRACTS.md",
+      "bytes": 4904,
+      "sha256": "850bc0d2cd822e5beedc89613412ad70131186deaf93c4cf01181999b8194d60"
+    },
+    {
+      "path": "docs/v100/README.md",
+      "bytes": 4975,
+      "sha256": "61542932d99f2001e6c61ae38b0f352a89f86027ec09aa0b7474e3edf5aca615"
+    },
+    {
+      "path": "docs/v100/RESERVED_USED.json",
+      "bytes": 296,
+      "sha256": "1e62cf81de7e37cee9fc12f3e81f700f1017f2200819efcdb6189c64d843bc96"
+    },
+    {
+      "path": "docs/v100/RESULTS.json",
+      "bytes": 12406,
+      "sha256": "e03ab7a098253d309f0e57517bc6f485df1aed0aea12bd51c0194b0d162f6b74"
+    },
+    {
+      "path": "docs/v100/VOICE_AND_AI.md",
+      "bytes": 5321,
+      "sha256": "b2242afb995b40f19f307baa3d3ae5f333b558996ebf237d74403b7463bf1fee"
+    },
+    {
+      "path": "docs/v100/archived-v011-replays.json",
+      "bytes": 18055,
+      "sha256": "500097ceb4c627fc7c277d49860a6240f61a3ec474a2e12bb69da3a4be89a833"
+    },
+    {
+      "path": "docs/v100/backend-openapi.json",
+      "bytes": 164230,
+      "sha256": "ab9e5ad5b1a39af04f967a241fcf17e20417842ee1f81562eb4e5e3fbd515d21"
+    },
+    {
+      "path": "docs/v100/baseline-tests.xml",
+      "bytes": 67482,
+      "sha256": "df8c77f3b0d95b7404141b7e7ff8939e362ba88353b63b995321e81d9baf9950"
+    },
+    {
+      "path": "docs/v100/changes.json",
+      "bytes": 6917,
+      "sha256": "40f502e2fcbf079d73a91adcfd7c7b1013b84515d58d9372fa916e17921b2ee6"
+    },
+    {
+      "path": "docs/v100/e2e-final/A-es.wav",
+      "bytes": 1478604,
+      "sha256": "64d4c51c4093c910f3b1d110823a88994852eeae61442639030f829d2930738c"
+    },
+    {
+      "path": "docs/v100/e2e-final/A.wav",
+      "bytes": 1601484,
+      "sha256": "f21b7ee6ed3ed7abf5cba980a41146c99a83ccbeb5a3014b39ed1fad423bbaa9"
+    },
+    {
+      "path": "docs/v100/e2e-final/B.wav",
+      "bytes": 2326764,
+      "sha256": "e4a30b6fee52c76d31dac0a296ac98ea39e22bacfb6f2e448215a5569581ce16"
+    },
+    {
+      "path": "docs/v100/e2e-final/C.wav",
+      "bytes": 2326764,
+      "sha256": "e4a30b6fee52c76d31dac0a296ac98ea39e22bacfb6f2e448215a5569581ce16"
+    },
+    {
+      "path": "docs/v100/e2e-final/CRITICAL.wav",
+      "bytes": 2404524,
+      "sha256": "e92aad537984cfe1e35e0d9d00403662df1965e0c455b98f03d2d0098581f068"
+    },
+    {
+      "path": "docs/v100/e2e-final/D.wav",
+      "bytes": 2992844,
+      "sha256": "e360dae0e63083addd560cb81f885d0193d0ad877da51ac813145553c28e9149"
+    },
+    {
+      "path": "docs/v100/e2e-final/LOW.wav",
+      "bytes": 1601484,
+      "sha256": "f21b7ee6ed3ed7abf5cba980a41146c99a83ccbeb5a3014b39ed1fad423bbaa9"
+    },
+    {
+      "path": "docs/v100/e2e-final/OUTAGE.wav",
+      "bytes": 2404524,
+      "sha256": "e92aad537984cfe1e35e0d9d00403662df1965e0c455b98f03d2d0098581f068"
+    },
+    {
+      "path": "docs/v100/e2e-final/RESTORED.wav",
+      "bytes": 1601484,
+      "sha256": "f21b7ee6ed3ed7abf5cba980a41146c99a83ccbeb5a3014b39ed1fad423bbaa9"
+    },
+    {
+      "path": "docs/v100/e2e-final/results.json",
+      "bytes": 368188,
+      "sha256": "ae67df80b72fcf3e3e6f18ea27541fbbc9eb663e93ab0bbf2c4e15bc73e99dbf"
+    },
+    {
+      "path": "docs/v100/e2e-r2/A-es.wav",
+      "bytes": 1478604,
+      "sha256": "64d4c51c4093c910f3b1d110823a88994852eeae61442639030f829d2930738c"
+    },
+    {
+      "path": "docs/v100/e2e-r2/A.wav",
+      "bytes": 1601484,
+      "sha256": "f21b7ee6ed3ed7abf5cba980a41146c99a83ccbeb5a3014b39ed1fad423bbaa9"
+    },
+    {
+      "path": "docs/v100/e2e-r2/B.wav",
+      "bytes": 2326764,
+      "sha256": "e4a30b6fee52c76d31dac0a296ac98ea39e22bacfb6f2e448215a5569581ce16"
+    },
+    {
+      "path": "docs/v100/e2e-r2/C.wav",
+      "bytes": 2326764,
+      "sha256": "e4a30b6fee52c76d31dac0a296ac98ea39e22bacfb6f2e448215a5569581ce16"
+    },
+    {
+      "path": "docs/v100/e2e-r2/CRITICAL.wav",
+      "bytes": 2404524,
+      "sha256": "e92aad537984cfe1e35e0d9d00403662df1965e0c455b98f03d2d0098581f068"
+    },
+    {
+      "path": "docs/v100/e2e-r2/D.wav",
+      "bytes": 2979084,
+      "sha256": "b4a2b3be4b39b1f2179815a9603fa6a178048d5972f2be8c39e04d323468f797"
+    },
+    {
+      "path": "docs/v100/e2e-r2/LOW.wav",
+      "bytes": 1601484,
+      "sha256": "f21b7ee6ed3ed7abf5cba980a41146c99a83ccbeb5a3014b39ed1fad423bbaa9"
+    },
+    {
+      "path": "docs/v100/e2e-r2/OUTAGE.wav",
+      "bytes": 2404524,
+      "sha256": "e92aad537984cfe1e35e0d9d00403662df1965e0c455b98f03d2d0098581f068"
+    },
+    {
+      "path": "docs/v100/e2e-r2/RESTORED.wav",
+      "bytes": 1601484,
+      "sha256": "f21b7ee6ed3ed7abf5cba980a41146c99a83ccbeb5a3014b39ed1fad423bbaa9"
+    },
+    {
+      "path": "docs/v100/e2e-r2/results.json",
+      "bytes": 368163,
+      "sha256": "9e0a0d4a115ddc6c83e58938110a3b0930fcf11e416982d218bf94923f525d4a"
+    },
+    {
+      "path": "docs/v100/final-r2-tests.xml",
+      "bytes": 73765,
+      "sha256": "1d66fbcb3d8304d0f48b2fb4a1774d0f669805208c118f19768fec69d51888ed"
+    },
+    {
+      "path": "docs/v100/final-tests.xml",
+      "bytes": 72434,
+      "sha256": "66244cda816100aa7858fa7d78a96a1fcf119690c3ac4c9b689805db2211db49"
+    },
+    {
+      "path": "docs/v100/initial-environment.json",
+      "bytes": 971,
+      "sha256": "55369967e48445aca81d404830de8cfacdff75a168dd830cbebd91f533269461"
+    },
+    {
+      "path": "docs/v100/integrity-verification.json",
+      "bytes": 516,
+      "sha256": "4f859b80b3e828e9df7d4e842e77f33e203ca46ee522e5c1cbd28cd787a51c5a"
+    },
+    {
+      "path": "docs/v100/llm-after-03.json",
+      "bytes": 168208,
+      "sha256": "a4a573346a903f3332c6efe584c92dff0c303ed0451169b6448a14e10896e3df"
+    },
+    {
+      "path": "docs/v100/llm-after-04.json",
+      "bytes": 176618,
+      "sha256": "89955f0a067fe2565961ee899b9f609ce51b3d9ee75b899fdbd0beef95cadee1"
+    },
+    {
+      "path": "docs/v100/llm-after-05.json",
+      "bytes": 181235,
+      "sha256": "9e21b6113fc1766b29665df9aff4aa2e14e45f7b99df79d1903e4a3681a25700"
+    },
+    {
+      "path": "docs/v100/llm-after-development-02.json",
+      "bytes": 166808,
+      "sha256": "2049c0a4b962a010f66df20e8517acd981c3760ce68218a78c147cb6da1c3808"
+    },
+    {
+      "path": "docs/v100/llm-after.json",
+      "bytes": 166808,
+      "sha256": "2049c0a4b962a010f66df20e8517acd981c3760ce68218a78c147cb6da1c3808"
+    },
+    {
+      "path": "docs/v100/llm-before.json",
+      "bytes": 162066,
+      "sha256": "f544d015e183415d37372672a5a2bc389f3d7b52c4e817fc2e7acc8aa08210e1"
+    },
+    {
+      "path": "docs/v100/mission-performance-after.json",
+      "bytes": 1469,
+      "sha256": "9b802e1037e963a084e8a1c84fc0fad6a9680b06e1a22ce24f9b84e47c86efa1"
+    },
+    {
+      "path": "docs/v100/mission-performance-before.json",
+      "bytes": 1467,
+      "sha256": "a2f7b44ea3256ea55ce5e51107272bd6a5dd1a173a6ebe919af2fc284c9ad716"
+    },
+    {
+      "path": "docs/v100/portal-openapi.json",
+      "bytes": 23243,
+      "sha256": "86f9dddb94b27ba8727cc3bfbff5d5dac36b5ecc09a4376c1346927a2ec3bfa7"
+    },
+    {
+      "path": "docs/v100/rag-additional-qrels.json",
+      "bytes": 2860,
+      "sha256": "d4fd6f8bafcf08d4dd2c5cea9f825c307f37004acd43f56682af5d62c7012ca6"
+    },
+    {
+      "path": "docs/v100/rag-additional-results.json",
+      "bytes": 5086,
+      "sha256": "08d64db68ce20367ee94d0288707f9a6a52dfb2c6508bc30c065b3ec44641448"
+    },
+    {
+      "path": "docs/v100/rag-after.json",
+      "bytes": 5852,
+      "sha256": "644bfec6fef3fd7e65ac531b4e536edb0fb0d9799b24ea60cbea91957453c50a"
+    },
+    {
+      "path": "docs/v100/rag-before.json",
+      "bytes": 5732,
+      "sha256": "d3e10b9f899751b03846ca86b8d904ee74dc4010acd42be462cc1f943353abb4"
+    },
+    {
+      "path": "docs/v100/reserved/results.json",
+      "bytes": 288616,
+      "sha256": "03e109d6b9773d7ff6d56733f59c5958291059e1dd184d0d5742b80c6a569945"
+    },
+    {
+      "path": "docs/v100/screenshots/assistant-dka.jpg",
+      "bytes": 326762,
+      "sha256": "8465668bdae951c7e40a15bf2f452e1e6244a21bd33c814ac9d900c89fde8885"
+    },
+    {
+      "path": "docs/v100/screenshots/assistant-mobile.jpg",
+      "bytes": 265286,
+      "sha256": "25bd129a7889f29ddf86b00d88764468645320df4913767c52d823e1e30d3222"
+    },
+    {
+      "path": "docs/v100/structured-fact.schema.json",
+      "bytes": 3183,
+      "sha256": "2dbb15e6d66c4757718969e5819621f97149dba6261a1763416a425480cbe073"
+    },
+    {
+      "path": "docs/v100/voice-benchmark/en-0.wav",
+      "bytes": 57324,
+      "sha256": "3c4a5f112e12567fa8e0f00ab0c5597a60c7f8faf83e166f572d2e3c6fa9ef6b"
+    },
+    {
+      "path": "docs/v100/voice-benchmark/en-1.wav",
+      "bytes": 63084,
+      "sha256": "a528a06f1eda3595c9ac859aa8217c529c8d0fb12130c2765e42ad7ac981434e"
+    },
+    {
+      "path": "docs/v100/voice-benchmark/en-10.wav",
+      "bytes": 119564,
+      "sha256": "ed9c2bb82b2626f21522202996199e82f128ac414aac1c6baa9631a7286622bb"
+    },
+    {
+      "path": "docs/v100/voice-benchmark/en-11.wav",
+      "bytes": 112524,
+      "sha256": "b6bf13ace1cebc623ee8392b7e92458edca78b923569b82d3888706688482818"
+    },
+    {
+      "path": "docs/v100/voice-benchmark/en-12.wav",
+      "bytes": 128844,
+      "sha256": "d9e9a627b3ab9591bc0111a615f668c61e12ea165d7b3a3ec4ed4b7180e39615"
+    },
+    {
+      "path": "docs/v100/voice-benchmark/en-13.wav",
+      "bytes": 94124,
+      "sha256": "0a248817bed0fe20a5c70bc6dd149113c125b431c53d27e97c456ca9917362a5"
+    },
+    {
+      "path": "docs/v100/voice-benchmark/en-14.wav",
+      "bytes": 150284,
+      "sha256": "93c7d727cf067f51ec6a8e062aba410b3034d3f69d4404ff72eaba075caa4dc4"
+    },
+    {
+      "path": "docs/v100/voice-benchmark/en-15.wav",
+      "bytes": 102764,
+      "sha256": "797934028cd6dce22cec742f12d2b39adc361633d23fa4ff5abc7c028ce91d7c"
+    },
+    {
+      "path": "docs/v100/voice-benchmark/en-2.wav",
+      "bytes": 85164,
+      "sha256": "acf8aea9cb7f6df6e1cf007ffc9ed8629b9ff268a831f5bf7868be5d34b06a32"
+    },
+    {
+      "path": "docs/v100/voice-benchmark/en-3.wav",
+      "bytes": 76844,
+      "sha256": "c1f755757937484c3ba77fb96bd05b9c5cc1a966cd5c70193bfa3d22ed989910"
+    },
+    {
+      "path": "docs/v100/voice-benchmark/en-4.wav",
+      "bytes": 67244,
+      "sha256": "9d63b737c8e38dc49f95fb71dc68b5174968416b71061592ed090d4bf27ea3a6"
+    },
+    {
+      "path": "docs/v100/voice-benchmark/en-5.wav",
+      "bytes": 45644,
+      "sha256": "63f68241e4d14f64838ec1b50acd177b7ed3865962f28978b7d8c3ec589d40b5"
+    },
+    {
+      "path": "docs/v100/voice-benchmark/en-6.wav",
+      "bytes": 66124,
+      "sha256": "b55ea40dd52061d92a23035d53894d781c12420399beb25c216dd207bfe71cc6"
+    },
+    {
+      "path": "docs/v100/voice-benchmark/en-7.wav",
+      "bytes": 54764,
+      "sha256": "e28bff381394050c57c5fe3e4822d8d319929de61c90ff73820d2f8e3b4c8b8c"
+    },
+    {
+      "path": "docs/v100/voice-benchmark/en-8.wav",
+      "bytes": 71564,
+      "sha256": "9347e003e5015a684aafbce1c42569b9d36c88afd9c0732d2f0b075bb2afdbbc"
+    },
+    {
+      "path": "docs/v100/voice-benchmark/en-9.wav",
+      "bytes": 145804,
+      "sha256": "ab07a23bec0a373514607968bce1018b1beff461bd35deb98f4e57b93d05f829"
+    },
+    {
+      "path": "docs/v100/voice-benchmark/es-0.wav",
+      "bytes": 51884,
+      "sha256": "7ab2adc4e2341cc5c3cbcbcfc0c7a0b881daecce245ad64a113c1f0aced193c5"
+    },
+    {
+      "path": "docs/v100/voice-benchmark/es-1.wav",
+      "bytes": 52204,
+      "sha256": "f50dd019fbcd146b64e77b8f6d128277e7f3b8a478b39b2e8fdf37739f7aa2d8"
+    },
+    {
+      "path": "docs/v100/voice-benchmark/es-10.wav",
+      "bytes": 111244,
+      "sha256": "07e1370d54e50d2a4250fc17f78feadea0c0b4b3e1bbb96bbdf343749d51046d"
+    },
+    {
+      "path": "docs/v100/voice-benchmark/es-11.wav",
+      "bytes": 89804,
+      "sha256": "db45380b21c8712db2ba57c4b1e1d2de41d5ecd3662cb4e2123effa11e224cdf"
+    },
+    {
+      "path": "docs/v100/voice-benchmark/es-12.wav",
+      "bytes": 115244,
+      "sha256": "ef7f09863e598ffc1deb3ac0e598df7c9fca64b8e6aa73cb1b5bd62513703658"
+    },
+    {
+      "path": "docs/v100/voice-benchmark/es-13.wav",
+      "bytes": 95244,
+      "sha256": "5ac42a9cb9199b529b669d2f213298640f7cf6dad47117ae07da48efa12d5cbf"
+    },
+    {
+      "path": "docs/v100/voice-benchmark/es-14.wav",
+      "bytes": 155884,
+      "sha256": "c3a1207a0b2b5ce6bc3ea148463d2389959bbaab38071432203a942993f48298"
+    },
+    {
+      "path": "docs/v100/voice-benchmark/es-15.wav",
+      "bytes": 96044,
+      "sha256": "b6543c860121fef028b8cbba64a43fc81287f37963de82374c6d1480e1302555"
+    },
+    {
+      "path": "docs/v100/voice-benchmark/es-2.wav",
+      "bytes": 72204,
+      "sha256": "5466e01ab08a83cc6c7da34b2c595003eba3c24cb0cf32da9ee296be412aaf5f"
+    },
+    {
+      "path": "docs/v100/voice-benchmark/es-3.wav",
+      "bytes": 72044,
+      "sha256": "bf489a6ef9dcd97f8215fbd6c2f713e3e09fe1dfc5dd95f1f0796d9ab17daa5d"
+    },
+    {
+      "path": "docs/v100/voice-benchmark/es-4.wav",
+      "bytes": 72364,
+      "sha256": "94f0d470800adaee26429b8645ac13e361bed90762d6ee559459db16c0eca279"
+    },
+    {
+      "path": "docs/v100/voice-benchmark/es-5.wav",
+      "bytes": 66604,
+      "sha256": "b534731b4a8801b031ee61e6e8de1c8fdf974c655577dc8ee1ec9c0cdb125321"
+    },
+    {
+      "path": "docs/v100/voice-benchmark/es-6.wav",
+      "bytes": 65164,
+      "sha256": "b90095548457fcce8167c0fb0f3001ac34ff591b31364c02b52ff5f4dc956907"
+    },
+    {
+      "path": "docs/v100/voice-benchmark/es-7.wav",
+      "bytes": 49644,
+      "sha256": "afe4cbf7cea2c051d29544f1e6582363536cd96aef81d39cfdc055fb403f2075"
+    },
+    {
+      "path": "docs/v100/voice-benchmark/es-8.wav",
+      "bytes": 68684,
+      "sha256": "b06ba7343ab5f563c12de53872735348ab1460bdc5851bda8cd1b76405909e3c"
+    },
+    {
+      "path": "docs/v100/voice-benchmark/es-9.wav",
+      "bytes": 139244,
+      "sha256": "831c94c6699bb67c863031910c29eaf43c7e54c5ee8c580664b6a52f62d65616"
+    },
+    {
+      "path": "docs/v100/voice-benchmark/references.json",
+      "bytes": 1341,
+      "sha256": "49e5fa20b470173f112746c498dc121eb3691fd8e13bd554a7790b36b33cb651"
+    },
+    {
+      "path": "docs/v100/voice-benchmark/results.json",
+      "bytes": 27176,
+      "sha256": "4dc63db36602c63e57067ab7a8d2e83402c1a9bfb1b8d63395b3b6093fa2fbcd"
+    },
+    {
+      "path": "docs/v100/voice-model-downloads.json",
+      "bytes": 6659,
+      "sha256": "5b50404041654697cb72a2f46b84e3ec0d0907699b749886d5801b504f696b34"
+    },
+    {
+      "path": "engine/local_ai/library-v080.json",
+      "bytes": 485696,
+      "sha256": "21ff74530f433d0c0b10651a1bb83b673f6c0514ac00f1e2fe9a8c364a6623c0"
+    },
+    {
+      "path": "engine/pyproject.toml",
+      "bytes": 637,
+      "sha256": "37d4e0b9ecd8e3ec6f969b122ac5d638321c6c2578e68a6cb0d7ed9d06866c27"
+    },
+    {
+      "path": "engine/requirements-v100.lock.txt",
+      "bytes": 575,
+      "sha256": "6593ec3ef8ec60e17e796647698675625d58c17640229322c6e79ae68ae4338c"
+    },
+    {
+      "path": "engine/tests/conftest.py",
+      "bytes": 2664,
+      "sha256": "8d4e6cb45981cc41cb92ae46ffb62c5906a782f22452f1fa541a3d7271c9b904"
+    },
+    {
+      "path": "engine/tests/test_api.py",
+      "bytes": 1922,
+      "sha256": "359f4828c5510d437a8d8bc4c1ce9e311a76cb6c1b074ca18cf2d61952a05e38"
+    },
+    {
+      "path": "engine/tests/test_biomedical_audit.py",
+      "bytes": 15330,
+      "sha256": "0e629bf2914707c8a94ff64a255918797a536981f90978dbf21a130d7b1e9acc"
+    },
+    {
+      "path": "engine/tests/test_clinical.py",
+      "bytes": 18931,
+      "sha256": "ba6a6cd3754bdff4ea475188df9f81c7e8c978c3acf56a9bbd9095b99bf6a3e5"
+    },
+    {
+      "path": "engine/tests/test_clinical_consistency.py",
+      "bytes": 9289,
+      "sha256": "bca06e00466d32a462ae78652eaa92f7fa1ad3aff277c200164d426c9866338b"
+    },
+    {
+      "path": "engine/tests/test_conversational.py",
+      "bytes": 5915,
+      "sha256": "4a9ef1871e4cafe33fd4776d2395db22d7303c0fad4bab0a1e9d3148ae5a1037"
+    },
+    {
+      "path": "engine/tests/test_integration_edges.py",
+      "bytes": 2442,
+      "sha256": "0e3d83606370ba58e21632f47c8868d35c313ba5bfee1aa4620f712b229ae051"
+    },
+    {
+      "path": "engine/tests/test_integration_release.py",
+      "bytes": 6291,
+      "sha256": "0e70cebf9f6ac4a7d58841ed7e9eaafbba48c2c5b0ed2ce290024ebbed1023db"
+    },
+    {
+      "path": "engine/tests/test_local_protection_v010.py",
+      "bytes": 3963,
+      "sha256": "b213d8099ef4ad6a8acd5de681c4c9eeaf9b41558df8eb791c769458d951b8c5"
+    },
+    {
+      "path": "engine/tests/test_mission_v011.py",
+      "bytes": 13001,
+      "sha256": "602b13cc3179214d1fe3d52eba8f0848e84c881cd3a58685764677307a008ff9"
+    },
+    {
+      "path": "engine/tests/test_monitoring.py",
+      "bytes": 14676,
+      "sha256": "d3f30883e8229a48d9eeb5505f5247d91e232186a723c453c36fa61179821a03"
+    },
+    {
+      "path": "engine/tests/test_original_rules.py",
+      "bytes": 1233,
+      "sha256": "b3ea9817bc86ed9be85401853521c727d7407e000283ce0d268c69aa2c9afd51"
+    },
+    {
+      "path": "engine/tests/test_portal.py",
+      "bytes": 9273,
+      "sha256": "372ea133a8d108f38d14224c618adf71e8a14e9de22542d92c2ee9d1f1544c4b"
+    },
+    {
+      "path": "engine/tests/test_portal_v010.py",
+      "bytes": 4927,
+      "sha256": "9e06183804a83d38c8cef201c9dcb381392aa2843a10b32ef7bdd2ba7a4a8716"
+    },
+    {
+      "path": "engine/tests/test_safety.py",
+      "bytes": 7264,
+      "sha256": "d31a9a250e6ac91a571c9fe1e6e66f59d0060455694ff64e56a643b06482ad4f"
+    },
+    {
+      "path": "engine/tests/test_synthetic_cases.py",
+      "bytes": 6715,
+      "sha256": "bda942f60734c1332502de795eb8bd398f8fa946a89afad8edca83b3bac21077"
+    },
+    {
+      "path": "engine/tests/test_v02.py",
+      "bytes": 12521,
+      "sha256": "677a8b17d8d11bc9629ac5c325715910284e3eded500a3203b54db5601d80b48"
+    },
+    {
+      "path": "engine/tests/test_v08_ai.py",
+      "bytes": 8116,
+      "sha256": "ca97ecbb12029df9eaf46ad28856846485a99d5370564c27ad01f6a8d409b5f2"
+    },
+    {
+      "path": "engine/tests/test_v08_biomedical.py",
+      "bytes": 3738,
+      "sha256": "e9ae83f16b37d5c322b2789c256a471b9509d48af5140af8a8226e3806311366"
+    },
+    {
+      "path": "engine/tests/test_v09_controls.py",
+      "bytes": 7633,
+      "sha256": "9c5bc87c071a3b802ee4d5726c49b7cf42932c1bbb8b2dd0cac398e474912931"
+    },
+    {
+      "path": "engine/tests/test_voice_v100.py",
+      "bytes": 15443,
+      "sha256": "f0465ffd09cdcf5a57e2f57a824965c159d4a80f65bde028dd1a11e48249347a"
+    },
+    {
+      "path": "engine/tests/voice_ui_unit.cjs",
+      "bytes": 5045,
+      "sha256": "90da127ecb6ef353fbb5e6d534c399585ba3c6ee25c9cd8c1b33a0b2c01b899c"
+    },
+    {
+      "path": "engine/tools/download_local_ai.py",
+      "bytes": 2277,
+      "sha256": "a0e8398580c21ee79fef1c34b5ee0976c2c1528acba51af5ca0e889a2976e00b"
+    },
+    {
+      "path": "engine/tools/evaluate_reserved_once.py",
+      "bytes": 5049,
+      "sha256": "222305ca894e3dbc625004ab8902a45ab9eb37e821b3cdcd854337e5a29f46f1"
+    },
+    {
+      "path": "engine/tools/setup_voice.py",
+      "bytes": 2048,
+      "sha256": "33cc817af24fbcd364143ee4767bf459ee087a706a8434fcf5b4b6ddb6024aa8"
+    },
+    {
+      "path": "engine/tools/start_ollama_vigile.py",
+      "bytes": 1700,
+      "sha256": "febf05af2828afa309a230350bf22cf090e0221b00d0f75b7d41d1e1889ce157"
+    },
+    {
+      "path": "engine/vigile/__init__.py",
+      "bytes": 23,
+      "sha256": "c838729e2a0e7854b4c093e321b110dff99b2398328bfa03fc61bfea753fc906"
+    },
+    {
+      "path": "engine/vigile/__main__.py",
+      "bytes": 4448,
+      "sha256": "d0f1e771a9ba6f40c4c13c134ade1f7d88f3fa70f34b780f903fc94b5da5672a"
+    },
+    {
+      "path": "engine/vigile/adapters.py",
+      "bytes": 3410,
+      "sha256": "75e9afa0647435aeab6229aa28db955a8a24d6f1f3fa31131630df14a3194731"
+    },
+    {
+      "path": "engine/vigile/ai_evaluation.py",
+      "bytes": 6718,
+      "sha256": "2dc8718f7ac744f02c14c8193dbc9b6ed4b1d9e0004497e7c078747e1677a6c7"
+    },
+    {
+      "path": "engine/vigile/algorithms.py",
+      "bytes": 3890,
+      "sha256": "983fe436222ee786dc444fe637dd3921498cbdaae627a007fd00a852ad6b5590"
+    },
+    {
+      "path": "engine/vigile/api.py",
+      "bytes": 14370,
+      "sha256": "4eac91e4acb500073bb07818f67ea4fe0d00755aecf9b1ff0a217bd245a6c218"
+    },
+    {
+      "path": "engine/vigile/assistant_safety.py",
+      "bytes": 2206,
+      "sha256": "a0a1e1a7b71c03b47a921ebfb21e7ae6bb0210e8bffd6202ef8518538c841849"
+    },
+    {
+      "path": "engine/vigile/clinical_api.py",
+      "bytes": 5007,
+      "sha256": "646f04e58b6de30bab71ab7a5c87b6ef3ec7c5ecd247ce29d754a6322b6e928e"
+    },
+    {
+      "path": "engine/vigile/clinical_contracts.py",
+      "bytes": 4744,
+      "sha256": "2514a9ce8b6dc04f67652f361580497b77d1c4ec95355a886d14fa63e9e3b71c"
+    },
+    {
+      "path": "engine/vigile/clinical_demo.py",
+      "bytes": 7056,
+      "sha256": "a920006fc576f59cf1a8342d99081a14bcd16a18052968d1936aa7f2eeb9fc92"
+    },
+    {
+      "path": "engine/vigile/clinical_differential.py",
+      "bytes": 6932,
+      "sha256": "a19c7cb21897d8d6359e100e24995a937d0e8edca360febf9cc985b426e80d91"
+    },
+    {
+      "path": "engine/vigile/clinical_engine.py",
+      "bytes": 31004,
+      "sha256": "01c931c4ff2229e5256456c1a8ae594bf9929e75a8ebe164ea83da087c420ad0"
+    },
+    {
+      "path": "engine/vigile/clinical_knowledge.py",
+      "bytes": 2826,
+      "sha256": "ffb6316fd90abe2cc70071cd201a401e6cee7bc30e55c7b9f26e0c74e7ef08f5"
+    },
+    {
+      "path": "engine/vigile/clinical_knowledge/contraindications.json",
+      "bytes": 2410,
+      "sha256": "c7b03068b4345d553e7b002c2fbdd2207ff855b6664c01b72fe96e2b6d95fcc7"
+    },
+    {
+      "path": "engine/vigile/clinical_knowledge/diagnostic_criteria.json",
+      "bytes": 8995,
+      "sha256": "3aee3add20e11ace8f192969ce0ce827b1ea163e55935110cc5afdd6c016c8ee"
+    },
+    {
+      "path": "engine/vigile/clinical_knowledge/diagnostic_tests.json",
+      "bytes": 3717,
+      "sha256": "ee49c8077105613c59fb8b8a5d3c61a6497616579205628462d02ac4f59d8a8d"
+    },
+    {
+      "path": "engine/vigile/clinical_knowledge/differential_rules.json",
+      "bytes": 4283,
+      "sha256": "22daab629bd06ce9756d940c63b3ebbf9dca37811d29467520fc2e27bce178b7"
+    },
+    {
+      "path": "engine/vigile/clinical_knowledge/manifest.json",
+      "bytes": 935,
+      "sha256": "aebd5cf96c6892066e72c9207f87f331e29dfffe2ddeff45108e70faf4835a27"
+    },
+    {
+      "path": "engine/vigile/clinical_knowledge/sources_verified.json",
+      "bytes": 6864,
+      "sha256": "2c41be379e10b0c2ba3f7077fd47a9ae138f31addee1a9a2829f3f9bd815c2cd"
+    },
+    {
+      "path": "engine/vigile/clinical_knowledge/space_applicability.json",
+      "bytes": 2380,
+      "sha256": "d86e575957ab11f2abb831a1e0f64897586b0fe2ffd9aa5aee4d51bdc5df65b0"
+    },
+    {
+      "path": "engine/vigile/clinical_knowledge/synthetic_cases.json",
+      "bytes": 17158,
+      "sha256": "24f2f3e3bc0cbd749167c9bdbd69765a5f36a04ad9c0691aa92efc492852ab81"
+    },
+    {
+      "path": "engine/vigile/clinical_knowledge/treatment_protocols.json",
+      "bytes": 5082,
+      "sha256": "89a33123f49782318595967228cba6e7285d3f5662b5cbe7bda4df06d49130cc"
+    },
+    {
+      "path": "engine/vigile/clinical_knowledge/v07-extension.json",
+      "bytes": 3727,
+      "sha256": "b258ff2d79ab79355f65826466c9fc3e7a52380b749ec18ef2eb4700759e4fd8"
+    },
+    {
+      "path": "engine/vigile/clinical_logic.py",
+      "bytes": 4878,
+      "sha256": "9a3705bbf259489b1de9d0ea436ce57908ee5bd5476e7144dcb5819bb5f8e665"
+    },
+    {
+      "path": "engine/vigile/clinical_models.py",
+      "bytes": 4128,
+      "sha256": "7f4cc40c77f77e1edab8eda2650697776b2607b2bf56286ca71499bd14b1cdd7"
+    },
+    {
+      "path": "engine/vigile/clinical_simulator.py",
+      "bytes": 5103,
+      "sha256": "780efe1e8f7e53f5ea4589a64f0fc86004cad660c1ad583d4e1b995823d6ef55"
+    },
+    {
+      "path": "engine/vigile/conversational.py",
+      "bytes": 12801,
+      "sha256": "a28ae150f08d16719a1be17ad89d2eae60c29475393ecbaed73710ecb9f7fd6a"
+    },
+    {
+      "path": "engine/vigile/credentials.py",
+      "bytes": 1337,
+      "sha256": "5e84fa82d14324acb303238f1072e56cbdc6f36f69a5aff47cef91583df30a72"
+    },
+    {
+      "path": "engine/vigile/dashboard_api.py",
+      "bytes": 3476,
+      "sha256": "8a577200e020fee242ec98e5e024d72207422ba9cc1e475c1800c97e4c43aba1"
+    },
+    {
+      "path": "engine/vigile/demo.py",
+      "bytes": 2979,
+      "sha256": "6c7b3433bef72e1cd022f472e7f792463a5fed332d934f51c21a20863c93f179"
+    },
+    {
+      "path": "engine/vigile/documentary.py",
+      "bytes": 2872,
+      "sha256": "6c7cf69e1d7d44931986cb078f08159f9741a9f835e3c9cd4eceef5edba299f1"
+    },
+    {
+      "path": "engine/vigile/encrypted_storage.py",
+      "bytes": 1354,
+      "sha256": "9a3ab025f86f8034eef0a69cf0b0efb20af9af1242b98ea1c16ff0878b1218c7"
+    },
+    {
+      "path": "engine/vigile/extensions.py",
+      "bytes": 10721,
+      "sha256": "c258fdc0ac16ddc0a4648a94019d0af184ea4bcf2eda8c8ece778e47b877559d"
+    },
+    {
+      "path": "engine/vigile/inference_failures.py",
+      "bytes": 1566,
+      "sha256": "54115f93109bc0b12bf06640ee96439281897357cd3da86c72d56507eda46e7a"
+    },
+    {
+      "path": "engine/vigile/integration.py",
+      "bytes": 17739,
+      "sha256": "3b4d4e204d225ad9599724cda3ea9f9e67206eb3d52f6e9d11f020c1df94e440"
+    },
+    {
+      "path": "engine/vigile/knowledge_v08.py",
+      "bytes": 7786,
+      "sha256": "f0ccfcb9233818ef837e63c672b0363396e8ca8157bf2d8b491e6a151132f83b"
+    },
+    {
+      "path": "engine/vigile/local_assistant.py",
+      "bytes": 16680,
+      "sha256": "450f5e99375b946cb29edbac1fc2c54e633c8d97336cecad83012c989302fa80"
+    },
+    {
+      "path": "engine/vigile/local_protection.py",
+      "bytes": 7349,
+      "sha256": "b68a19a826c6685749af0c449b18bcf9c55fba4abbeb3918e54ae91b1b6df614"
+    },
+    {
+      "path": "engine/vigile/local_runtime.py",
+      "bytes": 3153,
+      "sha256": "a2874c9a5d046f9c04db9ecd7b6e178fc5adfbdbb1877b63696eb275a7276a08"
+    },
+    {
+      "path": "engine/vigile/longitudinal_assistant.py",
+      "bytes": 14400,
+      "sha256": "453925f1292fb807c89cd4a39271db97208d63bb9be166674a8cac91344bc342"
+    },
+    {
+      "path": "engine/vigile/mission_context.py",
+      "bytes": 1801,
+      "sha256": "eba742226415c9a7b562ec268fd5b86a26c461d0ff46d59a8a108f430df05717"
+    },
+    {
+      "path": "engine/vigile/mission_demo.py",
+      "bytes": 15600,
+      "sha256": "6204d0692f417f859c5a4cf5487a65ded4898f5fb326bda30e4a0bf6e0e3d952"
+    },
+    {
+      "path": "engine/vigile/mission_frames.py",
+      "bytes": 3478,
+      "sha256": "219c8923ca0140d4019dc762258cd7644dc8b2b2d0314cd5e073fcce9947c5df"
+    },
+    {
+      "path": "engine/vigile/mission_review.py",
+      "bytes": 5759,
+      "sha256": "3fce1369bde8f82cfb440e5049604d0e578b4a04f5a2ae2e0d0833ea7066b716"
+    },
+    {
+      "path": "engine/vigile/models.py",
+      "bytes": 7258,
+      "sha256": "c8bbac4e9f29bbf504666d20b63a64b098515bb80e166a305a660a4b08ee8765"
+    },
+    {
+      "path": "engine/vigile/monitoring.py",
+      "bytes": 24792,
+      "sha256": "e32c2bcda14042014b554ce2352ab9e212800ca7fcfc589f74f6d103dfa92cc8"
+    },
+    {
+      "path": "engine/vigile/monitoring_demo.py",
+      "bytes": 9277,
+      "sha256": "03a700743e8de4943eb3e535b276bc24152326fd87e17cff6b4877eda2f56ec6"
+    },
+    {
+      "path": "engine/vigile/monitoring_models.py",
+      "bytes": 4068,
+      "sha256": "23027365d3614c8b4e9c91a0c381c282664b133305da01d10d9ca88f92227344"
+    },
+    {
+      "path": "engine/vigile/monitoring_portal_demo.py",
+      "bytes": 2573,
+      "sha256": "204e5ff05bdeb2b11af3d4ddd6ff72c47c0748973eda111a26650acc1590f610"
+    },
+    {
+      "path": "engine/vigile/offline_library.py",
+      "bytes": 3093,
+      "sha256": "3375f9783ccb810f4285b6eaf1a90a76b63685b457a9a6a5592c215fa8495477"
+    },
+    {
+      "path": "engine/vigile/pathways.py",
+      "bytes": 1652,
+      "sha256": "9d349d467beadeccf202b5fbbf533640adef6930998a862d24dcc47e6a523747"
+    },
+    {
+      "path": "engine/vigile/portal.py",
+      "bytes": 13359,
+      "sha256": "3dfcb4326b684fdd1b2914d54f0ca87ab5517bba60652f7a383ec0e6ff8f5b2d"
+    },
+    {
+      "path": "engine/vigile/portal_demo.py",
+      "bytes": 3662,
+      "sha256": "d314ea8eb790662f3ac9ac670a70b4d2eb9e0815bf3d583570cd17def2ba424b"
+    },
+    {
+      "path": "engine/vigile/portal_documents.py",
+      "bytes": 1060,
+      "sha256": "ad15b2f3e1dc271259401bbfb0d7cefc82015ed280e8ff58a0e3be77525adfc5"
+    },
+    {
+      "path": "engine/vigile/portal_sessions.py",
+      "bytes": 2058,
+      "sha256": "cfee241ed0aae800c865a5b1531e73cabd78f7e098559c39342d7caaca3766fc"
+    },
+    {
+      "path": "engine/vigile/product_demo.py",
+      "bytes": 1034,
+      "sha256": "3d92a8ba995a90812d3064348da72a9dc1ec92ef7a0fac93fcd120826035fc88"
+    },
+    {
+      "path": "engine/vigile/quality.py",
+      "bytes": 4617,
+      "sha256": "c2615e137b638b198fa34aed949e295a941627254015fa0be650df752ac060d4"
+    },
+    {
+      "path": "engine/vigile/registry.py",
+      "bytes": 5980,
+      "sha256": "0203e80997e20ad0fed2757be2046d62e0ebdbce2fe23554c1ea42bef55cbd34"
+    },
+    {
+      "path": "engine/vigile/retrieval_bm25.py",
+      "bytes": 3459,
+      "sha256": "164be2c18526be25e01abd47e8c0edf87179c9334517d03c5150af31e11598f7"
+    },
+    {
+      "path": "engine/vigile/rules.py",
+      "bytes": 10074,
+      "sha256": "a80f37fa03730de692afd77b7d248265bbceb15b5a912eb976bc0e9682641f20"
+    },
+    {
+      "path": "engine/vigile/security.py",
+      "bytes": 10083,
+      "sha256": "2a5660800f4e71d466a62d2c93ed282a499ff36bda7db2f9c4a32fc339ec691a"
+    },
+    {
+      "path": "engine/vigile/service.py",
+      "bytes": 27094,
+      "sha256": "de9fa4c02f03ea5f205dd744935e87fb9285a4f2a48930673e23cda21672d056"
+    },
+    {
+      "path": "engine/vigile/simulator.py",
+      "bytes": 5644,
+      "sha256": "42b01a2c697ee50d8320e7c0eb7501e3cbe21ae7a229ea3da8eeb882c918bbf8"
+    },
+    {
+      "path": "engine/vigile/space_compute.py",
+      "bytes": 4838,
+      "sha256": "5202790cceb25450a85c77232dd614ce25a561de27639601d5192cb5c949b67e"
+    },
+    {
+      "path": "engine/vigile/store.py",
+      "bytes": 5637,
+      "sha256": "861d46f4d071fed5cb1edd5e4db3b58f1dd6830739499dd7fb80b3ea20613af7"
+    },
+    {
+      "path": "engine/vigile/structured_facts.py",
+      "bytes": 9482,
+      "sha256": "c118a7268acf3027595579348caf336f32c2c0239421be59f124f35bc3e9db14"
+    },
+    {
+      "path": "engine/vigile/voice.py",
+      "bytes": 8174,
+      "sha256": "8715ff27a1d60115223659d4b720a4c0c98150c9c21e236a8f903215b4f26f38"
+    },
+    {
+      "path": "engine/vigile/voice_api.py",
+      "bytes": 12256,
+      "sha256": "4af0fcd91f3134ef49b8d6d3d783db0b2d780f5bda9f4a5bb3e05b98b116dd04"
+    },
+    {
+      "path": "engine/vigile/voice_assets/models.json",
+      "bytes": 6659,
+      "sha256": "5b50404041654697cb72a2f46b84e3ec0d0907699b749886d5801b504f696b34"
+    },
+    {
+      "path": "engine/vigile/voice_assets/sapi.ps1",
+      "bytes": 1988,
+      "sha256": "65d0857cd6d06d573f9f17730c31eaf75b368387572a2b40cf65e3cac0a207af"
+    },
+    {
+      "path": "engine/vigile/web/app.js",
+      "bytes": 40434,
+      "sha256": "aeb087e4e576d61072f958544986cee5325df7c6ac9187f22bf12410b79bb31d"
+    },
+    {
+      "path": "engine/vigile/web/index.html",
+      "bytes": 8616,
+      "sha256": "b49db9060b8b8e9ba4b178fb97913254a0337b96cceb82a97e929b0b79e0535b"
+    },
+    {
+      "path": "engine/vigile/web/recorder-worklet.js",
+      "bytes": 422,
+      "sha256": "4ca8182be376cdd1add3e8ddb2b9cbdaf894fd184aa55cde5ba4cce9b6589e78"
+    },
+    {
+      "path": "engine/vigile/web/style.css",
+      "bytes": 9692,
+      "sha256": "b990e54b6e3265480eab777a09b8cc310b26b93e4c1e1619600da4ee306cf297"
+    },
+    {
+      "path": "engine/vigile/web/voice-controller.js",
+      "bytes": 11257,
+      "sha256": "4029bedcb05652b00c6375a27482c7b9951f56626b6f376e25ae21cfcbbd9802"
+    },
+    {
+      "path": "work/v100/additional_rag.py",
+      "bytes": 2020,
+      "sha256": "df0d6f52b669cbddb687bd7604e157f58a32f5ff6ae8afcb4f837f17f8b57288"
+    },
+    {
+      "path": "work/v100/benchmark_prefixes.py",
+      "bytes": 2436,
+      "sha256": "c61cdbc9a3d4cff145ed6a440b03c97bfa5911cefbd00a126e904fdaf416e7be"
+    },
+    {
+      "path": "work/v100/benchmark_voice.py",
+      "bytes": 5078,
+      "sha256": "67bc22da2699fb99990bcd96efb4a7bbbe90b42633b51f298170eac38b343082"
+    },
+    {
+      "path": "work/v100/evaluate_product_voice.py",
+      "bytes": 5650,
+      "sha256": "42ce84552747fb145876114ed6e2f76a54aa7175cfa0b9ba681234a97da221f7"
+    },
+    {
+      "path": "work/v100/evaluate_rag.py",
+      "bytes": 1120,
+      "sha256": "d06f0dd4a7e1ea1845aeb385a0a5d65f89f9961cbd52b65287de8022e03eb545"
+    },
+    {
+      "path": "work/v100/make_results.py",
+      "bytes": 5415,
+      "sha256": "e9b753d396b8389de806596276e12aed4c892af6e1ee60d41ce4c510244d185f"
+    },
+    {
+      "path": "work/v100/verify_old.py",
+      "bytes": 1037,
+      "sha256": "47b048e136d9de89d33ae55f864c45a971ad7b80c99ce733418824c395e00fc3"
+    }
+  ],
+  "excludes": [
+    "Databases/WAL/backups",
+    "DPAPI envelopes and credentials",
+    "Private keys/anchors",
+    "Ollama/runtime binaries",
+    "All model weights and Windows voices"
+  ],
+  "requires_separate_provisioning": [
+    "Python/Windows voices",
+    "Ollama and vigile-qwen3-4b:latest",
+    "Explicit Vosk setup"
+  ],
+  "reserved_used": true,
+  "source_freeze_verified": true,
+  "clinical_validation": false
+}

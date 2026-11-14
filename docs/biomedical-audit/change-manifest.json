@@ -1,0 +1,27 @@
+{
+  "audit_id": "BIOMED-AUDIT-2026-10-20",
+  "implementation_hash": "fc0f2bc44bcd3a742b0a52d593607168be803cad5df77e7b383fb1472ff29433",
+  "changed_modules": [
+    {
+      "path": "engine\\vigile\\clinical_api.py",
+      "before_sha256": "f54b2ca8765af1563353526d8085772361b76dac13ac778f5f856895e3379216",
+      "after_sha256": "a9a5427b8fe352ec44e446884ead36cebe898a00887cc98d784c33ca92b716cb"
+    },
+    {
+      "path": "engine\\vigile\\clinical_contracts.py",
+      "before_sha256": null,
+      "after_sha256": "2514a9ce8b6dc04f67652f361580497b77d1c4ec95355a886d14fa63e9e3b71c"
+    },
+    {
+      "path": "engine\\vigile\\clinical_engine.py",
+      "before_sha256": "35468ce3d8a5c03592969185cc3990daf63b035aebd15774e3975e2066757dda",
+      "after_sha256": "4354d7a6505e2724fb8933a4a73cf0ed29ccb1459a5c8591e71f9b2dcb9b5673"
+    },
+    {
+      "path": "engine\\vigile\\clinical_models.py",
+      "before_sha256": "02a865ca1493540aea3d9cf02dab96fdbb332f04c5d101140f46f60703d467de",
+      "after_sha256": "d0d47053e88c1d9289fc5ba5836ca416dcba00c58b905edb08d14368ea93e103"
+    }
+  ],
+  "knowledge_hash": "cb0dc5bba91e4861f2395d5cf9514e6a75de95709feb105fb6866041812c44ae"
+}

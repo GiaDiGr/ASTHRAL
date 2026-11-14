@@ -1,0 +1,18 @@
+{
+  "clinical_validation": false,
+  "transport": "FastAPI ASGI HTTP TestClient; no external network calls",
+  "request_count": 28,
+  "latency_ms_median": 17.51679999870248,
+  "latency_ms_max": 68.7927000108175,
+  "python_peak_tracemalloc_bytes": 3713079,
+  "sqlite_bytes": 258048,
+  "knowledge_hash": "b8c568bd645154e5fd67630c7a670ca53904dc04f54904315047a89923839d4e",
+  "all_replays_match": true,
+  "reader_write_denied": true,
+  "request_hashes": {
+    "dka": "fddda5afb4a3918b4d3597a5afc27cc6c109e5502d88ccbaf3252e8b0249c3bb",
+    "anaphylaxis": "ea6b89b4f02f6a36fa30e67f0acf8d1778420d2fe201d5106ae45920822cd635",
+    "dizziness": "6b600dddfacfb52ba8f96185b9504792ce5ed38a643de2c4bae13bbdbd6be80d"
+  },
+  "outputs": "C:\\Users\\Gianni\\Desktop\\Vigile\\work\\v100\\pytest-full-development\\test_repeated_demo_reproduces_0\\repeat"
+}

@@ -1,0 +1,31 @@
+{
+  "condition_id": "C019",
+  "catalog_record": {
+    "condition_id": "C019",
+    "name_specialty": "Reactivación viral latente / infeccioso-inmunológico",
+    "description_spaceflight": "Reactivación viral ha sido observada durante vuelo y se relaciona con cambios inmunes.",
+    "risks_symptoms": "Estrés e inmunomodulación.",
+    "biomarkers_sensors_tests": "PCR/serología/biomarcadores cuando autorizados; síntomas.",
+    "baselines_environment_interactions": "Baseline/historia viral.",
+    "primary_evidence": "S09. citeturn12search0turn12search7",
+    "limits_authorizations_state": "No diagnosticar reactivación por síntomas inespecíficos. `RV`."
+  },
+  "clinical_pathway_profile_as_published": "**P:** control de factores de estrés; **M:** síntomas+ensayos si disponibles; **Q:** calidad PCR/serología; **D:** laboratorio, no síntomas solos; **A/DD:** otras infecciones; **T/I:** médico; **R/F:** resolución; **G:** `RV`.",
+  "coverage_states": {
+    "prevention": "ES",
+    "monitoring": "RV",
+    "data_quality": "ES",
+    "detection": "RV",
+    "assessment": "RV",
+    "differential_diagnosis": "RV",
+    "triage": "RMA",
+    "intervention_authorized": "RMA",
+    "recovery": "RV",
+    "follow_up": "RV",
+    "prognosis": "RO"
+  },
+  "source_ids": [
+    "S09"
+  ],
+  "NOTICE": "Pathway text is an outline; not an authorized diagnostic or treatment protocol."
+}

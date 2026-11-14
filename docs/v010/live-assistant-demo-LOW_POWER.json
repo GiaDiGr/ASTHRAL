@@ -1,0 +1,346 @@
+{
+  "mode": "LOW_POWER",
+  "assistant": {
+    "status": "ANSWERED",
+    "run_id": "A-cycle-14",
+    "evaluation_id": null,
+    "as_of": "2026-09-15T12:00:00+00:00",
+    "mode": "LOW_POWER",
+    "message": "Resultados del motor separados de documentación y texto generado. / Engine results are separate from documents and generated text.",
+    "answer": [
+      {
+        "id": "M1",
+        "kind": "ENGINE",
+        "category": "LIMITATION",
+        "text": "Monitorización experimental / Experimental monitoring. Cambios numéricos no equivalen a empeoramiento clínico / numeric changes are not clinical worsening. No diagnóstico firmado, no tratamiento autorizado. / No signed diagnosis or treatment authorization.",
+        "reference": {
+          "run_id": "A-cycle-14",
+          "as_of": "2026-09-15T12:00:00+00:00",
+          "output_hash": "8ca4de9a9a427c3c6f8389279b68c8711c5377debd56522d8906339486a67cda"
+        }
+      },
+      {
+        "id": "M5",
+        "kind": "ENGINE",
+        "category": "BASELINE",
+        "text": "physiology.vo2max: baseline 50.0 mL/min/kg; cambio absoluto / absolute change -11.0; retención / retention 78.0%. Descriptivo, no diagnóstico / descriptive, not diagnosis.",
+        "reference": {
+          "run_id": "A-cycle-14",
+          "as_of": "2026-09-15T12:00:00+00:00",
+          "output_hash": "8ca4de9a9a427c3c6f8389279b68c8711c5377debd56522d8906339486a67cda",
+          "variable": "physiology.vo2max",
+          "baseline_id": "A-baseline-0",
+          "source_ids": [
+            "S01",
+            "S05"
+          ]
+        }
+      },
+      {
+        "id": "M24",
+        "kind": "ENGINE",
+        "category": "CHANGE",
+        "text": "Cambio desde revisión anterior / change since previous review: {\"variable\": \"physiology.vo2max\", \"previous\": 44.0, \"current\": 39.0, \"previous_state\": \"DESCRIPTIVE_AVAILABLE\", \"current_state\": \"DESCRIPTIVE_AVAILABLE\"}",
+        "reference": {
+          "run_id": "A-cycle-14",
+          "as_of": "2026-09-15T12:00:00+00:00",
+          "output_hash": "8ca4de9a9a427c3c6f8389279b68c8711c5377debd56522d8906339486a67cda",
+          "previous_run_id": "A-cycle-7"
+        }
+      },
+      {
+        "id": "M6",
+        "kind": "ENGINE",
+        "category": "TREND",
+        "text": "physiology.vo2max: pendiente / slope -0.6428571428571429 mL/min/kg/day; EWMA/CUSUM por observación / per observation; RESEARCH_ONLY. No umbral clínico / no clinical threshold.",
+        "reference": {
+          "run_id": "A-cycle-14",
+          "as_of": "2026-09-15T12:00:00+00:00",
+          "output_hash": "8ca4de9a9a427c3c6f8389279b68c8711c5377debd56522d8906339486a67cda",
+          "variable": "physiology.vo2max",
+          "source_ids": [
+            "S01",
+            "S05"
+          ]
+        }
+      },
+      {
+        "id": "M25",
+        "kind": "ENGINE",
+        "category": "CHANGE",
+        "text": "Cambio desde revisión anterior / change since previous review: {\"variable\": \"physiology.heart_rate\", \"previous\": 72.0, \"current\": 79.0, \"previous_state\": \"DESCRIPTIVE_AVAILABLE\", \"current_state\": \"DESCRIPTIVE_AVAILABLE\"}",
+        "reference": {
+          "run_id": "A-cycle-14",
+          "as_of": "2026-09-15T12:00:00+00:00",
+          "output_hash": "8ca4de9a9a427c3c6f8389279b68c8711c5377debd56522d8906339486a67cda",
+          "previous_run_id": "A-cycle-7"
+        }
+      },
+      {
+        "id": "M8",
+        "kind": "ENGINE",
+        "category": "TREND",
+        "text": "physiology.heart_rate: pendiente / slope 1.0 bpm/day; EWMA/CUSUM por observación / per observation; RESEARCH_ONLY. No umbral clínico / no clinical threshold.",
+        "reference": {
+          "run_id": "A-cycle-14",
+          "as_of": "2026-09-15T12:00:00+00:00",
+          "output_hash": "8ca4de9a9a427c3c6f8389279b68c8711c5377debd56522d8906339486a67cda",
+          "variable": "physiology.heart_rate",
+          "source_ids": [
+            "S01",
+            "S05"
+          ]
+        }
+      },
+      {
+        "id": "C-29",
+        "kind": "DOCUMENT",
+        "text": "{\"criterion_id\": \"CRIT-OH-AHA-2024\", \"condition_id\": \"ORTHOSTATIC_HYPOTENSION\", \"version\": \"2024.1\", \"population\": \"ADULT\", \"source_ids\": [\"SRC-AHA-OH-2024\"], \"context\": {\"requires_gravity_supporting_upright_transition\": true, \"standing_window_minutes\": 3}, \"logic\": {\"any_of\": [{\"derived_field\": \"delta_sbp_mm_hg\", \"op\": \"<=\", \"value\": -20}, {\"derived_field\": \"delta_dbp_mm_hg\", \"op\": \"<=\", \"value\": -10}]}, \"measurement_quality\": {\"baseline_and_upright_bp_required\": true, \"time_since_upright_required\": true, \"sustained_reduction_required\": true}, \"etiology_confirmed_by_criterion\": false, \"space_applicability\": \"CONTEXT_DEPENDENT\"}",
+        "reference": {
+          "criterion_id": "CRIT-OH-AHA-2024",
+          "source_ids": [
+            "SRC-AHA-OH-2024"
+          ],
+          "version": "2024.1"
+        },
+        "category": "IMPLEMENTED_CRITERION"
+      }
+    ],
+    "retrieved": [
+      {
+        "id": "M1",
+        "kind": "ENGINE",
+        "category": "LIMITATION",
+        "text": "Monitorización experimental / Experimental monitoring. Cambios numéricos no equivalen a empeoramiento clínico / numeric changes are not clinical worsening. No diagnóstico firmado, no tratamiento autorizado. / No signed diagnosis or treatment authorization.",
+        "reference": {
+          "run_id": "A-cycle-14",
+          "as_of": "2026-09-15T12:00:00+00:00",
+          "output_hash": "8ca4de9a9a427c3c6f8389279b68c8711c5377debd56522d8906339486a67cda"
+        }
+      },
+      {
+        "id": "M5",
+        "kind": "ENGINE",
+        "category": "BASELINE",
+        "text": "physiology.vo2max: baseline 50.0 mL/min/kg; cambio absoluto / absolute change -11.0; retención / retention 78.0%. Descriptivo, no diagnóstico / descriptive, not diagnosis.",
+        "reference": {
+          "run_id": "A-cycle-14",
+          "as_of": "2026-09-15T12:00:00+00:00",
+          "output_hash": "8ca4de9a9a427c3c6f8389279b68c8711c5377debd56522d8906339486a67cda",
+          "variable": "physiology.vo2max",
+          "baseline_id": "A-baseline-0",
+          "source_ids": [
+            "S01",
+            "S05"
+          ]
+        }
+      },
+      {
+        "id": "M24",
+        "kind": "ENGINE",
+        "category": "CHANGE",
+        "text": "Cambio desde revisión anterior / change since previous review: {\"variable\": \"physiology.vo2max\", \"previous\": 44.0, \"current\": 39.0, \"previous_state\": \"DESCRIPTIVE_AVAILABLE\", \"current_state\": \"DESCRIPTIVE_AVAILABLE\"}",
+        "reference": {
+          "run_id": "A-cycle-14",
+          "as_of": "2026-09-15T12:00:00+00:00",
+          "output_hash": "8ca4de9a9a427c3c6f8389279b68c8711c5377debd56522d8906339486a67cda",
+          "previous_run_id": "A-cycle-7"
+        }
+      },
+      {
+        "id": "M6",
+        "kind": "ENGINE",
+        "category": "TREND",
+        "text": "physiology.vo2max: pendiente / slope -0.6428571428571429 mL/min/kg/day; EWMA/CUSUM por observación / per observation; RESEARCH_ONLY. No umbral clínico / no clinical threshold.",
+        "reference": {
+          "run_id": "A-cycle-14",
+          "as_of": "2026-09-15T12:00:00+00:00",
+          "output_hash": "8ca4de9a9a427c3c6f8389279b68c8711c5377debd56522d8906339486a67cda",
+          "variable": "physiology.vo2max",
+          "source_ids": [
+            "S01",
+            "S05"
+          ]
+        }
+      },
+      {
+        "id": "M25",
+        "kind": "ENGINE",
+        "category": "CHANGE",
+        "text": "Cambio desde revisión anterior / change since previous review: {\"variable\": \"physiology.heart_rate\", \"previous\": 72.0, \"current\": 79.0, \"previous_state\": \"DESCRIPTIVE_AVAILABLE\", \"current_state\": \"DESCRIPTIVE_AVAILABLE\"}",
+        "reference": {
+          "run_id": "A-cycle-14",
+          "as_of": "2026-09-15T12:00:00+00:00",
+          "output_hash": "8ca4de9a9a427c3c6f8389279b68c8711c5377debd56522d8906339486a67cda",
+          "previous_run_id": "A-cycle-7"
+        }
+      },
+      {
+        "id": "M8",
+        "kind": "ENGINE",
+        "category": "TREND",
+        "text": "physiology.heart_rate: pendiente / slope 1.0 bpm/day; EWMA/CUSUM por observación / per observation; RESEARCH_ONLY. No umbral clínico / no clinical threshold.",
+        "reference": {
+          "run_id": "A-cycle-14",
+          "as_of": "2026-09-15T12:00:00+00:00",
+          "output_hash": "8ca4de9a9a427c3c6f8389279b68c8711c5377debd56522d8906339486a67cda",
+          "variable": "physiology.heart_rate",
+          "source_ids": [
+            "S01",
+            "S05"
+          ]
+        }
+      },
+      {
+        "id": "C-29",
+        "kind": "DOCUMENT",
+        "text": "{\"criterion_id\": \"CRIT-OH-AHA-2024\", \"condition_id\": \"ORTHOSTATIC_HYPOTENSION\", \"version\": \"2024.1\", \"population\": \"ADULT\", \"source_ids\": [\"SRC-AHA-OH-2024\"], \"context\": {\"requires_gravity_supporting_upright_transition\": true, \"standing_window_minutes\": 3}, \"logic\": {\"any_of\": [{\"derived_field\": \"delta_sbp_mm_hg\", \"op\": \"<=\", \"value\": -20}, {\"derived_field\": \"delta_dbp_mm_hg\", \"op\": \"<=\", \"value\": -10}]}, \"measurement_quality\": {\"baseline_and_upright_bp_required\": true, \"time_since_upright_required\": true, \"sustained_reduction_required\": true}, \"etiology_confirmed_by_criterion\": false, \"space_applicability\": \"CONTEXT_DEPENDENT\"}",
+        "reference": {
+          "criterion_id": "CRIT-OH-AHA-2024",
+          "source_ids": [
+            "SRC-AHA-OH-2024"
+          ],
+          "version": "2024.1"
+        },
+        "category": "IMPLEMENTED_CRITERION"
+      },
+      {
+        "id": "D-b4b6a5ecab00b815f4ce",
+        "kind": "DOCUMENT",
+        "text": "```json\n{\n  \"schema_version\": \"1.0.0\",\n  \"tests\": [\n    {\n      \"test_id\": \"TEST-PLASMA-GLUCOSE\",\n      \"measure\": \"plasma_glucose\",\n      \"canonical_unit\": \"mg/dL\",\n      \"alternatives\": [\"mmol/L\"],\n      \"conversion\": \"mmol/L * 18 ≈ mg/dL\",\n      \"diagnostic_use\": [\"DM\", \"DKA\"],\n      \"quality\": [\"sample_type_recorded\", \"fasting_status_when_required\"],\n      \"missing_behavior\": \"UNKNOWN\"\n    },\n    {\n      \"test_id\": \"TEST-A1C\",\n      \"measure\": \"A1C\",\n      \"canonical_unit\": \"%\",\n      \"diagnostic_use\": [\"DM\"],\n      \"quality\": [\"validated_diagnostic_method\", \"assay_interference_assessed_when_discordant\"],\n      \"missing_behavior\": \"UNKNOWN\"\n    },\n    {\n      \"test_id\": \"TEST-OGTT-75G\",\n      \"measure\": \"2h_plasma_glucose\",\n      \"canonical_unit\": \"mg/dL\",\n      \"diagnostic_use\": [\"DM\"],\n      \"quality\": [\"75_g_glucose_load\", \"2h_timing_valid\"],\n      \"missing_behavior\": \"UNKNOWN\"\n    },\n    {\n      \"test_id\": \"TEST-BETA-OHB\",\n      \"measure\": \"beta_hydroxybutyrate\",\n      \"canonical_unit\": \"mmol/L\",\n      \"diagnostic_use\": [\"DKA\"],\n      \"quality\": [\"device_or_lab_valid\", \"opera",
+        "reference": {
+          "document": "docs/clinical/deep-research-report-2026-10-16.md",
+          "sha256": "38ad3ab166f25a8b46c1e1f483ba813510c34dc766171389307635ecf7e8a715",
+          "version": "2026-10-16",
+          "authority": "CLINICAL_RESEARCH_SYNTHESIS",
+          "char_start": 52254,
+          "char_end": 53354,
+          "line": 1118
+        },
+        "retrieval_score": 4.048795
+      }
+    ],
+    "generated": [
+      {
+        "text": "Baselines for physiology.vo2max are set at 50.0 mL/min/kg and are derived from source data S01 and S05.",
+        "evidence_ids": [
+          "M5"
+        ],
+        "kind": "MODEL_EXPLANATION",
+        "references": [
+          {
+            "run_id": "A-cycle-14",
+            "as_of": "2026-09-15T12:00:00+00:00",
+            "output_hash": "8ca4de9a9a427c3c6f8389279b68c8711c5377debd56522d8906339486a67cda",
+            "variable": "physiology.vo2max",
+            "baseline_id": "A-baseline-0",
+            "source_ids": [
+              "S01",
+              "S05"
+            ]
+          }
+        ]
+      },
+      {
+        "text": "The trend for physiology.vo2max is monitored using an EWMA/CUSUM method per observation, but no clinical threshold is defined.",
+        "evidence_ids": [
+          "M6"
+        ],
+        "kind": "MODEL_EXPLANATION",
+        "references": [
+          {
+            "run_id": "A-cycle-14",
+            "as_of": "2026-09-15T12:00:00+00:00",
+            "output_hash": "8ca4de9a9a427c3c6f8389279b68c8711c5377debd56522d8906339486a67cda",
+            "variable": "physiology.vo2max",
+            "source_ids": [
+              "S01",
+              "S05"
+            ]
+          }
+        ]
+      }
+    ],
+    "documents": [
+      {
+        "id": "D-b4b6a5ecab00b815f4ce",
+        "kind": "DOCUMENT",
+        "text": "```json\n{\n  \"schema_version\": \"1.0.0\",\n  \"tests\": [\n    {\n      \"test_id\": \"TEST-PLASMA-GLUCOSE\",\n      \"measure\": \"plasma_glucose\",\n      \"canonical_unit\": \"mg/dL\",\n      \"alternatives\": [\"mmol/L\"],\n      \"conversion\": \"mmol/L * 18 ≈ mg/dL\",\n      \"diagnostic_use\": [\"DM\", \"DKA\"],\n      \"quality\": [\"sample_type_recorded\", \"fasting_status_when_required\"],\n      \"missing_behavior\": \"UNKNOWN\"\n    },\n    {\n      \"test_id\": \"TEST-A1C\",\n      \"measure\": \"A1C\",\n      \"canonical_unit\": \"%\",\n      \"diagnostic_use\": [\"DM\"],\n      \"quality\": [\"validated_diagnostic_method\", \"assay_interference_assessed_when_discordant\"],\n      \"missing_behavior\": \"UNKNOWN\"\n    },\n    {\n      \"test_id\": \"TEST-OGTT-75G\",\n      \"measure\": \"2h_plasma_glucose\",\n      \"canonical_unit\": \"mg/dL\",\n      \"diagnostic_use\": [\"DM\"],\n      \"quality\": [\"75_g_glucose_load\", \"2h_timing_valid\"],\n      \"missing_behavior\": \"UNKNOWN\"\n    },\n    {\n      \"test_id\": \"TEST-BETA-OHB\",\n      \"measure\": \"beta_hydroxybutyrate\",\n      \"canonical_unit\": \"mmol/L\",\n      \"diagnostic_use\": [\"DKA\"],\n      \"quality\": [\"device_or_lab_valid\", \"opera",
+        "reference": {
+          "document": "docs/clinical/deep-research-report-2026-10-16.md",
+          "sha256": "38ad3ab166f25a8b46c1e1f483ba813510c34dc766171389307635ecf7e8a715",
+          "version": "2026-10-16",
+          "authority": "CLINICAL_RESEARCH_SYNTHESIS",
+          "char_start": 52254,
+          "char_end": 53354,
+          "line": 1118
+        },
+        "retrieval_score": 4.048795
+      }
+    ],
+    "document_issues": [],
+    "sources": [
+      {
+        "document": "docs/clinical/deep-research-report-2026-10-16.md",
+        "sha256": "38ad3ab166f25a8b46c1e1f483ba813510c34dc766171389307635ecf7e8a715",
+        "version": "2026-10-16",
+        "authority": "CLINICAL_RESEARCH_SYNTHESIS",
+        "char_start": 52254,
+        "char_end": 53354,
+        "line": 1118
+      }
+    ],
+    "inference_attempted": true,
+    "inference_executed": true,
+    "clinical_execution": "BLOCKED",
+    "authority": "DETERMINISTIC_ENGINE_ONLY",
+    "clinical_validation": false,
+    "limitations": [
+      "DOCUMENTS_DO_NOT_OVERRIDE_ENGINE",
+      "SEMANTIC_VERIFICATION_IS_NOT_CLINICAL_VALIDATION",
+      "UNKNOWN_UNDETECTED_ERRORS_REQUIRE_INDEPENDENT_REVIEW"
+    ],
+    "context": {
+      "subject_id": "v07-crew-A",
+      "mission_id": "v07-mission-A",
+      "target_id": "A-cycle-14"
+    },
+    "metrics": {
+      "elapsed_ms": 4770.272299996577,
+      "usage": {},
+      "timings": {},
+      "load_duration_ns": 2959100200,
+      "total_duration_ns": 4734148700,
+      "prompt_eval_count": 1401,
+      "eval_count": 95,
+      "eval_duration_ns": 1326366000,
+      "verification": {
+        "elapsed_ms": 556.8816000013612,
+        "usage": {},
+        "timings": {},
+        "load_duration_ns": 23053000,
+        "total_duration_ns": 506495100,
+        "prompt_eval_count": 304,
+        "eval_count": 6,
+        "eval_duration_ns": 139530000
+      }
+    },
+    "grounding": "CITATIONS_AND_LOCAL_MODEL_CHECK_NOT_CLINICAL_VALIDATION",
+    "history_used": false,
+    "inference_trace": {
+      "model_requests_attempted": 2,
+      "explanation_accepted": true,
+      "request_attempt_is_not_completed_inference": true,
+      "legacy_inference_executed_is_not_a_runtime_counter": true
+    }
+  },
+  "runtime": {
+    "state": "OBSERVED",
+    "loaded": true,
+    "size_vram_bytes": 2876160081,
+    "context_tokens": 2048,
+    "observed_at": "2026-10-24T03:52:15.055304+00:00",
+    "inference_requested": false
+  },
+  "clinical_validation": false
+}

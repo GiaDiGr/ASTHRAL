@@ -1,0 +1,485 @@
+﻿condition_id,name,stage,documentary_state,software_support,clinical_validation,clinical_execution,source_ids,rule_ids
+C001,Capacidad aeróbica reducida / fisiología cardiovascular,prevention,ES,STRUCTURE_ONLY,NOT_VALIDATED,BLOCKED,S01;S04,VIGILE-AER-001;VIGILE-AER-002;VIGILE-AER-003
+C001,Capacidad aeróbica reducida / fisiología cardiovascular,monitoring,ES,NUMERIC_ACQUISITION_INFRASTRUCTURE,NOT_VALIDATED,BLOCKED,S01;S04,VIGILE-AER-001;VIGILE-AER-002;VIGILE-AER-003
+C001,Capacidad aeróbica reducida / fisiología cardiovascular,data_quality,ES,CONFIGURED_TECHNICAL_GATES,NOT_VALIDATED,BLOCKED,S01;S04,VIGILE-AER-001;VIGILE-AER-002;VIGILE-AER-003
+C001,Capacidad aeróbica reducida / fisiología cardiovascular,detection,ES,NORMATIVE_SIMULATION,NOT_VALIDATED,BLOCKED,S01;S04,VIGILE-AER-001;VIGILE-AER-002;VIGILE-AER-003
+C001,Capacidad aeróbica reducida / fisiología cardiovascular,assessment,RV,HUMAN_RECORDING,NOT_VALIDATED,BLOCKED,S01;S04,VIGILE-AER-001;VIGILE-AER-002;VIGILE-AER-003
+C001,Capacidad aeróbica reducida / fisiología cardiovascular,differential_diagnosis,RV,STRUCTURE_ONLY,NOT_VALIDATED,BLOCKED,S01;S04,VIGILE-AER-001;VIGILE-AER-002;VIGILE-AER-003
+C001,Capacidad aeróbica reducida / fisiología cardiovascular,triage,RMA,STRUCTURE_ONLY,NOT_VALIDATED,BLOCKED,S01;S04,VIGILE-AER-001;VIGILE-AER-002;VIGILE-AER-003
+C001,Capacidad aeróbica reducida / fisiología cardiovascular,intervention_authorized,RMA,STRUCTURE_ONLY,NOT_VALIDATED,BLOCKED,S01;S04,VIGILE-AER-001;VIGILE-AER-002;VIGILE-AER-003
+C001,Capacidad aeróbica reducida / fisiología cardiovascular,recovery,ES,HUMAN_WORKFLOW_RECORDING,NOT_VALIDATED,BLOCKED,S01;S04,VIGILE-AER-001;VIGILE-AER-002;VIGILE-AER-003
+C001,Capacidad aeróbica reducida / fisiología cardiovascular,follow_up,ES,PLAN_DUE_STATUS_AND_REVIEWS,NOT_VALIDATED,BLOCKED,S01;S04,VIGILE-AER-001;VIGILE-AER-002;VIGILE-AER-003
+C001,Capacidad aeróbica reducida / fisiología cardiovascular,prognosis,RO,STRUCTURE_ONLY,NOT_VALIDATED,BLOCKED,S01;S04,VIGILE-AER-001;VIGILE-AER-002;VIGILE-AER-003
+C002,Pérdida de tamaño/fuerza/resistencia muscular / muscular,prevention,ES,STRUCTURE_ONLY,NOT_VALIDATED,BLOCKED,S01;S04,VIGILE-MUS-001;VIGILE-MUS-002
+C002,Pérdida de tamaño/fuerza/resistencia muscular / muscular,monitoring,ES,NUMERIC_ACQUISITION_INFRASTRUCTURE,NOT_VALIDATED,BLOCKED,S01;S04,VIGILE-MUS-001;VIGILE-MUS-002
+C002,Pérdida de tamaño/fuerza/resistencia muscular / muscular,data_quality,ES,CONFIGURED_TECHNICAL_GATES,NOT_VALIDATED,BLOCKED,S01;S04,VIGILE-MUS-001;VIGILE-MUS-002
+C002,Pérdida de tamaño/fuerza/resistencia muscular / muscular,detection,ES,NORMATIVE_SIMULATION,NOT_VALIDATED,BLOCKED,S01;S04,VIGILE-MUS-001;VIGILE-MUS-002
+C002,Pérdida de tamaño/fuerza/resistencia muscular / muscular,assessment,RV,HUMAN_RECORDING,NOT_VALIDATED,BLOCKED,S01;S04,VIGILE-MUS-001;VIGILE-MUS-002
+C002,Pérdida de tamaño/fuerza/resistencia muscular / muscular,differential_diagnosis,RV,STRUCTURE_ONLY,NOT_VALIDATED,BLOCKED,S01;S04,VIGILE-MUS-001;VIGILE-MUS-002
+C002,Pérdida de tamaño/fuerza/resistencia muscular / muscular,triage,RMA,STRUCTURE_ONLY,NOT_VALIDATED,BLOCKED,S01;S04,VIGILE-MUS-001;VIGILE-MUS-002
+C002,Pérdida de tamaño/fuerza/resistencia muscular / muscular,intervention_authorized,RMA,STRUCTURE_ONLY,NOT_VALIDATED,BLOCKED,S01;S04,VIGILE-MUS-001;VIGILE-MUS-002
+C002,Pérdida de tamaño/fuerza/resistencia muscular / muscular,recovery,ES,HUMAN_WORKFLOW_RECORDING,NOT_VALIDATED,BLOCKED,S01;S04,VIGILE-MUS-001;VIGILE-MUS-002
+C002,Pérdida de tamaño/fuerza/resistencia muscular / muscular,follow_up,ES,PLAN_DUE_STATUS_AND_REVIEWS,NOT_VALIDATED,BLOCKED,S01;S04,VIGILE-MUS-001;VIGILE-MUS-002
+C002,Pérdida de tamaño/fuerza/resistencia muscular / muscular,prognosis,RO,STRUCTURE_ONLY,NOT_VALIDATED,BLOCKED,S01;S04,VIGILE-MUS-001;VIGILE-MUS-002
+C003,Pérdida ósea y riesgo de fractura / óseo,prevention,ES,STRUCTURE_ONLY,NOT_VALIDATED,BLOCKED,S01;S06,VIGILE-BONE-001
+C003,Pérdida ósea y riesgo de fractura / óseo,monitoring,ES,NUMERIC_ACQUISITION_INFRASTRUCTURE,NOT_VALIDATED,BLOCKED,S01;S06,VIGILE-BONE-001
+C003,Pérdida ósea y riesgo de fractura / óseo,data_quality,ES,CONFIGURED_TECHNICAL_GATES,NOT_VALIDATED,BLOCKED,S01;S06,VIGILE-BONE-001
+C003,Pérdida ósea y riesgo de fractura / óseo,detection,ES,NORMATIVE_SIMULATION,NOT_VALIDATED,BLOCKED,S01;S06,VIGILE-BONE-001
+C003,Pérdida ósea y riesgo de fractura / óseo,assessment,RV,HUMAN_RECORDING,NOT_VALIDATED,BLOCKED,S01;S06,VIGILE-BONE-001
+C003,Pérdida ósea y riesgo de fractura / óseo,differential_diagnosis,RV,STRUCTURE_ONLY,NOT_VALIDATED,BLOCKED,S01;S06,VIGILE-BONE-001
+C003,Pérdida ósea y riesgo de fractura / óseo,triage,RMA,STRUCTURE_ONLY,NOT_VALIDATED,BLOCKED,S01;S06,VIGILE-BONE-001
+C003,Pérdida ósea y riesgo de fractura / óseo,intervention_authorized,RMA,STRUCTURE_ONLY,NOT_VALIDATED,BLOCKED,S01;S06,VIGILE-BONE-001
+C003,Pérdida ósea y riesgo de fractura / óseo,recovery,ES,HUMAN_WORKFLOW_RECORDING,NOT_VALIDATED,BLOCKED,S01;S06,VIGILE-BONE-001
+C003,Pérdida ósea y riesgo de fractura / óseo,follow_up,ES,PLAN_DUE_STATUS_AND_REVIEWS,NOT_VALIDATED,BLOCKED,S01;S06,VIGILE-BONE-001
+C003,Pérdida ósea y riesgo de fractura / óseo,prognosis,RV,STRUCTURE_ONLY,NOT_VALIDATED,BLOCKED,S01;S06,VIGILE-BONE-001
+C004,Desacondicionamiento cardiovascular / cardiovascular,prevention,ES,STRUCTURE_ONLY,NOT_VALIDATED,BLOCKED,S05,
+C004,Desacondicionamiento cardiovascular / cardiovascular,monitoring,ES,NUMERIC_ACQUISITION_INFRASTRUCTURE,NOT_VALIDATED,BLOCKED,S05,
+C004,Desacondicionamiento cardiovascular / cardiovascular,data_quality,ES,CONFIGURED_TECHNICAL_GATES,NOT_VALIDATED,BLOCKED,S05,
+C004,Desacondicionamiento cardiovascular / cardiovascular,detection,RV,NO_CONDITION_SPECIFIC_DETECTOR,NOT_VALIDATED,BLOCKED,S05,
+C004,Desacondicionamiento cardiovascular / cardiovascular,assessment,RV,HUMAN_RECORDING,NOT_VALIDATED,BLOCKED,S05,
+C004,Desacondicionamiento cardiovascular / cardiovascular,differential_diagnosis,RV,STRUCTURE_ONLY,NOT_VALIDATED,BLOCKED,S05,
+C004,Desacondicionamiento cardiovascular / cardiovascular,triage,RMA,STRUCTURE_ONLY,NOT_VALIDATED,BLOCKED,S05,
+C004,Desacondicionamiento cardiovascular / cardiovascular,intervention_authorized,RMA,STRUCTURE_ONLY,NOT_VALIDATED,BLOCKED,S05,
+C004,Desacondicionamiento cardiovascular / cardiovascular,recovery,RV,HUMAN_WORKFLOW_RECORDING,NOT_VALIDATED,BLOCKED,S05,
+C004,Desacondicionamiento cardiovascular / cardiovascular,follow_up,RV,PLAN_DUE_STATUS_AND_REVIEWS,NOT_VALIDATED,BLOCKED,S05,
+C004,Desacondicionamiento cardiovascular / cardiovascular,prognosis,RO,STRUCTURE_ONLY,NOT_VALIDATED,BLOCKED,S05,
+C005,Intolerancia ortostática / cardiovascular-autonómica,prevention,ES,STRUCTURE_ONLY,NOT_VALIDATED,BLOCKED,S02;S05;S34,
+C005,Intolerancia ortostática / cardiovascular-autonómica,monitoring,ES,NUMERIC_ACQUISITION_INFRASTRUCTURE,NOT_VALIDATED,BLOCKED,S02;S05;S34,
+C005,Intolerancia ortostática / cardiovascular-autonómica,data_quality,ES,CONFIGURED_TECHNICAL_GATES,NOT_VALIDATED,BLOCKED,S02;S05;S34,
+C005,Intolerancia ortostática / cardiovascular-autonómica,detection,RV,NO_CONDITION_SPECIFIC_DETECTOR,NOT_VALIDATED,BLOCKED,S02;S05;S34,
+C005,Intolerancia ortostática / cardiovascular-autonómica,assessment,RV,HUMAN_RECORDING,NOT_VALIDATED,BLOCKED,S02;S05;S34,
+C005,Intolerancia ortostática / cardiovascular-autonómica,differential_diagnosis,RV,STRUCTURE_ONLY,NOT_VALIDATED,BLOCKED,S02;S05;S34,
+C005,Intolerancia ortostática / cardiovascular-autonómica,triage,RMA,STRUCTURE_ONLY,NOT_VALIDATED,BLOCKED,S02;S05;S34,
+C005,Intolerancia ortostática / cardiovascular-autonómica,intervention_authorized,RMA,STRUCTURE_ONLY,NOT_VALIDATED,BLOCKED,S02;S05;S34,
+C005,Intolerancia ortostática / cardiovascular-autonómica,recovery,RV,HUMAN_WORKFLOW_RECORDING,NOT_VALIDATED,BLOCKED,S02;S05;S34,
+C005,Intolerancia ortostática / cardiovascular-autonómica,follow_up,RV,PLAN_DUE_STATUS_AND_REVIEWS,NOT_VALIDATED,BLOCKED,S02;S05;S34,
+C005,Intolerancia ortostática / cardiovascular-autonómica,prognosis,RO,STRUCTURE_ONLY,NOT_VALIDATED,BLOCKED,S02;S05;S34,
+C006,Tromboembolismo venoso / cardiovascular-hematológico,prevention,RV,STRUCTURE_ONLY,NOT_VALIDATED,BLOCKED,S35,
+C006,Tromboembolismo venoso / cardiovascular-hematológico,monitoring,RV,NUMERIC_ACQUISITION_INFRASTRUCTURE,NOT_VALIDATED,BLOCKED,S35,
+C006,Tromboembolismo venoso / cardiovascular-hematológico,data_quality,ES,CONFIGURED_TECHNICAL_GATES,NOT_VALIDATED,BLOCKED,S35,
+C006,Tromboembolismo venoso / cardiovascular-hematológico,detection,RV,NO_CONDITION_SPECIFIC_DETECTOR,NOT_VALIDATED,BLOCKED,S35,
+C006,Tromboembolismo venoso / cardiovascular-hematológico,assessment,RMA,HUMAN_RECORDING,NOT_VALIDATED,BLOCKED,S35,
+C006,Tromboembolismo venoso / cardiovascular-hematológico,differential_diagnosis,RMA,STRUCTURE_ONLY,NOT_VALIDATED,BLOCKED,S35,
+C006,Tromboembolismo venoso / cardiovascular-hematológico,triage,RMA,STRUCTURE_ONLY,NOT_VALIDATED,BLOCKED,S35,
+C006,Tromboembolismo venoso / cardiovascular-hematológico,intervention_authorized,RMA,STRUCTURE_ONLY,NOT_VALIDATED,BLOCKED,S35,
+C006,Tromboembolismo venoso / cardiovascular-hematológico,recovery,RV,HUMAN_WORKFLOW_RECORDING,NOT_VALIDATED,BLOCKED,S35,
+C006,Tromboembolismo venoso / cardiovascular-hematológico,follow_up,RV,PLAN_DUE_STATUS_AND_REVIEWS,NOT_VALIDATED,BLOCKED,S35,
+C006,Tromboembolismo venoso / cardiovascular-hematológico,prognosis,RO,STRUCTURE_ONLY,NOT_VALIDATED,BLOCKED,S35,
+C007,Arritmia/evento cardiovascular agudo / cardiovascular-emergencias,prevention,RV,STRUCTURE_ONLY,NOT_VALIDATED,BLOCKED,S17,
+C007,Arritmia/evento cardiovascular agudo / cardiovascular-emergencias,monitoring,ES,NUMERIC_ACQUISITION_INFRASTRUCTURE,NOT_VALIDATED,BLOCKED,S17,
+C007,Arritmia/evento cardiovascular agudo / cardiovascular-emergencias,data_quality,ES,CONFIGURED_TECHNICAL_GATES,NOT_VALIDATED,BLOCKED,S17,
+C007,Arritmia/evento cardiovascular agudo / cardiovascular-emergencias,detection,RV,NO_CONDITION_SPECIFIC_DETECTOR,NOT_VALIDATED,BLOCKED,S17,
+C007,Arritmia/evento cardiovascular agudo / cardiovascular-emergencias,assessment,RMA,HUMAN_RECORDING,NOT_VALIDATED,BLOCKED,S17,
+C007,Arritmia/evento cardiovascular agudo / cardiovascular-emergencias,differential_diagnosis,RMA,STRUCTURE_ONLY,NOT_VALIDATED,BLOCKED,S17,
+C007,Arritmia/evento cardiovascular agudo / cardiovascular-emergencias,triage,RMA,STRUCTURE_ONLY,NOT_VALIDATED,BLOCKED,S17,
+C007,Arritmia/evento cardiovascular agudo / cardiovascular-emergencias,intervention_authorized,RMA,STRUCTURE_ONLY,NOT_VALIDATED,BLOCKED,S17,
+C007,Arritmia/evento cardiovascular agudo / cardiovascular-emergencias,recovery,RV,HUMAN_WORKFLOW_RECORDING,NOT_VALIDATED,BLOCKED,S17,
+C007,Arritmia/evento cardiovascular agudo / cardiovascular-emergencias,follow_up,RV,PLAN_DUE_STATUS_AND_REVIEWS,NOT_VALIDATED,BLOCKED,S17,
+C007,Arritmia/evento cardiovascular agudo / cardiovascular-emergencias,prognosis,RO,STRUCTURE_ONLY,NOT_VALIDATED,BLOCKED,S17,
+C008,Redistribución de fluidos/hipovolemia relativa / cardiovascular,prevention,RO,STRUCTURE_ONLY,NOT_VALIDATED,BLOCKED,S05,
+C008,Redistribución de fluidos/hipovolemia relativa / cardiovascular,monitoring,RV,NUMERIC_ACQUISITION_INFRASTRUCTURE,NOT_VALIDATED,BLOCKED,S05,
+C008,Redistribución de fluidos/hipovolemia relativa / cardiovascular,data_quality,ES,CONFIGURED_TECHNICAL_GATES,NOT_VALIDATED,BLOCKED,S05,
+C008,Redistribución de fluidos/hipovolemia relativa / cardiovascular,detection,RO,NO_CONDITION_SPECIFIC_DETECTOR,NOT_VALIDATED,BLOCKED,S05,
+C008,Redistribución de fluidos/hipovolemia relativa / cardiovascular,assessment,RV,HUMAN_RECORDING,NOT_VALIDATED,BLOCKED,S05,
+C008,Redistribución de fluidos/hipovolemia relativa / cardiovascular,differential_diagnosis,RV,STRUCTURE_ONLY,NOT_VALIDATED,BLOCKED,S05,
+C008,Redistribución de fluidos/hipovolemia relativa / cardiovascular,triage,RMA,STRUCTURE_ONLY,NOT_VALIDATED,BLOCKED,S05,
+C008,Redistribución de fluidos/hipovolemia relativa / cardiovascular,intervention_authorized,RMA,STRUCTURE_ONLY,NOT_VALIDATED,BLOCKED,S05,
+C008,Redistribución de fluidos/hipovolemia relativa / cardiovascular,recovery,RV,HUMAN_WORKFLOW_RECORDING,NOT_VALIDATED,BLOCKED,S05,
+C008,Redistribución de fluidos/hipovolemia relativa / cardiovascular,follow_up,RV,PLAN_DUE_STATUS_AND_REVIEWS,NOT_VALIDATED,BLOCKED,S05,
+C008,Redistribución de fluidos/hipovolemia relativa / cardiovascular,prognosis,RO,STRUCTURE_ONLY,NOT_VALIDATED,BLOCKED,S05,
+C009,SANS / neuro-oftalmología,prevention,RV,STRUCTURE_ONLY,NOT_VALIDATED,BLOCKED,S07,
+C009,SANS / neuro-oftalmología,monitoring,ES,NUMERIC_ACQUISITION_INFRASTRUCTURE,NOT_VALIDATED,BLOCKED,S07,
+C009,SANS / neuro-oftalmología,data_quality,ES,CONFIGURED_TECHNICAL_GATES,NOT_VALIDATED,BLOCKED,S07,
+C009,SANS / neuro-oftalmología,detection,RV,NO_CONDITION_SPECIFIC_DETECTOR,NOT_VALIDATED,BLOCKED,S07,
+C009,SANS / neuro-oftalmología,assessment,RV,HUMAN_RECORDING,NOT_VALIDATED,BLOCKED,S07,
+C009,SANS / neuro-oftalmología,differential_diagnosis,RV,STRUCTURE_ONLY,NOT_VALIDATED,BLOCKED,S07,
+C009,SANS / neuro-oftalmología,triage,RMA,STRUCTURE_ONLY,NOT_VALIDATED,BLOCKED,S07,
+C009,SANS / neuro-oftalmología,intervention_authorized,RMA,STRUCTURE_ONLY,NOT_VALIDATED,BLOCKED,S07,
+C009,SANS / neuro-oftalmología,recovery,RV,HUMAN_WORKFLOW_RECORDING,NOT_VALIDATED,BLOCKED,S07,
+C009,SANS / neuro-oftalmología,follow_up,ES,PLAN_DUE_STATUS_AND_REVIEWS,NOT_VALIDATED,BLOCKED,S07,
+C009,SANS / neuro-oftalmología,prognosis,RO,STRUCTURE_ONLY,NOT_VALIDATED,BLOCKED,S07,
+C010,Space Motion Sickness / neurovestibular,prevention,ES,STRUCTURE_ONLY,NOT_VALIDATED,BLOCKED,S11;S17,
+C010,Space Motion Sickness / neurovestibular,monitoring,ES,NUMERIC_ACQUISITION_INFRASTRUCTURE,NOT_VALIDATED,BLOCKED,S11;S17,
+C010,Space Motion Sickness / neurovestibular,data_quality,ES,CONFIGURED_TECHNICAL_GATES,NOT_VALIDATED,BLOCKED,S11;S17,
+C010,Space Motion Sickness / neurovestibular,detection,RV,NO_CONDITION_SPECIFIC_DETECTOR,NOT_VALIDATED,BLOCKED,S11;S17,
+C010,Space Motion Sickness / neurovestibular,assessment,RV,HUMAN_RECORDING,NOT_VALIDATED,BLOCKED,S11;S17,
+C010,Space Motion Sickness / neurovestibular,differential_diagnosis,RV,STRUCTURE_ONLY,NOT_VALIDATED,BLOCKED,S11;S17,
+C010,Space Motion Sickness / neurovestibular,triage,RMA,STRUCTURE_ONLY,NOT_VALIDATED,BLOCKED,S11;S17,
+C010,Space Motion Sickness / neurovestibular,intervention_authorized,RMA,STRUCTURE_ONLY,NOT_VALIDATED,BLOCKED,S11;S17,
+C010,Space Motion Sickness / neurovestibular,recovery,ES,HUMAN_WORKFLOW_RECORDING,NOT_VALIDATED,BLOCKED,S11;S17,
+C010,Space Motion Sickness / neurovestibular,follow_up,ES,PLAN_DUE_STATUS_AND_REVIEWS,NOT_VALIDATED,BLOCKED,S11;S17,
+C010,Space Motion Sickness / neurovestibular,prognosis,RO,STRUCTURE_ONLY,NOT_VALIDATED,BLOCKED,S11;S17,
+C011,Deterioro sensorimotor/postural/locomotor / sensorimotor,prevention,ES,STRUCTURE_ONLY,NOT_VALIDATED,BLOCKED,S11,
+C011,Deterioro sensorimotor/postural/locomotor / sensorimotor,monitoring,ES,NUMERIC_ACQUISITION_INFRASTRUCTURE,NOT_VALIDATED,BLOCKED,S11,
+C011,Deterioro sensorimotor/postural/locomotor / sensorimotor,data_quality,ES,CONFIGURED_TECHNICAL_GATES,NOT_VALIDATED,BLOCKED,S11,
+C011,Deterioro sensorimotor/postural/locomotor / sensorimotor,detection,RV,NO_CONDITION_SPECIFIC_DETECTOR,NOT_VALIDATED,BLOCKED,S11,
+C011,Deterioro sensorimotor/postural/locomotor / sensorimotor,assessment,RV,HUMAN_RECORDING,NOT_VALIDATED,BLOCKED,S11,
+C011,Deterioro sensorimotor/postural/locomotor / sensorimotor,differential_diagnosis,RV,STRUCTURE_ONLY,NOT_VALIDATED,BLOCKED,S11,
+C011,Deterioro sensorimotor/postural/locomotor / sensorimotor,triage,RMA,STRUCTURE_ONLY,NOT_VALIDATED,BLOCKED,S11,
+C011,Deterioro sensorimotor/postural/locomotor / sensorimotor,intervention_authorized,RMA,STRUCTURE_ONLY,NOT_VALIDATED,BLOCKED,S11,
+C011,Deterioro sensorimotor/postural/locomotor / sensorimotor,recovery,ES,HUMAN_WORKFLOW_RECORDING,NOT_VALIDATED,BLOCKED,S11,
+C011,Deterioro sensorimotor/postural/locomotor / sensorimotor,follow_up,ES,PLAN_DUE_STATUS_AND_REVIEWS,NOT_VALIDATED,BLOCKED,S11,
+C011,Deterioro sensorimotor/postural/locomotor / sensorimotor,prognosis,RO,STRUCTURE_ONLY,NOT_VALIDATED,BLOCKED,S11,
+C012,Pérdida de sueño / medicina del sueño,prevention,ES,STRUCTURE_ONLY,NOT_VALIDATED,BLOCKED,S10,
+C012,Pérdida de sueño / medicina del sueño,monitoring,ES,NUMERIC_ACQUISITION_INFRASTRUCTURE,NOT_VALIDATED,BLOCKED,S10,
+C012,Pérdida de sueño / medicina del sueño,data_quality,ES,CONFIGURED_TECHNICAL_GATES,NOT_VALIDATED,BLOCKED,S10,
+C012,Pérdida de sueño / medicina del sueño,detection,RV,NO_CONDITION_SPECIFIC_DETECTOR,NOT_VALIDATED,BLOCKED,S10,
+C012,Pérdida de sueño / medicina del sueño,assessment,RV,HUMAN_RECORDING,NOT_VALIDATED,BLOCKED,S10,
+C012,Pérdida de sueño / medicina del sueño,differential_diagnosis,RV,STRUCTURE_ONLY,NOT_VALIDATED,BLOCKED,S10,
+C012,Pérdida de sueño / medicina del sueño,triage,RMA,STRUCTURE_ONLY,NOT_VALIDATED,BLOCKED,S10,
+C012,Pérdida de sueño / medicina del sueño,intervention_authorized,RMA,STRUCTURE_ONLY,NOT_VALIDATED,BLOCKED,S10,
+C012,Pérdida de sueño / medicina del sueño,recovery,ES,HUMAN_WORKFLOW_RECORDING,NOT_VALIDATED,BLOCKED,S10,
+C012,Pérdida de sueño / medicina del sueño,follow_up,ES,PLAN_DUE_STATUS_AND_REVIEWS,NOT_VALIDATED,BLOCKED,S10,
+C012,Pérdida de sueño / medicina del sueño,prognosis,RO,STRUCTURE_ONLY,NOT_VALIDATED,BLOCKED,S10,
+C013,Desincronización circadiana / sueño,prevention,ES,STRUCTURE_ONLY,NOT_VALIDATED,BLOCKED,S10,
+C013,Desincronización circadiana / sueño,monitoring,ES,NUMERIC_ACQUISITION_INFRASTRUCTURE,NOT_VALIDATED,BLOCKED,S10,
+C013,Desincronización circadiana / sueño,data_quality,ES,CONFIGURED_TECHNICAL_GATES,NOT_VALIDATED,BLOCKED,S10,
+C013,Desincronización circadiana / sueño,detection,RV,NO_CONDITION_SPECIFIC_DETECTOR,NOT_VALIDATED,BLOCKED,S10,
+C013,Desincronización circadiana / sueño,assessment,RV,HUMAN_RECORDING,NOT_VALIDATED,BLOCKED,S10,
+C013,Desincronización circadiana / sueño,differential_diagnosis,RV,STRUCTURE_ONLY,NOT_VALIDATED,BLOCKED,S10,
+C013,Desincronización circadiana / sueño,triage,RMA,STRUCTURE_ONLY,NOT_VALIDATED,BLOCKED,S10,
+C013,Desincronización circadiana / sueño,intervention_authorized,RMA,STRUCTURE_ONLY,NOT_VALIDATED,BLOCKED,S10,
+C013,Desincronización circadiana / sueño,recovery,RV,HUMAN_WORKFLOW_RECORDING,NOT_VALIDATED,BLOCKED,S10,
+C013,Desincronización circadiana / sueño,follow_up,ES,PLAN_DUE_STATUS_AND_REVIEWS,NOT_VALIDATED,BLOCKED,S10,
+C013,Desincronización circadiana / sueño,prognosis,RO,STRUCTURE_ONLY,NOT_VALIDATED,BLOCKED,S10,
+C014,Fatiga y sobrecarga de trabajo / factores humanos,prevention,ES,STRUCTURE_ONLY,NOT_VALIDATED,BLOCKED,S10,
+C014,Fatiga y sobrecarga de trabajo / factores humanos,monitoring,ES,NUMERIC_ACQUISITION_INFRASTRUCTURE,NOT_VALIDATED,BLOCKED,S10,
+C014,Fatiga y sobrecarga de trabajo / factores humanos,data_quality,ES,CONFIGURED_TECHNICAL_GATES,NOT_VALIDATED,BLOCKED,S10,
+C014,Fatiga y sobrecarga de trabajo / factores humanos,detection,RV,NO_CONDITION_SPECIFIC_DETECTOR,NOT_VALIDATED,BLOCKED,S10,
+C014,Fatiga y sobrecarga de trabajo / factores humanos,assessment,RV,HUMAN_RECORDING,NOT_VALIDATED,BLOCKED,S10,
+C014,Fatiga y sobrecarga de trabajo / factores humanos,differential_diagnosis,RV,STRUCTURE_ONLY,NOT_VALIDATED,BLOCKED,S10,
+C014,Fatiga y sobrecarga de trabajo / factores humanos,triage,RMA,STRUCTURE_ONLY,NOT_VALIDATED,BLOCKED,S10,
+C014,Fatiga y sobrecarga de trabajo / factores humanos,intervention_authorized,RMA,STRUCTURE_ONLY,NOT_VALIDATED,BLOCKED,S10,
+C014,Fatiga y sobrecarga de trabajo / factores humanos,recovery,RV,HUMAN_WORKFLOW_RECORDING,NOT_VALIDATED,BLOCKED,S10,
+C014,Fatiga y sobrecarga de trabajo / factores humanos,follow_up,ES,PLAN_DUE_STATUS_AND_REVIEWS,NOT_VALIDATED,BLOCKED,S10,
+C014,Fatiga y sobrecarga de trabajo / factores humanos,prognosis,RO,STRUCTURE_ONLY,NOT_VALIDATED,BLOCKED,S10,
+C015,Deterioro cognitivo funcional / neurocognición,prevention,ES,STRUCTURE_ONLY,NOT_VALIDATED,BLOCKED,S10;S14;S27,
+C015,Deterioro cognitivo funcional / neurocognición,monitoring,ES,NUMERIC_ACQUISITION_INFRASTRUCTURE,NOT_VALIDATED,BLOCKED,S10;S14;S27,
+C015,Deterioro cognitivo funcional / neurocognición,data_quality,ES,CONFIGURED_TECHNICAL_GATES,NOT_VALIDATED,BLOCKED,S10;S14;S27,
+C015,Deterioro cognitivo funcional / neurocognición,detection,RV,NO_CONDITION_SPECIFIC_DETECTOR,NOT_VALIDATED,BLOCKED,S10;S14;S27,
+C015,Deterioro cognitivo funcional / neurocognición,assessment,RV,HUMAN_RECORDING,NOT_VALIDATED,BLOCKED,S10;S14;S27,
+C015,Deterioro cognitivo funcional / neurocognición,differential_diagnosis,RV,STRUCTURE_ONLY,NOT_VALIDATED,BLOCKED,S10;S14;S27,
+C015,Deterioro cognitivo funcional / neurocognición,triage,RMA,STRUCTURE_ONLY,NOT_VALIDATED,BLOCKED,S10;S14;S27,
+C015,Deterioro cognitivo funcional / neurocognición,intervention_authorized,RMA,STRUCTURE_ONLY,NOT_VALIDATED,BLOCKED,S10;S14;S27,
+C015,Deterioro cognitivo funcional / neurocognición,recovery,RV,HUMAN_WORKFLOW_RECORDING,NOT_VALIDATED,BLOCKED,S10;S14;S27,
+C015,Deterioro cognitivo funcional / neurocognición,follow_up,ES,PLAN_DUE_STATUS_AND_REVIEWS,NOT_VALIDATED,BLOCKED,S10;S14;S27,
+C015,Deterioro cognitivo funcional / neurocognición,prognosis,RO,STRUCTURE_ONLY,NOT_VALIDATED,BLOCKED,S10;S14;S27,
+C016,Cambios conductuales/psiquiátricos / salud conductual,prevention,ES,STRUCTURE_ONLY,NOT_VALIDATED,BLOCKED,S12,
+C016,Cambios conductuales/psiquiátricos / salud conductual,monitoring,RV,NUMERIC_ACQUISITION_INFRASTRUCTURE,NOT_VALIDATED,BLOCKED,S12,
+C016,Cambios conductuales/psiquiátricos / salud conductual,data_quality,ES,CONFIGURED_TECHNICAL_GATES,NOT_VALIDATED,BLOCKED,S12,
+C016,Cambios conductuales/psiquiátricos / salud conductual,detection,RV,NO_CONDITION_SPECIFIC_DETECTOR,NOT_VALIDATED,BLOCKED,S12,
+C016,Cambios conductuales/psiquiátricos / salud conductual,assessment,RMA,HUMAN_RECORDING,NOT_VALIDATED,BLOCKED,S12,
+C016,Cambios conductuales/psiquiátricos / salud conductual,differential_diagnosis,RMA,STRUCTURE_ONLY,NOT_VALIDATED,BLOCKED,S12,
+C016,Cambios conductuales/psiquiátricos / salud conductual,triage,RMA,STRUCTURE_ONLY,NOT_VALIDATED,BLOCKED,S12,
+C016,Cambios conductuales/psiquiátricos / salud conductual,intervention_authorized,RMA,STRUCTURE_ONLY,NOT_VALIDATED,BLOCKED,S12,
+C016,Cambios conductuales/psiquiátricos / salud conductual,recovery,RV,HUMAN_WORKFLOW_RECORDING,NOT_VALIDATED,BLOCKED,S12,
+C016,Cambios conductuales/psiquiátricos / salud conductual,follow_up,RV,PLAN_DUE_STATUS_AND_REVIEWS,NOT_VALIDATED,BLOCKED,S12,
+C016,Cambios conductuales/psiquiátricos / salud conductual,prognosis,RO,STRUCTURE_ONLY,NOT_VALIDATED,BLOCKED,S12,
+C017,Deterioro de trabajo en equipo/adaptación psicosocial / factores humanos,prevention,ES,STRUCTURE_ONLY,NOT_VALIDATED,BLOCKED,S12,
+C017,Deterioro de trabajo en equipo/adaptación psicosocial / factores humanos,monitoring,RV,NUMERIC_ACQUISITION_INFRASTRUCTURE,NOT_VALIDATED,BLOCKED,S12,
+C017,Deterioro de trabajo en equipo/adaptación psicosocial / factores humanos,data_quality,ES,CONFIGURED_TECHNICAL_GATES,NOT_VALIDATED,BLOCKED,S12,
+C017,Deterioro de trabajo en equipo/adaptación psicosocial / factores humanos,detection,RO,NO_CONDITION_SPECIFIC_DETECTOR,NOT_VALIDATED,BLOCKED,S12,
+C017,Deterioro de trabajo en equipo/adaptación psicosocial / factores humanos,assessment,RV,HUMAN_RECORDING,NOT_VALIDATED,BLOCKED,S12,
+C017,Deterioro de trabajo en equipo/adaptación psicosocial / factores humanos,differential_diagnosis,RV,STRUCTURE_ONLY,NOT_VALIDATED,BLOCKED,S12,
+C017,Deterioro de trabajo en equipo/adaptación psicosocial / factores humanos,triage,RMA,STRUCTURE_ONLY,NOT_VALIDATED,BLOCKED,S12,
+C017,Deterioro de trabajo en equipo/adaptación psicosocial / factores humanos,intervention_authorized,RMA,STRUCTURE_ONLY,NOT_VALIDATED,BLOCKED,S12,
+C017,Deterioro de trabajo en equipo/adaptación psicosocial / factores humanos,recovery,RV,HUMAN_WORKFLOW_RECORDING,NOT_VALIDATED,BLOCKED,S12,
+C017,Deterioro de trabajo en equipo/adaptación psicosocial / factores humanos,follow_up,RV,PLAN_DUE_STATUS_AND_REVIEWS,NOT_VALIDATED,BLOCKED,S12,
+C017,Deterioro de trabajo en equipo/adaptación psicosocial / factores humanos,prognosis,RO,STRUCTURE_ONLY,NOT_VALIDATED,BLOCKED,S12,
+C018,Alteración de respuesta inmunitaria / inmunología,prevention,ES,STRUCTURE_ONLY,NOT_VALIDATED,BLOCKED,S09,
+C018,Alteración de respuesta inmunitaria / inmunología,monitoring,RV,NUMERIC_ACQUISITION_INFRASTRUCTURE,NOT_VALIDATED,BLOCKED,S09,
+C018,Alteración de respuesta inmunitaria / inmunología,data_quality,ES,CONFIGURED_TECHNICAL_GATES,NOT_VALIDATED,BLOCKED,S09,
+C018,Alteración de respuesta inmunitaria / inmunología,detection,RV,NO_CONDITION_SPECIFIC_DETECTOR,NOT_VALIDATED,BLOCKED,S09,
+C018,Alteración de respuesta inmunitaria / inmunología,assessment,RV,HUMAN_RECORDING,NOT_VALIDATED,BLOCKED,S09,
+C018,Alteración de respuesta inmunitaria / inmunología,differential_diagnosis,RV,STRUCTURE_ONLY,NOT_VALIDATED,BLOCKED,S09,
+C018,Alteración de respuesta inmunitaria / inmunología,triage,RMA,STRUCTURE_ONLY,NOT_VALIDATED,BLOCKED,S09,
+C018,Alteración de respuesta inmunitaria / inmunología,intervention_authorized,RMA,STRUCTURE_ONLY,NOT_VALIDATED,BLOCKED,S09,
+C018,Alteración de respuesta inmunitaria / inmunología,recovery,RV,HUMAN_WORKFLOW_RECORDING,NOT_VALIDATED,BLOCKED,S09,
+C018,Alteración de respuesta inmunitaria / inmunología,follow_up,ES,PLAN_DUE_STATUS_AND_REVIEWS,NOT_VALIDATED,BLOCKED,S09,
+C018,Alteración de respuesta inmunitaria / inmunología,prognosis,RO,STRUCTURE_ONLY,NOT_VALIDATED,BLOCKED,S09,
+C019,Reactivación viral latente / infeccioso-inmunológico,prevention,ES,STRUCTURE_ONLY,NOT_VALIDATED,BLOCKED,S09,
+C019,Reactivación viral latente / infeccioso-inmunológico,monitoring,RV,NUMERIC_ACQUISITION_INFRASTRUCTURE,NOT_VALIDATED,BLOCKED,S09,
+C019,Reactivación viral latente / infeccioso-inmunológico,data_quality,ES,CONFIGURED_TECHNICAL_GATES,NOT_VALIDATED,BLOCKED,S09,
+C019,Reactivación viral latente / infeccioso-inmunológico,detection,RV,NO_CONDITION_SPECIFIC_DETECTOR,NOT_VALIDATED,BLOCKED,S09,
+C019,Reactivación viral latente / infeccioso-inmunológico,assessment,RV,HUMAN_RECORDING,NOT_VALIDATED,BLOCKED,S09,
+C019,Reactivación viral latente / infeccioso-inmunológico,differential_diagnosis,RV,STRUCTURE_ONLY,NOT_VALIDATED,BLOCKED,S09,
+C019,Reactivación viral latente / infeccioso-inmunológico,triage,RMA,STRUCTURE_ONLY,NOT_VALIDATED,BLOCKED,S09,
+C019,Reactivación viral latente / infeccioso-inmunológico,intervention_authorized,RMA,STRUCTURE_ONLY,NOT_VALIDATED,BLOCKED,S09,
+C019,Reactivación viral latente / infeccioso-inmunológico,recovery,RV,HUMAN_WORKFLOW_RECORDING,NOT_VALIDATED,BLOCKED,S09,
+C019,Reactivación viral latente / infeccioso-inmunológico,follow_up,RV,PLAN_DUE_STATUS_AND_REVIEWS,NOT_VALIDATED,BLOCKED,S09,
+C019,Reactivación viral latente / infeccioso-inmunológico,prognosis,RO,STRUCTURE_ONLY,NOT_VALIDATED,BLOCKED,S09,
+C020,Infección/host–microorganism interaction / infeccioso,prevention,ES,STRUCTURE_ONLY,NOT_VALIDATED,BLOCKED,S03;S17,
+C020,Infección/host–microorganism interaction / infeccioso,monitoring,ES,NUMERIC_ACQUISITION_INFRASTRUCTURE,NOT_VALIDATED,BLOCKED,S03;S17,
+C020,Infección/host–microorganism interaction / infeccioso,data_quality,ES,CONFIGURED_TECHNICAL_GATES,NOT_VALIDATED,BLOCKED,S03;S17,
+C020,Infección/host–microorganism interaction / infeccioso,detection,RV,NO_CONDITION_SPECIFIC_DETECTOR,NOT_VALIDATED,BLOCKED,S03;S17,
+C020,Infección/host–microorganism interaction / infeccioso,assessment,RV,HUMAN_RECORDING,NOT_VALIDATED,BLOCKED,S03;S17,
+C020,Infección/host–microorganism interaction / infeccioso,differential_diagnosis,RV,STRUCTURE_ONLY,NOT_VALIDATED,BLOCKED,S03;S17,
+C020,Infección/host–microorganism interaction / infeccioso,triage,RMA,STRUCTURE_ONLY,NOT_VALIDATED,BLOCKED,S03;S17,
+C020,Infección/host–microorganism interaction / infeccioso,intervention_authorized,RMA,STRUCTURE_ONLY,NOT_VALIDATED,BLOCKED,S03;S17,
+C020,Infección/host–microorganism interaction / infeccioso,recovery,RV,HUMAN_WORKFLOW_RECORDING,NOT_VALIDATED,BLOCKED,S03;S17,
+C020,Infección/host–microorganism interaction / infeccioso,follow_up,RV,PLAN_DUE_STATUS_AND_REVIEWS,NOT_VALIDATED,BLOCKED,S03;S17,
+C020,Infección/host–microorganism interaction / infeccioso,prognosis,RO,STRUCTURE_ONLY,NOT_VALIDATED,BLOCKED,S03;S17,
+C021,Formación de cálculos renales / nefro-urología,prevention,ES,STRUCTURE_ONLY,NOT_VALIDATED,BLOCKED,S08,
+C021,Formación de cálculos renales / nefro-urología,monitoring,ES,NUMERIC_ACQUISITION_INFRASTRUCTURE,NOT_VALIDATED,BLOCKED,S08,
+C021,Formación de cálculos renales / nefro-urología,data_quality,ES,CONFIGURED_TECHNICAL_GATES,NOT_VALIDATED,BLOCKED,S08,
+C021,Formación de cálculos renales / nefro-urología,detection,RV,NO_CONDITION_SPECIFIC_DETECTOR,NOT_VALIDATED,BLOCKED,S08,
+C021,Formación de cálculos renales / nefro-urología,assessment,RV,HUMAN_RECORDING,NOT_VALIDATED,BLOCKED,S08,
+C021,Formación de cálculos renales / nefro-urología,differential_diagnosis,RV,STRUCTURE_ONLY,NOT_VALIDATED,BLOCKED,S08,
+C021,Formación de cálculos renales / nefro-urología,triage,RMA,STRUCTURE_ONLY,NOT_VALIDATED,BLOCKED,S08,
+C021,Formación de cálculos renales / nefro-urología,intervention_authorized,RMA,STRUCTURE_ONLY,NOT_VALIDATED,BLOCKED,S08,
+C021,Formación de cálculos renales / nefro-urología,recovery,RV,HUMAN_WORKFLOW_RECORDING,NOT_VALIDATED,BLOCKED,S08,
+C021,Formación de cálculos renales / nefro-urología,follow_up,ES,PLAN_DUE_STATUS_AND_REVIEWS,NOT_VALIDATED,BLOCKED,S08,
+C021,Formación de cálculos renales / nefro-urología,prognosis,RO,STRUCTURE_ONLY,NOT_VALIDATED,BLOCKED,S08,
+C022,Retención urinaria / urología,prevention,RV,STRUCTURE_ONLY,NOT_VALIDATED,BLOCKED,S03,
+C022,Retención urinaria / urología,monitoring,RV,NUMERIC_ACQUISITION_INFRASTRUCTURE,NOT_VALIDATED,BLOCKED,S03,
+C022,Retención urinaria / urología,data_quality,ES,CONFIGURED_TECHNICAL_GATES,NOT_VALIDATED,BLOCKED,S03,
+C022,Retención urinaria / urología,detection,NPA,NO_CONDITION_SPECIFIC_DETECTOR,NOT_VALIDATED,BLOCKED,S03,
+C022,Retención urinaria / urología,assessment,RMA,HUMAN_RECORDING,NOT_VALIDATED,BLOCKED,S03,
+C022,Retención urinaria / urología,differential_diagnosis,RMA,STRUCTURE_ONLY,NOT_VALIDATED,BLOCKED,S03,
+C022,Retención urinaria / urología,triage,RMA,STRUCTURE_ONLY,NOT_VALIDATED,BLOCKED,S03,
+C022,Retención urinaria / urología,intervention_authorized,RMA,STRUCTURE_ONLY,NOT_VALIDATED,BLOCKED,S03,
+C022,Retención urinaria / urología,recovery,RV,HUMAN_WORKFLOW_RECORDING,NOT_VALIDATED,BLOCKED,S03,
+C022,Retención urinaria / urología,follow_up,RV,PLAN_DUE_STATUS_AND_REVIEWS,NOT_VALIDATED,BLOCKED,S03,
+C022,Retención urinaria / urología,prognosis,RO,STRUCTURE_ONLY,NOT_VALIDATED,BLOCKED,S03,
+C023,Nutrición/energía inadecuadas / nutrición-metabolismo,prevention,ES,STRUCTURE_ONLY,NOT_VALIDATED,BLOCKED,S13,VIGILE-NUT-001
+C023,Nutrición/energía inadecuadas / nutrición-metabolismo,monitoring,ES,NUMERIC_ACQUISITION_INFRASTRUCTURE,NOT_VALIDATED,BLOCKED,S13,VIGILE-NUT-001
+C023,Nutrición/energía inadecuadas / nutrición-metabolismo,data_quality,ES,CONFIGURED_TECHNICAL_GATES,NOT_VALIDATED,BLOCKED,S13,VIGILE-NUT-001
+C023,Nutrición/energía inadecuadas / nutrición-metabolismo,detection,RV,NORMATIVE_SIMULATION,NOT_VALIDATED,BLOCKED,S13,VIGILE-NUT-001
+C023,Nutrición/energía inadecuadas / nutrición-metabolismo,assessment,RV,HUMAN_RECORDING,NOT_VALIDATED,BLOCKED,S13,VIGILE-NUT-001
+C023,Nutrición/energía inadecuadas / nutrición-metabolismo,differential_diagnosis,RV,STRUCTURE_ONLY,NOT_VALIDATED,BLOCKED,S13,VIGILE-NUT-001
+C023,Nutrición/energía inadecuadas / nutrición-metabolismo,triage,RMA,STRUCTURE_ONLY,NOT_VALIDATED,BLOCKED,S13,VIGILE-NUT-001
+C023,Nutrición/energía inadecuadas / nutrición-metabolismo,intervention_authorized,RMA,STRUCTURE_ONLY,NOT_VALIDATED,BLOCKED,S13,VIGILE-NUT-001
+C023,Nutrición/energía inadecuadas / nutrición-metabolismo,recovery,RV,HUMAN_WORKFLOW_RECORDING,NOT_VALIDATED,BLOCKED,S13,VIGILE-NUT-001
+C023,Nutrición/energía inadecuadas / nutrición-metabolismo,follow_up,ES,PLAN_DUE_STATUS_AND_REVIEWS,NOT_VALIDATED,BLOCKED,S13,VIGILE-NUT-001
+C023,Nutrición/energía inadecuadas / nutrición-metabolismo,prognosis,RO,STRUCTURE_ONLY,NOT_VALIDATED,BLOCKED,S13,VIGILE-NUT-001
+C024,Deshidratación/desequilibrio hidroelectrolítico / nutrición-renal,prevention,ES,STRUCTURE_ONLY,NOT_VALIDATED,BLOCKED,S13;S02,
+C024,Deshidratación/desequilibrio hidroelectrolítico / nutrición-renal,monitoring,RV,NUMERIC_ACQUISITION_INFRASTRUCTURE,NOT_VALIDATED,BLOCKED,S13;S02,
+C024,Deshidratación/desequilibrio hidroelectrolítico / nutrición-renal,data_quality,ES,CONFIGURED_TECHNICAL_GATES,NOT_VALIDATED,BLOCKED,S13;S02,
+C024,Deshidratación/desequilibrio hidroelectrolítico / nutrición-renal,detection,RV,NO_CONDITION_SPECIFIC_DETECTOR,NOT_VALIDATED,BLOCKED,S13;S02,
+C024,Deshidratación/desequilibrio hidroelectrolítico / nutrición-renal,assessment,RV,HUMAN_RECORDING,NOT_VALIDATED,BLOCKED,S13;S02,
+C024,Deshidratación/desequilibrio hidroelectrolítico / nutrición-renal,differential_diagnosis,RV,STRUCTURE_ONLY,NOT_VALIDATED,BLOCKED,S13;S02,
+C024,Deshidratación/desequilibrio hidroelectrolítico / nutrición-renal,triage,RMA,STRUCTURE_ONLY,NOT_VALIDATED,BLOCKED,S13;S02,
+C024,Deshidratación/desequilibrio hidroelectrolítico / nutrición-renal,intervention_authorized,RMA,STRUCTURE_ONLY,NOT_VALIDATED,BLOCKED,S13;S02,
+C024,Deshidratación/desequilibrio hidroelectrolítico / nutrición-renal,recovery,RV,HUMAN_WORKFLOW_RECORDING,NOT_VALIDATED,BLOCKED,S13;S02,
+C024,Deshidratación/desequilibrio hidroelectrolítico / nutrición-renal,follow_up,RV,PLAN_DUE_STATUS_AND_REVIEWS,NOT_VALIDATED,BLOCKED,S13;S02,
+C024,Deshidratación/desequilibrio hidroelectrolítico / nutrición-renal,prognosis,RO,STRUCTURE_ONLY,NOT_VALIDATED,BLOCKED,S13;S02,
+C025,Enfermedad gastrointestinal aguda / gastroenterología,prevention,ES,STRUCTURE_ONLY,NOT_VALIDATED,BLOCKED,S17,
+C025,Enfermedad gastrointestinal aguda / gastroenterología,monitoring,ES,NUMERIC_ACQUISITION_INFRASTRUCTURE,NOT_VALIDATED,BLOCKED,S17,
+C025,Enfermedad gastrointestinal aguda / gastroenterología,data_quality,ES,CONFIGURED_TECHNICAL_GATES,NOT_VALIDATED,BLOCKED,S17,
+C025,Enfermedad gastrointestinal aguda / gastroenterología,detection,RV,NO_CONDITION_SPECIFIC_DETECTOR,NOT_VALIDATED,BLOCKED,S17,
+C025,Enfermedad gastrointestinal aguda / gastroenterología,assessment,RMA,HUMAN_RECORDING,NOT_VALIDATED,BLOCKED,S17,
+C025,Enfermedad gastrointestinal aguda / gastroenterología,differential_diagnosis,RMA,STRUCTURE_ONLY,NOT_VALIDATED,BLOCKED,S17,
+C025,Enfermedad gastrointestinal aguda / gastroenterología,triage,RMA,STRUCTURE_ONLY,NOT_VALIDATED,BLOCKED,S17,
+C025,Enfermedad gastrointestinal aguda / gastroenterología,intervention_authorized,RMA,STRUCTURE_ONLY,NOT_VALIDATED,BLOCKED,S17,
+C025,Enfermedad gastrointestinal aguda / gastroenterología,recovery,RV,HUMAN_WORKFLOW_RECORDING,NOT_VALIDATED,BLOCKED,S17,
+C025,Enfermedad gastrointestinal aguda / gastroenterología,follow_up,RV,PLAN_DUE_STATUS_AND_REVIEWS,NOT_VALIDATED,BLOCKED,S17,
+C025,Enfermedad gastrointestinal aguda / gastroenterología,prognosis,RO,STRUCTURE_ONLY,NOT_VALIDATED,BLOCKED,S17,
+C026,Hipoxia / respiratorio-ambiental,prevention,ES,STRUCTURE_ONLY,NOT_VALIDATED,BLOCKED,S14;S02,VIGILE-ENV-001;VIGILE-ENV-003
+C026,Hipoxia / respiratorio-ambiental,monitoring,ES,NUMERIC_ACQUISITION_INFRASTRUCTURE,NOT_VALIDATED,BLOCKED,S14;S02,VIGILE-ENV-001;VIGILE-ENV-003
+C026,Hipoxia / respiratorio-ambiental,data_quality,ES,CONFIGURED_TECHNICAL_GATES,NOT_VALIDATED,BLOCKED,S14;S02,VIGILE-ENV-001;VIGILE-ENV-003
+C026,Hipoxia / respiratorio-ambiental,detection,RV,NORMATIVE_SIMULATION,NOT_VALIDATED,BLOCKED,S14;S02,VIGILE-ENV-001;VIGILE-ENV-003
+C026,Hipoxia / respiratorio-ambiental,assessment,RV,HUMAN_RECORDING,NOT_VALIDATED,BLOCKED,S14;S02,VIGILE-ENV-001;VIGILE-ENV-003
+C026,Hipoxia / respiratorio-ambiental,differential_diagnosis,RV,STRUCTURE_ONLY,NOT_VALIDATED,BLOCKED,S14;S02,VIGILE-ENV-001;VIGILE-ENV-003
+C026,Hipoxia / respiratorio-ambiental,triage,RMA,STRUCTURE_ONLY,NOT_VALIDATED,BLOCKED,S14;S02,VIGILE-ENV-001;VIGILE-ENV-003
+C026,Hipoxia / respiratorio-ambiental,intervention_authorized,RMA,STRUCTURE_ONLY,NOT_VALIDATED,BLOCKED,S14;S02,VIGILE-ENV-001;VIGILE-ENV-003
+C026,Hipoxia / respiratorio-ambiental,recovery,RV,HUMAN_WORKFLOW_RECORDING,NOT_VALIDATED,BLOCKED,S14;S02,VIGILE-ENV-001;VIGILE-ENV-003
+C026,Hipoxia / respiratorio-ambiental,follow_up,RV,PLAN_DUE_STATUS_AND_REVIEWS,NOT_VALIDATED,BLOCKED,S14;S02,VIGILE-ENV-001;VIGILE-ENV-003
+C026,Hipoxia / respiratorio-ambiental,prognosis,RO,STRUCTURE_ONLY,NOT_VALIDATED,BLOCKED,S14;S02,VIGILE-ENV-001;VIGILE-ENV-003
+C027,Exposición nominal/crónica a CO₂ / ambiental-respiratorio-neurológico,prevention,ES,STRUCTURE_ONLY,NOT_VALIDATED,BLOCKED,S02,VIGILE-ENV-002
+C027,Exposición nominal/crónica a CO₂ / ambiental-respiratorio-neurológico,monitoring,ES,NUMERIC_ACQUISITION_INFRASTRUCTURE,NOT_VALIDATED,BLOCKED,S02,VIGILE-ENV-002
+C027,Exposición nominal/crónica a CO₂ / ambiental-respiratorio-neurológico,data_quality,ES,CONFIGURED_TECHNICAL_GATES,NOT_VALIDATED,BLOCKED,S02,VIGILE-ENV-002
+C027,Exposición nominal/crónica a CO₂ / ambiental-respiratorio-neurológico,detection,ES,NORMATIVE_SIMULATION,NOT_VALIDATED,BLOCKED,S02,VIGILE-ENV-002
+C027,Exposición nominal/crónica a CO₂ / ambiental-respiratorio-neurológico,assessment,RV,HUMAN_RECORDING,NOT_VALIDATED,BLOCKED,S02,VIGILE-ENV-002
+C027,Exposición nominal/crónica a CO₂ / ambiental-respiratorio-neurológico,differential_diagnosis,RV,STRUCTURE_ONLY,NOT_VALIDATED,BLOCKED,S02,VIGILE-ENV-002
+C027,Exposición nominal/crónica a CO₂ / ambiental-respiratorio-neurológico,triage,RMA,STRUCTURE_ONLY,NOT_VALIDATED,BLOCKED,S02,VIGILE-ENV-002
+C027,Exposición nominal/crónica a CO₂ / ambiental-respiratorio-neurológico,intervention_authorized,RMA,STRUCTURE_ONLY,NOT_VALIDATED,BLOCKED,S02,VIGILE-ENV-002
+C027,Exposición nominal/crónica a CO₂ / ambiental-respiratorio-neurológico,recovery,ES,HUMAN_WORKFLOW_RECORDING,NOT_VALIDATED,BLOCKED,S02,VIGILE-ENV-002
+C027,Exposición nominal/crónica a CO₂ / ambiental-respiratorio-neurológico,follow_up,ES,PLAN_DUE_STATUS_AND_REVIEWS,NOT_VALIDATED,BLOCKED,S02,VIGILE-ENV-002
+C027,Exposición nominal/crónica a CO₂ / ambiental-respiratorio-neurológico,prognosis,RO,STRUCTURE_ONLY,NOT_VALIDATED,BLOCKED,S02,VIGILE-ENV-002
+C028,Exposición a sustancias tóxicas / toxicología,prevention,ES,STRUCTURE_ONLY,NOT_VALIDATED,BLOCKED,S37,
+C028,Exposición a sustancias tóxicas / toxicología,monitoring,ES,NUMERIC_ACQUISITION_INFRASTRUCTURE,NOT_VALIDATED,BLOCKED,S37,
+C028,Exposición a sustancias tóxicas / toxicología,data_quality,ES,CONFIGURED_TECHNICAL_GATES,NOT_VALIDATED,BLOCKED,S37,
+C028,Exposición a sustancias tóxicas / toxicología,detection,RV,NO_CONDITION_SPECIFIC_DETECTOR,NOT_VALIDATED,BLOCKED,S37,
+C028,Exposición a sustancias tóxicas / toxicología,assessment,RMA,HUMAN_RECORDING,NOT_VALIDATED,BLOCKED,S37,
+C028,Exposición a sustancias tóxicas / toxicología,differential_diagnosis,RMA,STRUCTURE_ONLY,NOT_VALIDATED,BLOCKED,S37,
+C028,Exposición a sustancias tóxicas / toxicología,triage,RMA,STRUCTURE_ONLY,NOT_VALIDATED,BLOCKED,S37,
+C028,Exposición a sustancias tóxicas / toxicología,intervention_authorized,RMA,STRUCTURE_ONLY,NOT_VALIDATED,BLOCKED,S37,
+C028,Exposición a sustancias tóxicas / toxicología,recovery,RV,HUMAN_WORKFLOW_RECORDING,NOT_VALIDATED,BLOCKED,S37,
+C028,Exposición a sustancias tóxicas / toxicología,follow_up,RV,PLAN_DUE_STATUS_AND_REVIEWS,NOT_VALIDATED,BLOCKED,S37,
+C028,Exposición a sustancias tóxicas / toxicología,prognosis,RO,STRUCTURE_ONLY,NOT_VALIDATED,BLOCKED,S37,
+C029,Exposición a polvo celestial/lunar / ocupacional-respiratorio,prevention,ES,STRUCTURE_ONLY,NOT_VALIDATED,BLOCKED,S03;S37,
+C029,Exposición a polvo celestial/lunar / ocupacional-respiratorio,monitoring,RV,NUMERIC_ACQUISITION_INFRASTRUCTURE,NOT_VALIDATED,BLOCKED,S03;S37,
+C029,Exposición a polvo celestial/lunar / ocupacional-respiratorio,data_quality,ES,CONFIGURED_TECHNICAL_GATES,NOT_VALIDATED,BLOCKED,S03;S37,
+C029,Exposición a polvo celestial/lunar / ocupacional-respiratorio,detection,RV,NO_CONDITION_SPECIFIC_DETECTOR,NOT_VALIDATED,BLOCKED,S03;S37,
+C029,Exposición a polvo celestial/lunar / ocupacional-respiratorio,assessment,RV,HUMAN_RECORDING,NOT_VALIDATED,BLOCKED,S03;S37,
+C029,Exposición a polvo celestial/lunar / ocupacional-respiratorio,differential_diagnosis,RV,STRUCTURE_ONLY,NOT_VALIDATED,BLOCKED,S03;S37,
+C029,Exposición a polvo celestial/lunar / ocupacional-respiratorio,triage,RMA,STRUCTURE_ONLY,NOT_VALIDATED,BLOCKED,S03;S37,
+C029,Exposición a polvo celestial/lunar / ocupacional-respiratorio,intervention_authorized,RMA,STRUCTURE_ONLY,NOT_VALIDATED,BLOCKED,S03;S37,
+C029,Exposición a polvo celestial/lunar / ocupacional-respiratorio,recovery,RV,HUMAN_WORKFLOW_RECORDING,NOT_VALIDATED,BLOCKED,S03;S37,
+C029,Exposición a polvo celestial/lunar / ocupacional-respiratorio,follow_up,RV,PLAN_DUE_STATUS_AND_REVIEWS,NOT_VALIDATED,BLOCKED,S03;S37,
+C029,Exposición a polvo celestial/lunar / ocupacional-respiratorio,prognosis,RO,STRUCTURE_ONLY,NOT_VALIDATED,BLOCKED,S03;S37,
+C030,Enfermedad por descompresión / aeroespacial,prevention,ES,STRUCTURE_ONLY,NOT_VALIDATED,BLOCKED,S36,VIGILE-ENV-003
+C030,Enfermedad por descompresión / aeroespacial,monitoring,ES,NUMERIC_ACQUISITION_INFRASTRUCTURE,NOT_VALIDATED,BLOCKED,S36,VIGILE-ENV-003
+C030,Enfermedad por descompresión / aeroespacial,data_quality,ES,CONFIGURED_TECHNICAL_GATES,NOT_VALIDATED,BLOCKED,S36,VIGILE-ENV-003
+C030,Enfermedad por descompresión / aeroespacial,detection,RV,NORMATIVE_SIMULATION,NOT_VALIDATED,BLOCKED,S36,VIGILE-ENV-003
+C030,Enfermedad por descompresión / aeroespacial,assessment,RMA,HUMAN_RECORDING,NOT_VALIDATED,BLOCKED,S36,VIGILE-ENV-003
+C030,Enfermedad por descompresión / aeroespacial,differential_diagnosis,RMA,STRUCTURE_ONLY,NOT_VALIDATED,BLOCKED,S36,VIGILE-ENV-003
+C030,Enfermedad por descompresión / aeroespacial,triage,RMA,STRUCTURE_ONLY,NOT_VALIDATED,BLOCKED,S36,VIGILE-ENV-003
+C030,Enfermedad por descompresión / aeroespacial,intervention_authorized,RMA,STRUCTURE_ONLY,NOT_VALIDATED,BLOCKED,S36,VIGILE-ENV-003
+C030,Enfermedad por descompresión / aeroespacial,recovery,RV,HUMAN_WORKFLOW_RECORDING,NOT_VALIDATED,BLOCKED,S36,VIGILE-ENV-003
+C030,Enfermedad por descompresión / aeroespacial,follow_up,RV,PLAN_DUE_STATUS_AND_REVIEWS,NOT_VALIDATED,BLOCKED,S36,VIGILE-ENV-003
+C030,Enfermedad por descompresión / aeroespacial,prognosis,RO,STRUCTURE_ONLY,NOT_VALIDATED,BLOCKED,S36,VIGILE-ENV-003
+C031,Barotrauma/ear-sinus block / ORL,prevention,ES,STRUCTURE_ONLY,NOT_VALIDATED,BLOCKED,S17,VIGILE-ENV-004
+C031,Barotrauma/ear-sinus block / ORL,monitoring,RV,NUMERIC_ACQUISITION_INFRASTRUCTURE,NOT_VALIDATED,BLOCKED,S17,VIGILE-ENV-004
+C031,Barotrauma/ear-sinus block / ORL,data_quality,ES,CONFIGURED_TECHNICAL_GATES,NOT_VALIDATED,BLOCKED,S17,VIGILE-ENV-004
+C031,Barotrauma/ear-sinus block / ORL,detection,RV,NORMATIVE_SIMULATION,NOT_VALIDATED,BLOCKED,S17,VIGILE-ENV-004
+C031,Barotrauma/ear-sinus block / ORL,assessment,RMA,HUMAN_RECORDING,NOT_VALIDATED,BLOCKED,S17,VIGILE-ENV-004
+C031,Barotrauma/ear-sinus block / ORL,differential_diagnosis,RMA,STRUCTURE_ONLY,NOT_VALIDATED,BLOCKED,S17,VIGILE-ENV-004
+C031,Barotrauma/ear-sinus block / ORL,triage,RMA,STRUCTURE_ONLY,NOT_VALIDATED,BLOCKED,S17,VIGILE-ENV-004
+C031,Barotrauma/ear-sinus block / ORL,intervention_authorized,RMA,STRUCTURE_ONLY,NOT_VALIDATED,BLOCKED,S17,VIGILE-ENV-004
+C031,Barotrauma/ear-sinus block / ORL,recovery,RV,HUMAN_WORKFLOW_RECORDING,NOT_VALIDATED,BLOCKED,S17,VIGILE-ENV-004
+C031,Barotrauma/ear-sinus block / ORL,follow_up,RV,PLAN_DUE_STATUS_AND_REVIEWS,NOT_VALIDATED,BLOCKED,S17,VIGILE-ENV-004
+C031,Barotrauma/ear-sinus block / ORL,prognosis,NPA,STRUCTURE_ONLY,NOT_VALIDATED,BLOCKED,S17,VIGILE-ENV-004
+C032,Exposición acumulada a radiación ionizante/carcinogénesis / radiobiología,prevention,ES,STRUCTURE_ONLY,NOT_VALIDATED,BLOCKED,S01;S16,VIGILE-RAD-001;VIGILE-RAD-002;VIGILE-RAD-003;VIGILE-RAD-004
+C032,Exposición acumulada a radiación ionizante/carcinogénesis / radiobiología,monitoring,ES,NUMERIC_ACQUISITION_INFRASTRUCTURE,NOT_VALIDATED,BLOCKED,S01;S16,VIGILE-RAD-001;VIGILE-RAD-002;VIGILE-RAD-003;VIGILE-RAD-004
+C032,Exposición acumulada a radiación ionizante/carcinogénesis / radiobiología,data_quality,ES,CONFIGURED_TECHNICAL_GATES,NOT_VALIDATED,BLOCKED,S01;S16,VIGILE-RAD-001;VIGILE-RAD-002;VIGILE-RAD-003;VIGILE-RAD-004
+C032,Exposición acumulada a radiación ionizante/carcinogénesis / radiobiología,detection,ES,NORMATIVE_SIMULATION,NOT_VALIDATED,BLOCKED,S01;S16,VIGILE-RAD-001;VIGILE-RAD-002;VIGILE-RAD-003;VIGILE-RAD-004
+C032,Exposición acumulada a radiación ionizante/carcinogénesis / radiobiología,assessment,RV,HUMAN_RECORDING,NOT_VALIDATED,BLOCKED,S01;S16,VIGILE-RAD-001;VIGILE-RAD-002;VIGILE-RAD-003;VIGILE-RAD-004
+C032,Exposición acumulada a radiación ionizante/carcinogénesis / radiobiología,differential_diagnosis,NA,STRUCTURE_ONLY,NOT_VALIDATED,BLOCKED,S01;S16,VIGILE-RAD-001;VIGILE-RAD-002;VIGILE-RAD-003;VIGILE-RAD-004
+C032,Exposición acumulada a radiación ionizante/carcinogénesis / radiobiología,triage,RMA,STRUCTURE_ONLY,NOT_VALIDATED,BLOCKED,S01;S16,VIGILE-RAD-001;VIGILE-RAD-002;VIGILE-RAD-003;VIGILE-RAD-004
+C032,Exposición acumulada a radiación ionizante/carcinogénesis / radiobiología,intervention_authorized,RMA,STRUCTURE_ONLY,NOT_VALIDATED,BLOCKED,S01;S16,VIGILE-RAD-001;VIGILE-RAD-002;VIGILE-RAD-003;VIGILE-RAD-004
+C032,Exposición acumulada a radiación ionizante/carcinogénesis / radiobiología,recovery,NA,HUMAN_WORKFLOW_RECORDING,NOT_VALIDATED,BLOCKED,S01;S16,VIGILE-RAD-001;VIGILE-RAD-002;VIGILE-RAD-003;VIGILE-RAD-004
+C032,Exposición acumulada a radiación ionizante/carcinogénesis / radiobiología,follow_up,ES,PLAN_DUE_STATUS_AND_REVIEWS,NOT_VALIDATED,BLOCKED,S01;S16,VIGILE-RAD-001;VIGILE-RAD-002;VIGILE-RAD-003;VIGILE-RAD-004
+C032,Exposición acumulada a radiación ionizante/carcinogénesis / radiobiología,prognosis,RV,STRUCTURE_ONLY,NOT_VALIDATED,BLOCKED,S01;S16,VIGILE-RAD-001;VIGILE-RAD-002;VIGILE-RAD-003;VIGILE-RAD-004
+C033,Síndrome/efectos agudos de radiación / emergencias-radiobiología,prevention,ES,STRUCTURE_ONLY,NOT_VALIDATED,BLOCKED,S01;S17,
+C033,Síndrome/efectos agudos de radiación / emergencias-radiobiología,monitoring,ES,NUMERIC_ACQUISITION_INFRASTRUCTURE,NOT_VALIDATED,BLOCKED,S01;S17,
+C033,Síndrome/efectos agudos de radiación / emergencias-radiobiología,data_quality,ES,CONFIGURED_TECHNICAL_GATES,NOT_VALIDATED,BLOCKED,S01;S17,
+C033,Síndrome/efectos agudos de radiación / emergencias-radiobiología,detection,RV,NO_CONDITION_SPECIFIC_DETECTOR,NOT_VALIDATED,BLOCKED,S01;S17,
+C033,Síndrome/efectos agudos de radiación / emergencias-radiobiología,assessment,RMA,HUMAN_RECORDING,NOT_VALIDATED,BLOCKED,S01;S17,
+C033,Síndrome/efectos agudos de radiación / emergencias-radiobiología,differential_diagnosis,RMA,STRUCTURE_ONLY,NOT_VALIDATED,BLOCKED,S01;S17,
+C033,Síndrome/efectos agudos de radiación / emergencias-radiobiología,triage,RMA,STRUCTURE_ONLY,NOT_VALIDATED,BLOCKED,S01;S17,
+C033,Síndrome/efectos agudos de radiación / emergencias-radiobiología,intervention_authorized,RMA,STRUCTURE_ONLY,NOT_VALIDATED,BLOCKED,S01;S17,
+C033,Síndrome/efectos agudos de radiación / emergencias-radiobiología,recovery,RV,HUMAN_WORKFLOW_RECORDING,NOT_VALIDATED,BLOCKED,S01;S17,
+C033,Síndrome/efectos agudos de radiación / emergencias-radiobiología,follow_up,RV,PLAN_DUE_STATUS_AND_REVIEWS,NOT_VALIDATED,BLOCKED,S01;S17,
+C033,Síndrome/efectos agudos de radiación / emergencias-radiobiología,prognosis,RO,STRUCTURE_ONLY,NOT_VALIDATED,BLOCKED,S01;S17,
+C034,Radiación no ionizante / ambiental,prevention,ES,STRUCTURE_ONLY,NOT_VALIDATED,BLOCKED,S03,
+C034,Radiación no ionizante / ambiental,monitoring,RV,NUMERIC_ACQUISITION_INFRASTRUCTURE,NOT_VALIDATED,BLOCKED,S03,
+C034,Radiación no ionizante / ambiental,data_quality,ES,CONFIGURED_TECHNICAL_GATES,NOT_VALIDATED,BLOCKED,S03,
+C034,Radiación no ionizante / ambiental,detection,RV,NO_CONDITION_SPECIFIC_DETECTOR,NOT_VALIDATED,BLOCKED,S03,
+C034,Radiación no ionizante / ambiental,assessment,RV,HUMAN_RECORDING,NOT_VALIDATED,BLOCKED,S03,
+C034,Radiación no ionizante / ambiental,differential_diagnosis,RV,STRUCTURE_ONLY,NOT_VALIDATED,BLOCKED,S03,
+C034,Radiación no ionizante / ambiental,triage,RMA,STRUCTURE_ONLY,NOT_VALIDATED,BLOCKED,S03,
+C034,Radiación no ionizante / ambiental,intervention_authorized,RMA,STRUCTURE_ONLY,NOT_VALIDATED,BLOCKED,S03,
+C034,Radiación no ionizante / ambiental,recovery,RV,HUMAN_WORKFLOW_RECORDING,NOT_VALIDATED,BLOCKED,S03,
+C034,Radiación no ionizante / ambiental,follow_up,RV,PLAN_DUE_STATUS_AND_REVIEWS,NOT_VALIDATED,BLOCKED,S03,
+C034,Radiación no ionizante / ambiental,prognosis,RO,STRUCTURE_ONLY,NOT_VALIDATED,BLOCKED,S03,
+C035,Pérdida auditiva/exposición acústica / audiología,prevention,ES,STRUCTURE_ONLY,NOT_VALIDATED,BLOCKED,S38;S02,
+C035,Pérdida auditiva/exposición acústica / audiología,monitoring,ES,NUMERIC_ACQUISITION_INFRASTRUCTURE,NOT_VALIDATED,BLOCKED,S38;S02,
+C035,Pérdida auditiva/exposición acústica / audiología,data_quality,ES,CONFIGURED_TECHNICAL_GATES,NOT_VALIDATED,BLOCKED,S38;S02,
+C035,Pérdida auditiva/exposición acústica / audiología,detection,ES,NO_CONDITION_SPECIFIC_DETECTOR,NOT_VALIDATED,BLOCKED,S38;S02,
+C035,Pérdida auditiva/exposición acústica / audiología,assessment,RV,HUMAN_RECORDING,NOT_VALIDATED,BLOCKED,S38;S02,
+C035,Pérdida auditiva/exposición acústica / audiología,differential_diagnosis,RV,STRUCTURE_ONLY,NOT_VALIDATED,BLOCKED,S38;S02,
+C035,Pérdida auditiva/exposición acústica / audiología,triage,RMA,STRUCTURE_ONLY,NOT_VALIDATED,BLOCKED,S38;S02,
+C035,Pérdida auditiva/exposición acústica / audiología,intervention_authorized,RMA,STRUCTURE_ONLY,NOT_VALIDATED,BLOCKED,S38;S02,
+C035,Pérdida auditiva/exposición acústica / audiología,recovery,RV,HUMAN_WORKFLOW_RECORDING,NOT_VALIDATED,BLOCKED,S38;S02,
+C035,Pérdida auditiva/exposición acústica / audiología,follow_up,ES,PLAN_DUE_STATUS_AND_REVIEWS,NOT_VALIDATED,BLOCKED,S38;S02,
+C035,Pérdida auditiva/exposición acústica / audiología,prognosis,RV,STRUCTURE_ONLY,NOT_VALIDATED,BLOCKED,S38;S02,
+C036,Lesión por cargas dinámicas / trauma,prevention,ES,STRUCTURE_ONLY,NOT_VALIDATED,BLOCKED,S03,
+C036,Lesión por cargas dinámicas / trauma,monitoring,ES,NUMERIC_ACQUISITION_INFRASTRUCTURE,NOT_VALIDATED,BLOCKED,S03,
+C036,Lesión por cargas dinámicas / trauma,data_quality,ES,CONFIGURED_TECHNICAL_GATES,NOT_VALIDATED,BLOCKED,S03,
+C036,Lesión por cargas dinámicas / trauma,detection,RV,NO_CONDITION_SPECIFIC_DETECTOR,NOT_VALIDATED,BLOCKED,S03,
+C036,Lesión por cargas dinámicas / trauma,assessment,RMA,HUMAN_RECORDING,NOT_VALIDATED,BLOCKED,S03,
+C036,Lesión por cargas dinámicas / trauma,differential_diagnosis,RMA,STRUCTURE_ONLY,NOT_VALIDATED,BLOCKED,S03,
+C036,Lesión por cargas dinámicas / trauma,triage,RMA,STRUCTURE_ONLY,NOT_VALIDATED,BLOCKED,S03,
+C036,Lesión por cargas dinámicas / trauma,intervention_authorized,RMA,STRUCTURE_ONLY,NOT_VALIDATED,BLOCKED,S03,
+C036,Lesión por cargas dinámicas / trauma,recovery,RV,HUMAN_WORKFLOW_RECORDING,NOT_VALIDATED,BLOCKED,S03,
+C036,Lesión por cargas dinámicas / trauma,follow_up,RV,PLAN_DUE_STATUS_AND_REVIEWS,NOT_VALIDATED,BLOCKED,S03,
+C036,Lesión por cargas dinámicas / trauma,prognosis,RO,STRUCTURE_ONLY,NOT_VALIDATED,BLOCKED,S03,
+C037,Lesión/rendimiento comprometido durante EVA / medicina EVA,prevention,ES,STRUCTURE_ONLY,NOT_VALIDATED,BLOCKED,S03,
+C037,Lesión/rendimiento comprometido durante EVA / medicina EVA,monitoring,ES,NUMERIC_ACQUISITION_INFRASTRUCTURE,NOT_VALIDATED,BLOCKED,S03,
+C037,Lesión/rendimiento comprometido durante EVA / medicina EVA,data_quality,ES,CONFIGURED_TECHNICAL_GATES,NOT_VALIDATED,BLOCKED,S03,
+C037,Lesión/rendimiento comprometido durante EVA / medicina EVA,detection,RV,NO_CONDITION_SPECIFIC_DETECTOR,NOT_VALIDATED,BLOCKED,S03,
+C037,Lesión/rendimiento comprometido durante EVA / medicina EVA,assessment,RV,HUMAN_RECORDING,NOT_VALIDATED,BLOCKED,S03,
+C037,Lesión/rendimiento comprometido durante EVA / medicina EVA,differential_diagnosis,RV,STRUCTURE_ONLY,NOT_VALIDATED,BLOCKED,S03,
+C037,Lesión/rendimiento comprometido durante EVA / medicina EVA,triage,RMA,STRUCTURE_ONLY,NOT_VALIDATED,BLOCKED,S03,
+C037,Lesión/rendimiento comprometido durante EVA / medicina EVA,intervention_authorized,RMA,STRUCTURE_ONLY,NOT_VALIDATED,BLOCKED,S03,
+C037,Lesión/rendimiento comprometido durante EVA / medicina EVA,recovery,RV,HUMAN_WORKFLOW_RECORDING,NOT_VALIDATED,BLOCKED,S03,
+C037,Lesión/rendimiento comprometido durante EVA / medicina EVA,follow_up,ES,PLAN_DUE_STATUS_AND_REVIEWS,NOT_VALIDATED,BLOCKED,S03,
+C037,Lesión/rendimiento comprometido durante EVA / medicina EVA,prognosis,RO,STRUCTURE_ONLY,NOT_VALIDATED,BLOCKED,S03,
+C038,"Trauma, heridas y fractura aguda / emergencias",prevention,ES,STRUCTURE_ONLY,NOT_VALIDATED,BLOCKED,S17,
+C038,"Trauma, heridas y fractura aguda / emergencias",monitoring,RV,NUMERIC_ACQUISITION_INFRASTRUCTURE,NOT_VALIDATED,BLOCKED,S17,
+C038,"Trauma, heridas y fractura aguda / emergencias",data_quality,ES,CONFIGURED_TECHNICAL_GATES,NOT_VALIDATED,BLOCKED,S17,
+C038,"Trauma, heridas y fractura aguda / emergencias",detection,RV,NO_CONDITION_SPECIFIC_DETECTOR,NOT_VALIDATED,BLOCKED,S17,
+C038,"Trauma, heridas y fractura aguda / emergencias",assessment,RMA,HUMAN_RECORDING,NOT_VALIDATED,BLOCKED,S17,
+C038,"Trauma, heridas y fractura aguda / emergencias",differential_diagnosis,RMA,STRUCTURE_ONLY,NOT_VALIDATED,BLOCKED,S17,
+C038,"Trauma, heridas y fractura aguda / emergencias",triage,RMA,STRUCTURE_ONLY,NOT_VALIDATED,BLOCKED,S17,
+C038,"Trauma, heridas y fractura aguda / emergencias",intervention_authorized,RMA,STRUCTURE_ONLY,NOT_VALIDATED,BLOCKED,S17,
+C038,"Trauma, heridas y fractura aguda / emergencias",recovery,RV,HUMAN_WORKFLOW_RECORDING,NOT_VALIDATED,BLOCKED,S17,
+C038,"Trauma, heridas y fractura aguda / emergencias",follow_up,RV,PLAN_DUE_STATUS_AND_REVIEWS,NOT_VALIDATED,BLOCKED,S17,
+C038,"Trauma, heridas y fractura aguda / emergencias",prognosis,RO,STRUCTURE_ONLY,NOT_VALIDATED,BLOCKED,S17,
+C039,Patología/emergencia dental / odontología,prevention,ES,STRUCTURE_ONLY,NOT_VALIDATED,BLOCKED,S17;S19,
+C039,Patología/emergencia dental / odontología,monitoring,RV,NUMERIC_ACQUISITION_INFRASTRUCTURE,NOT_VALIDATED,BLOCKED,S17;S19,
+C039,Patología/emergencia dental / odontología,data_quality,ES,CONFIGURED_TECHNICAL_GATES,NOT_VALIDATED,BLOCKED,S17;S19,
+C039,Patología/emergencia dental / odontología,detection,RV,NO_CONDITION_SPECIFIC_DETECTOR,NOT_VALIDATED,BLOCKED,S17;S19,
+C039,Patología/emergencia dental / odontología,assessment,RMA,HUMAN_RECORDING,NOT_VALIDATED,BLOCKED,S17;S19,
+C039,Patología/emergencia dental / odontología,differential_diagnosis,RMA,STRUCTURE_ONLY,NOT_VALIDATED,BLOCKED,S17;S19,
+C039,Patología/emergencia dental / odontología,triage,RMA,STRUCTURE_ONLY,NOT_VALIDATED,BLOCKED,S17;S19,
+C039,Patología/emergencia dental / odontología,intervention_authorized,RMA,STRUCTURE_ONLY,NOT_VALIDATED,BLOCKED,S17;S19,
+C039,Patología/emergencia dental / odontología,recovery,RV,HUMAN_WORKFLOW_RECORDING,NOT_VALIDATED,BLOCKED,S17;S19,
+C039,Patología/emergencia dental / odontología,follow_up,RV,PLAN_DUE_STATUS_AND_REVIEWS,NOT_VALIDATED,BLOCKED,S17;S19,
+C039,Patología/emergencia dental / odontología,prognosis,NPA,STRUCTURE_ONLY,NOT_VALIDATED,BLOCKED,S17;S19,
+C040,Medicamento ineficaz o tóxico / farmacología,prevention,ES,STRUCTURE_ONLY,NOT_VALIDATED,BLOCKED,S15,
+C040,Medicamento ineficaz o tóxico / farmacología,monitoring,ES,NUMERIC_ACQUISITION_INFRASTRUCTURE,NOT_VALIDATED,BLOCKED,S15,
+C040,Medicamento ineficaz o tóxico / farmacología,data_quality,ES,CONFIGURED_TECHNICAL_GATES,NOT_VALIDATED,BLOCKED,S15,
+C040,Medicamento ineficaz o tóxico / farmacología,detection,RV,NO_CONDITION_SPECIFIC_DETECTOR,NOT_VALIDATED,BLOCKED,S15,
+C040,Medicamento ineficaz o tóxico / farmacología,assessment,RMA,HUMAN_RECORDING,NOT_VALIDATED,BLOCKED,S15,
+C040,Medicamento ineficaz o tóxico / farmacología,differential_diagnosis,RMA,STRUCTURE_ONLY,NOT_VALIDATED,BLOCKED,S15,
+C040,Medicamento ineficaz o tóxico / farmacología,triage,RMA,STRUCTURE_ONLY,NOT_VALIDATED,BLOCKED,S15,
+C040,Medicamento ineficaz o tóxico / farmacología,intervention_authorized,RMA,STRUCTURE_ONLY,NOT_VALIDATED,BLOCKED,S15,
+C040,Medicamento ineficaz o tóxico / farmacología,recovery,RV,HUMAN_WORKFLOW_RECORDING,NOT_VALIDATED,BLOCKED,S15,
+C040,Medicamento ineficaz o tóxico / farmacología,follow_up,ES,PLAN_DUE_STATUS_AND_REVIEWS,NOT_VALIDATED,BLOCKED,S15,
+C040,Medicamento ineficaz o tóxico / farmacología,prognosis,RO,STRUCTURE_ONLY,NOT_VALIDATED,BLOCKED,S15,
+C041,Infección respiratoria/inhalación de humo / respiratorio-emergencias,prevention,ES,STRUCTURE_ONLY,NOT_VALIDATED,BLOCKED,S17;S37,
+C041,Infección respiratoria/inhalación de humo / respiratorio-emergencias,monitoring,ES,NUMERIC_ACQUISITION_INFRASTRUCTURE,NOT_VALIDATED,BLOCKED,S17;S37,
+C041,Infección respiratoria/inhalación de humo / respiratorio-emergencias,data_quality,ES,CONFIGURED_TECHNICAL_GATES,NOT_VALIDATED,BLOCKED,S17;S37,
+C041,Infección respiratoria/inhalación de humo / respiratorio-emergencias,detection,RV,NO_CONDITION_SPECIFIC_DETECTOR,NOT_VALIDATED,BLOCKED,S17;S37,
+C041,Infección respiratoria/inhalación de humo / respiratorio-emergencias,assessment,RMA,HUMAN_RECORDING,NOT_VALIDATED,BLOCKED,S17;S37,
+C041,Infección respiratoria/inhalación de humo / respiratorio-emergencias,differential_diagnosis,RMA,STRUCTURE_ONLY,NOT_VALIDATED,BLOCKED,S17;S37,
+C041,Infección respiratoria/inhalación de humo / respiratorio-emergencias,triage,RMA,STRUCTURE_ONLY,NOT_VALIDATED,BLOCKED,S17;S37,
+C041,Infección respiratoria/inhalación de humo / respiratorio-emergencias,intervention_authorized,RMA,STRUCTURE_ONLY,NOT_VALIDATED,BLOCKED,S17;S37,
+C041,Infección respiratoria/inhalación de humo / respiratorio-emergencias,recovery,RV,HUMAN_WORKFLOW_RECORDING,NOT_VALIDATED,BLOCKED,S17;S37,
+C041,Infección respiratoria/inhalación de humo / respiratorio-emergencias,follow_up,RV,PLAN_DUE_STATUS_AND_REVIEWS,NOT_VALIDATED,BLOCKED,S17;S37,
+C041,Infección respiratoria/inhalación de humo / respiratorio-emergencias,prognosis,RO,STRUCTURE_ONLY,NOT_VALIDATED,BLOCKED,S17;S37,
+C042,Choque eléctrico / emergencias,prevention,ES,STRUCTURE_ONLY,NOT_VALIDATED,BLOCKED,S03,
+C042,Choque eléctrico / emergencias,monitoring,RV,NUMERIC_ACQUISITION_INFRASTRUCTURE,NOT_VALIDATED,BLOCKED,S03,
+C042,Choque eléctrico / emergencias,data_quality,ES,CONFIGURED_TECHNICAL_GATES,NOT_VALIDATED,BLOCKED,S03,
+C042,Choque eléctrico / emergencias,detection,RV,NO_CONDITION_SPECIFIC_DETECTOR,NOT_VALIDATED,BLOCKED,S03,
+C042,Choque eléctrico / emergencias,assessment,RMA,HUMAN_RECORDING,NOT_VALIDATED,BLOCKED,S03,
+C042,Choque eléctrico / emergencias,differential_diagnosis,RMA,STRUCTURE_ONLY,NOT_VALIDATED,BLOCKED,S03,
+C042,Choque eléctrico / emergencias,triage,RMA,STRUCTURE_ONLY,NOT_VALIDATED,BLOCKED,S03,
+C042,Choque eléctrico / emergencias,intervention_authorized,RMA,STRUCTURE_ONLY,NOT_VALIDATED,BLOCKED,S03,
+C042,Choque eléctrico / emergencias,recovery,RV,HUMAN_WORKFLOW_RECORDING,NOT_VALIDATED,BLOCKED,S03,
+C042,Choque eléctrico / emergencias,follow_up,RV,PLAN_DUE_STATUS_AND_REVIEWS,NOT_VALIDATED,BLOCKED,S03,
+C042,Choque eléctrico / emergencias,prognosis,NPA,STRUCTURE_ONLY,NOT_VALIDATED,BLOCKED,S03,
+C043,Incapacidad de egress/tarea tras transición de gravedad / rendimiento,prevention,ES,STRUCTURE_ONLY,NOT_VALIDATED,BLOCKED,S03;S11;S02,
+C043,Incapacidad de egress/tarea tras transición de gravedad / rendimiento,monitoring,ES,NUMERIC_ACQUISITION_INFRASTRUCTURE,NOT_VALIDATED,BLOCKED,S03;S11;S02,
+C043,Incapacidad de egress/tarea tras transición de gravedad / rendimiento,data_quality,ES,CONFIGURED_TECHNICAL_GATES,NOT_VALIDATED,BLOCKED,S03;S11;S02,
+C043,Incapacidad de egress/tarea tras transición de gravedad / rendimiento,detection,RV,NO_CONDITION_SPECIFIC_DETECTOR,NOT_VALIDATED,BLOCKED,S03;S11;S02,
+C043,Incapacidad de egress/tarea tras transición de gravedad / rendimiento,assessment,RV,HUMAN_RECORDING,NOT_VALIDATED,BLOCKED,S03;S11;S02,
+C043,Incapacidad de egress/tarea tras transición de gravedad / rendimiento,differential_diagnosis,RV,STRUCTURE_ONLY,NOT_VALIDATED,BLOCKED,S03;S11;S02,
+C043,Incapacidad de egress/tarea tras transición de gravedad / rendimiento,triage,RMA,STRUCTURE_ONLY,NOT_VALIDATED,BLOCKED,S03;S11;S02,
+C043,Incapacidad de egress/tarea tras transición de gravedad / rendimiento,intervention_authorized,RMA,STRUCTURE_ONLY,NOT_VALIDATED,BLOCKED,S03;S11;S02,
+C043,Incapacidad de egress/tarea tras transición de gravedad / rendimiento,recovery,ES,HUMAN_WORKFLOW_RECORDING,NOT_VALIDATED,BLOCKED,S03;S11;S02,
+C043,Incapacidad de egress/tarea tras transición de gravedad / rendimiento,follow_up,ES,PLAN_DUE_STATUS_AND_REVIEWS,NOT_VALIDATED,BLOCKED,S03;S11;S02,
+C043,Incapacidad de egress/tarea tras transición de gravedad / rendimiento,prognosis,RO,STRUCTURE_ONLY,NOT_VALIDATED,BLOCKED,S03;S11;S02,
+C044,Alteración dermatológica/infección cutánea / dermatología-inmunología,prevention,ES,STRUCTURE_ONLY,NOT_VALIDATED,BLOCKED,S09;S17,
+C044,Alteración dermatológica/infección cutánea / dermatología-inmunología,monitoring,RV,NUMERIC_ACQUISITION_INFRASTRUCTURE,NOT_VALIDATED,BLOCKED,S09;S17,
+C044,Alteración dermatológica/infección cutánea / dermatología-inmunología,data_quality,ES,CONFIGURED_TECHNICAL_GATES,NOT_VALIDATED,BLOCKED,S09;S17,
+C044,Alteración dermatológica/infección cutánea / dermatología-inmunología,detection,RV,NO_CONDITION_SPECIFIC_DETECTOR,NOT_VALIDATED,BLOCKED,S09;S17,
+C044,Alteración dermatológica/infección cutánea / dermatología-inmunología,assessment,RV,HUMAN_RECORDING,NOT_VALIDATED,BLOCKED,S09;S17,
+C044,Alteración dermatológica/infección cutánea / dermatología-inmunología,differential_diagnosis,RV,STRUCTURE_ONLY,NOT_VALIDATED,BLOCKED,S09;S17,
+C044,Alteración dermatológica/infección cutánea / dermatología-inmunología,triage,RMA,STRUCTURE_ONLY,NOT_VALIDATED,BLOCKED,S09;S17,
+C044,Alteración dermatológica/infección cutánea / dermatología-inmunología,intervention_authorized,RMA,STRUCTURE_ONLY,NOT_VALIDATED,BLOCKED,S09;S17,
+C044,Alteración dermatológica/infección cutánea / dermatología-inmunología,recovery,RV,HUMAN_WORKFLOW_RECORDING,NOT_VALIDATED,BLOCKED,S09;S17,
+C044,Alteración dermatológica/infección cutánea / dermatología-inmunología,follow_up,RV,PLAN_DUE_STATUS_AND_REVIEWS,NOT_VALIDATED,BLOCKED,S09;S17,
+C044,Alteración dermatológica/infección cutánea / dermatología-inmunología,prognosis,RO,STRUCTURE_ONLY,NOT_VALIDATED,BLOCKED,S09;S17,

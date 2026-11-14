@@ -1,0 +1,32 @@
+{
+  "condition_id": "C035",
+  "catalog_record": {
+    "condition_id": "C035",
+    "name_specialty": "Pérdida auditiva/exposición acústica / audiología",
+    "description_spaceflight": "Ruido puede afectar audición, sueño, comunicación y desempeño.",
+    "risks_symptoms": "SPL, duración, frecuencias.",
+    "biomarkers_sensors_tests": "Dosimetría acústica, audiometría/hearing test.",
+    "baselines_environment_interactions": "Audiograma preflight; ambiente acústico.",
+    "primary_evidence": "S38, S02. citeturn27search3turn27search6",
+    "limits_authorizations_state": "Límite ambiental no equivale a diagnóstico de pérdida auditiva. `ES`."
+  },
+  "clinical_pathway_profile_as_published": "**P:** diseño acústico; **M:** SPL/dosis+audiometría; **Q:** calibración/frecuencia/duración; **D:** incumplimiento ambiental separado de pérdida auditiva; **A/DD:** audiología; **T/I:** misión/médico; **R/F:** hearing surveillance; **G:** daño individual no deducible únicamente de SPL.",
+  "coverage_states": {
+    "prevention": "ES",
+    "monitoring": "ES",
+    "data_quality": "ES",
+    "detection": "ES",
+    "assessment": "RV",
+    "differential_diagnosis": "RV",
+    "triage": "RMA",
+    "intervention_authorized": "RMA",
+    "recovery": "RV",
+    "follow_up": "ES",
+    "prognosis": "RV"
+  },
+  "source_ids": [
+    "S38",
+    "S02"
+  ],
+  "NOTICE": "Pathway text is an outline; not an authorized diagnostic or treatment protocol."
+}

@@ -1,0 +1,32 @@
+{
+  "condition_id": "C001",
+  "catalog_record": {
+    "condition_id": "C001",
+    "name_specialty": "Capacidad aeróbica reducida / fisiología cardiovascular",
+    "description_spaceflight": "Pérdida de rendimiento cardiorrespiratorio que puede comprometer EVA y tareas físicas.",
+    "risks_symptoms": "Microgravedad, desacondicionamiento; fatiga y reducción de tolerancia al esfuerzo.",
+    "biomarkers_sensors_tests": "VO₂max/VO₂peak, ergometría, HR.",
+    "baselines_environment_interactions": "VO₂ preflight; fase de misión, gravedad, EVA. Interactúa con músculo y CV.",
+    "primary_evidence": "S01, S04. citeturn6view0turn18search3",
+    "limits_authorizations_state": "Requisitos de rendimiento ≠ enfermedad. `ES`."
+  },
+  "clinical_pathway_profile_as_published": "**P:** programa de contramedidas autorizado `[ES:S04]`; **M:** VO₂max comparable `[ES:S01]`; **Q:** validar unidad/método/baseline/contexto EVA; **D:** aplicar 32,9/36,5 y 80 % solo donde corresponda `[ES:S01]`; **A:** revisar síntomas/rendimiento; **DD:** causas no espaciales y multisistema `[RV]`; **T:** misión/humano; **I:** ejercicio autorizado, no prescripción generada `[RMA]`; **R:** objetivo de reacondicionamiento hacia preflight `[ES:S01]`; **F:** tendencia longitudinal; **G:** `INCONCLUSIVE` para predicción clínica individual.",
+  "coverage_states": {
+    "prevention": "ES",
+    "monitoring": "ES",
+    "data_quality": "ES",
+    "detection": "ES",
+    "assessment": "RV",
+    "differential_diagnosis": "RV",
+    "triage": "RMA",
+    "intervention_authorized": "RMA",
+    "recovery": "ES",
+    "follow_up": "ES",
+    "prognosis": "RO"
+  },
+  "source_ids": [
+    "S01",
+    "S04"
+  ],
+  "NOTICE": "Pathway text is an outline; not an authorized diagnostic or treatment protocol."
+}

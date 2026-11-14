@@ -1,0 +1,5483 @@
+[
+  {
+    "condition_id": "C001",
+    "name": "Capacidad aeróbica reducida / fisiología cardiovascular",
+    "profile_as_published": "**P:** programa de contramedidas autorizado `[ES:S04]`; **M:** VO₂max comparable `[ES:S01]`; **Q:** validar unidad/método/baseline/contexto EVA; **D:** aplicar 32,9/36,5 y 80 % solo donde corresponda `[ES:S01]`; **A:** revisar síntomas/rendimiento; **DD:** causas no espaciales y multisistema `[RV]`; **T:** misión/humano; **I:** ejercicio autorizado, no prescripción generada `[RMA]`; **R:** objetivo de reacondicionamiento hacia preflight `[ES:S01]`; **F:** tendencia longitudinal; **G:** `INCONCLUSIVE` para predicción clínica individual.",
+    "rule_ids": [
+      "VIGILE-AER-001",
+      "VIGILE-AER-002",
+      "VIGILE-AER-003"
+    ],
+    "stages": [
+      {
+        "stage": "prevention",
+        "documentary_state": "ES",
+        "software_support": "STRUCTURE_ONLY",
+        "clinical_validation": "NOT_VALIDATED",
+        "clinical_execution": "BLOCKED",
+        "source_ids": [
+          "S01",
+          "S04"
+        ]
+      },
+      {
+        "stage": "monitoring",
+        "documentary_state": "ES",
+        "software_support": "NUMERIC_ACQUISITION_INFRASTRUCTURE",
+        "clinical_validation": "NOT_VALIDATED",
+        "clinical_execution": "BLOCKED",
+        "source_ids": [
+          "S01",
+          "S04"
+        ]
+      },
+      {
+        "stage": "data_quality",
+        "documentary_state": "ES",
+        "software_support": "CONFIGURED_TECHNICAL_GATES",
+        "clinical_validation": "NOT_VALIDATED",
+        "clinical_execution": "BLOCKED",
+        "source_ids": [
+          "S01",
+          "S04"
+        ]
+      },
+      {
+        "stage": "detection",
+        "documentary_state": "ES",
+        "software_support": "NORMATIVE_SIMULATION",
+        "clinical_validation": "NOT_VALIDATED",
+        "clinical_execution": "BLOCKED",
+        "source_ids": [
+          "S01",
+          "S04"
+        ]
+      },
+      {
+        "stage": "assessment",
+        "documentary_state": "RV",
+        "software_support": "HUMAN_RECORDING",
+        "clinical_validation": "NOT_VALIDATED",
+        "clinical_execution": "BLOCKED",
+        "source_ids": [
+          "S01",
+          "S04"
+        ]
+      },
+      {
+        "stage": "differential_diagnosis",
+        "documentary_state": "RV",
+        "software_support": "STRUCTURE_ONLY",
+        "clinical_validation": "NOT_VALIDATED",
+        "clinical_execution": "BLOCKED",
+        "source_ids": [
+          "S01",
+          "S04"
+        ]
+      },
+      {
+        "stage": "triage",
+        "documentary_state": "RMA",
+        "software_support": "STRUCTURE_ONLY",
+        "clinical_validation": "NOT_VALIDATED",
+        "clinical_execution": "BLOCKED",
+        "source_ids": [
+          "S01",
+          "S04"
+        ]
+      },
+      {
+        "stage": "intervention_authorized",
+        "documentary_state": "RMA",
+        "software_support": "STRUCTURE_ONLY",
+        "clinical_validation": "NOT_VALIDATED",
+        "clinical_execution": "BLOCKED",
+        "source_ids": [
+          "S01",
+          "S04"
+        ]
+      },
+      {
+        "stage": "recovery",
+        "documentary_state": "ES",
+        "software_support": "HUMAN_WORKFLOW_RECORDING",
+        "clinical_validation": "NOT_VALIDATED",
+        "clinical_execution": "BLOCKED",
+        "source_ids": [
+          "S01",
+          "S04"
+        ]
+      },
+      {
+        "stage": "follow_up",
+        "documentary_state": "ES",
+        "software_support": "PLAN_DUE_STATUS_AND_REVIEWS",
+        "clinical_validation": "NOT_VALIDATED",
+        "clinical_execution": "BLOCKED",
+        "source_ids": [
+          "S01",
+          "S04"
+        ]
+      },
+      {
+        "stage": "prognosis",
+        "documentary_state": "RO",
+        "software_support": "STRUCTURE_ONLY",
+        "clinical_validation": "NOT_VALIDATED",
+        "clinical_execution": "BLOCKED",
+        "source_ids": [
+          "S01",
+          "S04"
+        ]
+      }
+    ],
+    "no_prescription": true
+  },
+  {
+    "condition_id": "C002",
+    "name": "Pérdida de tamaño/fuerza/resistencia muscular / muscular",
+    "profile_as_published": "**P:** ejercicio resistivo `[ES]`; **M:** fuerza mismo grupo/método; **Q:** impedir comparación heterogénea; **D:** ratio actual/preflight y requisito 80 % `[S01]`; **A/DD:** lesión, dolor, nutrición, neurológico; **T:** human review si deterioro funcional; **I:** plan autorizado; **R:** retornar hacia baseline `[S01]`; **F:** repetir prueba; **G:** sin predictor validado.",
+    "rule_ids": [
+      "VIGILE-MUS-001",
+      "VIGILE-MUS-002"
+    ],
+    "stages": [
+      {
+        "stage": "prevention",
+        "documentary_state": "ES",
+        "software_support": "STRUCTURE_ONLY",
+        "clinical_validation": "NOT_VALIDATED",
+        "clinical_execution": "BLOCKED",
+        "source_ids": [
+          "S01",
+          "S04"
+        ]
+      },
+      {
+        "stage": "monitoring",
+        "documentary_state": "ES",
+        "software_support": "NUMERIC_ACQUISITION_INFRASTRUCTURE",
+        "clinical_validation": "NOT_VALIDATED",
+        "clinical_execution": "BLOCKED",
+        "source_ids": [
+          "S01",
+          "S04"
+        ]
+      },
+      {
+        "stage": "data_quality",
+        "documentary_state": "ES",
+        "software_support": "CONFIGURED_TECHNICAL_GATES",
+        "clinical_validation": "NOT_VALIDATED",
+        "clinical_execution": "BLOCKED",
+        "source_ids": [
+          "S01",
+          "S04"
+        ]
+      },
+      {
+        "stage": "detection",
+        "documentary_state": "ES",
+        "software_support": "NORMATIVE_SIMULATION",
+        "clinical_validation": "NOT_VALIDATED",
+        "clinical_execution": "BLOCKED",
+        "source_ids": [
+          "S01",
+          "S04"
+        ]
+      },
+      {
+        "stage": "assessment",
+        "documentary_state": "RV",
+        "software_support": "HUMAN_RECORDING",
+        "clinical_validation": "NOT_VALIDATED",
+        "clinical_execution": "BLOCKED",
+        "source_ids": [
+          "S01",
+          "S04"
+        ]
+      },
+      {
+        "stage": "differential_diagnosis",
+        "documentary_state": "RV",
+        "software_support": "STRUCTURE_ONLY",
+        "clinical_validation": "NOT_VALIDATED",
+        "clinical_execution": "BLOCKED",
+        "source_ids": [
+          "S01",
+          "S04"
+        ]
+      },
+      {
+        "stage": "triage",
+        "documentary_state": "RMA",
+        "software_support": "STRUCTURE_ONLY",
+        "clinical_validation": "NOT_VALIDATED",
+        "clinical_execution": "BLOCKED",
+        "source_ids": [
+          "S01",
+          "S04"
+        ]
+      },
+      {
+        "stage": "intervention_authorized",
+        "documentary_state": "RMA",
+        "software_support": "STRUCTURE_ONLY",
+        "clinical_validation": "NOT_VALIDATED",
+        "clinical_execution": "BLOCKED",
+        "source_ids": [
+          "S01",
+          "S04"
+        ]
+      },
+      {
+        "stage": "recovery",
+        "documentary_state": "ES",
+        "software_support": "HUMAN_WORKFLOW_RECORDING",
+        "clinical_validation": "NOT_VALIDATED",
+        "clinical_execution": "BLOCKED",
+        "source_ids": [
+          "S01",
+          "S04"
+        ]
+      },
+      {
+        "stage": "follow_up",
+        "documentary_state": "ES",
+        "software_support": "PLAN_DUE_STATUS_AND_REVIEWS",
+        "clinical_validation": "NOT_VALIDATED",
+        "clinical_execution": "BLOCKED",
+        "source_ids": [
+          "S01",
+          "S04"
+        ]
+      },
+      {
+        "stage": "prognosis",
+        "documentary_state": "RO",
+        "software_support": "STRUCTURE_ONLY",
+        "clinical_validation": "NOT_VALIDATED",
+        "clinical_execution": "BLOCKED",
+        "source_ids": [
+          "S01",
+          "S04"
+        ]
+      }
+    ],
+    "no_prescription": true
+  },
+  {
+    "condition_id": "C003",
+    "name": "Pérdida ósea y riesgo de fractura / óseo",
+    "profile_as_published": "**P:** ejercicio/nutrición/contramedidas autorizadas; **M:** DXA/QCT cuando programado; **Q:** región y tecnología coherentes; **D:** conservación 95/95/90 % `[S01]`; **A:** integrar fractura/riesgo, no solo BMD; **DD:** causas metabólicas/trauma; **T/I:** médico; **R:** reacondicionamiento hacia baseline; **F:** vigilancia postflight; **G:** no inferir fractura individual únicamente de DXA.",
+    "rule_ids": [
+      "VIGILE-BONE-001"
+    ],
+    "stages": [
+      {
+        "stage": "prevention",
+        "documentary_state": "ES",
+        "software_support": "STRUCTURE_ONLY",
+        "clinical_validation": "NOT_VALIDATED",
+        "clinical_execution": "BLOCKED",
+        "source_ids": [
+          "S01",
+          "S06"
+        ]
+      },
+      {
+        "stage": "monitoring",
+        "documentary_state": "ES",
+        "software_support": "NUMERIC_ACQUISITION_INFRASTRUCTURE",
+        "clinical_validation": "NOT_VALIDATED",
+        "clinical_execution": "BLOCKED",
+        "source_ids": [
+          "S01",
+          "S06"
+        ]
+      },
+      {
+        "stage": "data_quality",
+        "documentary_state": "ES",
+        "software_support": "CONFIGURED_TECHNICAL_GATES",
+        "clinical_validation": "NOT_VALIDATED",
+        "clinical_execution": "BLOCKED",
+        "source_ids": [
+          "S01",
+          "S06"
+        ]
+      },
+      {
+        "stage": "detection",
+        "documentary_state": "ES",
+        "software_support": "NORMATIVE_SIMULATION",
+        "clinical_validation": "NOT_VALIDATED",
+        "clinical_execution": "BLOCKED",
+        "source_ids": [
+          "S01",
+          "S06"
+        ]
+      },
+      {
+        "stage": "assessment",
+        "documentary_state": "RV",
+        "software_support": "HUMAN_RECORDING",
+        "clinical_validation": "NOT_VALIDATED",
+        "clinical_execution": "BLOCKED",
+        "source_ids": [
+          "S01",
+          "S06"
+        ]
+      },
+      {
+        "stage": "differential_diagnosis",
+        "documentary_state": "RV",
+        "software_support": "STRUCTURE_ONLY",
+        "clinical_validation": "NOT_VALIDATED",
+        "clinical_execution": "BLOCKED",
+        "source_ids": [
+          "S01",
+          "S06"
+        ]
+      },
+      {
+        "stage": "triage",
+        "documentary_state": "RMA",
+        "software_support": "STRUCTURE_ONLY",
+        "clinical_validation": "NOT_VALIDATED",
+        "clinical_execution": "BLOCKED",
+        "source_ids": [
+          "S01",
+          "S06"
+        ]
+      },
+      {
+        "stage": "intervention_authorized",
+        "documentary_state": "RMA",
+        "software_support": "STRUCTURE_ONLY",
+        "clinical_validation": "NOT_VALIDATED",
+        "clinical_execution": "BLOCKED",
+        "source_ids": [
+          "S01",
+          "S06"
+        ]
+      },
+      {
+        "stage": "recovery",
+        "documentary_state": "ES",
+        "software_support": "HUMAN_WORKFLOW_RECORDING",
+        "clinical_validation": "NOT_VALIDATED",
+        "clinical_execution": "BLOCKED",
+        "source_ids": [
+          "S01",
+          "S06"
+        ]
+      },
+      {
+        "stage": "follow_up",
+        "documentary_state": "ES",
+        "software_support": "PLAN_DUE_STATUS_AND_REVIEWS",
+        "clinical_validation": "NOT_VALIDATED",
+        "clinical_execution": "BLOCKED",
+        "source_ids": [
+          "S01",
+          "S06"
+        ]
+      },
+      {
+        "stage": "prognosis",
+        "documentary_state": "RV",
+        "software_support": "STRUCTURE_ONLY",
+        "clinical_validation": "NOT_VALIDATED",
+        "clinical_execution": "BLOCKED",
+        "source_ids": [
+          "S01",
+          "S06"
+        ]
+      }
+    ],
+    "no_prescription": true
+  },
+  {
+    "condition_id": "C004",
+    "name": "Desacondicionamiento cardiovascular / cardiovascular",
+    "profile_as_published": "**P:** ejercicio y gestión de misión; **M:** HR/BP/rendimiento; **Q:** postura, gravedad, actividad, sensor; **D:** tendencia vs baseline sin umbral diagnóstico `[RV]`; **A:** evaluación CV; **DD:** volumen, ritmo, sueño, enfermedad; **T/I:** autorización médica; **R/F:** tendencia postflight; **G:** research-only.",
+    "rule_ids": [],
+    "stages": [
+      {
+        "stage": "prevention",
+        "documentary_state": "ES",
+        "software_support": "STRUCTURE_ONLY",
+        "clinical_validation": "NOT_VALIDATED",
+        "clinical_execution": "BLOCKED",
+        "source_ids": [
+          "S05"
+        ]
+      },
+      {
+        "stage": "monitoring",
+        "documentary_state": "ES",
+        "software_support": "NUMERIC_ACQUISITION_INFRASTRUCTURE",
+        "clinical_validation": "NOT_VALIDATED",
+        "clinical_execution": "BLOCKED",
+        "source_ids": [
+          "S05"
+        ]
+      },
+      {
+        "stage": "data_quality",
+        "documentary_state": "ES",
+        "software_support": "CONFIGURED_TECHNICAL_GATES",
+        "clinical_validation": "NOT_VALIDATED",
+        "clinical_execution": "BLOCKED",
+        "source_ids": [
+          "S05"
+        ]
+      },
+      {
+        "stage": "detection",
+        "documentary_state": "RV",
+        "software_support": "NO_CONDITION_SPECIFIC_DETECTOR",
+        "clinical_validation": "NOT_VALIDATED",
+        "clinical_execution": "BLOCKED",
+        "source_ids": [
+          "S05"
+        ]
+      },
+      {
+        "stage": "assessment",
+        "documentary_state": "RV",
+        "software_support": "HUMAN_RECORDING",
+        "clinical_validation": "NOT_VALIDATED",
+        "clinical_execution": "BLOCKED",
+        "source_ids": [
+          "S05"
+        ]
+      },
+      {
+        "stage": "differential_diagnosis",
+        "documentary_state": "RV",
+        "software_support": "STRUCTURE_ONLY",
+        "clinical_validation": "NOT_VALIDATED",
+        "clinical_execution": "BLOCKED",
+        "source_ids": [
+          "S05"
+        ]
+      },
+      {
+        "stage": "triage",
+        "documentary_state": "RMA",
+        "software_support": "STRUCTURE_ONLY",
+        "clinical_validation": "NOT_VALIDATED",
+        "clinical_execution": "BLOCKED",
+        "source_ids": [
+          "S05"
+        ]
+      },
+      {
+        "stage": "intervention_authorized",
+        "documentary_state": "RMA",
+        "software_support": "STRUCTURE_ONLY",
+        "clinical_validation": "NOT_VALIDATED",
+        "clinical_execution": "BLOCKED",
+        "source_ids": [
+          "S05"
+        ]
+      },
+      {
+        "stage": "recovery",
+        "documentary_state": "RV",
+        "software_support": "HUMAN_WORKFLOW_RECORDING",
+        "clinical_validation": "NOT_VALIDATED",
+        "clinical_execution": "BLOCKED",
+        "source_ids": [
+          "S05"
+        ]
+      },
+      {
+        "stage": "follow_up",
+        "documentary_state": "RV",
+        "software_support": "PLAN_DUE_STATUS_AND_REVIEWS",
+        "clinical_validation": "NOT_VALIDATED",
+        "clinical_execution": "BLOCKED",
+        "source_ids": [
+          "S05"
+        ]
+      },
+      {
+        "stage": "prognosis",
+        "documentary_state": "RO",
+        "software_support": "STRUCTURE_ONLY",
+        "clinical_validation": "NOT_VALIDATED",
+        "clinical_execution": "BLOCKED",
+        "source_ids": [
+          "S05"
+        ]
+      }
+    ],
+    "no_prescription": true
+  },
+  {
+    "condition_id": "C005",
+    "name": "Intolerancia ortostática / cardiovascular-autonómica",
+    "profile_as_published": "**P:** contramedidas de transición a gravedad `[S02]`; **M:** síntomas+HR/BP bajo protocolo; **Q:** prohibir extrapolación de prueba postflight a microgravedad; **D:** desviaciones según protocolo autorizado; **A:** stand/tilt solo contexto válido; **DD:** hipovolemia, arritmia, neurológico; **T:** misión; **I:** compresión/u otras contramedidas solo autorizadas; **R/F:** reevaluar en gravedad; **G:** no predictor autónomo.",
+    "rule_ids": [],
+    "stages": [
+      {
+        "stage": "prevention",
+        "documentary_state": "ES",
+        "software_support": "STRUCTURE_ONLY",
+        "clinical_validation": "NOT_VALIDATED",
+        "clinical_execution": "BLOCKED",
+        "source_ids": [
+          "S02",
+          "S05",
+          "S34"
+        ]
+      },
+      {
+        "stage": "monitoring",
+        "documentary_state": "ES",
+        "software_support": "NUMERIC_ACQUISITION_INFRASTRUCTURE",
+        "clinical_validation": "NOT_VALIDATED",
+        "clinical_execution": "BLOCKED",
+        "source_ids": [
+          "S02",
+          "S05",
+          "S34"
+        ]
+      },
+      {
+        "stage": "data_quality",
+        "documentary_state": "ES",
+        "software_support": "CONFIGURED_TECHNICAL_GATES",
+        "clinical_validation": "NOT_VALIDATED",
+        "clinical_execution": "BLOCKED",
+        "source_ids": [
+          "S02",
+          "S05",
+          "S34"
+        ]
+      },
+      {
+        "stage": "detection",
+        "documentary_state": "RV",
+        "software_support": "NO_CONDITION_SPECIFIC_DETECTOR",
+        "clinical_validation": "NOT_VALIDATED",
+        "clinical_execution": "BLOCKED",
+        "source_ids": [
+          "S02",
+          "S05",
+          "S34"
+        ]
+      },
+      {
+        "stage": "assessment",
+        "documentary_state": "RV",
+        "software_support": "HUMAN_RECORDING",
+        "clinical_validation": "NOT_VALIDATED",
+        "clinical_execution": "BLOCKED",
+        "source_ids": [
+          "S02",
+          "S05",
+          "S34"
+        ]
+      },
+      {
+        "stage": "differential_diagnosis",
+        "documentary_state": "RV",
+        "software_support": "STRUCTURE_ONLY",
+        "clinical_validation": "NOT_VALIDATED",
+        "clinical_execution": "BLOCKED",
+        "source_ids": [
+          "S02",
+          "S05",
+          "S34"
+        ]
+      },
+      {
+        "stage": "triage",
+        "documentary_state": "RMA",
+        "software_support": "STRUCTURE_ONLY",
+        "clinical_validation": "NOT_VALIDATED",
+        "clinical_execution": "BLOCKED",
+        "source_ids": [
+          "S02",
+          "S05",
+          "S34"
+        ]
+      },
+      {
+        "stage": "intervention_authorized",
+        "documentary_state": "RMA",
+        "software_support": "STRUCTURE_ONLY",
+        "clinical_validation": "NOT_VALIDATED",
+        "clinical_execution": "BLOCKED",
+        "source_ids": [
+          "S02",
+          "S05",
+          "S34"
+        ]
+      },
+      {
+        "stage": "recovery",
+        "documentary_state": "RV",
+        "software_support": "HUMAN_WORKFLOW_RECORDING",
+        "clinical_validation": "NOT_VALIDATED",
+        "clinical_execution": "BLOCKED",
+        "source_ids": [
+          "S02",
+          "S05",
+          "S34"
+        ]
+      },
+      {
+        "stage": "follow_up",
+        "documentary_state": "RV",
+        "software_support": "PLAN_DUE_STATUS_AND_REVIEWS",
+        "clinical_validation": "NOT_VALIDATED",
+        "clinical_execution": "BLOCKED",
+        "source_ids": [
+          "S02",
+          "S05",
+          "S34"
+        ]
+      },
+      {
+        "stage": "prognosis",
+        "documentary_state": "RO",
+        "software_support": "STRUCTURE_ONLY",
+        "clinical_validation": "NOT_VALIDATED",
+        "clinical_execution": "BLOCKED",
+        "source_ids": [
+          "S02",
+          "S05",
+          "S34"
+        ]
+      }
+    ],
+    "no_prescription": true
+  },
+  {
+    "condition_id": "C006",
+    "name": "Tromboembolismo venoso / cardiovascular-hematológico",
+    "profile_as_published": "**P:** configuración médica de misión; **M:** síntomas/ultrasonido si indicado; **Q:** adquisición ecográfica adecuada; **D:** no regla automática basada en flujo aislado; **A:** revisión médica; **DD:** variantes anatómicas/compresión/artefacto; **T:** `HUMAN_MEDICAL_REVIEW_REQUIRED`; **I:** bloqueado sin médico; **R/F/G:** protocolo autorizado, pronóstico no automatizado.",
+    "rule_ids": [],
+    "stages": [
+      {
+        "stage": "prevention",
+        "documentary_state": "RV",
+        "software_support": "STRUCTURE_ONLY",
+        "clinical_validation": "NOT_VALIDATED",
+        "clinical_execution": "BLOCKED",
+        "source_ids": [
+          "S35"
+        ]
+      },
+      {
+        "stage": "monitoring",
+        "documentary_state": "RV",
+        "software_support": "NUMERIC_ACQUISITION_INFRASTRUCTURE",
+        "clinical_validation": "NOT_VALIDATED",
+        "clinical_execution": "BLOCKED",
+        "source_ids": [
+          "S35"
+        ]
+      },
+      {
+        "stage": "data_quality",
+        "documentary_state": "ES",
+        "software_support": "CONFIGURED_TECHNICAL_GATES",
+        "clinical_validation": "NOT_VALIDATED",
+        "clinical_execution": "BLOCKED",
+        "source_ids": [
+          "S35"
+        ]
+      },
+      {
+        "stage": "detection",
+        "documentary_state": "RV",
+        "software_support": "NO_CONDITION_SPECIFIC_DETECTOR",
+        "clinical_validation": "NOT_VALIDATED",
+        "clinical_execution": "BLOCKED",
+        "source_ids": [
+          "S35"
+        ]
+      },
+      {
+        "stage": "assessment",
+        "documentary_state": "RMA",
+        "software_support": "HUMAN_RECORDING",
+        "clinical_validation": "NOT_VALIDATED",
+        "clinical_execution": "BLOCKED",
+        "source_ids": [
+          "S35"
+        ]
+      },
+      {
+        "stage": "differential_diagnosis",
+        "documentary_state": "RMA",
+        "software_support": "STRUCTURE_ONLY",
+        "clinical_validation": "NOT_VALIDATED",
+        "clinical_execution": "BLOCKED",
+        "source_ids": [
+          "S35"
+        ]
+      },
+      {
+        "stage": "triage",
+        "documentary_state": "RMA",
+        "software_support": "STRUCTURE_ONLY",
+        "clinical_validation": "NOT_VALIDATED",
+        "clinical_execution": "BLOCKED",
+        "source_ids": [
+          "S35"
+        ]
+      },
+      {
+        "stage": "intervention_authorized",
+        "documentary_state": "RMA",
+        "software_support": "STRUCTURE_ONLY",
+        "clinical_validation": "NOT_VALIDATED",
+        "clinical_execution": "BLOCKED",
+        "source_ids": [
+          "S35"
+        ]
+      },
+      {
+        "stage": "recovery",
+        "documentary_state": "RV",
+        "software_support": "HUMAN_WORKFLOW_RECORDING",
+        "clinical_validation": "NOT_VALIDATED",
+        "clinical_execution": "BLOCKED",
+        "source_ids": [
+          "S35"
+        ]
+      },
+      {
+        "stage": "follow_up",
+        "documentary_state": "RV",
+        "software_support": "PLAN_DUE_STATUS_AND_REVIEWS",
+        "clinical_validation": "NOT_VALIDATED",
+        "clinical_execution": "BLOCKED",
+        "source_ids": [
+          "S35"
+        ]
+      },
+      {
+        "stage": "prognosis",
+        "documentary_state": "RO",
+        "software_support": "STRUCTURE_ONLY",
+        "clinical_validation": "NOT_VALIDATED",
+        "clinical_execution": "BLOCKED",
+        "source_ids": [
+          "S35"
+        ]
+      }
+    ],
+    "no_prescription": true
+  },
+  {
+    "condition_id": "C007",
+    "name": "Arritmia/evento cardiovascular agudo / cardiovascular-emergencias",
+    "profile_as_published": "**P:** selección/baseline; **M:** ECG/HR/BP/síntomas; **Q:** señal ECG; **D:** algoritmos de dispositivo validados únicamente; **A/DD/T:** médico; **I:** bloqueado salvo protocolo de emergencia; **R/F:** registro episodio; **G:** IMM puede informar planificación, no diagnóstico.",
+    "rule_ids": [],
+    "stages": [
+      {
+        "stage": "prevention",
+        "documentary_state": "RV",
+        "software_support": "STRUCTURE_ONLY",
+        "clinical_validation": "NOT_VALIDATED",
+        "clinical_execution": "BLOCKED",
+        "source_ids": [
+          "S17"
+        ]
+      },
+      {
+        "stage": "monitoring",
+        "documentary_state": "ES",
+        "software_support": "NUMERIC_ACQUISITION_INFRASTRUCTURE",
+        "clinical_validation": "NOT_VALIDATED",
+        "clinical_execution": "BLOCKED",
+        "source_ids": [
+          "S17"
+        ]
+      },
+      {
+        "stage": "data_quality",
+        "documentary_state": "ES",
+        "software_support": "CONFIGURED_TECHNICAL_GATES",
+        "clinical_validation": "NOT_VALIDATED",
+        "clinical_execution": "BLOCKED",
+        "source_ids": [
+          "S17"
+        ]
+      },
+      {
+        "stage": "detection",
+        "documentary_state": "RV",
+        "software_support": "NO_CONDITION_SPECIFIC_DETECTOR",
+        "clinical_validation": "NOT_VALIDATED",
+        "clinical_execution": "BLOCKED",
+        "source_ids": [
+          "S17"
+        ]
+      },
+      {
+        "stage": "assessment",
+        "documentary_state": "RMA",
+        "software_support": "HUMAN_RECORDING",
+        "clinical_validation": "NOT_VALIDATED",
+        "clinical_execution": "BLOCKED",
+        "source_ids": [
+          "S17"
+        ]
+      },
+      {
+        "stage": "differential_diagnosis",
+        "documentary_state": "RMA",
+        "software_support": "STRUCTURE_ONLY",
+        "clinical_validation": "NOT_VALIDATED",
+        "clinical_execution": "BLOCKED",
+        "source_ids": [
+          "S17"
+        ]
+      },
+      {
+        "stage": "triage",
+        "documentary_state": "RMA",
+        "software_support": "STRUCTURE_ONLY",
+        "clinical_validation": "NOT_VALIDATED",
+        "clinical_execution": "BLOCKED",
+        "source_ids": [
+          "S17"
+        ]
+      },
+      {
+        "stage": "intervention_authorized",
+        "documentary_state": "RMA",
+        "software_support": "STRUCTURE_ONLY",
+        "clinical_validation": "NOT_VALIDATED",
+        "clinical_execution": "BLOCKED",
+        "source_ids": [
+          "S17"
+        ]
+      },
+      {
+        "stage": "recovery",
+        "documentary_state": "RV",
+        "software_support": "HUMAN_WORKFLOW_RECORDING",
+        "clinical_validation": "NOT_VALIDATED",
+        "clinical_execution": "BLOCKED",
+        "source_ids": [
+          "S17"
+        ]
+      },
+      {
+        "stage": "follow_up",
+        "documentary_state": "RV",
+        "software_support": "PLAN_DUE_STATUS_AND_REVIEWS",
+        "clinical_validation": "NOT_VALIDATED",
+        "clinical_execution": "BLOCKED",
+        "source_ids": [
+          "S17"
+        ]
+      },
+      {
+        "stage": "prognosis",
+        "documentary_state": "RO",
+        "software_support": "STRUCTURE_ONLY",
+        "clinical_validation": "NOT_VALIDATED",
+        "clinical_execution": "BLOCKED",
+        "source_ids": [
+          "S17"
+        ]
+      }
+    ],
+    "no_prescription": true
+  },
+  {
+    "condition_id": "C008",
+    "name": "Redistribución de fluidos/hipovolemia relativa / cardiovascular",
+    "profile_as_published": "**P:** hidratación/contramedidas configuradas; **M:** hemodinámica; **Q:** postura/gravedad; **D:** tendencias `[RO]`; **A/DD:** causas de volumen; **T/I:** humano; **R/F:** volver al baseline; **G:** research-only.",
+    "rule_ids": [],
+    "stages": [
+      {
+        "stage": "prevention",
+        "documentary_state": "RO",
+        "software_support": "STRUCTURE_ONLY",
+        "clinical_validation": "NOT_VALIDATED",
+        "clinical_execution": "BLOCKED",
+        "source_ids": [
+          "S05"
+        ]
+      },
+      {
+        "stage": "monitoring",
+        "documentary_state": "RV",
+        "software_support": "NUMERIC_ACQUISITION_INFRASTRUCTURE",
+        "clinical_validation": "NOT_VALIDATED",
+        "clinical_execution": "BLOCKED",
+        "source_ids": [
+          "S05"
+        ]
+      },
+      {
+        "stage": "data_quality",
+        "documentary_state": "ES",
+        "software_support": "CONFIGURED_TECHNICAL_GATES",
+        "clinical_validation": "NOT_VALIDATED",
+        "clinical_execution": "BLOCKED",
+        "source_ids": [
+          "S05"
+        ]
+      },
+      {
+        "stage": "detection",
+        "documentary_state": "RO",
+        "software_support": "NO_CONDITION_SPECIFIC_DETECTOR",
+        "clinical_validation": "NOT_VALIDATED",
+        "clinical_execution": "BLOCKED",
+        "source_ids": [
+          "S05"
+        ]
+      },
+      {
+        "stage": "assessment",
+        "documentary_state": "RV",
+        "software_support": "HUMAN_RECORDING",
+        "clinical_validation": "NOT_VALIDATED",
+        "clinical_execution": "BLOCKED",
+        "source_ids": [
+          "S05"
+        ]
+      },
+      {
+        "stage": "differential_diagnosis",
+        "documentary_state": "RV",
+        "software_support": "STRUCTURE_ONLY",
+        "clinical_validation": "NOT_VALIDATED",
+        "clinical_execution": "BLOCKED",
+        "source_ids": [
+          "S05"
+        ]
+      },
+      {
+        "stage": "triage",
+        "documentary_state": "RMA",
+        "software_support": "STRUCTURE_ONLY",
+        "clinical_validation": "NOT_VALIDATED",
+        "clinical_execution": "BLOCKED",
+        "source_ids": [
+          "S05"
+        ]
+      },
+      {
+        "stage": "intervention_authorized",
+        "documentary_state": "RMA",
+        "software_support": "STRUCTURE_ONLY",
+        "clinical_validation": "NOT_VALIDATED",
+        "clinical_execution": "BLOCKED",
+        "source_ids": [
+          "S05"
+        ]
+      },
+      {
+        "stage": "recovery",
+        "documentary_state": "RV",
+        "software_support": "HUMAN_WORKFLOW_RECORDING",
+        "clinical_validation": "NOT_VALIDATED",
+        "clinical_execution": "BLOCKED",
+        "source_ids": [
+          "S05"
+        ]
+      },
+      {
+        "stage": "follow_up",
+        "documentary_state": "RV",
+        "software_support": "PLAN_DUE_STATUS_AND_REVIEWS",
+        "clinical_validation": "NOT_VALIDATED",
+        "clinical_execution": "BLOCKED",
+        "source_ids": [
+          "S05"
+        ]
+      },
+      {
+        "stage": "prognosis",
+        "documentary_state": "RO",
+        "software_support": "STRUCTURE_ONLY",
+        "clinical_validation": "NOT_VALIDATED",
+        "clinical_execution": "BLOCKED",
+        "source_ids": [
+          "S05"
+        ]
+      }
+    ],
+    "no_prescription": true
+  },
+  {
+    "condition_id": "C009",
+    "name": "SANS / neuro-oftalmología",
+    "profile_as_published": "**P:** contramedidas aún en investigación; **M:** visión/OCT/fondo/IOP según disponibilidad; **Q:** mismo equipo/protocolo; **D:** cambio longitudinal; **A:** neuro-oftalmología; **DD:** patología ocular/neurológica terrestre; **T:** pérdida visual aguda → protocolo médico; **I:** bloqueado salvo autorización; **R/F:** seguimiento longitudinal; **G:** no pronóstico validado.",
+    "rule_ids": [],
+    "stages": [
+      {
+        "stage": "prevention",
+        "documentary_state": "RV",
+        "software_support": "STRUCTURE_ONLY",
+        "clinical_validation": "NOT_VALIDATED",
+        "clinical_execution": "BLOCKED",
+        "source_ids": [
+          "S07"
+        ]
+      },
+      {
+        "stage": "monitoring",
+        "documentary_state": "ES",
+        "software_support": "NUMERIC_ACQUISITION_INFRASTRUCTURE",
+        "clinical_validation": "NOT_VALIDATED",
+        "clinical_execution": "BLOCKED",
+        "source_ids": [
+          "S07"
+        ]
+      },
+      {
+        "stage": "data_quality",
+        "documentary_state": "ES",
+        "software_support": "CONFIGURED_TECHNICAL_GATES",
+        "clinical_validation": "NOT_VALIDATED",
+        "clinical_execution": "BLOCKED",
+        "source_ids": [
+          "S07"
+        ]
+      },
+      {
+        "stage": "detection",
+        "documentary_state": "RV",
+        "software_support": "NO_CONDITION_SPECIFIC_DETECTOR",
+        "clinical_validation": "NOT_VALIDATED",
+        "clinical_execution": "BLOCKED",
+        "source_ids": [
+          "S07"
+        ]
+      },
+      {
+        "stage": "assessment",
+        "documentary_state": "RV",
+        "software_support": "HUMAN_RECORDING",
+        "clinical_validation": "NOT_VALIDATED",
+        "clinical_execution": "BLOCKED",
+        "source_ids": [
+          "S07"
+        ]
+      },
+      {
+        "stage": "differential_diagnosis",
+        "documentary_state": "RV",
+        "software_support": "STRUCTURE_ONLY",
+        "clinical_validation": "NOT_VALIDATED",
+        "clinical_execution": "BLOCKED",
+        "source_ids": [
+          "S07"
+        ]
+      },
+      {
+        "stage": "triage",
+        "documentary_state": "RMA",
+        "software_support": "STRUCTURE_ONLY",
+        "clinical_validation": "NOT_VALIDATED",
+        "clinical_execution": "BLOCKED",
+        "source_ids": [
+          "S07"
+        ]
+      },
+      {
+        "stage": "intervention_authorized",
+        "documentary_state": "RMA",
+        "software_support": "STRUCTURE_ONLY",
+        "clinical_validation": "NOT_VALIDATED",
+        "clinical_execution": "BLOCKED",
+        "source_ids": [
+          "S07"
+        ]
+      },
+      {
+        "stage": "recovery",
+        "documentary_state": "RV",
+        "software_support": "HUMAN_WORKFLOW_RECORDING",
+        "clinical_validation": "NOT_VALIDATED",
+        "clinical_execution": "BLOCKED",
+        "source_ids": [
+          "S07"
+        ]
+      },
+      {
+        "stage": "follow_up",
+        "documentary_state": "ES",
+        "software_support": "PLAN_DUE_STATUS_AND_REVIEWS",
+        "clinical_validation": "NOT_VALIDATED",
+        "clinical_execution": "BLOCKED",
+        "source_ids": [
+          "S07"
+        ]
+      },
+      {
+        "stage": "prognosis",
+        "documentary_state": "RO",
+        "software_support": "STRUCTURE_ONLY",
+        "clinical_validation": "NOT_VALIDATED",
+        "clinical_execution": "BLOCKED",
+        "source_ids": [
+          "S07"
+        ]
+      }
+    ],
+    "no_prescription": true
+  },
+  {
+    "condition_id": "C010",
+    "name": "Space Motion Sickness / neurovestibular",
+    "profile_as_published": "**P:** entrenamiento/plan de adaptación; **M:** síntomas/rendimiento; **Q:** fase gravitatoria; **D:** cuestionario/protocolo autorizado; **A/DD:** vestibular vs GI/neurológico; **T:** según impacto funcional; **I:** medicación solo autorizada; **R/F:** adaptación y recurrencia; **G:** individualización `RV`.",
+    "rule_ids": [],
+    "stages": [
+      {
+        "stage": "prevention",
+        "documentary_state": "ES",
+        "software_support": "STRUCTURE_ONLY",
+        "clinical_validation": "NOT_VALIDATED",
+        "clinical_execution": "BLOCKED",
+        "source_ids": [
+          "S11",
+          "S17"
+        ]
+      },
+      {
+        "stage": "monitoring",
+        "documentary_state": "ES",
+        "software_support": "NUMERIC_ACQUISITION_INFRASTRUCTURE",
+        "clinical_validation": "NOT_VALIDATED",
+        "clinical_execution": "BLOCKED",
+        "source_ids": [
+          "S11",
+          "S17"
+        ]
+      },
+      {
+        "stage": "data_quality",
+        "documentary_state": "ES",
+        "software_support": "CONFIGURED_TECHNICAL_GATES",
+        "clinical_validation": "NOT_VALIDATED",
+        "clinical_execution": "BLOCKED",
+        "source_ids": [
+          "S11",
+          "S17"
+        ]
+      },
+      {
+        "stage": "detection",
+        "documentary_state": "RV",
+        "software_support": "NO_CONDITION_SPECIFIC_DETECTOR",
+        "clinical_validation": "NOT_VALIDATED",
+        "clinical_execution": "BLOCKED",
+        "source_ids": [
+          "S11",
+          "S17"
+        ]
+      },
+      {
+        "stage": "assessment",
+        "documentary_state": "RV",
+        "software_support": "HUMAN_RECORDING",
+        "clinical_validation": "NOT_VALIDATED",
+        "clinical_execution": "BLOCKED",
+        "source_ids": [
+          "S11",
+          "S17"
+        ]
+      },
+      {
+        "stage": "differential_diagnosis",
+        "documentary_state": "RV",
+        "software_support": "STRUCTURE_ONLY",
+        "clinical_validation": "NOT_VALIDATED",
+        "clinical_execution": "BLOCKED",
+        "source_ids": [
+          "S11",
+          "S17"
+        ]
+      },
+      {
+        "stage": "triage",
+        "documentary_state": "RMA",
+        "software_support": "STRUCTURE_ONLY",
+        "clinical_validation": "NOT_VALIDATED",
+        "clinical_execution": "BLOCKED",
+        "source_ids": [
+          "S11",
+          "S17"
+        ]
+      },
+      {
+        "stage": "intervention_authorized",
+        "documentary_state": "RMA",
+        "software_support": "STRUCTURE_ONLY",
+        "clinical_validation": "NOT_VALIDATED",
+        "clinical_execution": "BLOCKED",
+        "source_ids": [
+          "S11",
+          "S17"
+        ]
+      },
+      {
+        "stage": "recovery",
+        "documentary_state": "ES",
+        "software_support": "HUMAN_WORKFLOW_RECORDING",
+        "clinical_validation": "NOT_VALIDATED",
+        "clinical_execution": "BLOCKED",
+        "source_ids": [
+          "S11",
+          "S17"
+        ]
+      },
+      {
+        "stage": "follow_up",
+        "documentary_state": "ES",
+        "software_support": "PLAN_DUE_STATUS_AND_REVIEWS",
+        "clinical_validation": "NOT_VALIDATED",
+        "clinical_execution": "BLOCKED",
+        "source_ids": [
+          "S11",
+          "S17"
+        ]
+      },
+      {
+        "stage": "prognosis",
+        "documentary_state": "RO",
+        "software_support": "STRUCTURE_ONLY",
+        "clinical_validation": "NOT_VALIDATED",
+        "clinical_execution": "BLOCKED",
+        "source_ids": [
+          "S11",
+          "S17"
+        ]
+      }
+    ],
+    "no_prescription": true
+  },
+  {
+    "condition_id": "C011",
+    "name": "Deterioro sensorimotor/postural/locomotor / sensorimotor",
+    "profile_as_published": "**P:** contramedidas/entrenamiento; **M:** balance/marcha/coordinación; **Q:** superficie/gravedad/protocolo; **D:** cambio vs baseline; **A:** funcional; **DD:** ortostático, neurológico, lesión; **T:** task-safety review; **I:** rehabilitación autorizada; **R/F:** readaptación; **G:** no extrapolar plazo individual.",
+    "rule_ids": [],
+    "stages": [
+      {
+        "stage": "prevention",
+        "documentary_state": "ES",
+        "software_support": "STRUCTURE_ONLY",
+        "clinical_validation": "NOT_VALIDATED",
+        "clinical_execution": "BLOCKED",
+        "source_ids": [
+          "S11"
+        ]
+      },
+      {
+        "stage": "monitoring",
+        "documentary_state": "ES",
+        "software_support": "NUMERIC_ACQUISITION_INFRASTRUCTURE",
+        "clinical_validation": "NOT_VALIDATED",
+        "clinical_execution": "BLOCKED",
+        "source_ids": [
+          "S11"
+        ]
+      },
+      {
+        "stage": "data_quality",
+        "documentary_state": "ES",
+        "software_support": "CONFIGURED_TECHNICAL_GATES",
+        "clinical_validation": "NOT_VALIDATED",
+        "clinical_execution": "BLOCKED",
+        "source_ids": [
+          "S11"
+        ]
+      },
+      {
+        "stage": "detection",
+        "documentary_state": "RV",
+        "software_support": "NO_CONDITION_SPECIFIC_DETECTOR",
+        "clinical_validation": "NOT_VALIDATED",
+        "clinical_execution": "BLOCKED",
+        "source_ids": [
+          "S11"
+        ]
+      },
+      {
+        "stage": "assessment",
+        "documentary_state": "RV",
+        "software_support": "HUMAN_RECORDING",
+        "clinical_validation": "NOT_VALIDATED",
+        "clinical_execution": "BLOCKED",
+        "source_ids": [
+          "S11"
+        ]
+      },
+      {
+        "stage": "differential_diagnosis",
+        "documentary_state": "RV",
+        "software_support": "STRUCTURE_ONLY",
+        "clinical_validation": "NOT_VALIDATED",
+        "clinical_execution": "BLOCKED",
+        "source_ids": [
+          "S11"
+        ]
+      },
+      {
+        "stage": "triage",
+        "documentary_state": "RMA",
+        "software_support": "STRUCTURE_ONLY",
+        "clinical_validation": "NOT_VALIDATED",
+        "clinical_execution": "BLOCKED",
+        "source_ids": [
+          "S11"
+        ]
+      },
+      {
+        "stage": "intervention_authorized",
+        "documentary_state": "RMA",
+        "software_support": "STRUCTURE_ONLY",
+        "clinical_validation": "NOT_VALIDATED",
+        "clinical_execution": "BLOCKED",
+        "source_ids": [
+          "S11"
+        ]
+      },
+      {
+        "stage": "recovery",
+        "documentary_state": "ES",
+        "software_support": "HUMAN_WORKFLOW_RECORDING",
+        "clinical_validation": "NOT_VALIDATED",
+        "clinical_execution": "BLOCKED",
+        "source_ids": [
+          "S11"
+        ]
+      },
+      {
+        "stage": "follow_up",
+        "documentary_state": "ES",
+        "software_support": "PLAN_DUE_STATUS_AND_REVIEWS",
+        "clinical_validation": "NOT_VALIDATED",
+        "clinical_execution": "BLOCKED",
+        "source_ids": [
+          "S11"
+        ]
+      },
+      {
+        "stage": "prognosis",
+        "documentary_state": "RO",
+        "software_support": "STRUCTURE_ONLY",
+        "clinical_validation": "NOT_VALIDATED",
+        "clinical_execution": "BLOCKED",
+        "source_ids": [
+          "S11"
+        ]
+      }
+    ],
+    "no_prescription": true
+  },
+  {
+    "condition_id": "C012",
+    "name": "Pérdida de sueño / medicina del sueño",
+    "profile_as_published": "**P:** horario/luz/ambiente; **M:** duración/eficiencia/diario; **Q:** wear time y ventanas válidas; **D:** desviación personal, no diagnóstico; **A/DD:** carga, ruido, circadiano, salud mental; **T:** por deterioro funcional; **I:** contramedidas autorizadas; **R/F:** retorno al patrón; **G:** tendencia, no diagnóstico.",
+    "rule_ids": [],
+    "stages": [
+      {
+        "stage": "prevention",
+        "documentary_state": "ES",
+        "software_support": "STRUCTURE_ONLY",
+        "clinical_validation": "NOT_VALIDATED",
+        "clinical_execution": "BLOCKED",
+        "source_ids": [
+          "S10"
+        ]
+      },
+      {
+        "stage": "monitoring",
+        "documentary_state": "ES",
+        "software_support": "NUMERIC_ACQUISITION_INFRASTRUCTURE",
+        "clinical_validation": "NOT_VALIDATED",
+        "clinical_execution": "BLOCKED",
+        "source_ids": [
+          "S10"
+        ]
+      },
+      {
+        "stage": "data_quality",
+        "documentary_state": "ES",
+        "software_support": "CONFIGURED_TECHNICAL_GATES",
+        "clinical_validation": "NOT_VALIDATED",
+        "clinical_execution": "BLOCKED",
+        "source_ids": [
+          "S10"
+        ]
+      },
+      {
+        "stage": "detection",
+        "documentary_state": "RV",
+        "software_support": "NO_CONDITION_SPECIFIC_DETECTOR",
+        "clinical_validation": "NOT_VALIDATED",
+        "clinical_execution": "BLOCKED",
+        "source_ids": [
+          "S10"
+        ]
+      },
+      {
+        "stage": "assessment",
+        "documentary_state": "RV",
+        "software_support": "HUMAN_RECORDING",
+        "clinical_validation": "NOT_VALIDATED",
+        "clinical_execution": "BLOCKED",
+        "source_ids": [
+          "S10"
+        ]
+      },
+      {
+        "stage": "differential_diagnosis",
+        "documentary_state": "RV",
+        "software_support": "STRUCTURE_ONLY",
+        "clinical_validation": "NOT_VALIDATED",
+        "clinical_execution": "BLOCKED",
+        "source_ids": [
+          "S10"
+        ]
+      },
+      {
+        "stage": "triage",
+        "documentary_state": "RMA",
+        "software_support": "STRUCTURE_ONLY",
+        "clinical_validation": "NOT_VALIDATED",
+        "clinical_execution": "BLOCKED",
+        "source_ids": [
+          "S10"
+        ]
+      },
+      {
+        "stage": "intervention_authorized",
+        "documentary_state": "RMA",
+        "software_support": "STRUCTURE_ONLY",
+        "clinical_validation": "NOT_VALIDATED",
+        "clinical_execution": "BLOCKED",
+        "source_ids": [
+          "S10"
+        ]
+      },
+      {
+        "stage": "recovery",
+        "documentary_state": "ES",
+        "software_support": "HUMAN_WORKFLOW_RECORDING",
+        "clinical_validation": "NOT_VALIDATED",
+        "clinical_execution": "BLOCKED",
+        "source_ids": [
+          "S10"
+        ]
+      },
+      {
+        "stage": "follow_up",
+        "documentary_state": "ES",
+        "software_support": "PLAN_DUE_STATUS_AND_REVIEWS",
+        "clinical_validation": "NOT_VALIDATED",
+        "clinical_execution": "BLOCKED",
+        "source_ids": [
+          "S10"
+        ]
+      },
+      {
+        "stage": "prognosis",
+        "documentary_state": "RO",
+        "software_support": "STRUCTURE_ONLY",
+        "clinical_validation": "NOT_VALIDATED",
+        "clinical_execution": "BLOCKED",
+        "source_ids": [
+          "S10"
+        ]
+      }
+    ],
+    "no_prescription": true
+  },
+  {
+    "condition_id": "C013",
+    "name": "Desincronización circadiana / sueño",
+    "profile_as_published": "**P:** planificación circadiana; **M:** sueño-vigilia/luz; **Q:** sincronización temporal; **D:** desfase según algoritmo de misión `[RV]`; **A/DD:** horarios/sueño; **T/I:** autorización; **R/F:** realineamiento; **G:** research-only.",
+    "rule_ids": [],
+    "stages": [
+      {
+        "stage": "prevention",
+        "documentary_state": "ES",
+        "software_support": "STRUCTURE_ONLY",
+        "clinical_validation": "NOT_VALIDATED",
+        "clinical_execution": "BLOCKED",
+        "source_ids": [
+          "S10"
+        ]
+      },
+      {
+        "stage": "monitoring",
+        "documentary_state": "ES",
+        "software_support": "NUMERIC_ACQUISITION_INFRASTRUCTURE",
+        "clinical_validation": "NOT_VALIDATED",
+        "clinical_execution": "BLOCKED",
+        "source_ids": [
+          "S10"
+        ]
+      },
+      {
+        "stage": "data_quality",
+        "documentary_state": "ES",
+        "software_support": "CONFIGURED_TECHNICAL_GATES",
+        "clinical_validation": "NOT_VALIDATED",
+        "clinical_execution": "BLOCKED",
+        "source_ids": [
+          "S10"
+        ]
+      },
+      {
+        "stage": "detection",
+        "documentary_state": "RV",
+        "software_support": "NO_CONDITION_SPECIFIC_DETECTOR",
+        "clinical_validation": "NOT_VALIDATED",
+        "clinical_execution": "BLOCKED",
+        "source_ids": [
+          "S10"
+        ]
+      },
+      {
+        "stage": "assessment",
+        "documentary_state": "RV",
+        "software_support": "HUMAN_RECORDING",
+        "clinical_validation": "NOT_VALIDATED",
+        "clinical_execution": "BLOCKED",
+        "source_ids": [
+          "S10"
+        ]
+      },
+      {
+        "stage": "differential_diagnosis",
+        "documentary_state": "RV",
+        "software_support": "STRUCTURE_ONLY",
+        "clinical_validation": "NOT_VALIDATED",
+        "clinical_execution": "BLOCKED",
+        "source_ids": [
+          "S10"
+        ]
+      },
+      {
+        "stage": "triage",
+        "documentary_state": "RMA",
+        "software_support": "STRUCTURE_ONLY",
+        "clinical_validation": "NOT_VALIDATED",
+        "clinical_execution": "BLOCKED",
+        "source_ids": [
+          "S10"
+        ]
+      },
+      {
+        "stage": "intervention_authorized",
+        "documentary_state": "RMA",
+        "software_support": "STRUCTURE_ONLY",
+        "clinical_validation": "NOT_VALIDATED",
+        "clinical_execution": "BLOCKED",
+        "source_ids": [
+          "S10"
+        ]
+      },
+      {
+        "stage": "recovery",
+        "documentary_state": "RV",
+        "software_support": "HUMAN_WORKFLOW_RECORDING",
+        "clinical_validation": "NOT_VALIDATED",
+        "clinical_execution": "BLOCKED",
+        "source_ids": [
+          "S10"
+        ]
+      },
+      {
+        "stage": "follow_up",
+        "documentary_state": "ES",
+        "software_support": "PLAN_DUE_STATUS_AND_REVIEWS",
+        "clinical_validation": "NOT_VALIDATED",
+        "clinical_execution": "BLOCKED",
+        "source_ids": [
+          "S10"
+        ]
+      },
+      {
+        "stage": "prognosis",
+        "documentary_state": "RO",
+        "software_support": "STRUCTURE_ONLY",
+        "clinical_validation": "NOT_VALIDATED",
+        "clinical_execution": "BLOCKED",
+        "source_ids": [
+          "S10"
+        ]
+      }
+    ],
+    "no_prescription": true
+  },
+  {
+    "condition_id": "C014",
+    "name": "Fatiga y sobrecarga de trabajo / factores humanos",
+    "profile_as_published": "**P:** límites de carga programáticos; **M:** workload+sueño+rendimiento; **Q:** escalas completas y temporalmente alineadas; **D:** combinación multivariable `[RV]`; **A/DD:** sueño, enfermedad, estrés; **T:** riesgo operacional; **I:** reajuste autorizado; **R/F:** desempeño; **G:** sin predictor universal.",
+    "rule_ids": [],
+    "stages": [
+      {
+        "stage": "prevention",
+        "documentary_state": "ES",
+        "software_support": "STRUCTURE_ONLY",
+        "clinical_validation": "NOT_VALIDATED",
+        "clinical_execution": "BLOCKED",
+        "source_ids": [
+          "S10"
+        ]
+      },
+      {
+        "stage": "monitoring",
+        "documentary_state": "ES",
+        "software_support": "NUMERIC_ACQUISITION_INFRASTRUCTURE",
+        "clinical_validation": "NOT_VALIDATED",
+        "clinical_execution": "BLOCKED",
+        "source_ids": [
+          "S10"
+        ]
+      },
+      {
+        "stage": "data_quality",
+        "documentary_state": "ES",
+        "software_support": "CONFIGURED_TECHNICAL_GATES",
+        "clinical_validation": "NOT_VALIDATED",
+        "clinical_execution": "BLOCKED",
+        "source_ids": [
+          "S10"
+        ]
+      },
+      {
+        "stage": "detection",
+        "documentary_state": "RV",
+        "software_support": "NO_CONDITION_SPECIFIC_DETECTOR",
+        "clinical_validation": "NOT_VALIDATED",
+        "clinical_execution": "BLOCKED",
+        "source_ids": [
+          "S10"
+        ]
+      },
+      {
+        "stage": "assessment",
+        "documentary_state": "RV",
+        "software_support": "HUMAN_RECORDING",
+        "clinical_validation": "NOT_VALIDATED",
+        "clinical_execution": "BLOCKED",
+        "source_ids": [
+          "S10"
+        ]
+      },
+      {
+        "stage": "differential_diagnosis",
+        "documentary_state": "RV",
+        "software_support": "STRUCTURE_ONLY",
+        "clinical_validation": "NOT_VALIDATED",
+        "clinical_execution": "BLOCKED",
+        "source_ids": [
+          "S10"
+        ]
+      },
+      {
+        "stage": "triage",
+        "documentary_state": "RMA",
+        "software_support": "STRUCTURE_ONLY",
+        "clinical_validation": "NOT_VALIDATED",
+        "clinical_execution": "BLOCKED",
+        "source_ids": [
+          "S10"
+        ]
+      },
+      {
+        "stage": "intervention_authorized",
+        "documentary_state": "RMA",
+        "software_support": "STRUCTURE_ONLY",
+        "clinical_validation": "NOT_VALIDATED",
+        "clinical_execution": "BLOCKED",
+        "source_ids": [
+          "S10"
+        ]
+      },
+      {
+        "stage": "recovery",
+        "documentary_state": "RV",
+        "software_support": "HUMAN_WORKFLOW_RECORDING",
+        "clinical_validation": "NOT_VALIDATED",
+        "clinical_execution": "BLOCKED",
+        "source_ids": [
+          "S10"
+        ]
+      },
+      {
+        "stage": "follow_up",
+        "documentary_state": "ES",
+        "software_support": "PLAN_DUE_STATUS_AND_REVIEWS",
+        "clinical_validation": "NOT_VALIDATED",
+        "clinical_execution": "BLOCKED",
+        "source_ids": [
+          "S10"
+        ]
+      },
+      {
+        "stage": "prognosis",
+        "documentary_state": "RO",
+        "software_support": "STRUCTURE_ONLY",
+        "clinical_validation": "NOT_VALIDATED",
+        "clinical_execution": "BLOCKED",
+        "source_ids": [
+          "S10"
+        ]
+      }
+    ],
+    "no_prescription": true
+  },
+  {
+    "condition_id": "C015",
+    "name": "Deterioro cognitivo funcional / neurocognición",
+    "profile_as_published": "**P:** sueño/ambiente/carga; **M:** batería cognitiva; **Q:** práctica, versión, latencia de dispositivo; **D:** cambio robusto vs baseline; **A/DD:** sueño, CO₂, hipoxia, estrés, medicación; **T:** desempeño crítico; **I:** tratar causa solo si identificada/autorizada; **R/F:** reevaluación; **G:** research-only.",
+    "rule_ids": [],
+    "stages": [
+      {
+        "stage": "prevention",
+        "documentary_state": "ES",
+        "software_support": "STRUCTURE_ONLY",
+        "clinical_validation": "NOT_VALIDATED",
+        "clinical_execution": "BLOCKED",
+        "source_ids": [
+          "S10",
+          "S14",
+          "S27"
+        ]
+      },
+      {
+        "stage": "monitoring",
+        "documentary_state": "ES",
+        "software_support": "NUMERIC_ACQUISITION_INFRASTRUCTURE",
+        "clinical_validation": "NOT_VALIDATED",
+        "clinical_execution": "BLOCKED",
+        "source_ids": [
+          "S10",
+          "S14",
+          "S27"
+        ]
+      },
+      {
+        "stage": "data_quality",
+        "documentary_state": "ES",
+        "software_support": "CONFIGURED_TECHNICAL_GATES",
+        "clinical_validation": "NOT_VALIDATED",
+        "clinical_execution": "BLOCKED",
+        "source_ids": [
+          "S10",
+          "S14",
+          "S27"
+        ]
+      },
+      {
+        "stage": "detection",
+        "documentary_state": "RV",
+        "software_support": "NO_CONDITION_SPECIFIC_DETECTOR",
+        "clinical_validation": "NOT_VALIDATED",
+        "clinical_execution": "BLOCKED",
+        "source_ids": [
+          "S10",
+          "S14",
+          "S27"
+        ]
+      },
+      {
+        "stage": "assessment",
+        "documentary_state": "RV",
+        "software_support": "HUMAN_RECORDING",
+        "clinical_validation": "NOT_VALIDATED",
+        "clinical_execution": "BLOCKED",
+        "source_ids": [
+          "S10",
+          "S14",
+          "S27"
+        ]
+      },
+      {
+        "stage": "differential_diagnosis",
+        "documentary_state": "RV",
+        "software_support": "STRUCTURE_ONLY",
+        "clinical_validation": "NOT_VALIDATED",
+        "clinical_execution": "BLOCKED",
+        "source_ids": [
+          "S10",
+          "S14",
+          "S27"
+        ]
+      },
+      {
+        "stage": "triage",
+        "documentary_state": "RMA",
+        "software_support": "STRUCTURE_ONLY",
+        "clinical_validation": "NOT_VALIDATED",
+        "clinical_execution": "BLOCKED",
+        "source_ids": [
+          "S10",
+          "S14",
+          "S27"
+        ]
+      },
+      {
+        "stage": "intervention_authorized",
+        "documentary_state": "RMA",
+        "software_support": "STRUCTURE_ONLY",
+        "clinical_validation": "NOT_VALIDATED",
+        "clinical_execution": "BLOCKED",
+        "source_ids": [
+          "S10",
+          "S14",
+          "S27"
+        ]
+      },
+      {
+        "stage": "recovery",
+        "documentary_state": "RV",
+        "software_support": "HUMAN_WORKFLOW_RECORDING",
+        "clinical_validation": "NOT_VALIDATED",
+        "clinical_execution": "BLOCKED",
+        "source_ids": [
+          "S10",
+          "S14",
+          "S27"
+        ]
+      },
+      {
+        "stage": "follow_up",
+        "documentary_state": "ES",
+        "software_support": "PLAN_DUE_STATUS_AND_REVIEWS",
+        "clinical_validation": "NOT_VALIDATED",
+        "clinical_execution": "BLOCKED",
+        "source_ids": [
+          "S10",
+          "S14",
+          "S27"
+        ]
+      },
+      {
+        "stage": "prognosis",
+        "documentary_state": "RO",
+        "software_support": "STRUCTURE_ONLY",
+        "clinical_validation": "NOT_VALIDATED",
+        "clinical_execution": "BLOCKED",
+        "source_ids": [
+          "S10",
+          "S14",
+          "S27"
+        ]
+      }
+    ],
+    "no_prescription": true
+  },
+  {
+    "condition_id": "C016",
+    "name": "Cambios conductuales/psiquiátricos / salud conductual",
+    "profile_as_published": "**P:** apoyo conductual/privacidad; **M:** instrumentos autorizados; **Q:** confidencialidad y validez; **D:** señales predefinidas, no inferencia LLM; **A/DD:** profesional; **T:** protocolo médico; **I:** bloqueado sin autoridad; **R/F:** seguimiento confidencial; **G:** no scoring autónomo de pronóstico.",
+    "rule_ids": [],
+    "stages": [
+      {
+        "stage": "prevention",
+        "documentary_state": "ES",
+        "software_support": "STRUCTURE_ONLY",
+        "clinical_validation": "NOT_VALIDATED",
+        "clinical_execution": "BLOCKED",
+        "source_ids": [
+          "S12"
+        ]
+      },
+      {
+        "stage": "monitoring",
+        "documentary_state": "RV",
+        "software_support": "NUMERIC_ACQUISITION_INFRASTRUCTURE",
+        "clinical_validation": "NOT_VALIDATED",
+        "clinical_execution": "BLOCKED",
+        "source_ids": [
+          "S12"
+        ]
+      },
+      {
+        "stage": "data_quality",
+        "documentary_state": "ES",
+        "software_support": "CONFIGURED_TECHNICAL_GATES",
+        "clinical_validation": "NOT_VALIDATED",
+        "clinical_execution": "BLOCKED",
+        "source_ids": [
+          "S12"
+        ]
+      },
+      {
+        "stage": "detection",
+        "documentary_state": "RV",
+        "software_support": "NO_CONDITION_SPECIFIC_DETECTOR",
+        "clinical_validation": "NOT_VALIDATED",
+        "clinical_execution": "BLOCKED",
+        "source_ids": [
+          "S12"
+        ]
+      },
+      {
+        "stage": "assessment",
+        "documentary_state": "RMA",
+        "software_support": "HUMAN_RECORDING",
+        "clinical_validation": "NOT_VALIDATED",
+        "clinical_execution": "BLOCKED",
+        "source_ids": [
+          "S12"
+        ]
+      },
+      {
+        "stage": "differential_diagnosis",
+        "documentary_state": "RMA",
+        "software_support": "STRUCTURE_ONLY",
+        "clinical_validation": "NOT_VALIDATED",
+        "clinical_execution": "BLOCKED",
+        "source_ids": [
+          "S12"
+        ]
+      },
+      {
+        "stage": "triage",
+        "documentary_state": "RMA",
+        "software_support": "STRUCTURE_ONLY",
+        "clinical_validation": "NOT_VALIDATED",
+        "clinical_execution": "BLOCKED",
+        "source_ids": [
+          "S12"
+        ]
+      },
+      {
+        "stage": "intervention_authorized",
+        "documentary_state": "RMA",
+        "software_support": "STRUCTURE_ONLY",
+        "clinical_validation": "NOT_VALIDATED",
+        "clinical_execution": "BLOCKED",
+        "source_ids": [
+          "S12"
+        ]
+      },
+      {
+        "stage": "recovery",
+        "documentary_state": "RV",
+        "software_support": "HUMAN_WORKFLOW_RECORDING",
+        "clinical_validation": "NOT_VALIDATED",
+        "clinical_execution": "BLOCKED",
+        "source_ids": [
+          "S12"
+        ]
+      },
+      {
+        "stage": "follow_up",
+        "documentary_state": "RV",
+        "software_support": "PLAN_DUE_STATUS_AND_REVIEWS",
+        "clinical_validation": "NOT_VALIDATED",
+        "clinical_execution": "BLOCKED",
+        "source_ids": [
+          "S12"
+        ]
+      },
+      {
+        "stage": "prognosis",
+        "documentary_state": "RO",
+        "software_support": "STRUCTURE_ONLY",
+        "clinical_validation": "NOT_VALIDATED",
+        "clinical_execution": "BLOCKED",
+        "source_ids": [
+          "S12"
+        ]
+      }
+    ],
+    "no_prescription": true
+  },
+  {
+    "condition_id": "C017",
+    "name": "Deterioro de trabajo en equipo/adaptación psicosocial / factores humanos",
+    "profile_as_published": "**P:** selección/entrenamiento de equipo; **M:** desempeño/comunicación; **Q:** evitar vigilancia invasiva no autorizada; **D:** patrones de misión; **A:** factores humanos; **DD:** no patologizar; **T/I:** organizational support; **R/F:** resiliencia del equipo; **G:** research-only.",
+    "rule_ids": [],
+    "stages": [
+      {
+        "stage": "prevention",
+        "documentary_state": "ES",
+        "software_support": "STRUCTURE_ONLY",
+        "clinical_validation": "NOT_VALIDATED",
+        "clinical_execution": "BLOCKED",
+        "source_ids": [
+          "S12"
+        ]
+      },
+      {
+        "stage": "monitoring",
+        "documentary_state": "RV",
+        "software_support": "NUMERIC_ACQUISITION_INFRASTRUCTURE",
+        "clinical_validation": "NOT_VALIDATED",
+        "clinical_execution": "BLOCKED",
+        "source_ids": [
+          "S12"
+        ]
+      },
+      {
+        "stage": "data_quality",
+        "documentary_state": "ES",
+        "software_support": "CONFIGURED_TECHNICAL_GATES",
+        "clinical_validation": "NOT_VALIDATED",
+        "clinical_execution": "BLOCKED",
+        "source_ids": [
+          "S12"
+        ]
+      },
+      {
+        "stage": "detection",
+        "documentary_state": "RO",
+        "software_support": "NO_CONDITION_SPECIFIC_DETECTOR",
+        "clinical_validation": "NOT_VALIDATED",
+        "clinical_execution": "BLOCKED",
+        "source_ids": [
+          "S12"
+        ]
+      },
+      {
+        "stage": "assessment",
+        "documentary_state": "RV",
+        "software_support": "HUMAN_RECORDING",
+        "clinical_validation": "NOT_VALIDATED",
+        "clinical_execution": "BLOCKED",
+        "source_ids": [
+          "S12"
+        ]
+      },
+      {
+        "stage": "differential_diagnosis",
+        "documentary_state": "RV",
+        "software_support": "STRUCTURE_ONLY",
+        "clinical_validation": "NOT_VALIDATED",
+        "clinical_execution": "BLOCKED",
+        "source_ids": [
+          "S12"
+        ]
+      },
+      {
+        "stage": "triage",
+        "documentary_state": "RMA",
+        "software_support": "STRUCTURE_ONLY",
+        "clinical_validation": "NOT_VALIDATED",
+        "clinical_execution": "BLOCKED",
+        "source_ids": [
+          "S12"
+        ]
+      },
+      {
+        "stage": "intervention_authorized",
+        "documentary_state": "RMA",
+        "software_support": "STRUCTURE_ONLY",
+        "clinical_validation": "NOT_VALIDATED",
+        "clinical_execution": "BLOCKED",
+        "source_ids": [
+          "S12"
+        ]
+      },
+      {
+        "stage": "recovery",
+        "documentary_state": "RV",
+        "software_support": "HUMAN_WORKFLOW_RECORDING",
+        "clinical_validation": "NOT_VALIDATED",
+        "clinical_execution": "BLOCKED",
+        "source_ids": [
+          "S12"
+        ]
+      },
+      {
+        "stage": "follow_up",
+        "documentary_state": "RV",
+        "software_support": "PLAN_DUE_STATUS_AND_REVIEWS",
+        "clinical_validation": "NOT_VALIDATED",
+        "clinical_execution": "BLOCKED",
+        "source_ids": [
+          "S12"
+        ]
+      },
+      {
+        "stage": "prognosis",
+        "documentary_state": "RO",
+        "software_support": "STRUCTURE_ONLY",
+        "clinical_validation": "NOT_VALIDATED",
+        "clinical_execution": "BLOCKED",
+        "source_ids": [
+          "S12"
+        ]
+      }
+    ],
+    "no_prescription": true
+  },
+  {
+    "condition_id": "C018",
+    "name": "Alteración de respuesta inmunitaria / inmunología",
+    "profile_as_published": "**P:** sueño/nutrición/mitigación de estrés; **M:** biomarcadores autorizados; **Q:** muestra, lote, timing; **D:** cambio longitudinal `[RV]`; **A/DD:** infección, estrés, variabilidad; **T/I:** médico; **R/F:** biomarcadores+clínica; **G:** no pronóstico clínico autónomo.",
+    "rule_ids": [],
+    "stages": [
+      {
+        "stage": "prevention",
+        "documentary_state": "ES",
+        "software_support": "STRUCTURE_ONLY",
+        "clinical_validation": "NOT_VALIDATED",
+        "clinical_execution": "BLOCKED",
+        "source_ids": [
+          "S09"
+        ]
+      },
+      {
+        "stage": "monitoring",
+        "documentary_state": "RV",
+        "software_support": "NUMERIC_ACQUISITION_INFRASTRUCTURE",
+        "clinical_validation": "NOT_VALIDATED",
+        "clinical_execution": "BLOCKED",
+        "source_ids": [
+          "S09"
+        ]
+      },
+      {
+        "stage": "data_quality",
+        "documentary_state": "ES",
+        "software_support": "CONFIGURED_TECHNICAL_GATES",
+        "clinical_validation": "NOT_VALIDATED",
+        "clinical_execution": "BLOCKED",
+        "source_ids": [
+          "S09"
+        ]
+      },
+      {
+        "stage": "detection",
+        "documentary_state": "RV",
+        "software_support": "NO_CONDITION_SPECIFIC_DETECTOR",
+        "clinical_validation": "NOT_VALIDATED",
+        "clinical_execution": "BLOCKED",
+        "source_ids": [
+          "S09"
+        ]
+      },
+      {
+        "stage": "assessment",
+        "documentary_state": "RV",
+        "software_support": "HUMAN_RECORDING",
+        "clinical_validation": "NOT_VALIDATED",
+        "clinical_execution": "BLOCKED",
+        "source_ids": [
+          "S09"
+        ]
+      },
+      {
+        "stage": "differential_diagnosis",
+        "documentary_state": "RV",
+        "software_support": "STRUCTURE_ONLY",
+        "clinical_validation": "NOT_VALIDATED",
+        "clinical_execution": "BLOCKED",
+        "source_ids": [
+          "S09"
+        ]
+      },
+      {
+        "stage": "triage",
+        "documentary_state": "RMA",
+        "software_support": "STRUCTURE_ONLY",
+        "clinical_validation": "NOT_VALIDATED",
+        "clinical_execution": "BLOCKED",
+        "source_ids": [
+          "S09"
+        ]
+      },
+      {
+        "stage": "intervention_authorized",
+        "documentary_state": "RMA",
+        "software_support": "STRUCTURE_ONLY",
+        "clinical_validation": "NOT_VALIDATED",
+        "clinical_execution": "BLOCKED",
+        "source_ids": [
+          "S09"
+        ]
+      },
+      {
+        "stage": "recovery",
+        "documentary_state": "RV",
+        "software_support": "HUMAN_WORKFLOW_RECORDING",
+        "clinical_validation": "NOT_VALIDATED",
+        "clinical_execution": "BLOCKED",
+        "source_ids": [
+          "S09"
+        ]
+      },
+      {
+        "stage": "follow_up",
+        "documentary_state": "ES",
+        "software_support": "PLAN_DUE_STATUS_AND_REVIEWS",
+        "clinical_validation": "NOT_VALIDATED",
+        "clinical_execution": "BLOCKED",
+        "source_ids": [
+          "S09"
+        ]
+      },
+      {
+        "stage": "prognosis",
+        "documentary_state": "RO",
+        "software_support": "STRUCTURE_ONLY",
+        "clinical_validation": "NOT_VALIDATED",
+        "clinical_execution": "BLOCKED",
+        "source_ids": [
+          "S09"
+        ]
+      }
+    ],
+    "no_prescription": true
+  },
+  {
+    "condition_id": "C019",
+    "name": "Reactivación viral latente / infeccioso-inmunológico",
+    "profile_as_published": "**P:** control de factores de estrés; **M:** síntomas+ensayos si disponibles; **Q:** calidad PCR/serología; **D:** laboratorio, no síntomas solos; **A/DD:** otras infecciones; **T/I:** médico; **R/F:** resolución; **G:** `RV`.",
+    "rule_ids": [],
+    "stages": [
+      {
+        "stage": "prevention",
+        "documentary_state": "ES",
+        "software_support": "STRUCTURE_ONLY",
+        "clinical_validation": "NOT_VALIDATED",
+        "clinical_execution": "BLOCKED",
+        "source_ids": [
+          "S09"
+        ]
+      },
+      {
+        "stage": "monitoring",
+        "documentary_state": "RV",
+        "software_support": "NUMERIC_ACQUISITION_INFRASTRUCTURE",
+        "clinical_validation": "NOT_VALIDATED",
+        "clinical_execution": "BLOCKED",
+        "source_ids": [
+          "S09"
+        ]
+      },
+      {
+        "stage": "data_quality",
+        "documentary_state": "ES",
+        "software_support": "CONFIGURED_TECHNICAL_GATES",
+        "clinical_validation": "NOT_VALIDATED",
+        "clinical_execution": "BLOCKED",
+        "source_ids": [
+          "S09"
+        ]
+      },
+      {
+        "stage": "detection",
+        "documentary_state": "RV",
+        "software_support": "NO_CONDITION_SPECIFIC_DETECTOR",
+        "clinical_validation": "NOT_VALIDATED",
+        "clinical_execution": "BLOCKED",
+        "source_ids": [
+          "S09"
+        ]
+      },
+      {
+        "stage": "assessment",
+        "documentary_state": "RV",
+        "software_support": "HUMAN_RECORDING",
+        "clinical_validation": "NOT_VALIDATED",
+        "clinical_execution": "BLOCKED",
+        "source_ids": [
+          "S09"
+        ]
+      },
+      {
+        "stage": "differential_diagnosis",
+        "documentary_state": "RV",
+        "software_support": "STRUCTURE_ONLY",
+        "clinical_validation": "NOT_VALIDATED",
+        "clinical_execution": "BLOCKED",
+        "source_ids": [
+          "S09"
+        ]
+      },
+      {
+        "stage": "triage",
+        "documentary_state": "RMA",
+        "software_support": "STRUCTURE_ONLY",
+        "clinical_validation": "NOT_VALIDATED",
+        "clinical_execution": "BLOCKED",
+        "source_ids": [
+          "S09"
+        ]
+      },
+      {
+        "stage": "intervention_authorized",
+        "documentary_state": "RMA",
+        "software_support": "STRUCTURE_ONLY",
+        "clinical_validation": "NOT_VALIDATED",
+        "clinical_execution": "BLOCKED",
+        "source_ids": [
+          "S09"
+        ]
+      },
+      {
+        "stage": "recovery",
+        "documentary_state": "RV",
+        "software_support": "HUMAN_WORKFLOW_RECORDING",
+        "clinical_validation": "NOT_VALIDATED",
+        "clinical_execution": "BLOCKED",
+        "source_ids": [
+          "S09"
+        ]
+      },
+      {
+        "stage": "follow_up",
+        "documentary_state": "RV",
+        "software_support": "PLAN_DUE_STATUS_AND_REVIEWS",
+        "clinical_validation": "NOT_VALIDATED",
+        "clinical_execution": "BLOCKED",
+        "source_ids": [
+          "S09"
+        ]
+      },
+      {
+        "stage": "prognosis",
+        "documentary_state": "RO",
+        "software_support": "STRUCTURE_ONLY",
+        "clinical_validation": "NOT_VALIDATED",
+        "clinical_execution": "BLOCKED",
+        "source_ids": [
+          "S09"
+        ]
+      }
+    ],
+    "no_prescription": true
+  },
+  {
+    "condition_id": "C020",
+    "name": "Infección/host–microorganism interaction / infeccioso",
+    "profile_as_published": "**P:** higiene/aire/agua/contención; **M:** síntomas+ambiente; **Q:** muestra/sensor; **D:** screening autorizado; **A/DD:** etiología infecciosa vs ambiental; **T:** médico; **I:** antimicrobianos bloqueados sin protocolo; **R/F:** respuesta/recurrencia; **G:** no modelo causal individual.",
+    "rule_ids": [],
+    "stages": [
+      {
+        "stage": "prevention",
+        "documentary_state": "ES",
+        "software_support": "STRUCTURE_ONLY",
+        "clinical_validation": "NOT_VALIDATED",
+        "clinical_execution": "BLOCKED",
+        "source_ids": [
+          "S03",
+          "S17"
+        ]
+      },
+      {
+        "stage": "monitoring",
+        "documentary_state": "ES",
+        "software_support": "NUMERIC_ACQUISITION_INFRASTRUCTURE",
+        "clinical_validation": "NOT_VALIDATED",
+        "clinical_execution": "BLOCKED",
+        "source_ids": [
+          "S03",
+          "S17"
+        ]
+      },
+      {
+        "stage": "data_quality",
+        "documentary_state": "ES",
+        "software_support": "CONFIGURED_TECHNICAL_GATES",
+        "clinical_validation": "NOT_VALIDATED",
+        "clinical_execution": "BLOCKED",
+        "source_ids": [
+          "S03",
+          "S17"
+        ]
+      },
+      {
+        "stage": "detection",
+        "documentary_state": "RV",
+        "software_support": "NO_CONDITION_SPECIFIC_DETECTOR",
+        "clinical_validation": "NOT_VALIDATED",
+        "clinical_execution": "BLOCKED",
+        "source_ids": [
+          "S03",
+          "S17"
+        ]
+      },
+      {
+        "stage": "assessment",
+        "documentary_state": "RV",
+        "software_support": "HUMAN_RECORDING",
+        "clinical_validation": "NOT_VALIDATED",
+        "clinical_execution": "BLOCKED",
+        "source_ids": [
+          "S03",
+          "S17"
+        ]
+      },
+      {
+        "stage": "differential_diagnosis",
+        "documentary_state": "RV",
+        "software_support": "STRUCTURE_ONLY",
+        "clinical_validation": "NOT_VALIDATED",
+        "clinical_execution": "BLOCKED",
+        "source_ids": [
+          "S03",
+          "S17"
+        ]
+      },
+      {
+        "stage": "triage",
+        "documentary_state": "RMA",
+        "software_support": "STRUCTURE_ONLY",
+        "clinical_validation": "NOT_VALIDATED",
+        "clinical_execution": "BLOCKED",
+        "source_ids": [
+          "S03",
+          "S17"
+        ]
+      },
+      {
+        "stage": "intervention_authorized",
+        "documentary_state": "RMA",
+        "software_support": "STRUCTURE_ONLY",
+        "clinical_validation": "NOT_VALIDATED",
+        "clinical_execution": "BLOCKED",
+        "source_ids": [
+          "S03",
+          "S17"
+        ]
+      },
+      {
+        "stage": "recovery",
+        "documentary_state": "RV",
+        "software_support": "HUMAN_WORKFLOW_RECORDING",
+        "clinical_validation": "NOT_VALIDATED",
+        "clinical_execution": "BLOCKED",
+        "source_ids": [
+          "S03",
+          "S17"
+        ]
+      },
+      {
+        "stage": "follow_up",
+        "documentary_state": "RV",
+        "software_support": "PLAN_DUE_STATUS_AND_REVIEWS",
+        "clinical_validation": "NOT_VALIDATED",
+        "clinical_execution": "BLOCKED",
+        "source_ids": [
+          "S03",
+          "S17"
+        ]
+      },
+      {
+        "stage": "prognosis",
+        "documentary_state": "RO",
+        "software_support": "STRUCTURE_ONLY",
+        "clinical_validation": "NOT_VALIDATED",
+        "clinical_execution": "BLOCKED",
+        "source_ids": [
+          "S03",
+          "S17"
+        ]
+      }
+    ],
+    "no_prescription": true
+  },
+  {
+    "condition_id": "C021",
+    "name": "Formación de cálculos renales / nefro-urología",
+    "profile_as_published": "**P:** hidratación/dieta/contramedidas de misión; **M:** química urinaria/síntomas; **Q:** colección y volumen; **D:** algoritmo probabilístico solo modo investigación; **A/DD:** cólico, UTI, GI; **T/I:** médico; **R/F:** recurrencia/química; **G:** RSFM solo si validado para misión.",
+    "rule_ids": [],
+    "stages": [
+      {
+        "stage": "prevention",
+        "documentary_state": "ES",
+        "software_support": "STRUCTURE_ONLY",
+        "clinical_validation": "NOT_VALIDATED",
+        "clinical_execution": "BLOCKED",
+        "source_ids": [
+          "S08"
+        ]
+      },
+      {
+        "stage": "monitoring",
+        "documentary_state": "ES",
+        "software_support": "NUMERIC_ACQUISITION_INFRASTRUCTURE",
+        "clinical_validation": "NOT_VALIDATED",
+        "clinical_execution": "BLOCKED",
+        "source_ids": [
+          "S08"
+        ]
+      },
+      {
+        "stage": "data_quality",
+        "documentary_state": "ES",
+        "software_support": "CONFIGURED_TECHNICAL_GATES",
+        "clinical_validation": "NOT_VALIDATED",
+        "clinical_execution": "BLOCKED",
+        "source_ids": [
+          "S08"
+        ]
+      },
+      {
+        "stage": "detection",
+        "documentary_state": "RV",
+        "software_support": "NO_CONDITION_SPECIFIC_DETECTOR",
+        "clinical_validation": "NOT_VALIDATED",
+        "clinical_execution": "BLOCKED",
+        "source_ids": [
+          "S08"
+        ]
+      },
+      {
+        "stage": "assessment",
+        "documentary_state": "RV",
+        "software_support": "HUMAN_RECORDING",
+        "clinical_validation": "NOT_VALIDATED",
+        "clinical_execution": "BLOCKED",
+        "source_ids": [
+          "S08"
+        ]
+      },
+      {
+        "stage": "differential_diagnosis",
+        "documentary_state": "RV",
+        "software_support": "STRUCTURE_ONLY",
+        "clinical_validation": "NOT_VALIDATED",
+        "clinical_execution": "BLOCKED",
+        "source_ids": [
+          "S08"
+        ]
+      },
+      {
+        "stage": "triage",
+        "documentary_state": "RMA",
+        "software_support": "STRUCTURE_ONLY",
+        "clinical_validation": "NOT_VALIDATED",
+        "clinical_execution": "BLOCKED",
+        "source_ids": [
+          "S08"
+        ]
+      },
+      {
+        "stage": "intervention_authorized",
+        "documentary_state": "RMA",
+        "software_support": "STRUCTURE_ONLY",
+        "clinical_validation": "NOT_VALIDATED",
+        "clinical_execution": "BLOCKED",
+        "source_ids": [
+          "S08"
+        ]
+      },
+      {
+        "stage": "recovery",
+        "documentary_state": "RV",
+        "software_support": "HUMAN_WORKFLOW_RECORDING",
+        "clinical_validation": "NOT_VALIDATED",
+        "clinical_execution": "BLOCKED",
+        "source_ids": [
+          "S08"
+        ]
+      },
+      {
+        "stage": "follow_up",
+        "documentary_state": "ES",
+        "software_support": "PLAN_DUE_STATUS_AND_REVIEWS",
+        "clinical_validation": "NOT_VALIDATED",
+        "clinical_execution": "BLOCKED",
+        "source_ids": [
+          "S08"
+        ]
+      },
+      {
+        "stage": "prognosis",
+        "documentary_state": "RO",
+        "software_support": "STRUCTURE_ONLY",
+        "clinical_validation": "NOT_VALIDATED",
+        "clinical_execution": "BLOCKED",
+        "source_ids": [
+          "S08"
+        ]
+      }
+    ],
+    "no_prescription": true
+  },
+  {
+    "condition_id": "C022",
+    "name": "Retención urinaria / urología",
+    "profile_as_published": "**P:** revisión de riesgo; **M:** síntomas/volumen vesical; **Q:** ultrasonido si utilizado; **D:** reglas clínicas `NPA`; **A/DD/T/I:** médico; **R/F:** vaciamiento/recurrencia; **G:** no disponible.",
+    "rule_ids": [],
+    "stages": [
+      {
+        "stage": "prevention",
+        "documentary_state": "RV",
+        "software_support": "STRUCTURE_ONLY",
+        "clinical_validation": "NOT_VALIDATED",
+        "clinical_execution": "BLOCKED",
+        "source_ids": [
+          "S03"
+        ]
+      },
+      {
+        "stage": "monitoring",
+        "documentary_state": "RV",
+        "software_support": "NUMERIC_ACQUISITION_INFRASTRUCTURE",
+        "clinical_validation": "NOT_VALIDATED",
+        "clinical_execution": "BLOCKED",
+        "source_ids": [
+          "S03"
+        ]
+      },
+      {
+        "stage": "data_quality",
+        "documentary_state": "ES",
+        "software_support": "CONFIGURED_TECHNICAL_GATES",
+        "clinical_validation": "NOT_VALIDATED",
+        "clinical_execution": "BLOCKED",
+        "source_ids": [
+          "S03"
+        ]
+      },
+      {
+        "stage": "detection",
+        "documentary_state": "NPA",
+        "software_support": "NO_CONDITION_SPECIFIC_DETECTOR",
+        "clinical_validation": "NOT_VALIDATED",
+        "clinical_execution": "BLOCKED",
+        "source_ids": [
+          "S03"
+        ]
+      },
+      {
+        "stage": "assessment",
+        "documentary_state": "RMA",
+        "software_support": "HUMAN_RECORDING",
+        "clinical_validation": "NOT_VALIDATED",
+        "clinical_execution": "BLOCKED",
+        "source_ids": [
+          "S03"
+        ]
+      },
+      {
+        "stage": "differential_diagnosis",
+        "documentary_state": "RMA",
+        "software_support": "STRUCTURE_ONLY",
+        "clinical_validation": "NOT_VALIDATED",
+        "clinical_execution": "BLOCKED",
+        "source_ids": [
+          "S03"
+        ]
+      },
+      {
+        "stage": "triage",
+        "documentary_state": "RMA",
+        "software_support": "STRUCTURE_ONLY",
+        "clinical_validation": "NOT_VALIDATED",
+        "clinical_execution": "BLOCKED",
+        "source_ids": [
+          "S03"
+        ]
+      },
+      {
+        "stage": "intervention_authorized",
+        "documentary_state": "RMA",
+        "software_support": "STRUCTURE_ONLY",
+        "clinical_validation": "NOT_VALIDATED",
+        "clinical_execution": "BLOCKED",
+        "source_ids": [
+          "S03"
+        ]
+      },
+      {
+        "stage": "recovery",
+        "documentary_state": "RV",
+        "software_support": "HUMAN_WORKFLOW_RECORDING",
+        "clinical_validation": "NOT_VALIDATED",
+        "clinical_execution": "BLOCKED",
+        "source_ids": [
+          "S03"
+        ]
+      },
+      {
+        "stage": "follow_up",
+        "documentary_state": "RV",
+        "software_support": "PLAN_DUE_STATUS_AND_REVIEWS",
+        "clinical_validation": "NOT_VALIDATED",
+        "clinical_execution": "BLOCKED",
+        "source_ids": [
+          "S03"
+        ]
+      },
+      {
+        "stage": "prognosis",
+        "documentary_state": "RO",
+        "software_support": "STRUCTURE_ONLY",
+        "clinical_validation": "NOT_VALIDATED",
+        "clinical_execution": "BLOCKED",
+        "source_ids": [
+          "S03"
+        ]
+      }
+    ],
+    "no_prescription": true
+  },
+  {
+    "condition_id": "C023",
+    "name": "Nutrición/energía inadecuadas / nutrición-metabolismo",
+    "profile_as_published": "**P:** menú nutricional seguro/adecuado; **M:** ingesta, masa, paneles; **Q:** completitud de registro; **D:** objetivos de misión; **A/DD:** enfermedad, absorción, preferencias; **T/I:** nutricionista/médico según gravedad; **R/F:** balance longitudinal; **G:** modelos de reservas solo validados.",
+    "rule_ids": [
+      "VIGILE-NUT-001"
+    ],
+    "stages": [
+      {
+        "stage": "prevention",
+        "documentary_state": "ES",
+        "software_support": "STRUCTURE_ONLY",
+        "clinical_validation": "NOT_VALIDATED",
+        "clinical_execution": "BLOCKED",
+        "source_ids": [
+          "S13"
+        ]
+      },
+      {
+        "stage": "monitoring",
+        "documentary_state": "ES",
+        "software_support": "NUMERIC_ACQUISITION_INFRASTRUCTURE",
+        "clinical_validation": "NOT_VALIDATED",
+        "clinical_execution": "BLOCKED",
+        "source_ids": [
+          "S13"
+        ]
+      },
+      {
+        "stage": "data_quality",
+        "documentary_state": "ES",
+        "software_support": "CONFIGURED_TECHNICAL_GATES",
+        "clinical_validation": "NOT_VALIDATED",
+        "clinical_execution": "BLOCKED",
+        "source_ids": [
+          "S13"
+        ]
+      },
+      {
+        "stage": "detection",
+        "documentary_state": "RV",
+        "software_support": "NORMATIVE_SIMULATION",
+        "clinical_validation": "NOT_VALIDATED",
+        "clinical_execution": "BLOCKED",
+        "source_ids": [
+          "S13"
+        ]
+      },
+      {
+        "stage": "assessment",
+        "documentary_state": "RV",
+        "software_support": "HUMAN_RECORDING",
+        "clinical_validation": "NOT_VALIDATED",
+        "clinical_execution": "BLOCKED",
+        "source_ids": [
+          "S13"
+        ]
+      },
+      {
+        "stage": "differential_diagnosis",
+        "documentary_state": "RV",
+        "software_support": "STRUCTURE_ONLY",
+        "clinical_validation": "NOT_VALIDATED",
+        "clinical_execution": "BLOCKED",
+        "source_ids": [
+          "S13"
+        ]
+      },
+      {
+        "stage": "triage",
+        "documentary_state": "RMA",
+        "software_support": "STRUCTURE_ONLY",
+        "clinical_validation": "NOT_VALIDATED",
+        "clinical_execution": "BLOCKED",
+        "source_ids": [
+          "S13"
+        ]
+      },
+      {
+        "stage": "intervention_authorized",
+        "documentary_state": "RMA",
+        "software_support": "STRUCTURE_ONLY",
+        "clinical_validation": "NOT_VALIDATED",
+        "clinical_execution": "BLOCKED",
+        "source_ids": [
+          "S13"
+        ]
+      },
+      {
+        "stage": "recovery",
+        "documentary_state": "RV",
+        "software_support": "HUMAN_WORKFLOW_RECORDING",
+        "clinical_validation": "NOT_VALIDATED",
+        "clinical_execution": "BLOCKED",
+        "source_ids": [
+          "S13"
+        ]
+      },
+      {
+        "stage": "follow_up",
+        "documentary_state": "ES",
+        "software_support": "PLAN_DUE_STATUS_AND_REVIEWS",
+        "clinical_validation": "NOT_VALIDATED",
+        "clinical_execution": "BLOCKED",
+        "source_ids": [
+          "S13"
+        ]
+      },
+      {
+        "stage": "prognosis",
+        "documentary_state": "RO",
+        "software_support": "STRUCTURE_ONLY",
+        "clinical_validation": "NOT_VALIDATED",
+        "clinical_execution": "BLOCKED",
+        "source_ids": [
+          "S13"
+        ]
+      }
+    ],
+    "no_prescription": true
+  },
+  {
+    "condition_id": "C024",
+    "name": "Deshidratación/desequilibrio hidroelectrolítico / nutrición-renal",
+    "profile_as_published": "**P:** plan hídrico; **M:** ingesta/salida, masa, orina; **Q:** sincronizar pérdidas/consumo; **D:** thresholds `NOT_FOUND` salvo protocolo; **A/DD:** GI, renal, EVA; **T/I:** médico; **R/F:** retorno a estado personal; **G:** `RV`.",
+    "rule_ids": [],
+    "stages": [
+      {
+        "stage": "prevention",
+        "documentary_state": "ES",
+        "software_support": "STRUCTURE_ONLY",
+        "clinical_validation": "NOT_VALIDATED",
+        "clinical_execution": "BLOCKED",
+        "source_ids": [
+          "S13",
+          "S02"
+        ]
+      },
+      {
+        "stage": "monitoring",
+        "documentary_state": "RV",
+        "software_support": "NUMERIC_ACQUISITION_INFRASTRUCTURE",
+        "clinical_validation": "NOT_VALIDATED",
+        "clinical_execution": "BLOCKED",
+        "source_ids": [
+          "S13",
+          "S02"
+        ]
+      },
+      {
+        "stage": "data_quality",
+        "documentary_state": "ES",
+        "software_support": "CONFIGURED_TECHNICAL_GATES",
+        "clinical_validation": "NOT_VALIDATED",
+        "clinical_execution": "BLOCKED",
+        "source_ids": [
+          "S13",
+          "S02"
+        ]
+      },
+      {
+        "stage": "detection",
+        "documentary_state": "RV",
+        "software_support": "NO_CONDITION_SPECIFIC_DETECTOR",
+        "clinical_validation": "NOT_VALIDATED",
+        "clinical_execution": "BLOCKED",
+        "source_ids": [
+          "S13",
+          "S02"
+        ]
+      },
+      {
+        "stage": "assessment",
+        "documentary_state": "RV",
+        "software_support": "HUMAN_RECORDING",
+        "clinical_validation": "NOT_VALIDATED",
+        "clinical_execution": "BLOCKED",
+        "source_ids": [
+          "S13",
+          "S02"
+        ]
+      },
+      {
+        "stage": "differential_diagnosis",
+        "documentary_state": "RV",
+        "software_support": "STRUCTURE_ONLY",
+        "clinical_validation": "NOT_VALIDATED",
+        "clinical_execution": "BLOCKED",
+        "source_ids": [
+          "S13",
+          "S02"
+        ]
+      },
+      {
+        "stage": "triage",
+        "documentary_state": "RMA",
+        "software_support": "STRUCTURE_ONLY",
+        "clinical_validation": "NOT_VALIDATED",
+        "clinical_execution": "BLOCKED",
+        "source_ids": [
+          "S13",
+          "S02"
+        ]
+      },
+      {
+        "stage": "intervention_authorized",
+        "documentary_state": "RMA",
+        "software_support": "STRUCTURE_ONLY",
+        "clinical_validation": "NOT_VALIDATED",
+        "clinical_execution": "BLOCKED",
+        "source_ids": [
+          "S13",
+          "S02"
+        ]
+      },
+      {
+        "stage": "recovery",
+        "documentary_state": "RV",
+        "software_support": "HUMAN_WORKFLOW_RECORDING",
+        "clinical_validation": "NOT_VALIDATED",
+        "clinical_execution": "BLOCKED",
+        "source_ids": [
+          "S13",
+          "S02"
+        ]
+      },
+      {
+        "stage": "follow_up",
+        "documentary_state": "RV",
+        "software_support": "PLAN_DUE_STATUS_AND_REVIEWS",
+        "clinical_validation": "NOT_VALIDATED",
+        "clinical_execution": "BLOCKED",
+        "source_ids": [
+          "S13",
+          "S02"
+        ]
+      },
+      {
+        "stage": "prognosis",
+        "documentary_state": "RO",
+        "software_support": "STRUCTURE_ONLY",
+        "clinical_validation": "NOT_VALIDATED",
+        "clinical_execution": "BLOCKED",
+        "source_ids": [
+          "S13",
+          "S02"
+        ]
+      }
+    ],
+    "no_prescription": true
+  },
+  {
+    "condition_id": "C025",
+    "name": "Enfermedad gastrointestinal aguda / gastroenterología",
+    "profile_as_published": "**P:** higiene/food safety; **M:** síntomas/hidratación; **Q:** timing y gravedad; **D:** screening; **A/DD:** infección, adaptación, fármaco, abdomen agudo; **T/I:** médico; **R/F:** tolerancia oral/síntomas; **G:** no autónomo.",
+    "rule_ids": [],
+    "stages": [
+      {
+        "stage": "prevention",
+        "documentary_state": "ES",
+        "software_support": "STRUCTURE_ONLY",
+        "clinical_validation": "NOT_VALIDATED",
+        "clinical_execution": "BLOCKED",
+        "source_ids": [
+          "S17"
+        ]
+      },
+      {
+        "stage": "monitoring",
+        "documentary_state": "ES",
+        "software_support": "NUMERIC_ACQUISITION_INFRASTRUCTURE",
+        "clinical_validation": "NOT_VALIDATED",
+        "clinical_execution": "BLOCKED",
+        "source_ids": [
+          "S17"
+        ]
+      },
+      {
+        "stage": "data_quality",
+        "documentary_state": "ES",
+        "software_support": "CONFIGURED_TECHNICAL_GATES",
+        "clinical_validation": "NOT_VALIDATED",
+        "clinical_execution": "BLOCKED",
+        "source_ids": [
+          "S17"
+        ]
+      },
+      {
+        "stage": "detection",
+        "documentary_state": "RV",
+        "software_support": "NO_CONDITION_SPECIFIC_DETECTOR",
+        "clinical_validation": "NOT_VALIDATED",
+        "clinical_execution": "BLOCKED",
+        "source_ids": [
+          "S17"
+        ]
+      },
+      {
+        "stage": "assessment",
+        "documentary_state": "RMA",
+        "software_support": "HUMAN_RECORDING",
+        "clinical_validation": "NOT_VALIDATED",
+        "clinical_execution": "BLOCKED",
+        "source_ids": [
+          "S17"
+        ]
+      },
+      {
+        "stage": "differential_diagnosis",
+        "documentary_state": "RMA",
+        "software_support": "STRUCTURE_ONLY",
+        "clinical_validation": "NOT_VALIDATED",
+        "clinical_execution": "BLOCKED",
+        "source_ids": [
+          "S17"
+        ]
+      },
+      {
+        "stage": "triage",
+        "documentary_state": "RMA",
+        "software_support": "STRUCTURE_ONLY",
+        "clinical_validation": "NOT_VALIDATED",
+        "clinical_execution": "BLOCKED",
+        "source_ids": [
+          "S17"
+        ]
+      },
+      {
+        "stage": "intervention_authorized",
+        "documentary_state": "RMA",
+        "software_support": "STRUCTURE_ONLY",
+        "clinical_validation": "NOT_VALIDATED",
+        "clinical_execution": "BLOCKED",
+        "source_ids": [
+          "S17"
+        ]
+      },
+      {
+        "stage": "recovery",
+        "documentary_state": "RV",
+        "software_support": "HUMAN_WORKFLOW_RECORDING",
+        "clinical_validation": "NOT_VALIDATED",
+        "clinical_execution": "BLOCKED",
+        "source_ids": [
+          "S17"
+        ]
+      },
+      {
+        "stage": "follow_up",
+        "documentary_state": "RV",
+        "software_support": "PLAN_DUE_STATUS_AND_REVIEWS",
+        "clinical_validation": "NOT_VALIDATED",
+        "clinical_execution": "BLOCKED",
+        "source_ids": [
+          "S17"
+        ]
+      },
+      {
+        "stage": "prognosis",
+        "documentary_state": "RO",
+        "software_support": "STRUCTURE_ONLY",
+        "clinical_validation": "NOT_VALIDATED",
+        "clinical_execution": "BLOCKED",
+        "source_ids": [
+          "S17"
+        ]
+      }
+    ],
+    "no_prescription": true
+  },
+  {
+    "condition_id": "C026",
+    "name": "Hipoxia / respiratorio-ambiental",
+    "profile_as_published": "**P:** control atmósfera/protocolo EVA; **M:** ppO₂/SpO₂/síntomas; **Q:** calibración/contexto presión; **D:** límites ambientales configurados, no umbral clínico inventado; **A/DD:** respiratorio, CO₂, perfusión; **T/I:** protocolo de misión; **R/F:** normalización; **G:** tolerancia individual `RV`.",
+    "rule_ids": [
+      "VIGILE-ENV-001",
+      "VIGILE-ENV-003"
+    ],
+    "stages": [
+      {
+        "stage": "prevention",
+        "documentary_state": "ES",
+        "software_support": "STRUCTURE_ONLY",
+        "clinical_validation": "NOT_VALIDATED",
+        "clinical_execution": "BLOCKED",
+        "source_ids": [
+          "S14",
+          "S02"
+        ]
+      },
+      {
+        "stage": "monitoring",
+        "documentary_state": "ES",
+        "software_support": "NUMERIC_ACQUISITION_INFRASTRUCTURE",
+        "clinical_validation": "NOT_VALIDATED",
+        "clinical_execution": "BLOCKED",
+        "source_ids": [
+          "S14",
+          "S02"
+        ]
+      },
+      {
+        "stage": "data_quality",
+        "documentary_state": "ES",
+        "software_support": "CONFIGURED_TECHNICAL_GATES",
+        "clinical_validation": "NOT_VALIDATED",
+        "clinical_execution": "BLOCKED",
+        "source_ids": [
+          "S14",
+          "S02"
+        ]
+      },
+      {
+        "stage": "detection",
+        "documentary_state": "RV",
+        "software_support": "NORMATIVE_SIMULATION",
+        "clinical_validation": "NOT_VALIDATED",
+        "clinical_execution": "BLOCKED",
+        "source_ids": [
+          "S14",
+          "S02"
+        ]
+      },
+      {
+        "stage": "assessment",
+        "documentary_state": "RV",
+        "software_support": "HUMAN_RECORDING",
+        "clinical_validation": "NOT_VALIDATED",
+        "clinical_execution": "BLOCKED",
+        "source_ids": [
+          "S14",
+          "S02"
+        ]
+      },
+      {
+        "stage": "differential_diagnosis",
+        "documentary_state": "RV",
+        "software_support": "STRUCTURE_ONLY",
+        "clinical_validation": "NOT_VALIDATED",
+        "clinical_execution": "BLOCKED",
+        "source_ids": [
+          "S14",
+          "S02"
+        ]
+      },
+      {
+        "stage": "triage",
+        "documentary_state": "RMA",
+        "software_support": "STRUCTURE_ONLY",
+        "clinical_validation": "NOT_VALIDATED",
+        "clinical_execution": "BLOCKED",
+        "source_ids": [
+          "S14",
+          "S02"
+        ]
+      },
+      {
+        "stage": "intervention_authorized",
+        "documentary_state": "RMA",
+        "software_support": "STRUCTURE_ONLY",
+        "clinical_validation": "NOT_VALIDATED",
+        "clinical_execution": "BLOCKED",
+        "source_ids": [
+          "S14",
+          "S02"
+        ]
+      },
+      {
+        "stage": "recovery",
+        "documentary_state": "RV",
+        "software_support": "HUMAN_WORKFLOW_RECORDING",
+        "clinical_validation": "NOT_VALIDATED",
+        "clinical_execution": "BLOCKED",
+        "source_ids": [
+          "S14",
+          "S02"
+        ]
+      },
+      {
+        "stage": "follow_up",
+        "documentary_state": "RV",
+        "software_support": "PLAN_DUE_STATUS_AND_REVIEWS",
+        "clinical_validation": "NOT_VALIDATED",
+        "clinical_execution": "BLOCKED",
+        "source_ids": [
+          "S14",
+          "S02"
+        ]
+      },
+      {
+        "stage": "prognosis",
+        "documentary_state": "RO",
+        "software_support": "STRUCTURE_ONLY",
+        "clinical_validation": "NOT_VALIDATED",
+        "clinical_execution": "BLOCKED",
+        "source_ids": [
+          "S14",
+          "S02"
+        ]
+      }
+    ],
+    "no_prescription": true
+  },
+  {
+    "condition_id": "C027",
+    "name": "Exposición nominal/crónica a CO₂ / ambiental-respiratorio-neurológico",
+    "profile_as_published": "**P:** ventilación/ECLSS; **M:** ppCO₂ continuo; **Q:** cobertura suficiente de ventana; **D:** promedio temporal 1 h >3 mmHg → `REQUIREMENT_NOT_MET`; **A/DD:** síntomas y fluid shift pueden confundir; **T:** alerta ambiental; **I:** acción de vehículo según autoridad, clínica si sintomático; **R/F:** comprobar descenso; **G:** no diagnosticar hipercapnia clínica solo por ambiente.",
+    "rule_ids": [
+      "VIGILE-ENV-002"
+    ],
+    "stages": [
+      {
+        "stage": "prevention",
+        "documentary_state": "ES",
+        "software_support": "STRUCTURE_ONLY",
+        "clinical_validation": "NOT_VALIDATED",
+        "clinical_execution": "BLOCKED",
+        "source_ids": [
+          "S02"
+        ]
+      },
+      {
+        "stage": "monitoring",
+        "documentary_state": "ES",
+        "software_support": "NUMERIC_ACQUISITION_INFRASTRUCTURE",
+        "clinical_validation": "NOT_VALIDATED",
+        "clinical_execution": "BLOCKED",
+        "source_ids": [
+          "S02"
+        ]
+      },
+      {
+        "stage": "data_quality",
+        "documentary_state": "ES",
+        "software_support": "CONFIGURED_TECHNICAL_GATES",
+        "clinical_validation": "NOT_VALIDATED",
+        "clinical_execution": "BLOCKED",
+        "source_ids": [
+          "S02"
+        ]
+      },
+      {
+        "stage": "detection",
+        "documentary_state": "ES",
+        "software_support": "NORMATIVE_SIMULATION",
+        "clinical_validation": "NOT_VALIDATED",
+        "clinical_execution": "BLOCKED",
+        "source_ids": [
+          "S02"
+        ]
+      },
+      {
+        "stage": "assessment",
+        "documentary_state": "RV",
+        "software_support": "HUMAN_RECORDING",
+        "clinical_validation": "NOT_VALIDATED",
+        "clinical_execution": "BLOCKED",
+        "source_ids": [
+          "S02"
+        ]
+      },
+      {
+        "stage": "differential_diagnosis",
+        "documentary_state": "RV",
+        "software_support": "STRUCTURE_ONLY",
+        "clinical_validation": "NOT_VALIDATED",
+        "clinical_execution": "BLOCKED",
+        "source_ids": [
+          "S02"
+        ]
+      },
+      {
+        "stage": "triage",
+        "documentary_state": "RMA",
+        "software_support": "STRUCTURE_ONLY",
+        "clinical_validation": "NOT_VALIDATED",
+        "clinical_execution": "BLOCKED",
+        "source_ids": [
+          "S02"
+        ]
+      },
+      {
+        "stage": "intervention_authorized",
+        "documentary_state": "RMA",
+        "software_support": "STRUCTURE_ONLY",
+        "clinical_validation": "NOT_VALIDATED",
+        "clinical_execution": "BLOCKED",
+        "source_ids": [
+          "S02"
+        ]
+      },
+      {
+        "stage": "recovery",
+        "documentary_state": "ES",
+        "software_support": "HUMAN_WORKFLOW_RECORDING",
+        "clinical_validation": "NOT_VALIDATED",
+        "clinical_execution": "BLOCKED",
+        "source_ids": [
+          "S02"
+        ]
+      },
+      {
+        "stage": "follow_up",
+        "documentary_state": "ES",
+        "software_support": "PLAN_DUE_STATUS_AND_REVIEWS",
+        "clinical_validation": "NOT_VALIDATED",
+        "clinical_execution": "BLOCKED",
+        "source_ids": [
+          "S02"
+        ]
+      },
+      {
+        "stage": "prognosis",
+        "documentary_state": "RO",
+        "software_support": "STRUCTURE_ONLY",
+        "clinical_validation": "NOT_VALIDATED",
+        "clinical_execution": "BLOCKED",
+        "source_ids": [
+          "S02"
+        ]
+      }
+    ],
+    "no_prescription": true
+  },
+  {
+    "condition_id": "C028",
+    "name": "Exposición a sustancias tóxicas / toxicología",
+    "profile_as_published": "**P:** materiales/monitorización/contención; **M:** detector específico; **Q:** compuesto/calibración; **D:** límite específico de misión; **A/DD:** inhalación/dermal/ocular; **T:** emergencia; **I:** scrubber/PPE y medicina solo por protocolo; **R/F:** vigilancia; **G:** toxicante-específico.",
+    "rule_ids": [],
+    "stages": [
+      {
+        "stage": "prevention",
+        "documentary_state": "ES",
+        "software_support": "STRUCTURE_ONLY",
+        "clinical_validation": "NOT_VALIDATED",
+        "clinical_execution": "BLOCKED",
+        "source_ids": [
+          "S37"
+        ]
+      },
+      {
+        "stage": "monitoring",
+        "documentary_state": "ES",
+        "software_support": "NUMERIC_ACQUISITION_INFRASTRUCTURE",
+        "clinical_validation": "NOT_VALIDATED",
+        "clinical_execution": "BLOCKED",
+        "source_ids": [
+          "S37"
+        ]
+      },
+      {
+        "stage": "data_quality",
+        "documentary_state": "ES",
+        "software_support": "CONFIGURED_TECHNICAL_GATES",
+        "clinical_validation": "NOT_VALIDATED",
+        "clinical_execution": "BLOCKED",
+        "source_ids": [
+          "S37"
+        ]
+      },
+      {
+        "stage": "detection",
+        "documentary_state": "RV",
+        "software_support": "NO_CONDITION_SPECIFIC_DETECTOR",
+        "clinical_validation": "NOT_VALIDATED",
+        "clinical_execution": "BLOCKED",
+        "source_ids": [
+          "S37"
+        ]
+      },
+      {
+        "stage": "assessment",
+        "documentary_state": "RMA",
+        "software_support": "HUMAN_RECORDING",
+        "clinical_validation": "NOT_VALIDATED",
+        "clinical_execution": "BLOCKED",
+        "source_ids": [
+          "S37"
+        ]
+      },
+      {
+        "stage": "differential_diagnosis",
+        "documentary_state": "RMA",
+        "software_support": "STRUCTURE_ONLY",
+        "clinical_validation": "NOT_VALIDATED",
+        "clinical_execution": "BLOCKED",
+        "source_ids": [
+          "S37"
+        ]
+      },
+      {
+        "stage": "triage",
+        "documentary_state": "RMA",
+        "software_support": "STRUCTURE_ONLY",
+        "clinical_validation": "NOT_VALIDATED",
+        "clinical_execution": "BLOCKED",
+        "source_ids": [
+          "S37"
+        ]
+      },
+      {
+        "stage": "intervention_authorized",
+        "documentary_state": "RMA",
+        "software_support": "STRUCTURE_ONLY",
+        "clinical_validation": "NOT_VALIDATED",
+        "clinical_execution": "BLOCKED",
+        "source_ids": [
+          "S37"
+        ]
+      },
+      {
+        "stage": "recovery",
+        "documentary_state": "RV",
+        "software_support": "HUMAN_WORKFLOW_RECORDING",
+        "clinical_validation": "NOT_VALIDATED",
+        "clinical_execution": "BLOCKED",
+        "source_ids": [
+          "S37"
+        ]
+      },
+      {
+        "stage": "follow_up",
+        "documentary_state": "RV",
+        "software_support": "PLAN_DUE_STATUS_AND_REVIEWS",
+        "clinical_validation": "NOT_VALIDATED",
+        "clinical_execution": "BLOCKED",
+        "source_ids": [
+          "S37"
+        ]
+      },
+      {
+        "stage": "prognosis",
+        "documentary_state": "RO",
+        "software_support": "STRUCTURE_ONLY",
+        "clinical_validation": "NOT_VALIDATED",
+        "clinical_execution": "BLOCKED",
+        "source_ids": [
+          "S37"
+        ]
+      }
+    ],
+    "no_prescription": true
+  },
+  {
+    "condition_id": "C029",
+    "name": "Exposición a polvo celestial/lunar / ocupacional-respiratorio",
+    "profile_as_published": "**P:** exclusión/mitigación de polvo; **M:** partículas/exposición; **Q:** sensor/ubicación; **D:** regla mission-specific; **A/DD:** irritación, toxicidad, infección; **T/I:** misión; **R/F:** síntomas/exposición acumulada; **G:** `RV`.",
+    "rule_ids": [],
+    "stages": [
+      {
+        "stage": "prevention",
+        "documentary_state": "ES",
+        "software_support": "STRUCTURE_ONLY",
+        "clinical_validation": "NOT_VALIDATED",
+        "clinical_execution": "BLOCKED",
+        "source_ids": [
+          "S03",
+          "S37"
+        ]
+      },
+      {
+        "stage": "monitoring",
+        "documentary_state": "RV",
+        "software_support": "NUMERIC_ACQUISITION_INFRASTRUCTURE",
+        "clinical_validation": "NOT_VALIDATED",
+        "clinical_execution": "BLOCKED",
+        "source_ids": [
+          "S03",
+          "S37"
+        ]
+      },
+      {
+        "stage": "data_quality",
+        "documentary_state": "ES",
+        "software_support": "CONFIGURED_TECHNICAL_GATES",
+        "clinical_validation": "NOT_VALIDATED",
+        "clinical_execution": "BLOCKED",
+        "source_ids": [
+          "S03",
+          "S37"
+        ]
+      },
+      {
+        "stage": "detection",
+        "documentary_state": "RV",
+        "software_support": "NO_CONDITION_SPECIFIC_DETECTOR",
+        "clinical_validation": "NOT_VALIDATED",
+        "clinical_execution": "BLOCKED",
+        "source_ids": [
+          "S03",
+          "S37"
+        ]
+      },
+      {
+        "stage": "assessment",
+        "documentary_state": "RV",
+        "software_support": "HUMAN_RECORDING",
+        "clinical_validation": "NOT_VALIDATED",
+        "clinical_execution": "BLOCKED",
+        "source_ids": [
+          "S03",
+          "S37"
+        ]
+      },
+      {
+        "stage": "differential_diagnosis",
+        "documentary_state": "RV",
+        "software_support": "STRUCTURE_ONLY",
+        "clinical_validation": "NOT_VALIDATED",
+        "clinical_execution": "BLOCKED",
+        "source_ids": [
+          "S03",
+          "S37"
+        ]
+      },
+      {
+        "stage": "triage",
+        "documentary_state": "RMA",
+        "software_support": "STRUCTURE_ONLY",
+        "clinical_validation": "NOT_VALIDATED",
+        "clinical_execution": "BLOCKED",
+        "source_ids": [
+          "S03",
+          "S37"
+        ]
+      },
+      {
+        "stage": "intervention_authorized",
+        "documentary_state": "RMA",
+        "software_support": "STRUCTURE_ONLY",
+        "clinical_validation": "NOT_VALIDATED",
+        "clinical_execution": "BLOCKED",
+        "source_ids": [
+          "S03",
+          "S37"
+        ]
+      },
+      {
+        "stage": "recovery",
+        "documentary_state": "RV",
+        "software_support": "HUMAN_WORKFLOW_RECORDING",
+        "clinical_validation": "NOT_VALIDATED",
+        "clinical_execution": "BLOCKED",
+        "source_ids": [
+          "S03",
+          "S37"
+        ]
+      },
+      {
+        "stage": "follow_up",
+        "documentary_state": "RV",
+        "software_support": "PLAN_DUE_STATUS_AND_REVIEWS",
+        "clinical_validation": "NOT_VALIDATED",
+        "clinical_execution": "BLOCKED",
+        "source_ids": [
+          "S03",
+          "S37"
+        ]
+      },
+      {
+        "stage": "prognosis",
+        "documentary_state": "RO",
+        "software_support": "STRUCTURE_ONLY",
+        "clinical_validation": "NOT_VALIDATED",
+        "clinical_execution": "BLOCKED",
+        "source_ids": [
+          "S03",
+          "S37"
+        ]
+      }
+    ],
+    "no_prescription": true
+  },
+  {
+    "condition_id": "C030",
+    "name": "Enfermedad por descompresión / aeroespacial",
+    "profile_as_published": "**P:** prebreathe/atmósfera/suit autorizado; **M:** perfil presión + síntomas; **Q:** cronología de presión; **D:** DCS sospechada requiere evaluación; **A/DD:** trauma, hipoxia, barotrauma; **T:** finalizar EVA de forma segura según protocolo; **I:** misión/médico; **R/F:** vigilancia postevento; **G:** gravedad parcial incierta.",
+    "rule_ids": [
+      "VIGILE-ENV-003"
+    ],
+    "stages": [
+      {
+        "stage": "prevention",
+        "documentary_state": "ES",
+        "software_support": "STRUCTURE_ONLY",
+        "clinical_validation": "NOT_VALIDATED",
+        "clinical_execution": "BLOCKED",
+        "source_ids": [
+          "S36"
+        ]
+      },
+      {
+        "stage": "monitoring",
+        "documentary_state": "ES",
+        "software_support": "NUMERIC_ACQUISITION_INFRASTRUCTURE",
+        "clinical_validation": "NOT_VALIDATED",
+        "clinical_execution": "BLOCKED",
+        "source_ids": [
+          "S36"
+        ]
+      },
+      {
+        "stage": "data_quality",
+        "documentary_state": "ES",
+        "software_support": "CONFIGURED_TECHNICAL_GATES",
+        "clinical_validation": "NOT_VALIDATED",
+        "clinical_execution": "BLOCKED",
+        "source_ids": [
+          "S36"
+        ]
+      },
+      {
+        "stage": "detection",
+        "documentary_state": "RV",
+        "software_support": "NORMATIVE_SIMULATION",
+        "clinical_validation": "NOT_VALIDATED",
+        "clinical_execution": "BLOCKED",
+        "source_ids": [
+          "S36"
+        ]
+      },
+      {
+        "stage": "assessment",
+        "documentary_state": "RMA",
+        "software_support": "HUMAN_RECORDING",
+        "clinical_validation": "NOT_VALIDATED",
+        "clinical_execution": "BLOCKED",
+        "source_ids": [
+          "S36"
+        ]
+      },
+      {
+        "stage": "differential_diagnosis",
+        "documentary_state": "RMA",
+        "software_support": "STRUCTURE_ONLY",
+        "clinical_validation": "NOT_VALIDATED",
+        "clinical_execution": "BLOCKED",
+        "source_ids": [
+          "S36"
+        ]
+      },
+      {
+        "stage": "triage",
+        "documentary_state": "RMA",
+        "software_support": "STRUCTURE_ONLY",
+        "clinical_validation": "NOT_VALIDATED",
+        "clinical_execution": "BLOCKED",
+        "source_ids": [
+          "S36"
+        ]
+      },
+      {
+        "stage": "intervention_authorized",
+        "documentary_state": "RMA",
+        "software_support": "STRUCTURE_ONLY",
+        "clinical_validation": "NOT_VALIDATED",
+        "clinical_execution": "BLOCKED",
+        "source_ids": [
+          "S36"
+        ]
+      },
+      {
+        "stage": "recovery",
+        "documentary_state": "RV",
+        "software_support": "HUMAN_WORKFLOW_RECORDING",
+        "clinical_validation": "NOT_VALIDATED",
+        "clinical_execution": "BLOCKED",
+        "source_ids": [
+          "S36"
+        ]
+      },
+      {
+        "stage": "follow_up",
+        "documentary_state": "RV",
+        "software_support": "PLAN_DUE_STATUS_AND_REVIEWS",
+        "clinical_validation": "NOT_VALIDATED",
+        "clinical_execution": "BLOCKED",
+        "source_ids": [
+          "S36"
+        ]
+      },
+      {
+        "stage": "prognosis",
+        "documentary_state": "RO",
+        "software_support": "STRUCTURE_ONLY",
+        "clinical_validation": "NOT_VALIDATED",
+        "clinical_execution": "BLOCKED",
+        "source_ids": [
+          "S36"
+        ]
+      }
+    ],
+    "no_prescription": true
+  },
+  {
+    "condition_id": "C031",
+    "name": "Barotrauma/ear-sinus block / ORL",
+    "profile_as_published": "**P:** perfiles de presión; **M:** síntomas+presión; **Q:** cronología; **D:** screening; **A/DD:** DCS/ORL; **T/I:** médico; **R/F:** resolución; **G:** `NPA`.",
+    "rule_ids": [
+      "VIGILE-ENV-004"
+    ],
+    "stages": [
+      {
+        "stage": "prevention",
+        "documentary_state": "ES",
+        "software_support": "STRUCTURE_ONLY",
+        "clinical_validation": "NOT_VALIDATED",
+        "clinical_execution": "BLOCKED",
+        "source_ids": [
+          "S17"
+        ]
+      },
+      {
+        "stage": "monitoring",
+        "documentary_state": "RV",
+        "software_support": "NUMERIC_ACQUISITION_INFRASTRUCTURE",
+        "clinical_validation": "NOT_VALIDATED",
+        "clinical_execution": "BLOCKED",
+        "source_ids": [
+          "S17"
+        ]
+      },
+      {
+        "stage": "data_quality",
+        "documentary_state": "ES",
+        "software_support": "CONFIGURED_TECHNICAL_GATES",
+        "clinical_validation": "NOT_VALIDATED",
+        "clinical_execution": "BLOCKED",
+        "source_ids": [
+          "S17"
+        ]
+      },
+      {
+        "stage": "detection",
+        "documentary_state": "RV",
+        "software_support": "NORMATIVE_SIMULATION",
+        "clinical_validation": "NOT_VALIDATED",
+        "clinical_execution": "BLOCKED",
+        "source_ids": [
+          "S17"
+        ]
+      },
+      {
+        "stage": "assessment",
+        "documentary_state": "RMA",
+        "software_support": "HUMAN_RECORDING",
+        "clinical_validation": "NOT_VALIDATED",
+        "clinical_execution": "BLOCKED",
+        "source_ids": [
+          "S17"
+        ]
+      },
+      {
+        "stage": "differential_diagnosis",
+        "documentary_state": "RMA",
+        "software_support": "STRUCTURE_ONLY",
+        "clinical_validation": "NOT_VALIDATED",
+        "clinical_execution": "BLOCKED",
+        "source_ids": [
+          "S17"
+        ]
+      },
+      {
+        "stage": "triage",
+        "documentary_state": "RMA",
+        "software_support": "STRUCTURE_ONLY",
+        "clinical_validation": "NOT_VALIDATED",
+        "clinical_execution": "BLOCKED",
+        "source_ids": [
+          "S17"
+        ]
+      },
+      {
+        "stage": "intervention_authorized",
+        "documentary_state": "RMA",
+        "software_support": "STRUCTURE_ONLY",
+        "clinical_validation": "NOT_VALIDATED",
+        "clinical_execution": "BLOCKED",
+        "source_ids": [
+          "S17"
+        ]
+      },
+      {
+        "stage": "recovery",
+        "documentary_state": "RV",
+        "software_support": "HUMAN_WORKFLOW_RECORDING",
+        "clinical_validation": "NOT_VALIDATED",
+        "clinical_execution": "BLOCKED",
+        "source_ids": [
+          "S17"
+        ]
+      },
+      {
+        "stage": "follow_up",
+        "documentary_state": "RV",
+        "software_support": "PLAN_DUE_STATUS_AND_REVIEWS",
+        "clinical_validation": "NOT_VALIDATED",
+        "clinical_execution": "BLOCKED",
+        "source_ids": [
+          "S17"
+        ]
+      },
+      {
+        "stage": "prognosis",
+        "documentary_state": "NPA",
+        "software_support": "STRUCTURE_ONLY",
+        "clinical_validation": "NOT_VALIDATED",
+        "clinical_execution": "BLOCKED",
+        "source_ids": [
+          "S17"
+        ]
+      }
+    ],
+    "no_prescription": true
+  },
+  {
+    "condition_id": "C032",
+    "name": "Exposición acumulada a radiación ionizante/carcinogénesis / radiobiología",
+    "profile_as_published": "**P:** ALARA y shielding; **M:** dosimetría; **Q:** tipo de dosis/unidad/órgano; **D:** acumulación vs límites; **A:** exposición, no cáncer; **DD:** N/A para cumplimiento; **T:** evento radiológico separado; **I:** reducción de exposición según misión; **R/F:** vigilancia de carrera; **G:** modelos de riesgo independientes.",
+    "rule_ids": [
+      "VIGILE-RAD-001",
+      "VIGILE-RAD-002",
+      "VIGILE-RAD-003",
+      "VIGILE-RAD-004"
+    ],
+    "stages": [
+      {
+        "stage": "prevention",
+        "documentary_state": "ES",
+        "software_support": "STRUCTURE_ONLY",
+        "clinical_validation": "NOT_VALIDATED",
+        "clinical_execution": "BLOCKED",
+        "source_ids": [
+          "S01",
+          "S16"
+        ]
+      },
+      {
+        "stage": "monitoring",
+        "documentary_state": "ES",
+        "software_support": "NUMERIC_ACQUISITION_INFRASTRUCTURE",
+        "clinical_validation": "NOT_VALIDATED",
+        "clinical_execution": "BLOCKED",
+        "source_ids": [
+          "S01",
+          "S16"
+        ]
+      },
+      {
+        "stage": "data_quality",
+        "documentary_state": "ES",
+        "software_support": "CONFIGURED_TECHNICAL_GATES",
+        "clinical_validation": "NOT_VALIDATED",
+        "clinical_execution": "BLOCKED",
+        "source_ids": [
+          "S01",
+          "S16"
+        ]
+      },
+      {
+        "stage": "detection",
+        "documentary_state": "ES",
+        "software_support": "NORMATIVE_SIMULATION",
+        "clinical_validation": "NOT_VALIDATED",
+        "clinical_execution": "BLOCKED",
+        "source_ids": [
+          "S01",
+          "S16"
+        ]
+      },
+      {
+        "stage": "assessment",
+        "documentary_state": "RV",
+        "software_support": "HUMAN_RECORDING",
+        "clinical_validation": "NOT_VALIDATED",
+        "clinical_execution": "BLOCKED",
+        "source_ids": [
+          "S01",
+          "S16"
+        ]
+      },
+      {
+        "stage": "differential_diagnosis",
+        "documentary_state": "NA",
+        "software_support": "STRUCTURE_ONLY",
+        "clinical_validation": "NOT_VALIDATED",
+        "clinical_execution": "BLOCKED",
+        "source_ids": [
+          "S01",
+          "S16"
+        ]
+      },
+      {
+        "stage": "triage",
+        "documentary_state": "RMA",
+        "software_support": "STRUCTURE_ONLY",
+        "clinical_validation": "NOT_VALIDATED",
+        "clinical_execution": "BLOCKED",
+        "source_ids": [
+          "S01",
+          "S16"
+        ]
+      },
+      {
+        "stage": "intervention_authorized",
+        "documentary_state": "RMA",
+        "software_support": "STRUCTURE_ONLY",
+        "clinical_validation": "NOT_VALIDATED",
+        "clinical_execution": "BLOCKED",
+        "source_ids": [
+          "S01",
+          "S16"
+        ]
+      },
+      {
+        "stage": "recovery",
+        "documentary_state": "NA",
+        "software_support": "HUMAN_WORKFLOW_RECORDING",
+        "clinical_validation": "NOT_VALIDATED",
+        "clinical_execution": "BLOCKED",
+        "source_ids": [
+          "S01",
+          "S16"
+        ]
+      },
+      {
+        "stage": "follow_up",
+        "documentary_state": "ES",
+        "software_support": "PLAN_DUE_STATUS_AND_REVIEWS",
+        "clinical_validation": "NOT_VALIDATED",
+        "clinical_execution": "BLOCKED",
+        "source_ids": [
+          "S01",
+          "S16"
+        ]
+      },
+      {
+        "stage": "prognosis",
+        "documentary_state": "RV",
+        "software_support": "STRUCTURE_ONLY",
+        "clinical_validation": "NOT_VALIDATED",
+        "clinical_execution": "BLOCKED",
+        "source_ids": [
+          "S01",
+          "S16"
+        ]
+      }
+    ],
+    "no_prescription": true
+  },
+  {
+    "condition_id": "C033",
+    "name": "Síndrome/efectos agudos de radiación / emergencias-radiobiología",
+    "profile_as_published": "**P:** monitoring/SPE shelter; **M:** dosis + clínica; **Q:** dosimetría compatible; **D:** thresholds ARS no consolidados aquí; **A/DD/T/I:** protocolo médico; **R/F:** hematología/órganos; **G:** blocked.",
+    "rule_ids": [],
+    "stages": [
+      {
+        "stage": "prevention",
+        "documentary_state": "ES",
+        "software_support": "STRUCTURE_ONLY",
+        "clinical_validation": "NOT_VALIDATED",
+        "clinical_execution": "BLOCKED",
+        "source_ids": [
+          "S01",
+          "S17"
+        ]
+      },
+      {
+        "stage": "monitoring",
+        "documentary_state": "ES",
+        "software_support": "NUMERIC_ACQUISITION_INFRASTRUCTURE",
+        "clinical_validation": "NOT_VALIDATED",
+        "clinical_execution": "BLOCKED",
+        "source_ids": [
+          "S01",
+          "S17"
+        ]
+      },
+      {
+        "stage": "data_quality",
+        "documentary_state": "ES",
+        "software_support": "CONFIGURED_TECHNICAL_GATES",
+        "clinical_validation": "NOT_VALIDATED",
+        "clinical_execution": "BLOCKED",
+        "source_ids": [
+          "S01",
+          "S17"
+        ]
+      },
+      {
+        "stage": "detection",
+        "documentary_state": "RV",
+        "software_support": "NO_CONDITION_SPECIFIC_DETECTOR",
+        "clinical_validation": "NOT_VALIDATED",
+        "clinical_execution": "BLOCKED",
+        "source_ids": [
+          "S01",
+          "S17"
+        ]
+      },
+      {
+        "stage": "assessment",
+        "documentary_state": "RMA",
+        "software_support": "HUMAN_RECORDING",
+        "clinical_validation": "NOT_VALIDATED",
+        "clinical_execution": "BLOCKED",
+        "source_ids": [
+          "S01",
+          "S17"
+        ]
+      },
+      {
+        "stage": "differential_diagnosis",
+        "documentary_state": "RMA",
+        "software_support": "STRUCTURE_ONLY",
+        "clinical_validation": "NOT_VALIDATED",
+        "clinical_execution": "BLOCKED",
+        "source_ids": [
+          "S01",
+          "S17"
+        ]
+      },
+      {
+        "stage": "triage",
+        "documentary_state": "RMA",
+        "software_support": "STRUCTURE_ONLY",
+        "clinical_validation": "NOT_VALIDATED",
+        "clinical_execution": "BLOCKED",
+        "source_ids": [
+          "S01",
+          "S17"
+        ]
+      },
+      {
+        "stage": "intervention_authorized",
+        "documentary_state": "RMA",
+        "software_support": "STRUCTURE_ONLY",
+        "clinical_validation": "NOT_VALIDATED",
+        "clinical_execution": "BLOCKED",
+        "source_ids": [
+          "S01",
+          "S17"
+        ]
+      },
+      {
+        "stage": "recovery",
+        "documentary_state": "RV",
+        "software_support": "HUMAN_WORKFLOW_RECORDING",
+        "clinical_validation": "NOT_VALIDATED",
+        "clinical_execution": "BLOCKED",
+        "source_ids": [
+          "S01",
+          "S17"
+        ]
+      },
+      {
+        "stage": "follow_up",
+        "documentary_state": "RV",
+        "software_support": "PLAN_DUE_STATUS_AND_REVIEWS",
+        "clinical_validation": "NOT_VALIDATED",
+        "clinical_execution": "BLOCKED",
+        "source_ids": [
+          "S01",
+          "S17"
+        ]
+      },
+      {
+        "stage": "prognosis",
+        "documentary_state": "RO",
+        "software_support": "STRUCTURE_ONLY",
+        "clinical_validation": "NOT_VALIDATED",
+        "clinical_execution": "BLOCKED",
+        "source_ids": [
+          "S01",
+          "S17"
+        ]
+      }
+    ],
+    "no_prescription": true
+  },
+  {
+    "condition_id": "C034",
+    "name": "Radiación no ionizante / ambiental",
+    "profile_as_published": "**P:** control de fuentes; **M:** exposición; **Q:** frecuencia/espectro; **D:** límites específicos no consolidados; **A/DD/T/I:** misión/médico; **R/F:** exposición; **G:** `RV`.",
+    "rule_ids": [],
+    "stages": [
+      {
+        "stage": "prevention",
+        "documentary_state": "ES",
+        "software_support": "STRUCTURE_ONLY",
+        "clinical_validation": "NOT_VALIDATED",
+        "clinical_execution": "BLOCKED",
+        "source_ids": [
+          "S03"
+        ]
+      },
+      {
+        "stage": "monitoring",
+        "documentary_state": "RV",
+        "software_support": "NUMERIC_ACQUISITION_INFRASTRUCTURE",
+        "clinical_validation": "NOT_VALIDATED",
+        "clinical_execution": "BLOCKED",
+        "source_ids": [
+          "S03"
+        ]
+      },
+      {
+        "stage": "data_quality",
+        "documentary_state": "ES",
+        "software_support": "CONFIGURED_TECHNICAL_GATES",
+        "clinical_validation": "NOT_VALIDATED",
+        "clinical_execution": "BLOCKED",
+        "source_ids": [
+          "S03"
+        ]
+      },
+      {
+        "stage": "detection",
+        "documentary_state": "RV",
+        "software_support": "NO_CONDITION_SPECIFIC_DETECTOR",
+        "clinical_validation": "NOT_VALIDATED",
+        "clinical_execution": "BLOCKED",
+        "source_ids": [
+          "S03"
+        ]
+      },
+      {
+        "stage": "assessment",
+        "documentary_state": "RV",
+        "software_support": "HUMAN_RECORDING",
+        "clinical_validation": "NOT_VALIDATED",
+        "clinical_execution": "BLOCKED",
+        "source_ids": [
+          "S03"
+        ]
+      },
+      {
+        "stage": "differential_diagnosis",
+        "documentary_state": "RV",
+        "software_support": "STRUCTURE_ONLY",
+        "clinical_validation": "NOT_VALIDATED",
+        "clinical_execution": "BLOCKED",
+        "source_ids": [
+          "S03"
+        ]
+      },
+      {
+        "stage": "triage",
+        "documentary_state": "RMA",
+        "software_support": "STRUCTURE_ONLY",
+        "clinical_validation": "NOT_VALIDATED",
+        "clinical_execution": "BLOCKED",
+        "source_ids": [
+          "S03"
+        ]
+      },
+      {
+        "stage": "intervention_authorized",
+        "documentary_state": "RMA",
+        "software_support": "STRUCTURE_ONLY",
+        "clinical_validation": "NOT_VALIDATED",
+        "clinical_execution": "BLOCKED",
+        "source_ids": [
+          "S03"
+        ]
+      },
+      {
+        "stage": "recovery",
+        "documentary_state": "RV",
+        "software_support": "HUMAN_WORKFLOW_RECORDING",
+        "clinical_validation": "NOT_VALIDATED",
+        "clinical_execution": "BLOCKED",
+        "source_ids": [
+          "S03"
+        ]
+      },
+      {
+        "stage": "follow_up",
+        "documentary_state": "RV",
+        "software_support": "PLAN_DUE_STATUS_AND_REVIEWS",
+        "clinical_validation": "NOT_VALIDATED",
+        "clinical_execution": "BLOCKED",
+        "source_ids": [
+          "S03"
+        ]
+      },
+      {
+        "stage": "prognosis",
+        "documentary_state": "RO",
+        "software_support": "STRUCTURE_ONLY",
+        "clinical_validation": "NOT_VALIDATED",
+        "clinical_execution": "BLOCKED",
+        "source_ids": [
+          "S03"
+        ]
+      }
+    ],
+    "no_prescription": true
+  },
+  {
+    "condition_id": "C035",
+    "name": "Pérdida auditiva/exposición acústica / audiología",
+    "profile_as_published": "**P:** diseño acústico; **M:** SPL/dosis+audiometría; **Q:** calibración/frecuencia/duración; **D:** incumplimiento ambiental separado de pérdida auditiva; **A/DD:** audiología; **T/I:** misión/médico; **R/F:** hearing surveillance; **G:** daño individual no deducible únicamente de SPL.",
+    "rule_ids": [],
+    "stages": [
+      {
+        "stage": "prevention",
+        "documentary_state": "ES",
+        "software_support": "STRUCTURE_ONLY",
+        "clinical_validation": "NOT_VALIDATED",
+        "clinical_execution": "BLOCKED",
+        "source_ids": [
+          "S38",
+          "S02"
+        ]
+      },
+      {
+        "stage": "monitoring",
+        "documentary_state": "ES",
+        "software_support": "NUMERIC_ACQUISITION_INFRASTRUCTURE",
+        "clinical_validation": "NOT_VALIDATED",
+        "clinical_execution": "BLOCKED",
+        "source_ids": [
+          "S38",
+          "S02"
+        ]
+      },
+      {
+        "stage": "data_quality",
+        "documentary_state": "ES",
+        "software_support": "CONFIGURED_TECHNICAL_GATES",
+        "clinical_validation": "NOT_VALIDATED",
+        "clinical_execution": "BLOCKED",
+        "source_ids": [
+          "S38",
+          "S02"
+        ]
+      },
+      {
+        "stage": "detection",
+        "documentary_state": "ES",
+        "software_support": "NO_CONDITION_SPECIFIC_DETECTOR",
+        "clinical_validation": "NOT_VALIDATED",
+        "clinical_execution": "BLOCKED",
+        "source_ids": [
+          "S38",
+          "S02"
+        ]
+      },
+      {
+        "stage": "assessment",
+        "documentary_state": "RV",
+        "software_support": "HUMAN_RECORDING",
+        "clinical_validation": "NOT_VALIDATED",
+        "clinical_execution": "BLOCKED",
+        "source_ids": [
+          "S38",
+          "S02"
+        ]
+      },
+      {
+        "stage": "differential_diagnosis",
+        "documentary_state": "RV",
+        "software_support": "STRUCTURE_ONLY",
+        "clinical_validation": "NOT_VALIDATED",
+        "clinical_execution": "BLOCKED",
+        "source_ids": [
+          "S38",
+          "S02"
+        ]
+      },
+      {
+        "stage": "triage",
+        "documentary_state": "RMA",
+        "software_support": "STRUCTURE_ONLY",
+        "clinical_validation": "NOT_VALIDATED",
+        "clinical_execution": "BLOCKED",
+        "source_ids": [
+          "S38",
+          "S02"
+        ]
+      },
+      {
+        "stage": "intervention_authorized",
+        "documentary_state": "RMA",
+        "software_support": "STRUCTURE_ONLY",
+        "clinical_validation": "NOT_VALIDATED",
+        "clinical_execution": "BLOCKED",
+        "source_ids": [
+          "S38",
+          "S02"
+        ]
+      },
+      {
+        "stage": "recovery",
+        "documentary_state": "RV",
+        "software_support": "HUMAN_WORKFLOW_RECORDING",
+        "clinical_validation": "NOT_VALIDATED",
+        "clinical_execution": "BLOCKED",
+        "source_ids": [
+          "S38",
+          "S02"
+        ]
+      },
+      {
+        "stage": "follow_up",
+        "documentary_state": "ES",
+        "software_support": "PLAN_DUE_STATUS_AND_REVIEWS",
+        "clinical_validation": "NOT_VALIDATED",
+        "clinical_execution": "BLOCKED",
+        "source_ids": [
+          "S38",
+          "S02"
+        ]
+      },
+      {
+        "stage": "prognosis",
+        "documentary_state": "RV",
+        "software_support": "STRUCTURE_ONLY",
+        "clinical_validation": "NOT_VALIDATED",
+        "clinical_execution": "BLOCKED",
+        "source_ids": [
+          "S38",
+          "S02"
+        ]
+      }
+    ],
+    "no_prescription": true
+  },
+  {
+    "condition_id": "C036",
+    "name": "Lesión por cargas dinámicas / trauma",
+    "profile_as_published": "**P:** diseño/restricción de cargas; **M:** aceleración/evento; **Q:** sensor y orientación; **D:** evento sobre límites → ingeniería + evaluación, no diagnóstico; **A/DD/T/I:** trauma protocol; **R/F:** función; **G:** no autónomo.",
+    "rule_ids": [],
+    "stages": [
+      {
+        "stage": "prevention",
+        "documentary_state": "ES",
+        "software_support": "STRUCTURE_ONLY",
+        "clinical_validation": "NOT_VALIDATED",
+        "clinical_execution": "BLOCKED",
+        "source_ids": [
+          "S03"
+        ]
+      },
+      {
+        "stage": "monitoring",
+        "documentary_state": "ES",
+        "software_support": "NUMERIC_ACQUISITION_INFRASTRUCTURE",
+        "clinical_validation": "NOT_VALIDATED",
+        "clinical_execution": "BLOCKED",
+        "source_ids": [
+          "S03"
+        ]
+      },
+      {
+        "stage": "data_quality",
+        "documentary_state": "ES",
+        "software_support": "CONFIGURED_TECHNICAL_GATES",
+        "clinical_validation": "NOT_VALIDATED",
+        "clinical_execution": "BLOCKED",
+        "source_ids": [
+          "S03"
+        ]
+      },
+      {
+        "stage": "detection",
+        "documentary_state": "RV",
+        "software_support": "NO_CONDITION_SPECIFIC_DETECTOR",
+        "clinical_validation": "NOT_VALIDATED",
+        "clinical_execution": "BLOCKED",
+        "source_ids": [
+          "S03"
+        ]
+      },
+      {
+        "stage": "assessment",
+        "documentary_state": "RMA",
+        "software_support": "HUMAN_RECORDING",
+        "clinical_validation": "NOT_VALIDATED",
+        "clinical_execution": "BLOCKED",
+        "source_ids": [
+          "S03"
+        ]
+      },
+      {
+        "stage": "differential_diagnosis",
+        "documentary_state": "RMA",
+        "software_support": "STRUCTURE_ONLY",
+        "clinical_validation": "NOT_VALIDATED",
+        "clinical_execution": "BLOCKED",
+        "source_ids": [
+          "S03"
+        ]
+      },
+      {
+        "stage": "triage",
+        "documentary_state": "RMA",
+        "software_support": "STRUCTURE_ONLY",
+        "clinical_validation": "NOT_VALIDATED",
+        "clinical_execution": "BLOCKED",
+        "source_ids": [
+          "S03"
+        ]
+      },
+      {
+        "stage": "intervention_authorized",
+        "documentary_state": "RMA",
+        "software_support": "STRUCTURE_ONLY",
+        "clinical_validation": "NOT_VALIDATED",
+        "clinical_execution": "BLOCKED",
+        "source_ids": [
+          "S03"
+        ]
+      },
+      {
+        "stage": "recovery",
+        "documentary_state": "RV",
+        "software_support": "HUMAN_WORKFLOW_RECORDING",
+        "clinical_validation": "NOT_VALIDATED",
+        "clinical_execution": "BLOCKED",
+        "source_ids": [
+          "S03"
+        ]
+      },
+      {
+        "stage": "follow_up",
+        "documentary_state": "RV",
+        "software_support": "PLAN_DUE_STATUS_AND_REVIEWS",
+        "clinical_validation": "NOT_VALIDATED",
+        "clinical_execution": "BLOCKED",
+        "source_ids": [
+          "S03"
+        ]
+      },
+      {
+        "stage": "prognosis",
+        "documentary_state": "RO",
+        "software_support": "STRUCTURE_ONLY",
+        "clinical_validation": "NOT_VALIDATED",
+        "clinical_execution": "BLOCKED",
+        "source_ids": [
+          "S03"
+        ]
+      }
+    ],
+    "no_prescription": true
+  },
+  {
+    "condition_id": "C037",
+    "name": "Lesión/rendimiento comprometido durante EVA / medicina EVA",
+    "profile_as_published": "**P:** preparación EVA; **M:** suit+biomed; **Q:** tiempo y sensor sincronizados; **D:** reglas de EVA; **A/DD:** DCS/hipoxia/CO₂/lesión; **T/I:** mission control/onboard authority; **R/F:** post-EVA; **G:** task performance.",
+    "rule_ids": [],
+    "stages": [
+      {
+        "stage": "prevention",
+        "documentary_state": "ES",
+        "software_support": "STRUCTURE_ONLY",
+        "clinical_validation": "NOT_VALIDATED",
+        "clinical_execution": "BLOCKED",
+        "source_ids": [
+          "S03"
+        ]
+      },
+      {
+        "stage": "monitoring",
+        "documentary_state": "ES",
+        "software_support": "NUMERIC_ACQUISITION_INFRASTRUCTURE",
+        "clinical_validation": "NOT_VALIDATED",
+        "clinical_execution": "BLOCKED",
+        "source_ids": [
+          "S03"
+        ]
+      },
+      {
+        "stage": "data_quality",
+        "documentary_state": "ES",
+        "software_support": "CONFIGURED_TECHNICAL_GATES",
+        "clinical_validation": "NOT_VALIDATED",
+        "clinical_execution": "BLOCKED",
+        "source_ids": [
+          "S03"
+        ]
+      },
+      {
+        "stage": "detection",
+        "documentary_state": "RV",
+        "software_support": "NO_CONDITION_SPECIFIC_DETECTOR",
+        "clinical_validation": "NOT_VALIDATED",
+        "clinical_execution": "BLOCKED",
+        "source_ids": [
+          "S03"
+        ]
+      },
+      {
+        "stage": "assessment",
+        "documentary_state": "RV",
+        "software_support": "HUMAN_RECORDING",
+        "clinical_validation": "NOT_VALIDATED",
+        "clinical_execution": "BLOCKED",
+        "source_ids": [
+          "S03"
+        ]
+      },
+      {
+        "stage": "differential_diagnosis",
+        "documentary_state": "RV",
+        "software_support": "STRUCTURE_ONLY",
+        "clinical_validation": "NOT_VALIDATED",
+        "clinical_execution": "BLOCKED",
+        "source_ids": [
+          "S03"
+        ]
+      },
+      {
+        "stage": "triage",
+        "documentary_state": "RMA",
+        "software_support": "STRUCTURE_ONLY",
+        "clinical_validation": "NOT_VALIDATED",
+        "clinical_execution": "BLOCKED",
+        "source_ids": [
+          "S03"
+        ]
+      },
+      {
+        "stage": "intervention_authorized",
+        "documentary_state": "RMA",
+        "software_support": "STRUCTURE_ONLY",
+        "clinical_validation": "NOT_VALIDATED",
+        "clinical_execution": "BLOCKED",
+        "source_ids": [
+          "S03"
+        ]
+      },
+      {
+        "stage": "recovery",
+        "documentary_state": "RV",
+        "software_support": "HUMAN_WORKFLOW_RECORDING",
+        "clinical_validation": "NOT_VALIDATED",
+        "clinical_execution": "BLOCKED",
+        "source_ids": [
+          "S03"
+        ]
+      },
+      {
+        "stage": "follow_up",
+        "documentary_state": "ES",
+        "software_support": "PLAN_DUE_STATUS_AND_REVIEWS",
+        "clinical_validation": "NOT_VALIDATED",
+        "clinical_execution": "BLOCKED",
+        "source_ids": [
+          "S03"
+        ]
+      },
+      {
+        "stage": "prognosis",
+        "documentary_state": "RO",
+        "software_support": "STRUCTURE_ONLY",
+        "clinical_validation": "NOT_VALIDATED",
+        "clinical_execution": "BLOCKED",
+        "source_ids": [
+          "S03"
+        ]
+      }
+    ],
+    "no_prescription": true
+  },
+  {
+    "condition_id": "C038",
+    "name": "Trauma, heridas y fractura aguda / emergencias",
+    "profile_as_published": "**P:** safety; **M:** evento/síntomas; **Q:** mecanismo y tiempos; **D:** injury screening; **A/DD:** protocolo de trauma; **T/I:** autoridad médica; **R:** funcional; **F:** herida/dolor/función; **G:** outcome model solo si validado.",
+    "rule_ids": [],
+    "stages": [
+      {
+        "stage": "prevention",
+        "documentary_state": "ES",
+        "software_support": "STRUCTURE_ONLY",
+        "clinical_validation": "NOT_VALIDATED",
+        "clinical_execution": "BLOCKED",
+        "source_ids": [
+          "S17"
+        ]
+      },
+      {
+        "stage": "monitoring",
+        "documentary_state": "RV",
+        "software_support": "NUMERIC_ACQUISITION_INFRASTRUCTURE",
+        "clinical_validation": "NOT_VALIDATED",
+        "clinical_execution": "BLOCKED",
+        "source_ids": [
+          "S17"
+        ]
+      },
+      {
+        "stage": "data_quality",
+        "documentary_state": "ES",
+        "software_support": "CONFIGURED_TECHNICAL_GATES",
+        "clinical_validation": "NOT_VALIDATED",
+        "clinical_execution": "BLOCKED",
+        "source_ids": [
+          "S17"
+        ]
+      },
+      {
+        "stage": "detection",
+        "documentary_state": "RV",
+        "software_support": "NO_CONDITION_SPECIFIC_DETECTOR",
+        "clinical_validation": "NOT_VALIDATED",
+        "clinical_execution": "BLOCKED",
+        "source_ids": [
+          "S17"
+        ]
+      },
+      {
+        "stage": "assessment",
+        "documentary_state": "RMA",
+        "software_support": "HUMAN_RECORDING",
+        "clinical_validation": "NOT_VALIDATED",
+        "clinical_execution": "BLOCKED",
+        "source_ids": [
+          "S17"
+        ]
+      },
+      {
+        "stage": "differential_diagnosis",
+        "documentary_state": "RMA",
+        "software_support": "STRUCTURE_ONLY",
+        "clinical_validation": "NOT_VALIDATED",
+        "clinical_execution": "BLOCKED",
+        "source_ids": [
+          "S17"
+        ]
+      },
+      {
+        "stage": "triage",
+        "documentary_state": "RMA",
+        "software_support": "STRUCTURE_ONLY",
+        "clinical_validation": "NOT_VALIDATED",
+        "clinical_execution": "BLOCKED",
+        "source_ids": [
+          "S17"
+        ]
+      },
+      {
+        "stage": "intervention_authorized",
+        "documentary_state": "RMA",
+        "software_support": "STRUCTURE_ONLY",
+        "clinical_validation": "NOT_VALIDATED",
+        "clinical_execution": "BLOCKED",
+        "source_ids": [
+          "S17"
+        ]
+      },
+      {
+        "stage": "recovery",
+        "documentary_state": "RV",
+        "software_support": "HUMAN_WORKFLOW_RECORDING",
+        "clinical_validation": "NOT_VALIDATED",
+        "clinical_execution": "BLOCKED",
+        "source_ids": [
+          "S17"
+        ]
+      },
+      {
+        "stage": "follow_up",
+        "documentary_state": "RV",
+        "software_support": "PLAN_DUE_STATUS_AND_REVIEWS",
+        "clinical_validation": "NOT_VALIDATED",
+        "clinical_execution": "BLOCKED",
+        "source_ids": [
+          "S17"
+        ]
+      },
+      {
+        "stage": "prognosis",
+        "documentary_state": "RO",
+        "software_support": "STRUCTURE_ONLY",
+        "clinical_validation": "NOT_VALIDATED",
+        "clinical_execution": "BLOCKED",
+        "source_ids": [
+          "S17"
+        ]
+      }
+    ],
+    "no_prescription": true
+  },
+  {
+    "condition_id": "C039",
+    "name": "Patología/emergencia dental / odontología",
+    "profile_as_published": "**P:** dental clearance; **M:** dolor/lesión; **Q:** documentación; **D:** screening; **A/DD:** caries, absceso, trauma; **T/I:** médico/dental autorizado; **R/F:** dolor/infección/función; **G:** no automático.",
+    "rule_ids": [],
+    "stages": [
+      {
+        "stage": "prevention",
+        "documentary_state": "ES",
+        "software_support": "STRUCTURE_ONLY",
+        "clinical_validation": "NOT_VALIDATED",
+        "clinical_execution": "BLOCKED",
+        "source_ids": [
+          "S17",
+          "S19"
+        ]
+      },
+      {
+        "stage": "monitoring",
+        "documentary_state": "RV",
+        "software_support": "NUMERIC_ACQUISITION_INFRASTRUCTURE",
+        "clinical_validation": "NOT_VALIDATED",
+        "clinical_execution": "BLOCKED",
+        "source_ids": [
+          "S17",
+          "S19"
+        ]
+      },
+      {
+        "stage": "data_quality",
+        "documentary_state": "ES",
+        "software_support": "CONFIGURED_TECHNICAL_GATES",
+        "clinical_validation": "NOT_VALIDATED",
+        "clinical_execution": "BLOCKED",
+        "source_ids": [
+          "S17",
+          "S19"
+        ]
+      },
+      {
+        "stage": "detection",
+        "documentary_state": "RV",
+        "software_support": "NO_CONDITION_SPECIFIC_DETECTOR",
+        "clinical_validation": "NOT_VALIDATED",
+        "clinical_execution": "BLOCKED",
+        "source_ids": [
+          "S17",
+          "S19"
+        ]
+      },
+      {
+        "stage": "assessment",
+        "documentary_state": "RMA",
+        "software_support": "HUMAN_RECORDING",
+        "clinical_validation": "NOT_VALIDATED",
+        "clinical_execution": "BLOCKED",
+        "source_ids": [
+          "S17",
+          "S19"
+        ]
+      },
+      {
+        "stage": "differential_diagnosis",
+        "documentary_state": "RMA",
+        "software_support": "STRUCTURE_ONLY",
+        "clinical_validation": "NOT_VALIDATED",
+        "clinical_execution": "BLOCKED",
+        "source_ids": [
+          "S17",
+          "S19"
+        ]
+      },
+      {
+        "stage": "triage",
+        "documentary_state": "RMA",
+        "software_support": "STRUCTURE_ONLY",
+        "clinical_validation": "NOT_VALIDATED",
+        "clinical_execution": "BLOCKED",
+        "source_ids": [
+          "S17",
+          "S19"
+        ]
+      },
+      {
+        "stage": "intervention_authorized",
+        "documentary_state": "RMA",
+        "software_support": "STRUCTURE_ONLY",
+        "clinical_validation": "NOT_VALIDATED",
+        "clinical_execution": "BLOCKED",
+        "source_ids": [
+          "S17",
+          "S19"
+        ]
+      },
+      {
+        "stage": "recovery",
+        "documentary_state": "RV",
+        "software_support": "HUMAN_WORKFLOW_RECORDING",
+        "clinical_validation": "NOT_VALIDATED",
+        "clinical_execution": "BLOCKED",
+        "source_ids": [
+          "S17",
+          "S19"
+        ]
+      },
+      {
+        "stage": "follow_up",
+        "documentary_state": "RV",
+        "software_support": "PLAN_DUE_STATUS_AND_REVIEWS",
+        "clinical_validation": "NOT_VALIDATED",
+        "clinical_execution": "BLOCKED",
+        "source_ids": [
+          "S17",
+          "S19"
+        ]
+      },
+      {
+        "stage": "prognosis",
+        "documentary_state": "NPA",
+        "software_support": "STRUCTURE_ONLY",
+        "clinical_validation": "NOT_VALIDATED",
+        "clinical_execution": "BLOCKED",
+        "source_ids": [
+          "S17",
+          "S19"
+        ]
+      }
+    ],
+    "no_prescription": true
+  },
+  {
+    "condition_id": "C040",
+    "name": "Medicamento ineficaz o tóxico / farmacología",
+    "profile_as_published": "**P:** inventario/estabilidad; **M:** lote, caducidad, storage, respuesta; **Q:** identidad/dosis prescrita sin alterarla; **D:** flag de almacenamiento/caducidad o respuesta atípica; **A/DD:** enfermedad vs fármaco; **T:** médico; **I:** VIGILE jamás crea dosis; **R/F:** eficacia/eventos adversos; **G:** PK/PD espacial `RV`.",
+    "rule_ids": [],
+    "stages": [
+      {
+        "stage": "prevention",
+        "documentary_state": "ES",
+        "software_support": "STRUCTURE_ONLY",
+        "clinical_validation": "NOT_VALIDATED",
+        "clinical_execution": "BLOCKED",
+        "source_ids": [
+          "S15"
+        ]
+      },
+      {
+        "stage": "monitoring",
+        "documentary_state": "ES",
+        "software_support": "NUMERIC_ACQUISITION_INFRASTRUCTURE",
+        "clinical_validation": "NOT_VALIDATED",
+        "clinical_execution": "BLOCKED",
+        "source_ids": [
+          "S15"
+        ]
+      },
+      {
+        "stage": "data_quality",
+        "documentary_state": "ES",
+        "software_support": "CONFIGURED_TECHNICAL_GATES",
+        "clinical_validation": "NOT_VALIDATED",
+        "clinical_execution": "BLOCKED",
+        "source_ids": [
+          "S15"
+        ]
+      },
+      {
+        "stage": "detection",
+        "documentary_state": "RV",
+        "software_support": "NO_CONDITION_SPECIFIC_DETECTOR",
+        "clinical_validation": "NOT_VALIDATED",
+        "clinical_execution": "BLOCKED",
+        "source_ids": [
+          "S15"
+        ]
+      },
+      {
+        "stage": "assessment",
+        "documentary_state": "RMA",
+        "software_support": "HUMAN_RECORDING",
+        "clinical_validation": "NOT_VALIDATED",
+        "clinical_execution": "BLOCKED",
+        "source_ids": [
+          "S15"
+        ]
+      },
+      {
+        "stage": "differential_diagnosis",
+        "documentary_state": "RMA",
+        "software_support": "STRUCTURE_ONLY",
+        "clinical_validation": "NOT_VALIDATED",
+        "clinical_execution": "BLOCKED",
+        "source_ids": [
+          "S15"
+        ]
+      },
+      {
+        "stage": "triage",
+        "documentary_state": "RMA",
+        "software_support": "STRUCTURE_ONLY",
+        "clinical_validation": "NOT_VALIDATED",
+        "clinical_execution": "BLOCKED",
+        "source_ids": [
+          "S15"
+        ]
+      },
+      {
+        "stage": "intervention_authorized",
+        "documentary_state": "RMA",
+        "software_support": "STRUCTURE_ONLY",
+        "clinical_validation": "NOT_VALIDATED",
+        "clinical_execution": "BLOCKED",
+        "source_ids": [
+          "S15"
+        ]
+      },
+      {
+        "stage": "recovery",
+        "documentary_state": "RV",
+        "software_support": "HUMAN_WORKFLOW_RECORDING",
+        "clinical_validation": "NOT_VALIDATED",
+        "clinical_execution": "BLOCKED",
+        "source_ids": [
+          "S15"
+        ]
+      },
+      {
+        "stage": "follow_up",
+        "documentary_state": "ES",
+        "software_support": "PLAN_DUE_STATUS_AND_REVIEWS",
+        "clinical_validation": "NOT_VALIDATED",
+        "clinical_execution": "BLOCKED",
+        "source_ids": [
+          "S15"
+        ]
+      },
+      {
+        "stage": "prognosis",
+        "documentary_state": "RO",
+        "software_support": "STRUCTURE_ONLY",
+        "clinical_validation": "NOT_VALIDATED",
+        "clinical_execution": "BLOCKED",
+        "source_ids": [
+          "S15"
+        ]
+      }
+    ],
+    "no_prescription": true
+  },
+  {
+    "condition_id": "C041",
+    "name": "Infección respiratoria/inhalación de humo / respiratorio-emergencias",
+    "profile_as_published": "**P:** control infección/humo; **M:** síntomas, SpO₂, atmósfera; **Q:** sensor/exposición; **D:** screening; **A/DD:** infección, toxicidad, hipoxia; **T/I:** médico/emergencia; **R/F:** respiratorio; **G:** no automático.",
+    "rule_ids": [],
+    "stages": [
+      {
+        "stage": "prevention",
+        "documentary_state": "ES",
+        "software_support": "STRUCTURE_ONLY",
+        "clinical_validation": "NOT_VALIDATED",
+        "clinical_execution": "BLOCKED",
+        "source_ids": [
+          "S17",
+          "S37"
+        ]
+      },
+      {
+        "stage": "monitoring",
+        "documentary_state": "ES",
+        "software_support": "NUMERIC_ACQUISITION_INFRASTRUCTURE",
+        "clinical_validation": "NOT_VALIDATED",
+        "clinical_execution": "BLOCKED",
+        "source_ids": [
+          "S17",
+          "S37"
+        ]
+      },
+      {
+        "stage": "data_quality",
+        "documentary_state": "ES",
+        "software_support": "CONFIGURED_TECHNICAL_GATES",
+        "clinical_validation": "NOT_VALIDATED",
+        "clinical_execution": "BLOCKED",
+        "source_ids": [
+          "S17",
+          "S37"
+        ]
+      },
+      {
+        "stage": "detection",
+        "documentary_state": "RV",
+        "software_support": "NO_CONDITION_SPECIFIC_DETECTOR",
+        "clinical_validation": "NOT_VALIDATED",
+        "clinical_execution": "BLOCKED",
+        "source_ids": [
+          "S17",
+          "S37"
+        ]
+      },
+      {
+        "stage": "assessment",
+        "documentary_state": "RMA",
+        "software_support": "HUMAN_RECORDING",
+        "clinical_validation": "NOT_VALIDATED",
+        "clinical_execution": "BLOCKED",
+        "source_ids": [
+          "S17",
+          "S37"
+        ]
+      },
+      {
+        "stage": "differential_diagnosis",
+        "documentary_state": "RMA",
+        "software_support": "STRUCTURE_ONLY",
+        "clinical_validation": "NOT_VALIDATED",
+        "clinical_execution": "BLOCKED",
+        "source_ids": [
+          "S17",
+          "S37"
+        ]
+      },
+      {
+        "stage": "triage",
+        "documentary_state": "RMA",
+        "software_support": "STRUCTURE_ONLY",
+        "clinical_validation": "NOT_VALIDATED",
+        "clinical_execution": "BLOCKED",
+        "source_ids": [
+          "S17",
+          "S37"
+        ]
+      },
+      {
+        "stage": "intervention_authorized",
+        "documentary_state": "RMA",
+        "software_support": "STRUCTURE_ONLY",
+        "clinical_validation": "NOT_VALIDATED",
+        "clinical_execution": "BLOCKED",
+        "source_ids": [
+          "S17",
+          "S37"
+        ]
+      },
+      {
+        "stage": "recovery",
+        "documentary_state": "RV",
+        "software_support": "HUMAN_WORKFLOW_RECORDING",
+        "clinical_validation": "NOT_VALIDATED",
+        "clinical_execution": "BLOCKED",
+        "source_ids": [
+          "S17",
+          "S37"
+        ]
+      },
+      {
+        "stage": "follow_up",
+        "documentary_state": "RV",
+        "software_support": "PLAN_DUE_STATUS_AND_REVIEWS",
+        "clinical_validation": "NOT_VALIDATED",
+        "clinical_execution": "BLOCKED",
+        "source_ids": [
+          "S17",
+          "S37"
+        ]
+      },
+      {
+        "stage": "prognosis",
+        "documentary_state": "RO",
+        "software_support": "STRUCTURE_ONLY",
+        "clinical_validation": "NOT_VALIDATED",
+        "clinical_execution": "BLOCKED",
+        "source_ids": [
+          "S17",
+          "S37"
+        ]
+      }
+    ],
+    "no_prescription": true
+  },
+  {
+    "condition_id": "C042",
+    "name": "Choque eléctrico / emergencias",
+    "profile_as_published": "**P:** electrical safety; **M:** evento; **Q:** verificar exposición; **D:** cualquier evento relevante activa protocolo de seguridad; **A/DD/T/I:** médico + engineering; **R/F:** seguimiento; **G:** `NPA`.",
+    "rule_ids": [],
+    "stages": [
+      {
+        "stage": "prevention",
+        "documentary_state": "ES",
+        "software_support": "STRUCTURE_ONLY",
+        "clinical_validation": "NOT_VALIDATED",
+        "clinical_execution": "BLOCKED",
+        "source_ids": [
+          "S03"
+        ]
+      },
+      {
+        "stage": "monitoring",
+        "documentary_state": "RV",
+        "software_support": "NUMERIC_ACQUISITION_INFRASTRUCTURE",
+        "clinical_validation": "NOT_VALIDATED",
+        "clinical_execution": "BLOCKED",
+        "source_ids": [
+          "S03"
+        ]
+      },
+      {
+        "stage": "data_quality",
+        "documentary_state": "ES",
+        "software_support": "CONFIGURED_TECHNICAL_GATES",
+        "clinical_validation": "NOT_VALIDATED",
+        "clinical_execution": "BLOCKED",
+        "source_ids": [
+          "S03"
+        ]
+      },
+      {
+        "stage": "detection",
+        "documentary_state": "RV",
+        "software_support": "NO_CONDITION_SPECIFIC_DETECTOR",
+        "clinical_validation": "NOT_VALIDATED",
+        "clinical_execution": "BLOCKED",
+        "source_ids": [
+          "S03"
+        ]
+      },
+      {
+        "stage": "assessment",
+        "documentary_state": "RMA",
+        "software_support": "HUMAN_RECORDING",
+        "clinical_validation": "NOT_VALIDATED",
+        "clinical_execution": "BLOCKED",
+        "source_ids": [
+          "S03"
+        ]
+      },
+      {
+        "stage": "differential_diagnosis",
+        "documentary_state": "RMA",
+        "software_support": "STRUCTURE_ONLY",
+        "clinical_validation": "NOT_VALIDATED",
+        "clinical_execution": "BLOCKED",
+        "source_ids": [
+          "S03"
+        ]
+      },
+      {
+        "stage": "triage",
+        "documentary_state": "RMA",
+        "software_support": "STRUCTURE_ONLY",
+        "clinical_validation": "NOT_VALIDATED",
+        "clinical_execution": "BLOCKED",
+        "source_ids": [
+          "S03"
+        ]
+      },
+      {
+        "stage": "intervention_authorized",
+        "documentary_state": "RMA",
+        "software_support": "STRUCTURE_ONLY",
+        "clinical_validation": "NOT_VALIDATED",
+        "clinical_execution": "BLOCKED",
+        "source_ids": [
+          "S03"
+        ]
+      },
+      {
+        "stage": "recovery",
+        "documentary_state": "RV",
+        "software_support": "HUMAN_WORKFLOW_RECORDING",
+        "clinical_validation": "NOT_VALIDATED",
+        "clinical_execution": "BLOCKED",
+        "source_ids": [
+          "S03"
+        ]
+      },
+      {
+        "stage": "follow_up",
+        "documentary_state": "RV",
+        "software_support": "PLAN_DUE_STATUS_AND_REVIEWS",
+        "clinical_validation": "NOT_VALIDATED",
+        "clinical_execution": "BLOCKED",
+        "source_ids": [
+          "S03"
+        ]
+      },
+      {
+        "stage": "prognosis",
+        "documentary_state": "NPA",
+        "software_support": "STRUCTURE_ONLY",
+        "clinical_validation": "NOT_VALIDATED",
+        "clinical_execution": "BLOCKED",
+        "source_ids": [
+          "S03"
+        ]
+      }
+    ],
+    "no_prescription": true
+  },
+  {
+    "condition_id": "C043",
+    "name": "Incapacidad de egress/tarea tras transición de gravedad / rendimiento",
+    "profile_as_published": "**P:** countermeasures/readaptation; **M:** función+ortostatismo+sensorimotor; **Q:** gravedad/tarea; **D:** task-specific gate; **A/DD:** CV/sensorimotor/músculo; **T:** no autorizar tarea si regla de misión falla; **I:** rehabilitation/countermeasure; **R/F:** re-test; **G:** misión-específico.",
+    "rule_ids": [],
+    "stages": [
+      {
+        "stage": "prevention",
+        "documentary_state": "ES",
+        "software_support": "STRUCTURE_ONLY",
+        "clinical_validation": "NOT_VALIDATED",
+        "clinical_execution": "BLOCKED",
+        "source_ids": [
+          "S03",
+          "S11",
+          "S02"
+        ]
+      },
+      {
+        "stage": "monitoring",
+        "documentary_state": "ES",
+        "software_support": "NUMERIC_ACQUISITION_INFRASTRUCTURE",
+        "clinical_validation": "NOT_VALIDATED",
+        "clinical_execution": "BLOCKED",
+        "source_ids": [
+          "S03",
+          "S11",
+          "S02"
+        ]
+      },
+      {
+        "stage": "data_quality",
+        "documentary_state": "ES",
+        "software_support": "CONFIGURED_TECHNICAL_GATES",
+        "clinical_validation": "NOT_VALIDATED",
+        "clinical_execution": "BLOCKED",
+        "source_ids": [
+          "S03",
+          "S11",
+          "S02"
+        ]
+      },
+      {
+        "stage": "detection",
+        "documentary_state": "RV",
+        "software_support": "NO_CONDITION_SPECIFIC_DETECTOR",
+        "clinical_validation": "NOT_VALIDATED",
+        "clinical_execution": "BLOCKED",
+        "source_ids": [
+          "S03",
+          "S11",
+          "S02"
+        ]
+      },
+      {
+        "stage": "assessment",
+        "documentary_state": "RV",
+        "software_support": "HUMAN_RECORDING",
+        "clinical_validation": "NOT_VALIDATED",
+        "clinical_execution": "BLOCKED",
+        "source_ids": [
+          "S03",
+          "S11",
+          "S02"
+        ]
+      },
+      {
+        "stage": "differential_diagnosis",
+        "documentary_state": "RV",
+        "software_support": "STRUCTURE_ONLY",
+        "clinical_validation": "NOT_VALIDATED",
+        "clinical_execution": "BLOCKED",
+        "source_ids": [
+          "S03",
+          "S11",
+          "S02"
+        ]
+      },
+      {
+        "stage": "triage",
+        "documentary_state": "RMA",
+        "software_support": "STRUCTURE_ONLY",
+        "clinical_validation": "NOT_VALIDATED",
+        "clinical_execution": "BLOCKED",
+        "source_ids": [
+          "S03",
+          "S11",
+          "S02"
+        ]
+      },
+      {
+        "stage": "intervention_authorized",
+        "documentary_state": "RMA",
+        "software_support": "STRUCTURE_ONLY",
+        "clinical_validation": "NOT_VALIDATED",
+        "clinical_execution": "BLOCKED",
+        "source_ids": [
+          "S03",
+          "S11",
+          "S02"
+        ]
+      },
+      {
+        "stage": "recovery",
+        "documentary_state": "ES",
+        "software_support": "HUMAN_WORKFLOW_RECORDING",
+        "clinical_validation": "NOT_VALIDATED",
+        "clinical_execution": "BLOCKED",
+        "source_ids": [
+          "S03",
+          "S11",
+          "S02"
+        ]
+      },
+      {
+        "stage": "follow_up",
+        "documentary_state": "ES",
+        "software_support": "PLAN_DUE_STATUS_AND_REVIEWS",
+        "clinical_validation": "NOT_VALIDATED",
+        "clinical_execution": "BLOCKED",
+        "source_ids": [
+          "S03",
+          "S11",
+          "S02"
+        ]
+      },
+      {
+        "stage": "prognosis",
+        "documentary_state": "RO",
+        "software_support": "STRUCTURE_ONLY",
+        "clinical_validation": "NOT_VALIDATED",
+        "clinical_execution": "BLOCKED",
+        "source_ids": [
+          "S03",
+          "S11",
+          "S02"
+        ]
+      }
+    ],
+    "no_prescription": true
+  },
+  {
+    "condition_id": "C044",
+    "name": "Alteración dermatológica/infección cutánea / dermatología-inmunología",
+    "profile_as_published": "**P:** higiene/protección; **M:** piel/síntomas; **Q:** imagen/iluminación si utilizada; **D:** cambio sospechoso; **A/DD:** dermatitis, infección, trauma; **T/I:** médico; **R/F:** cicatrización/recurrencia; **G:** visión artificial `RV`.",
+    "rule_ids": [],
+    "stages": [
+      {
+        "stage": "prevention",
+        "documentary_state": "ES",
+        "software_support": "STRUCTURE_ONLY",
+        "clinical_validation": "NOT_VALIDATED",
+        "clinical_execution": "BLOCKED",
+        "source_ids": [
+          "S09",
+          "S17"
+        ]
+      },
+      {
+        "stage": "monitoring",
+        "documentary_state": "RV",
+        "software_support": "NUMERIC_ACQUISITION_INFRASTRUCTURE",
+        "clinical_validation": "NOT_VALIDATED",
+        "clinical_execution": "BLOCKED",
+        "source_ids": [
+          "S09",
+          "S17"
+        ]
+      },
+      {
+        "stage": "data_quality",
+        "documentary_state": "ES",
+        "software_support": "CONFIGURED_TECHNICAL_GATES",
+        "clinical_validation": "NOT_VALIDATED",
+        "clinical_execution": "BLOCKED",
+        "source_ids": [
+          "S09",
+          "S17"
+        ]
+      },
+      {
+        "stage": "detection",
+        "documentary_state": "RV",
+        "software_support": "NO_CONDITION_SPECIFIC_DETECTOR",
+        "clinical_validation": "NOT_VALIDATED",
+        "clinical_execution": "BLOCKED",
+        "source_ids": [
+          "S09",
+          "S17"
+        ]
+      },
+      {
+        "stage": "assessment",
+        "documentary_state": "RV",
+        "software_support": "HUMAN_RECORDING",
+        "clinical_validation": "NOT_VALIDATED",
+        "clinical_execution": "BLOCKED",
+        "source_ids": [
+          "S09",
+          "S17"
+        ]
+      },
+      {
+        "stage": "differential_diagnosis",
+        "documentary_state": "RV",
+        "software_support": "STRUCTURE_ONLY",
+        "clinical_validation": "NOT_VALIDATED",
+        "clinical_execution": "BLOCKED",
+        "source_ids": [
+          "S09",
+          "S17"
+        ]
+      },
+      {
+        "stage": "triage",
+        "documentary_state": "RMA",
+        "software_support": "STRUCTURE_ONLY",
+        "clinical_validation": "NOT_VALIDATED",
+        "clinical_execution": "BLOCKED",
+        "source_ids": [
+          "S09",
+          "S17"
+        ]
+      },
+      {
+        "stage": "intervention_authorized",
+        "documentary_state": "RMA",
+        "software_support": "STRUCTURE_ONLY",
+        "clinical_validation": "NOT_VALIDATED",
+        "clinical_execution": "BLOCKED",
+        "source_ids": [
+          "S09",
+          "S17"
+        ]
+      },
+      {
+        "stage": "recovery",
+        "documentary_state": "RV",
+        "software_support": "HUMAN_WORKFLOW_RECORDING",
+        "clinical_validation": "NOT_VALIDATED",
+        "clinical_execution": "BLOCKED",
+        "source_ids": [
+          "S09",
+          "S17"
+        ]
+      },
+      {
+        "stage": "follow_up",
+        "documentary_state": "RV",
+        "software_support": "PLAN_DUE_STATUS_AND_REVIEWS",
+        "clinical_validation": "NOT_VALIDATED",
+        "clinical_execution": "BLOCKED",
+        "source_ids": [
+          "S09",
+          "S17"
+        ]
+      },
+      {
+        "stage": "prognosis",
+        "documentary_state": "RO",
+        "software_support": "STRUCTURE_ONLY",
+        "clinical_validation": "NOT_VALIDATED",
+        "clinical_execution": "BLOCKED",
+        "source_ids": [
+          "S09",
+          "S17"
+        ]
+      }
+    ],
+    "no_prescription": true
+  }
+]

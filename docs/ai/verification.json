@@ -1,0 +1,40 @@
+{
+  "tests": {
+    "name": "pytest",
+    "errors": "0",
+    "failures": "0",
+    "skipped": "0",
+    "tests": "298",
+    "time": "38.994",
+    "timestamp": "2026-10-18T20:54:10.074189-05:00",
+    "hostname": "Gianni"
+  },
+  "original_files_unchanged": 106,
+  "clinical_modules_and_knowledge_unchanged": 17,
+  "critical_queries": [
+    {
+      "evaluation_id": "ce-48ef923edd0a409cb348f4fe5c1e4c93",
+      "status": "EXTRACTIVE_ONLY"
+    },
+    {
+      "evaluation_id": "ce-b167283b57a94f8cb779f00b2c3f6d1b",
+      "status": "EXTRACTIVE_ONLY"
+    },
+    {
+      "evaluation_id": "ce-bacaf9194f8a4bcc8f28dd9ce8b1cf09",
+      "status": "EXTRACTIVE_ONLY"
+    },
+    {
+      "evaluation_id": "ce-e2d52c72e722484787e4b2dfdd452c2a",
+      "status": "EXTRACTIVE_ONLY"
+    }
+  ],
+  "documentary_retrieval": true,
+  "replays_match": true,
+  "reader_write_denied": true,
+  "wrong_scope_denied": true,
+  "mode_csrf_denied": true,
+  "records_unchanged": true,
+  "runtime_executable_available": false,
+  "clinical_validation": false
+}

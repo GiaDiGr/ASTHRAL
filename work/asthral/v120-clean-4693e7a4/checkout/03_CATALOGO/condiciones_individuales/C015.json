@@ -1,0 +1,33 @@
+{
+  "condition_id": "C015",
+  "catalog_record": {
+    "condition_id": "C015",
+    "name_specialty": "Deterioro cognitivo funcional / neurocognición",
+    "description_spaceflight": "Atención, reacción y decisión pueden verse afectados por sueño, hipoxia, CO₂ y otros factores.",
+    "risks_symptoms": "Sueño, fatiga, hipoxia, ambiente, estrés.",
+    "biomarkers_sensors_tests": "Batería cognitiva, tiempo de reacción, precisión.",
+    "baselines_environment_interactions": "Baseline repetido con control de aprendizaje.",
+    "primary_evidence": "S10, S14, S27. citeturn12search1turn18search10turn19search4",
+    "limits_authorizations_state": "Etiología no inferible de una prueba aislada. `RV`."
+  },
+  "clinical_pathway_profile_as_published": "**P:** sueño/ambiente/carga; **M:** batería cognitiva; **Q:** práctica, versión, latencia de dispositivo; **D:** cambio robusto vs baseline; **A/DD:** sueño, CO₂, hipoxia, estrés, medicación; **T:** desempeño crítico; **I:** tratar causa solo si identificada/autorizada; **R/F:** reevaluación; **G:** research-only.",
+  "coverage_states": {
+    "prevention": "ES",
+    "monitoring": "ES",
+    "data_quality": "ES",
+    "detection": "RV",
+    "assessment": "RV",
+    "differential_diagnosis": "RV",
+    "triage": "RMA",
+    "intervention_authorized": "RMA",
+    "recovery": "RV",
+    "follow_up": "ES",
+    "prognosis": "RO"
+  },
+  "source_ids": [
+    "S10",
+    "S14",
+    "S27"
+  ],
+  "NOTICE": "Pathway text is an outline; not an authorized diagnostic or treatment protocol."
+}

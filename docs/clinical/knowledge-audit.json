@@ -1,0 +1,36 @@
+{
+  "knowledge_hash": "cb0dc5bba91e4861f2395d5cf9514e6a75de95709feb105fb6866041812c44ae",
+  "report_sha256": "38ad3ab166f25a8b46c1e1f483ba813510c34dc766171389307635ecf7e8a715",
+  "counts": {
+    "sources": 13,
+    "criteria": 6,
+    "protocols": 6,
+    "tests": 12,
+    "presentations": 6,
+    "synthetic_cases": 30
+  },
+  "unresolved_source_ids": [],
+  "unresolved_differential_test_ids": [],
+  "case_next_actions_without_catalogue_id": [
+    "ASSESS_HYPERGLYCEMIC_CRISIS_IF_INDICATED",
+    "CREATININE",
+    "ELECTROLYTES",
+    "POTASSIUM",
+    "REASSESS_SKIN_RESPIRATORY_BP_LARYNGEAL",
+    "REPEAT_VALID_DIAGNOSTIC_TEST",
+    "SERIAL_CREATININE",
+    "URINE_OUTPUT",
+    "VALID_BASELINE_AND_UPRIGHT_BP"
+  ],
+  "aliases": {
+    "DIABETES": "DM",
+    "ORTHOSTATIC_SYNDROME": [
+      "ORTHOSTATIC_HYPOTENSION",
+      "POTS"
+    ]
+  },
+  "nonproduction_sources": {
+    "SRC-KDIGO-AKI-DRAFT-2026": "DRAFT_NOT_FOR_PRODUCTION"
+  },
+  "clinical_validation": false
+}

@@ -1,0 +1,31 @@
+{
+  "condition_id": "C023",
+  "catalog_record": {
+    "condition_id": "C023",
+    "name_specialty": "Nutrición/energía inadecuadas / nutrición-metabolismo",
+    "description_spaceflight": "Alimentación segura, suficiente y aceptable es necesaria para salud/rendimiento; exploración limita reabastecimiento.",
+    "risks_symptoms": "Duración, degradación alimento, ingesta insuficiente, palatabilidad.",
+    "biomarkers_sensors_tests": "Ingesta, masa corporal, paneles bioquímicos cuando disponibles.",
+    "baselines_environment_interactions": "Peso, composición corporal, dieta preflight.",
+    "primary_evidence": "S13. citeturn18search2turn18search11",
+    "limits_authorizations_state": "No generar prescripción dietética clínica sin objetivos autorizados. `ES`."
+  },
+  "clinical_pathway_profile_as_published": "**P:** menú nutricional seguro/adecuado; **M:** ingesta, masa, paneles; **Q:** completitud de registro; **D:** objetivos de misión; **A/DD:** enfermedad, absorción, preferencias; **T/I:** nutricionista/médico según gravedad; **R/F:** balance longitudinal; **G:** modelos de reservas solo validados.",
+  "coverage_states": {
+    "prevention": "ES",
+    "monitoring": "ES",
+    "data_quality": "ES",
+    "detection": "RV",
+    "assessment": "RV",
+    "differential_diagnosis": "RV",
+    "triage": "RMA",
+    "intervention_authorized": "RMA",
+    "recovery": "RV",
+    "follow_up": "ES",
+    "prognosis": "RO"
+  },
+  "source_ids": [
+    "S13"
+  ],
+  "NOTICE": "Pathway text is an outline; not an authorized diagnostic or treatment protocol."
+}

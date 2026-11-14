@@ -1,0 +1,31 @@
+{
+  "condition_id": "C030",
+  "catalog_record": {
+    "condition_id": "C030",
+    "name_specialty": "Enfermedad por descompresión / aeroespacial",
+    "description_spaceflight": "Burbujas de nitrógeno durante transición de alta a baja presión pueden causar enfermedad y comprometer EVA.",
+    "risks_symptoms": "Presión, nitrógeno tisular, prebreathe insuficiente.",
+    "biomarkers_sensors_tests": "Presión/suit, síntomas clínicos, exposición.",
+    "baselines_environment_interactions": "Perfil presión/respiración.",
+    "primary_evidence": "S36. citeturn27search1turn27search4",
+    "limits_authorizations_state": "Protocolos detallados de misión deben ser autorizados; fracción de gravedad añade incertidumbre. `RMA`."
+  },
+  "clinical_pathway_profile_as_published": "**P:** prebreathe/atmósfera/suit autorizado; **M:** perfil presión + síntomas; **Q:** cronología de presión; **D:** DCS sospechada requiere evaluación; **A/DD:** trauma, hipoxia, barotrauma; **T:** finalizar EVA de forma segura según protocolo; **I:** misión/médico; **R/F:** vigilancia postevento; **G:** gravedad parcial incierta.",
+  "coverage_states": {
+    "prevention": "ES",
+    "monitoring": "ES",
+    "data_quality": "ES",
+    "detection": "RV",
+    "assessment": "RMA",
+    "differential_diagnosis": "RMA",
+    "triage": "RMA",
+    "intervention_authorized": "RMA",
+    "recovery": "RV",
+    "follow_up": "RV",
+    "prognosis": "RO"
+  },
+  "source_ids": [
+    "S36"
+  ],
+  "NOTICE": "Pathway text is an outline; not an authorized diagnostic or treatment protocol."
+}

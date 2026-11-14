@@ -1,0 +1,32 @@
+{
+  "condition_id": "C044",
+  "catalog_record": {
+    "condition_id": "C044",
+    "name_specialty": "Alteración dermatológica/infección cutánea / dermatología-inmunología",
+    "description_spaceflight": "Rashes e infecciones cutáneas aparecen dentro del espectro inmunológico/médico relevante.",
+    "risks_symptoms": "Inmunidad, ambiente cerrado, humedad/contacto.",
+    "biomarkers_sensors_tests": "Inspección/imágenes clínicas, síntomas, microbiología si disponible.",
+    "baselines_environment_interactions": "Estado cutáneo preflight.",
+    "primary_evidence": "S09, S17. citeturn12search7turn21search0",
+    "limits_authorizations_state": "Clasificación automatizada por imagen necesitaría validación específica. `RV`."
+  },
+  "clinical_pathway_profile_as_published": "**P:** higiene/protección; **M:** piel/síntomas; **Q:** imagen/iluminación si utilizada; **D:** cambio sospechoso; **A/DD:** dermatitis, infección, trauma; **T/I:** médico; **R/F:** cicatrización/recurrencia; **G:** visión artificial `RV`.",
+  "coverage_states": {
+    "prevention": "ES",
+    "monitoring": "RV",
+    "data_quality": "ES",
+    "detection": "RV",
+    "assessment": "RV",
+    "differential_diagnosis": "RV",
+    "triage": "RMA",
+    "intervention_authorized": "RMA",
+    "recovery": "RV",
+    "follow_up": "RV",
+    "prognosis": "RO"
+  },
+  "source_ids": [
+    "S09",
+    "S17"
+  ],
+  "NOTICE": "Pathway text is an outline; not an authorized diagnostic or treatment protocol."
+}

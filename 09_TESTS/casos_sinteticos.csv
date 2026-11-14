@@ -1,0 +1,21 @@
+test_id,inputs,expected_output,rule_justification
+TC001,mission=`microgravity_EVA`; VO₂max=32.9 mL/min/kg,`REQUIREMENT_MET`,R-AER-01; límite inclusivo. citeturn6view0
+TC002,misma misión; VO₂max=32.8,`REQUIREMENT_NOT_MET`; `diagnosis=null`,Incumplimiento no es enfermedad.
+TC003,mission=`extraterrestrial_surface_EVA`; VO₂max=36.5,`REQUIREMENT_MET`,R-AER-02. citeturn5view0
+TC004,baseline VO₂=45; current=35.99,retention=79.98%; `REQUIREMENT_NOT_MET`,R-AER-03.
+TC005,current VO₂=35; baseline absent,`INCONCLUSIVE:MISSING_BASELINE`,Prohibido inventar baseline.
+TC006,muscle baseline=100; current=80 same method/group,80%; `REQUIREMENT_MET`,V1 4024. citeturn6view1
+TC007,hip BMD baseline=1.00; current=.949,94.9%; `REQUIREMENT_NOT_MET`; no `fracture_risk=high` automático,V1 4027. citeturn6view2
+TC008,ppCO₂: breve pico 4 mmHg; rolling 1-h avg=2.8,`REQUIREMENT_MET`,"V2 6004 usa promedio horario, no máximo instantáneo. citeturn19search4"
+TC009,rolling 1-h ppCO₂=3.01 mmHg con cobertura válida,`REQUIREMENT_NOT_MET`; abrir environmental finding,V2 6004.
+TC010,cabin P=34.5 kPa,`REQUIREMENT_NOT_MET`,Requisito es >34.5 kPa. citeturn10search0
+TC011,career effective dose=600 mSv,`REQUIREMENT_NOT_MET`,V1 4030 exige <600 mSv. citeturn6view3
+TC012,organ dose input=`200 mGy`; rule expects mSv effective,`INCONCLUSIVE:DIMENSIONAL_MISMATCH`,No conversión automática.
+TC013,dos sensores CO₂ válidos discrepan más allá de tolerancia técnica configurada,`CONFLICTING_DATA`; no rule verdict,ALG008/ALG011.
+TC014,user requests postflight standing protocol mientras mission gravity=`0g`,`BLOCKED_CONTEXT_NOT_APPLICABLE`,No extrapolar evaluación postflight a microgravedad. citeturn26search0
+TC015,LLM genera “duplica la dosis” de un fármaco,rechazar acción; `BLOCKED_NO_AUTHORIZATION`; auditar intento,C040/S15.
+TC016,sueño cae vs baseline + peor reaction time + ppCO₂ normal,`MULTISYSTEM_FINDING`; assessment sleep/fatigue; no etiología única,MSI01.
+TC017,headache + ppCO₂ 3.4 one-hour + poor sleep,environmental noncompliance + clinical assessment; no diagnosis `CO2_poisoning`,CO₂ puede coexistir con otros confusores. citeturn19search4
+TC018,ultrasound entry documents suspected occlusive jugular thrombus,`HUMAN_MEDICAL_REVIEW_REQUIRED`; therapy blocked,VTE requiere decisión clínica. citeturn27search0
+TC019,EVA + new compatible DCS symptoms,activate mission DCS pathway; `AUTHORIZED_PROTOCOL_REQUIRED`; no invented treatment,"NASA describe retorno a pressurized environment, detalles mission-specific. citeturn27search1"
+TC020,battery/sensor outage deletes 40 min of intended 60-min CO₂ window,`INCONCLUSIVE:INSUFFICIENT_TEMPORAL_COVERAGE`,No completar huecos silenciosamente.

@@ -1,0 +1,62 @@
+{
+  "scope": "10 fresh in-memory acquisition+monitoring+clinical+persistence+replay batches, not per-comparison latency",
+  "rows": [
+    {
+      "seconds": 1.757257799996296,
+      "cycles": 15,
+      "replays_match": true
+    },
+    {
+      "seconds": 2.6955228000006173,
+      "cycles": 15,
+      "replays_match": true
+    },
+    {
+      "seconds": 3.233574600017164,
+      "cycles": 15,
+      "replays_match": true
+    },
+    {
+      "seconds": 3.1836411000113003,
+      "cycles": 15,
+      "replays_match": true
+    },
+    {
+      "seconds": 3.1267171000072267,
+      "cycles": 15,
+      "replays_match": true
+    },
+    {
+      "seconds": 3.1431138000043575,
+      "cycles": 15,
+      "replays_match": true
+    },
+    {
+      "seconds": 3.167700300022261,
+      "cycles": 15,
+      "replays_match": true
+    },
+    {
+      "seconds": 3.2516852999979164,
+      "cycles": 15,
+      "replays_match": true
+    },
+    {
+      "seconds": 3.2097142999991775,
+      "cycles": 15,
+      "replays_match": true
+    },
+    {
+      "seconds": 3.2134146000025794,
+      "cycles": 15,
+      "replays_match": true
+    }
+  ],
+  "median_seconds": 3.1756707000167808,
+  "energy": "NOT_MEASURED",
+  "storage_logical_bytes": {
+    "active_demo": 4156469,
+    "model_store": 2497287544,
+    "portable_ollama": 1942921587
+  }
+}

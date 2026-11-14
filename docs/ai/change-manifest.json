@@ -1,0 +1,20 @@
+{
+  "version": "0.6.0",
+  "files": {
+    "vigile/conversational.py": "ebbee3bc59846644e0ad996392c6daa9648fb7651c5e676e046a6606a25154a8",
+    "vigile/offline_library.py": "0cb16a7d71dad25b1a04d7f3927366bdcfb5bb73154d69d0084a573dac131a2d",
+    "vigile/local_runtime.py": "a2874c9a5d046f9c04db9ecd7b6e178fc5adfbdbb1877b63696eb275a7276a08",
+    "vigile/local_assistant.py": "574aff7320163c421433223fe92162c3270cf233fced6791d7113d5c65a272e8",
+    "vigile/portal.py": "b41aad4714df6bbbff8ea00ef1ff205fef7040b88667eba4accda00b4442d750",
+    "vigile/web/app.js": "c1c66b37a84dd86e78823796810254279371680ea0eef65523e09bb0e3a5f705",
+    "vigile/web/index.html": "c2aba7644ef5b3a794c299de873a873afd670de86a0cd8ae249a9ff205df453a",
+    "tests/test_conversational.py": "4a9ef1871e4cafe33fd4776d2395db22d7303c0fad4bab0a1e9d3148ae5a1037",
+    "vigile/__init__.py": "c838729e2a0e7854b4c093e321b110dff99b2398328bfa03fc61bfea753fc906",
+    "vigile/api.py": "92dd0a2e415738b05e2498796662fb69aaff9f7437da0ae131edfa842dae5731",
+    "vigile/service.py": "24754facc792cd48cabb9d46e0ef0cae406cee60c084198fe1f4fb6ff272d99c",
+    "pyproject.toml": "4a1daf16587f3d685967077b67ffe0e4104fd3a3efe8001f91d8d75484815ed6",
+    "tools/download_local_ai.py": "a0e8398580c21ee79fef1c34b5ee0976c2c1528acba51af5ca0e889a2976e00b"
+  },
+  "clinical_rules_changed": false,
+  "runtime_blocker": "llama-server.exe missing after real inference; cause unresolved; no automatic restore"
+}

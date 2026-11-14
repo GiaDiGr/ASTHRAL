@@ -1,0 +1,16 @@
+{
+  "synthetic": true,
+  "split": "DEVELOPMENT",
+  "cases": [
+    {
+      "id": "dev-001",
+      "question": "Explain spaceflight cardiovascular deconditioning literature.",
+      "topic": "cardiovascular"
+    },
+    {
+      "id": "dev-002",
+      "question": "Show public research on sleep and fatigue.",
+      "topic": "sleep_fatigue"
+    }
+  ]
+}

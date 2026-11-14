@@ -1,0 +1,31 @@
+{
+  "backup": {
+    "format": "VIGILE_SQLITE_BACKUP_1",
+    "source": "C:\\Users\\Gianni\\Desktop\\Vigile\\engine\\data\\portal-v090-release\\vigile.sqlite3",
+    "database": "vigile.sqlite3",
+    "sha256": "24dc4787a1d14f714c578bdf8399f29033214547ebe1075f8ad48ffdea04790b",
+    "state": {
+      "record_sequence": 244,
+      "record_count": 244,
+      "records_hash": "906291208b74476602d22c041e61992580ea7ad1b57b8bb596ce61ce5d9c18f1",
+      "audit_sequence": 250,
+      "audit_hash": "0e193dc1ebab2c4bb3af4ba89d2705b2e63e2e12fa06c98386f1383712ba327a"
+    },
+    "sqlite_encryption": "NONE"
+  },
+  "restore": {
+    "format": "VIGILE_SQLITE_BACKUP_1",
+    "source": "C:\\Users\\Gianni\\Desktop\\Vigile\\engine\\data\\backups\\v090-before-v010\\vigile.sqlite3",
+    "database": "vigile.sqlite3",
+    "sha256": "24dc4787a1d14f714c578bdf8399f29033214547ebe1075f8ad48ffdea04790b",
+    "state": {
+      "record_sequence": 244,
+      "record_count": 244,
+      "records_hash": "906291208b74476602d22c041e61992580ea7ad1b57b8bb596ce61ce5d9c18f1",
+      "audit_sequence": 250,
+      "audit_hash": "0e193dc1ebab2c4bb3af4ba89d2705b2e63e2e12fa06c98386f1383712ba327a"
+    },
+    "sqlite_encryption": "NONE"
+  },
+  "states_equal": true
+}

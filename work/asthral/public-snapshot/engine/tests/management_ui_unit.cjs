@@ -1,0 +1,18 @@
+// Simulated DOM renderer tests, not a real-browser/accessibility inspection.
+const vm=require('node:vm'),fs=require('node:fs'),assert=require('node:assert/strict'),path=require('node:path');
+const report=JSON.parse(fs.readFileSync(path.join(__dirname,'fixtures/management-v101-report.json'),'utf8'));
+const code=fs.readFileSync(path.join(__dirname,'../vigile/web/management.js'),'utf8');
+function harness(selected){
+ const nodes={};class N{constructor(tag,text){this.tag=tag;this.text=text||'';this.children=[];this.value='';this.dataset={};}replaceChildren(...args){this.children=[];this.append(...args);}append(...args){this.children.push(...args);}remove(){}}
+ const node=id=>nodes[id]??=(new N('div'));
+ const c={selected,missionFrames:[],selectedCycleId:null,currentCycle:()=>c.dashboard.monitoring?.at(-1),message:()=>{},showView:()=>{},loadSubject:async()=>{},names:{},displayNumber:String,dashboard:{profile:{id:'clinical-crew',mission_id:'clinical-earth'},monitoring:[report.monitoring],evaluations:report.scenarios.map(s=>s.evaluation),findings:[],management_records:report.management_records,measurements:[],mission:{phase:'PRE_MISSION'},countermeasure_documents:[]},document:{getElementById:node},$:node,el:(t,s)=>new N(t,s),label:s=>s,technical:(parent,title,value)=>parent.append(new N('details',title+' '+JSON.stringify(value))),table:(headers,rows)=>new N('table',JSON.stringify({headers,rows})),originalClinical:0,originalMonitoring:0,renderPersistentAlert:()=>{},renderEvaluation:()=>{c.originalClinical++;},renderMonitoring:()=>{c.originalMonitoring++;},Object,JSON,Set,String};vm.createContext(c);vm.runInContext(code,c);
+ const text=n=>[n.text||'',...n.children.map(x=>typeof x==='string'?x:text(x))].join(' ');
+ return {c,nodes,text};
+}
+{const h=harness(report.scenarios[0].evaluation);h.c.renderEvaluation();const text=h.text(h.nodes['protocol-list']);assert.match(text,/POTASSIUM/);assert.match(text,/AUTHORIZATION_REQUIRED/);assert.match(text,/does not automatically contraindicate/);assert.equal(h.c.originalClinical,1);}
+{const h=harness(report.scenarios[1].evaluation);h.c.renderEvaluation();assert.match(h.text(h.nodes['protocol-list']),/RESOURCE_UNAVAILABLE/);}
+{const h=harness(report.scenarios[4].evaluation);h.c.renderEvaluation();assert.match(h.text(h.nodes['protocol-list']),/Urgent suspicion recorded/);}
+{const h=harness(report.monitoring.clinical_evaluations.DKA);h.c.renderEvaluation();const text=h.text(h.nodes['protocol-list']);assert.match(text,/HUMAN_REPORTED_PERFORMED/);assert.match(text,/did not authorize or execute treatment or verify efficacy/);}
+{const h=harness({id:'legacy'});h.c.renderEvaluation();assert.match(h.text(h.nodes['protocol-list']),/reinterpreted/i);}
+{const h=harness({id:'none'});h.c.dashboard.countermeasure_documents=report.countermeasure_documents;h.c.dashboard.measurements=[{measurement:{variable:'physiology.strength'}},{measurement:{variable:'radiation.interval_effective_dose'}},{measurement:{variable:'sleep.duration'}}];h.c.dashboard.mission.phase='POST_MISSION';h.c.dashboard.monitoring=[{id:'synthetic-dom-only',subject_id:'clinical-crew',mission_id:'clinical-earth',domains:[{domain:'test',limitations:[],indicators:['physiology.strength','radiation.interval_effective_dose','sleep.duration'].map(variable=>({variable,value:1,state:'DESCRIPTIVE_AVAILABLE',unit:'test',limitations:[]}))}]}];h.c.renderMonitoring();const text=h.text(h.nodes['space-monitoring']);assert.match(text,/C002/);assert.match(text,/C032/);assert.match(text,/C005/);assert.doesNotMatch(text,/C009/);assert.equal(h.c.originalMonitoring,1);}
+console.log('6 simulated DOM management scenarios passed; no real-browser or microphone claim.');

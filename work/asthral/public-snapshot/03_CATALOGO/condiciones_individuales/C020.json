@@ -1,0 +1,32 @@
+{
+  "condition_id": "C020",
+  "catalog_record": {
+    "condition_id": "C020",
+    "name_specialty": "Infección/host–microorganism interaction / infeccioso",
+    "description_spaceflight": "Microbiomas y huésped pueden cambiar en el ambiente espacial; infecciones forman parte de condiciones IMM.",
+    "risks_symptoms": "Entorno cerrado, microbioma, inmunidad.",
+    "biomarkers_sensors_tests": "Temperatura, síntomas, cultivos/PCR/lab según recursos.",
+    "baselines_environment_interactions": "Historia y baseline; calidad aire/agua.",
+    "primary_evidence": "S03, S17. citeturn18search0turn21search1",
+    "limits_authorizations_state": "Tratamiento antimicrobiano requiere protocolo médico. `RMA`."
+  },
+  "clinical_pathway_profile_as_published": "**P:** higiene/aire/agua/contención; **M:** síntomas+ambiente; **Q:** muestra/sensor; **D:** screening autorizado; **A/DD:** etiología infecciosa vs ambiental; **T:** médico; **I:** antimicrobianos bloqueados sin protocolo; **R/F:** respuesta/recurrencia; **G:** no modelo causal individual.",
+  "coverage_states": {
+    "prevention": "ES",
+    "monitoring": "ES",
+    "data_quality": "ES",
+    "detection": "RV",
+    "assessment": "RV",
+    "differential_diagnosis": "RV",
+    "triage": "RMA",
+    "intervention_authorized": "RMA",
+    "recovery": "RV",
+    "follow_up": "RV",
+    "prognosis": "RO"
+  },
+  "source_ids": [
+    "S03",
+    "S17"
+  ],
+  "NOTICE": "Pathway text is an outline; not an authorized diagnostic or treatment protocol."
+}

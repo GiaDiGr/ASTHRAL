@@ -1,0 +1,216 @@
+[
+  {
+    "name": "annotated-doc",
+    "version": "0.0.5",
+    "license_expression": "MIT",
+    "license_metadata": null,
+    "license_files": [
+      "annotated_doc-0.0.5.dist-info/licenses/LICENSE"
+    ]
+  },
+  {
+    "name": "annotated-types",
+    "version": "0.8.0",
+    "license_expression": "MIT",
+    "license_metadata": null,
+    "license_files": [
+      "annotated_types-0.8.0.dist-info/licenses/LICENSE"
+    ]
+  },
+  {
+    "name": "anyio",
+    "version": "4.15.1",
+    "license_expression": "MIT",
+    "license_metadata": null,
+    "license_files": [
+      "anyio-4.15.1.dist-info/licenses/LICENSE"
+    ]
+  },
+  {
+    "name": "certifi",
+    "version": "2026.7.22",
+    "license_expression": null,
+    "license_metadata": "MPL-2.0",
+    "license_files": [
+      "certifi-2026.7.22.dist-info/licenses/LICENSE"
+    ]
+  },
+  {
+    "name": "click",
+    "version": "8.5.0",
+    "license_expression": "BSD-3-Clause",
+    "license_metadata": null,
+    "license_files": [
+      "click-8.5.0.dist-info/licenses/LICENSE.txt"
+    ]
+  },
+  {
+    "name": "colorama",
+    "version": "0.4.6",
+    "license_expression": null,
+    "license_metadata": null,
+    "license_files": [
+      "colorama-0.4.6.dist-info/licenses/LICENSE.txt"
+    ]
+  },
+  {
+    "name": "fastapi",
+    "version": "0.143.1",
+    "license_expression": "MIT",
+    "license_metadata": null,
+    "license_files": [
+      "fastapi-0.143.1.dist-info/licenses/LICENSE"
+    ]
+  },
+  {
+    "name": "h11",
+    "version": "0.16.0",
+    "license_expression": null,
+    "license_metadata": "MIT",
+    "license_files": [
+      "h11-0.16.0.dist-info/licenses/LICENSE.txt"
+    ]
+  },
+  {
+    "name": "httpcore",
+    "version": "1.0.9",
+    "license_expression": "BSD-3-Clause",
+    "license_metadata": null,
+    "license_files": [
+      "httpcore-1.0.9.dist-info/licenses/LICENSE.md"
+    ]
+  },
+  {
+    "name": "httpx",
+    "version": "0.28.1",
+    "license_expression": null,
+    "license_metadata": "BSD-3-Clause",
+    "license_files": [
+      "httpx-0.28.1.dist-info/licenses/LICENSE.md"
+    ]
+  },
+  {
+    "name": "idna",
+    "version": "3.20",
+    "license_expression": "BSD-3-Clause",
+    "license_metadata": null,
+    "license_files": [
+      "idna-3.20.dist-info/licenses/LICENSE.md"
+    ]
+  },
+  {
+    "name": "iniconfig",
+    "version": "2.3.1",
+    "license_expression": "MIT",
+    "license_metadata": null,
+    "license_files": [
+      "iniconfig-2.3.1.dist-info/licenses/LICENSE"
+    ]
+  },
+  {
+    "name": "opentelemetry-api",
+    "version": "1.45.1",
+    "license_expression": "Apache-2.0",
+    "license_metadata": null,
+    "license_files": [
+      "opentelemetry_api-1.45.1.dist-info/licenses/LICENSE"
+    ]
+  },
+  {
+    "name": "packaging",
+    "version": "26.3",
+    "license_expression": "Apache-2.0 OR BSD-2-Clause",
+    "license_metadata": null,
+    "license_files": [
+      "packaging-26.3.dist-info/licenses/LICENSE",
+      "packaging-26.3.dist-info/licenses/LICENSE.APACHE",
+      "packaging-26.3.dist-info/licenses/LICENSE.BSD",
+      "packaging/licenses/__init__.py",
+      "packaging/licenses/__pycache__/__init__.cpython-313.pyc",
+      "packaging/licenses/__pycache__/_spdx.cpython-313.pyc",
+      "packaging/licenses/_spdx.py"
+    ]
+  },
+  {
+    "name": "pluggy",
+    "version": "1.6.0",
+    "license_expression": null,
+    "license_metadata": "MIT",
+    "license_files": [
+      "pluggy-1.6.0.dist-info/licenses/LICENSE"
+    ]
+  },
+  {
+    "name": "pydantic",
+    "version": "2.14.1",
+    "license_expression": "MIT",
+    "license_metadata": null,
+    "license_files": [
+      "pydantic-2.14.1.dist-info/licenses/LICENSE"
+    ]
+  },
+  {
+    "name": "pydantic_core",
+    "version": "2.50.1",
+    "license_expression": "MIT",
+    "license_metadata": null,
+    "license_files": [
+      "pydantic_core-2.50.1.dist-info/licenses/LICENSE"
+    ]
+  },
+  {
+    "name": "Pygments",
+    "version": "2.21.0",
+    "license_expression": "BSD-2-Clause",
+    "license_metadata": null,
+    "license_files": [
+      "pygments-2.21.0.dist-info/licenses/AUTHORS",
+      "pygments-2.21.0.dist-info/licenses/LICENSE"
+    ]
+  },
+  {
+    "name": "pytest",
+    "version": "9.1.1",
+    "license_expression": "MIT",
+    "license_metadata": null,
+    "license_files": [
+      "pytest-9.1.1.dist-info/licenses/LICENSE"
+    ]
+  },
+  {
+    "name": "starlette",
+    "version": "1.8.0",
+    "license_expression": "BSD-3-Clause",
+    "license_metadata": null,
+    "license_files": [
+      "starlette-1.8.0.dist-info/licenses/LICENSE.md"
+    ]
+  },
+  {
+    "name": "typing-inspection",
+    "version": "0.4.4",
+    "license_expression": "MIT",
+    "license_metadata": null,
+    "license_files": [
+      "typing_inspection-0.4.4.dist-info/licenses/LICENSE"
+    ]
+  },
+  {
+    "name": "typing_extensions",
+    "version": "4.16.0",
+    "license_expression": "PSF-2.0",
+    "license_metadata": null,
+    "license_files": [
+      "typing_extensions-4.16.0.dist-info/licenses/LICENSE"
+    ]
+  },
+  {
+    "name": "uvicorn",
+    "version": "0.54.0",
+    "license_expression": "BSD-3-Clause",
+    "license_metadata": null,
+    "license_files": [
+      "uvicorn-0.54.0.dist-info/licenses/LICENSE.md"
+    ]
+  }
+]

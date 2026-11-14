@@ -1,0 +1,378 @@
+{
+  "version": "1.0.0-research-r2",
+  "client_date": "2026-10-26",
+  "implementation_hash": "f01f897bfd3e07328d25817ae6a9062d47cc9e12b66783ad6340286df70e09bf",
+  "knowledge_hash": "b8c568bd645154e5fd67630c7a670ca53904dc04f54904315047a89923839d4e",
+  "tests": {
+    "name": "pytest",
+    "errors": "0",
+    "failures": "0",
+    "skipped": "0",
+    "tests": "633",
+    "time": "225.504",
+    "timestamp": "2026-10-26T21:47:36.765989-05:00",
+    "hostname": "Gianni"
+  },
+  "baseline_tests": 582,
+  "mission": {
+    "cycles": 26,
+    "request_hash": "e50c52c69968daa39c81253f06473bd193a4569b828fc0f64119e3206fca9546",
+    "semantic_hash": "f81b333c7f06a9f1262e5b2b953c768e46f7d4c846b9cbbad2f3cabf042f1c76",
+    "total_seconds": 23.011060300000054,
+    "database_bytes": 37883904,
+    "performance": {
+      "cycle_latency_ms": [
+        21.052099999906204,
+        18.267100000002756,
+        20.7133999999769,
+        21.35050000015326,
+        24.935499999855892,
+        28.600800000049276,
+        48.798000000033426,
+        53.562599999850136,
+        98.68019999998978,
+        140.47340000001896,
+        103.14999999991414,
+        143.85670000001483,
+        155.139699999836,
+        268.12840000002325,
+        209.6260999999231,
+        309.98380000005454,
+        258.9794999998958,
+        326.081300000169,
+        369.7752999999011,
+        424.5748000000731,
+        480.8794999999009,
+        513.6342000000695,
+        454.7569999999723,
+        485.57930000015403,
+        644.6646000001692,
+        628.0930000000353
+      ],
+      "maximum_ms": 644.6646000001692,
+      "mean_ms": 240.51295384615165,
+      "scope": "Local ASGI TestClient including SQLite, excludes network and LLM; not flight performance",
+      "cpu_seconds": 20.796875,
+      "process": {
+        "pid": 17844,
+        "working_set_bytes": 128737280,
+        "private_bytes": 113287168,
+        "cpu_seconds": 21.625
+      },
+      "available_memory_bytes": 11630899200,
+      "energy": "NOT_MEASURED",
+      "gpu": "NOT_USED_BY_OFFLINE_MISSION"
+    }
+  },
+  "replays": {
+    "current_monitoring": 26,
+    "current_clinical": 50,
+    "current_matches": true,
+    "archived_v011_matches": 76
+  },
+  "voice": {
+    "metrics": {
+      "en": {
+        "stt_median_seconds": 2.0926494000086677,
+        "tts_median_seconds": 0.7416138999979012,
+        "audio_min_seconds": 1.425,
+        "audio_max_seconds": 4.695,
+        "utterances": 16,
+        "corpus_wer": 0.1111111111111111,
+        "exact_transcripts": 12,
+        "negation_flags": 0
+      },
+      "es": {
+        "stt_median_seconds": 0.8983160999996471,
+        "tts_median_seconds": 0.811277250002604,
+        "audio_min_seconds": 1.55,
+        "audio_max_seconds": 4.87,
+        "utterances": 16,
+        "corpus_wer": 0.2465753424657534,
+        "exact_transcripts": 8,
+        "negation_flags": 0
+      }
+    },
+    "storage": {
+      "archives_bytes": 81023764,
+      "expanded_model_bytes": 131185565
+    },
+    "cpu_seconds_32_utterances": 54.9375,
+    "before": {
+      "monotonic": 88859.1894419,
+      "available_ram_bytes": 6104047616,
+      "processes": [
+        {
+          "pid": 40516,
+          "working_set_bytes": 23756800,
+          "private_bytes": 14225408,
+          "cpu_seconds": 0.171875
+        }
+      ],
+      "energy": "NOT_MEASURED",
+      "gpu_global": {
+        "vram_used_MiB": 3948,
+        "gpu_utilization_percent": 0,
+        "memory_utilization_percent": 0
+      }
+    },
+    "after": {
+      "monotonic": 88943.5430426,
+      "available_ram_bytes": 6532108288,
+      "processes": [
+        {
+          "pid": 40516,
+          "working_set_bytes": 168284160,
+          "private_bytes": 570093568,
+          "cpu_seconds": 55.109375
+        }
+      ],
+      "energy": "NOT_MEASURED",
+      "gpu_global": {
+        "vram_used_MiB": 3948,
+        "gpu_utilization_percent": 0,
+        "memory_utilization_percent": 0
+      }
+    },
+    "physical_microphone_test": "INTERRUPTED_NOT_VERIFIED",
+    "loudspeaker_intelligibility_human_rating": "NOT_MEASURED",
+    "synthetic_audio_not_clinical_validation": true
+  },
+  "rag": {
+    "original_development_top3": 4,
+    "original_development_top5": 8,
+    "new_development_top3": 10,
+    "new_development_top5": 11,
+    "n": 12,
+    "additional_top3": 4,
+    "additional_top5": 6,
+    "additional_n": 8,
+    "independent_human_relevance_review": false
+  },
+  "reserved": {
+    "candidate": "R1",
+    "cases": 12,
+    "generated_cases": 5,
+    "execution_errors": 0,
+    "used": true,
+    "r2_not_unseen_evaluated": true,
+    "limitations": [
+      "R1 generic cross-context/risk requests not explicitly rejected; no scope leakage or risk estimate",
+      "Descriptive output sometimes irrelevant to question",
+      "Post-bank guards/routing changes covered by regressions; bank never rerun"
+    ],
+    "outputs_unchanged": true,
+    "audit_valid": true
+  },
+  "e2e": [
+    {
+      "scenario": "A",
+      "mode": "FULL",
+      "language": "en",
+      "status": "ANSWERED",
+      "generated_sentences": 2,
+      "stt_seconds": 4.823846900000035,
+      "tts_seconds": 0.9682330999999067,
+      "end_reference_capture_to_wav_ready_seconds": 10.318741000000045,
+      "timings": {
+        "retrieval_and_context_seconds": 0.8757410000000618,
+        "server_response_seconds": 4.441271599999936
+      },
+      "model_metrics": {
+        "elapsed_ms": 3237.8830000000107,
+        "usage": {},
+        "timings": {},
+        "load_duration_ns": 22145100,
+        "total_duration_ns": 3204990000,
+        "prompt_eval_count": 695,
+        "eval_count": 131,
+        "eval_duration_ns": 2437422000,
+        "generation_seconds": 3.2382007999999587,
+        "deterministic_verification_seconds": 0.007306000000198765,
+        "generation_and_deterministic_validation_seconds": 3.2455090999999356
+      },
+      "clinical_hashes_unchanged": true
+    },
+    {
+      "scenario": "B",
+      "mode": "FULL",
+      "language": "en",
+      "status": "DETERMINISTIC_CLINICAL_EXPLANATION",
+      "generated_sentences": 0,
+      "stt_seconds": 3.3990624999999,
+      "tts_seconds": 0.986492300000009,
+      "end_reference_capture_to_wav_ready_seconds": 5.328372400000035,
+      "timings": {
+        "retrieval_and_context_seconds": 0.7901670999999624,
+        "server_response_seconds": 0.852503299999853
+      },
+      "model_metrics": null,
+      "clinical_hashes_unchanged": true
+    },
+    {
+      "scenario": "C",
+      "mode": "FULL",
+      "language": "en",
+      "status": "DETERMINISTIC_DATA_SUFFICIENCY",
+      "generated_sentences": 0,
+      "stt_seconds": 3.3895457999999508,
+      "tts_seconds": 1.0045920000000024,
+      "end_reference_capture_to_wav_ready_seconds": 5.314683500000001,
+      "timings": {
+        "retrieval_and_context_seconds": 0.7699780999998893,
+        "server_response_seconds": 0.8237758000000213
+      },
+      "model_metrics": null,
+      "clinical_hashes_unchanged": true
+    },
+    {
+      "scenario": "D",
+      "mode": "FULL",
+      "language": "es",
+      "status": "ANSWERED",
+      "generated_sentences": 2,
+      "stt_seconds": 1.94645730000002,
+      "tts_seconds": 1.3553077999999914,
+      "end_reference_capture_to_wav_ready_seconds": 8.067324399999961,
+      "timings": {
+        "retrieval_and_context_seconds": 1.1742421000001286,
+        "server_response_seconds": 4.66226759999995
+      },
+      "model_metrics": {
+        "elapsed_ms": 3299.9827999999525,
+        "usage": {},
+        "timings": {},
+        "load_duration_ns": 29999600,
+        "total_duration_ns": 3258927500,
+        "prompt_eval_count": 714,
+        "eval_count": 144,
+        "eval_duration_ns": 2595972000,
+        "generation_seconds": 3.300240600000052,
+        "deterministic_verification_seconds": 0.004683299999896917,
+        "generation_and_deterministic_validation_seconds": 3.3049257000000125
+      },
+      "clinical_hashes_unchanged": true
+    },
+    {
+      "scenario": "A-es",
+      "mode": "FULL",
+      "language": "es",
+      "status": "ANSWERED",
+      "generated_sentences": 2,
+      "stt_seconds": 2.7549386000000595,
+      "tts_seconds": 1.0701927999998588,
+      "end_reference_capture_to_wav_ready_seconds": 8.2692148000001,
+      "timings": {
+        "retrieval_and_context_seconds": 0.9766835999998875,
+        "server_response_seconds": 4.295054899999968
+      },
+      "model_metrics": {
+        "elapsed_ms": 3092.779500000006,
+        "usage": {},
+        "timings": {},
+        "load_duration_ns": 29669600,
+        "total_duration_ns": 3062694000,
+        "prompt_eval_count": 705,
+        "eval_count": 142,
+        "eval_duration_ns": 2377642000,
+        "generation_seconds": 3.093014900000071,
+        "deterministic_verification_seconds": 0.00759979999997995,
+        "generation_and_deterministic_validation_seconds": 3.100616000000173
+      },
+      "clinical_hashes_unchanged": true
+    },
+    {
+      "scenario": "LOW",
+      "mode": "LOW_POWER",
+      "language": "en",
+      "status": "ANSWERED",
+      "generated_sentences": 2,
+      "stt_seconds": 3.777189700000008,
+      "tts_seconds": 0.9044902000000548,
+      "end_reference_capture_to_wav_ready_seconds": 14.348059000000148,
+      "timings": {
+        "retrieval_and_context_seconds": 0.8779174999999668,
+        "server_response_seconds": 9.547178699999904
+      },
+      "model_metrics": {
+        "elapsed_ms": 8485.923200000116,
+        "usage": {},
+        "timings": {},
+        "load_duration_ns": 5859522300,
+        "total_duration_ns": 8433268500,
+        "prompt_eval_count": 695,
+        "eval_count": 131,
+        "eval_duration_ns": 2204446000,
+        "generation_seconds": 8.486160599999948,
+        "deterministic_verification_seconds": 0.000167199999850709,
+        "generation_and_deterministic_validation_seconds": 8.486328299999968
+      },
+      "clinical_hashes_unchanged": true
+    },
+    {
+      "scenario": "CRITICAL",
+      "mode": "CRITICAL",
+      "language": "en",
+      "status": "EXTRACTIVE_ONLY",
+      "generated_sentences": 0,
+      "stt_seconds": 3.6847846000000573,
+      "tts_seconds": 1.7330577999998695,
+      "end_reference_capture_to_wav_ready_seconds": 6.545753399999967,
+      "timings": {
+        "retrieval_and_context_seconds": 0.906611600000133,
+        "server_response_seconds": 1.0060456999999587
+      },
+      "model_metrics": null,
+      "clinical_hashes_unchanged": true
+    },
+    {
+      "scenario": "OUTAGE",
+      "mode": "FULL",
+      "language": "en",
+      "status": "EXTRACTIVE_ONLY",
+      "generated_sentences": 0,
+      "stt_seconds": 4.5899930000000495,
+      "tts_seconds": 1.0224940000000515,
+      "end_reference_capture_to_wav_ready_seconds": 8.836085099999991,
+      "timings": {
+        "retrieval_and_context_seconds": 0.9447159000001193,
+        "server_response_seconds": 3.093260900000132
+      },
+      "model_metrics": null,
+      "clinical_hashes_unchanged": true
+    },
+    {
+      "scenario": "RESTORED",
+      "mode": "FULL",
+      "language": "en",
+      "status": "ANSWERED",
+      "generated_sentences": 2,
+      "stt_seconds": 4.345515700000078,
+      "tts_seconds": 0.9332382000000052,
+      "end_reference_capture_to_wav_ready_seconds": 15.147758500000009,
+      "timings": {
+        "retrieval_and_context_seconds": 0.8341731000000436,
+        "server_response_seconds": 9.730826399999842
+      },
+      "model_metrics": {
+        "elapsed_ms": 8716.15440000005,
+        "usage": {},
+        "timings": {},
+        "load_duration_ns": 6031741500,
+        "total_duration_ns": 8660199400,
+        "prompt_eval_count": 695,
+        "eval_count": 131,
+        "eval_duration_ns": 2245193000,
+        "generation_seconds": 8.716387700000041,
+        "deterministic_verification_seconds": 0.00020810000000892614,
+        "generation_and_deterministic_validation_seconds": 8.716596299999992
+      },
+      "clinical_hashes_unchanged": true
+    }
+  ],
+  "audit_anchor": true,
+  "clinical_execution": "BLOCKED",
+  "clinical_validation": false,
+  "operational_validation": false,
+  "space_validation": false
+}

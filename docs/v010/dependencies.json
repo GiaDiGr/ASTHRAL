@@ -1,0 +1,14 @@
+{
+  "python": "3.13.16 (tags/v3.13.16:cbc944f, Sep 30 2026, 19:17:50) [MSC v.1944 64 bit (AMD64)]",
+  "packages": {
+    "fastapi": "0.143.1",
+    "pydantic": "2.14.1",
+    "uvicorn": "0.54.0",
+    "httpx": "0.28.1",
+    "pytest": "9.1.1"
+  },
+  "new_external_dependencies": [],
+  "sqlite_encrypted": false,
+  "sqlcipher_installed": false,
+  "dpapi_requires": "Windows current user account"
+}

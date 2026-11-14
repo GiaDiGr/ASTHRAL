@@ -1,0 +1,16 @@
+{
+  "desktop_iab_chromium": {
+    "clinical": "VERIFIED_86_OF_86",
+    "sqlite_crypto": "TESTED_WITH_LIMITS",
+    "minilm": "VERIFIED_6_CHUNKS",
+    "qwen_0_5b": "VERIFIED_ONE_QUOTATION",
+    "qwen_4b": "FAILED_DOWNLOAD_PENDING",
+    "voice": "FAILED_INITIALIZATION",
+    "offline": "ORIGIN_UNAVAILABLE_VERIFIED_NETWORK_DISCONNECTION_PENDING"
+  },
+  "s22_ultra_android_chrome": "PHYSICAL_TEST_PENDING",
+  "iphone_safari": "PHYSICAL_TEST_PENDING",
+  "ipad_safari": "PHYSICAL_TEST_PENDING",
+  "macos_safari": "PHYSICAL_TEST_PENDING",
+  "responsive_viewports": "VERIFIED_CHROMIUM_ONLY"
+}

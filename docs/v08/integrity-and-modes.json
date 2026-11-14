@@ -1,0 +1,30 @@
+{
+  "old_new_clinical_vectors_equal": true,
+  "clinical_fields": [
+    "diagnostic_status",
+    "urgency",
+    "confirmation_status",
+    "protocol_status",
+    "treatment_status"
+  ],
+  "original_scientific_files": 105,
+  "original_clinical_files": 8,
+  "implementation_hash": "36a2d92338ed365d45ab99084462af99b4c5179bf53020589862846e75057fe5",
+  "network": "LOOPBACK_ONLY_ENFORCED",
+  "clinical_validation": false,
+  "portal_modes": {
+    "FULL": {
+      "status": "DETERMINISTIC_DATA_SUFFICIENCY",
+      "inference_attempted": false
+    },
+    "LOW_POWER": {
+      "status": "DETERMINISTIC_DATA_SUFFICIENCY",
+      "inference_attempted": false
+    },
+    "CRITICAL": {
+      "status": "DETERMINISTIC_DATA_SUFFICIENCY",
+      "inference_attempted": false
+    }
+  },
+  "audit_valid": true
+}

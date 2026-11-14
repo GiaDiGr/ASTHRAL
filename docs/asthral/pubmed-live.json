@@ -1,0 +1,170 @@
+{
+  "live_public_request": true,
+  "private_context_supplied": false,
+  "first": {
+    "status": "REMOTE_OPTIONAL",
+    "reason": "PUBLIC_REFERENCES_RETRIEVED",
+    "local_origin": "LOCAL_PINNED",
+    "remote_origin": "REMOTE_UNREVIEWED",
+    "topic_id": "hyperglycemic_consensus",
+    "documents": [
+      {
+        "origin": "REMOTE_UNREVIEWED",
+        "provider": "pubmed",
+        "topic_id": "hyperglycemic_consensus",
+        "title": "Hyperglycemic Crises in Adults With Diabetes: A Consensus Report.",
+        "publisher": "Diabetes care",
+        "url": "https://pubmed.ncbi.nlm.nih.gov/39052901/",
+        "pmid": "39052901",
+        "doi": "10.2337/dci24-0032",
+        "publication_date": "2024 Aug 1",
+        "retrieved_at": "2026-11-04T14:51:53.613314+00:00",
+        "version": "NCBI_PUBMED_ESUMMARY_V2",
+        "excerpt": "Hyperglycemic Crises in Adults With Diabetes: A Consensus Report.",
+        "excerpt_kind": "TITLE_METADATA_ONLY_NOT_FULL_TEXT",
+        "content_hash": "4cef78cef49700904642461db1cf06f7a778deeaa21cb558cd8df8c9a592b4e2",
+        "review_status": "NOT_CLINICALLY_REVIEWED",
+        "limitations": [
+          "NOT_PATIENT_GUIDANCE",
+          "PUBLICATION_DATE_IS_NOT_AUTHORITY",
+          "NOT_ELIGIBLE_FOR_RULE_UPDATES",
+          "NO_CLAIM_OF_FULL_TEXT_REVIEW"
+        ]
+      },
+      {
+        "origin": "REMOTE_UNREVIEWED",
+        "provider": "pubmed",
+        "topic_id": "hyperglycemic_consensus",
+        "title": "Hyperglycaemic crises in adults with diabetes: a consensus report.",
+        "publisher": "Diabetologia",
+        "url": "https://pubmed.ncbi.nlm.nih.gov/38907161/",
+        "pmid": "38907161",
+        "doi": "10.1007/s00125-024-06183-8",
+        "publication_date": "2024 Aug",
+        "retrieved_at": "2026-11-04T14:51:53.613787+00:00",
+        "version": "NCBI_PUBMED_ESUMMARY_V2",
+        "excerpt": "Hyperglycaemic crises in adults with diabetes: a consensus report.",
+        "excerpt_kind": "TITLE_METADATA_ONLY_NOT_FULL_TEXT",
+        "content_hash": "dc01bd3e0f18cc21ee834e90cf83a7fb3f9d3742ec575d5440b5389e63bfc589",
+        "review_status": "NOT_CLINICALLY_REVIEWED",
+        "limitations": [
+          "NOT_PATIENT_GUIDANCE",
+          "PUBLICATION_DATE_IS_NOT_AUTHORITY",
+          "NOT_ELIGIBLE_FOR_RULE_UPDATES",
+          "NO_CLAIM_OF_FULL_TEXT_REVIEW"
+        ]
+      },
+      {
+        "origin": "REMOTE_UNREVIEWED",
+        "provider": "pubmed",
+        "topic_id": "hyperglycemic_consensus",
+        "title": "Hyperglycemic crises in adults: A look at the 2024 consensus report.",
+        "publisher": "Cleveland Clinic journal of medicine",
+        "url": "https://pubmed.ncbi.nlm.nih.gov/40032308/",
+        "pmid": "40032308",
+        "doi": "10.3949/ccjm.92a.24089",
+        "publication_date": "2025 Mar 3",
+        "retrieved_at": "2026-11-04T14:51:53.613939+00:00",
+        "version": "NCBI_PUBMED_ESUMMARY_V2",
+        "excerpt": "Hyperglycemic crises in adults: A look at the 2024 consensus report.",
+        "excerpt_kind": "TITLE_METADATA_ONLY_NOT_FULL_TEXT",
+        "content_hash": "cd1f5492058a1ac6b0df27d6f5d93b0db0635b46ede7782ebd9287532020af84",
+        "review_status": "NOT_CLINICALLY_REVIEWED",
+        "limitations": [
+          "NOT_PATIENT_GUIDANCE",
+          "PUBLICATION_DATE_IS_NOT_AUTHORITY",
+          "NOT_ELIGIBLE_FOR_RULE_UPDATES",
+          "NO_CLAIM_OF_FULL_TEXT_REVIEW"
+        ]
+      }
+    ],
+    "delivery": "LIVE",
+    "elapsed_ms": 1715.68,
+    "model_invocations": 0,
+    "clinical_decisions_changed": false
+  },
+  "second": {
+    "status": "REMOTE_OPTIONAL",
+    "reason": "PUBLIC_CACHE_HIT",
+    "local_origin": "LOCAL_PINNED",
+    "remote_origin": "REMOTE_UNREVIEWED",
+    "topic_id": "hyperglycemic_consensus",
+    "documents": [
+      {
+        "origin": "REMOTE_UNREVIEWED",
+        "provider": "pubmed",
+        "topic_id": "hyperglycemic_consensus",
+        "title": "Hyperglycemic Crises in Adults With Diabetes: A Consensus Report.",
+        "publisher": "Diabetes care",
+        "url": "https://pubmed.ncbi.nlm.nih.gov/39052901/",
+        "pmid": "39052901",
+        "doi": "10.2337/dci24-0032",
+        "publication_date": "2024 Aug 1",
+        "retrieved_at": "2026-11-04T14:51:53.613314+00:00",
+        "version": "NCBI_PUBMED_ESUMMARY_V2",
+        "excerpt": "Hyperglycemic Crises in Adults With Diabetes: A Consensus Report.",
+        "excerpt_kind": "TITLE_METADATA_ONLY_NOT_FULL_TEXT",
+        "content_hash": "4cef78cef49700904642461db1cf06f7a778deeaa21cb558cd8df8c9a592b4e2",
+        "review_status": "NOT_CLINICALLY_REVIEWED",
+        "limitations": [
+          "NOT_PATIENT_GUIDANCE",
+          "PUBLICATION_DATE_IS_NOT_AUTHORITY",
+          "NOT_ELIGIBLE_FOR_RULE_UPDATES",
+          "NO_CLAIM_OF_FULL_TEXT_REVIEW"
+        ]
+      },
+      {
+        "origin": "REMOTE_UNREVIEWED",
+        "provider": "pubmed",
+        "topic_id": "hyperglycemic_consensus",
+        "title": "Hyperglycaemic crises in adults with diabetes: a consensus report.",
+        "publisher": "Diabetologia",
+        "url": "https://pubmed.ncbi.nlm.nih.gov/38907161/",
+        "pmid": "38907161",
+        "doi": "10.1007/s00125-024-06183-8",
+        "publication_date": "2024 Aug",
+        "retrieved_at": "2026-11-04T14:51:53.613787+00:00",
+        "version": "NCBI_PUBMED_ESUMMARY_V2",
+        "excerpt": "Hyperglycaemic crises in adults with diabetes: a consensus report.",
+        "excerpt_kind": "TITLE_METADATA_ONLY_NOT_FULL_TEXT",
+        "content_hash": "dc01bd3e0f18cc21ee834e90cf83a7fb3f9d3742ec575d5440b5389e63bfc589",
+        "review_status": "NOT_CLINICALLY_REVIEWED",
+        "limitations": [
+          "NOT_PATIENT_GUIDANCE",
+          "PUBLICATION_DATE_IS_NOT_AUTHORITY",
+          "NOT_ELIGIBLE_FOR_RULE_UPDATES",
+          "NO_CLAIM_OF_FULL_TEXT_REVIEW"
+        ]
+      },
+      {
+        "origin": "REMOTE_UNREVIEWED",
+        "provider": "pubmed",
+        "topic_id": "hyperglycemic_consensus",
+        "title": "Hyperglycemic crises in adults: A look at the 2024 consensus report.",
+        "publisher": "Cleveland Clinic journal of medicine",
+        "url": "https://pubmed.ncbi.nlm.nih.gov/40032308/",
+        "pmid": "40032308",
+        "doi": "10.3949/ccjm.92a.24089",
+        "publication_date": "2025 Mar 3",
+        "retrieved_at": "2026-11-04T14:51:53.613939+00:00",
+        "version": "NCBI_PUBMED_ESUMMARY_V2",
+        "excerpt": "Hyperglycemic crises in adults: A look at the 2024 consensus report.",
+        "excerpt_kind": "TITLE_METADATA_ONLY_NOT_FULL_TEXT",
+        "content_hash": "cd1f5492058a1ac6b0df27d6f5d93b0db0635b46ede7782ebd9287532020af84",
+        "review_status": "NOT_CLINICALLY_REVIEWED",
+        "limitations": [
+          "NOT_PATIENT_GUIDANCE",
+          "PUBLICATION_DATE_IS_NOT_AUTHORITY",
+          "NOT_ELIGIBLE_FOR_RULE_UPDATES",
+          "NO_CLAIM_OF_FULL_TEXT_REVIEW"
+        ]
+      }
+    ],
+    "delivery": "CACHE_NOT_LIVE",
+    "elapsed_ms": 1.642,
+    "model_invocations": 0,
+    "clinical_decisions_changed": false
+  },
+  "transport_calls": 2,
+  "energy_measured": false
+}

@@ -1,0 +1,26 @@
+{
+  "date": "2026-10-14",
+  "sources": {
+    "consolidated_report": "exported_from_library",
+    "original_rules_report": "exported_from_library",
+    "legacy_reports": "exported_from_library"
+  },
+  "record_counts": {
+    "rules_original_json": 15,
+    "rules_reconstructed_inventory": 10,
+    "03_CATALOGO/condiciones": 44,
+    "03_CATALOGO/rutas_clinicas": 44,
+    "04_ALGORITMOS/algoritmos": 12,
+    "05_SENSORES/sensores_biomarcadores": 28,
+    "06_MULTISISTEMA/interacciones": 12,
+    "07_EVIDENCIAS/fuentes": 38,
+    "07_EVIDENCIAS/extracciones": 24,
+    "08_DATASETS/datasets": 12,
+    "09_TESTS/casos_sinteticos": 20,
+    "02_REGLAS_ORIGINALES_15/inventario_10_reconstruidas": 10,
+    "coverage_rows": 44,
+    "coverage_stages": 11
+  },
+  "does_not_include": "VIGILE_FINAL_BIOMEDICAL_KNOWLEDGE.zip unrecovered",
+  "clinical_use": "RESEARCH_SIMULATION_ONLY"
+}

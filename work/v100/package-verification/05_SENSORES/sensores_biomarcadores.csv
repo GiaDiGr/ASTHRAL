@@ -1,0 +1,29 @@
+variable,units,sensor_type_test,frequency,space_viability,quality_artifacts,baseline
+VO₂max,mL/min/kg,ergoespirometría/directa o método indirecto autorizado,MISSION_DEFINED,Demostrada como variable operativa,mismo método/contexto; ejercicio y motivación confunden,Sí
+Fuerza muscular,"N, kgf o múltiplo BW según test",dinamometría/equipo resistivo,MISSION_DEFINED,Alta,"mismo ejercicio, grupo y técnica",Sí
+BMD cadera,g/cm² / porcentaje baseline,DXA,pre/post según programa,Principalmente ground,posicionamiento/equipo/región,Sí
+BMD columna L1-L4,g/cm²,DXA,programada,Principalmente ground,igual,Sí
+BMD cuello femoral,g/cm²,DXA,programada,Principalmente ground,igual,Sí
+QCT óseo,volumétrica según protocolo,CT/QCT,programada,Ground; implementación vigilancia en evolución,mismo protocolo/segmentación,Sí
+Dosis efectiva,mSv,dosímetro/modelo dosimétrico,continua/acumulativa,Alta,provenance y conversión,Dosis acumulada
+Dosis órgano,mGy o mGy-Eq según requisito,dosimetría,exposición/evento,Alta,nunca mezclar magnitudes,Historial
+ppCO₂,mmHg,monitor ambiental,continuo,Requerida,"calibración, ubicación, cobertura temporal",No clínico
+ppO₂,kPa/mmHg según sistema,monitor ambiental,continuo,Requerida,presión total/contexto,No
+Presión cabina,kPa/psia,sensor atmosférico,continuo,Requerida,calibración/compartimento,No
+Temperatura,°C,ambiental,continuo,Requerida,ubicación,No
+Humedad relativa,%,ambiental,continuo,Requerida,sensor/condensación,No
+Frecuencia cardiaca,bpm,ECG/PPG,continuo o protocolo,Alta,movimiento/PPG perfusión,Sí
+ECG,mV / ritmo,electrodos,evento/protocolo,Alta,artefacto movimiento/contacto,Sí
+Presión arterial,mmHg,cuff/beat-to-beat según protocolo,MISSION_DEFINED,Alta,"postura, gravedad, cuff",Sí
+SpO₂,%,oximetría,evento/protocolo,Alta,movimiento/perfusión,Deseable
+Sueño,"min/h, eficiencia",actigrafía + diario,longitudinal,Alta,wear time/actividad/algoritmo,Sí
+Cognición,tiempo/precisión,test digital validado,programada,Alta,"práctica, versión, dispositivo",Sí
+Agudeza visual/refracción,unidades específicas,optometría,programada,Alta,protocolo consistente,Sí
+Retina/nervio óptico,μm/imágenes,OCT/fondo,programada,Dependiente hardware,alineación/segmentación,Sí
+IOP,mmHg,tonometría,MISSION_DEFINED,Dependiente hardware,método/posición,Sí
+Flujo yugular,velocidad/dirección,ultrasound,indicado/investigación,Demostrada en vuelo,operador/ángulo/respiración,Preferible
+Volumen vesical/riñón,mL/imagen,ultrasound,indicado,Ultrasound usado en ISS,operador/segmentación,Opcional
+Química urinaria,analito-específica,laboratorio,protocolo,Dependiente capacidad,"colección, tiempo, volumen",Sí
+Biomarcadores inmunes,analito-específica,sangre/saliva/orina,investigación/protocolo,Muestreo demostrado,"preanalítica, lote, storage",Sí
+Ruido,dBA/SPL/frecuencia,dosímetro acústico,continuo/periodic,Alta,calibración/frecuencia/ubicación,Ambiental
+Exposición tóxica,agente-específica,detector ambiental,continuo/evento,Agente-dependiente,calibración/cross-sensitivity,Ambiental

@@ -1,0 +1,13 @@
+﻿case_id,reviewer,date,claim_supported,citation_entails_claim,negation_correct,conditions_omitted,subject_mission_correct,diagnosis_vs_authorization_separate,harmful_claim,comments
+audit-01,,,,,,,,,,
+audit-03,,,,,,,,,,
+audit-07,,,,,,,,,,
+audit-08,,,,,,,,,,
+audit-13,,,,,,,,,,
+audit-14,,,,,,,,,,
+audit-16,,,,,,,,,,
+audit-23,,,,,,,,,,
+audit-25,,,,,,,,,,
+audit-30,,,,,,,,,,
+audit-33,,,,,,,,,,
+audit-36,,,,,,,,,,

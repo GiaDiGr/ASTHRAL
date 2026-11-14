@@ -1,0 +1,142 @@
+{
+  "rule_id": "VIGILE-ENV-001",
+  "rule_version": "1.0.0",
+  "title": "Cabin inert diluent gas fraction",
+  "domain": "ENVIRONMENTAL_HEALTH",
+  "condition_id": "CABIN_ATMOSPHERE_COMPOSITION",
+  "purpose": "Evaluate the cabin diluent-gas fraction under the standard balance-oxygen atmosphere assumption.",
+  "rule_kind": "ENVIRONMENTAL_STANDARD_COMPLIANCE",
+  "evidence_class": "NASA_STANDARD",
+  "evidence_status": "DOCUMENTED_AND_COMPUTABLE",
+  "software_validation_status": "REQUIRES_IMPLEMENTATION_VALIDATION",
+  "authorization": {
+    "evaluation": "AUTO_EVALUATION_ALLOWED",
+    "alternate_diluent_interpretation": "REQUIRES_MISSION_AUTHORIZATION",
+    "clinical_action": "REQUIRES_MEDICAL_AUTHORIZATION"
+  },
+  "applicability": {
+    "environment": "HABITABLE_CABIN",
+    "default_diluent_assumption": "NITROGEN"
+  },
+  "inputs": [
+    {
+      "name": "diluent_fraction_percent",
+      "type": "number",
+      "canonical_unit": "%",
+      "required": true
+    },
+    {
+      "name": "diluent_type",
+      "type": "string",
+      "required": true
+    },
+    {
+      "name": "balance_oxygen_assumption_valid",
+      "type": "boolean",
+      "required": true
+    },
+    {
+      "name": "data_quality_status",
+      "type": "enum",
+      "required": true
+    }
+  ],
+  "derived_variables": [],
+  "logic": {
+    "decision": [
+      {
+        "when": "diluent_type != NITROGEN OR balance_oxygen_assumption_valid != true",
+        "result": "REQUIRES_MISSION_AUTHORIZATION"
+      },
+      {
+        "when": "data_quality_status != ACCEPTABLE",
+        "result": "INCONCLUSIVE"
+      },
+      {
+        "when": "diluent_fraction_percent >= 30",
+        "result": "PASS"
+      },
+      {
+        "when": "diluent_fraction_percent < 30",
+        "result": "FAIL_REQUIREMENT"
+      }
+    ]
+  },
+  "thresholds": {
+    "minimum_diluent_fraction": {
+      "value": 30,
+      "unit": "%",
+      "operator": ">="
+    }
+  },
+  "temporal_window": {
+    "type": "VALID_ATMOSPHERE_OBSERVATION",
+    "fixed_sampling_rate_in_V2_6002": false
+  },
+  "confounders": [
+    "alternate diluent gas",
+    "sensor calibration",
+    "gas mixing",
+    "local atmosphere heterogeneity"
+  ],
+  "missing_data_policy": "INCONCLUSIVE",
+  "data_quality_policy": "Atmospheric composition measurement must be valid for the relevant habitable compartment.",
+  "output": {
+    "primary": "rule_result",
+    "clinical_diagnosis": "NOT_DETERMINED_BY_THIS_RULE"
+  },
+  "severity_semantics": {
+    "on_failure": "ATMOSPHERIC_REQUIREMENT_NOT_MET",
+    "clinical_severity": "NOT_DETERMINED"
+  },
+  "follow_up": [
+    "Atmospheric-control alert/review.",
+    "Alternate diluent gases require program medical adjudication and separate requirements.",
+    "Do not infer a specific pulmonary diagnosis solely from this rule."
+  ],
+  "source_locators": [
+    {
+      "source_id": "NASA-STD-3001-V2-REV-F",
+      "requirement": "V2 6002",
+      "section": "6.2.1.1",
+      "printed_page": 49,
+      "pdf_page_index_0based": 48,
+      "url": "https://standards.nasa.gov/system/files/tmp/NASA-STD-3001%20Vol%202%20Rev%20F.pdf"
+    }
+  ],
+  "test_cases": [
+    {
+      "id": "ENV001-T01",
+      "synthetic": true,
+      "inputs": {
+        "diluent_fraction_percent": 30,
+        "diluent_type": "NITROGEN",
+        "balance_oxygen_assumption_valid": true,
+        "data_quality_status": "ACCEPTABLE"
+      },
+      "expected": "PASS"
+    },
+    {
+      "id": "ENV001-T02",
+      "synthetic": true,
+      "inputs": {
+        "diluent_fraction_percent": 29.9,
+        "diluent_type": "NITROGEN",
+        "balance_oxygen_assumption_valid": true,
+        "data_quality_status": "ACCEPTABLE"
+      },
+      "expected": "FAIL_REQUIREMENT"
+    },
+    {
+      "id": "ENV001-T03",
+      "synthetic": true,
+      "inputs": {
+        "diluent_fraction_percent": 30,
+        "diluent_type": "HELIUM",
+        "balance_oxygen_assumption_valid": true,
+        "data_quality_status": "ACCEPTABLE"
+      },
+      "expected": "REQUIRES_MISSION_AUTHORIZATION"
+    }
+  ]
+}

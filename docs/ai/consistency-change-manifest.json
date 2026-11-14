@@ -1,0 +1,120 @@
+{
+  "changes": [
+    {
+      "path": "engine/vigile/clinical_differential.py",
+      "sha256": "57c9c5fafdacd8a968b3a5909e6647911440f196e688def41da18e66fa13384f",
+      "change": "modified"
+    },
+    {
+      "path": "engine/vigile/clinical_engine.py",
+      "sha256": "35468ce3d8a5c03592969185cc3990daf63b035aebd15774e3975e2066757dda",
+      "change": "modified"
+    },
+    {
+      "path": "engine/vigile/clinical_logic.py",
+      "sha256": "9a3705bbf259489b1de9d0ea436ce57908ee5bd5476e7144dcb5819bb5f8e665",
+      "change": "modified"
+    },
+    {
+      "path": "engine/vigile/clinical_models.py",
+      "sha256": "02a865ca1493540aea3d9cf02dab96fdbb332f04c5d101140f46f60703d467de",
+      "change": "modified"
+    },
+    {
+      "path": "engine/vigile/conversational.py",
+      "sha256": "a567faea23eee2ef657d65f4ebc2f4a8d455136a33f6c307c889f49ed9832218",
+      "change": "modified"
+    },
+    {
+      "path": "engine/vigile/local_assistant.py",
+      "sha256": "a2c621c431e48eb7a1713be8f6d6b3c7df9c762b12dae7db0f73b6abd9ef46d2",
+      "change": "modified"
+    },
+    {
+      "path": "engine/vigile/web/app.js",
+      "sha256": "5406d8338fa48be80f2c9258ae7466490401e85bc100237f34dda4a756b535be",
+      "change": "modified"
+    },
+    {
+      "path": "engine/tests/test_clinical_consistency.py",
+      "sha256": "bca06e00466d32a462ae78652eaa92f7fa1ad3aff277c200164d426c9866338b",
+      "change": "added"
+    }
+  ],
+  "suite": {
+    "name": "pytest",
+    "errors": "0",
+    "failures": "0",
+    "skipped": "0",
+    "tests": "361",
+    "time": "56.350",
+    "timestamp": "2026-10-19T19:34:09.438993-05:00",
+    "hostname": "Gianni"
+  },
+  "live_queries": 12,
+  "live_statuses": [
+    {
+      "mode": "FULL",
+      "status": "DETERMINISTIC_DATA_SUFFICIENCY",
+      "elapsed_ms": 10215
+    },
+    {
+      "mode": "FULL",
+      "status": "DETERMINISTIC_DATA_SUFFICIENCY",
+      "elapsed_ms": 245
+    },
+    {
+      "mode": "FULL",
+      "status": "ANSWERED",
+      "elapsed_ms": 8723
+    },
+    {
+      "mode": "FULL",
+      "status": "REJECTED_OR_FAILED",
+      "elapsed_ms": 2914
+    },
+    {
+      "mode": "LOW_POWER",
+      "status": "DETERMINISTIC_DATA_SUFFICIENCY",
+      "elapsed_ms": 246
+    },
+    {
+      "mode": "LOW_POWER",
+      "status": "DETERMINISTIC_DATA_SUFFICIENCY",
+      "elapsed_ms": 238
+    },
+    {
+      "mode": "LOW_POWER",
+      "status": "ANSWERED",
+      "elapsed_ms": 10611
+    },
+    {
+      "mode": "LOW_POWER",
+      "status": "REJECTED_OR_FAILED",
+      "elapsed_ms": 2565
+    },
+    {
+      "mode": "CRITICAL",
+      "status": "EXTRACTIVE_ONLY",
+      "elapsed_ms": 177
+    },
+    {
+      "mode": "CRITICAL",
+      "status": "EXTRACTIVE_ONLY",
+      "elapsed_ms": 169
+    },
+    {
+      "mode": "CRITICAL",
+      "status": "EXTRACTIVE_ONLY",
+      "elapsed_ms": 204
+    },
+    {
+      "mode": "CRITICAL",
+      "status": "EXTRACTIVE_ONLY",
+      "elapsed_ms": 237
+    }
+  ],
+  "replays": 4,
+  "audit_valid": true,
+  "clinical_validation": false
+}

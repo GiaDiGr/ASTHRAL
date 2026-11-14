@@ -1,0 +1,225 @@
+AssertionError [ERR_ASSERTION]: The input did not match the regular expression /Resources|resources/. Input:
+
+'Understanding my indicators and documented prevention Cycle results mission-crew-A-cycle-35 · 2026-09-05T12:00:00+00:00. Descriptive and documentary information; not personalized or authorized orders. Cardiovascular · data, uncertainty, and guidance Aerobic capacity What was measured: 35.315 mL/min/kg. Source sample: mission-sample-104. Meaning: a descriptive engine value, not a diagnosis or confirmation of normality. Baseline used: mission-crew-A-baseline-0 = 50 mL/min/kg. Change: -14.685 mL/min/kg · descriptive. Calculated trend: -0.431 mL/min/kg/day. This does not predict clinical outcomes or select treatments. Uncertainty and conditions: Experimental, not clinically validated · Missing values are not imputed · No verified clinical threshold for this change · A hemodynamic trend does not determine its cause · A standing test is not applicable in free microgravity · A posture protocol is required for comparison Related reference library (not a diagnosis or a causal claim about you): Reduced aerobic capacity / cardiovascular physiology. Reduced cardiorespiratory performance may compromise EVA and physical tasks. Documented prevention or health improvement · C001 Conditions: an authorized mission plan and protocol, human review, and comparable measurements. Specific resource requirements are not structured in this entry; availability has not been assessed. Equipment is not assumed available. No individual regimen, schedule, dose, or authorization has been generated. Prevention: authorized countermeasure program [ES:S04]. Monitoring: comparable VO2max [ES:S01]. Quality: verify units, method, baseline, and EVA context. Detection: apply 32.9/36.5 and 80% only where applicable [ES:S01]. Assessment: review symptoms and performance. Differential: non-spaceflight and multisystem causes [RV]. Triage: mission/human review. Intervention: authorized exercise, not a generated prescription [RMA]. Recovery: reconditioning toward preflight [ES:S01]. Follow-up: longitudinal trend. Prognosis: INCONCLUSIVE for individual clinical prediction. Catalogue sources: S01, S04 Documentary status and limitations for each stage {\n' +
+  '  "classification": "DOCUMENTARY_MISSION_PROTOCOL_REQUIRED",\n' +
+  '  "condition_id": "C001",\n' +
+  '  "documentary_coverage": {\n' +
+  '    "assessment": "RV",\n' +
+  '    "data_quality": "ES",\n' +
+  '    "detection": "ES",\n' +
+  '    "differential_diagnosis": "RV",\n' +
+  '    "follow_up": "ES",\n' +
+  '    "intervention_authorized": "RMA",\n' +
+  '    "monitoring": "ES",\n' +
+  '    "prevention": "ES",\n' +
+  '    "prognosis": "RO",\n' +
+  '    "recovery": "ES",\n' +
+  '    "triage": "RMA"\n' +
+  '  },\n' +
+  '  "execution_enabled": false,\n' +
+  '  "limitations": [\n' +
+  '    "NOT_A_PERSONAL_PRESCRIPTION",\n' +
+  '    "NO_ADHERENCE_OR_HARDWARE_ASSUMPTION",\n' +
+  '    "NO_NEW_PHARMACOLOGIC_RECOMMENDATION"\n' +
+  '  ],\n' +
+  '  "source_ids": [\n' +
+  '    "S01",\n' +
+  '    "S04"\n' +
+  '  ],\n' +
+  '  "text": "Prevention: authorized countermeasure program [ES:S04]. Monitoring: comparable VO2max [ES:S01]. Quality: verify units, method, baseline, and EVA context. Detection: apply 32.9/36.5 and 80% only where applicable [ES:S01]. Assessment: review symptoms and performance. Differential: non-spaceflight and multisystem causes [RV]. Triage: mission/human review. Intervention: authorized exercise, not a generated prescription [RMA]. Recovery: reconditioning toward preflight [ES:S01]. Follow-up: longitudinal trend. Prognosis: INCONCLUSIVE for individual clinical prediction."\n' +
+  '} Documentary references · S01, S04 S01 · NASA-STD-3001 Volume 1, Crew Health, Rev C Original record S01 {\n' +
+  '  "source_id": "S01",\n' +
+  '  "source": "NASA-STD-3001 Volume 1, Crew Health, Rev C",\n' +
+  '  "type_date": "`NASA_STANDARD`, 15-09-2023, activo. citeturn19search0turn20view1",\n' +
+  '  "priority_utility": "Approved English source rendering unavailable. Original provenance is retained; no clinical interpretation has been added."\n' +
+  '} S04 · NASA HHC Spaceflight Risks Original record S04 {\n' +
+  '  "source_id": "S04",\n' +
+  '  "source": "NASA HHC Spaceflight Risks",\n' +
+  '  "type_date": "Approved English source rendering unavailable. Original provenance is retained; no clinical interpretation has been added.",\n' +
+  '  "priority_utility": "P0. Fitness, hueso, SANS, inmunidad, DCS, EVA."\n' +
+  '} Explicitly linked normative finding: a00a0581670d1c88f1d7e4f4ae260b8ffa6a8d095683767b6e16dfd79ee073a0. A normative shortfall does not establish a diagnosis. Finding exacto y trazabilidad {\n' +
+  '  "authorization": "ASSESSMENT_SIMULATION_ONLY",\n' +
+  '  "bundle": {\n' +
+  '    "algorithm_version": "1.0.0",\n' +
+  '    "calculation_context": {\n' +
+  '      "environment": "HABITABLE_VOLUME",\n' +
+  '      "mission_phase": "IN_MISSION",\n' +
+  '      "mode": "NOMINAL"\n' +
+  '    },\n' +
+  '    "conversions": [\n' +
+  '      {\n' +
+  '        "from": "mL/min/kg",\n' +
+  '        "input_id": "mission-crew-A-baseline-0",\n' +
+  '        "normalized": 50,\n' +
+  '        "original": 50,\n' +
+  '        "to": "mL/min/kg"\n' +
+  '      },\n' +
+  '      {\n' +
+  '        "from": "mL/min/kg",\n' +
+  '        "input_id": "mission-sample-104",\n' +
+  '        "normalized": 35.315,\n' +
+  '        "original": 35.315,\n' +
+  '        "to": "mL/min/kg"\n' +
+  '      }\n' +
+  '    ],\n' +
+  '    "corpus_hash": "fed66145806912c3b8efe7d96e88da0a9b78ec287448117a9fe79b3c578fea51",\n' +
+  '    "engine_version": "0.6.0",\n' +
+  '    "implementation_hash": "6e1dced21fbb95aa706cd5d13be4833780ceb4d56fa385fc5b38e0b7daba42e7",\n' +
+  '    "metric": null,\n' +
+  '    "mission": {\n' +
+  '      "environment": "HABITABLE_VOLUME",\n' +
+  '      "exposure_context": null,\n' +
+  '      "extraterrestrial_surface_eva_planned_or_required": null,\n' +
+  '      "gravity": "MICROGRAVITY",\n' +
+  '      "id": "mission-v011",\n' +
+  '      "microgravity_eva_planned_or_required": null,\n' +
+  '      "mode": "NOMINAL",\n' +
+  '      "phase": "IN_MISSION",\n' +
+  '      "synthetic": true\n' +
+  '    },\n' +
+  '    "normalized_inputs": {\n' +
+  '      "current_aerobic_capacity": 35.315,\n' +
+  '      "data_quality_status": "ACCEPTABLE",\n' +
+  '      "environment": "HABITABLE_VOLUME",\n' +
+  '      "exposure_context": null,\n' +
+  '      "extraterrestrial_surface_eva_planned_or_required": null,\n' +
+  '      "measurement_comparability": "COMPARABLE",\n' +
+  '      "measurement_unit": "mL/min/kg",\n' +
+  '      "microgravity_eva_planned_or_required": null,\n' +
+  '      "premission_aerobic_capacity": 50\n' +
+  '    },\n' +
+  '    "outcome": {\n' +
+  '      "authorization": "ASSESSMENT_SIMULATION_ONLY",\n' +
+  '      "clinical_severity": null,\n' +
+  '      "derived": {\n' +
+  '        "retention_percent": 70.63\n' +
+  '      },\n' +
+  '      "diagnosis": null,\n' +
+  '      "reason": "",\n' +
+  '      "result": "REQUIREMENT_NOT_MET",\n' +
+  '      "status": "RESEARCH_ONLY"\n' +
+  '    },\n' +
+  '    "profile": {\n' +
+  '      "id": "mission-crew-A",\n' +
+  '      "mission_id": "mission-v011",\n' +
+  '      "synthetic": true\n' +
+  '    },\n' +
+  '    "replay_records": [\n' +
+  '      [\n' +
+  '        "baseline",\n' +
+  '        "mission-crew-A-baseline-0",\n' +
+  '        {\n' +
+  '          "algorithm_version": "ALG001-2",\n' +
+  '          "id": "mission-crew-A-baseline-0",\n' +
+  '          "implementation_hash": "6e1dced21fbb95aa706cd5d13be4833780ceb4d56fa385fc5b38e0b7daba42e7",\n' +
+  '          "input_ids": [\n' +
+  '            "mission-sample-1",\n' +
+  '            "mission-sample-7",\n' +
+  '            "mission-sample-13"\n' +
+  '          ],\n' +
+  '          "mad": 0.5,\n' +
+  '          "method": "DIRECT",\n' +
+  '          "mission_id": "mission-v011",\n' +
+  '          "protocol": "V011_SYNTHETIC_TECHNICAL_FIXTURE_NOT_A_CLINICAL_PROTOCOL",\n' +
+  '          "request": {\n' +
+  '            "as_of": "2026-07-30T12:00:00Z",\n' +
+  '            "id": "mission-crew-A-baseline-0",\n' +
+  '            "measurement_ids": [\n' +
+  '              "mission-sample-1",\n' +
+  '              "mission-sample-7",\n' +
+  '              "mission-sample-13"\n' +
+  '            ],\n' +
+  '            "minimum_observations": 3,\n' +
+  '            "protocol_reference": "V011_SYNTHETIC_TECHNICAL_FIXTURE_NOT_A_CLINICAL_PROTOCOL",\n' +
+  '            "supersedes": null,\n' +
+  '            "valid_until": null\n' +
+  '          },\n' +
+  '          "site": null,\n' +
+  '          "snapshots": [\n' +
+  '            {\n' +
+  '              "device": {\n' +
+  '                "alignment_seconds": 1,\n' +
+  '                "calibrated_at": "2026-07-02T12:00:00Z",\n' +
+  '                "calibration_id": "cal-mission-device-0",\n' +
+  '                "conflict_tolerance": 0,\n' +
+  '                "id": "mission-device-0",\n' +
+  '                "max_age_seconds": 172800,\n' +
+  '                "policy_reference": "V011_SYNTHETIC_TECHNICAL_FIXTURE_NOT_A_CLINICAL_PROTOCOL",\n' +
+  '                "synthetic": true,\n' +
+  '                "technical_max": 100000,\n' +
+  '                "technical_min": 0,\n' +
+  '                "unit": "mL/min/kg",\n' +
+  '                "valid_until": "2026-10-30T12:00:00Z",\n' +
+  '                "variable": "physiology.vo2max"\n' +
+  '              },\n' +
+  '              "measurement": {\n' +
+  '                "calibration_id": "cal-mission-device-0",\n' +
+  '                "compartment": null,\n' +
+  '                "device_id": "mission-device-0",\n' +
+  '                "id": "mission-sample-1",\n' +
+  '                "interval_end": null,\n' +
+  '                "method": "DIRECT",\n' +
+  '                "mission_id": "mission-v011",\n' +
+  '                "phase": "PRE_MISSION",\n' +
+  '                "protocol": "V011_SYNTHETIC_TECHNICAL_FIXTURE_NOT_A_CLINICAL_PROTOCOL",\n' +
+  '                "provenance": "SEEDED_SYNTHETIC_MISSION_NOT_CLINICAL_DATA",\n' +
+  '                "reported_quality": "ACCEPTABLE",\n' +
+  '                "site": null,\n' +
+  '                "subject_id": "mission-crew-A",\n' +
+  '                "synthetic": true,\n' +
+  '                "timestamp": "2026-07-25T12:00:00Z",\n' +
+  '                "unit": "mL/min/kg",\n' +
+  '                "value": 49.5,\n' +
+  '                "variable": "physiology.vo2max"\n' +
+  '              }\n' +
+  '            },\n' +
+  '            {\n' +
+  '              "device": {\n' +
+  '                "alignment_seconds": 1,\n' +
+  '                "calibrated_at": "2026-07-02T12:00:00Z",\n' +
+  '                "calibration_id": "cal-mission-device-0",\n' +
+  '                "conflict_tolerance": 0,\n' +
+  '                "id": "mission-device-0",\n' +
+  '                "max_age_seconds": 172800,\n' +
+  '                "policy_reference": "V011_SYNTHETIC_TECHNICAL_FIXTURE_NOT_A_CLINICAL_PROTOCOL",\n' +
+  '                "synthetic": true,\n' +
+  '                "technical_max": 100000,\n' +
+  '                "technical_min": 0,\n' +
+  '                "unit": "mL/min/kg",\n' +
+  '                "valid_until": "2026-10-30T12:00:00Z",\n' +
+  '                "variable": "physiology.vo2max"\n' +
+  '              },\n' +
+  '              "measurement": {\n' +
+  '                "calibration_id": "cal-mission-device-0",\n' +
+  '                "compartment": null,\n' +
+  '                "device_id": "mission-device-0",\n' +
+  '                "id": "mission-sample-13",\n' +
+  '                "interval_end": null,\n' +
+  '                "method": "DIRE'... 178572 more characters
+
+    at main (C:\Users\Gianni\Desktop\Vigile\engine\tests\astronaut_ui_unit.cjs:25:382)
+    at Object.<anonymous> (C:\Users\Gianni\Desktop\Vigile\engine\tests\astronaut_ui_unit.cjs:39:1)
+    at Module._compile (node:internal/modules/cjs/loader:1929:14)
+    at Object..js (node:internal/modules/cjs/loader:2060:10)
+    at Module.load (node:internal/modules/cjs/loader:1651:32)
+    at Module._load (node:internal/modules/cjs/loader:1443:12)
+    at wrapModuleLoad (node:internal/modules/cjs/loader:261:19)
+    at Module.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:154:5)
+    at node:internal/main/run_main_module:33:47 {
+  generatedMessage: true,
+  code: 'ERR_ASSERTION',
+  actual: 'Understanding my indicators and documented prevention Cycle results mission-crew-A-cycle-35 · 2026-09-05T12:00:00+00:00. Descriptive and documentary information; not personalized or authorized orders. Cardiovascular · data, uncertainty, and guidance Aerobic capacity What was measured: 35.315 mL/min/kg. Source sample: mission-sample-104. Meaning: a descriptive engine value, not a diagnosis or confirmation of normality. Baseline used: mission-crew-A-baseline-0 = 50 mL/min/kg. Change: -14.685 mL/min/kg · descriptive. Calculated trend: -0.431 mL/min/kg/day. This does not predict clinical outcomes or select treatments. Uncertainty and conditions: Experimental, not clinically validated · Missing values are not imputed · No verified clinical threshold for this change · A hemodynamic trend does not determine its cause · A standing test is not applicable in free microgravity · A posture protocol is required for comparison Related reference library (not a diagnosis or a causal claim about you): Reduced aerobic capacity / cardiovascular physiology. Reduced cardiorespiratory performance may compromise EVA and physical tasks. Documented prevention or health improvement · C001 Conditions: an authorized mission plan and protocol, human review, and comparable measurements. Specific resource requirements are not structured in this entry; availability has not been assessed. Equipment is not assumed available. No individual regimen, schedule, dose, or authorization has been generated. Prevention: authorized countermeasure program [ES:S04]. Monitoring: comparable VO2max [ES:S01]. Quality: verify units, method, baseline, and EVA context. Detection: apply 32.9/36.5 and 80% only where applicable [ES:S01]. Assessment: review symptoms and performance. Differential: non-spaceflight and multisystem causes [RV]. Triage: mission/human review. Intervention: authorized exercise, not a generated prescription [RMA]. Recovery: reconditioning toward preflight [ES:S01]. Follow-up: longitudinal trend. Prognosis: INCONCLUSIVE for individual clinical prediction. Catalogue sources: S01, S04 Documentary status and limitations for each stage {\n' +
+    '  "classification": "DOCUMENTARY_MISSION_PROTOCOL_REQUIRED",\n' +
+    '  "condition_id": "C001",\n' +
+    '  "documentary_coverage": {\n' +
+    '    "assessment": "RV",\n' +
+    '    "data_quality": "ES",\n' +
+    '    "detection": "ES",\n' +
+    '    "differential_diagnosis": "RV",\n' +
+    '    "follow_up": "ES",\n' +
+    '    "intervention_authorized": "RMA",\n' +
+    '...',
+  expected: /Resources|resources/,
+  operator: 'match',
+  diff: 'simple'
+}

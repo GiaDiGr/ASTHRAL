@@ -1,0 +1,32 @@
+{
+  "condition_id": "C024",
+  "catalog_record": {
+    "condition_id": "C024",
+    "name_specialty": "Deshidratación/desequilibrio hidroelectrolítico / nutrición-renal",
+    "description_spaceflight": "Variable transversal relevante a CV, renal y desempeño.",
+    "risks_symptoms": "Ingesta insuficiente, pérdidas GI, ejercicio/EVA.",
+    "biomarkers_sensors_tests": "Ingesta/salida, masa, orina y electrolitos si disponibles.",
+    "baselines_environment_interactions": "Baselines personales; ambiente/EVA.",
+    "primary_evidence": "S13, S02. citeturn18search2turn18search8",
+    "limits_authorizations_state": "No se extrajo un umbral NASA único universal. `RV`."
+  },
+  "clinical_pathway_profile_as_published": "**P:** plan hídrico; **M:** ingesta/salida, masa, orina; **Q:** sincronizar pérdidas/consumo; **D:** thresholds `NOT_FOUND` salvo protocolo; **A/DD:** GI, renal, EVA; **T/I:** médico; **R/F:** retorno a estado personal; **G:** `RV`.",
+  "coverage_states": {
+    "prevention": "ES",
+    "monitoring": "RV",
+    "data_quality": "ES",
+    "detection": "RV",
+    "assessment": "RV",
+    "differential_diagnosis": "RV",
+    "triage": "RMA",
+    "intervention_authorized": "RMA",
+    "recovery": "RV",
+    "follow_up": "RV",
+    "prognosis": "RO"
+  },
+  "source_ids": [
+    "S13",
+    "S02"
+  ],
+  "NOTICE": "Pathway text is an outline; not an authorized diagnostic or treatment protocol."
+}

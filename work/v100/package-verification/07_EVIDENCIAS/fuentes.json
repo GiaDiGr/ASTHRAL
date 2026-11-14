@@ -1,0 +1,230 @@
+[
+  {
+    "source_id": "S01",
+    "source": "NASA-STD-3001 Volume 1, Crew Health, Rev C",
+    "type_date": "`NASA_STANDARD`, 15-09-2023, activo. citeturn19search0turn20view1",
+    "priority_utility": "P0. Aeróbico, músculo, hueso, radiación, operaciones médicas, registros."
+  },
+  {
+    "source_id": "S02",
+    "source": "NASA-STD-3001 Volume 2, Human Factors, Habitability, and Environmental Health, Rev F",
+    "type_date": "`NASA_STANDARD`, 14-07-2026 según índice NTSS. citeturn19search1turn19search3",
+    "priority_utility": "P0. Ambiente, atmósfera, habitabilidad, ortostatismo, EVA."
+  },
+  {
+    "source_id": "S03",
+    "source": "NASA Human System Risk Board — Human System Risks",
+    "type_date": "Riesgos oficiales, actualizado 2025. citeturn27search5",
+    "priority_utility": "P0. Ontología superior de riesgos."
+  },
+  {
+    "source_id": "S04",
+    "source": "NASA HHC Spaceflight Risks",
+    "type_date": "Riesgo fisiológico/contramedidas. citeturn18search3",
+    "priority_utility": "P0. Fitness, hueso, SANS, inmunidad, DCS, EVA."
+  },
+  {
+    "source_id": "S05",
+    "source": "NASA Cardiovascular Adaptations Risk",
+    "type_date": "`SPACEFLIGHT_EVIDENCE`. citeturn11search0",
+    "priority_utility": "P0. Cardiovascular/ortostatismo."
+  },
+  {
+    "source_id": "S06",
+    "source": "NASA Bone Fracture / Bone Changes Risk Record",
+    "type_date": "`SPACEFLIGHT_EVIDENCE`. citeturn11search1turn11search7",
+    "priority_utility": "P0. BMD, QCT, fractura."
+  },
+  {
+    "source_id": "S07",
+    "source": "NASA SANS Risk",
+    "type_date": "`SPACEFLIGHT_EVIDENCE`. citeturn11search2",
+    "priority_utility": "P0. Neuro-ocular."
+  },
+  {
+    "source_id": "S08",
+    "source": "NASA Renal Stone Formation Risk",
+    "type_date": "`SPACEFLIGHT_EVIDENCE`. citeturn11search3",
+    "priority_utility": "P0. Litiasis renal."
+  },
+  {
+    "source_id": "S09",
+    "source": "NASA Altered Immune Response",
+    "type_date": "`SPACEFLIGHT_EVIDENCE`. citeturn12search0turn12search7",
+    "priority_utility": "P0. Inmunidad/reactivación."
+  },
+  {
+    "source_id": "S10",
+    "source": "NASA Sleep/Circadian/Workload Risk",
+    "type_date": "`SPACEFLIGHT_EVIDENCE`. citeturn12search1",
+    "priority_utility": "P0. Sueño, circadiano, fatiga."
+  },
+  {
+    "source_id": "S11",
+    "source": "NASA Sensorimotor/Vestibular Risk",
+    "type_date": "`SPACEFLIGHT_EVIDENCE`. citeturn12search2",
+    "priority_utility": "P0. Vestibular, marcha, G-transition."
+  },
+  {
+    "source_id": "S12",
+    "source": "NASA Behavioral Health / HFBP Risks",
+    "type_date": "Riesgo oficial. citeturn18search7turn18search12",
+    "priority_utility": "P0. Conductual/equipo."
+  },
+  {
+    "source_id": "S13",
+    "source": "NASA Food and Nutrition Risk + Human Adaptation to Spaceflight",
+    "type_date": "Evidence/risk review. citeturn18search2turn18search11",
+    "priority_utility": "P0/P1. Nutrición."
+  },
+  {
+    "source_id": "S14",
+    "source": "NASA Risk of Hypoxia",
+    "type_date": "Riesgo oficial. citeturn18search10",
+    "priority_utility": "P0. Hipoxia/atmósfera EVA."
+  },
+  {
+    "source_id": "S15",
+    "source": "NASA Ineffective or Toxic Medications Risk",
+    "type_date": "Riesgo oficial. citeturn18search5",
+    "priority_utility": "P0. Farmacología."
+  },
+  {
+    "source_id": "S16",
+    "source": "NASA Space Radiation Risks",
+    "type_date": "Riesgo oficial. citeturn18search9",
+    "priority_utility": "P0. Radiación/cáncer."
+  },
+  {
+    "source_id": "S17",
+    "source": "NASA Integrated Medical Model documentation / 2026 overview",
+    "type_date": "Modelo probabilístico de condiciones médicas. citeturn21search0turn21search1turn21search2",
+    "priority_utility": "P0. Enfermedades, emergencias, recursos."
+  },
+  {
+    "source_id": "S18",
+    "source": "Earth-Independent Medical Operations Concept of Operations",
+    "type_date": "Arquitectura médica de exploración. citeturn17search7",
+    "priority_utility": "P0. Autonomía."
+  },
+  {
+    "source_id": "S19",
+    "source": "Exploration Medical Capability / Accepted Medical Condition List",
+    "type_date": "NASA ExMC. citeturn21search13turn21search18",
+    "priority_utility": "P0. Selección sistemática de capacidades."
+  },
+  {
+    "source_id": "S20",
+    "source": "NIST EWMA documentation",
+    "type_date": "Método estadístico. citeturn16search0",
+    "priority_utility": "P1. Detección de tendencia; `ENGINEERING_CHOICE`."
+  },
+  {
+    "source_id": "S21",
+    "source": "NIST Z-score/MAD",
+    "type_date": "Método estadístico. citeturn16search2turn16search3",
+    "priority_utility": "P1. Normalización/anomalías."
+  },
+  {
+    "source_id": "S22",
+    "source": "NIST CUSUM",
+    "type_date": "Método estadístico. citeturn16search1",
+    "priority_utility": "P1. Detección de cambio."
+  },
+  {
+    "source_id": "S23",
+    "source": "NASA Open Science Data Repository",
+    "type_date": "Repositorio oficial. citeturn13search0turn24search4",
+    "priority_utility": "P0. Datos para desarrollo."
+  },
+  {
+    "source_id": "S24",
+    "source": "NASA Life Sciences Portal / LSDA",
+    "type_date": "Archivo humano/análogos. citeturn24search2turn24search3",
+    "priority_utility": "P0. Datos humanos."
+  },
+  {
+    "source_id": "S25",
+    "source": "ESA Human Research Data Archive",
+    "type_date": "Repositorio ESA; acceso puede requerir autenticación. citeturn13search3",
+    "priority_utility": "P1. Datos ESA."
+  },
+  {
+    "source_id": "S26",
+    "source": "OSD-195",
+    "type_date": "21 d bed rest, músculo, humanos. citeturn22search0",
+    "priority_utility": "P1 dataset."
+  },
+  {
+    "source_id": "S27",
+    "source": "OSD-198",
+    "type_date": "21 d bed rest + hypoxia, músculo, humanos. citeturn22search1",
+    "priority_utility": "P1 dataset."
+  },
+  {
+    "source_id": "S28",
+    "source": "OSD-942",
+    "type_date": "70 d bed rest + exercise, músculo, humanos. citeturn22search2",
+    "priority_utility": "P1 dataset."
+  },
+  {
+    "source_id": "S29",
+    "source": "OSD-370",
+    "type_date": "Bed rest/retraining, humanos. citeturn22search3",
+    "priority_utility": "P1 dataset."
+  },
+  {
+    "source_id": "S30",
+    "source": "OSD-816",
+    "type_date": "Ex vivo human SANS/TAS. citeturn23search0",
+    "priority_utility": "P1. SANS experimental."
+  },
+  {
+    "source_id": "S31",
+    "source": "OSD-53",
+    "type_date": "Astronaut whole-blood gene expression pre/post. citeturn23search1",
+    "priority_utility": "P1. Inmunidad/stress omics."
+  },
+  {
+    "source_id": "S32",
+    "source": "OSD-530",
+    "type_date": "JAXA CFE: seis astronautas >120 días ISS, plasma cfRNA. citeturn23search2",
+    "priority_utility": "P1. JAXA/human longitudinal omics."
+  },
+  {
+    "source_id": "S33",
+    "source": "Inspiration4 OSDR mission collections",
+    "type_date": "Humanos, LEO, multimodal. citeturn23search3",
+    "priority_utility": "P1. Biomarkers/multi-omics."
+  },
+  {
+    "source_id": "S34",
+    "source": "Lee et al., *J Appl Physiol* 2025, standing ± compression after long-duration flight",
+    "type_date": "Peer reviewed, DOI 10.1152/japplphysiol.00646.2024. citeturn26search0turn26search2",
+    "priority_utility": "P1. Ortostatismo postflight."
+  },
+  {
+    "source_id": "S35",
+    "source": "NASA Concern of Venous Thromboembolism",
+    "type_date": "Evidencia de vuelo; hoy componente de CV risk. citeturn27search0",
+    "priority_utility": "P0/P1. VTE."
+  },
+  {
+    "source_id": "S36",
+    "source": "NASA Risk of Decompression Sickness",
+    "type_date": "Riesgo/procedimientos generales. citeturn27search1turn27search4",
+    "priority_utility": "P0. DCS/EVA."
+  },
+  {
+    "source_id": "S37",
+    "source": "NASA Toxic Substance Exposure + DAG",
+    "type_date": "Riesgo/DAG. citeturn27search2turn27search7",
+    "priority_utility": "P0. Toxicología."
+  },
+  {
+    "source_id": "S38",
+    "source": "NASA Hearing Loss and Acoustics Risk",
+    "type_date": "Riesgo oficial. citeturn27search3",
+    "priority_utility": "P0. Audición/acústica."
+  }
+]

@@ -1,0 +1,31 @@
+{
+  "condition_id": "C021",
+  "catalog_record": {
+    "condition_id": "C021",
+    "name_specialty": "Formación de cálculos renales / nefro-urología",
+    "description_spaceflight": "Descarga ósea y cambios urinarios pueden elevar riesgo de litiasis.",
+    "risks_symptoms": "Hipercalciuria, hidratación, dieta, pérdida ósea.",
+    "biomarkers_sensors_tests": "Orina, química urinaria, ecografía cuando disponible.",
+    "baselines_environment_interactions": "Historia renal, orina preflight; hidratación.",
+    "primary_evidence": "S08. citeturn11search3turn21search15",
+    "limits_authorizations_state": "Herramienta predictiva individual requiere validación. `RV`."
+  },
+  "clinical_pathway_profile_as_published": "**P:** hidratación/dieta/contramedidas de misión; **M:** química urinaria/síntomas; **Q:** colección y volumen; **D:** algoritmo probabilístico solo modo investigación; **A/DD:** cólico, UTI, GI; **T/I:** médico; **R/F:** recurrencia/química; **G:** RSFM solo si validado para misión.",
+  "coverage_states": {
+    "prevention": "ES",
+    "monitoring": "ES",
+    "data_quality": "ES",
+    "detection": "RV",
+    "assessment": "RV",
+    "differential_diagnosis": "RV",
+    "triage": "RMA",
+    "intervention_authorized": "RMA",
+    "recovery": "RV",
+    "follow_up": "ES",
+    "prognosis": "RO"
+  },
+  "source_ids": [
+    "S08"
+  ],
+  "NOTICE": "Pathway text is an outline; not an authorized diagnostic or treatment protocol."
+}

@@ -1,0 +1,58 @@
+{
+  "subject_id": "clinical-crew",
+  "mission_id": "clinical-earth",
+  "condition_id": null,
+  "presentation_id": "PRES-DIZZINESS-TACHYCARDIA",
+  "population": "NONPREGNANT_ADULT",
+  "age_years": null,
+  "as_of": "2026-10-16T12:00:00Z",
+  "window_start": "2026-10-16T11:00:00Z",
+  "observations": [
+    {
+      "id": "dizziness-collection",
+      "concept": "dizziness",
+      "value": true,
+      "unit": "1",
+      "timestamp": "2026-10-16T12:00:00Z",
+      "quality": "VALID",
+      "method": "SYNTHETIC_OBSERVATION",
+      "sample_id": "collection",
+      "provenance": "SYNTHETIC_REPORT_ADAPTER_NOT_CLINICAL_VALIDATION"
+    },
+    {
+      "id": "tachycardia-collection",
+      "concept": "tachycardia",
+      "value": true,
+      "unit": "1",
+      "timestamp": "2026-10-16T12:00:00Z",
+      "quality": "VALID",
+      "method": "SYNTHETIC_OBSERVATION",
+      "sample_id": "collection",
+      "provenance": "SYNTHETIC_REPORT_ADAPTER_NOT_CLINICAL_VALIDATION"
+    },
+    {
+      "id": "postural_trigger-collection",
+      "concept": "postural_trigger",
+      "value": false,
+      "unit": "1",
+      "timestamp": "2026-10-16T12:00:00Z",
+      "quality": "VALID",
+      "method": "SYNTHETIC_OBSERVATION",
+      "sample_id": "collection",
+      "provenance": "SYNTHETIC_REPORT_ADAPTER_NOT_CLINICAL_VALIDATION"
+    },
+    {
+      "id": "irregular_pulse-collection",
+      "concept": "irregular_pulse",
+      "value": true,
+      "unit": "1",
+      "timestamp": "2026-10-16T12:00:00Z",
+      "quality": "VALID",
+      "method": "SYNTHETIC_OBSERVATION",
+      "sample_id": "collection",
+      "provenance": "SYNTHETIC_REPORT_ADAPTER_NOT_CLINICAL_VALIDATION"
+    }
+  ],
+  "measurement_bindings": [],
+  "resources": {}
+}

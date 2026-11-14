@@ -1,0 +1,152 @@
+{
+  "schema_version": "1.0.0",
+  "default_policy": {
+    "mission_approved": false,
+    "automatic_execution": false
+  },
+  "protocols": [
+    {
+      "protocol_id": "PROT-DM-CONFIRMATION",
+      "condition_id": "DM",
+      "source_ids": ["SRC-ADA-DX-2026"],
+      "trigger": ["SUSPECTED", "CRITERIA_MET"],
+      "steps": [
+        "VERIFY_DIAGNOSTIC_SAMPLE_AND_METHOD",
+        "APPLY_CONFIRMATION_RULE_IF_REQUIRED",
+        "INVESTIGATE_MAJOR_A1C_GLUCOSE_DISCORDANCE",
+        "PERSIST_RESULT_AND_SOURCE_VERSION"
+      ],
+      "medication_actions": [],
+      "mission_approved": false,
+      "execution": "DECISION_SUPPORT_ONLY"
+    },
+    {
+      "protocol_id": "PROT-DKA-ADULT-2024",
+      "condition_id": "DKA",
+      "source_ids": ["SRC-DKA-2024"],
+      "trigger": ["CRITERIA_MET"],
+      "urgency": "EMERGENCY",
+      "required_resources": [
+        "validated_glucose_measurement",
+        "potassium_measurement",
+        "electrolytes",
+        "beta_hydroxybutyrate",
+        "venous_pH_or_bicarbonate",
+        "IV_access_capability",
+        "IV_fluid_capability",
+        "insulin_inventory",
+        "continuous_or_frequent_monitoring"
+      ],
+      "safety_gates": [
+        {
+          "if": "potassium_mmol_l < 3.5",
+          "action": "HOLD_INSULIN_UNTIL_POTASSIUM_ABOVE_3_5"
+        }
+      ],
+      "therapy": [
+        {
+          "action": "IV_SHORT_ACTING_INSULIN",
+          "rate": "0.1 U/kg/h",
+          "requires_mission_authorization": true
+        },
+        {
+          "if": "glucose_mg_dl < 250",
+          "action": "ADD_5_TO_10_PERCENT_DEXTROSE_AND_REDUCE_INSULIN",
+          "new_rate": "0.05 U/kg/h",
+          "requires_mission_authorization": true
+        }
+      ],
+      "monitoring": [
+        "glucose_every_1_to_2_h",
+        "electrolytes_creatinine_phosphate_beta_OHB_pH_every_4_h",
+        "potassium_2_h_after_insulin_then_every_4_h"
+      ],
+      "resolution": "beta_OHB <0.6 AND (pH >=7.3 OR bicarbonate >=18)",
+      "mission_approved": false,
+      "automatic_execution": false
+    },
+    {
+      "protocol_id": "PROT-OH-POTS-INITIAL",
+      "condition_id": "ORTHOSTATIC_SYNDROME",
+      "source_ids": ["SRC-AHA-OH-2024", "SRC-HRS-POTS-2015", "SRC-NIH-POTS-2021"],
+      "steps": [
+        "CHARACTERIZE_TRIGGER_AND_PATTERN",
+        "REVIEW_AGGRAVATING_MEDICATIONS",
+        "ASSESS_DEHYDRATION_AND_VOLUME_STATUS",
+        "ASSESS_ALTERNATIVE_CAUSES",
+        "CONSIDER_NONPHARMACOLOGIC_COUNTERMEASURES",
+        "REASSESS"
+      ],
+      "pharmacologic_automation": false,
+      "mission_approved": false
+    },
+    {
+      "protocol_id": "PROT-AKI-INITIAL",
+      "condition_id": "AKI",
+      "source_ids": ["SRC-KDIGO-AKI-2012"],
+      "trigger": ["CRITERIA_MET"],
+      "steps": [
+        "DETERMINE_CAUSE_WHEN_POSSIBLE",
+        "LOOK_FOR_REVERSIBLE_CAUSES",
+        "REVIEW_NEPHROTOXIC_EXPOSURES",
+        "MONITOR_SERUM_CREATININE",
+        "MONITOR_URINE_OUTPUT",
+        "STAGE_AKI",
+        "MANAGE_ACCORDING_TO_CAUSE_AND_STAGE"
+      ],
+      "rules": [
+        "ISOTONIC_CRYSTALLOIDS_PREFERRED_TO_COLLOIDS_FOR_INTRAVASCULAR_EXPANSION_WHEN_APPROPRIATE_AND_NO_HEMORRHAGIC_SHOCK",
+        "DO_NOT_USE_DIURETICS_TO_PREVENT_AKI",
+        "DO_NOT_USE_DIURETICS_TO_TREAT_AKI_EXCEPT_VOLUME_OVERLOAD"
+      ],
+      "mission_approved": false,
+      "automatic_execution": false
+    },
+    {
+      "protocol_id": "PROT-ANAPH-IM-EPI",
+      "condition_id": "ANAPHYLAXIS",
+      "source_ids": ["SRC-WAO-ANAPH-2020"],
+      "trigger": ["CRITERIA_MET", "TIME_CRITICAL_SUSPECTED"],
+      "urgency": "EMERGENCY",
+      "therapy": [
+        {
+          "action": "EPINEPHRINE_IM",
+          "dose": "0.01 mg/kg",
+          "maximum_dose": "0.5 mg",
+          "repeat_if_refractory": "every 5-15 min",
+          "preferred_adult_site": "intramuscular",
+          "requires_mission_authorization": true
+        }
+      ],
+      "additional_actions": [
+        "POSITION_ACCORDING_TO_CLINICAL_STATE",
+        "OXYGEN_IF_RESPIRATORY_DISTRESS_OR_FURTHER_EPINEPHRINE_REQUIRED",
+        "IV_CRYSTALLOIDS_IF_CARDIOVASCULAR_INSTABILITY"
+      ],
+      "initial_IV_epinephrine_bolus": "NOT_RECOMMENDED",
+      "mission_approved": false,
+      "automatic_execution": false
+    },
+    {
+      "protocol_id": "PROT-DIZZINESS-TACHY-TRIAGE",
+      "condition_id": "DIZZINESS_TACHYCARDIA_PRESENTATION",
+      "source_ids": [
+        "SRC-AHA-OH-2024",
+        "SRC-HRS-POTS-2015",
+        "SRC-DKA-2024",
+        "SRC-WAO-ANAPH-2020"
+      ],
+      "steps": [
+        "ASSESS_IMMEDIATE_INSTABILITY",
+        "ASSESS_ANAPHYLAXIS",
+        "ASSESS_DKA_IF_METABOLIC_FEATURES",
+        "ASSESS_ORTHOSTATIC_RELATION_IF_CONTEXT_APPLICABLE",
+        "ASSESS_POTS_EXCLUSIONS",
+        "REQUEST_ECG_FOR_NONPOSTURAL_OR_IRREGULAR_TACHYCARDIA",
+        "ROUTE_EXTERNAL_TIME_CRITICAL_CONDITIONS_TO_SEPARATE_PATHWAYS"
+      ],
+      "medication_actions": [],
+      "automatic_execution": false
+    }
+  ]
+}

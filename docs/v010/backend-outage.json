@@ -1,0 +1,7 @@
+{
+  "backend_unavailable_login_status": 502,
+  "secret_not_exposed": true,
+  "response": {
+    "detail": "LOCAL_SERVICE_UNAVAILABLE"
+  }
+}

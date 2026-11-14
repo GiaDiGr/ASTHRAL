@@ -1,0 +1,12 @@
+{
+  "folder": "C:\\Users\\Gianni\\Desktop\\Vigile\\engine\\data\\portal-biomedical-audit-final",
+  "config": "C:\\Users\\Gianni\\Desktop\\Vigile\\engine\\data\\portal-biomedical-audit-final\\portal-config.json",
+  "access_code_file": "C:\\Users\\Gianni\\Desktop\\Vigile\\engine\\data\\portal-biomedical-audit-final\\portal-access.txt",
+  "scenarios": [
+    "DKA",
+    "ANAPHYLAXIS",
+    "PRES-DIZZINESS-TACHYCARDIA"
+  ],
+  "synthetic": true,
+  "model_downloaded": false
+}

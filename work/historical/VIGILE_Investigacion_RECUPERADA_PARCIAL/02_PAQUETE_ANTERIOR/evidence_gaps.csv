@@ -1,0 +1,15 @@
+﻿gap_id,topic,evidence_state,prohibited_assumption,required_handling
+G01,Umbrales clínicos universales para astronautas,Misión y sensor específicos; no documentados,No activar alertas clínicas con z-score o porcentaje por defecto,configurar thresholds con provenance + aprobación
+G02,Medicina operativa NASA interna / MORD,No íntegramente pública,No pretender cumplir protocolos NASA no disponibles,interfaz para protocolos mission-authorized
+G03,Aplicabilidad stand test a microgravedad,Prueba terrestre/recuperación con gravedad,No ejecutar como procedimiento intravehicular 0g,contexto gravitacional explícito en regla
+G04,Parámetros de calidad sensor 0.90/0.95 del JSON del informe,Ejemplo no justificado ni calibrado,No activar números de muestra,criterios por dispositivo y evidencia técnica
+G05,Z ≤ -1.5 desviaciones en Cognition,"Umbral de investigación, no diagnóstico",Solo research alert,corrección practice effects y revisión
+G06,Prescripción y dosificación farmacológica,Autorización misión ausente,Bloquear toda prescripción autónoma,CMO + protocolo firmado
+G07,VTE / anticoagulación,Incertidumbre en evidencia espacial,Detección y triaje sin tratamiento automático,escalamiento humano
+G08,Predicción individual de fractura por cambios DXA,Relación insuficiente BMD-riesgo,No producir probabilidad clínica ficticia,registrar cambios DXA/QCT y factores
+G09,Actigrafía vs polisomnografía,Estimación indirecta,Incertidumbre y artefactos documentados,quality flags + diario
+G10,Human spaceflight datasets individual-level,Controlled access / privacidad,No asumir disponibilidad de biomarcadores,OSDR permisos y analogues
+G11,Licencias biblioteca offline RAG,Lectura pública no implica redistribución,No empaquetar PDFs por defecto,license whitelist reviewed
+G12,Cobertura inmuno/radiación/SANS/renal/resp y demás,Revisión biomédica incompleta en primera entrega,Sin reglas clínicas no sustentadas,incorporación posterior por módulo
+G13,Validación clínica prospectiva,Sin datos específicos de VIGILE,Nunca afirmar aptitud clínica real,ensayos y revisión experta
+G14,Riesgo de omitir urgencias si falta calidad de señal,Datos incompletos ≠ bienestar,No deducir NORMAL por ausencia de mediciones,quality status separado de triage + alertas de sensor

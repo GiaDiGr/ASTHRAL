@@ -1,0 +1,172 @@
+[
+  {
+    "path": "backend-regression.txt",
+    "sha256": "d5303c3aa81e748dc2fc2f9d8cb6e9ca42c3532b99baea3bed6791dfe7837ed0",
+    "size": 1413
+  },
+  {
+    "path": "browser-tests.txt",
+    "sha256": "7328b7d71d7eafd01d2f89c107f26712cee359c10dd55d7e7c4b825f58bfd73c",
+    "size": 2283
+  },
+  {
+    "path": "clinical-parity-pages.json",
+    "sha256": "e0fefde54b4372dbaa54b8bf7d6bf4cbd6c802e56ea2333d62e7f7c1158aa5ae",
+    "size": 181
+  },
+  {
+    "path": "compatibility.json",
+    "sha256": "764f283e676fb2c46f0fbfe512274f6ebb6397199f584b063bcefe6a3a65efb0",
+    "size": 599
+  },
+  {
+    "path": "embedding-benchmark.json",
+    "sha256": "32f3861247b53c307c671c78befbdc1d5d3e7345de953f50a677001883b4e724",
+    "size": 199
+  },
+  {
+    "path": "final-pages-device.json",
+    "sha256": "386028624f6f62321aa5070d7ba5a6f56be1fd6d169b0acf5fe0c0d7bce54bf9",
+    "size": 977
+  },
+  {
+    "path": "final-pages-parity.json",
+    "sha256": "e0fefde54b4372dbaa54b8bf7d6bf4cbd6c802e56ea2333d62e7f7c1158aa5ae",
+    "size": 181
+  },
+  {
+    "path": "gallery.html",
+    "sha256": "0d00a12cfbf38edddce116526ef80f8a5f5a86927e52200734dfdd19ec5cb368",
+    "size": 3660
+  },
+  {
+    "path": "IMPLEMENTATION_REPORT.md",
+    "sha256": "eadd484c80eaec174cf2a87a7601470b8cd01b672ef580a72af8acfd6beda34d",
+    "size": 13219
+  },
+  {
+    "path": "initial-pages-landing-panel.jpg",
+    "sha256": "f746d1ed4864e918a0b2b68cce94962d839eefddb31592b7a7c6932d24c1d955",
+    "size": 78609
+  },
+  {
+    "path": "local-ai-accepted-quotation-narrow-panel.jpg",
+    "sha256": "383c2fa6d917d274d98b35e9ae6d2d31aab33ef89c2afa014d3b03be4177e802",
+    "size": 25972
+  },
+  {
+    "path": "local-hybrid-citations.jpg",
+    "sha256": "ce17d0c68a01133cce711fc1ea0a55d31899e4981e76fb43bd1b84d1e13e7409",
+    "size": 56102
+  },
+  {
+    "path": "local-model-benchmark.json",
+    "sha256": "88d6340460dce6e1a59e28139adffc923b677185cb43ed223ae6ee0224e07e02",
+    "size": 747
+  },
+  {
+    "path": "local-retrieval-result.txt",
+    "sha256": "4595818526969da8c98944e6c3d770fa2f4132319018e68b8f0630150fade2d9",
+    "size": 2561
+  },
+  {
+    "path": "offline-origin-parity.json",
+    "sha256": "e0fefde54b4372dbaa54b8bf7d6bf4cbd6c802e56ea2333d62e7f7c1158aa5ae",
+    "size": 181
+  },
+  {
+    "path": "pages-assessment-tablet-viewport-768.jpg",
+    "sha256": "c7a48ae47541e23323692a07f460a525a8e95bfed43a8d87ac19bb2c9fe43b49",
+    "size": 72356
+  },
+  {
+    "path": "pages-citations-desktop-1440.jpg",
+    "sha256": "63c37001597297bd0389fae514f2795daf8c1281eb3ffea0838ec6c2ff2f6895",
+    "size": 98876
+  },
+  {
+    "path": "pages-critical-fallback-desktop-1440.jpg",
+    "sha256": "63c37001597297bd0389fae514f2795daf8c1281eb3ffea0838ec6c2ff2f6895",
+    "size": 98876
+  },
+  {
+    "path": "pages-dashboard-desktop-1440.jpg",
+    "sha256": "6ac6f3dac183d914483a4fe46d1d052e4c6293aeb917cae6906f170d137c5e5e",
+    "size": 66020
+  },
+  {
+    "path": "pages-dka-desktop-1440.jpg",
+    "sha256": "572c3ee70ee7d90e0bd78f52975e6925bd3e8735d54d8c51407c508c9e41a8c4",
+    "size": 63492
+  },
+  {
+    "path": "pages-guidance-resources-desktop-1440.jpg",
+    "sha256": "90613deb23777dee8126618357a8a21f637d8d590f81ddaf246878f05aaffed8",
+    "size": 62407
+  },
+  {
+    "path": "pages-history-android-viewport-360.jpg",
+    "sha256": "b6f0e7c0c1af350b5d900802a83cabd03bfc2293a8183ac3c436d37ee0224e8b",
+    "size": 39474
+  },
+  {
+    "path": "pages-history-desktop-1440.jpg",
+    "sha256": "e8ecc26e7370b7bc59b8bacb9bac1908593dc2b11e86f4764332123924fe25a3",
+    "size": 59117
+  },
+  {
+    "path": "pages-landing-android-viewport-360.jpg",
+    "sha256": "045ddebd2243d9288d6c070aec7c18ea2a8d8d4cbce594d48f7ebe5292b23950",
+    "size": 55431
+  },
+  {
+    "path": "pages-landing-desktop-1440.jpg",
+    "sha256": "d3fd2ffca3d46e9ae0eff2e31bee3a0f5cae0521f0dc12a7491d9f23ef8855d9",
+    "size": 77337
+  },
+  {
+    "path": "pages-model-options-desktop-1440.jpg",
+    "sha256": "d4deaf49f3c0d55b11ebbf88f935b12b437ddefcfc9626ded64ad779783c1218",
+    "size": 59859
+  },
+  {
+    "path": "pages-profile-lock-iphone-viewport-390.jpg",
+    "sha256": "e3be4f232bfb74ac942ef6667bf517457901cc6994b08acc0de9bf50658cb7c6",
+    "size": 37357
+  },
+  {
+    "path": "pages-voice-android-viewport-360.jpg",
+    "sha256": "b31b5f3f22c82024a77048a20a2c6fc7852376b230baa7048d62a3f6e44e6532",
+    "size": 43132
+  },
+  {
+    "path": "publication-check.json",
+    "sha256": "2b04e89588cfd8ba84e977e8112395731ec0fac53a3ee777b887dcc765fe33df",
+    "size": 147
+  },
+  {
+    "path": "release.json",
+    "sha256": "d1d88593c96fb1d354ae7f0d70e64b32d2e96832f6f4fedfdf769f7bb4df21a2",
+    "size": 3487
+  },
+  {
+    "path": "screenshots.json",
+    "sha256": "a81715e7a677fea309fcd9702900cdd7b56c89412e74cd7376f7937b02e9e04d",
+    "size": 7343
+  },
+  {
+    "path": "VISUAL_QA.md",
+    "sha256": "594d5dfe966caae743fddd0f09b3c3f3c67aafaeab3e76e1c8440fecb2bfbcea",
+    "size": 2232
+  },
+  {
+    "path": "voice-initialization-result.txt",
+    "sha256": "8031721414ef024a0208b8bd2e60c76d048bf6ac9e70433dc183cc06051242a2",
+    "size": 58
+  },
+  {
+    "path": "wasm-parity-report.json",
+    "sha256": "e0fefde54b4372dbaa54b8bf7d6bf4cbd6c802e56ea2333d62e7f7c1158aa5ae",
+    "size": 181
+  }
+]

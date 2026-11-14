@@ -1,0 +1,8 @@
+{
+  "extracted_package_corpus_integrity": true,
+  "clinical_knowledge_hash": "b8c568bd645154e5fd67630c7a670ca53904dc04f54904315047a89923839d4e",
+  "rag_source_verification": true,
+  "retrieved": 5,
+  "model_weights_absent_as_documented": true,
+  "not_a_fresh_machine_install_test": true
+}

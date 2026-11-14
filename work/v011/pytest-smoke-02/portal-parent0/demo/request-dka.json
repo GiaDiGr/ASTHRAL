@@ -1,0 +1,41 @@
+{
+  "subject_id": "clinical-crew",
+  "mission_id": "clinical-earth",
+  "condition_id": "DKA",
+  "presentation_id": null,
+  "population": "NONPREGNANT_ADULT",
+  "age_years": null,
+  "as_of": "2026-10-16T12:00:00Z",
+  "window_start": "2026-10-16T11:00:00Z",
+  "observations": [
+    {
+      "id": "known_diabetes-collection",
+      "concept": "known_diabetes",
+      "value": true,
+      "unit": "1",
+      "timestamp": "2026-10-16T12:00:00Z",
+      "quality": "VALID",
+      "method": "SYNTHETIC_OBSERVATION",
+      "sample_id": "collection",
+      "provenance": "SYNTHETIC_REPORT_ADAPTER_NOT_CLINICAL_VALIDATION"
+    }
+  ],
+  "measurement_bindings": [
+    {
+      "measurement_id": "demo-plasma_glucose_mg_dl",
+      "concept": "plasma_glucose_mg_dl",
+      "sample_id": "demo-sample"
+    },
+    {
+      "measurement_id": "demo-beta_hydroxybutyrate_mmol_l",
+      "concept": "beta_hydroxybutyrate_mmol_l",
+      "sample_id": "demo-sample"
+    },
+    {
+      "measurement_id": "demo-venous_pH",
+      "concept": "venous_pH",
+      "sample_id": "demo-sample"
+    }
+  ],
+  "resources": {}
+}

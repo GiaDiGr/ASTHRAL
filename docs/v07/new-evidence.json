@@ -1,0 +1,18 @@
+{
+  "extension_sha256": "b258ff2d79ab79355f65826466c9fc3e7a52380b749ec18ef2eb4700759e4fd8",
+  "source": {
+    "source_id": "SRC-ADA-HYPO-2026",
+    "organization": "American Diabetes Association",
+    "title": "6. Glycemic Goals, Hypoglycemia, and Hyperglycemic Crises: Standards of Care in Diabetes\u20142026",
+    "year": 2026,
+    "doi": "10.2337/dc26-S006",
+    "url": "https://doi.org/10.2337/dc26-S006",
+    "section": "Hypoglycemia; Table 6.4",
+    "verification": "VERIFIED",
+    "type": "CLINICAL_STANDARD",
+    "verified_date": "2026-10-20",
+    "verification_method": "Original publisher and PMC indexed full-text sections; not independent clinical validation",
+    "population_scope": "Adults with known diabetes; research interpretation only"
+  },
+  "source_note": "Classification follows ADA Table 6.4. Restricted blood measurement route; no drug regimen added."
+}

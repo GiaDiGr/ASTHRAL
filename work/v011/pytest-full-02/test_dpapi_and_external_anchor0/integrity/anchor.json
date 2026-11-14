@@ -1,0 +1,1 @@
+{"signed": {"version": 1, "algorithm": "HMAC-SHA256", "checkpoint": {"record_sequence": 1, "record_count": 42, "records_hash": "4a1891f8745536b3287f182eae642aeacb767da5e5c7216c1d3b38c360411deb", "audit_sequence": 1, "audit_hash": "9cde59697d006b9285cfe84fdb3aa017422cfde1bfa4be02831bb40b7ca80238"}}, "mac": "ae5a701ccae4f12cf6f2ec96e81a3c15e8c466eded5905976b31a78438741673"}

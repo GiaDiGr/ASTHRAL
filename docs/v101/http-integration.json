@@ -1,0 +1,14 @@
+{
+  "real_loopback_http": true,
+  "version": "1.0.1",
+  "reader_dashboard_and_management_asset": true,
+  "frozen_frame": "v101-management-frame",
+  "inventory_version": 4,
+  "management_records": 5,
+  "urgency": "EMERGENCY",
+  "clinical_execution": "BLOCKED",
+  "cross_origin_status": 403,
+  "credentials_and_cookies_omitted": true,
+  "real_browser_visual_inspection": "UNAVAILABLE_CUA_KERNEL_ASSETS_PATH_ERROR",
+  "physical_voice_test": false
+}

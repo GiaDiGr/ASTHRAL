@@ -1,0 +1,31 @@
+{
+  "condition_id": "C027",
+  "catalog_record": {
+    "condition_id": "C027",
+    "name_specialty": "Exposición nominal/crónica a CO₂ / ambiental-respiratorio-neurológico",
+    "description_spaceflight": "CO₂ elevado se asocia con cefalea y otros síntomas y tiene límite ambiental específico.",
+    "risks_symptoms": "Ventilación, carga metabólica, acumulación local.",
+    "biomarkers_sensors_tests": "ppCO₂ ambiental continuo, síntomas.",
+    "baselines_environment_interactions": "Patrón ambiental; actividad/ventilación.",
+    "primary_evidence": "S02, S27. citeturn19search4turn10search0",
+    "limits_authorizations_state": "3 mmHg es límite del promedio horario del hábitat, no umbral diagnóstico individual. `ES`."
+  },
+  "clinical_pathway_profile_as_published": "**P:** ventilación/ECLSS; **M:** ppCO₂ continuo; **Q:** cobertura suficiente de ventana; **D:** promedio temporal 1 h >3 mmHg → `REQUIREMENT_NOT_MET`; **A/DD:** síntomas y fluid shift pueden confundir; **T:** alerta ambiental; **I:** acción de vehículo según autoridad, clínica si sintomático; **R/F:** comprobar descenso; **G:** no diagnosticar hipercapnia clínica solo por ambiente.",
+  "coverage_states": {
+    "prevention": "ES",
+    "monitoring": "ES",
+    "data_quality": "ES",
+    "detection": "ES",
+    "assessment": "RV",
+    "differential_diagnosis": "RV",
+    "triage": "RMA",
+    "intervention_authorized": "RMA",
+    "recovery": "ES",
+    "follow_up": "ES",
+    "prognosis": "RO"
+  },
+  "source_ids": [
+    "S02"
+  ],
+  "NOTICE": "Pathway text is an outline; not an authorized diagnostic or treatment protocol."
+}

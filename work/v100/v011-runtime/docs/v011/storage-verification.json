@@ -1,0 +1,107 @@
+{
+  "clinical_validation": false,
+  "encryption": {
+    "active_store": "STANDARD_SQLITE",
+    "active_database_encrypted": false,
+    "sqlite_cipher_version": null,
+    "sqlcipher_provider_available": false,
+    "migration": "BLOCKED_PENDING_DEPENDENCY_AND_VERIFIED_MIGRATION"
+  },
+  "process_isolation": "SAME_WINDOWS_USER_NOT_ISOLATED",
+  "same_user_can_decrypt_DPAPI": true,
+  "secret_envelopes": {
+    "server-tokens.json": true,
+    "reader-token.txt": true,
+    "portal-access.txt": true,
+    "acquisition-token.txt": true
+  },
+  "credential_roles": [
+    "operator",
+    "reader"
+  ],
+  "directory_acl": "C:\\Users\\Gianni\\Desktop\\Vigile\\engine\\data\\mission-v011-release NT AUTHORITY\\SYSTEM:(OI)(CI)(F)\n                                                                GIANNI\\Gianni:(OI)(CI)(F)\n\nElaborazione completata per 1 file. Elaborazione non riuscita per 0 file\n",
+  "backup": {
+    "format": "VIGILE_SQLITE_BACKUP_1",
+    "source": "C:\\Users\\Gianni\\Desktop\\Vigile\\engine\\data\\mission-v011-release\\vigile.sqlite3",
+    "database": "vigile.sqlite3",
+    "sha256": "4fa0c9741aba95ed98d3e39226752b8cb5794309b30c54476f3f4b4ffefc2c19",
+    "state": {
+      "record_sequence": 553,
+      "record_count": 553,
+      "records_hash": "31bc9dc31a31892f7aac5adb552b1737b4f0d94cd1b37033ee413d1ae014c21c",
+      "audit_sequence": 554,
+      "audit_hash": "446112ea59115a542f9e5afb94ec1ca2283d8d782dbfd4e14ea87a152bb6140a"
+    },
+    "sqlite_encryption": "NONE"
+  },
+  "restored": {
+    "format": "VIGILE_SQLITE_BACKUP_1",
+    "source": "C:\\Users\\Gianni\\Desktop\\Vigile\\engine\\data\\backups\\mission-v011-release\\vigile.sqlite3",
+    "database": "vigile.sqlite3",
+    "sha256": "4fa0c9741aba95ed98d3e39226752b8cb5794309b30c54476f3f4b4ffefc2c19",
+    "state": {
+      "record_sequence": 553,
+      "record_count": 553,
+      "records_hash": "31bc9dc31a31892f7aac5adb552b1737b4f0d94cd1b37033ee413d1ae014c21c",
+      "audit_sequence": 554,
+      "audit_hash": "446112ea59115a542f9e5afb94ec1ca2283d8d782dbfd4e14ea87a152bb6140a"
+    },
+    "sqlite_encryption": "NONE"
+  },
+  "anchor_creation": {
+    "anchor": "C:\\Users\\Gianni\\AppData\\Local\\Vigile\\integrity\\mission-v011-release.anchor.json",
+    "algorithm": "HMAC-SHA256",
+    "checkpoint": {
+      "record_sequence": 553,
+      "record_count": 553,
+      "records_hash": "31bc9dc31a31892f7aac5adb552b1737b4f0d94cd1b37033ee413d1ae014c21c",
+      "audit_sequence": 554,
+      "audit_hash": "446112ea59115a542f9e5afb94ec1ca2283d8d782dbfd4e14ea87a152bb6140a"
+    },
+    "same_user_compromise_resistant": false
+  },
+  "anchor_verification": {
+    "valid": true,
+    "anchored_prefix": {
+      "record_sequence": 553,
+      "record_count": 553,
+      "records_hash": "31bc9dc31a31892f7aac5adb552b1737b4f0d94cd1b37033ee413d1ae014c21c",
+      "audit_sequence": 554,
+      "audit_hash": "446112ea59115a542f9e5afb94ec1ca2283d8d782dbfd4e14ea87a152bb6140a"
+    },
+    "latest_checkpoint": {
+      "sequence": 554,
+      "hash": "446112ea59115a542f9e5afb94ec1ca2283d8d782dbfd4e14ea87a152bb6140a"
+    },
+    "protection": "DB_ONLY_TAMPERING_DETECTION_NOT_SAME_USER_COMPROMISE"
+  },
+  "original_v010_anchor": {
+    "valid": true,
+    "anchored_prefix": {
+      "record_sequence": 244,
+      "record_count": 244,
+      "records_hash": "6782696de2c725d1db9c12bc1760ca6e0bab77b28dc255905bcddb120e079d1d",
+      "audit_sequence": 246,
+      "audit_hash": "a8e0e228e8ab6d649c12cc3250db211db1f368ed1ed8c7db18b88c9326f6b65e"
+    },
+    "latest_checkpoint": {
+      "sequence": 254,
+      "hash": "6da2ec8ddd24fc5859279214f46053c8c4c8e69d682eb881de04ed7a3a015387"
+    },
+    "protection": "DB_ONLY_TAMPERING_DETECTION_NOT_SAME_USER_COMPROMISE"
+  },
+  "reserved_bank_unchanged": true,
+  "reserved_bank_hash": "c1a75f8f0a792ebd094bda50bd5790b302a6c2c8475cdce0a0a5d239f76651e0",
+  "audit_valid": true,
+  "checkpoint": {
+    "sequence": 554,
+    "hash": "446112ea59115a542f9e5afb94ec1ca2283d8d782dbfd4e14ea87a152bb6140a"
+  },
+  "limitations": [
+    "SQLITE_AND_BACKUPS_PLAINTEXT",
+    "DPAPI_IS_NOT_PROCESS_ISOLATION",
+    "HMAC_KEY_ACCESS_OR_SOURCE_CONTROL_CAN_FORGE_AUDIT",
+    "NO_THERAPEUTIC_EXECUTION",
+    "NO_CRYPTOGRAPHIC_MIGRATION_ATTEMPTED_WITHOUT_SQLCIPHER_PROVIDER"
+  ]
+}

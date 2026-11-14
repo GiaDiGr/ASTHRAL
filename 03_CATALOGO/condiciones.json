@@ -1,0 +1,442 @@
+[
+  {
+    "condition_id": "C001",
+    "name_specialty": "Capacidad aeróbica reducida / fisiología cardiovascular",
+    "description_spaceflight": "Pérdida de rendimiento cardiorrespiratorio que puede comprometer EVA y tareas físicas.",
+    "risks_symptoms": "Microgravedad, desacondicionamiento; fatiga y reducción de tolerancia al esfuerzo.",
+    "biomarkers_sensors_tests": "VO₂max/VO₂peak, ergometría, HR.",
+    "baselines_environment_interactions": "VO₂ preflight; fase de misión, gravedad, EVA. Interactúa con músculo y CV.",
+    "primary_evidence": "S01, S04. citeturn6view0turn18search3",
+    "limits_authorizations_state": "Requisitos de rendimiento ≠ enfermedad. `ES`."
+  },
+  {
+    "condition_id": "C002",
+    "name_specialty": "Pérdida de tamaño/fuerza/resistencia muscular / muscular",
+    "description_spaceflight": "Microgravedad descarga musculatura y puede reducir fuerza y resistencia funcionales.",
+    "risks_symptoms": "Desuso, ejercicio insuficiente; debilidad funcional.",
+    "biomarkers_sensors_tests": "Fuerza, dinamometría/ejercicio resistivo, rendimiento funcional.",
+    "baselines_environment_interactions": "Baseline por grupo muscular y método; gravedad y programa de ejercicio.",
+    "primary_evidence": "S01, S04. citeturn6view1turn12search3",
+    "limits_authorizations_state": "No combinar pruebas/grupos incompatibles. `ES`."
+  },
+  {
+    "condition_id": "C003",
+    "name_specialty": "Pérdida ósea y riesgo de fractura / óseo",
+    "description_spaceflight": "Alteraciones esqueléticas y de resistencia ósea durante exposición a gravedad reducida.",
+    "risks_symptoms": "Descarga, duración, nutrición; fractura puede ocurrir sin osteoporosis.",
+    "biomarkers_sensors_tests": "DXA, QCT, BMD, marcadores de recambio cuando disponibles.",
+    "baselines_environment_interactions": "DXA preflight; gravedad, ejercicio, nutrición. Interacción renal.",
+    "primary_evidence": "S01, S06. citeturn6view2turn11search7",
+    "limits_authorizations_state": "BMD por sí sola no predice fractura individual. `ES`."
+  },
+  {
+    "condition_id": "C004",
+    "name_specialty": "Desacondicionamiento cardiovascular / cardiovascular",
+    "description_spaceflight": "Adaptaciones de circulación, corazón y vasos durante microgravedad.",
+    "risks_symptoms": "Microgravedad, duración; menor tolerancia funcional/postural.",
+    "biomarkers_sensors_tests": "HR, BP, ECG, volumen sistólico/cardiaco si disponible, ejercicio.",
+    "baselines_environment_interactions": "Baseline CV; gravedad y fase de misión.",
+    "primary_evidence": "S05. citeturn11search0",
+    "limits_authorizations_state": "No existe un único biomarcador diagnóstico. `RV`."
+  },
+  {
+    "condition_id": "C005",
+    "name_specialty": "Intolerancia ortostática / cardiovascular-autonómica",
+    "description_spaceflight": "Riesgo principalmente en transición a gravedad/reentrada/aterrizaje.",
+    "risks_symptoms": "Desacondicionamiento, cambios hemodinámicos; mareo, presíncope/síncope.",
+    "biomarkers_sensors_tests": "HR, BP beat-to-beat si disponible, test de pie/tilt postflight, síntomas.",
+    "baselines_environment_interactions": "Baseline preflight; aplicabilidad condicionada a gravedad.",
+    "primary_evidence": "S02, S05, S34. citeturn19search2turn26search0",
+    "limits_authorizations_state": "No ejecutar “stand test” en microgravedad como equivalente. Intervención según misión. `RMA`."
+  },
+  {
+    "condition_id": "C006",
+    "name_specialty": "Tromboembolismo venoso / cardiovascular-hematológico",
+    "description_spaceflight": "Hallazgo emergente de estasis/flujo retrógrado yugular y trombosis durante vuelo.",
+    "risks_symptoms": "Alteración de flujo venoso y factores individuales.",
+    "biomarkers_sensors_tests": "Ecografía venosa, síntomas, evaluación clínica.",
+    "baselines_environment_interactions": "Anatomía/flujo preflight si disponible; fluid shift.",
+    "primary_evidence": "S35. citeturn27search0",
+    "limits_authorizations_state": "NASA reportó estasis/flujo reverso en 6/11 y un trombo oclusivo; no derivar de ello umbral diagnóstico automático. `RMA`."
+  },
+  {
+    "condition_id": "C007",
+    "name_specialty": "Arritmia/evento cardiovascular agudo / cardiovascular-emergencias",
+    "description_spaceflight": "Condición incluida en el espacio de planificación médica de NASA.",
+    "risks_symptoms": "Factores personales, fisiología espacial, enfermedad aguda.",
+    "biomarkers_sensors_tests": "ECG, HR, BP, síntomas.",
+    "baselines_environment_interactions": "Baseline ECG/historia si autorizado.",
+    "primary_evidence": "S17. citeturn21search0turn21search2",
+    "limits_authorizations_state": "Protocolo de diagnóstico/tratamiento requiere autoridad médica. `RMA`."
+  },
+  {
+    "condition_id": "C008",
+    "name_specialty": "Redistribución de fluidos/hipovolemia relativa / cardiovascular",
+    "description_spaceflight": "El cambio gravitatorio altera circulación y contribuye a adaptación CV/ortostática.",
+    "risks_symptoms": "Microgravedad, hidratación, retorno a gravedad.",
+    "biomarkers_sensors_tests": "Peso/masa corporal, HR/BP, ultrasonido/hemodinámica según recursos.",
+    "baselines_environment_interactions": "Baselines personales; hidratación y gravedad.",
+    "primary_evidence": "S05. citeturn11search0",
+    "limits_authorizations_state": "No hay umbral operacional único extraído. `RO`."
+  },
+  {
+    "condition_id": "C009",
+    "name_specialty": "SANS / neuro-oftalmología",
+    "description_spaceflight": "Cambios estructurales oculares y cerebrales relacionados con vuelo prolongado.",
+    "risks_symptoms": "Gravedad alterada, susceptibilidad individual; mecanismo incompleto.",
+    "biomarkers_sensors_tests": "Agudeza visual, refracción, fondo de ojo, OCT, IOP cuando disponible.",
+    "baselines_environment_interactions": "Evaluación ocular preflight; duración y fluid shift.",
+    "primary_evidence": "S07. citeturn11search2",
+    "limits_authorizations_state": "NASA señala que no existe equivalente terrestre directo; no diagnosticar por una sola métrica. `RV`."
+  },
+  {
+    "condition_id": "C010",
+    "name_specialty": "Space Motion Sickness / neurovestibular",
+    "description_spaceflight": "Síntomas durante adaptación a cambios gravitatorios.",
+    "risks_symptoms": "Transición gravitatoria; náusea, vómito, mareo, desorientación.",
+    "biomarkers_sensors_tests": "Síntomas, función vestibular, rendimiento.",
+    "baselines_environment_interactions": "Susceptibilidad/historia preflight.",
+    "primary_evidence": "S11, S17. citeturn12search2turn21search1",
+    "limits_authorizations_state": "Tratamiento farmacológico bloqueado sin protocolo autorizado. `RMA`."
+  },
+  {
+    "condition_id": "C011",
+    "name_specialty": "Deterioro sensorimotor/postural/locomotor / sensorimotor",
+    "description_spaceflight": "Puede afectar marcha, coordinación, control fino y tareas críticas, sobre todo en transiciones G.",
+    "risks_symptoms": "Gravedad alterada; desorientación, déficit de coordinación.",
+    "biomarkers_sensors_tests": "Balance, marcha, coordinación, pruebas motoras.",
+    "baselines_environment_interactions": "Baseline funcional; fase de transición.",
+    "primary_evidence": "S11. citeturn12search2",
+    "limits_authorizations_state": "Recuperación puede requerir horas-días; predicción individual no validada. `RV`."
+  },
+  {
+    "condition_id": "C012",
+    "name_specialty": "Pérdida de sueño / medicina del sueño",
+    "description_spaceflight": "Sueño insuficiente compromete salud y rendimiento cognitivo.",
+    "risks_symptoms": "Carga de trabajo, ambiente, horarios, luz, ruido.",
+    "biomarkers_sensors_tests": "Duración/eficiencia, actigrafía, diarios, somnolencia.",
+    "baselines_environment_interactions": "Baseline de sueño; luz/ruido/temperatura.",
+    "primary_evidence": "S10. citeturn12search1",
+    "limits_authorizations_state": "No convertir reducción de sueño en diagnóstico psiquiátrico. `ES`."
+  },
+  {
+    "condition_id": "C013",
+    "name_specialty": "Desincronización circadiana / sueño",
+    "description_spaceflight": "Horarios irregulares y señales ambientales pueden desalinear ritmos.",
+    "risks_symptoms": "Turnos, luz, cambios horarios.",
+    "biomarkers_sensors_tests": "Horario sueño-vigilia, luz, actigrafía; biomarcadores circadianos si disponibles.",
+    "baselines_environment_interactions": "Patrón preflight.",
+    "primary_evidence": "S10. citeturn12search1",
+    "limits_authorizations_state": "Umbrales diagnósticos operacionales `NOT_FOUND`. `RV`."
+  },
+  {
+    "condition_id": "C014",
+    "name_specialty": "Fatiga y sobrecarga de trabajo / factores humanos",
+    "description_spaceflight": "Carga crónica y sueño insuficiente incrementan riesgo de errores y bajo rendimiento.",
+    "risks_symptoms": "Workload, sueño, estrés.",
+    "biomarkers_sensors_tests": "Escalas, sueño, desempeño de tareas.",
+    "baselines_environment_interactions": "Baseline individual y de tarea.",
+    "primary_evidence": "S10. citeturn12search1",
+    "limits_authorizations_state": "No usar una puntuación aislada como incapacidad médica. `RV`."
+  },
+  {
+    "condition_id": "C015",
+    "name_specialty": "Deterioro cognitivo funcional / neurocognición",
+    "description_spaceflight": "Atención, reacción y decisión pueden verse afectados por sueño, hipoxia, CO₂ y otros factores.",
+    "risks_symptoms": "Sueño, fatiga, hipoxia, ambiente, estrés.",
+    "biomarkers_sensors_tests": "Batería cognitiva, tiempo de reacción, precisión.",
+    "baselines_environment_interactions": "Baseline repetido con control de aprendizaje.",
+    "primary_evidence": "S10, S14, S27. citeturn12search1turn18search10turn19search4",
+    "limits_authorizations_state": "Etiología no inferible de una prueba aislada. `RV`."
+  },
+  {
+    "condition_id": "C016",
+    "name_specialty": "Cambios conductuales/psiquiátricos / salud conductual",
+    "description_spaceflight": "Aislamiento, distancia y otros estresores pueden comprometer bienestar y desempeño.",
+    "risks_symptoms": "Aislamiento, estrés, sueño, conflicto.",
+    "biomarkers_sensors_tests": "Cuestionarios autorizados, entrevistas, cambios conductuales.",
+    "baselines_environment_interactions": "Baseline conductual cuando sea ético/operacionalmente autorizado.",
+    "primary_evidence": "S12. citeturn18search7",
+    "limits_authorizations_state": "Datos altamente sensibles; diagnóstico requiere profesional. `RMA`."
+  },
+  {
+    "condition_id": "C017",
+    "name_specialty": "Deterioro de trabajo en equipo/adaptación psicosocial / factores humanos",
+    "description_spaceflight": "Mala coordinación/comunicación puede afectar seguridad y misión.",
+    "risks_symptoms": "Aislamiento, conflicto, carga de trabajo.",
+    "biomarkers_sensors_tests": "Indicadores de equipo, autorreportes, desempeño colectivo.",
+    "baselines_environment_interactions": "Perfil de equipo y misión.",
+    "primary_evidence": "S12. citeturn18search7turn27search5",
+    "limits_authorizations_state": "No patologizar desacuerdos ni inferir estados mentales ocultos. `RO`."
+  },
+  {
+    "condition_id": "C018",
+    "name_specialty": "Alteración de respuesta inmunitaria / inmunología",
+    "description_spaceflight": "El vuelo espacial altera respuestas inmunes; la magnitud clínica individual sigue incierta.",
+    "risks_symptoms": "Microgravedad, estrés, sueño, radiación.",
+    "biomarkers_sensors_tests": "Sangre/saliva/orina, células y mediadores según protocolo.",
+    "baselines_environment_interactions": "Baselines inmunológicos longitudinales.",
+    "primary_evidence": "S09. citeturn12search0turn12search7",
+    "limits_authorizations_state": "Cambio biomarcador ≠ inmunodeficiencia clínica. `RV`."
+  },
+  {
+    "condition_id": "C019",
+    "name_specialty": "Reactivación viral latente / infeccioso-inmunológico",
+    "description_spaceflight": "Reactivación viral ha sido observada durante vuelo y se relaciona con cambios inmunes.",
+    "risks_symptoms": "Estrés e inmunomodulación.",
+    "biomarkers_sensors_tests": "PCR/serología/biomarcadores cuando autorizados; síntomas.",
+    "baselines_environment_interactions": "Baseline/historia viral.",
+    "primary_evidence": "S09. citeturn12search0turn12search7",
+    "limits_authorizations_state": "No diagnosticar reactivación por síntomas inespecíficos. `RV`."
+  },
+  {
+    "condition_id": "C020",
+    "name_specialty": "Infección/host–microorganism interaction / infeccioso",
+    "description_spaceflight": "Microbiomas y huésped pueden cambiar en el ambiente espacial; infecciones forman parte de condiciones IMM.",
+    "risks_symptoms": "Entorno cerrado, microbioma, inmunidad.",
+    "biomarkers_sensors_tests": "Temperatura, síntomas, cultivos/PCR/lab según recursos.",
+    "baselines_environment_interactions": "Historia y baseline; calidad aire/agua.",
+    "primary_evidence": "S03, S17. citeturn18search0turn21search1",
+    "limits_authorizations_state": "Tratamiento antimicrobiano requiere protocolo médico. `RMA`."
+  },
+  {
+    "condition_id": "C021",
+    "name_specialty": "Formación de cálculos renales / nefro-urología",
+    "description_spaceflight": "Descarga ósea y cambios urinarios pueden elevar riesgo de litiasis.",
+    "risks_symptoms": "Hipercalciuria, hidratación, dieta, pérdida ósea.",
+    "biomarkers_sensors_tests": "Orina, química urinaria, ecografía cuando disponible.",
+    "baselines_environment_interactions": "Historia renal, orina preflight; hidratación.",
+    "primary_evidence": "S08. citeturn11search3turn21search15",
+    "limits_authorizations_state": "Herramienta predictiva individual requiere validación. `RV`."
+  },
+  {
+    "condition_id": "C022",
+    "name_specialty": "Retención urinaria / urología",
+    "description_spaceflight": "Riesgo HSRB explícito y condición relevante en asistencia autónoma.",
+    "risks_symptoms": "Medicación, fisiología, obstrucción u otros factores.",
+    "biomarkers_sensors_tests": "Síntomas, volumen vesical/ultrasonido si disponible.",
+    "baselines_environment_interactions": "Historia urológica.",
+    "primary_evidence": "S03. citeturn27search5",
+    "limits_authorizations_state": "Umbrales y procedimientos operacionales públicos insuficientes. `NPA`."
+  },
+  {
+    "condition_id": "C023",
+    "name_specialty": "Nutrición/energía inadecuadas / nutrición-metabolismo",
+    "description_spaceflight": "Alimentación segura, suficiente y aceptable es necesaria para salud/rendimiento; exploración limita reabastecimiento.",
+    "risks_symptoms": "Duración, degradación alimento, ingesta insuficiente, palatabilidad.",
+    "biomarkers_sensors_tests": "Ingesta, masa corporal, paneles bioquímicos cuando disponibles.",
+    "baselines_environment_interactions": "Peso, composición corporal, dieta preflight.",
+    "primary_evidence": "S13. citeturn18search2turn18search11",
+    "limits_authorizations_state": "No generar prescripción dietética clínica sin objetivos autorizados. `ES`."
+  },
+  {
+    "condition_id": "C024",
+    "name_specialty": "Deshidratación/desequilibrio hidroelectrolítico / nutrición-renal",
+    "description_spaceflight": "Variable transversal relevante a CV, renal y desempeño.",
+    "risks_symptoms": "Ingesta insuficiente, pérdidas GI, ejercicio/EVA.",
+    "biomarkers_sensors_tests": "Ingesta/salida, masa, orina y electrolitos si disponibles.",
+    "baselines_environment_interactions": "Baselines personales; ambiente/EVA.",
+    "primary_evidence": "S13, S02. citeturn18search2turn18search8",
+    "limits_authorizations_state": "No se extrajo un umbral NASA único universal. `RV`."
+  },
+  {
+    "condition_id": "C025",
+    "name_specialty": "Enfermedad gastrointestinal aguda / gastroenterología",
+    "description_spaceflight": "Condiciones GI forman parte del conjunto médico que debe poder manejarse en vuelo.",
+    "risks_symptoms": "Infección, dieta, fármacos, adaptación.",
+    "biomarkers_sensors_tests": "Síntomas, hidratación, examen/lab según recursos.",
+    "baselines_environment_interactions": "Historia GI.",
+    "primary_evidence": "S17. citeturn21search0turn21search2",
+    "limits_authorizations_state": "Diagnóstico/tratamiento específico requiere protocolo clínico. `RMA`."
+  },
+  {
+    "condition_id": "C026",
+    "name_specialty": "Hipoxia / respiratorio-ambiental",
+    "description_spaceflight": "Atmósferas de presión reducida pueden elevar riesgo de hipoxia, especialmente en preparaciones EVA.",
+    "risks_symptoms": "ppO₂/presión, protocolos prebreathe.",
+    "biomarkers_sensors_tests": "ppO₂ ambiental, SpO₂, síntomas, rendimiento.",
+    "baselines_environment_interactions": "SpO₂ si se usa; presión/atmósfera/suit.",
+    "primary_evidence": "S14, S02. citeturn18search10turn18search8",
+    "limits_authorizations_state": "NASA continúa estudiando niveles tolerables; no inventar umbral clínico adicional. `RV`."
+  },
+  {
+    "condition_id": "C027",
+    "name_specialty": "Exposición nominal/crónica a CO₂ / ambiental-respiratorio-neurológico",
+    "description_spaceflight": "CO₂ elevado se asocia con cefalea y otros síntomas y tiene límite ambiental específico.",
+    "risks_symptoms": "Ventilación, carga metabólica, acumulación local.",
+    "biomarkers_sensors_tests": "ppCO₂ ambiental continuo, síntomas.",
+    "baselines_environment_interactions": "Patrón ambiental; actividad/ventilación.",
+    "primary_evidence": "S02, S27. citeturn19search4turn10search0",
+    "limits_authorizations_state": "3 mmHg es límite del promedio horario del hábitat, no umbral diagnóstico individual. `ES`."
+  },
+  {
+    "condition_id": "C028",
+    "name_specialty": "Exposición a sustancias tóxicas / toxicología",
+    "description_spaceflight": "Fugas, off-gassing, combustión y contaminantes pueden causar efectos agudos/graves.",
+    "risks_symptoms": "Fallos ECLSS/payload, humo, químicos, propulsantes.",
+    "biomarkers_sensors_tests": "Sensores ambientales específicos + fisiología/lab según agente.",
+    "baselines_environment_interactions": "Concentraciones ambientales normales.",
+    "primary_evidence": "S37. citeturn27search2turn27search7",
+    "limits_authorizations_state": "Límites son sustancia-específicos; no se ha extraído catálogo completo aquí. `RMA`."
+  },
+  {
+    "condition_id": "C029",
+    "name_specialty": "Exposición a polvo celestial/lunar / ocupacional-respiratorio",
+    "description_spaceflight": "Polvo externo puede introducirse en vehículos/hábitats de superficie.",
+    "risks_symptoms": "EVA y hábitat de superficie.",
+    "biomarkers_sensors_tests": "Monitoreo partículas/exposición, síntomas.",
+    "baselines_environment_interactions": "Exposición cero/normal; operaciones EVA.",
+    "primary_evidence": "S03, S37. citeturn27search5turn27search7",
+    "limits_authorizations_state": "Umbrales operacionales específicos no recuperados. `RV`."
+  },
+  {
+    "condition_id": "C030",
+    "name_specialty": "Enfermedad por descompresión / aeroespacial",
+    "description_spaceflight": "Burbujas de nitrógeno durante transición de alta a baja presión pueden causar enfermedad y comprometer EVA.",
+    "risks_symptoms": "Presión, nitrógeno tisular, prebreathe insuficiente.",
+    "biomarkers_sensors_tests": "Presión/suit, síntomas clínicos, exposición.",
+    "baselines_environment_interactions": "Perfil presión/respiración.",
+    "primary_evidence": "S36. citeturn27search1turn27search4",
+    "limits_authorizations_state": "Protocolos detallados de misión deben ser autorizados; fracción de gravedad añade incertidumbre. `RMA`."
+  },
+  {
+    "condition_id": "C031",
+    "name_specialty": "Barotrauma/ear-sinus block / ORL",
+    "description_spaceflight": "Condición ambiental incluida en IMM para cambios de presión.",
+    "risks_symptoms": "Cambios de presión.",
+    "biomarkers_sensors_tests": "Síntomas, examen otológico si disponible, presión.",
+    "baselines_environment_interactions": "Historia ORL.",
+    "primary_evidence": "S17. citeturn21search0turn21search1",
+    "limits_authorizations_state": "Protocolo específico no extraído. `RMA`."
+  },
+  {
+    "condition_id": "C032",
+    "name_specialty": "Exposición acumulada a radiación ionizante/carcinogénesis / radiobiología",
+    "description_spaceflight": "Riesgo de cáncer y otros efectos obliga a seguimiento dosimétrico.",
+    "risks_symptoms": "GCR/SPE/duración/escudo.",
+    "biomarkers_sensors_tests": "Dosimetría efectiva y órgano-específica.",
+    "baselines_environment_interactions": "Dosis acumulada previa; entorno de radiación.",
+    "primary_evidence": "S01, S16. citeturn6view3turn18search9",
+    "limits_authorizations_state": "Dosis ≠ diagnóstico de cáncer; conversiones dosimétricas deben ser válidas. `ES`."
+  },
+  {
+    "condition_id": "C033",
+    "name_specialty": "Síndrome/efectos agudos de radiación / emergencias-radiobiología",
+    "description_spaceflight": "IMM contempla radiation sickness para planificación médica.",
+    "risks_symptoms": "Evento radiológico suficientemente intenso.",
+    "biomarkers_sensors_tests": "Dosimetría, síntomas, hematología según protocolo.",
+    "baselines_environment_interactions": "Dosis previa y evento.",
+    "primary_evidence": "S17, S01. citeturn21search1turn6view3",
+    "limits_authorizations_state": "Umbrales clínicos detallados no extraídos; intervención bloqueada. `RMA`."
+  },
+  {
+    "condition_id": "C034",
+    "name_specialty": "Radiación no ionizante / ambiental",
+    "description_spaceflight": "HSRB mantiene riesgo específico por NIR.",
+    "risks_symptoms": "Fuentes electromagnéticas/ópticas según misión.",
+    "biomarkers_sensors_tests": "Dosimetría/monitorización específica a fuente.",
+    "baselines_environment_interactions": "Exposición nominal.",
+    "primary_evidence": "S03. citeturn27search5",
+    "limits_authorizations_state": "Límites específicos no recuperados. `RV`."
+  },
+  {
+    "condition_id": "C035",
+    "name_specialty": "Pérdida auditiva/exposición acústica / audiología",
+    "description_spaceflight": "Ruido puede afectar audición, sueño, comunicación y desempeño.",
+    "risks_symptoms": "SPL, duración, frecuencias.",
+    "biomarkers_sensors_tests": "Dosimetría acústica, audiometría/hearing test.",
+    "baselines_environment_interactions": "Audiograma preflight; ambiente acústico.",
+    "primary_evidence": "S38, S02. citeturn27search3turn27search6",
+    "limits_authorizations_state": "Límite ambiental no equivale a diagnóstico de pérdida auditiva. `ES`."
+  },
+  {
+    "condition_id": "C036",
+    "name_specialty": "Lesión por cargas dinámicas / trauma",
+    "description_spaceflight": "Lanzamiento/aterrizaje y cargas pueden lesionar.",
+    "risks_symptoms": "Aceleraciones, impacto, postura.",
+    "biomarkers_sensors_tests": "Acelerometría + evaluación clínica.",
+    "baselines_environment_interactions": "Perfil misión y antropometría.",
+    "primary_evidence": "S03. citeturn27search5",
+    "limits_authorizations_state": "Diagnóstico de lesión requiere evaluación. `RMA`."
+  },
+  {
+    "condition_id": "C037",
+    "name_specialty": "Lesión/rendimiento comprometido durante EVA / medicina EVA",
+    "description_spaceflight": "EVA combina carga física, suit, DCS, hipoxia, CO₂ y fatiga.",
+    "risks_symptoms": "Suit, duración, ambiente, carga de trabajo.",
+    "biomarkers_sensors_tests": "Suit telemetry, HR, gases, síntomas/rendimiento.",
+    "baselines_environment_interactions": "Baseline funcional y perfil EVA.",
+    "primary_evidence": "S03. citeturn18search0",
+    "limits_authorizations_state": "Triaje e interrupción se rigen por reglas de misión. `RMA`."
+  },
+  {
+    "condition_id": "C038",
+    "name_specialty": "Trauma, heridas y fractura aguda / emergencias",
+    "description_spaceflight": "El modelo médico NASA contempla abrasiones, laceraciones, quemaduras, esguinces, fracturas y lesiones craneales.",
+    "risks_symptoms": "EVA, mantenimiento, cargas, accidente.",
+    "biomarkers_sensors_tests": "Evaluación clínica, imagen/ultrasonido según capacidad.",
+    "baselines_environment_interactions": "Historia/función baseline.",
+    "primary_evidence": "S17. citeturn21search0",
+    "limits_authorizations_state": "Procedimientos invasivos y analgesia requieren autorización. `RMA`."
+  },
+  {
+    "condition_id": "C039",
+    "name_specialty": "Patología/emergencia dental / odontología",
+    "description_spaceflight": "IMM utiliza historia dental y contempla daño, caries/abscesos.",
+    "risks_symptoms": "Restauraciones previas, trauma, enfermedad dental.",
+    "biomarkers_sensors_tests": "Historia, examen/imágenes según recursos.",
+    "baselines_environment_interactions": "Evaluación dental preflight.",
+    "primary_evidence": "S17, S19. citeturn21search0turn21search4",
+    "limits_authorizations_state": "Contenido operacional completo de tratamiento no consolidado. `RMA`."
+  },
+  {
+    "condition_id": "C040",
+    "name_specialty": "Medicamento ineficaz o tóxico / farmacología",
+    "description_spaceflight": "Estabilidad, reabastecimiento y fisiología espacial pueden alterar eficacia/toxicidad; PK/PD puede diferir.",
+    "risks_symptoms": "Duración, almacenamiento, cambios fisiológicos, interacción.",
+    "biomarkers_sensors_tests": "Inventario, lote/caducidad/condiciones, respuesta clínica.",
+    "baselines_environment_interactions": "Medicación previa, ambiente de almacenamiento.",
+    "primary_evidence": "S15. citeturn18search5",
+    "limits_authorizations_state": "VIGILE no calcula dosis nuevas ni prescribe. `RMA`."
+  },
+  {
+    "condition_id": "C041",
+    "name_specialty": "Infección respiratoria/inhalación de humo / respiratorio-emergencias",
+    "description_spaceflight": "IMM incluye infecciones respiratorias y smoke inhalation; ambiente cerrado amplifica exposición.",
+    "risks_symptoms": "Infección, combustión, contaminantes.",
+    "biomarkers_sensors_tests": "SpO₂, síntomas, ambiente, examen/lab.",
+    "baselines_environment_interactions": "Respiratorio preflight; aire ambiental.",
+    "primary_evidence": "S17, S37. citeturn21search1turn27search2",
+    "limits_authorizations_state": "Diagnóstico y tratamiento requieren supervisión. `RMA`."
+  },
+  {
+    "condition_id": "C042",
+    "name_specialty": "Choque eléctrico / emergencias",
+    "description_spaceflight": "HSRB mantiene riesgo explícito de daño eléctrico.",
+    "risks_symptoms": "Fallos/energía/mantenimiento.",
+    "biomarkers_sensors_tests": "Evento eléctrico + evaluación fisiológica/ECG cuando corresponda.",
+    "baselines_environment_interactions": "Contexto técnico.",
+    "primary_evidence": "S03. citeturn27search5",
+    "limits_authorizations_state": "Protocolo médico operacional específico `NPA`."
+  },
+  {
+    "condition_id": "C043",
+    "name_specialty": "Incapacidad de egress/tarea tras transición de gravedad / rendimiento",
+    "description_spaceflight": "Readaptación sensorimotora/ortostática puede comprometer aterrizaje, salida y tareas críticas.",
+    "risks_symptoms": "Retorno a gravedad, desacondicionamiento.",
+    "biomarkers_sensors_tests": "Marcha, balance, HR/BP, capacidad funcional.",
+    "baselines_environment_interactions": "Preflight + fase de transición.",
+    "primary_evidence": "S03, S11, S02. citeturn27search5turn12search2turn19search2",
+    "limits_authorizations_state": "“Fit for task” necesita regla de misión. `RMA`."
+  },
+  {
+    "condition_id": "C044",
+    "name_specialty": "Alteración dermatológica/infección cutánea / dermatología-inmunología",
+    "description_spaceflight": "Rashes e infecciones cutáneas aparecen dentro del espectro inmunológico/médico relevante.",
+    "risks_symptoms": "Inmunidad, ambiente cerrado, humedad/contacto.",
+    "biomarkers_sensors_tests": "Inspección/imágenes clínicas, síntomas, microbiología si disponible.",
+    "baselines_environment_interactions": "Estado cutáneo preflight.",
+    "primary_evidence": "S09, S17. citeturn12search7turn21search0",
+    "limits_authorizations_state": "Clasificación automatizada por imagen necesitaría validación específica. `RV`."
+  }
+]

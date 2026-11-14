@@ -1,0 +1,20 @@
+﻿domain,candidate_condition,measurements,possible_research_capability,blocked_or_requires_validation,source_ids
+cardiovascular,Desacondicionamiento cardiovascular / respuesta ortostática,"HR, BP, MAP, postura, síntomas, contexto gravedad",monitoreo; baseline; tendencias; evaluación guiada research-only,no diagnóstico autónomo; rangos personalizados y triaje requieren autorización,CV-RISK;OI-ISS;OI-GCG
+cardiovascular,"Tromboembolismo venoso, sospecha","síntomas, antecedentes, imagen ecográfica si disponible","registro, evaluación guiada y escalamiento humano",sin anticoagulación automatizada,VTE-25;VTE-WG
+musculoskeletal,Disminución fuerza/resistencia muscular,"fuerza segmentaria, test funcional, ejercicio",cálculo de variación y seguimiento,sin algoritmo autónomo de prescripción,MUSCLE-ER;MUSCLE-ISS
+aerobic,Desacondicionamiento aeróbico,"VO2peak periódico, carga, HR durante actividad",registro y tendencias,frecuencias y límites acción por validar,MUSCLE-ER
+bone,Vigilancia pérdida ósea,"DXA/QCT periódicos, biomarcadores","comparaciones longitudinales, adherencia",sin predicción individual de fractura con % BMD,BONE-ER
+sleep,Déficit de sueño,"actigrafía, diario, horarios, carga","métricas, baseline, tendencias",actigrafía ≠ diagnóstico clínico general,SLEEP-ER;SLEEP-OBS
+circadian,Desalineación circadiana,"exposición luz, sueño, horario, fase estimada",riesgo exploratorio; seguimiento,fase circadiana inferida no validada universal,CIRCADIAN
+cognitive,Cambio rendimiento cognitivo,"precisión, latencia, subtests Cognition","scores longitudinales research-only, ajuste práctica si está justificado",z -1.5 del estudio no es umbral clínico universal,COG-NORM;COG-ISS
+behavioral,Salud conductual y bienestar,"autorreporte validado, sueño, contexto, equipo",seguimiento y derivación,sin diagnóstico psiquiátrico autónomo,BHP-ER
+immune_infectious,Disregulación inmune e infecciones,"síntomas, temperatura y laboratorios si disponibles",infraestructura de datos y evaluaciones,documentación específica pendiente,
+radiation,Exposición a radiación,"dosimetría, tasa y acumulado, contexto",estructura para tracking dosimétrico,umbrales y protocolos operativos pendientes,STD-V2
+neurologic_sensorimotor,"Vestibular, equilibrio, coordinación","pruebas funcionales, síntomas",estructura y seguimiento,evidencia específica pendiente,
+ophthalmic,SANS / visión,"agudeza visual, OCT/imagen y examen si disponibles",estructurar mediciones periódicas,no diagnosticar SANS por síntomas inespecíficos,
+renal_urinary,Cálculos renales y urinarios,"ingesta, orina, síntomas y análisis",registro y evaluación guiada,diagnóstico diferencial y acciones por verificar,
+respiratory_environment,Oxigenación / CO2 / ambiente,"SpO2, CO2 ambiental, O2, presión, contaminantes",adquisición y QC; series de tiempo,límites misión e instrumentación pendientes,STD-V2
+nutrition_metabolic,"Nutrición, hidratación y metabolismo","ingesta, masa, líquidos, laboratorios periódicos",registro y tendencias,no prescripciones automáticas sin autorización,
+gi_dermatologic,Gastrointestinal y dermatología,"síntomas, exploración, imágenes si disponibles",fichas y evaluación guiada,protocolos específicos pendientes,
+pharmacology,Medicamentos y estabilidad,registro de medicaciones y stock,"inventario, reconciliación, interacciones solo si validadas",sin dosis ni terapias autónomas,
+emergency,Emergencias médicas,"síntomas, signos, recursos disponibles",escalamiento y checklist bajo autoridad humana,no asumir protocolos internos NASA,EIMO;EXMC-CDSS

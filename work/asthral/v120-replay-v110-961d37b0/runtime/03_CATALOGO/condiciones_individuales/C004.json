@@ -1,0 +1,31 @@
+{
+  "condition_id": "C004",
+  "catalog_record": {
+    "condition_id": "C004",
+    "name_specialty": "Desacondicionamiento cardiovascular / cardiovascular",
+    "description_spaceflight": "Adaptaciones de circulación, corazón y vasos durante microgravedad.",
+    "risks_symptoms": "Microgravedad, duración; menor tolerancia funcional/postural.",
+    "biomarkers_sensors_tests": "HR, BP, ECG, volumen sistólico/cardiaco si disponible, ejercicio.",
+    "baselines_environment_interactions": "Baseline CV; gravedad y fase de misión.",
+    "primary_evidence": "S05. citeturn11search0",
+    "limits_authorizations_state": "No existe un único biomarcador diagnóstico. `RV`."
+  },
+  "clinical_pathway_profile_as_published": "**P:** ejercicio y gestión de misión; **M:** HR/BP/rendimiento; **Q:** postura, gravedad, actividad, sensor; **D:** tendencia vs baseline sin umbral diagnóstico `[RV]`; **A:** evaluación CV; **DD:** volumen, ritmo, sueño, enfermedad; **T/I:** autorización médica; **R/F:** tendencia postflight; **G:** research-only.",
+  "coverage_states": {
+    "prevention": "ES",
+    "monitoring": "ES",
+    "data_quality": "ES",
+    "detection": "RV",
+    "assessment": "RV",
+    "differential_diagnosis": "RV",
+    "triage": "RMA",
+    "intervention_authorized": "RMA",
+    "recovery": "RV",
+    "follow_up": "RV",
+    "prognosis": "RO"
+  },
+  "source_ids": [
+    "S05"
+  ],
+  "NOTICE": "Pathway text is an outline; not an authorized diagnostic or treatment protocol."
+}

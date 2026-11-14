@@ -1,0 +1,163 @@
+{
+  "rule_id": "VIGILE-AER-003",
+  "rule_version": "1.0.0",
+  "title": "In-mission aerobic capacity retention",
+  "domain": "CARDIORESPIRATORY_FITNESS",
+  "condition_id": "AEROBIC_DECONDITIONING",
+  "purpose": "Evaluate preservation of aerobic capacity relative to the individual's pre-mission baseline.",
+  "rule_kind": "BASELINE_RELATIVE_STANDARD",
+  "evidence_class": "NASA_STANDARD",
+  "evidence_status": "DOCUMENTED_AND_COMPUTABLE",
+  "software_validation_status": "REQUIRES_IMPLEMENTATION_VALIDATION",
+  "authorization": {
+    "evaluation": "AUTO_EVALUATION_ALLOWED",
+    "clinical_interpretation": "REQUIRES_MEDICAL_AUTHORIZATION",
+    "treatment": "REQUIRES_MEDICAL_AUTHORIZATION"
+  },
+  "applicability": {
+    "mission_phase": [
+      "IN_MISSION"
+    ],
+    "baseline_required": true
+  },
+  "inputs": [
+    {
+      "name": "premission_aerobic_capacity",
+      "type": "number",
+      "required": true
+    },
+    {
+      "name": "current_aerobic_capacity",
+      "type": "number",
+      "required": true
+    },
+    {
+      "name": "measurement_unit",
+      "type": "string",
+      "required": true
+    },
+    {
+      "name": "measurement_comparability",
+      "type": "enum",
+      "values": [
+        "COMPARABLE",
+        "NOT_COMPARABLE",
+        "UNKNOWN"
+      ],
+      "required": true
+    },
+    {
+      "name": "data_quality_status",
+      "type": "enum",
+      "required": true
+    }
+  ],
+  "derived_variables": [
+    {
+      "name": "aerobic_capacity_retention_percent",
+      "formula": "100 * current_aerobic_capacity / premission_aerobic_capacity",
+      "unit": "%"
+    }
+  ],
+  "logic": {
+    "preconditions": [
+      "premission_aerobic_capacity > 0",
+      "measurement_comparability == COMPARABLE",
+      "data_quality_status == ACCEPTABLE"
+    ],
+    "decision": [
+      {
+        "when": "aerobic_capacity_retention_percent >= 80",
+        "result": "PASS"
+      },
+      {
+        "when": "aerobic_capacity_retention_percent < 80",
+        "result": "FAIL_REQUIREMENT"
+      }
+    ]
+  },
+  "thresholds": {
+    "retention_percent_minimum": {
+      "value": 80,
+      "unit": "%",
+      "operator": ">="
+    }
+  },
+  "temporal_window": {
+    "baseline": "PRE_MISSION",
+    "comparison": "IN_MISSION",
+    "fixed_reassessment_interval_in_source": false
+  },
+  "confounders": [
+    "non-comparable measurement protocols",
+    "changes in body-mass normalization",
+    "temporary disease",
+    "acute exercise effects",
+    "sensor or ergometer differences"
+  ],
+  "missing_data_policy": "INCONCLUSIVE",
+  "data_quality_policy": "Baseline and current measurements must be sufficiently comparable under a mission-approved measurement protocol.",
+  "output": {
+    "primary": "rule_result",
+    "derived": "aerobic_capacity_retention_percent",
+    "clinical_assessment_status": "NOT_DETERMINED_BY_RULE"
+  },
+  "severity_semantics": {
+    "on_failure": "PERMISSIBLE_OUTCOME_REQUIREMENT_NOT_MET",
+    "clinical_severity": "NOT_DETERMINED"
+  },
+  "follow_up": [
+    "Review trend and task-specific requirements.",
+    "Evaluate VIGILE-AER-001 or VIGILE-AER-002 when applicable.",
+    "Clinical assessment if deterioration is unexpected or symptomatic."
+  ],
+  "source_locators": [
+    {
+      "source_id": "NASA-STD-3001-V1-REV-C",
+      "requirement": "V1 4003",
+      "section": "4.1.3",
+      "printed_page": 33,
+      "pdf_page_index_0based": 32,
+      "url": "https://standards.nasa.gov/sites/default/files/standards/NASA/C//nasa-std-3001-vol-1-rev-c-signature.pdf"
+    }
+  ],
+  "test_cases": [
+    {
+      "id": "AER003-T01",
+      "synthetic": true,
+      "inputs": {
+        "premission_aerobic_capacity": 45.0,
+        "current_aerobic_capacity": 36.0,
+        "measurement_unit": "mL/min/kg",
+        "measurement_comparability": "COMPARABLE",
+        "data_quality_status": "ACCEPTABLE"
+      },
+      "expected_retention_percent": 80.0,
+      "expected": "PASS"
+    },
+    {
+      "id": "AER003-T02",
+      "synthetic": true,
+      "inputs": {
+        "premission_aerobic_capacity": 45.0,
+        "current_aerobic_capacity": 35.9,
+        "measurement_unit": "mL/min/kg",
+        "measurement_comparability": "COMPARABLE",
+        "data_quality_status": "ACCEPTABLE"
+      },
+      "expected": "FAIL_REQUIREMENT"
+    },
+    {
+      "id": "AER003-T03",
+      "synthetic": true,
+      "inputs": {
+        "premission_aerobic_capacity": null,
+        "current_aerobic_capacity": 35.0,
+        "measurement_unit": "mL/min/kg",
+        "measurement_comparability": "UNKNOWN",
+        "data_quality_status": "ACCEPTABLE"
+      },
+      "expected": "INCONCLUSIVE"
+    }
+  ]
+}

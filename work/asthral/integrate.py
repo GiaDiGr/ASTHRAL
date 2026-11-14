@@ -1,0 +1,22 @@
+from pathlib import Path
+R=Path(__file__).resolve().parents[2]
+p=R/'engine/vigile/portal.py';s=p.read_text(encoding='utf8');s=s.replace("language:Literal['en','es']='es'","language:Literal['en','es']='en'\n public_topic:__import__('typing').Optional[__import__('vigile.hybrid_retrieval',fromlist=['Topic']).Topic]=None")
+s=s.replace("from .portal_sessions import Sessions","from .portal_sessions import Sessions\nfrom .hybrid_retrieval import HybridRetrieval,Topic\nfrom .english import english_result")
+s=s.replace("public_topic:__import__('typing').Optional[__import__('vigile.hybrid_retrieval',fromlist=['Topic']).Topic]=None","public_topic:Topic|None=None")
+s=s.replace("library=OfflineLibrary(config.get('library_manifest'));code=", "hybrid=HybridRetrieval(config.get('online_retrieval'),lambda:getattr(inference,'mode','CRITICAL'),config.get('public_science_cache'));library=OfflineLibrary(config.get('library_manifest'));code=")
+s=s.replace("title='VIGILE Local Reader Portal'","title='ASTHRAL Local Reader Portal'")
+s=s.replace("app.state.sessions=sessions;app.state.inference=inference","app.state.sessions=sessions;app.state.inference=inference;app.state.hybrid=hybrid")
+s=s.replace("'network':'LOOPBACK_ONLY'","'network':'LOOPBACK_PORTAL_OPTIONAL_PUBLIC_SCIENTIFIC_EGRESS','scientific_retrieval':hybrid.status()")
+s=s.replace("inference.set_mode(body.mode);return", "inference.set_mode(body.mode);hybrid.mode_changed();return")
+s=s.replace("response_start=time.perf_counter()", "body=body.model_copy(update={'language':'en'});response_start=time.perf_counter()")
+s=s.replace("result=attach_speech(result,body,request)","result=english_result(result);result=attach_speech(result,body,request)")
+s=s.replace("   return result\n  finally:inference_lock.release()", "  finally:inference_lock.release()\n  result['supplementary_science']=hybrid.retrieve(body.public_topic)\n  return result")
+assert "result['supplementary_science']" in s
+p.write_text(s,encoding='utf8')
+p=R/'engine/vigile/conversational.py';s=p.read_text(encoding='utf8').replace('You explain existing VIGILE research results','You are ASTHRAL. You explain existing ASTHRAL research results').replace('Respond in the language of the question.','Respond only in American English.').replace('Avoid the phrase para diagnosticar. Say datos ausentes en esta evaluación.','Never describe optional alternatives as diagnostically required. Say inputs absent from this evaluation.');p.write_text(s,encoding='utf8')
+p=R/'engine/vigile/voice_api.py';s=p.read_text(encoding='utf8').replace("language:Literal['en','es']","language:Literal['en']")
+s=s.replace("def status():return voice.status(getattr(inference,'mode','FULL')) if voice else", "def status():\n        if voice:\n            status=voice.status(getattr(inference,'mode','FULL'));status['stt']={k:v for k,v in status.get('stt',{}).items() if k=='en'};status['tts']={k:v for k,v in status.get('tts',{}).items() if k=='en'};status['assistant_identity']='ASTHRAL';return status\n        return")
+s=s.replace("result=voice.transcribe(raw,body.language,getattr(inference,'mode','FULL'))", "result=voice.transcribe(raw,'en',getattr(inference,'mode','FULL'))\n        from .english import assistant_name_alias\n        original=result['text'];result={**result,'text':assistant_name_alias(original),'raw_text':original,'assistant_name_alias_applied':assistant_name_alias(original)!=original}")
+p.write_text(s,encoding='utf8')
+p=R/'engine/vigile/registry.py';s=p.read_text(encoding='utf8');s=s.replace("manifest=json.loads((self.root/'MANIFIESTO_SHA256.json').read_text(encoding='utf-8-sig'))","manifest_path=self.root/('MANIFIESTO_SHA256.json' if (self.root/'MANIFIESTO_SHA256.json').exists() else 'ASTHRAL_CORPUS_SHA256.json')\n        manifest=json.loads(manifest_path.read_text(encoding='utf-8-sig'))");p.write_text(s,encoding='utf8')
+print('Integrated supplementary retrieval at the existing portal boundary, English presentation and English voice')

@@ -1,0 +1,25 @@
+evidence_id,source_id,locator,evidence,applicability,mapping
+E001,S01,"PDF p.32; §4.1.1, V1 4001",“at or above 32.9 ml/min/kg”,mL/min/kg; crew con EVA en microgravedad,C001; R-AER-01. citeturn6view0
+E002,S01,sección V1 4002; página exacta en esta recuperación `NOT_FOUND`,"Requisito: VO₂max ≥36,5 para condiciones previstas de EVA en superficie extraterrestre.",mL/min/kg,C001; R-AER-02. citeturn5view0
+E003,S01,V1 4003; página exacta `NOT_FOUND`,Requisito: capacidad aeróbica inflight ≥80 % preflight.,% baseline,C001; R-AER-03. citeturn5view0
+E004,S01,"PDF p.38; §4.6, V1 4023/4024; Table 4.6-1",Fuerza inflight debe conservar ≥80 % preflight; tabla define requisitos preflight por actividad.,% baseline / múltiplos BW,C002. citeturn6view1
+E005,S01,"PDF p.39; §4.7, V1 4027",BMD hip/spine ≥95 %; femoral neck ≥90 % del preflight.,% baseline,C003. citeturn6view2
+E006,S01,"PDF p.40; §4.8, V1 4030",“less than 600 mSv”,mSv effective career dose,C032; R-RAD-01. citeturn6view3
+E007,S02,"§6.2, V2 6004; PDF Rev F page `NOT_FOUND`",promedio de 1 h ppCO₂ ≤3 mmHg,mmHg; habitable volume,C027; R-CO2-01. citeturn10search0turn19search4
+E008,S02,"§6.2, V2 6006; PDF page `NOT_FOUND`","rango de presión para exposición humana indefinida: 34,5 kPa < P ≤103 kPa.",kPa / psia,C026/C030/ambiental. citeturn10search0
+E009,S02,"§7.4.3, V2 7042",El sistema debe proporcionar contramedidas contra intolerancia ortostática en transición de ingravidez a gravedad/Az.,requisito funcional,C005/C043. citeturn19search2
+E010,S35,NASA risk page; PDF page `NOT_FOUND`,"En 11 tripulantes estudiados, 6 mostraron flujo yugular estancado/reverso; uno tuvo trombo oclusivo tratado inflight.",n=11; flight ~day 50,"C006; investigación, no umbral. citeturn27search0"
+E011,S06,2025 bone risk record; página `NOT_FOUND`,Vuelo largo >90–100 días se asoció con mayor tasa relativa de fracturas de cadera/columna postflight; QCT añade información no captada por DXA.,astronautas LD,C003; seguimiento/risk modeling. citeturn11search7
+E012,S07,NASA SANS risk page,NASA informa cambios SANS en más de la mitad de tripulantes en alguna manifestación; mecanismo y consecuencias siguen bajo estudio.,crew spaceflight,C009. citeturn11search2
+E013,S09,NASA immune risk,Reactivación de virus latentes está documentada y se correlaciona con cambios inmunes; susceptibilidad clínica final aún incierta.,astronautas,C018/C019. citeturn12search0
+E014,S10,NASA sleep risk,Sueño reducido/circadiano y carga de trabajo son riesgos para desempeño y salud.,crew,C012-C015. citeturn12search1
+E015,S11,NASA sensorimotor risk,"Altered gravity afecta vestibular, marcha, postura y control motor, especialmente alrededor de transiciones G.",crew,C010/C011/C043. citeturn12search2
+E016,S14,NASA hypoxia risk,"Hipoxia leve puede causar confusión, cefalea, alteración visual y del sueño; NASA sigue investigando tolerancia en ambientes exploration.",exploration atmosphere,C026/C015. citeturn18search10
+E017,S36,NASA DCS,"Ante síntomas DCS durante EVA, NASA describe finalización segura pero rápida de la EVA y retorno al ambiente presurizado; protocolos detallados son mission-specific.",EVA,C030. citeturn27search1
+E018,S15,NASA medication risk,Spaceflight puede modificar estabilidad/eficacia y PK/PD respecto a Tierra.,long-duration exploration,C040. citeturn18search5
+E019,S17,NASA IMM 2026,IMM evalúa >100 condiciones y recursos mediante simulaciones Monte Carlo para escenarios de misión.,mission planning,Todas condiciones agudas; no diagnóstico. citeturn21search1
+E020,S34,"pp.70–80, *J Appl Physiol* 139(1), 2025",Estudio postflight de standing con/sin compression garment tras vuelo de larga duración.,astronautas/cosmonautas; postflight,C005; no trasladar como prueba microgravity. citeturn26search0turn26search2
+E021,S37,NASA toxic risk DAG,Exposición tóxica puede requerir monitorización ambiental y fisiológica y afectar varios sistemas.,crew/habitat,C028/C041; episode fusion. citeturn27search7
+E022,S38,NASA hearing risk,"Ruido puede afectar audición, sueño, comunicación y rendimiento.",ISS/spaceflight,C035. citeturn27search3
+E023,S17,IMM documentation,"IMM integra incidencia, duración, recursos y deterioro funcional; validation studies muestran predicción imperfecta.",STS/ISS,planificación/prognosis research. citeturn21search4turn21search17
+E024,S19,ExMC accepted condition list,"Exploración requiere identificar condiciones y subset tratable, luego mapear capacidades al sistema.",exploration missions,arquitectura de pathway/authorization. citeturn21search13turn21search18

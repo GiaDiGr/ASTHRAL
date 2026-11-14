@@ -1,0 +1,32 @@
+{
+  "condition_id": "C010",
+  "catalog_record": {
+    "condition_id": "C010",
+    "name_specialty": "Space Motion Sickness / neurovestibular",
+    "description_spaceflight": "Síntomas durante adaptación a cambios gravitatorios.",
+    "risks_symptoms": "Transición gravitatoria; náusea, vómito, mareo, desorientación.",
+    "biomarkers_sensors_tests": "Síntomas, función vestibular, rendimiento.",
+    "baselines_environment_interactions": "Susceptibilidad/historia preflight.",
+    "primary_evidence": "S11, S17. citeturn12search2turn21search1",
+    "limits_authorizations_state": "Tratamiento farmacológico bloqueado sin protocolo autorizado. `RMA`."
+  },
+  "clinical_pathway_profile_as_published": "**P:** entrenamiento/plan de adaptación; **M:** síntomas/rendimiento; **Q:** fase gravitatoria; **D:** cuestionario/protocolo autorizado; **A/DD:** vestibular vs GI/neurológico; **T:** según impacto funcional; **I:** medicación solo autorizada; **R/F:** adaptación y recurrencia; **G:** individualización `RV`.",
+  "coverage_states": {
+    "prevention": "ES",
+    "monitoring": "ES",
+    "data_quality": "ES",
+    "detection": "RV",
+    "assessment": "RV",
+    "differential_diagnosis": "RV",
+    "triage": "RMA",
+    "intervention_authorized": "RMA",
+    "recovery": "ES",
+    "follow_up": "ES",
+    "prognosis": "RO"
+  },
+  "source_ids": [
+    "S11",
+    "S17"
+  ],
+  "NOTICE": "Pathway text is an outline; not an authorized diagnostic or treatment protocol."
+}

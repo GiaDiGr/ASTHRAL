@@ -1,0 +1,31 @@
+{
+  "condition_id": "C011",
+  "catalog_record": {
+    "condition_id": "C011",
+    "name_specialty": "Deterioro sensorimotor/postural/locomotor / sensorimotor",
+    "description_spaceflight": "Puede afectar marcha, coordinación, control fino y tareas críticas, sobre todo en transiciones G.",
+    "risks_symptoms": "Gravedad alterada; desorientación, déficit de coordinación.",
+    "biomarkers_sensors_tests": "Balance, marcha, coordinación, pruebas motoras.",
+    "baselines_environment_interactions": "Baseline funcional; fase de transición.",
+    "primary_evidence": "S11. citeturn12search2",
+    "limits_authorizations_state": "Recuperación puede requerir horas-días; predicción individual no validada. `RV`."
+  },
+  "clinical_pathway_profile_as_published": "**P:** contramedidas/entrenamiento; **M:** balance/marcha/coordinación; **Q:** superficie/gravedad/protocolo; **D:** cambio vs baseline; **A:** funcional; **DD:** ortostático, neurológico, lesión; **T:** task-safety review; **I:** rehabilitación autorizada; **R/F:** readaptación; **G:** no extrapolar plazo individual.",
+  "coverage_states": {
+    "prevention": "ES",
+    "monitoring": "ES",
+    "data_quality": "ES",
+    "detection": "RV",
+    "assessment": "RV",
+    "differential_diagnosis": "RV",
+    "triage": "RMA",
+    "intervention_authorized": "RMA",
+    "recovery": "ES",
+    "follow_up": "ES",
+    "prognosis": "RO"
+  },
+  "source_ids": [
+    "S11"
+  ],
+  "NOTICE": "Pathway text is an outline; not an authorized diagnostic or treatment protocol."
+}

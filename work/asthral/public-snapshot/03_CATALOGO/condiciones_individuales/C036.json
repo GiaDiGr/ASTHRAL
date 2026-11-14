@@ -1,0 +1,31 @@
+{
+  "condition_id": "C036",
+  "catalog_record": {
+    "condition_id": "C036",
+    "name_specialty": "Lesión por cargas dinámicas / trauma",
+    "description_spaceflight": "Lanzamiento/aterrizaje y cargas pueden lesionar.",
+    "risks_symptoms": "Aceleraciones, impacto, postura.",
+    "biomarkers_sensors_tests": "Acelerometría + evaluación clínica.",
+    "baselines_environment_interactions": "Perfil misión y antropometría.",
+    "primary_evidence": "S03. citeturn27search5",
+    "limits_authorizations_state": "Diagnóstico de lesión requiere evaluación. `RMA`."
+  },
+  "clinical_pathway_profile_as_published": "**P:** diseño/restricción de cargas; **M:** aceleración/evento; **Q:** sensor y orientación; **D:** evento sobre límites → ingeniería + evaluación, no diagnóstico; **A/DD/T/I:** trauma protocol; **R/F:** función; **G:** no autónomo.",
+  "coverage_states": {
+    "prevention": "ES",
+    "monitoring": "ES",
+    "data_quality": "ES",
+    "detection": "RV",
+    "assessment": "RMA",
+    "differential_diagnosis": "RMA",
+    "triage": "RMA",
+    "intervention_authorized": "RMA",
+    "recovery": "RV",
+    "follow_up": "RV",
+    "prognosis": "RO"
+  },
+  "source_ids": [
+    "S03"
+  ],
+  "NOTICE": "Pathway text is an outline; not an authorized diagnostic or treatment protocol."
+}

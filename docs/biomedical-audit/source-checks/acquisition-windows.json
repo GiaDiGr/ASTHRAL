@@ -1,0 +1,48 @@
+[
+  {
+    "status": "RETRIEVED",
+    "title": null,
+    "source": "KDIGO2012",
+    "url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC4089595/fullTextXML",
+    "retrieved_date": "2026-10-20",
+    "sha256": "5ccacbf4334ffc4aed9ab5ad85738956c4585cea78e0fb9770871ea7cdf0b26d"
+  },
+  {
+    "status": "UNAVAILABLE",
+    "source": "AHA2024",
+    "error": "Response status code does not indicate success: 500 ().",
+    "url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC11067441/fullTextXML"
+  },
+  {
+    "status": "UNAVAILABLE",
+    "source": "ADA2026",
+    "error": "Response status code does not indicate success: 500 ().",
+    "url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC12690183/fullTextXML"
+  },
+  {
+    "status": "UNAVAILABLE",
+    "source": "DKA2024",
+    "error": "Response status code does not indicate success: 500 ().",
+    "url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC11272983/fullTextXML"
+  },
+  {
+    "status": "UNAVAILABLE",
+    "source": "NIH2021",
+    "error": "Response status code does not indicate success: 500 ().",
+    "url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC8455420/fullTextXML"
+  },
+  {
+    "status": "RETRIEVED",
+    "title": null,
+    "source": "WAO2020",
+    "url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC7607509/fullTextXML",
+    "retrieved_date": "2026-10-20",
+    "sha256": "1d6a6919aeb0a10e15ed82d92c8866f3946253980c334894bfd873e45aaa5726"
+  },
+  {
+    "status": "UNAVAILABLE",
+    "source": "HRS2015",
+    "error": "Response status code does not indicate success: 500 ().",
+    "url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC5267948/fullTextXML"
+  }
+]

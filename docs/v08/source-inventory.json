@@ -1,0 +1,45 @@
+{
+  "schema_version": 2,
+  "retrieval_version": "SPARSE-BILINGUAL-1",
+  "documents": [
+    {
+      "document": "docs/clinical/deep-research-report-2026-10-16.md",
+      "sha256": "38ad3ab166f25a8b46c1e1f483ba813510c34dc766171389307635ecf7e8a715",
+      "authority": "CLINICAL_RESEARCH_SYNTHESIS",
+      "version": "2026-10-16"
+    },
+    {
+      "document": "01_INFORMES/REPORTE_CONSOLIDADO_COMPLETO.md",
+      "sha256": "97e9fdc86925b6b973db75900e64f222c149ae3bd9cade8c182f2264c46831e5",
+      "authority": "SPACE_RESEARCH_SYNTHESIS",
+      "version": "PINNED_CORPUS"
+    },
+    {
+      "document": "docs/v07/README.md",
+      "sha256": "ccdf9005a4892a004edac7d6cef95a2680b8ec594cc15ac1083f53e950e723a3",
+      "authority": "IMPLEMENTATION_DOCUMENTATION_NOT_GUIDELINE",
+      "version": "0.7.0"
+    },
+    {
+      "document": "docs/v07/CONTRACTS.md",
+      "sha256": "dd9d15164c08d6a1675b74318270e46d1a3fd8ff590699fb6aa7429145466ab1",
+      "authority": "IMPLEMENTATION_CONTRACT",
+      "version": "0.7.0"
+    },
+    {
+      "document": "engine/vigile/clinical_knowledge/v07-extension.json",
+      "sha256": "b258ff2d79ab79355f65826466c9fc3e7a52380b749ec18ef2eb4700759e4fd8",
+      "authority": "IMPLEMENTED_CRITERION_NOT_ORIGINAL_ARTICLE",
+      "version": "2026.1"
+    },
+    {
+      "document": "docs/v08/sources/ADA2026-short-excerpt.txt",
+      "sha256": "cb09dce1d37f61a18effc5854418767a6e13c5fe83e26a2750e5d843912cb9eb",
+      "authority": "PRIMARY_SOURCE_SHORT_EXCERPT",
+      "version": "2026-table-6.4"
+    }
+  ],
+  "missing_documents": [],
+  "sha256": "5c1e71873cfa6a1912acebb9e7588639f9e5bafebf67416de0fb26748d2c540f",
+  "block_count": 560
+}

@@ -1,0 +1,70 @@
+{
+  "development_only": true,
+  "reserved": false,
+  "queries": [
+    {
+      "id": "additional-1",
+      "question": "Where does the engine document personal baseline eligibility and selection?",
+      "relevant_fragment_ids": [
+        "D-dda64d483a9eb444a927"
+      ],
+      "annotation": "Developer-authored literal passage relevance assigned before retrieval; not independent clinical adjudication"
+    },
+    {
+      "id": "additional-2",
+      "question": "¿Dónde se documenta la selección y validez de una referencia personal basal?",
+      "relevant_fragment_ids": [
+        "D-dda64d483a9eb444a927"
+      ],
+      "annotation": "Developer-authored literal passage relevance assigned before retrieval; not independent clinical adjudication"
+    },
+    {
+      "id": "additional-3",
+      "question": "How does the event mechanism suppress duplicate notifications?",
+      "relevant_fragment_ids": [
+        "D-ae65db85b3cd75fb38e4"
+      ],
+      "annotation": "Developer-authored literal passage relevance assigned before retrieval; not independent clinical adjudication"
+    },
+    {
+      "id": "additional-4",
+      "question": "¿Se notifica otra vez un evento idéntico sin cambios?",
+      "relevant_fragment_ids": [
+        "D-ae65db85b3cd75fb38e4"
+      ],
+      "annotation": "Developer-authored literal passage relevance assigned before retrieval; not independent clinical adjudication"
+    },
+    {
+      "id": "additional-5",
+      "question": "What numeric capillary glucose boundaries define level 1 and level 2 hypoglycemia?",
+      "relevant_fragment_ids": [
+        "D-2397e05233f2a45e21f3"
+      ],
+      "annotation": "Developer-authored literal passage relevance assigned before retrieval; not independent clinical adjudication"
+    },
+    {
+      "id": "additional-6",
+      "question": "¿Cuáles son los límites de glucosa capilar para los niveles de hipoglucemia?",
+      "relevant_fragment_ids": [
+        "D-2397e05233f2a45e21f3"
+      ],
+      "annotation": "Developer-authored literal passage relevance assigned before retrieval; not independent clinical adjudication"
+    },
+    {
+      "id": "additional-7",
+      "question": "Explain stale sensor values and the declared clinical time window.",
+      "relevant_fragment_ids": [
+        "D-2ca307e7fa544117900c"
+      ],
+      "annotation": "Developer-authored literal passage relevance assigned before retrieval; not independent clinical adjudication"
+    },
+    {
+      "id": "additional-8",
+      "question": "Does the muscle and bone module assume a DXA device is present?",
+      "relevant_fragment_ids": [
+        "D-2fb6c076e445e50b078b"
+      ],
+      "annotation": "Developer-authored literal passage relevance assigned before retrieval; not independent clinical adjudication"
+    }
+  ]
+}

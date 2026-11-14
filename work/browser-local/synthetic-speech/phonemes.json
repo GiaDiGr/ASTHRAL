@@ -1,0 +1,56 @@
+[
+  {
+    "id": "heart-rate",
+    "text": "record my heart rate as eighty two beats per minute right now",
+    "source": "SYNTHETIC_ESPEAK_NG_EMSCRIPTEN_0.3.5",
+    "sample_rate": 22050,
+    "bytes": 166064,
+    "sha256": "3e094104ef6bcf100a46ee5c728f29cce2b7091d05c429770cdc1ae3963ff1cb",
+    "phonemes": "ɹ_ˈɛ_k_ɔː_d m_aɪ h_ˈɑː_t ɹ_ˈeɪ_t a_z ˈeɪ_t_i t_ˈuː b_ˈiː_t_s p_ɜː m_ˈɪ_n_ɪ_t ɹ_ˈaɪ_t n_ˈaʊ\n"
+  },
+  {
+    "id": "temperature",
+    "text": "record my temperature as thirty seven point two degrees celsius right now",
+    "source": "SYNTHETIC_ESPEAK_NG_EMSCRIPTEN_0.3.5",
+    "sample_rate": 22050,
+    "bytes": 216114,
+    "sha256": "06b43dee5214b1fb07c53ffa49a37e7cad0778f22e7639cbde9fae8986ffc369",
+    "phonemes": "ɹ_ˈɛ_k_ɔː_d m_aɪ t_ˈɛ_m_p_ɹ_ɪ_tʃ_ə_ɹ a_z θ_ˈɜː_t_i s_ˈɛ_v_ə_n p_ˈɔɪ_n_t t_ˈuː d_ɪ_ɡ_ɹ_ˈiː_z s_ˈɛ_l_s_ɪ__ə_s ɹ_ˈaɪ_t n_ˈaʊ\n"
+  },
+  {
+    "id": "blood-pressure",
+    "text": "record my blood pressure as one hundred twenty over eighty millimeters of mercury right now",
+    "source": "SYNTHETIC_ESPEAK_NG_EMSCRIPTEN_0.3.5",
+    "sample_rate": 22050,
+    "bytes": 246644,
+    "sha256": "49065592c92709cc53af361a9daae392eb922086d11bb902405f6beeb6bb4627",
+    "phonemes": "ɹ_ˈɛ_k_ɔː_d m_aɪ b_l_ˈʌ_d p_ɹ_ˈɛ_ʃ_ə_ɹ a_z w_ˈɒ_n h_ˈʌ_n_d_ɹ_ɪ_d t_w_ˈɛ_n_t_i_ ˌəʊ_v_ə_ɹ ˈeɪ_t_i m_ˈɪ_l_ɪ_m_ˌiː_t_ə_z ɒ_v m_ˈɜː_k_j_ʊ_ɹ_i ɹ_ˈaɪ_t n_ˈaʊ\n"
+  },
+  {
+    "id": "negation",
+    "text": "I have no chest pain",
+    "source": "SYNTHETIC_ESPEAK_NG_EMSCRIPTEN_0.3.5",
+    "sample_rate": 22050,
+    "bytes": 65782,
+    "sha256": "0647cdb3b00cb2c745d1937c370a69a9c1ee63d7aa6c3bdcafd3ae8743c4516d",
+    "phonemes": "aɪ h_a_v n_ˈəʊ tʃ_ˈɛ_s_t p_ˈeɪ_n\n"
+  },
+  {
+    "id": "question",
+    "text": "Do I need to record my glucose",
+    "source": "SYNTHETIC_ESPEAK_NG_EMSCRIPTEN_0.3.5",
+    "sample_rate": 22050,
+    "bytes": 89724,
+    "sha256": "cba252ab19d04d595141badd9cf180973a6a077825d03db686fac5bc16b4439b",
+    "phonemes": "d_ˈuː aɪ n_ˈiː_d t_ə ɹ_ɪ_k_ˈɔː_d m_aɪ ɡ_l_ˈuː_k_əʊ_s\n"
+  },
+  {
+    "id": "sleep",
+    "text": "record my sleep duration as seven hours in the past twenty four hours",
+    "source": "SYNTHETIC_ESPEAK_NG_EMSCRIPTEN_0.3.5",
+    "sample_rate": 22050,
+    "bytes": 195918,
+    "sha256": "f372f1be8a63ff54ee7ffab5c1e247414a587895011c7d7d921833d226dac07e",
+    "phonemes": "ɹ_ˈɛ_k_ɔː_d m_aɪ s_l_ˈiː_p d_j_ʊə_ɹ_ˈeɪ_ʃ_ə_n a_z s_ˈɛ_v_ə_n ˈaʊ_ə_z ɪ_n_ð_ə p_ˈa_s_t t_w_ˈɛ_n_t_i f_ˈɔː_ɹ ˈaʊ_ə_z\n"
+  }
+]

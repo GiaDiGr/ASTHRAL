@@ -1,0 +1,31 @@
+{
+  "condition_id": "C038",
+  "catalog_record": {
+    "condition_id": "C038",
+    "name_specialty": "Trauma, heridas y fractura aguda / emergencias",
+    "description_spaceflight": "El modelo médico NASA contempla abrasiones, laceraciones, quemaduras, esguinces, fracturas y lesiones craneales.",
+    "risks_symptoms": "EVA, mantenimiento, cargas, accidente.",
+    "biomarkers_sensors_tests": "Evaluación clínica, imagen/ultrasonido según capacidad.",
+    "baselines_environment_interactions": "Historia/función baseline.",
+    "primary_evidence": "S17. citeturn21search0",
+    "limits_authorizations_state": "Procedimientos invasivos y analgesia requieren autorización. `RMA`."
+  },
+  "clinical_pathway_profile_as_published": "**P:** safety; **M:** evento/síntomas; **Q:** mecanismo y tiempos; **D:** injury screening; **A/DD:** protocolo de trauma; **T/I:** autoridad médica; **R:** funcional; **F:** herida/dolor/función; **G:** outcome model solo si validado.",
+  "coverage_states": {
+    "prevention": "ES",
+    "monitoring": "RV",
+    "data_quality": "ES",
+    "detection": "RV",
+    "assessment": "RMA",
+    "differential_diagnosis": "RMA",
+    "triage": "RMA",
+    "intervention_authorized": "RMA",
+    "recovery": "RV",
+    "follow_up": "RV",
+    "prognosis": "RO"
+  },
+  "source_ids": [
+    "S17"
+  ],
+  "NOTICE": "Pathway text is an outline; not an authorized diagnostic or treatment protocol."
+}

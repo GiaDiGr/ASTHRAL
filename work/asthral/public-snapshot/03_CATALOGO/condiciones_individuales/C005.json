@@ -1,0 +1,33 @@
+{
+  "condition_id": "C005",
+  "catalog_record": {
+    "condition_id": "C005",
+    "name_specialty": "Intolerancia ortostática / cardiovascular-autonómica",
+    "description_spaceflight": "Riesgo principalmente en transición a gravedad/reentrada/aterrizaje.",
+    "risks_symptoms": "Desacondicionamiento, cambios hemodinámicos; mareo, presíncope/síncope.",
+    "biomarkers_sensors_tests": "HR, BP beat-to-beat si disponible, test de pie/tilt postflight, síntomas.",
+    "baselines_environment_interactions": "Baseline preflight; aplicabilidad condicionada a gravedad.",
+    "primary_evidence": "S02, S05, S34. citeturn19search2turn26search0",
+    "limits_authorizations_state": "No ejecutar “stand test” en microgravedad como equivalente. Intervención según misión. `RMA`."
+  },
+  "clinical_pathway_profile_as_published": "**P:** contramedidas de transición a gravedad `[S02]`; **M:** síntomas+HR/BP bajo protocolo; **Q:** prohibir extrapolación de prueba postflight a microgravedad; **D:** desviaciones según protocolo autorizado; **A:** stand/tilt solo contexto válido; **DD:** hipovolemia, arritmia, neurológico; **T:** misión; **I:** compresión/u otras contramedidas solo autorizadas; **R/F:** reevaluar en gravedad; **G:** no predictor autónomo.",
+  "coverage_states": {
+    "prevention": "ES",
+    "monitoring": "ES",
+    "data_quality": "ES",
+    "detection": "RV",
+    "assessment": "RV",
+    "differential_diagnosis": "RV",
+    "triage": "RMA",
+    "intervention_authorized": "RMA",
+    "recovery": "RV",
+    "follow_up": "RV",
+    "prognosis": "RO"
+  },
+  "source_ids": [
+    "S02",
+    "S05",
+    "S34"
+  ],
+  "NOTICE": "Pathway text is an outline; not an authorized diagnostic or treatment protocol."
+}

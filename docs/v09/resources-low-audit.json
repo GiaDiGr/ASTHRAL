@@ -1,0 +1,853 @@
+{
+  "duration_seconds": 31.075832999995328,
+  "logical_cpus": 32,
+  "note": "Read-only observer during audit; GPU memory/utilization global; process metrics for current Ollama executable PIDs and observer. Observer contributes overhead. No energy measured.",
+  "rows": [
+    {
+      "monotonic": 100150.8043581,
+      "available_ram_bytes": 7241166848,
+      "processes": [
+        {
+          "pid": 44472,
+          "working_set_bytes": 61530112,
+          "private_bytes": 82804736,
+          "cpu_seconds": 7.296875
+        },
+        {
+          "pid": 44276,
+          "working_set_bytes": 48693248,
+          "private_bytes": 32837632,
+          "cpu_seconds": 0.375
+        }
+      ],
+      "energy": "NOT_MEASURED",
+      "gpu_global": {
+        "vram_used_MiB": 3274,
+        "gpu_utilization_percent": 0,
+        "memory_utilization_percent": 0
+      },
+      "ollama_ps": {
+        "models": [
+          {
+            "name": "vigile-qwen3-4b:latest",
+            "model": "vigile-qwen3-4b:latest",
+            "size": 2876160081,
+            "digest": "f7b39a48ac98f35a1c5f030ed3543d34e0cbeb5fff525096c3a8ab94e03d4b00",
+            "details": {
+              "parent_model": "",
+              "format": "gguf",
+              "family": "qwen3",
+              "families": [
+                "qwen3"
+              ],
+              "parameter_size": "4.0B",
+              "quantization_level": "Q4_K_M"
+            },
+            "expires_at": "2026-10-22T21:54:34.4379799-05:00",
+            "size_vram": 2876160081,
+            "context_length": 2048,
+            "runner": "llamacpp"
+          }
+        ]
+      }
+    },
+    {
+      "monotonic": 100152.6551121,
+      "available_ram_bytes": 7021670400,
+      "processes": [
+        {
+          "pid": 44472,
+          "working_set_bytes": 61743104,
+          "private_bytes": 83009536,
+          "cpu_seconds": 7.390625
+        },
+        {
+          "pid": 44276,
+          "working_set_bytes": 49455104,
+          "private_bytes": 33267712,
+          "cpu_seconds": 0.421875
+        }
+      ],
+      "energy": "NOT_MEASURED",
+      "gpu_global": {
+        "vram_used_MiB": 3280,
+        "gpu_utilization_percent": 93,
+        "memory_utilization_percent": 99
+      },
+      "ollama_ps": {
+        "models": [
+          {
+            "name": "vigile-qwen3-4b:latest",
+            "model": "vigile-qwen3-4b:latest",
+            "size": 2876160081,
+            "digest": "f7b39a48ac98f35a1c5f030ed3543d34e0cbeb5fff525096c3a8ab94e03d4b00",
+            "details": {
+              "parent_model": "",
+              "format": "gguf",
+              "family": "qwen3",
+              "families": [
+                "qwen3"
+              ],
+              "parameter_size": "4.0B",
+              "quantization_level": "Q4_K_M"
+            },
+            "expires_at": "2026-10-22T21:54:36.6974503-05:00",
+            "size_vram": 2876160081,
+            "context_length": 2048,
+            "runner": "llamacpp"
+          }
+        ]
+      }
+    },
+    {
+      "monotonic": 100154.47278,
+      "available_ram_bytes": 6686969856,
+      "processes": [
+        {
+          "pid": 44472,
+          "working_set_bytes": 61796352,
+          "private_bytes": 83009536,
+          "cpu_seconds": 7.484375
+        },
+        {
+          "pid": 44276,
+          "working_set_bytes": 49524736,
+          "private_bytes": 33267712,
+          "cpu_seconds": 0.453125
+        }
+      ],
+      "energy": "NOT_MEASURED",
+      "gpu_global": {
+        "vram_used_MiB": 3280,
+        "gpu_utilization_percent": 2,
+        "memory_utilization_percent": 0
+      },
+      "ollama_ps": {
+        "models": [
+          {
+            "name": "vigile-qwen3-4b:latest",
+            "model": "vigile-qwen3-4b:latest",
+            "size": 2876160081,
+            "digest": "f7b39a48ac98f35a1c5f030ed3543d34e0cbeb5fff525096c3a8ab94e03d4b00",
+            "details": {
+              "parent_model": "",
+              "format": "gguf",
+              "family": "qwen3",
+              "families": [
+                "qwen3"
+              ],
+              "parameter_size": "4.0B",
+              "quantization_level": "Q4_K_M"
+            },
+            "expires_at": "2026-10-22T21:54:38.4267506-05:00",
+            "size_vram": 2876160081,
+            "context_length": 2048,
+            "runner": "llamacpp"
+          }
+        ]
+      }
+    },
+    {
+      "monotonic": 100156.4015482,
+      "available_ram_bytes": 6693220352,
+      "processes": [
+        {
+          "pid": 44472,
+          "working_set_bytes": 61796352,
+          "private_bytes": 83009536,
+          "cpu_seconds": 7.5625
+        },
+        {
+          "pid": 44276,
+          "working_set_bytes": 49569792,
+          "private_bytes": 33267712,
+          "cpu_seconds": 0.5
+        }
+      ],
+      "energy": "NOT_MEASURED",
+      "gpu_global": {
+        "vram_used_MiB": 3280,
+        "gpu_utilization_percent": 0,
+        "memory_utilization_percent": 0
+      },
+      "ollama_ps": {
+        "models": [
+          {
+            "name": "vigile-qwen3-4b:latest",
+            "model": "vigile-qwen3-4b:latest",
+            "size": 2876160081,
+            "digest": "f7b39a48ac98f35a1c5f030ed3543d34e0cbeb5fff525096c3a8ab94e03d4b00",
+            "details": {
+              "parent_model": "",
+              "format": "gguf",
+              "family": "qwen3",
+              "families": [
+                "qwen3"
+              ],
+              "parameter_size": "4.0B",
+              "quantization_level": "Q4_K_M"
+            },
+            "expires_at": "2026-10-22T21:54:38.7857157-05:00",
+            "size_vram": 2876160081,
+            "context_length": 2048,
+            "runner": "llamacpp"
+          }
+        ]
+      }
+    },
+    {
+      "monotonic": 100158.2721348,
+      "available_ram_bytes": 6817673216,
+      "processes": [
+        {
+          "pid": 44472,
+          "working_set_bytes": 61796352,
+          "private_bytes": 83009536,
+          "cpu_seconds": 7.578125
+        },
+        {
+          "pid": 44276,
+          "working_set_bytes": 49639424,
+          "private_bytes": 33337344,
+          "cpu_seconds": 0.515625
+        }
+      ],
+      "energy": "NOT_MEASURED",
+      "gpu_global": {
+        "vram_used_MiB": 3280,
+        "gpu_utilization_percent": 93,
+        "memory_utilization_percent": 98
+      },
+      "ollama_ps": {
+        "models": [
+          {
+            "name": "vigile-qwen3-4b:latest",
+            "model": "vigile-qwen3-4b:latest",
+            "size": 2876160081,
+            "digest": "f7b39a48ac98f35a1c5f030ed3543d34e0cbeb5fff525096c3a8ab94e03d4b00",
+            "details": {
+              "parent_model": "",
+              "format": "gguf",
+              "family": "qwen3",
+              "families": [
+                "qwen3"
+              ],
+              "parameter_size": "4.0B",
+              "quantization_level": "Q4_K_M"
+            },
+            "expires_at": "2026-10-22T21:54:42.3579906-05:00",
+            "size_vram": 2876160081,
+            "context_length": 2048,
+            "runner": "llamacpp"
+          }
+        ]
+      }
+    },
+    {
+      "monotonic": 100160.1653723,
+      "available_ram_bytes": 6588547072,
+      "processes": [
+        {
+          "pid": 44472,
+          "working_set_bytes": 61865984,
+          "private_bytes": 83042304,
+          "cpu_seconds": 7.703125
+        },
+        {
+          "pid": 44276,
+          "working_set_bytes": 49676288,
+          "private_bytes": 33337344,
+          "cpu_seconds": 0.546875
+        }
+      ],
+      "energy": "NOT_MEASURED",
+      "gpu_global": {
+        "vram_used_MiB": 3280,
+        "gpu_utilization_percent": 72,
+        "memory_utilization_percent": 62
+      },
+      "ollama_ps": {
+        "models": [
+          {
+            "name": "vigile-qwen3-4b:latest",
+            "model": "vigile-qwen3-4b:latest",
+            "size": 2876160081,
+            "digest": "f7b39a48ac98f35a1c5f030ed3543d34e0cbeb5fff525096c3a8ab94e03d4b00",
+            "details": {
+              "parent_model": "",
+              "format": "gguf",
+              "family": "qwen3",
+              "families": [
+                "qwen3"
+              ],
+              "parameter_size": "4.0B",
+              "quantization_level": "Q4_K_M"
+            },
+            "expires_at": "2026-10-22T21:54:42.7774876-05:00",
+            "size_vram": 2876160081,
+            "context_length": 2048,
+            "runner": "llamacpp"
+          }
+        ]
+      }
+    },
+    {
+      "monotonic": 100162.0567245,
+      "available_ram_bytes": 6343688192,
+      "processes": [
+        {
+          "pid": 44472,
+          "working_set_bytes": 61870080,
+          "private_bytes": 83042304,
+          "cpu_seconds": 7.71875
+        },
+        {
+          "pid": 44276,
+          "working_set_bytes": 49717248,
+          "private_bytes": 33337344,
+          "cpu_seconds": 0.5625
+        }
+      ],
+      "energy": "NOT_MEASURED",
+      "gpu_global": {
+        "vram_used_MiB": 3280,
+        "gpu_utilization_percent": 93,
+        "memory_utilization_percent": 99
+      },
+      "ollama_ps": {
+        "models": [
+          {
+            "name": "vigile-qwen3-4b:latest",
+            "model": "vigile-qwen3-4b:latest",
+            "size": 2876160081,
+            "digest": "f7b39a48ac98f35a1c5f030ed3543d34e0cbeb5fff525096c3a8ab94e03d4b00",
+            "details": {
+              "parent_model": "",
+              "format": "gguf",
+              "family": "qwen3",
+              "families": [
+                "qwen3"
+              ],
+              "parameter_size": "4.0B",
+              "quantization_level": "Q4_K_M"
+            },
+            "expires_at": "2026-10-22T21:54:44.9135986-05:00",
+            "size_vram": 2876160081,
+            "context_length": 2048,
+            "runner": "llamacpp"
+          }
+        ]
+      }
+    },
+    {
+      "monotonic": 100164.0216341,
+      "available_ram_bytes": 6412619776,
+      "processes": [
+        {
+          "pid": 44472,
+          "working_set_bytes": 61870080,
+          "private_bytes": 83042304,
+          "cpu_seconds": 7.734375
+        },
+        {
+          "pid": 44276,
+          "working_set_bytes": 49778688,
+          "private_bytes": 33337344,
+          "cpu_seconds": 0.59375
+        }
+      ],
+      "energy": "NOT_MEASURED",
+      "gpu_global": {
+        "vram_used_MiB": 3280,
+        "gpu_utilization_percent": 0,
+        "memory_utilization_percent": 0
+      },
+      "ollama_ps": {
+        "models": [
+          {
+            "name": "vigile-qwen3-4b:latest",
+            "model": "vigile-qwen3-4b:latest",
+            "size": 2876160081,
+            "digest": "f7b39a48ac98f35a1c5f030ed3543d34e0cbeb5fff525096c3a8ab94e03d4b00",
+            "details": {
+              "parent_model": "",
+              "format": "gguf",
+              "family": "qwen3",
+              "families": [
+                "qwen3"
+              ],
+              "parameter_size": "4.0B",
+              "quantization_level": "Q4_K_M"
+            },
+            "expires_at": "2026-10-22T21:54:47.0303268-05:00",
+            "size_vram": 2876160081,
+            "context_length": 2048,
+            "runner": "llamacpp"
+          }
+        ]
+      }
+    },
+    {
+      "monotonic": 100166.0166836,
+      "available_ram_bytes": 6420258816,
+      "processes": [
+        {
+          "pid": 44472,
+          "working_set_bytes": 61870080,
+          "private_bytes": 83042304,
+          "cpu_seconds": 7.734375
+        },
+        {
+          "pid": 44276,
+          "working_set_bytes": 49803264,
+          "private_bytes": 33337344,
+          "cpu_seconds": 0.625
+        }
+      ],
+      "energy": "NOT_MEASURED",
+      "gpu_global": {
+        "vram_used_MiB": 3280,
+        "gpu_utilization_percent": 0,
+        "memory_utilization_percent": 0
+      },
+      "ollama_ps": {
+        "models": [
+          {
+            "name": "vigile-qwen3-4b:latest",
+            "model": "vigile-qwen3-4b:latest",
+            "size": 2876160081,
+            "digest": "f7b39a48ac98f35a1c5f030ed3543d34e0cbeb5fff525096c3a8ab94e03d4b00",
+            "details": {
+              "parent_model": "",
+              "format": "gguf",
+              "family": "qwen3",
+              "families": [
+                "qwen3"
+              ],
+              "parameter_size": "4.0B",
+              "quantization_level": "Q4_K_M"
+            },
+            "expires_at": "2026-10-22T21:54:47.0303268-05:00",
+            "size_vram": 2876160081,
+            "context_length": 2048,
+            "runner": "llamacpp"
+          }
+        ]
+      }
+    },
+    {
+      "monotonic": 100168.016782,
+      "available_ram_bytes": 6418378752,
+      "processes": [
+        {
+          "pid": 44472,
+          "working_set_bytes": 61870080,
+          "private_bytes": 83042304,
+          "cpu_seconds": 7.734375
+        },
+        {
+          "pid": 44276,
+          "working_set_bytes": 49803264,
+          "private_bytes": 33337344,
+          "cpu_seconds": 0.6875
+        }
+      ],
+      "energy": "NOT_MEASURED",
+      "gpu_global": {
+        "vram_used_MiB": 3280,
+        "gpu_utilization_percent": 0,
+        "memory_utilization_percent": 0
+      },
+      "ollama_ps": {
+        "models": [
+          {
+            "name": "vigile-qwen3-4b:latest",
+            "model": "vigile-qwen3-4b:latest",
+            "size": 2876160081,
+            "digest": "f7b39a48ac98f35a1c5f030ed3543d34e0cbeb5fff525096c3a8ab94e03d4b00",
+            "details": {
+              "parent_model": "",
+              "format": "gguf",
+              "family": "qwen3",
+              "families": [
+                "qwen3"
+              ],
+              "parameter_size": "4.0B",
+              "quantization_level": "Q4_K_M"
+            },
+            "expires_at": "2026-10-22T21:54:47.0303268-05:00",
+            "size_vram": 2876160081,
+            "context_length": 2048,
+            "runner": "llamacpp"
+          }
+        ]
+      }
+    },
+    {
+      "monotonic": 100169.9942663,
+      "available_ram_bytes": 6413398016,
+      "processes": [
+        {
+          "pid": 44472,
+          "working_set_bytes": 61870080,
+          "private_bytes": 83042304,
+          "cpu_seconds": 7.734375
+        },
+        {
+          "pid": 44276,
+          "working_set_bytes": 49803264,
+          "private_bytes": 33337344,
+          "cpu_seconds": 0.734375
+        }
+      ],
+      "energy": "NOT_MEASURED",
+      "gpu_global": {
+        "vram_used_MiB": 3280,
+        "gpu_utilization_percent": 0,
+        "memory_utilization_percent": 0
+      },
+      "ollama_ps": {
+        "models": [
+          {
+            "name": "vigile-qwen3-4b:latest",
+            "model": "vigile-qwen3-4b:latest",
+            "size": 2876160081,
+            "digest": "f7b39a48ac98f35a1c5f030ed3543d34e0cbeb5fff525096c3a8ab94e03d4b00",
+            "details": {
+              "parent_model": "",
+              "format": "gguf",
+              "family": "qwen3",
+              "families": [
+                "qwen3"
+              ],
+              "parameter_size": "4.0B",
+              "quantization_level": "Q4_K_M"
+            },
+            "expires_at": "2026-10-22T21:54:47.0303268-05:00",
+            "size_vram": 2876160081,
+            "context_length": 2048,
+            "runner": "llamacpp"
+          }
+        ]
+      }
+    },
+    {
+      "monotonic": 100172.0028356,
+      "available_ram_bytes": 6410334208,
+      "processes": [
+        {
+          "pid": 44472,
+          "working_set_bytes": 61870080,
+          "private_bytes": 83042304,
+          "cpu_seconds": 7.734375
+        },
+        {
+          "pid": 44276,
+          "working_set_bytes": 49811456,
+          "private_bytes": 33337344,
+          "cpu_seconds": 0.75
+        }
+      ],
+      "energy": "NOT_MEASURED",
+      "gpu_global": {
+        "vram_used_MiB": 3280,
+        "gpu_utilization_percent": 0,
+        "memory_utilization_percent": 0
+      },
+      "ollama_ps": {
+        "models": [
+          {
+            "name": "vigile-qwen3-4b:latest",
+            "model": "vigile-qwen3-4b:latest",
+            "size": 2876160081,
+            "digest": "f7b39a48ac98f35a1c5f030ed3543d34e0cbeb5fff525096c3a8ab94e03d4b00",
+            "details": {
+              "parent_model": "",
+              "format": "gguf",
+              "family": "qwen3",
+              "families": [
+                "qwen3"
+              ],
+              "parameter_size": "4.0B",
+              "quantization_level": "Q4_K_M"
+            },
+            "expires_at": "2026-10-22T21:54:47.0303268-05:00",
+            "size_vram": 2876160081,
+            "context_length": 2048,
+            "runner": "llamacpp"
+          }
+        ]
+      }
+    },
+    {
+      "monotonic": 100174.0054166,
+      "available_ram_bytes": 6412505088,
+      "processes": [
+        {
+          "pid": 44472,
+          "working_set_bytes": 61870080,
+          "private_bytes": 83042304,
+          "cpu_seconds": 7.734375
+        },
+        {
+          "pid": 44276,
+          "working_set_bytes": 49844224,
+          "private_bytes": 33337344,
+          "cpu_seconds": 0.796875
+        }
+      ],
+      "energy": "NOT_MEASURED",
+      "gpu_global": {
+        "vram_used_MiB": 3280,
+        "gpu_utilization_percent": 0,
+        "memory_utilization_percent": 0
+      },
+      "ollama_ps": {
+        "models": [
+          {
+            "name": "vigile-qwen3-4b:latest",
+            "model": "vigile-qwen3-4b:latest",
+            "size": 2876160081,
+            "digest": "f7b39a48ac98f35a1c5f030ed3543d34e0cbeb5fff525096c3a8ab94e03d4b00",
+            "details": {
+              "parent_model": "",
+              "format": "gguf",
+              "family": "qwen3",
+              "families": [
+                "qwen3"
+              ],
+              "parameter_size": "4.0B",
+              "quantization_level": "Q4_K_M"
+            },
+            "expires_at": "2026-10-22T21:54:47.0303268-05:00",
+            "size_vram": 2876160081,
+            "context_length": 2048,
+            "runner": "llamacpp"
+          }
+        ]
+      }
+    },
+    {
+      "monotonic": 100175.9844827,
+      "available_ram_bytes": 6342664192,
+      "processes": [
+        {
+          "pid": 44472,
+          "working_set_bytes": 61870080,
+          "private_bytes": 83042304,
+          "cpu_seconds": 7.734375
+        },
+        {
+          "pid": 44276,
+          "working_set_bytes": 49905664,
+          "private_bytes": 33337344,
+          "cpu_seconds": 0.84375
+        }
+      ],
+      "energy": "NOT_MEASURED",
+      "gpu_global": {
+        "vram_used_MiB": 3280,
+        "gpu_utilization_percent": 0,
+        "memory_utilization_percent": 0
+      },
+      "ollama_ps": {
+        "models": [
+          {
+            "name": "vigile-qwen3-4b:latest",
+            "model": "vigile-qwen3-4b:latest",
+            "size": 2876160081,
+            "digest": "f7b39a48ac98f35a1c5f030ed3543d34e0cbeb5fff525096c3a8ab94e03d4b00",
+            "details": {
+              "parent_model": "",
+              "format": "gguf",
+              "family": "qwen3",
+              "families": [
+                "qwen3"
+              ],
+              "parameter_size": "4.0B",
+              "quantization_level": "Q4_K_M"
+            },
+            "expires_at": "2026-10-22T21:54:47.0303268-05:00",
+            "size_vram": 2876160081,
+            "context_length": 2048,
+            "runner": "llamacpp"
+          }
+        ]
+      }
+    },
+    {
+      "monotonic": 100177.9557955,
+      "available_ram_bytes": 6415319040,
+      "processes": [
+        {
+          "pid": 44472,
+          "working_set_bytes": 61870080,
+          "private_bytes": 83042304,
+          "cpu_seconds": 7.734375
+        },
+        {
+          "pid": 44276,
+          "working_set_bytes": 49971200,
+          "private_bytes": 33456128,
+          "cpu_seconds": 0.90625
+        }
+      ],
+      "energy": "NOT_MEASURED",
+      "gpu_global": {
+        "vram_used_MiB": 3280,
+        "gpu_utilization_percent": 0,
+        "memory_utilization_percent": 0
+      },
+      "ollama_ps": {
+        "models": [
+          {
+            "name": "vigile-qwen3-4b:latest",
+            "model": "vigile-qwen3-4b:latest",
+            "size": 2876160081,
+            "digest": "f7b39a48ac98f35a1c5f030ed3543d34e0cbeb5fff525096c3a8ab94e03d4b00",
+            "details": {
+              "parent_model": "",
+              "format": "gguf",
+              "family": "qwen3",
+              "families": [
+                "qwen3"
+              ],
+              "parameter_size": "4.0B",
+              "quantization_level": "Q4_K_M"
+            },
+            "expires_at": "2026-10-22T21:54:47.0303268-05:00",
+            "size_vram": 2876160081,
+            "context_length": 2048,
+            "runner": "llamacpp"
+          }
+        ]
+      }
+    },
+    {
+      "monotonic": 100179.9188919,
+      "available_ram_bytes": 6396895232,
+      "processes": [
+        {
+          "pid": 44472,
+          "working_set_bytes": 61870080,
+          "private_bytes": 83042304,
+          "cpu_seconds": 7.734375
+        },
+        {
+          "pid": 44276,
+          "working_set_bytes": 50040832,
+          "private_bytes": 33521664,
+          "cpu_seconds": 0.9375
+        }
+      ],
+      "energy": "NOT_MEASURED",
+      "gpu_global": {
+        "vram_used_MiB": 3280,
+        "gpu_utilization_percent": 0,
+        "memory_utilization_percent": 0
+      },
+      "ollama_ps": {
+        "models": [
+          {
+            "name": "vigile-qwen3-4b:latest",
+            "model": "vigile-qwen3-4b:latest",
+            "size": 2876160081,
+            "digest": "f7b39a48ac98f35a1c5f030ed3543d34e0cbeb5fff525096c3a8ab94e03d4b00",
+            "details": {
+              "parent_model": "",
+              "format": "gguf",
+              "family": "qwen3",
+              "families": [
+                "qwen3"
+              ],
+              "parameter_size": "4.0B",
+              "quantization_level": "Q4_K_M"
+            },
+            "expires_at": "2026-10-22T21:54:47.0303268-05:00",
+            "size_vram": 2876160081,
+            "context_length": 2048,
+            "runner": "llamacpp"
+          }
+        ]
+      }
+    }
+  ],
+  "cpu_deltas": [
+    {
+      "seconds": 1.8507539999991423,
+      "cpu_seconds": 0.140625,
+      "total_machine_cpu_percent": 0.23744545466345265
+    },
+    {
+      "seconds": 1.8176679000025615,
+      "cpu_seconds": 0.125,
+      "total_machine_cpu_percent": 0.21490449382940058
+    },
+    {
+      "seconds": 1.9287681999994675,
+      "cpu_seconds": 0.125,
+      "total_machine_cpu_percent": 0.20252563268105928
+    },
+    {
+      "seconds": 1.8705866000091191,
+      "cpu_seconds": 0.03125,
+      "total_machine_cpu_percent": 0.05220621702279057
+    },
+    {
+      "seconds": 1.8932375000003958,
+      "cpu_seconds": 0.15625,
+      "total_machine_cpu_percent": 0.25790808073466637
+    },
+    {
+      "seconds": 1.8913521999929799,
+      "cpu_seconds": 0.03125,
+      "total_machine_cpu_percent": 0.051633032705575656
+    },
+    {
+      "seconds": 1.9649096000066493,
+      "cpu_seconds": 0.046875,
+      "total_machine_cpu_percent": 0.07455018541285782
+    },
+    {
+      "seconds": 1.995049499993911,
+      "cpu_seconds": 0.03125,
+      "total_machine_cpu_percent": 0.048949286722107924
+    },
+    {
+      "seconds": 2.0000984000071185,
+      "cpu_seconds": 0.0625,
+      "total_machine_cpu_percent": 0.09765144554853145
+    },
+    {
+      "seconds": 1.977484299990465,
+      "cpu_seconds": 0.046875,
+      "total_machine_cpu_percent": 0.07407612540878647
+    },
+    {
+      "seconds": 2.00856930000009,
+      "cpu_seconds": 0.015625,
+      "total_machine_cpu_percent": 0.024309903073793774
+    },
+    {
+      "seconds": 2.002581000007922,
+      "cpu_seconds": 0.046875,
+      "total_machine_cpu_percent": 0.07314779027635862
+    },
+    {
+      "seconds": 1.9790661000006367,
+      "cpu_seconds": 0.046875,
+      "total_machine_cpu_percent": 0.07401691888914315
+    },
+    {
+      "seconds": 1.9713128000003053,
+      "cpu_seconds": 0.0625,
+      "total_machine_cpu_percent": 0.09907737625402206
+    },
+    {
+      "seconds": 1.9630963999952655,
+      "cpu_seconds": 0.03125,
+      "total_machine_cpu_percent": 0.04974602877384703
+    }
+  ],
+  "clinical_validation": false
+}

@@ -1,0 +1,32 @@
+{
+  "condition_id": "C041",
+  "catalog_record": {
+    "condition_id": "C041",
+    "name_specialty": "Infección respiratoria/inhalación de humo / respiratorio-emergencias",
+    "description_spaceflight": "IMM incluye infecciones respiratorias y smoke inhalation; ambiente cerrado amplifica exposición.",
+    "risks_symptoms": "Infección, combustión, contaminantes.",
+    "biomarkers_sensors_tests": "SpO₂, síntomas, ambiente, examen/lab.",
+    "baselines_environment_interactions": "Respiratorio preflight; aire ambiental.",
+    "primary_evidence": "S17, S37. citeturn21search1turn27search2",
+    "limits_authorizations_state": "Diagnóstico y tratamiento requieren supervisión. `RMA`."
+  },
+  "clinical_pathway_profile_as_published": "**P:** control infección/humo; **M:** síntomas, SpO₂, atmósfera; **Q:** sensor/exposición; **D:** screening; **A/DD:** infección, toxicidad, hipoxia; **T/I:** médico/emergencia; **R/F:** respiratorio; **G:** no automático.",
+  "coverage_states": {
+    "prevention": "ES",
+    "monitoring": "ES",
+    "data_quality": "ES",
+    "detection": "RV",
+    "assessment": "RMA",
+    "differential_diagnosis": "RMA",
+    "triage": "RMA",
+    "intervention_authorized": "RMA",
+    "recovery": "RV",
+    "follow_up": "RV",
+    "prognosis": "RO"
+  },
+  "source_ids": [
+    "S17",
+    "S37"
+  ],
+  "NOTICE": "Pathway text is an outline; not an authorized diagnostic or treatment protocol."
+}

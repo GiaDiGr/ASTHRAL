@@ -1,0 +1,948 @@
+{
+  "domains": [
+    {
+      "domain": "CARDIOVASCULAR",
+      "available_indicators": [],
+      "missing_indicators": [
+        "physiology.vo2max",
+        "physiology.heart_rate",
+        "adult_sbp_mm_hg",
+        "upright_sbp_mm_hg"
+      ],
+      "indicators": [
+        {
+          "variable": "physiology.vo2max",
+          "unit": "mL/min/kg",
+          "state": "NOT_MEASURED",
+          "latest_measurement_id": null,
+          "value": null,
+          "valid_count": 0,
+          "quality_issues": [],
+          "baseline_comparison": null,
+          "trend": null,
+          "normative_finding_id": null,
+          "source_ids": [
+            "S01",
+            "S05"
+          ],
+          "limitations": [
+            "EXPERIMENTAL_NOT_CLINICALLY_VALIDATED",
+            "NO_IMPUTATION",
+            "NO_VERIFIED_CLINICAL_CHANGE_THRESHOLD"
+          ]
+        },
+        {
+          "variable": "physiology.heart_rate",
+          "unit": "bpm",
+          "state": "NOT_MEASURED",
+          "latest_measurement_id": null,
+          "value": null,
+          "valid_count": 0,
+          "quality_issues": [],
+          "baseline_comparison": null,
+          "trend": null,
+          "normative_finding_id": null,
+          "source_ids": [
+            "S01",
+            "S05"
+          ],
+          "limitations": [
+            "EXPERIMENTAL_NOT_CLINICALLY_VALIDATED",
+            "NO_IMPUTATION",
+            "NO_VERIFIED_CLINICAL_CHANGE_THRESHOLD"
+          ]
+        },
+        {
+          "variable": "adult_sbp_mm_hg",
+          "unit": "mmHg",
+          "state": "NOT_MEASURED",
+          "latest_measurement_id": null,
+          "value": null,
+          "valid_count": 0,
+          "quality_issues": [],
+          "baseline_comparison": null,
+          "trend": null,
+          "normative_finding_id": null,
+          "source_ids": [
+            "S01",
+            "S05"
+          ],
+          "limitations": [
+            "EXPERIMENTAL_NOT_CLINICALLY_VALIDATED",
+            "NO_IMPUTATION",
+            "NO_VERIFIED_CLINICAL_CHANGE_THRESHOLD"
+          ]
+        },
+        {
+          "variable": "upright_sbp_mm_hg",
+          "unit": "mmHg",
+          "state": "NOT_MEASURED",
+          "latest_measurement_id": null,
+          "value": null,
+          "valid_count": 0,
+          "quality_issues": [],
+          "baseline_comparison": null,
+          "trend": null,
+          "normative_finding_id": null,
+          "source_ids": [
+            "S01",
+            "S05"
+          ],
+          "limitations": [
+            "EXPERIMENTAL_NOT_CLINICALLY_VALIDATED",
+            "NO_IMPUTATION",
+            "NO_VERIFIED_CLINICAL_CHANGE_THRESHOLD"
+          ]
+        }
+      ],
+      "source_ids": [
+        "S01",
+        "S05"
+      ],
+      "method": "PERSONAL_BASELINE_AND_EXISTING_DESCRIPTIVE_STATISTICS",
+      "phase": "IN_MISSION",
+      "gravity": "MICROGRAVITY",
+      "applicability": "DESCRIPTIVE_MONITORING_ONLY",
+      "limitations": [
+        "HEMODYNAMIC_TREND_NOT_ETIOLOGY",
+        "UPRIGHT_TEST_NOT_APPLICABLE_IN_FREE_MICROGRAVITY",
+        "MEASUREMENT_POSTURE_PROTOCOL_REQUIRED"
+      ],
+      "accumulated_dose": null
+    },
+    {
+      "domain": "MUSCULOSKELETAL",
+      "available_indicators": [
+        "physiology.strength"
+      ],
+      "missing_indicators": [
+        "bone.hip_bmd",
+        "bone.lumbar_bmd"
+      ],
+      "indicators": [
+        {
+          "variable": "physiology.strength",
+          "unit": "N",
+          "state": "DESCRIPTIVE_AVAILABLE",
+          "latest_measurement_id": "C-physiology-strength-28",
+          "value": 388.0,
+          "valid_count": 5,
+          "quality_issues": [],
+          "baseline_comparison": {
+            "baseline_id": "C-baseline-0",
+            "baseline_value": 500.0,
+            "absolute_change": -112.0,
+            "retention_percent": 77.6,
+            "interpretation": "DESCRIPTIVE_NOT_DIAGNOSTIC"
+          },
+          "trend": {
+            "slope_per_day": -4.0,
+            "cadence_semantics": "PER_OBSERVATION_NOT_TIME_NORMALIZED",
+            "trace": [
+              {
+                "ewma": 500.0,
+                "cusum_positive": 0.0,
+                "cusum_negative": 0.0,
+                "statistical_signal": null
+              },
+              {
+                "ewma": 486.0,
+                "cusum_positive": 0.0,
+                "cusum_negative": -28.0,
+                "statistical_signal": null
+              },
+              {
+                "ewma": 465.0,
+                "cusum_positive": 0.0,
+                "cusum_negative": -84.0,
+                "statistical_signal": null
+              },
+              {
+                "ewma": 440.5,
+                "cusum_positive": 0.0,
+                "cusum_negative": -168.0,
+                "statistical_signal": null
+              },
+              {
+                "ewma": 414.25,
+                "cusum_positive": 0.0,
+                "cusum_negative": -280.0,
+                "statistical_signal": null
+              }
+            ],
+            "status": "RESEARCH_ONLY",
+            "input_ids": [
+              "C-physiology-strength-0",
+              "C-physiology-strength-7",
+              "C-physiology-strength-14",
+              "C-physiology-strength-21",
+              "C-physiology-strength-28"
+            ],
+            "maximum_observed_gap_seconds": 604800.0
+          },
+          "normative_finding_id": "0cdc1d86575102a40a0f13e3f7666d16f4fec7612c0e29dc10d00a488edca2f1",
+          "source_ids": [
+            "S01",
+            "S06"
+          ],
+          "limitations": [
+            "EXPERIMENTAL_NOT_CLINICALLY_VALIDATED",
+            "NO_IMPUTATION",
+            "NO_VERIFIED_CLINICAL_CHANGE_THRESHOLD"
+          ]
+        },
+        {
+          "variable": "bone.hip_bmd",
+          "unit": "g/cm2",
+          "state": "NOT_MEASURED",
+          "latest_measurement_id": null,
+          "value": null,
+          "valid_count": 0,
+          "quality_issues": [],
+          "baseline_comparison": null,
+          "trend": null,
+          "normative_finding_id": null,
+          "source_ids": [
+            "S01",
+            "S06"
+          ],
+          "limitations": [
+            "EXPERIMENTAL_NOT_CLINICALLY_VALIDATED",
+            "NO_IMPUTATION",
+            "NO_VERIFIED_CLINICAL_CHANGE_THRESHOLD"
+          ]
+        },
+        {
+          "variable": "bone.lumbar_bmd",
+          "unit": "g/cm2",
+          "state": "NOT_MEASURED",
+          "latest_measurement_id": null,
+          "value": null,
+          "valid_count": 0,
+          "quality_issues": [],
+          "baseline_comparison": null,
+          "trend": null,
+          "normative_finding_id": null,
+          "source_ids": [
+            "S01",
+            "S06"
+          ],
+          "limitations": [
+            "EXPERIMENTAL_NOT_CLINICALLY_VALIDATED",
+            "NO_IMPUTATION",
+            "NO_VERIFIED_CLINICAL_CHANGE_THRESHOLD"
+          ]
+        }
+      ],
+      "source_ids": [
+        "S01",
+        "S06"
+      ],
+      "method": "PERSONAL_BASELINE_AND_EXISTING_DESCRIPTIVE_STATISTICS",
+      "phase": "IN_MISSION",
+      "gravity": "MICROGRAVITY",
+      "applicability": "DESCRIPTIVE_MONITORING_ONLY",
+      "limitations": [
+        "DXA_MAINLY_GROUND_PRE_POST_NOT_ASSUMED_AVAILABLE_IN_FLIGHT",
+        "MATCH_SITE_AND_METHOD",
+        "TREND_NOT_FRACTURE_DIAGNOSIS"
+      ],
+      "accumulated_dose": null
+    },
+    {
+      "domain": "RADIATION",
+      "available_indicators": [
+        "radiation.interval_effective_dose"
+      ],
+      "missing_indicators": [
+        "radiation.career_spaceflight"
+      ],
+      "indicators": [
+        {
+          "variable": "radiation.interval_effective_dose",
+          "unit": "mSv",
+          "state": "DESCRIPTIVE_AVAILABLE",
+          "latest_measurement_id": "C-radiation-interval_effective_dose-21",
+          "value": 0.7,
+          "valid_count": 4,
+          "quality_issues": [],
+          "baseline_comparison": null,
+          "trend": {
+            "slope_per_day": 0.0,
+            "cadence_semantics": "PER_OBSERVATION_NOT_TIME_NORMALIZED",
+            "trace": [
+              {
+                "ewma": 0.7,
+                "cusum_positive": 0.0,
+                "cusum_negative": 0.0,
+                "statistical_signal": null
+              },
+              {
+                "ewma": 0.7,
+                "cusum_positive": 0.0,
+                "cusum_negative": 0.0,
+                "statistical_signal": null
+              },
+              {
+                "ewma": 0.7,
+                "cusum_positive": 0.0,
+                "cusum_negative": 0.0,
+                "statistical_signal": null
+              },
+              {
+                "ewma": 0.7,
+                "cusum_positive": 0.0,
+                "cusum_negative": 0.0,
+                "statistical_signal": null
+              }
+            ],
+            "status": "RESEARCH_ONLY",
+            "input_ids": [
+              "C-radiation-interval_effective_dose-0",
+              "C-radiation-interval_effective_dose-7",
+              "C-radiation-interval_effective_dose-14",
+              "C-radiation-interval_effective_dose-21"
+            ],
+            "maximum_observed_gap_seconds": 604800.0
+          },
+          "normative_finding_id": null,
+          "source_ids": [
+            "S01",
+            "S16"
+          ],
+          "limitations": [
+            "EXPERIMENTAL_NOT_CLINICALLY_VALIDATED",
+            "NO_IMPUTATION",
+            "NO_VERIFIED_CLINICAL_CHANGE_THRESHOLD"
+          ]
+        },
+        {
+          "variable": "radiation.career_spaceflight",
+          "unit": "mSv",
+          "state": "NOT_MEASURED",
+          "latest_measurement_id": null,
+          "value": null,
+          "valid_count": 0,
+          "quality_issues": [],
+          "baseline_comparison": null,
+          "trend": null,
+          "normative_finding_id": null,
+          "source_ids": [
+            "S01",
+            "S16"
+          ],
+          "limitations": [
+            "EXPERIMENTAL_NOT_CLINICALLY_VALIDATED",
+            "NO_IMPUTATION",
+            "NO_VERIFIED_CLINICAL_CHANGE_THRESHOLD"
+          ]
+        }
+      ],
+      "source_ids": [
+        "S01",
+        "S16"
+      ],
+      "method": "PERSONAL_BASELINE_AND_EXISTING_DESCRIPTIVE_STATISTICS",
+      "phase": "IN_MISSION",
+      "gravity": "MICROGRAVITY",
+      "applicability": "DESCRIPTIVE_MONITORING_ONLY",
+      "limitations": [
+        "NO_ORGAN_DOSE_OR_RATE_CONVERSION_TO_EFFECTIVE_DOSE",
+        "MEASURED_DOSE_NOT_CANCER_DIAGNOSIS",
+        "WINDOW_SUM_NOT_LIFETIME_DOSE"
+      ],
+      "accumulated_dose": {
+        "state": "COMPLETE_WINDOW",
+        "effective_dose_mSv": 2.8,
+        "coverage_seconds": 2419200.0,
+        "issues": [],
+        "interpretation": "RECORDED_INTERVALS_ONLY_NOT_LIFETIME_DOSE_OR_DIAGNOSIS"
+      }
+    },
+    {
+      "domain": "SLEEP_BEHAVIOR",
+      "available_indicators": [
+        "sleep.duration",
+        "cognition.reaction_time"
+      ],
+      "missing_indicators": [
+        "sleep.efficiency",
+        "behavior.fatigue_score"
+      ],
+      "indicators": [
+        {
+          "variable": "sleep.duration",
+          "unit": "h",
+          "state": "DESCRIPTIVE_AVAILABLE",
+          "latest_measurement_id": "C-sleep-duration-28",
+          "value": 6.0,
+          "valid_count": 5,
+          "quality_issues": [
+            {
+              "measurement_id": "C-sleep-duration-21.001",
+              "reason": "NOT_MEASURED"
+            }
+          ],
+          "baseline_comparison": {
+            "baseline_id": "C-baseline-1",
+            "baseline_value": 8.0,
+            "absolute_change": -2.0,
+            "retention_percent": 75.0,
+            "interpretation": "DESCRIPTIVE_NOT_DIAGNOSTIC"
+          },
+          "trend": {
+            "slope_per_day": -0.07142857142857142,
+            "cadence_semantics": "PER_OBSERVATION_NOT_TIME_NORMALIZED",
+            "trace": [
+              {
+                "ewma": 8.0,
+                "cusum_positive": 0.0,
+                "cusum_negative": 0.0,
+                "statistical_signal": null
+              },
+              {
+                "ewma": 7.75,
+                "cusum_positive": 0.0,
+                "cusum_negative": -0.5,
+                "statistical_signal": null
+              },
+              {
+                "ewma": 7.375,
+                "cusum_positive": 0.0,
+                "cusum_negative": -1.5,
+                "statistical_signal": null
+              },
+              {
+                "ewma": 6.9375,
+                "cusum_positive": 0.0,
+                "cusum_negative": -3.0,
+                "statistical_signal": null
+              },
+              {
+                "ewma": 6.46875,
+                "cusum_positive": 0.0,
+                "cusum_negative": -5.0,
+                "statistical_signal": null
+              }
+            ],
+            "status": "RESEARCH_ONLY",
+            "input_ids": [
+              "C-sleep-duration-0",
+              "C-sleep-duration-7",
+              "C-sleep-duration-14",
+              "C-sleep-duration-21",
+              "C-sleep-duration-28"
+            ],
+            "maximum_observed_gap_seconds": 604800.0
+          },
+          "normative_finding_id": null,
+          "source_ids": [
+            "S10",
+            "S12"
+          ],
+          "limitations": [
+            "EXPERIMENTAL_NOT_CLINICALLY_VALIDATED",
+            "NO_IMPUTATION",
+            "NO_VERIFIED_CLINICAL_CHANGE_THRESHOLD"
+          ]
+        },
+        {
+          "variable": "sleep.efficiency",
+          "unit": "%",
+          "state": "NOT_MEASURED",
+          "latest_measurement_id": null,
+          "value": null,
+          "valid_count": 0,
+          "quality_issues": [],
+          "baseline_comparison": null,
+          "trend": null,
+          "normative_finding_id": null,
+          "source_ids": [
+            "S10",
+            "S12"
+          ],
+          "limitations": [
+            "EXPERIMENTAL_NOT_CLINICALLY_VALIDATED",
+            "NO_IMPUTATION",
+            "NO_VERIFIED_CLINICAL_CHANGE_THRESHOLD"
+          ]
+        },
+        {
+          "variable": "cognition.reaction_time",
+          "unit": "ms",
+          "state": "DESCRIPTIVE_AVAILABLE",
+          "latest_measurement_id": "C-cognition-reaction_time-28",
+          "value": 276.0,
+          "valid_count": 5,
+          "quality_issues": [],
+          "baseline_comparison": null,
+          "trend": {
+            "slope_per_day": 2.0,
+            "cadence_semantics": "PER_OBSERVATION_NOT_TIME_NORMALIZED",
+            "trace": [
+              {
+                "ewma": 220.0,
+                "cusum_positive": 0.0,
+                "cusum_negative": 0.0,
+                "statistical_signal": null
+              },
+              {
+                "ewma": 227.0,
+                "cusum_positive": 14.0,
+                "cusum_negative": 0.0,
+                "statistical_signal": null
+              },
+              {
+                "ewma": 237.5,
+                "cusum_positive": 42.0,
+                "cusum_negative": 0.0,
+                "statistical_signal": null
+              },
+              {
+                "ewma": 249.75,
+                "cusum_positive": 84.0,
+                "cusum_negative": 0.0,
+                "statistical_signal": null
+              },
+              {
+                "ewma": 262.875,
+                "cusum_positive": 140.0,
+                "cusum_negative": 0.0,
+                "statistical_signal": null
+              }
+            ],
+            "status": "RESEARCH_ONLY",
+            "input_ids": [
+              "C-cognition-reaction_time-0",
+              "C-cognition-reaction_time-7",
+              "C-cognition-reaction_time-14",
+              "C-cognition-reaction_time-21",
+              "C-cognition-reaction_time-28"
+            ],
+            "maximum_observed_gap_seconds": 604800.0
+          },
+          "normative_finding_id": null,
+          "source_ids": [
+            "S10",
+            "S12"
+          ],
+          "limitations": [
+            "EXPERIMENTAL_NOT_CLINICALLY_VALIDATED",
+            "NO_IMPUTATION",
+            "NO_VERIFIED_CLINICAL_CHANGE_THRESHOLD"
+          ]
+        },
+        {
+          "variable": "behavior.fatigue_score",
+          "unit": "1",
+          "state": "NOT_MEASURED",
+          "latest_measurement_id": null,
+          "value": null,
+          "valid_count": 0,
+          "quality_issues": [],
+          "baseline_comparison": null,
+          "trend": null,
+          "normative_finding_id": null,
+          "source_ids": [
+            "S10",
+            "S12"
+          ],
+          "limitations": [
+            "EXPERIMENTAL_NOT_CLINICALLY_VALIDATED",
+            "NO_IMPUTATION",
+            "NO_VERIFIED_CLINICAL_CHANGE_THRESHOLD"
+          ]
+        }
+      ],
+      "source_ids": [
+        "S10",
+        "S12"
+      ],
+      "method": "PERSONAL_BASELINE_AND_EXISTING_DESCRIPTIVE_STATISTICS",
+      "phase": "IN_MISSION",
+      "gravity": "MICROGRAVITY",
+      "applicability": "DESCRIPTIVE_MONITORING_ONLY",
+      "limitations": [
+        "WEAR_TIME_DIARY_TEST_VERSION_REQUIRED",
+        "NO_PSYCHIATRIC_DIAGNOSIS",
+        "FATIGUE_SCALE_MUST_MATCH_PROTOCOL"
+      ],
+      "accumulated_dose": null
+    },
+    {
+      "domain": "IMMUNE",
+      "available_indicators": [
+        "immune.viral_load"
+      ],
+      "missing_indicators": [],
+      "indicators": [
+        {
+          "variable": "immune.viral_load",
+          "unit": "copies/mL",
+          "state": "DESCRIPTIVE_AVAILABLE",
+          "latest_measurement_id": "C-immune-viral_load-28",
+          "value": 380.0,
+          "valid_count": 5,
+          "quality_issues": [],
+          "baseline_comparison": null,
+          "trend": {
+            "slope_per_day": 10.0,
+            "cadence_semantics": "PER_OBSERVATION_NOT_TIME_NORMALIZED",
+            "trace": [
+              {
+                "ewma": 100.0,
+                "cusum_positive": 0.0,
+                "cusum_negative": 0.0,
+                "statistical_signal": null
+              },
+              {
+                "ewma": 135.0,
+                "cusum_positive": 70.0,
+                "cusum_negative": 0.0,
+                "statistical_signal": null
+              },
+              {
+                "ewma": 187.5,
+                "cusum_positive": 210.0,
+                "cusum_negative": 0.0,
+                "statistical_signal": null
+              },
+              {
+                "ewma": 248.75,
+                "cusum_positive": 420.0,
+                "cusum_negative": 0.0,
+                "statistical_signal": null
+              },
+              {
+                "ewma": 314.375,
+                "cusum_positive": 700.0,
+                "cusum_negative": 0.0,
+                "statistical_signal": null
+              }
+            ],
+            "status": "RESEARCH_ONLY",
+            "input_ids": [
+              "C-immune-viral_load-0",
+              "C-immune-viral_load-7",
+              "C-immune-viral_load-14",
+              "C-immune-viral_load-21",
+              "C-immune-viral_load-28"
+            ],
+            "maximum_observed_gap_seconds": 604800.0
+          },
+          "normative_finding_id": null,
+          "source_ids": [
+            "S09"
+          ],
+          "limitations": [
+            "EXPERIMENTAL_NOT_CLINICALLY_VALIDATED",
+            "NO_IMPUTATION",
+            "NO_VERIFIED_CLINICAL_CHANGE_THRESHOLD"
+          ]
+        }
+      ],
+      "source_ids": [
+        "S09"
+      ],
+      "method": "PERSONAL_BASELINE_AND_EXISTING_DESCRIPTIVE_STATISTICS",
+      "phase": "IN_MISSION",
+      "gravity": "MICROGRAVITY",
+      "applicability": "DESCRIPTIVE_MONITORING_ONLY",
+      "limitations": [
+        "ANALYTE_MUST_BE_IDENTIFIED_IN_SITE_AND_PROTOCOL",
+        "LAB_CAPABILITY_NOT_ASSUMED",
+        "PCR_TREND_NOT_REACTIVATION_DIAGNOSIS",
+        "NO_VERIFIED_SPACE_THRESHOLD"
+      ],
+      "accumulated_dose": null
+    },
+    {
+      "domain": "ELECTROLYTES_OXYGENATION",
+      "available_indicators": [
+        "potassium_mmol_l",
+        "physiology.spo2"
+      ],
+      "missing_indicators": [
+        "environment.ppo2"
+      ],
+      "indicators": [
+        {
+          "variable": "potassium_mmol_l",
+          "unit": "mmol/L",
+          "state": "DESCRIPTIVE_AVAILABLE",
+          "latest_measurement_id": "C-potassium_mmol_l-28",
+          "value": 4.0,
+          "valid_count": 5,
+          "quality_issues": [],
+          "baseline_comparison": null,
+          "trend": {
+            "slope_per_day": 0.0,
+            "cadence_semantics": "PER_OBSERVATION_NOT_TIME_NORMALIZED",
+            "trace": [
+              {
+                "ewma": 4.0,
+                "cusum_positive": 0.0,
+                "cusum_negative": 0.0,
+                "statistical_signal": null
+              },
+              {
+                "ewma": 4.0,
+                "cusum_positive": 0.0,
+                "cusum_negative": 0.0,
+                "statistical_signal": null
+              },
+              {
+                "ewma": 4.0,
+                "cusum_positive": 0.0,
+                "cusum_negative": 0.0,
+                "statistical_signal": null
+              },
+              {
+                "ewma": 4.0,
+                "cusum_positive": 0.0,
+                "cusum_negative": 0.0,
+                "statistical_signal": null
+              },
+              {
+                "ewma": 4.0,
+                "cusum_positive": 0.0,
+                "cusum_negative": 0.0,
+                "statistical_signal": null
+              }
+            ],
+            "status": "RESEARCH_ONLY",
+            "input_ids": [
+              "C-potassium_mmol_l-0",
+              "C-potassium_mmol_l-7",
+              "C-potassium_mmol_l-14",
+              "C-potassium_mmol_l-21",
+              "C-potassium_mmol_l-28"
+            ],
+            "maximum_observed_gap_seconds": 604800.0
+          },
+          "normative_finding_id": null,
+          "source_ids": [
+            "S14",
+            "SRC-DKA-2024"
+          ],
+          "limitations": [
+            "EXPERIMENTAL_NOT_CLINICALLY_VALIDATED",
+            "NO_IMPUTATION",
+            "NO_VERIFIED_CLINICAL_CHANGE_THRESHOLD"
+          ]
+        },
+        {
+          "variable": "physiology.spo2",
+          "unit": "%",
+          "state": "DESCRIPTIVE_AVAILABLE",
+          "latest_measurement_id": "C-physiology-spo2-28",
+          "value": 97.0,
+          "valid_count": 5,
+          "quality_issues": [],
+          "baseline_comparison": null,
+          "trend": {
+            "slope_per_day": 0.0,
+            "cadence_semantics": "PER_OBSERVATION_NOT_TIME_NORMALIZED",
+            "trace": [
+              {
+                "ewma": 97.0,
+                "cusum_positive": 0.0,
+                "cusum_negative": 0.0,
+                "statistical_signal": null
+              },
+              {
+                "ewma": 97.0,
+                "cusum_positive": 0.0,
+                "cusum_negative": 0.0,
+                "statistical_signal": null
+              },
+              {
+                "ewma": 97.0,
+                "cusum_positive": 0.0,
+                "cusum_negative": 0.0,
+                "statistical_signal": null
+              },
+              {
+                "ewma": 97.0,
+                "cusum_positive": 0.0,
+                "cusum_negative": 0.0,
+                "statistical_signal": null
+              },
+              {
+                "ewma": 97.0,
+                "cusum_positive": 0.0,
+                "cusum_negative": 0.0,
+                "statistical_signal": null
+              }
+            ],
+            "status": "RESEARCH_ONLY",
+            "input_ids": [
+              "C-physiology-spo2-0",
+              "C-physiology-spo2-7",
+              "C-physiology-spo2-14",
+              "C-physiology-spo2-21",
+              "C-physiology-spo2-28"
+            ],
+            "maximum_observed_gap_seconds": 604800.0
+          },
+          "normative_finding_id": null,
+          "source_ids": [
+            "S14",
+            "SRC-DKA-2024"
+          ],
+          "limitations": [
+            "EXPERIMENTAL_NOT_CLINICALLY_VALIDATED",
+            "NO_IMPUTATION",
+            "NO_VERIFIED_CLINICAL_CHANGE_THRESHOLD"
+          ]
+        },
+        {
+          "variable": "environment.ppo2",
+          "unit": "kPa",
+          "state": "NOT_MEASURED",
+          "latest_measurement_id": null,
+          "value": null,
+          "valid_count": 0,
+          "quality_issues": [],
+          "baseline_comparison": null,
+          "trend": null,
+          "normative_finding_id": null,
+          "source_ids": [
+            "S14",
+            "SRC-DKA-2024"
+          ],
+          "limitations": [
+            "EXPERIMENTAL_NOT_CLINICALLY_VALIDATED",
+            "NO_IMPUTATION",
+            "NO_VERIFIED_CLINICAL_CHANGE_THRESHOLD"
+          ]
+        }
+      ],
+      "source_ids": [
+        "S14",
+        "SRC-DKA-2024"
+      ],
+      "method": "PERSONAL_BASELINE_AND_EXISTING_DESCRIPTIVE_STATISTICS",
+      "phase": "IN_MISSION",
+      "gravity": "MICROGRAVITY",
+      "applicability": "DESCRIPTIVE_MONITORING_ONLY",
+      "limitations": [
+        "DESCRIPTIVE_ONLY_NO_UNIVERSAL_THRESHOLD",
+        "POTASSIUM_DKA_SAFETY_REMAINS_SEPARATE",
+        "OXIMETRY_PERFUSION_MOTION_PRESSURE_CONTEXT_REQUIRED",
+        "AMBIENT_OXYGEN_NOT_ARTERIAL_OXYGENATION"
+      ],
+      "accumulated_dose": null
+    }
+  ],
+  "clinical_evaluations": {},
+  "events": [
+    {
+      "id": "me-3058858245e707e80064b84d66e5c5d4",
+      "key": "norm:physiology.strength",
+      "kind": "NORMATIVE_REQUIREMENT",
+      "state": "REQUIREMENT_NOT_MET",
+      "urgency": "ROUTINE",
+      "notify": true,
+      "reason": "NEW_OR_CHANGED_STATE",
+      "evidence_ids": [
+        "C-baseline-0",
+        "C-physiology-strength-28"
+      ],
+      "source_ids": [
+        "S01",
+        "S06"
+      ],
+      "diagnosis": null,
+      "clinical_execution": "BLOCKED"
+    },
+    {
+      "id": "me-3fec3b79a83cfc49caf613f4af4a1101",
+      "key": "change:sleep.duration",
+      "kind": "DESCRIPTIVE_CHANGE",
+      "state": "NUMERIC_CHANGE_NOT_DIAGNOSIS",
+      "urgency": "ROUTINE",
+      "notify": false,
+      "reason": "DESCRIPTIVE_ONLY_NOT_CLINICAL_ALERT",
+      "evidence_ids": [
+        "C-baseline-1",
+        "C-sleep-duration-28"
+      ],
+      "source_ids": [
+        "S10",
+        "S12"
+      ],
+      "diagnosis": null,
+      "clinical_execution": "BLOCKED"
+    },
+    {
+      "id": "me-ec3dd0053d8707ba7b969a88a6ddba60",
+      "key": "quality:sleep.duration",
+      "kind": "DATA_QUALITY",
+      "state": "HISTORICAL_OR_BASELINE_ISSUES",
+      "urgency": "ROUTINE",
+      "notify": true,
+      "reason": "NEW_OR_CHANGED_STATE",
+      "evidence_ids": [
+        "C-sleep-duration-21.001"
+      ],
+      "source_ids": [
+        "S10",
+        "S12"
+      ],
+      "diagnosis": null,
+      "clinical_execution": "BLOCKED"
+    }
+  ],
+  "event_states": {
+    "norm:physiology.strength": {
+      "fingerprint": "2c3c0cf93b46608318d6a92ba6a3f402244dedb39419fd3cc768004a2bb7a9e0",
+      "evidence_ids": [
+        "C-baseline-0",
+        "C-physiology-strength-28"
+      ],
+      "state": "REQUIREMENT_NOT_MET",
+      "urgency": "ROUTINE"
+    },
+    "change:sleep.duration": {
+      "fingerprint": "54042f20aef497402dd4e99a8c9a5a9e72f7220826acd8738145266cc27432fd",
+      "evidence_ids": [
+        "C-baseline-1",
+        "C-sleep-duration-28"
+      ],
+      "state": "NUMERIC_CHANGE_NOT_DIAGNOSIS",
+      "urgency": "ROUTINE"
+    },
+    "quality:sleep.duration": {
+      "fingerprint": "4964b2191d17b9d7a8937a4ed76d6ccf7caea73cf8f772ff27ee5bbc289cee67",
+      "evidence_ids": [
+        "C-sleep-duration-21.001"
+      ],
+      "state": "HISTORICAL_OR_BASELINE_ISSUES",
+      "urgency": "ROUTINE"
+    },
+    "receipt:C-sleep-duration-21.001": {
+      "evidence_ids": [
+        "C-sleep-duration-21.001"
+      ],
+      "fingerprint": "5c4b605d1bef803e37b2241ec0a85e8299a3195cf0886f16552677e25e9184aa",
+      "state": "FUTURE_TIMESTAMP",
+      "urgency": "ROUTINE"
+    }
+  },
+  "episode_ids": {},
+  "followup_ids": [],
+  "id": "C-cycle-28",
+  "subject_id": "v07-crew-C",
+  "mission_id": "v07-mission-C",
+  "previous_run_id": "C-cycle-21",
+  "as_of": "2026-09-29T12:00:00+00:00",
+  "clinical_context_id": "C-context",
+  "mode": "EXPERIMENTAL_NOT_CLINICALLY_VALIDATED",
+  "clinical_execution": "BLOCKED",
+  "implementation_hash": "fb940e6f35764a3b060665269a4272f80038f724a830c0ac1e0441e89fdb15dd",
+  "knowledge_hash": "b8c568bd645154e5fd67630c7a670ca53904dc04f54904315047a89923839d4e",
+  "policy_reference": "V07_SYNTHETIC_SOFTWARE_POLICY_NOT_A_CLINICAL_PROTOCOL",
+  "input_hash": "b8fead61d29f8f08b0d3410448095ab07752818d6cfafea92768b330fceaa180",
+  "output_hash": "def2bd17cabd53d43dbc76b3a63c2c7c030c19ac4f647a90fd560691419c4ae7"
+}

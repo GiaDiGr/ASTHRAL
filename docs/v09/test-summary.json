@@ -1,0 +1,10 @@
+{
+  "tests": 545,
+  "failures": 0,
+  "errors": 0,
+  "skipped": 0,
+  "seconds": 76.167,
+  "added": 23,
+  "warning": "Starlette/httpx deprecation",
+  "clinical_validation": false
+}

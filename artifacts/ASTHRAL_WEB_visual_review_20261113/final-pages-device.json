@@ -1,0 +1,37 @@
+{
+  "observed_at": "2026-11-14T01:23:20.881Z",
+  "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/157.0.0.0 Safari/537.36",
+  "wasm": true,
+  "secure_context": true,
+  "cross_origin_isolated": false,
+  "logical_cores": 32,
+  "reported_device_memory_gb": 32,
+  "heap": {
+    "limit": 4395630592,
+    "used": 6854302
+  },
+  "storage": {
+    "quota": 10737420363,
+    "usage": 2123,
+    "usageDetails": {
+      "indexedDB": 2123
+    }
+  },
+  "persistent": false,
+  "opfs": true,
+  "microphone": true,
+  "audio_worklet": true,
+  "speech_synthesis": true,
+  "local_stt": "NOT_INSTALLED",
+  "python_ready": true,
+  "python_init_seconds": 4.243,
+  "webgpu": true,
+  "peak_memory": "NOT_MEASURABLE_BY_THIS_TEST",
+  "physical_device_acceptance": "NOT_INFERRED_FROM_USER_AGENT",
+  "webgpu_adapter": true,
+  "gpu_limits": {
+    "maxBufferSize": 2147483648,
+    "maxStorageBufferBindingSize": 2147483644
+  },
+  "opfs_roundtrip": true
+}

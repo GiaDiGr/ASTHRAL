@@ -1,0 +1,31 @@
+{
+  "condition_id": "C008",
+  "catalog_record": {
+    "condition_id": "C008",
+    "name_specialty": "Redistribución de fluidos/hipovolemia relativa / cardiovascular",
+    "description_spaceflight": "El cambio gravitatorio altera circulación y contribuye a adaptación CV/ortostática.",
+    "risks_symptoms": "Microgravedad, hidratación, retorno a gravedad.",
+    "biomarkers_sensors_tests": "Peso/masa corporal, HR/BP, ultrasonido/hemodinámica según recursos.",
+    "baselines_environment_interactions": "Baselines personales; hidratación y gravedad.",
+    "primary_evidence": "S05. citeturn11search0",
+    "limits_authorizations_state": "No hay umbral operacional único extraído. `RO`."
+  },
+  "clinical_pathway_profile_as_published": "**P:** hidratación/contramedidas configuradas; **M:** hemodinámica; **Q:** postura/gravedad; **D:** tendencias `[RO]`; **A/DD:** causas de volumen; **T/I:** humano; **R/F:** volver al baseline; **G:** research-only.",
+  "coverage_states": {
+    "prevention": "RO",
+    "monitoring": "RV",
+    "data_quality": "ES",
+    "detection": "RO",
+    "assessment": "RV",
+    "differential_diagnosis": "RV",
+    "triage": "RMA",
+    "intervention_authorized": "RMA",
+    "recovery": "RV",
+    "follow_up": "RV",
+    "prognosis": "RO"
+  },
+  "source_ids": [
+    "S05"
+  ],
+  "NOTICE": "Pathway text is an outline; not an authorized diagnostic or treatment protocol."
+}

@@ -1,0 +1,56 @@
+{
+  "date": "2026-11-02",
+  "loopback_HTTP": true,
+  "portal": "http://127.0.0.1:8912",
+  "backend": "http://127.0.0.1:8911",
+  "checks": [
+    {
+      "subject": "mission-crew-A",
+      "frame": "frame-mission-crew-A-cycle-35",
+      "cycle": "mission-crew-A-cycle-35",
+      "clinical_execution": "BLOCKED",
+      "http_status": 200
+    },
+    {
+      "subject": "mission-crew-A",
+      "frame": "frame-mission-crew-A-cycle-21",
+      "cycle": "mission-crew-A-cycle-21",
+      "clinical_execution": "BLOCKED",
+      "http_status": 200
+    },
+    {
+      "subject": "mission-crew-B",
+      "frame": "frame-mission-crew-B-cycle-18",
+      "cycle": "mission-crew-B-cycle-18",
+      "clinical_execution": "BLOCKED",
+      "http_status": 200
+    },
+    {
+      "subject": "mission-crew-B",
+      "frame": "frame-mission-crew-B-cycle-18p1",
+      "cycle": "mission-crew-B-cycle-18p1",
+      "clinical_execution": "BLOCKED",
+      "http_status": 200
+    },
+    {
+      "subject": "mission-crew-B",
+      "frame": "frame-mission-crew-B-cycle-47",
+      "cycle": "mission-crew-B-cycle-47",
+      "clinical_execution": "BLOCKED",
+      "http_status": 200
+    }
+  ],
+  "cross_astronaut_frame_status": 403,
+  "reader_write_status": 403,
+  "cross_origin_status": 403,
+  "new_assets_served": true,
+  "credentials_omitted": true,
+  "real_browser_visual_QA": "PENDING_KERNEL_ASSETS_OS_ERROR_3",
+  "original_mission_semantic_hash": "f81b333c7f06a9f1262e5b2b953c768e46f7d4c846b9cbbad2f3cabf042f1c76",
+  "new_mission_semantic_hash": "f81b333c7f06a9f1262e5b2b953c768e46f7d4c846b9cbbad2f3cabf042f1c76",
+  "requests_equal_after_removing_only_v101_resource_policy_default": true,
+  "new_default_resource_policy": [
+    "DECLARED_R2"
+  ],
+  "inference_requested_by_this_check": false
+}

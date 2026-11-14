@@ -1,0 +1,27 @@
+[
+  {
+    "name": "backend",
+    "pid": 47352,
+    "args": [
+      "-m",
+      "vigile",
+      "serve",
+      "--integration-dir",
+      "C:\\Users\\Gianni\\Desktop\\Vigile\\engine\\data\\portal-consistency-v061",
+      "--port",
+      "8895"
+    ]
+  },
+  {
+    "name": "portal",
+    "pid": 1728,
+    "args": [
+      "-m",
+      "vigile.portal",
+      "--config",
+      "C:\\Users\\Gianni\\Desktop\\Vigile\\engine\\data\\portal-consistency-v061\\portal-config.json",
+      "--port",
+      "8896"
+    ]
+  }
+]

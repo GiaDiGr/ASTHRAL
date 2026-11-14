@@ -1,0 +1,32 @@
+{
+  "condition_id": "C003",
+  "catalog_record": {
+    "condition_id": "C003",
+    "name_specialty": "Pérdida ósea y riesgo de fractura / óseo",
+    "description_spaceflight": "Alteraciones esqueléticas y de resistencia ósea durante exposición a gravedad reducida.",
+    "risks_symptoms": "Descarga, duración, nutrición; fractura puede ocurrir sin osteoporosis.",
+    "biomarkers_sensors_tests": "DXA, QCT, BMD, marcadores de recambio cuando disponibles.",
+    "baselines_environment_interactions": "DXA preflight; gravedad, ejercicio, nutrición. Interacción renal.",
+    "primary_evidence": "S01, S06. citeturn6view2turn11search7",
+    "limits_authorizations_state": "BMD por sí sola no predice fractura individual. `ES`."
+  },
+  "clinical_pathway_profile_as_published": "**P:** ejercicio/nutrición/contramedidas autorizadas; **M:** DXA/QCT cuando programado; **Q:** región y tecnología coherentes; **D:** conservación 95/95/90 % `[S01]`; **A:** integrar fractura/riesgo, no solo BMD; **DD:** causas metabólicas/trauma; **T/I:** médico; **R:** reacondicionamiento hacia baseline; **F:** vigilancia postflight; **G:** no inferir fractura individual únicamente de DXA.",
+  "coverage_states": {
+    "prevention": "ES",
+    "monitoring": "ES",
+    "data_quality": "ES",
+    "detection": "ES",
+    "assessment": "RV",
+    "differential_diagnosis": "RV",
+    "triage": "RMA",
+    "intervention_authorized": "RMA",
+    "recovery": "ES",
+    "follow_up": "ES",
+    "prognosis": "RV"
+  },
+  "source_ids": [
+    "S01",
+    "S06"
+  ],
+  "NOTICE": "Pathway text is an outline; not an authorized diagnostic or treatment protocol."
+}

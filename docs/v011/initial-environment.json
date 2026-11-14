@@ -1,0 +1,61 @@
+{
+  "archive_sha256": "c803781002f29ef88764ed02b3f3fdaabebd41d4a949862f3d8045d8f7bd9b81",
+  "reserved_bank_sha256": "c1a75f8f0a792ebd094bda50bd5790b302a6c2c8475cdce0a0a5d239f76651e0",
+  "reserved_bank_action": "HASH_ONLY_NOT_EXECUTED",
+  "audit_valid": true,
+  "checkpoint": {
+    "sequence": 254,
+    "hash": "6da2ec8ddd24fc5859279214f46053c8c4c8e69d682eb881de04ed7a3a015387"
+  },
+  "record_count": 244,
+  "records_digest": "6782696de2c725d1db9c12bc1760ca6e0bab77b28dc255905bcddb120e079d1d",
+  "python": "3.13.16 (tags/v3.13.16:cbc944f, Sep 30 2026, 19:17:50) [MSC v.1944 64 bit (AMD64)]",
+  "dependencies": {
+    "fastapi": "0.143.1",
+    "pydantic": "2.14.1",
+    "uvicorn": "0.54.0",
+    "httpx": "0.28.1",
+    "pytest": "9.1.1"
+  },
+  "storage": {
+    "active_store": "STANDARD_SQLITE",
+    "active_database_encrypted": false,
+    "sqlite_cipher_version": null,
+    "sqlcipher_provider_available": false,
+    "migration": "BLOCKED_PENDING_DEPENDENCY_AND_VERIFIED_MIGRATION"
+  },
+  "services": {
+    "backend": {
+      "status": 200,
+      "response": {
+        "status": "ok",
+        "mode": "RESEARCH_ONLY",
+        "clinical_execution": "BLOCKED",
+        "version": "0.10.0"
+      }
+    },
+    "portal": {
+      "status": 200
+    },
+    "ollama": {
+      "status": 200,
+      "response": {
+        "version": "0.40.6"
+      }
+    }
+  },
+  "backup": {
+    "format": "VIGILE_SQLITE_BACKUP_1",
+    "source": "C:\\Users\\Gianni\\Desktop\\Vigile\\engine\\data\\portal-v0100-integrated\\vigile.sqlite3",
+    "database": "vigile.sqlite3",
+    "sha256": "9c565a0cb895a7e2d55de0cfb447fa37071949861a33c3ec5db052f068b66b35",
+    "state": {
+      "record_sequence": 244,
+      "record_count": 244,
+      "records_hash": "6782696de2c725d1db9c12bc1760ca6e0bab77b28dc255905bcddb120e079d1d",
+      "audit_sequence": 254,
+      "audit_hash": "6da2ec8ddd24fc5859279214f46053c8c4c8e69d682eb881de04ed7a3a015387"
+    },
+    "sqlite_encryption": "NONE"
+  }
+}

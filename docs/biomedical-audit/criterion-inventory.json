@@ -1,0 +1,513 @@
+[
+  {
+    "condition": "DM",
+    "path": "DM/logic/qualifying_paths/0/all_of/0",
+    "field": "a1c_percent",
+    "operator": ">=",
+    "value": 6.5,
+    "source_ids": [
+      "SRC-ADA-DX-2026"
+    ],
+    "origin": "PINNED_DOCUMENT",
+    "review": "SEE_COVERAGE_AND_SOURCE_CHECKS_NOT_INDEPENDENT_CLINICAL_VALIDATION"
+  },
+  {
+    "condition": "DM",
+    "path": "DM/logic/qualifying_paths/0/all_of/1",
+    "field": "assay_quality.a1c_valid",
+    "operator": "==",
+    "value": true,
+    "source_ids": [
+      "SRC-ADA-DX-2026"
+    ],
+    "origin": "PINNED_DOCUMENT",
+    "review": "SEE_COVERAGE_AND_SOURCE_CHECKS_NOT_INDEPENDENT_CLINICAL_VALIDATION"
+  },
+  {
+    "condition": "DM",
+    "path": "DM/logic/qualifying_paths/1/all_of/0",
+    "field": "fasting_plasma_glucose_mg_dl",
+    "operator": ">=",
+    "value": 126,
+    "source_ids": [
+      "SRC-ADA-DX-2026"
+    ],
+    "origin": "PINNED_DOCUMENT",
+    "review": "SEE_COVERAGE_AND_SOURCE_CHECKS_NOT_INDEPENDENT_CLINICAL_VALIDATION"
+  },
+  {
+    "condition": "DM",
+    "path": "DM/logic/qualifying_paths/1/all_of/1",
+    "field": "fasting_hours",
+    "operator": ">=",
+    "value": 8,
+    "source_ids": [
+      "SRC-ADA-DX-2026"
+    ],
+    "origin": "PINNED_DOCUMENT",
+    "review": "SEE_COVERAGE_AND_SOURCE_CHECKS_NOT_INDEPENDENT_CLINICAL_VALIDATION"
+  },
+  {
+    "condition": "DM",
+    "path": "DM/logic/qualifying_paths/2/all_of/0",
+    "field": "ogtt_2h_plasma_glucose_mg_dl",
+    "operator": ">=",
+    "value": 200,
+    "source_ids": [
+      "SRC-ADA-DX-2026"
+    ],
+    "origin": "PINNED_DOCUMENT",
+    "review": "SEE_COVERAGE_AND_SOURCE_CHECKS_NOT_INDEPENDENT_CLINICAL_VALIDATION"
+  },
+  {
+    "condition": "DM",
+    "path": "DM/logic/qualifying_paths/2/all_of/1",
+    "field": "ogtt_glucose_load_g",
+    "operator": "==",
+    "value": 75,
+    "source_ids": [
+      "SRC-ADA-DX-2026"
+    ],
+    "origin": "PINNED_DOCUMENT",
+    "review": "SEE_COVERAGE_AND_SOURCE_CHECKS_NOT_INDEPENDENT_CLINICAL_VALIDATION"
+  },
+  {
+    "condition": "DM",
+    "path": "DM/logic/qualifying_paths/3/all_of/0",
+    "field": "random_plasma_glucose_mg_dl",
+    "operator": ">=",
+    "value": 200,
+    "source_ids": [
+      "SRC-ADA-DX-2026"
+    ],
+    "origin": "PINNED_DOCUMENT",
+    "review": "SEE_COVERAGE_AND_SOURCE_CHECKS_NOT_INDEPENDENT_CLINICAL_VALIDATION"
+  },
+  {
+    "condition": "DM",
+    "path": "DM/logic/qualifying_paths/3/all_of/1/any_of/0",
+    "field": "classic_hyperglycemia_symptoms",
+    "operator": "==",
+    "value": true,
+    "source_ids": [
+      "SRC-ADA-DX-2026"
+    ],
+    "origin": "PINNED_DOCUMENT",
+    "review": "SEE_COVERAGE_AND_SOURCE_CHECKS_NOT_INDEPENDENT_CLINICAL_VALIDATION"
+  },
+  {
+    "condition": "DM",
+    "path": "DM/logic/qualifying_paths/3/all_of/1/any_of/1",
+    "field": "hyperglycemic_crisis",
+    "operator": "==",
+    "value": true,
+    "source_ids": [
+      "SRC-ADA-DX-2026"
+    ],
+    "origin": "PINNED_DOCUMENT",
+    "review": "SEE_COVERAGE_AND_SOURCE_CHECKS_NOT_INDEPENDENT_CLINICAL_VALIDATION"
+  },
+  {
+    "condition": "DKA",
+    "path": "DKA/logic/all_of/0/any_of/0",
+    "field": "known_diabetes",
+    "operator": "==",
+    "value": true,
+    "source_ids": [
+      "SRC-DKA-2024"
+    ],
+    "origin": "PINNED_DOCUMENT",
+    "review": "SEE_COVERAGE_AND_SOURCE_CHECKS_NOT_INDEPENDENT_CLINICAL_VALIDATION"
+  },
+  {
+    "condition": "DKA",
+    "path": "DKA/logic/all_of/0/any_of/1",
+    "field": "plasma_glucose_mg_dl",
+    "operator": ">=",
+    "value": 200,
+    "source_ids": [
+      "SRC-DKA-2024"
+    ],
+    "origin": "PINNED_DOCUMENT",
+    "review": "SEE_COVERAGE_AND_SOURCE_CHECKS_NOT_INDEPENDENT_CLINICAL_VALIDATION"
+  },
+  {
+    "condition": "DKA",
+    "path": "DKA/logic/all_of/1/any_of/0",
+    "field": "beta_hydroxybutyrate_mmol_l",
+    "operator": ">=",
+    "value": 3.0,
+    "source_ids": [
+      "SRC-DKA-2024"
+    ],
+    "origin": "PINNED_DOCUMENT",
+    "review": "SEE_COVERAGE_AND_SOURCE_CHECKS_NOT_INDEPENDENT_CLINICAL_VALIDATION"
+  },
+  {
+    "condition": "DKA",
+    "path": "DKA/logic/all_of/1/any_of/1",
+    "field": "urine_ketones_plus",
+    "operator": ">=",
+    "value": 2,
+    "source_ids": [
+      "SRC-DKA-2024"
+    ],
+    "origin": "PINNED_DOCUMENT",
+    "review": "SEE_COVERAGE_AND_SOURCE_CHECKS_NOT_INDEPENDENT_CLINICAL_VALIDATION"
+  },
+  {
+    "condition": "DKA",
+    "path": "DKA/logic/all_of/2/any_of/0",
+    "field": "venous_pH",
+    "operator": "<",
+    "value": 7.3,
+    "source_ids": [
+      "SRC-DKA-2024"
+    ],
+    "origin": "PINNED_DOCUMENT",
+    "review": "SEE_COVERAGE_AND_SOURCE_CHECKS_NOT_INDEPENDENT_CLINICAL_VALIDATION"
+  },
+  {
+    "condition": "DKA",
+    "path": "DKA/logic/all_of/2/any_of/1",
+    "field": "bicarbonate_mmol_l",
+    "operator": "<",
+    "value": 18,
+    "source_ids": [
+      "SRC-DKA-2024"
+    ],
+    "origin": "PINNED_DOCUMENT",
+    "review": "SEE_COVERAGE_AND_SOURCE_CHECKS_NOT_INDEPENDENT_CLINICAL_VALIDATION"
+  },
+  {
+    "condition": "DKA",
+    "path": "DKA/resolution/all_of/0",
+    "field": "beta_hydroxybutyrate_mmol_l",
+    "operator": "<",
+    "value": 0.6,
+    "source_ids": [
+      "SRC-DKA-2024"
+    ],
+    "origin": "PINNED_DOCUMENT",
+    "review": "SEE_COVERAGE_AND_SOURCE_CHECKS_NOT_INDEPENDENT_CLINICAL_VALIDATION"
+  },
+  {
+    "condition": "DKA",
+    "path": "DKA/resolution/all_of/1/any_of/0",
+    "field": "venous_pH",
+    "operator": ">=",
+    "value": 7.3,
+    "source_ids": [
+      "SRC-DKA-2024"
+    ],
+    "origin": "PINNED_DOCUMENT",
+    "review": "SEE_COVERAGE_AND_SOURCE_CHECKS_NOT_INDEPENDENT_CLINICAL_VALIDATION"
+  },
+  {
+    "condition": "DKA",
+    "path": "DKA/resolution/all_of/1/any_of/1",
+    "field": "bicarbonate_mmol_l",
+    "operator": ">=",
+    "value": 18,
+    "source_ids": [
+      "SRC-DKA-2024"
+    ],
+    "origin": "PINNED_DOCUMENT",
+    "review": "SEE_COVERAGE_AND_SOURCE_CHECKS_NOT_INDEPENDENT_CLINICAL_VALIDATION"
+  },
+  {
+    "condition": "ORTHOSTATIC_HYPOTENSION",
+    "path": "ORTHOSTATIC_HYPOTENSION/logic/any_of/0",
+    "field": "delta_sbp_mm_hg",
+    "operator": "<=",
+    "value": -20,
+    "source_ids": [
+      "SRC-AHA-OH-2024"
+    ],
+    "origin": "PINNED_DOCUMENT",
+    "review": "SEE_COVERAGE_AND_SOURCE_CHECKS_NOT_INDEPENDENT_CLINICAL_VALIDATION"
+  },
+  {
+    "condition": "ORTHOSTATIC_HYPOTENSION",
+    "path": "ORTHOSTATIC_HYPOTENSION/logic/any_of/1",
+    "field": "delta_dbp_mm_hg",
+    "operator": "<=",
+    "value": -10,
+    "source_ids": [
+      "SRC-AHA-OH-2024"
+    ],
+    "origin": "PINNED_DOCUMENT",
+    "review": "SEE_COVERAGE_AND_SOURCE_CHECKS_NOT_INDEPENDENT_CLINICAL_VALIDATION"
+  },
+  {
+    "condition": "POTS",
+    "path": "POTS/logic/all_of/0",
+    "field": "sustained_delta_hr_bpm",
+    "operator": ">=",
+    "value": 30,
+    "source_ids": [
+      "SRC-HRS-POTS-2015",
+      "SRC-NIH-POTS-2021"
+    ],
+    "origin": "PINNED_DOCUMENT",
+    "review": "SEE_COVERAGE_AND_SOURCE_CHECKS_NOT_INDEPENDENT_CLINICAL_VALIDATION"
+  },
+  {
+    "condition": "POTS",
+    "path": "POTS/logic/all_of/1",
+    "field": "upright_window_minutes",
+    "operator": "<=",
+    "value": 10,
+    "source_ids": [
+      "SRC-HRS-POTS-2015",
+      "SRC-NIH-POTS-2021"
+    ],
+    "origin": "PINNED_DOCUMENT",
+    "review": "SEE_COVERAGE_AND_SOURCE_CHECKS_NOT_INDEPENDENT_CLINICAL_VALIDATION"
+  },
+  {
+    "condition": "POTS",
+    "path": "POTS/logic/all_of/2",
+    "field": "orthostatic_hypotension_present",
+    "operator": "==",
+    "value": false,
+    "source_ids": [
+      "SRC-HRS-POTS-2015",
+      "SRC-NIH-POTS-2021"
+    ],
+    "origin": "PINNED_DOCUMENT",
+    "review": "SEE_COVERAGE_AND_SOURCE_CHECKS_NOT_INDEPENDENT_CLINICAL_VALIDATION"
+  },
+  {
+    "condition": "POTS",
+    "path": "POTS/logic/all_of/3",
+    "field": "orthostatic_symptoms_frequent",
+    "operator": "==",
+    "value": true,
+    "source_ids": [
+      "SRC-HRS-POTS-2015",
+      "SRC-NIH-POTS-2021"
+    ],
+    "origin": "PINNED_DOCUMENT",
+    "review": "SEE_COVERAGE_AND_SOURCE_CHECKS_NOT_INDEPENDENT_CLINICAL_VALIDATION"
+  },
+  {
+    "condition": "POTS",
+    "path": "POTS/logic/all_of/4",
+    "field": "symptoms_improve_supine",
+    "operator": "==",
+    "value": true,
+    "source_ids": [
+      "SRC-HRS-POTS-2015",
+      "SRC-NIH-POTS-2021"
+    ],
+    "origin": "PINNED_DOCUMENT",
+    "review": "SEE_COVERAGE_AND_SOURCE_CHECKS_NOT_INDEPENDENT_CLINICAL_VALIDATION"
+  },
+  {
+    "condition": "POTS",
+    "path": "POTS/logic/all_of/5",
+    "field": "symptom_duration_months",
+    "operator": ">=",
+    "value": 3,
+    "source_ids": [
+      "SRC-HRS-POTS-2015",
+      "SRC-NIH-POTS-2021"
+    ],
+    "origin": "PINNED_DOCUMENT",
+    "review": "SEE_COVERAGE_AND_SOURCE_CHECKS_NOT_INDEPENDENT_CLINICAL_VALIDATION"
+  },
+  {
+    "condition": "POTS",
+    "path": "POTS/logic/all_of/6",
+    "field": "alternative_cause_present",
+    "operator": "==",
+    "value": false,
+    "source_ids": [
+      "SRC-HRS-POTS-2015",
+      "SRC-NIH-POTS-2021"
+    ],
+    "origin": "PINNED_DOCUMENT",
+    "review": "SEE_COVERAGE_AND_SOURCE_CHECKS_NOT_INDEPENDENT_CLINICAL_VALIDATION"
+  },
+  {
+    "condition": "AKI",
+    "path": "AKI/logic/any_of/0",
+    "field": "serum_creatinine_delta_mg_dl_48h",
+    "operator": ">=",
+    "value": 0.3,
+    "source_ids": [
+      "SRC-KDIGO-AKI-2012"
+    ],
+    "origin": "PINNED_DOCUMENT",
+    "review": "SEE_COVERAGE_AND_SOURCE_CHECKS_NOT_INDEPENDENT_CLINICAL_VALIDATION"
+  },
+  {
+    "condition": "AKI",
+    "path": "AKI/logic/any_of/1",
+    "field": "serum_creatinine_ratio_to_baseline_7d",
+    "operator": ">=",
+    "value": 1.5,
+    "source_ids": [
+      "SRC-KDIGO-AKI-2012"
+    ],
+    "origin": "PINNED_DOCUMENT",
+    "review": "SEE_COVERAGE_AND_SOURCE_CHECKS_NOT_INDEPENDENT_CLINICAL_VALIDATION"
+  },
+  {
+    "condition": "AKI",
+    "path": "AKI/logic/any_of/2/all_of/0",
+    "field": "urine_output_ml_kg_h",
+    "operator": "<",
+    "value": 0.5,
+    "source_ids": [
+      "SRC-KDIGO-AKI-2012"
+    ],
+    "origin": "PINNED_DOCUMENT",
+    "review": "SEE_COVERAGE_AND_SOURCE_CHECKS_NOT_INDEPENDENT_CLINICAL_VALIDATION"
+  },
+  {
+    "condition": "AKI",
+    "path": "AKI/logic/any_of/2/all_of/1",
+    "field": "urine_output_duration_h",
+    "operator": ">=",
+    "value": 6,
+    "source_ids": [
+      "SRC-KDIGO-AKI-2012"
+    ],
+    "origin": "PINNED_DOCUMENT",
+    "review": "SEE_COVERAGE_AND_SOURCE_CHECKS_NOT_INDEPENDENT_CLINICAL_VALIDATION"
+  },
+  {
+    "condition": "ANAPHYLAXIS",
+    "path": "ANAPHYLAXIS/logic/any_of/0/all_of/0",
+    "field": "acute_onset_minutes_to_hours",
+    "operator": "==",
+    "value": true,
+    "source_ids": [
+      "SRC-WAO-ANAPH-2020"
+    ],
+    "origin": "PINNED_DOCUMENT",
+    "review": "SEE_COVERAGE_AND_SOURCE_CHECKS_NOT_INDEPENDENT_CLINICAL_VALIDATION"
+  },
+  {
+    "condition": "ANAPHYLAXIS",
+    "path": "ANAPHYLAXIS/logic/any_of/0/all_of/1",
+    "field": "skin_or_mucosal_involvement",
+    "operator": "==",
+    "value": true,
+    "source_ids": [
+      "SRC-WAO-ANAPH-2020"
+    ],
+    "origin": "PINNED_DOCUMENT",
+    "review": "SEE_COVERAGE_AND_SOURCE_CHECKS_NOT_INDEPENDENT_CLINICAL_VALIDATION"
+  },
+  {
+    "condition": "ANAPHYLAXIS",
+    "path": "ANAPHYLAXIS/logic/any_of/0/all_of/2/any_of/0",
+    "field": "respiratory_compromise",
+    "operator": "==",
+    "value": true,
+    "source_ids": [
+      "SRC-WAO-ANAPH-2020"
+    ],
+    "origin": "PINNED_DOCUMENT",
+    "review": "SEE_COVERAGE_AND_SOURCE_CHECKS_NOT_INDEPENDENT_CLINICAL_VALIDATION"
+  },
+  {
+    "condition": "ANAPHYLAXIS",
+    "path": "ANAPHYLAXIS/logic/any_of/0/all_of/2/any_of/1",
+    "field": "reduced_bp_or_end_organ_symptoms",
+    "operator": "==",
+    "value": true,
+    "source_ids": [
+      "SRC-WAO-ANAPH-2020"
+    ],
+    "origin": "PINNED_DOCUMENT",
+    "review": "SEE_COVERAGE_AND_SOURCE_CHECKS_NOT_INDEPENDENT_CLINICAL_VALIDATION"
+  },
+  {
+    "condition": "ANAPHYLAXIS",
+    "path": "ANAPHYLAXIS/logic/any_of/0/all_of/2/any_of/2",
+    "field": "severe_gi_symptoms",
+    "operator": "==",
+    "value": true,
+    "source_ids": [
+      "SRC-WAO-ANAPH-2020"
+    ],
+    "origin": "PINNED_DOCUMENT",
+    "review": "SEE_COVERAGE_AND_SOURCE_CHECKS_NOT_INDEPENDENT_CLINICAL_VALIDATION"
+  },
+  {
+    "condition": "ANAPHYLAXIS",
+    "path": "ANAPHYLAXIS/logic/any_of/1/all_of/0",
+    "field": "acute_onset_minutes_to_hours",
+    "operator": "==",
+    "value": true,
+    "source_ids": [
+      "SRC-WAO-ANAPH-2020"
+    ],
+    "origin": "PINNED_DOCUMENT",
+    "review": "SEE_COVERAGE_AND_SOURCE_CHECKS_NOT_INDEPENDENT_CLINICAL_VALIDATION"
+  },
+  {
+    "condition": "ANAPHYLAXIS",
+    "path": "ANAPHYLAXIS/logic/any_of/1/all_of/1",
+    "field": "known_or_highly_probable_allergen",
+    "operator": "==",
+    "value": true,
+    "source_ids": [
+      "SRC-WAO-ANAPH-2020"
+    ],
+    "origin": "PINNED_DOCUMENT",
+    "review": "SEE_COVERAGE_AND_SOURCE_CHECKS_NOT_INDEPENDENT_CLINICAL_VALIDATION"
+  },
+  {
+    "condition": "ANAPHYLAXIS",
+    "path": "ANAPHYLAXIS/logic/any_of/1/all_of/2/any_of/0",
+    "field": "adult_sbp_mm_hg",
+    "operator": "<",
+    "value": 90,
+    "source_ids": [
+      "SRC-WAO-ANAPH-2020"
+    ],
+    "origin": "PINNED_DOCUMENT",
+    "review": "SEE_COVERAGE_AND_SOURCE_CHECKS_NOT_INDEPENDENT_CLINICAL_VALIDATION"
+  },
+  {
+    "condition": "ANAPHYLAXIS",
+    "path": "ANAPHYLAXIS/logic/any_of/1/all_of/2/any_of/1",
+    "field": "sbp_drop_percent",
+    "operator": ">",
+    "value": 30,
+    "source_ids": [
+      "SRC-WAO-ANAPH-2020"
+    ],
+    "origin": "PINNED_DOCUMENT",
+    "review": "SEE_COVERAGE_AND_SOURCE_CHECKS_NOT_INDEPENDENT_CLINICAL_VALIDATION"
+  },
+  {
+    "condition": "ANAPHYLAXIS",
+    "path": "ANAPHYLAXIS/logic/any_of/1/all_of/2/any_of/2",
+    "field": "bronchospasm",
+    "operator": "==",
+    "value": true,
+    "source_ids": [
+      "SRC-WAO-ANAPH-2020"
+    ],
+    "origin": "PINNED_DOCUMENT",
+    "review": "SEE_COVERAGE_AND_SOURCE_CHECKS_NOT_INDEPENDENT_CLINICAL_VALIDATION"
+  },
+  {
+    "condition": "ANAPHYLAXIS",
+    "path": "ANAPHYLAXIS/logic/any_of/1/all_of/2/any_of/3",
+    "field": "laryngeal_involvement",
+    "operator": "==",
+    "value": true,
+    "source_ids": [
+      "SRC-WAO-ANAPH-2020"
+    ],
+    "origin": "PINNED_DOCUMENT",
+    "review": "SEE_COVERAGE_AND_SOURCE_CHECKS_NOT_INDEPENDENT_CLINICAL_VALIDATION"
+  }
+]

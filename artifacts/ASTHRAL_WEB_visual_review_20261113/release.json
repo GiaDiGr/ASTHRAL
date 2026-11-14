@@ -1,0 +1,100 @@
+{
+  "review_date": "2026-11-13 America/Lima",
+  "public_url": "https://asthral-web.pages.dev/",
+  "deployment_url": "https://25e8f42c.asthral-web.pages.dev",
+  "branch": "feature/browser-local-pages",
+  "commit": "b3e574759049d047c47f56cb4b65038c3a068356",
+  "remote_branch_verified": true,
+  "repository_private_verified": true,
+  "production_asset_manifest_matches_local": true,
+  "assets_sha256": "ac8e5730569ce52b82dfb077a27639ef3bef93c06ec15658b5089df6bad5636f",
+  "reference_modules_byte_identical": [
+    {
+      "module": "vigile/__init__.py",
+      "sha256": "c838729e2a0e7854b4c093e321b110dff99b2398328bfa03fc61bfea753fc906"
+    },
+    {
+      "module": "vigile/clinical_engine.py",
+      "sha256": "ba6ad652f2f919cdd1548517510eabe18f035cf4a2f4afd0315153501af9667d"
+    },
+    {
+      "module": "vigile/clinical_models.py",
+      "sha256": "c95c917eff4d732b373ddaf459fef3a5aa7e3ea68eb5a2f474ddc4a0def45c0d"
+    },
+    {
+      "module": "vigile/clinical_knowledge.py",
+      "sha256": "ffb6316fd90abe2cc70071cd201a401e6cee7bc30e55c7b9f26e0c74e7ef08f5"
+    },
+    {
+      "module": "vigile/clinical_logic.py",
+      "sha256": "9a3705bbf259489b1de9d0ea436ce57908ee5bd5476e7144dcb5819bb5f8e665"
+    },
+    {
+      "module": "vigile/clinical_differential.py",
+      "sha256": "a19c7cb21897d8d6359e100e24995a937d0e8edca360febf9cc985b426e80d91"
+    },
+    {
+      "module": "vigile/clinical_simulator.py",
+      "sha256": "780efe1e8f7e53f5ea4589a64f0fc86004cad660c1ad583d4e1b995823d6ef55"
+    },
+    {
+      "module": "vigile/models.py",
+      "sha256": "c8bbac4e9f29bbf504666d20b63a64b098515bb80e166a305a660a4b08ee8765"
+    },
+    {
+      "module": "vigile/store.py",
+      "sha256": "861d46f4d071fed5cb1edd5e4db3b58f1dd6830739499dd7fb80b3ea20613af7"
+    },
+    {
+      "module": "vigile/security.py",
+      "sha256": "73d9a21a73b70b4e5061285c401e017a7b13fa87b07951b4a38159fd95d4b519"
+    },
+    {
+      "module": "vigile/management.py",
+      "sha256": "67e45f67e44766569bcdd8411c7172f4278b2ed234d944f414d5d8456384f74e"
+    },
+    {
+      "module": "vigile/knowledge_v08.py",
+      "sha256": "a1629424d95fae2413f3dfc5962a82e1e9d292fbc129b6f17c9d025084c130ec"
+    },
+    {
+      "module": "vigile/retrieval_bm25.py",
+      "sha256": "164be2c18526be25e01abd47e8c0edf87179c9334517d03c5150af31e11598f7"
+    },
+    {
+      "module": "vigile/mission_context.py",
+      "sha256": "eba742226415c9a7b562ec268fd5b86a26c461d0ff46d59a8a108f430df05717"
+    },
+    {
+      "module": "vigile/algorithms.py",
+      "sha256": "983fe436222ee786dc444fe637dd3921498cbdaae627a007fd00a852ad6b5590"
+    },
+    {
+      "module": "vigile/quality.py",
+      "sha256": "c2615e137b638b198fa34aed949e295a941627254015fa0be650df752ac060d4"
+    },
+    {
+      "module": "vigile/monitoring_models.py",
+      "sha256": "d0e8d8432ffdf1a7bbc2f8a9ea5fe25876acbf664477881a602d9473810bd28d"
+    }
+  ],
+  "backend_tests": {
+    "passed": 782,
+    "warnings": 1,
+    "seconds": 688.39
+  },
+  "browser_tests": {
+    "passed": 12,
+    "failed": 0
+  },
+  "clinical_exact_parity": {
+    "matched": 86,
+    "total": 86
+  },
+  "statistical_reference_cases": 12,
+  "clinical_validation": "NOT_PERFORMED",
+  "physical_device_acceptance": "PENDING",
+  "voice_end_to_end": "FAILED_INITIALIZATION_NOT_VERIFIED",
+  "browser_qwen_4b": "PENDING_DOWNLOAD_FAILED",
+  "offline_network_disconnection": "PENDING_ORIGIN_UNAVAILABLE_TEST_ONLY"
+}

@@ -1,0 +1,265 @@
+{
+  "release": "0.11.0",
+  "clinical_validation": false,
+  "operational_validation": false,
+  "space_validation": false,
+  "tests": {
+    "passed": 582,
+    "failures": 0,
+    "seconds": 164.337,
+    "warning": "Starlette/httpx deprecation"
+  },
+  "implementation_hash": "e9e9ad877dc963e11a982128eb119c72c5964a6ce55ac9ca4e0e0e17b5f32b51",
+  "knowledge_hash": "b8c568bd645154e5fd67630c7a670ca53904dc04f54904315047a89923839d4e",
+  "request_hash": "e50c52c69968daa39c81253f06473bd193a4569b828fc0f64119e3206fca9546",
+  "semantic_hash": "f81b333c7f06a9f1262e5b2b953c768e46f7d4c846b9cbbad2f3cabf042f1c76",
+  "cycles": 26,
+  "clinical_replays": 50,
+  "monitoring_replays": 26,
+  "all_replays_match": true,
+  "performance": {
+    "cycle_latency_ms": [
+      10.86589996702969,
+      10.699399979785085,
+      17.482499999459833,
+      19.419800024479628,
+      23.14710000064224,
+      19.91600001929328,
+      43.86749997502193,
+      47.247599984984845,
+      75.85570000810549,
+      102.34799998579547,
+      102.64390002703294,
+      129.7543999971822,
+      176.5290999901481,
+      224.64810003293678,
+      222.0402000239119,
+      689.4456000300124,
+      599.7374999569729,
+      826.2229000101797,
+      1338.0996999912895,
+      986.3614000496455,
+      1207.3385000112467,
+      1831.9161999970675,
+      1495.6398999784142,
+      1676.7777999630198,
+      1852.0103000337258,
+      2094.8347999947146
+    ],
+    "maximum_ms": 2094.8347999947146,
+    "mean_ms": 608.6480692320038,
+    "scope": "Local ASGI TestClient including SQLite, excludes network and LLM; not flight performance",
+    "cpu_seconds": 32.15625,
+    "process": {
+      "pid": 22720,
+      "working_set_bytes": 164155392,
+      "private_bytes": 148414464,
+      "cpu_seconds": 32.609375
+    },
+    "available_memory_bytes": 13424463872,
+    "energy": "NOT_MEASURED",
+    "gpu": "NOT_USED_BY_OFFLINE_MISSION"
+  },
+  "mission_wall_seconds": 39.0662755999947,
+  "database_bytes": 37879808,
+  "assistant_questions": [
+    {
+      "kind": "baseline",
+      "status": "EXTRACTIVE_FALLBACK",
+      "requests": 1,
+      "accepted": false,
+      "seconds": 5.269428799976595,
+      "failure_trace": {
+        "category": "SAFETY_REJECTION",
+        "code": "UNSUPPORTED_NUMBER",
+        "stage": "DETERMINISTIC_VALIDATION",
+        "exception_type": "ValueError",
+        "clinical_state_changed": false
+      }
+    },
+    {
+      "kind": "alert",
+      "status": "EXTRACTIVE_FALLBACK",
+      "requests": 1,
+      "accepted": false,
+      "seconds": 2.519192199979443,
+      "failure_trace": {
+        "category": "SAFETY_REJECTION",
+        "code": "CLINICAL_CLAIM_REQUIRES_EXACT_ENGINE_TEXT",
+        "stage": "DETERMINISTIC_VALIDATION",
+        "exception_type": "ValueError",
+        "clinical_state_changed": false
+      }
+    },
+    {
+      "kind": "missing",
+      "status": "DETERMINISTIC_DATA_SUFFICIENCY",
+      "requests": 0,
+      "accepted": false,
+      "seconds": 0.12702299997908995,
+      "failure_trace": null
+    },
+    {
+      "kind": "criteria",
+      "status": "EXTRACTIVE_FALLBACK",
+      "requests": 1,
+      "accepted": false,
+      "seconds": 2.7186752000125125,
+      "failure_trace": {
+        "category": "SAFETY_REJECTION",
+        "code": "CLINICAL_CLAIM_REQUIRES_EXACT_ENGINE_TEXT",
+        "stage": "DETERMINISTIC_VALIDATION",
+        "exception_type": "ValueError",
+        "clinical_state_changed": false
+      }
+    },
+    {
+      "kind": "tests",
+      "status": "DETERMINISTIC_TEST_RECOMMENDATIONS",
+      "requests": 0,
+      "accepted": false,
+      "seconds": 0.12898919999133795,
+      "failure_trace": null
+    },
+    {
+      "kind": "documents",
+      "status": "DOCUMENT_EXCERPTS_ONLY",
+      "requests": 0,
+      "accepted": false,
+      "seconds": 0.13997389998985454,
+      "failure_trace": null
+    },
+    {
+      "kind": "protocol",
+      "status": "EXTRACTIVE_FALLBACK",
+      "requests": 1,
+      "accepted": false,
+      "seconds": 2.5237125999992713,
+      "failure_trace": {
+        "category": "SAFETY_REJECTION",
+        "code": "CLINICAL_CLAIM_REQUIRES_EXACT_ENGINE_TEXT",
+        "stage": "DETERMINISTIC_VALIDATION",
+        "exception_type": "ValueError",
+        "clinical_state_changed": false
+      }
+    },
+    {
+      "kind": "change",
+      "status": "EXTRACTIVE_FALLBACK",
+      "requests": 1,
+      "accepted": false,
+      "seconds": 2.6669533000094816,
+      "failure_trace": {
+        "category": "SAFETY_REJECTION",
+        "code": "CLINICAL_CLAIM_REQUIRES_EXACT_ENGINE_TEXT",
+        "stage": "DETERMINISTIC_VALIDATION",
+        "exception_type": "ValueError",
+        "clinical_state_changed": false
+      }
+    }
+  ],
+  "modes": [
+    {
+      "kind": "resource_mode",
+      "mode": "FULL",
+      "status": "EXTRACTIVE_FALLBACK",
+      "requests": 1,
+      "accepted": false,
+      "clinical_output_unchanged": true
+    },
+    {
+      "kind": "resource_mode",
+      "mode": "LOW_POWER",
+      "status": "EXTRACTIVE_FALLBACK",
+      "requests": 1,
+      "accepted": false,
+      "clinical_output_unchanged": true
+    },
+    {
+      "kind": "resource_mode",
+      "mode": "CRITICAL",
+      "status": "EXTRACTIVE_ONLY",
+      "requests": 0,
+      "accepted": false,
+      "clinical_output_unchanged": true
+    },
+    {
+      "kind": "controlled_outage",
+      "mode": "FULL",
+      "status": "EXTRACTIVE_ONLY",
+      "requests": 0,
+      "accepted": false,
+      "clinical_output_unchanged": true
+    },
+    {
+      "kind": "restored_full",
+      "mode": "FULL",
+      "status": "EXTRACTIVE_FALLBACK",
+      "requests": 1,
+      "accepted": false,
+      "clinical_output_unchanged": true
+    }
+  ],
+  "dependencies": {
+    "python": "3.13.16",
+    "fastapi": "0.143.1",
+    "pydantic": "2.14.1",
+    "uvicorn": "0.54.0",
+    "httpx": "0.28.1",
+    "pytest": "9.1.1"
+  },
+  "offline_requests": 0,
+  "health": {
+    "8895": 200,
+    "8896": 200,
+    "8897": 200,
+    "8898": 200
+  },
+  "http_subjects": [
+    {
+      "id": "mission-crew-A",
+      "mission_id": "mission-v011",
+      "synthetic": true
+    },
+    {
+      "id": "mission-crew-B",
+      "mission_id": "mission-v011",
+      "synthetic": true
+    }
+  ],
+  "legacy_http_replays": {
+    "count": 39,
+    "all_match": true
+  },
+  "anchor": {
+    "valid": true,
+    "anchored_prefix": {
+      "record_sequence": 553,
+      "record_count": 553,
+      "records_hash": "efdcfc77a1cfc149ace0a4edfd3d00b56dfe916d1b0125ba9bf356c6b1f3c41d",
+      "audit_sequence": 554,
+      "audit_hash": "2a423530bea6f576a76d2bacf268a3d3f005b373ca1c0a6ad8013c73f26deb79"
+    },
+    "latest_checkpoint": {
+      "sequence": 554,
+      "hash": "2a423530bea6f576a76d2bacf268a3d3f005b373ca1c0a6ad8013c73f26deb79"
+    },
+    "protection": "DB_ONLY_TAMPERING_DETECTION_NOT_SAME_USER_COMPROMISE"
+  },
+  "reserved_bank": {
+    "path": "docs/v09/reserved-bank.json",
+    "sha256": "c1a75f8f0a792ebd094bda50bd5790b302a6c2c8475cdce0a0a5d239f76651e0",
+    "action": "HASH_ONLY_NOT_EXECUTED",
+    "unchanged": true
+  },
+  "records": {
+    "measurement": 129,
+    "baseline": 6,
+    "device": 17,
+    "mission_context": 2,
+    "mission_frame": 26,
+    "episode": 8,
+    "followup": 9
+  },
+  "audit_valid": true
+}

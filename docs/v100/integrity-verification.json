@@ -1,0 +1,15 @@
+{
+  "valid": true,
+  "anchored_prefix": {
+    "record_sequence": 553,
+    "record_count": 553,
+    "records_hash": "00bde258fec5921228284594929fcdb16fa851611d9628597cb87587f73065a6",
+    "audit_sequence": 554,
+    "audit_hash": "66b3dc70bcc88c09f27864becee9e9051a08848dbd885783afb9946940e5426e"
+  },
+  "latest_checkpoint": {
+    "sequence": 554,
+    "hash": "66b3dc70bcc88c09f27864becee9e9051a08848dbd885783afb9946940e5426e"
+  },
+  "protection": "DB_ONLY_TAMPERING_DETECTION_NOT_SAME_USER_COMPROMISE"
+}

@@ -1,0 +1,154 @@
+{
+  "rule_id": "VIGILE-NUT-001",
+  "rule_version": "1.0.0",
+  "title": "In-mission nutrient and energy provision requirement",
+  "domain": "NUTRITION",
+  "condition_id": "NUTRITIONAL_PROVISION_ADEQUACY",
+  "purpose": "Evaluate whether the program provides 100% of each calculated nutrient and energy requirement.",
+  "rule_kind": "STANDARD_COMPLIANCE",
+  "evidence_class": "NASA_STANDARD",
+  "evidence_status": "DOCUMENTED_AND_COMPUTABLE_AFTER_REQUIREMENTS_ARE_CALCULATED",
+  "software_validation_status": "REQUIRES_IMPLEMENTATION_VALIDATION",
+  "authorization": {
+    "evaluation": "AUTO_EVALUATION_ALLOWED",
+    "requirement_calculation_method": "REQUIRES_MISSION_AUTHORIZATION",
+    "clinical_diagnosis": "REQUIRES_MEDICAL_AUTHORIZATION"
+  },
+  "applicability": {
+    "mission_phase": [
+      "IN_MISSION"
+    ]
+  },
+  "inputs": [
+    {
+      "name": "calculated_requirements",
+      "type": "map_component_to_quantity",
+      "required": true,
+      "note": "Requirements must be calculated using an approved method considering age, sex, body mass, height and appropriate activity factor."
+    },
+    {
+      "name": "provided_amounts",
+      "type": "map_component_to_quantity",
+      "required": true
+    },
+    {
+      "name": "requirement_period",
+      "type": "mission_configured_time_period",
+      "required": true
+    },
+    {
+      "name": "requirement_calculation_method_approved",
+      "type": "boolean",
+      "required": true
+    }
+  ],
+  "derived_variables": [
+    {
+      "name": "provision_percent_by_component",
+      "formula": "100 * provided_amount[component] / calculated_requirement[component]",
+      "unit": "%"
+    }
+  ],
+  "thresholds": {
+    "minimum_provision_percent": 100
+  },
+  "logic": {
+    "preconditions": [
+      "calculated requirement > 0 for each evaluated component",
+      "units are compatible",
+      "requirement_calculation_method_approved == true"
+    ],
+    "decision": [
+      {
+        "when": "every required component has provision_percent >= 100",
+        "result": "PASS"
+      },
+      {
+        "when": "one or more required components have provision_percent < 100",
+        "result": "FAIL_REQUIREMENT"
+      }
+    ]
+  },
+  "temporal_window": {
+    "type": "MISSION_CONFIGURED",
+    "fixed_period_in_V1_4020": false
+  },
+  "confounders": [
+    "incorrect nutritional requirement calculation",
+    "incorrect activity factor",
+    "changes in body mass",
+    "mission-specific food availability"
+  ],
+  "missing_data_policy": "INCONCLUSIVE",
+  "data_quality_policy": "Requirement and provision quantities must use compatible units and the same accounting period.",
+  "output": {
+    "primary": "rule_result",
+    "derived": "provision_percent_by_component",
+    "actual_consumption_assessment": "NOT_DETERMINED_BY_THIS_RULE",
+    "nutrient_deficiency_diagnosis": "NOT_DETERMINED_BY_THIS_RULE"
+  },
+  "severity_semantics": {
+    "on_failure": "PROVISION_REQUIREMENT_NOT_MET",
+    "clinical_severity": "NOT_DETERMINED"
+  },
+  "follow_up": [
+    "Identify deficient provision components.",
+    "Recalculate requirements if body mass, activity or other relevant variables changed.",
+    "Assess actual intake and biomarkers using separate nutrition pathways."
+  ],
+  "source_locators": [
+    {
+      "source_id": "NASA-STD-3001-V1-REV-C",
+      "requirement": "V1 4020",
+      "section": "4.5.2",
+      "printed_page": 37,
+      "pdf_page_index_0based": 36,
+      "url": "https://standards.nasa.gov/sites/default/files/standards/NASA/C//nasa-std-3001-vol-1-rev-c-signature.pdf"
+    }
+  ],
+  "test_cases": [
+    {
+      "id": "NUT001-T01",
+      "synthetic": true,
+      "inputs": {
+        "calculated_requirements": {
+          "energy_kcal": 2500
+        },
+        "provided_amounts": {
+          "energy_kcal": 2500
+        },
+        "requirement_period": "MISSION_DEFINED_DAY",
+        "requirement_calculation_method_approved": true
+      },
+      "expected": "PASS"
+    },
+    {
+      "id": "NUT001-T02",
+      "synthetic": true,
+      "inputs": {
+        "calculated_requirements": {
+          "energy_kcal": 2500
+        },
+        "provided_amounts": {
+          "energy_kcal": 2499
+        },
+        "requirement_period": "MISSION_DEFINED_DAY",
+        "requirement_calculation_method_approved": true
+      },
+      "expected": "FAIL_REQUIREMENT"
+    },
+    {
+      "id": "NUT001-T03",
+      "synthetic": true,
+      "inputs": {
+        "calculated_requirements": null,
+        "provided_amounts": {
+          "energy_kcal": 2500
+        },
+        "requirement_period": "MISSION_DEFINED_DAY",
+        "requirement_calculation_method_approved": false
+      },
+      "expected": "INCONCLUSIVE"
+    }
+  ]
+}

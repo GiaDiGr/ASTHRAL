@@ -1,0 +1,6280 @@
+{
+  "openapi": "3.1.0",
+  "info": {
+    "title": "VIGILE Health Intelligence Engine",
+    "version": "0.11.0"
+  },
+  "paths": {
+    "/rag/findings/{identifier}": {
+      "get": {
+        "summary": "Rag Finding",
+        "operationId": "rag_finding_rag_findings__identifier__get",
+        "parameters": [
+          {
+            "name": "identifier",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "title": "Identifier"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {}
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        },
+        "security": [
+          {
+            "BearerAuth": []
+          }
+        ]
+      }
+    },
+    "/health": {
+      "get": {
+        "summary": "Health",
+        "operationId": "health_health_get",
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {}
+              }
+            }
+          }
+        },
+        "security": []
+      }
+    },
+    "/openapi.json": {
+      "get": {
+        "summary": "Openapi",
+        "operationId": "openapi_openapi_json_get",
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {}
+              }
+            }
+          }
+        },
+        "security": [
+          {
+            "BearerAuth": []
+          }
+        ]
+      }
+    },
+    "/catalog/{kind}": {
+      "get": {
+        "summary": "Catalog",
+        "operationId": "catalog_catalog__kind__get",
+        "parameters": [
+          {
+            "name": "kind",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "title": "Kind"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {}
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        },
+        "security": [
+          {
+            "BearerAuth": []
+          }
+        ]
+      }
+    },
+    "/conditions/{identifier}": {
+      "get": {
+        "summary": "Condition",
+        "operationId": "condition_conditions__identifier__get",
+        "parameters": [
+          {
+            "name": "identifier",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "title": "Identifier"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {}
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        },
+        "security": [
+          {
+            "BearerAuth": []
+          }
+        ]
+      }
+    },
+    "/evidence/{identifier}": {
+      "get": {
+        "summary": "Evidence",
+        "operationId": "evidence_evidence__identifier__get",
+        "parameters": [
+          {
+            "name": "identifier",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "title": "Identifier"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {}
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        },
+        "security": [
+          {
+            "BearerAuth": []
+          }
+        ]
+      }
+    },
+    "/rules": {
+      "get": {
+        "summary": "Rules",
+        "operationId": "rules_rules_get",
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {}
+              }
+            }
+          }
+        },
+        "security": [
+          {
+            "BearerAuth": []
+          }
+        ]
+      }
+    },
+    "/evidence-issues": {
+      "get": {
+        "summary": "Issues",
+        "operationId": "issues_evidence_issues_get",
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {}
+              }
+            }
+          }
+        },
+        "security": [
+          {
+            "BearerAuth": []
+          }
+        ]
+      }
+    },
+    "/audit/verify": {
+      "get": {
+        "summary": "Verify",
+        "operationId": "verify_audit_verify_get",
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {}
+              }
+            }
+          }
+        },
+        "security": [
+          {
+            "BearerAuth": []
+          }
+        ]
+      }
+    },
+    "/missions": {
+      "post": {
+        "summary": "Mission",
+        "operationId": "mission_missions_post",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/MissionContext"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "201": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {}
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        },
+        "security": [
+          {
+            "BearerAuth": []
+          }
+        ]
+      }
+    },
+    "/missions/{identifier}/contexts": {
+      "post": {
+        "summary": "Mission Context",
+        "operationId": "mission_context_missions__identifier__contexts_post",
+        "parameters": [
+          {
+            "name": "identifier",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "title": "Identifier"
+            }
+          }
+        ],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/MissionContextVersion"
+              }
+            }
+          }
+        },
+        "responses": {
+          "201": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/MissionContextVersion"
+                }
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        },
+        "security": [
+          {
+            "BearerAuth": []
+          }
+        ]
+      }
+    },
+    "/profiles": {
+      "post": {
+        "summary": "Profile",
+        "operationId": "profile_profiles_post",
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/AstronautProfile"
+              }
+            }
+          }
+        },
+        "responses": {
+          "201": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {}
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        },
+        "security": [
+          {
+            "BearerAuth": []
+          }
+        ]
+      },
+      "get": {
+        "summary": "Profiles",
+        "operationId": "profiles_profiles_get",
+        "parameters": [
+          {
+            "name": "mission_id",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "title": "Mission Id"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {}
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        },
+        "security": [
+          {
+            "BearerAuth": []
+          }
+        ]
+      }
+    },
+    "/devices": {
+      "post": {
+        "summary": "Device",
+        "operationId": "device_devices_post",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Device"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "201": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {}
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        },
+        "security": [
+          {
+            "BearerAuth": []
+          }
+        ]
+      }
+    },
+    "/measurements": {
+      "post": {
+        "summary": "Measurement",
+        "operationId": "measurement_measurements_post",
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Measurement"
+              }
+            }
+          }
+        },
+        "responses": {
+          "201": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {}
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        },
+        "security": [
+          {
+            "BearerAuth": []
+          }
+        ]
+      },
+      "get": {
+        "summary": "Query Measurements",
+        "operationId": "query_measurements_measurements_get",
+        "parameters": [
+          {
+            "name": "subject_id",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "title": "Subject Id"
+            }
+          },
+          {
+            "name": "mission_id",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "title": "Mission Id"
+            }
+          },
+          {
+            "name": "variable",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "anyOf": [
+                {
+                  "type": "string"
+                },
+                {
+                  "type": "null"
+                }
+              ],
+              "title": "Variable"
+            }
+          },
+          {
+            "name": "limit",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "integer",
+              "default": 100,
+              "title": "Limit"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {}
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        },
+        "security": [
+          {
+            "BearerAuth": []
+          }
+        ]
+      }
+    },
+    "/profiles/{identifier}": {
+      "get": {
+        "summary": "Profile Record",
+        "operationId": "profile_record_profiles__identifier__get",
+        "parameters": [
+          {
+            "name": "identifier",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "title": "Identifier"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {}
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        },
+        "security": [
+          {
+            "BearerAuth": []
+          }
+        ]
+      }
+    },
+    "/baselines": {
+      "get": {
+        "summary": "Baselines",
+        "operationId": "baselines_baselines_get",
+        "parameters": [
+          {
+            "name": "subject_id",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "title": "Subject Id"
+            }
+          },
+          {
+            "name": "mission_id",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "title": "Mission Id"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {}
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        },
+        "security": [
+          {
+            "BearerAuth": []
+          }
+        ]
+      },
+      "post": {
+        "summary": "Baseline",
+        "operationId": "baseline_baselines_post",
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/BaselineRequest"
+              }
+            }
+          }
+        },
+        "responses": {
+          "201": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {}
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        },
+        "security": [
+          {
+            "BearerAuth": []
+          }
+        ]
+      }
+    },
+    "/baselines/{identifier}/status": {
+      "get": {
+        "summary": "Baseline Availability",
+        "operationId": "baseline_availability_baselines__identifier__status_get",
+        "parameters": [
+          {
+            "name": "identifier",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "title": "Identifier"
+            }
+          },
+          {
+            "name": "as_of",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "format": "date-time",
+              "title": "As Of"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {}
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        },
+        "security": [
+          {
+            "BearerAuth": []
+          }
+        ]
+      }
+    },
+    "/trends": {
+      "get": {
+        "summary": "Trends",
+        "operationId": "trends_trends_get",
+        "parameters": [
+          {
+            "name": "subject_id",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "title": "Subject Id"
+            }
+          },
+          {
+            "name": "mission_id",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "title": "Mission Id"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {}
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        },
+        "security": [
+          {
+            "BearerAuth": []
+          }
+        ]
+      },
+      "post": {
+        "summary": "Trend",
+        "operationId": "trend_trends_post",
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/TrendRequest"
+              }
+            }
+          }
+        },
+        "responses": {
+          "201": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {}
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        },
+        "security": [
+          {
+            "BearerAuth": []
+          }
+        ]
+      }
+    },
+    "/rag/findings": {
+      "get": {
+        "summary": "Rag Findings",
+        "operationId": "rag_findings_rag_findings_get",
+        "parameters": [
+          {
+            "name": "subject_id",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "title": "Subject Id"
+            }
+          },
+          {
+            "name": "mission_id",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "title": "Mission Id"
+            }
+          },
+          {
+            "name": "limit",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "integer",
+              "default": 100,
+              "title": "Limit"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {}
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        },
+        "security": [
+          {
+            "BearerAuth": []
+          }
+        ]
+      }
+    },
+    "/findings": {
+      "get": {
+        "summary": "Query Findings",
+        "operationId": "query_findings_findings_get",
+        "parameters": [
+          {
+            "name": "subject_id",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "title": "Subject Id"
+            }
+          },
+          {
+            "name": "mission_id",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "title": "Mission Id"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {}
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        },
+        "security": [
+          {
+            "BearerAuth": []
+          }
+        ]
+      }
+    },
+    "/episodes": {
+      "get": {
+        "summary": "Query Episodes",
+        "operationId": "query_episodes_episodes_get",
+        "parameters": [
+          {
+            "name": "subject_id",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "title": "Subject Id"
+            }
+          },
+          {
+            "name": "mission_id",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "title": "Mission Id"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {}
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        },
+        "security": [
+          {
+            "BearerAuth": []
+          }
+        ]
+      },
+      "post": {
+        "summary": "Episode",
+        "operationId": "episode_episodes_post",
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/EpisodeRequest"
+              }
+            }
+          }
+        },
+        "responses": {
+          "201": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {}
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        },
+        "security": [
+          {
+            "BearerAuth": []
+          }
+        ]
+      }
+    },
+    "/research-records/{kind}/{identifier}": {
+      "get": {
+        "summary": "Research Record",
+        "operationId": "research_record_research_records__kind___identifier__get",
+        "parameters": [
+          {
+            "name": "kind",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "title": "Kind"
+            }
+          },
+          {
+            "name": "identifier",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "title": "Identifier"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {}
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        },
+        "security": [
+          {
+            "BearerAuth": []
+          }
+        ]
+      }
+    },
+    "/measurements/{identifier}": {
+      "get": {
+        "summary": "Read Measurement",
+        "operationId": "read_measurement_measurements__identifier__get",
+        "parameters": [
+          {
+            "name": "identifier",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "title": "Identifier"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {}
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        },
+        "security": [
+          {
+            "BearerAuth": []
+          }
+        ]
+      }
+    },
+    "/evaluations": {
+      "post": {
+        "summary": "Evaluate",
+        "operationId": "evaluate_evaluations_post",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/EvaluationRequest"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {}
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        },
+        "security": [
+          {
+            "BearerAuth": []
+          }
+        ]
+      }
+    },
+    "/findings/{identifier}": {
+      "get": {
+        "summary": "Finding",
+        "operationId": "finding_findings__identifier__get",
+        "parameters": [
+          {
+            "name": "identifier",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "title": "Identifier"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {}
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        },
+        "security": [
+          {
+            "BearerAuth": []
+          }
+        ]
+      }
+    },
+    "/findings/{identifier}/explanation": {
+      "get": {
+        "summary": "Explanation",
+        "operationId": "explanation_findings__identifier__explanation_get",
+        "parameters": [
+          {
+            "name": "identifier",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "title": "Identifier"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {}
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        },
+        "security": [
+          {
+            "BearerAuth": []
+          }
+        ]
+      }
+    },
+    "/episodes/{identifier}": {
+      "get": {
+        "summary": "Read Episode",
+        "operationId": "read_episode_episodes__identifier__get",
+        "parameters": [
+          {
+            "name": "identifier",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "title": "Identifier"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {}
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        },
+        "security": [
+          {
+            "BearerAuth": []
+          }
+        ]
+      }
+    },
+    "/episodes/{identifier}/pathway": {
+      "get": {
+        "summary": "Pathway",
+        "operationId": "pathway_episodes__identifier__pathway_get",
+        "parameters": [
+          {
+            "name": "identifier",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "title": "Identifier"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {}
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        },
+        "security": [
+          {
+            "BearerAuth": []
+          }
+        ]
+      }
+    },
+    "/episodes/{identifier}/transitions": {
+      "post": {
+        "summary": "Transition",
+        "operationId": "transition_episodes__identifier__transitions_post",
+        "parameters": [
+          {
+            "name": "identifier",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "title": "Identifier"
+            }
+          }
+        ],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/TransitionRequest"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {}
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        },
+        "security": [
+          {
+            "BearerAuth": []
+          }
+        ]
+      }
+    },
+    "/clinical-notes": {
+      "post": {
+        "summary": "Note",
+        "operationId": "note_clinical_notes_post",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/ClinicalNote"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {}
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        },
+        "security": [
+          {
+            "BearerAuth": []
+          }
+        ]
+      }
+    },
+    "/action-requests": {
+      "post": {
+        "summary": "Action",
+        "operationId": "action_action_requests_post",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/ActionRequest"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {}
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        },
+        "security": [
+          {
+            "BearerAuth": []
+          }
+        ]
+      }
+    },
+    "/followups": {
+      "post": {
+        "summary": "Followup",
+        "operationId": "followup_followups_post",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/FollowUpPlan"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {}
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        },
+        "security": [
+          {
+            "BearerAuth": []
+          }
+        ]
+      }
+    },
+    "/followups/reviews": {
+      "post": {
+        "summary": "Review",
+        "operationId": "review_followups_reviews_post",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/FollowUpReview"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {}
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        },
+        "security": [
+          {
+            "BearerAuth": []
+          }
+        ]
+      }
+    },
+    "/multisystem": {
+      "post": {
+        "summary": "Multisystem",
+        "operationId": "multisystem_multisystem_post",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/MultisystemRequest"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {}
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        },
+        "security": [
+          {
+            "BearerAuth": []
+          }
+        ]
+      }
+    },
+    "/baselines/withdrawals": {
+      "post": {
+        "summary": "Withdraw",
+        "operationId": "withdraw_baselines_withdrawals_post",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/BaselineWithdrawal"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "201": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {}
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        },
+        "security": [
+          {
+            "BearerAuth": []
+          }
+        ]
+      }
+    },
+    "/quality/assessments": {
+      "post": {
+        "summary": "Quality",
+        "operationId": "quality_quality_assessments_post",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/QualityRequest"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "201": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {}
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        },
+        "security": [
+          {
+            "BearerAuth": []
+          }
+        ]
+      }
+    },
+    "/evidence/revisions": {
+      "post": {
+        "summary": "Revision",
+        "operationId": "revision_evidence_revisions_post",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/EvidenceRevision"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "201": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {}
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        },
+        "security": [
+          {
+            "BearerAuth": []
+          }
+        ]
+      }
+    },
+    "/evidence/rules/{identifier}": {
+      "get": {
+        "summary": "Rule Evidence",
+        "operationId": "rule_evidence_evidence_rules__identifier__get",
+        "parameters": [
+          {
+            "name": "identifier",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "title": "Identifier"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {}
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        },
+        "security": [
+          {
+            "BearerAuth": []
+          }
+        ]
+      }
+    },
+    "/capabilities/coverage": {
+      "get": {
+        "summary": "Coverage",
+        "operationId": "coverage_capabilities_coverage_get",
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {}
+              }
+            }
+          }
+        },
+        "security": [
+          {
+            "BearerAuth": []
+          }
+        ]
+      }
+    },
+    "/episodes/{identifier}/findings": {
+      "post": {
+        "summary": "Attach",
+        "operationId": "attach_episodes__identifier__findings_post",
+        "parameters": [
+          {
+            "name": "identifier",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "title": "Identifier"
+            }
+          }
+        ],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/EpisodeAttachment"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {}
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        },
+        "security": [
+          {
+            "BearerAuth": []
+          }
+        ]
+      }
+    },
+    "/followups/{identifier}/status": {
+      "get": {
+        "summary": "Followup State",
+        "operationId": "followup_state_followups__identifier__status_get",
+        "parameters": [
+          {
+            "name": "identifier",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "title": "Identifier"
+            }
+          },
+          {
+            "name": "as_of",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "format": "date-time",
+              "title": "As Of"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {}
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        },
+        "security": [
+          {
+            "BearerAuth": []
+          }
+        ]
+      }
+    },
+    "/resources/assessments": {
+      "post": {
+        "summary": "Resource",
+        "operationId": "resource_resources_assessments_post",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/ResourceAssessment"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "201": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {}
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        },
+        "security": [
+          {
+            "BearerAuth": []
+          }
+        ]
+      }
+    },
+    "/audit/checkpoint": {
+      "get": {
+        "summary": "Checkpoint",
+        "operationId": "checkpoint_audit_checkpoint_get",
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {}
+              }
+            }
+          }
+        },
+        "security": [
+          {
+            "BearerAuth": []
+          }
+        ]
+      }
+    },
+    "/clinical/evaluations": {
+      "post": {
+        "summary": "Evaluate",
+        "operationId": "evaluate_clinical_evaluations_post",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/ClinicalRequest"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "201": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ClinicalEvaluationResponse"
+                }
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        },
+        "security": [
+          {
+            "BearerAuth": []
+          }
+        ]
+      }
+    },
+    "/clinical/presentations/evaluate": {
+      "post": {
+        "summary": "Presentation",
+        "operationId": "presentation_clinical_presentations_evaluate_post",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/ClinicalRequest"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "201": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ClinicalEvaluationResponse"
+                }
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        },
+        "security": [
+          {
+            "BearerAuth": []
+          }
+        ]
+      }
+    },
+    "/clinical/evaluations/{identifier}": {
+      "get": {
+        "summary": "Result",
+        "operationId": "result_clinical_evaluations__identifier__get",
+        "parameters": [
+          {
+            "name": "identifier",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "title": "Identifier"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ClinicalEvaluationResponse"
+                }
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        },
+        "security": [
+          {
+            "BearerAuth": []
+          }
+        ]
+      }
+    },
+    "/clinical/evaluations/{identifier}/context": {
+      "get": {
+        "summary": "Evidence Context",
+        "operationId": "evidence_context_clinical_evaluations__identifier__context_get",
+        "parameters": [
+          {
+            "name": "identifier",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "title": "Identifier"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ClinicalContext"
+                }
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        },
+        "security": [
+          {
+            "BearerAuth": []
+          }
+        ]
+      }
+    },
+    "/clinical/evaluations/{identifier}/differential": {
+      "get": {
+        "summary": "Differential",
+        "operationId": "differential_clinical_evaluations__identifier__differential_get",
+        "parameters": [
+          {
+            "name": "identifier",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "title": "Identifier"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/DifferentialRow"
+                  },
+                  "title": "Response Differential Clinical Evaluations  Identifier  Differential Get"
+                }
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        },
+        "security": [
+          {
+            "BearerAuth": []
+          }
+        ]
+      }
+    },
+    "/clinical/evaluations/{identifier}/next-tests": {
+      "get": {
+        "summary": "Tests",
+        "operationId": "tests_clinical_evaluations__identifier__next_tests_get",
+        "parameters": [
+          {
+            "name": "identifier",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "title": "Identifier"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/PendingTest"
+                  },
+                  "title": "Response Tests Clinical Evaluations  Identifier  Next Tests Get"
+                }
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        },
+        "security": [
+          {
+            "BearerAuth": []
+          }
+        ]
+      }
+    },
+    "/clinical/evaluations/{identifier}/replay": {
+      "get": {
+        "summary": "Replay",
+        "operationId": "replay_clinical_evaluations__identifier__replay_get",
+        "parameters": [
+          {
+            "name": "identifier",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "title": "Identifier"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ClinicalReplayResponse"
+                }
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        },
+        "security": [
+          {
+            "BearerAuth": []
+          }
+        ]
+      }
+    },
+    "/clinical/evaluations/{identifier}/reassess": {
+      "post": {
+        "summary": "Reassess",
+        "operationId": "reassess_clinical_evaluations__identifier__reassess_post",
+        "parameters": [
+          {
+            "name": "identifier",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "title": "Identifier"
+            }
+          }
+        ],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/ClinicalRequest"
+              }
+            }
+          }
+        },
+        "responses": {
+          "201": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ClinicalEvaluationResponse"
+                }
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        },
+        "security": [
+          {
+            "BearerAuth": []
+          }
+        ]
+      }
+    },
+    "/clinical/conditions/{condition}/criteria": {
+      "get": {
+        "summary": "Criterion For Condition",
+        "operationId": "criterion_for_condition_clinical_conditions__condition__criteria_get",
+        "parameters": [
+          {
+            "name": "condition",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "title": "Condition"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {}
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        },
+        "security": [
+          {
+            "BearerAuth": []
+          }
+        ]
+      }
+    },
+    "/clinical/conditions/{condition}": {
+      "get": {
+        "summary": "Condition Record",
+        "operationId": "condition_record_clinical_conditions__condition__get",
+        "parameters": [
+          {
+            "name": "condition",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "title": "Condition"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {}
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        },
+        "security": [
+          {
+            "BearerAuth": []
+          }
+        ]
+      }
+    },
+    "/clinical/criteria/{identifier}": {
+      "get": {
+        "summary": "Criterion",
+        "operationId": "criterion_clinical_criteria__identifier__get",
+        "parameters": [
+          {
+            "name": "identifier",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "title": "Identifier"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {}
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        },
+        "security": [
+          {
+            "BearerAuth": []
+          }
+        ]
+      }
+    },
+    "/clinical/protocols/{identifier}": {
+      "get": {
+        "summary": "Protocol",
+        "operationId": "protocol_clinical_protocols__identifier__get",
+        "parameters": [
+          {
+            "name": "identifier",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "title": "Identifier"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {}
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        },
+        "security": [
+          {
+            "BearerAuth": []
+          }
+        ]
+      }
+    },
+    "/clinical/protocols/{identifier}/eligibility": {
+      "post": {
+        "summary": "Eligibility",
+        "operationId": "eligibility_clinical_protocols__identifier__eligibility_post",
+        "parameters": [
+          {
+            "name": "identifier",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "title": "Identifier"
+            }
+          }
+        ],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/ProtocolEligibilityRequest"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/EligibilityResponse"
+                }
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        },
+        "security": [
+          {
+            "BearerAuth": []
+          }
+        ]
+      }
+    },
+    "/clinical/sources/{identifier}": {
+      "get": {
+        "summary": "Source",
+        "operationId": "source_clinical_sources__identifier__get",
+        "parameters": [
+          {
+            "name": "identifier",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "title": "Identifier"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {}
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        },
+        "security": [
+          {
+            "BearerAuth": []
+          }
+        ]
+      }
+    },
+    "/clinical/knowledge/version": {
+      "get": {
+        "summary": "Version",
+        "operationId": "version_clinical_knowledge_version_get",
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {}
+              }
+            }
+          }
+        },
+        "security": [
+          {
+            "BearerAuth": []
+          }
+        ]
+      }
+    },
+    "/monitoring/cycles": {
+      "post": {
+        "summary": "Cycle",
+        "operationId": "cycle_monitoring_cycles_post",
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/MonitoringRequest"
+              }
+            }
+          }
+        },
+        "responses": {
+          "201": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/MonitoringResult"
+                }
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        },
+        "security": [
+          {
+            "BearerAuth": []
+          }
+        ]
+      },
+      "get": {
+        "summary": "Cycles",
+        "operationId": "cycles_monitoring_cycles_get",
+        "parameters": [
+          {
+            "name": "subject_id",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "title": "Subject Id"
+            }
+          },
+          {
+            "name": "mission_id",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "title": "Mission Id"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/MonitoringResult"
+                  },
+                  "title": "Response Cycles Monitoring Cycles Get"
+                }
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        },
+        "security": [
+          {
+            "BearerAuth": []
+          }
+        ]
+      }
+    },
+    "/monitoring/cycles/{identifier}": {
+      "get": {
+        "summary": "Get",
+        "operationId": "get_monitoring_cycles__identifier__get",
+        "parameters": [
+          {
+            "name": "identifier",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "title": "Identifier"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/MonitoringResult"
+                }
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        },
+        "security": [
+          {
+            "BearerAuth": []
+          }
+        ]
+      }
+    },
+    "/monitoring/cycles/{identifier}/replay": {
+      "get": {
+        "summary": "Replay",
+        "operationId": "replay_monitoring_cycles__identifier__replay_get",
+        "parameters": [
+          {
+            "name": "identifier",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "title": "Identifier"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {}
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        },
+        "security": [
+          {
+            "BearerAuth": []
+          }
+        ]
+      }
+    },
+    "/monitoring/domains": {
+      "get": {
+        "summary": "Domains",
+        "operationId": "domains_monitoring_domains_get",
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {}
+              }
+            }
+          }
+        },
+        "security": [
+          {
+            "BearerAuth": []
+          }
+        ]
+      }
+    },
+    "/dashboard/identity": {
+      "get": {
+        "summary": "Identity",
+        "operationId": "identity_dashboard_identity_get",
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {}
+              }
+            }
+          }
+        },
+        "security": [
+          {
+            "BearerAuth": []
+          }
+        ]
+      }
+    },
+    "/dashboard/subjects": {
+      "get": {
+        "summary": "Subjects",
+        "operationId": "subjects_dashboard_subjects_get",
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {}
+              }
+            }
+          }
+        },
+        "security": [
+          {
+            "BearerAuth": []
+          }
+        ]
+      }
+    },
+    "/dashboard/subjects/{subject_id}": {
+      "get": {
+        "summary": "Dashboard",
+        "operationId": "dashboard_dashboard_subjects__subject_id__get",
+        "parameters": [
+          {
+            "name": "subject_id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "title": "Subject Id"
+            }
+          },
+          {
+            "name": "mission_id",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "title": "Mission Id"
+            }
+          },
+          {
+            "name": "frame_id",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "anyOf": [
+                {
+                  "type": "string"
+                },
+                {
+                  "type": "null"
+                }
+              ],
+              "title": "Frame Id"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {}
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        },
+        "security": [
+          {
+            "BearerAuth": []
+          }
+        ]
+      }
+    },
+    "/dashboard/frames/{subject_id}": {
+      "get": {
+        "summary": "Frames",
+        "operationId": "frames_dashboard_frames__subject_id__get",
+        "parameters": [
+          {
+            "name": "subject_id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "title": "Subject Id"
+            }
+          },
+          {
+            "name": "mission_id",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "title": "Mission Id"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/FrameIndex"
+                  },
+                  "title": "Response Frames Dashboard Frames  Subject Id  Get"
+                }
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        },
+        "security": [
+          {
+            "BearerAuth": []
+          }
+        ]
+      }
+    }
+  },
+  "components": {
+    "schemas": {
+      "ActionRequest": {
+        "properties": {
+          "episode_id": {
+            "type": "string",
+            "maxLength": 128,
+            "minLength": 1,
+            "pattern": "^[A-Za-z0-9_.:-]+$",
+            "title": "Episode Id"
+          },
+          "action": {
+            "type": "string",
+            "title": "Action"
+          },
+          "authorization_id": {
+            "anyOf": [
+              {
+                "type": "string",
+                "maxLength": 128,
+                "minLength": 1,
+                "pattern": "^[A-Za-z0-9_.:-]+$"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Authorization Id"
+          }
+        },
+        "additionalProperties": false,
+        "type": "object",
+        "required": [
+          "episode_id",
+          "action"
+        ],
+        "title": "ActionRequest"
+      },
+      "AstronautProfile": {
+        "properties": {
+          "id": {
+            "type": "string",
+            "maxLength": 128,
+            "minLength": 1,
+            "pattern": "^[A-Za-z0-9_.:-]+$",
+            "title": "Id"
+          },
+          "mission_id": {
+            "type": "string",
+            "maxLength": 128,
+            "minLength": 1,
+            "pattern": "^[A-Za-z0-9_.:-]+$",
+            "title": "Mission Id"
+          },
+          "synthetic": {
+            "type": "boolean",
+            "title": "Synthetic"
+          }
+        },
+        "additionalProperties": false,
+        "type": "object",
+        "required": [
+          "id",
+          "mission_id",
+          "synthetic"
+        ],
+        "title": "AstronautProfile"
+      },
+      "BaselineRequest": {
+        "properties": {
+          "id": {
+            "type": "string",
+            "maxLength": 128,
+            "minLength": 1,
+            "pattern": "^[A-Za-z0-9_.:-]+$",
+            "title": "Id"
+          },
+          "measurement_ids": {
+            "items": {
+              "type": "string",
+              "maxLength": 128,
+              "minLength": 1,
+              "pattern": "^[A-Za-z0-9_.:-]+$"
+            },
+            "type": "array",
+            "minItems": 1,
+            "title": "Measurement Ids"
+          },
+          "minimum_observations": {
+            "type": "integer",
+            "exclusiveMinimum": 0.0,
+            "title": "Minimum Observations"
+          },
+          "protocol_reference": {
+            "type": "string",
+            "minLength": 1,
+            "title": "Protocol Reference"
+          },
+          "as_of": {
+            "type": "string",
+            "format": "date-time",
+            "title": "As Of"
+          },
+          "supersedes": {
+            "anyOf": [
+              {
+                "type": "string",
+                "maxLength": 128,
+                "minLength": 1,
+                "pattern": "^[A-Za-z0-9_.:-]+$"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Supersedes"
+          },
+          "valid_until": {
+            "anyOf": [
+              {
+                "type": "string",
+                "format": "date-time"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Valid Until"
+          }
+        },
+        "additionalProperties": false,
+        "type": "object",
+        "required": [
+          "id",
+          "measurement_ids",
+          "minimum_observations",
+          "protocol_reference",
+          "as_of"
+        ],
+        "title": "BaselineRequest"
+      },
+      "BaselineWithdrawal": {
+        "properties": {
+          "baseline_id": {
+            "type": "string",
+            "maxLength": 128,
+            "minLength": 1,
+            "pattern": "^[A-Za-z0-9_.:-]+$",
+            "title": "Baseline Id"
+          },
+          "effective_at": {
+            "type": "string",
+            "format": "date-time",
+            "title": "Effective At"
+          },
+          "reason": {
+            "type": "string",
+            "minLength": 1,
+            "title": "Reason"
+          }
+        },
+        "additionalProperties": false,
+        "type": "object",
+        "required": [
+          "baseline_id",
+          "effective_at",
+          "reason"
+        ],
+        "title": "BaselineWithdrawal"
+      },
+      "ClinicalContext": {
+        "properties": {
+          "evaluation_id": {
+            "type": "string",
+            "maxLength": 128,
+            "minLength": 1,
+            "pattern": "^[A-Za-z0-9_.:-]+$",
+            "title": "Evaluation Id"
+          },
+          "subject_id": {
+            "type": "string",
+            "maxLength": 128,
+            "minLength": 1,
+            "pattern": "^[A-Za-z0-9_.:-]+$",
+            "title": "Subject Id"
+          },
+          "mission_id": {
+            "type": "string",
+            "maxLength": 128,
+            "minLength": 1,
+            "pattern": "^[A-Za-z0-9_.:-]+$",
+            "title": "Mission Id"
+          },
+          "as_of": {
+            "type": "string",
+            "format": "date-time",
+            "title": "As Of"
+          },
+          "input_hash": {
+            "type": "string",
+            "title": "Input Hash"
+          }
+        },
+        "additionalProperties": false,
+        "type": "object",
+        "required": [
+          "evaluation_id",
+          "subject_id",
+          "mission_id",
+          "as_of",
+          "input_hash"
+        ],
+        "title": "ClinicalContext"
+      },
+      "ClinicalEvaluationResponse": {
+        "properties": {
+          "id": {
+            "type": "string",
+            "title": "Id"
+          },
+          "parent_id": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Parent Id"
+          },
+          "results": {
+            "additionalProperties": {
+              "$ref": "#/components/schemas/ClinicalResultResponse"
+            },
+            "type": "object",
+            "title": "Results"
+          },
+          "differential": {
+            "items": {
+              "$ref": "#/components/schemas/DifferentialRow"
+            },
+            "type": "array",
+            "title": "Differential"
+          },
+          "next_tests": {
+            "items": {
+              "$ref": "#/components/schemas/PendingTest"
+            },
+            "type": "array",
+            "title": "Next Tests"
+          },
+          "urgency": {
+            "type": "string",
+            "enum": [
+              "ROUTINE",
+              "PROMPT",
+              "URGENT",
+              "EMERGENCY"
+            ],
+            "title": "Urgency"
+          },
+          "treatment_status": {
+            "type": "string",
+            "const": "NOT_STARTED",
+            "title": "Treatment Status"
+          },
+          "presentation_protocol": {
+            "anyOf": [
+              {
+                "$ref": "#/components/schemas/ProtocolDecision"
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "input_hash": {
+            "type": "string",
+            "title": "Input Hash"
+          },
+          "knowledge_hash": {
+            "type": "string",
+            "title": "Knowledge Hash"
+          },
+          "knowledge_version": {
+            "type": "string",
+            "title": "Knowledge Version"
+          },
+          "implementation_hash": {
+            "type": "string",
+            "title": "Implementation Hash"
+          },
+          "output_hash": {
+            "type": "string",
+            "title": "Output Hash"
+          }
+        },
+        "additionalProperties": false,
+        "type": "object",
+        "required": [
+          "id",
+          "parent_id",
+          "results",
+          "differential",
+          "next_tests",
+          "urgency",
+          "treatment_status",
+          "presentation_protocol",
+          "input_hash",
+          "knowledge_hash",
+          "knowledge_version",
+          "implementation_hash",
+          "output_hash"
+        ],
+        "title": "ClinicalEvaluationResponse"
+      },
+      "ClinicalMetadata": {
+        "properties": {
+          "hypoglycemia_level_minimum_supported": {
+            "anyOf": [
+              {
+                "type": "integer",
+                "enum": [
+                  1,
+                  2,
+                  3
+                ]
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Hypoglycemia Level Minimum Supported"
+          },
+          "aki_stage": {
+            "anyOf": [
+              {
+                "type": "integer",
+                "enum": [
+                  1,
+                  2,
+                  3
+                ]
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Aki Stage"
+          },
+          "aki_stage_is_minimum_supported": {
+            "type": "boolean",
+            "title": "Aki Stage Is Minimum Supported",
+            "default": false
+          },
+          "resolution_status": {
+            "anyOf": [
+              {
+                "type": "string",
+                "enum": [
+                  "MET",
+                  "NOT_MET",
+                  "UNKNOWN"
+                ]
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Resolution Status"
+          },
+          "disease_excluded": {
+            "type": "boolean",
+            "const": false,
+            "title": "Disease Excluded",
+            "default": false
+          },
+          "clinical_validation": {
+            "type": "string",
+            "const": "NOT_VALIDATED",
+            "title": "Clinical Validation",
+            "default": "NOT_VALIDATED"
+          },
+          "derivation_inputs": {
+            "additionalProperties": {
+              "items": {
+                "type": "string"
+              },
+              "type": "array"
+            },
+            "type": "object",
+            "title": "Derivation Inputs"
+          }
+        },
+        "additionalProperties": false,
+        "type": "object",
+        "title": "ClinicalMetadata"
+      },
+      "ClinicalNote": {
+        "properties": {
+          "observed_at": {
+            "type": "string",
+            "format": "date-time",
+            "title": "Observed At"
+          },
+          "id": {
+            "type": "string",
+            "maxLength": 128,
+            "minLength": 1,
+            "pattern": "^[A-Za-z0-9_.:-]+$",
+            "title": "Id"
+          },
+          "episode_id": {
+            "type": "string",
+            "maxLength": 128,
+            "minLength": 1,
+            "pattern": "^[A-Za-z0-9_.:-]+$",
+            "title": "Episode Id"
+          },
+          "kind": {
+            "type": "string",
+            "enum": [
+              "OBSERVATION",
+              "HYPOTHESIS",
+              "DIAGNOSIS"
+            ],
+            "title": "Kind"
+          },
+          "text": {
+            "type": "string",
+            "minLength": 1,
+            "title": "Text"
+          },
+          "evidence_ids": {
+            "items": {
+              "type": "string",
+              "maxLength": 128,
+              "minLength": 1,
+              "pattern": "^[A-Za-z0-9_.:-]+$"
+            },
+            "type": "array",
+            "title": "Evidence Ids"
+          }
+        },
+        "additionalProperties": false,
+        "type": "object",
+        "required": [
+          "observed_at",
+          "id",
+          "episode_id",
+          "kind",
+          "text"
+        ],
+        "title": "ClinicalNote"
+      },
+      "ClinicalObservation": {
+        "properties": {
+          "id": {
+            "type": "string",
+            "maxLength": 128,
+            "minLength": 1,
+            "pattern": "^[A-Za-z0-9_.:-]+$",
+            "title": "Id"
+          },
+          "concept": {
+            "type": "string",
+            "maxLength": 120,
+            "minLength": 1,
+            "title": "Concept"
+          },
+          "value": {
+            "anyOf": [
+              {
+                "type": "boolean"
+              },
+              {
+                "type": "integer"
+              },
+              {
+                "type": "number"
+              },
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Value"
+          },
+          "unit": {
+            "type": "string",
+            "title": "Unit",
+            "default": "1"
+          },
+          "timestamp": {
+            "type": "string",
+            "format": "date-time",
+            "title": "Timestamp"
+          },
+          "quality": {
+            "type": "string",
+            "enum": [
+              "VALID",
+              "INVALID",
+              "UNKNOWN",
+              "NOT_MEASURED"
+            ],
+            "title": "Quality",
+            "default": "UNKNOWN"
+          },
+          "method": {
+            "type": "string",
+            "maxLength": 100,
+            "minLength": 1,
+            "title": "Method"
+          },
+          "sample_id": {
+            "type": "string",
+            "maxLength": 128,
+            "minLength": 1,
+            "pattern": "^[A-Za-z0-9_.:-]+$",
+            "title": "Sample Id"
+          },
+          "provenance": {
+            "type": "string",
+            "maxLength": 300,
+            "minLength": 1,
+            "title": "Provenance"
+          }
+        },
+        "additionalProperties": false,
+        "type": "object",
+        "required": [
+          "id",
+          "concept",
+          "value",
+          "timestamp",
+          "method",
+          "sample_id",
+          "provenance"
+        ],
+        "title": "ClinicalObservation"
+      },
+      "ClinicalReplayResponse": {
+        "properties": {
+          "id": {
+            "type": "string",
+            "title": "Id"
+          },
+          "matches": {
+            "type": "boolean",
+            "title": "Matches"
+          },
+          "input_hash": {
+            "type": "string",
+            "title": "Input Hash"
+          },
+          "knowledge_hash": {
+            "type": "string",
+            "title": "Knowledge Hash"
+          }
+        },
+        "additionalProperties": false,
+        "type": "object",
+        "required": [
+          "id",
+          "matches",
+          "input_hash",
+          "knowledge_hash"
+        ],
+        "title": "ClinicalReplayResponse"
+      },
+      "ClinicalRequest": {
+        "properties": {
+          "subject_id": {
+            "type": "string",
+            "maxLength": 128,
+            "minLength": 1,
+            "pattern": "^[A-Za-z0-9_.:-]+$",
+            "title": "Subject Id"
+          },
+          "mission_id": {
+            "type": "string",
+            "maxLength": 128,
+            "minLength": 1,
+            "pattern": "^[A-Za-z0-9_.:-]+$",
+            "title": "Mission Id"
+          },
+          "condition_id": {
+            "anyOf": [
+              {
+                "type": "string",
+                "enum": [
+                  "DM",
+                  "DKA",
+                  "ORTHOSTATIC_HYPOTENSION",
+                  "POTS",
+                  "AKI",
+                  "ANAPHYLAXIS",
+                  "HYPOGLYCEMIA"
+                ]
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Condition Id"
+          },
+          "presentation_id": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Presentation Id"
+          },
+          "population": {
+            "type": "string",
+            "enum": [
+              "ADULT",
+              "NONPREGNANT_ADULT",
+              "UNKNOWN"
+            ],
+            "title": "Population",
+            "default": "UNKNOWN"
+          },
+          "age_years": {
+            "anyOf": [
+              {
+                "type": "integer",
+                "minimum": 0.0
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Age Years"
+          },
+          "as_of": {
+            "type": "string",
+            "format": "date-time",
+            "title": "As Of"
+          },
+          "window_start": {
+            "type": "string",
+            "format": "date-time",
+            "title": "Window Start"
+          },
+          "observations": {
+            "items": {
+              "$ref": "#/components/schemas/ClinicalObservation"
+            },
+            "type": "array",
+            "maxItems": 256,
+            "title": "Observations"
+          },
+          "measurement_bindings": {
+            "items": {
+              "$ref": "#/components/schemas/MeasurementBinding"
+            },
+            "type": "array",
+            "maxItems": 256,
+            "title": "Measurement Bindings"
+          },
+          "resources": {
+            "additionalProperties": {
+              "type": "boolean"
+            },
+            "type": "object",
+            "maxProperties": 64,
+            "title": "Resources"
+          }
+        },
+        "additionalProperties": false,
+        "type": "object",
+        "required": [
+          "subject_id",
+          "mission_id",
+          "as_of",
+          "window_start"
+        ],
+        "title": "ClinicalRequest"
+      },
+      "ClinicalResultResponse": {
+        "properties": {
+          "condition_id": {
+            "type": "string",
+            "title": "Condition Id"
+          },
+          "diagnostic_status": {
+            "type": "string",
+            "enum": [
+              "NOT_EVALUATED",
+              "INSUFFICIENT_DATA",
+              "SUSPECTED",
+              "CRITERIA_MET",
+              "CRITERIA_NOT_MET",
+              "CONFLICTING_EVIDENCE",
+              "NOT_APPLICABLE"
+            ],
+            "title": "Diagnostic Status"
+          },
+          "urgency": {
+            "type": "string",
+            "enum": [
+              "ROUTINE",
+              "PROMPT",
+              "URGENT",
+              "EMERGENCY"
+            ],
+            "title": "Urgency"
+          },
+          "confirmation_status": {
+            "type": "string",
+            "enum": [
+              "NOT_APPLICABLE",
+              "NOT_REQUIRED",
+              "REQUIRED",
+              "PENDING",
+              "SATISFIED",
+              "UNAVAILABLE"
+            ],
+            "title": "Confirmation Status"
+          },
+          "protocol_status": {
+            "type": "string",
+            "enum": [
+              "NOT_EVALUATED",
+              "NOT_INDICATED",
+              "ELIGIBLE",
+              "BLOCKED_MISSING_DATA",
+              "BLOCKED_CONTRAINDICATION",
+              "BLOCKED_RESOURCE",
+              "BLOCKED_AUTHORIZATION",
+              "READY_FOR_CREW"
+            ],
+            "title": "Protocol Status"
+          },
+          "treatment_status": {
+            "type": "string",
+            "const": "NOT_STARTED",
+            "title": "Treatment Status",
+            "default": "NOT_STARTED"
+          },
+          "criterion_id": {
+            "type": "string",
+            "title": "Criterion Id"
+          },
+          "criterion_version": {
+            "type": "string",
+            "title": "Criterion Version"
+          },
+          "source_ids": {
+            "items": {
+              "type": "string"
+            },
+            "type": "array",
+            "title": "Source Ids"
+          },
+          "source_statuses": {
+            "additionalProperties": {
+              "type": "string"
+            },
+            "type": "object",
+            "title": "Source Statuses"
+          },
+          "evaluation_tree": {
+            "$ref": "#/components/schemas/TraceNode"
+          },
+          "missing_fields": {
+            "items": {
+              "type": "string"
+            },
+            "type": "array",
+            "title": "Missing Fields"
+          },
+          "missing_required": {
+            "items": {
+              "type": "string"
+            },
+            "type": "array",
+            "title": "Missing Required",
+            "description": "Unresolved candidates, respecting AND/OR; not all individually mandatory. Absent in legacy records."
+          },
+          "optional_not_measured": {
+            "items": {
+              "type": "string"
+            },
+            "type": "array",
+            "title": "Optional Not Measured",
+            "description": "Unmeasured leaves nonblocking for this decision, never proof of normality."
+          },
+          "required_for_protocol_safety": {
+            "items": {
+              "type": "string"
+            },
+            "type": "array",
+            "title": "Required For Protocol Safety",
+            "description": "Independent protocol safety requirements; not diagnostic alternatives."
+          },
+          "invalid_required": {
+            "items": {
+              "type": "string"
+            },
+            "type": "array",
+            "title": "Invalid Required",
+            "description": "Unusable leaves in unresolved branches."
+          },
+          "invalid_fields": {
+            "items": {
+              "type": "string"
+            },
+            "type": "array",
+            "title": "Invalid Fields"
+          },
+          "missing_requirement_semantics": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Missing Requirement Semantics"
+          },
+          "data_requirement_version": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Data Requirement Version"
+          },
+          "data_issues": {
+            "items": {
+              "$ref": "#/components/schemas/DataIssue"
+            },
+            "type": "array",
+            "title": "Data Issues"
+          },
+          "space_applicability": {
+            "type": "string",
+            "title": "Space Applicability"
+          },
+          "limitations": {
+            "items": {
+              "type": "string"
+            },
+            "type": "array",
+            "title": "Limitations"
+          },
+          "protocol": {
+            "$ref": "#/components/schemas/ProtocolDecision"
+          },
+          "metadata": {
+            "$ref": "#/components/schemas/ClinicalMetadata"
+          }
+        },
+        "additionalProperties": false,
+        "type": "object",
+        "required": [
+          "condition_id",
+          "diagnostic_status",
+          "urgency",
+          "confirmation_status",
+          "protocol_status",
+          "criterion_id",
+          "criterion_version",
+          "source_ids",
+          "source_statuses",
+          "evaluation_tree",
+          "missing_fields",
+          "data_issues",
+          "space_applicability",
+          "limitations",
+          "protocol"
+        ],
+        "title": "ClinicalResultResponse"
+      },
+      "ConfirmationEvidence": {
+        "properties": {
+          "path_id": {
+            "type": "string",
+            "title": "Path Id"
+          },
+          "sample_id": {
+            "type": "string",
+            "title": "Sample Id"
+          },
+          "timestamp": {
+            "type": "string",
+            "title": "Timestamp"
+          }
+        },
+        "additionalProperties": false,
+        "type": "object",
+        "required": [
+          "path_id",
+          "sample_id",
+          "timestamp"
+        ],
+        "title": "ConfirmationEvidence"
+      },
+      "DataIssue": {
+        "properties": {
+          "observation_id": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Observation Id"
+          },
+          "concept": {
+            "type": "string",
+            "title": "Concept"
+          },
+          "reason": {
+            "type": "string",
+            "title": "Reason"
+          }
+        },
+        "additionalProperties": false,
+        "type": "object",
+        "required": [
+          "concept",
+          "reason"
+        ],
+        "title": "DataIssue"
+      },
+      "Device": {
+        "properties": {
+          "id": {
+            "type": "string",
+            "maxLength": 128,
+            "minLength": 1,
+            "pattern": "^[A-Za-z0-9_.:-]+$",
+            "title": "Id"
+          },
+          "variable": {
+            "type": "string",
+            "maxLength": 128,
+            "minLength": 1,
+            "pattern": "^[A-Za-z0-9_.:-]+$",
+            "title": "Variable"
+          },
+          "unit": {
+            "type": "string",
+            "title": "Unit"
+          },
+          "calibration_id": {
+            "type": "string",
+            "maxLength": 128,
+            "minLength": 1,
+            "pattern": "^[A-Za-z0-9_.:-]+$",
+            "title": "Calibration Id"
+          },
+          "calibrated_at": {
+            "type": "string",
+            "format": "date-time",
+            "title": "Calibrated At"
+          },
+          "valid_until": {
+            "type": "string",
+            "format": "date-time",
+            "title": "Valid Until"
+          },
+          "technical_min": {
+            "type": "number",
+            "title": "Technical Min"
+          },
+          "technical_max": {
+            "type": "number",
+            "title": "Technical Max"
+          },
+          "max_age_seconds": {
+            "type": "integer",
+            "exclusiveMinimum": 0.0,
+            "title": "Max Age Seconds"
+          },
+          "policy_reference": {
+            "type": "string",
+            "minLength": 1,
+            "title": "Policy Reference"
+          },
+          "conflict_tolerance": {
+            "anyOf": [
+              {
+                "type": "number",
+                "minimum": 0.0
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Conflict Tolerance"
+          },
+          "alignment_seconds": {
+            "anyOf": [
+              {
+                "type": "integer",
+                "minimum": 0.0
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Alignment Seconds"
+          },
+          "synthetic": {
+            "type": "boolean",
+            "title": "Synthetic"
+          }
+        },
+        "additionalProperties": false,
+        "type": "object",
+        "required": [
+          "id",
+          "variable",
+          "unit",
+          "calibration_id",
+          "calibrated_at",
+          "valid_until",
+          "technical_min",
+          "technical_max",
+          "max_age_seconds",
+          "policy_reference",
+          "synthetic"
+        ],
+        "title": "Device"
+      },
+      "DifferentialRow": {
+        "properties": {
+          "condition_id": {
+            "type": "string",
+            "title": "Condition Id"
+          },
+          "reported_condition_id": {
+            "type": "string",
+            "title": "Reported Condition Id"
+          },
+          "tier": {
+            "type": "string",
+            "title": "Tier"
+          },
+          "diagnostic_status": {
+            "type": "string",
+            "title": "Diagnostic Status"
+          },
+          "support": {
+            "items": {
+              "type": "string"
+            },
+            "type": "array",
+            "title": "Support"
+          },
+          "contradictions": {
+            "items": {
+              "type": "string"
+            },
+            "type": "array",
+            "title": "Contradictions"
+          },
+          "criteria_implemented": {
+            "type": "boolean",
+            "title": "Criteria Implemented"
+          },
+          "source_ids": {
+            "items": {
+              "type": "string"
+            },
+            "type": "array",
+            "title": "Source Ids"
+          },
+          "external_evaluation_required": {
+            "type": "boolean",
+            "title": "External Evaluation Required"
+          },
+          "urgency": {
+            "type": "string",
+            "enum": [
+              "ROUTINE",
+              "PROMPT",
+              "URGENT",
+              "EMERGENCY"
+            ],
+            "title": "Urgency"
+          }
+        },
+        "additionalProperties": false,
+        "type": "object",
+        "required": [
+          "condition_id",
+          "reported_condition_id",
+          "tier",
+          "diagnostic_status",
+          "support",
+          "contradictions",
+          "criteria_implemented",
+          "source_ids",
+          "external_evaluation_required",
+          "urgency"
+        ],
+        "title": "DifferentialRow"
+      },
+      "DomainResult": {
+        "properties": {
+          "domain": {
+            "type": "string",
+            "title": "Domain"
+          },
+          "available_indicators": {
+            "items": {
+              "type": "string"
+            },
+            "type": "array",
+            "title": "Available Indicators"
+          },
+          "missing_indicators": {
+            "items": {
+              "type": "string"
+            },
+            "type": "array",
+            "title": "Missing Indicators"
+          },
+          "indicators": {
+            "items": {
+              "$ref": "#/components/schemas/IndicatorResult"
+            },
+            "type": "array",
+            "title": "Indicators"
+          },
+          "source_ids": {
+            "items": {
+              "type": "string"
+            },
+            "type": "array",
+            "title": "Source Ids"
+          },
+          "method": {
+            "type": "string",
+            "title": "Method"
+          },
+          "phase": {
+            "type": "string",
+            "title": "Phase"
+          },
+          "gravity": {
+            "type": "string",
+            "title": "Gravity"
+          },
+          "applicability": {
+            "type": "string",
+            "title": "Applicability"
+          },
+          "limitations": {
+            "items": {
+              "type": "string"
+            },
+            "type": "array",
+            "title": "Limitations"
+          },
+          "accumulated_dose": {
+            "anyOf": [
+              {
+                "additionalProperties": {
+                  "$ref": "#/components/schemas/JsonValue"
+                },
+                "type": "object"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Accumulated Dose"
+          }
+        },
+        "additionalProperties": false,
+        "type": "object",
+        "required": [
+          "domain",
+          "available_indicators",
+          "missing_indicators",
+          "indicators",
+          "source_ids",
+          "method",
+          "phase",
+          "gravity",
+          "applicability",
+          "limitations"
+        ],
+        "title": "DomainResult"
+      },
+      "EligibilityResponse": {
+        "properties": {
+          "evaluation_id": {
+            "type": "string",
+            "title": "Evaluation Id"
+          },
+          "eligibility": {
+            "items": {
+              "$ref": "#/components/schemas/ProtocolDecision"
+            },
+            "type": "array",
+            "title": "Eligibility"
+          },
+          "new_authorization": {
+            "type": "boolean",
+            "const": false,
+            "title": "New Authorization"
+          }
+        },
+        "additionalProperties": false,
+        "type": "object",
+        "required": [
+          "evaluation_id",
+          "eligibility",
+          "new_authorization"
+        ],
+        "title": "EligibilityResponse"
+      },
+      "EpisodeAttachment": {
+        "properties": {
+          "finding_ids": {
+            "items": {
+              "type": "string",
+              "maxLength": 128,
+              "minLength": 1,
+              "pattern": "^[A-Za-z0-9_.:-]+$"
+            },
+            "type": "array",
+            "minItems": 1,
+            "title": "Finding Ids"
+          }
+        },
+        "additionalProperties": false,
+        "type": "object",
+        "required": [
+          "finding_ids"
+        ],
+        "title": "EpisodeAttachment"
+      },
+      "EpisodeRequest": {
+        "properties": {
+          "id": {
+            "type": "string",
+            "maxLength": 128,
+            "minLength": 1,
+            "pattern": "^[A-Za-z0-9_.:-]+$",
+            "title": "Id"
+          },
+          "subject_id": {
+            "type": "string",
+            "maxLength": 128,
+            "minLength": 1,
+            "pattern": "^[A-Za-z0-9_.:-]+$",
+            "title": "Subject Id"
+          },
+          "mission_id": {
+            "type": "string",
+            "maxLength": 128,
+            "minLength": 1,
+            "pattern": "^[A-Za-z0-9_.:-]+$",
+            "title": "Mission Id"
+          },
+          "condition_id": {
+            "type": "string",
+            "maxLength": 128,
+            "minLength": 1,
+            "pattern": "^[A-Za-z0-9_.:-]+$",
+            "title": "Condition Id"
+          },
+          "finding_ids": {
+            "items": {
+              "type": "string",
+              "maxLength": 128,
+              "minLength": 1,
+              "pattern": "^[A-Za-z0-9_.:-]+$"
+            },
+            "type": "array",
+            "title": "Finding Ids"
+          }
+        },
+        "additionalProperties": false,
+        "type": "object",
+        "required": [
+          "id",
+          "subject_id",
+          "mission_id",
+          "condition_id"
+        ],
+        "title": "EpisodeRequest"
+      },
+      "EvaluationRequest": {
+        "properties": {
+          "rule_id": {
+            "type": "string",
+            "maxLength": 128,
+            "minLength": 1,
+            "pattern": "^[A-Za-z0-9_.:-]+$",
+            "title": "Rule Id"
+          },
+          "subject_id": {
+            "type": "string",
+            "maxLength": 128,
+            "minLength": 1,
+            "pattern": "^[A-Za-z0-9_.:-]+$",
+            "title": "Subject Id"
+          },
+          "mission_id": {
+            "type": "string",
+            "maxLength": 128,
+            "minLength": 1,
+            "pattern": "^[A-Za-z0-9_.:-]+$",
+            "title": "Mission Id"
+          },
+          "as_of": {
+            "type": "string",
+            "format": "date-time",
+            "title": "As Of"
+          },
+          "bindings": {
+            "additionalProperties": {
+              "anyOf": [
+                {
+                  "type": "string",
+                  "maxLength": 128,
+                  "minLength": 1,
+                  "pattern": "^[A-Za-z0-9_.:-]+$"
+                },
+                {
+                  "additionalProperties": {
+                    "type": "string",
+                    "maxLength": 128,
+                    "minLength": 1,
+                    "pattern": "^[A-Za-z0-9_.:-]+$"
+                  },
+                  "type": "object"
+                }
+              ]
+            },
+            "type": "object",
+            "title": "Bindings"
+          },
+          "context": {
+            "additionalProperties": {
+              "anyOf": [
+                {
+                  "type": "string"
+                },
+                {
+                  "type": "boolean"
+                },
+                {
+                  "items": {
+                    "type": "string"
+                  },
+                  "type": "array"
+                }
+              ]
+            },
+            "type": "object",
+            "title": "Context"
+          },
+          "co2_measurement_ids": {
+            "items": {
+              "type": "string",
+              "maxLength": 128,
+              "minLength": 1,
+              "pattern": "^[A-Za-z0-9_.:-]+$"
+            },
+            "type": "array",
+            "title": "Co2 Measurement Ids"
+          },
+          "mode": {
+            "type": "string",
+            "enum": [
+              "SIMULATION",
+              "OPERATIONAL"
+            ],
+            "title": "Mode",
+            "default": "OPERATIONAL"
+          }
+        },
+        "additionalProperties": false,
+        "type": "object",
+        "required": [
+          "rule_id",
+          "subject_id",
+          "mission_id",
+          "as_of"
+        ],
+        "title": "EvaluationRequest"
+      },
+      "EvidenceRevision": {
+        "properties": {
+          "source_id": {
+            "type": "string",
+            "maxLength": 128,
+            "minLength": 1,
+            "pattern": "^[A-Za-z0-9_.:-]+$",
+            "title": "Source Id"
+          },
+          "version": {
+            "type": "string",
+            "minLength": 1,
+            "title": "Version"
+          },
+          "locator": {
+            "type": "string",
+            "minLength": 1,
+            "title": "Locator"
+          },
+          "document_sha256": {
+            "type": "string",
+            "pattern": "^[0-9a-f]{64}$",
+            "title": "Document Sha256"
+          },
+          "status": {
+            "type": "string",
+            "enum": [
+              "REQUIRES_VALIDATION",
+              "REJECTED",
+              "REVIEWED_METADATA_ONLY"
+            ],
+            "title": "Status"
+          },
+          "note": {
+            "type": "string",
+            "minLength": 1,
+            "title": "Note"
+          },
+          "supersedes": {
+            "anyOf": [
+              {
+                "type": "string",
+                "maxLength": 128,
+                "minLength": 1,
+                "pattern": "^[A-Za-z0-9_.:-]+$"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Supersedes"
+          }
+        },
+        "additionalProperties": false,
+        "type": "object",
+        "required": [
+          "source_id",
+          "version",
+          "locator",
+          "document_sha256",
+          "status",
+          "note"
+        ],
+        "title": "EvidenceRevision"
+      },
+      "FollowUpPlan": {
+        "properties": {
+          "id": {
+            "type": "string",
+            "maxLength": 128,
+            "minLength": 1,
+            "pattern": "^[A-Za-z0-9_.:-]+$",
+            "title": "Id"
+          },
+          "episode_id": {
+            "type": "string",
+            "maxLength": 128,
+            "minLength": 1,
+            "pattern": "^[A-Za-z0-9_.:-]+$",
+            "title": "Episode Id"
+          },
+          "due_at": {
+            "type": "string",
+            "format": "date-time",
+            "title": "Due At"
+          },
+          "goal_description": {
+            "type": "string",
+            "minLength": 1,
+            "title": "Goal Description"
+          },
+          "protocol_reference": {
+            "type": "string",
+            "minLength": 1,
+            "title": "Protocol Reference"
+          }
+        },
+        "additionalProperties": false,
+        "type": "object",
+        "required": [
+          "id",
+          "episode_id",
+          "due_at",
+          "goal_description",
+          "protocol_reference"
+        ],
+        "title": "FollowUpPlan"
+      },
+      "FollowUpReview": {
+        "properties": {
+          "completed": {
+            "type": "boolean",
+            "title": "Completed",
+            "default": false
+          },
+          "plan_id": {
+            "type": "string",
+            "maxLength": 128,
+            "minLength": 1,
+            "pattern": "^[A-Za-z0-9_.:-]+$",
+            "title": "Plan Id"
+          },
+          "measurement_ids": {
+            "items": {
+              "type": "string",
+              "maxLength": 128,
+              "minLength": 1,
+              "pattern": "^[A-Za-z0-9_.:-]+$"
+            },
+            "type": "array",
+            "title": "Measurement Ids"
+          },
+          "note": {
+            "type": "string",
+            "minLength": 1,
+            "title": "Note"
+          }
+        },
+        "additionalProperties": false,
+        "type": "object",
+        "required": [
+          "plan_id",
+          "measurement_ids",
+          "note"
+        ],
+        "title": "FollowUpReview"
+      },
+      "FrameIndex": {
+        "properties": {
+          "id": {
+            "type": "string",
+            "maxLength": 128,
+            "minLength": 1,
+            "pattern": "^[A-Za-z0-9_.:-]+$",
+            "title": "Id"
+          },
+          "as_of": {
+            "type": "string",
+            "format": "date-time",
+            "title": "As Of"
+          },
+          "phase": {
+            "type": "string",
+            "title": "Phase"
+          },
+          "gravity": {
+            "type": "string",
+            "title": "Gravity"
+          },
+          "monitoring_id": {
+            "type": "string",
+            "maxLength": 128,
+            "minLength": 1,
+            "pattern": "^[A-Za-z0-9_.:-]+$",
+            "title": "Monitoring Id"
+          },
+          "snapshot_hash": {
+            "type": "string",
+            "pattern": "^[a-f0-9]{64}$",
+            "title": "Snapshot Hash"
+          }
+        },
+        "additionalProperties": false,
+        "type": "object",
+        "required": [
+          "id",
+          "as_of",
+          "phase",
+          "gravity",
+          "monitoring_id",
+          "snapshot_hash"
+        ],
+        "title": "FrameIndex"
+      },
+      "HTTPValidationError": {
+        "properties": {
+          "detail": {
+            "items": {
+              "$ref": "#/components/schemas/ValidationError"
+            },
+            "type": "array",
+            "title": "Detail"
+          }
+        },
+        "type": "object",
+        "title": "HTTPValidationError"
+      },
+      "IndicatorResult": {
+        "properties": {
+          "variable": {
+            "type": "string",
+            "title": "Variable"
+          },
+          "unit": {
+            "type": "string",
+            "title": "Unit"
+          },
+          "state": {
+            "type": "string",
+            "title": "State"
+          },
+          "latest_measurement_id": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Latest Measurement Id"
+          },
+          "value": {
+            "anyOf": [
+              {
+                "type": "number"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Value"
+          },
+          "valid_count": {
+            "type": "integer",
+            "title": "Valid Count",
+            "default": 0
+          },
+          "quality_issues": {
+            "items": {
+              "additionalProperties": {
+                "$ref": "#/components/schemas/JsonValue"
+              },
+              "type": "object"
+            },
+            "type": "array",
+            "title": "Quality Issues"
+          },
+          "baseline_comparison": {
+            "anyOf": [
+              {
+                "additionalProperties": {
+                  "$ref": "#/components/schemas/JsonValue"
+                },
+                "type": "object"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Baseline Comparison"
+          },
+          "trend": {
+            "anyOf": [
+              {
+                "additionalProperties": {
+                  "$ref": "#/components/schemas/JsonValue"
+                },
+                "type": "object"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Trend"
+          },
+          "normative_finding_id": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Normative Finding Id"
+          },
+          "source_ids": {
+            "items": {
+              "type": "string"
+            },
+            "type": "array",
+            "title": "Source Ids"
+          },
+          "limitations": {
+            "items": {
+              "type": "string"
+            },
+            "type": "array",
+            "title": "Limitations"
+          }
+        },
+        "additionalProperties": false,
+        "type": "object",
+        "required": [
+          "variable",
+          "unit",
+          "state",
+          "source_ids",
+          "limitations"
+        ],
+        "title": "IndicatorResult"
+      },
+      "JsonValue": {},
+      "Measurement": {
+        "properties": {
+          "id": {
+            "type": "string",
+            "maxLength": 128,
+            "minLength": 1,
+            "pattern": "^[A-Za-z0-9_.:-]+$",
+            "title": "Id"
+          },
+          "subject_id": {
+            "type": "string",
+            "maxLength": 128,
+            "minLength": 1,
+            "pattern": "^[A-Za-z0-9_.:-]+$",
+            "title": "Subject Id"
+          },
+          "mission_id": {
+            "type": "string",
+            "maxLength": 128,
+            "minLength": 1,
+            "pattern": "^[A-Za-z0-9_.:-]+$",
+            "title": "Mission Id"
+          },
+          "variable": {
+            "type": "string",
+            "maxLength": 128,
+            "minLength": 1,
+            "pattern": "^[A-Za-z0-9_.:-]+$",
+            "title": "Variable"
+          },
+          "value": {
+            "anyOf": [
+              {
+                "type": "number"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Value"
+          },
+          "unit": {
+            "type": "string",
+            "title": "Unit"
+          },
+          "timestamp": {
+            "type": "string",
+            "format": "date-time",
+            "title": "Timestamp"
+          },
+          "interval_end": {
+            "anyOf": [
+              {
+                "type": "string",
+                "format": "date-time"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Interval End"
+          },
+          "device_id": {
+            "type": "string",
+            "maxLength": 128,
+            "minLength": 1,
+            "pattern": "^[A-Za-z0-9_.:-]+$",
+            "title": "Device Id"
+          },
+          "calibration_id": {
+            "type": "string",
+            "maxLength": 128,
+            "minLength": 1,
+            "pattern": "^[A-Za-z0-9_.:-]+$",
+            "title": "Calibration Id"
+          },
+          "method": {
+            "type": "string",
+            "minLength": 1,
+            "title": "Method"
+          },
+          "protocol": {
+            "type": "string",
+            "maxLength": 128,
+            "minLength": 1,
+            "pattern": "^[A-Za-z0-9_.:-]+$",
+            "title": "Protocol"
+          },
+          "site": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Site"
+          },
+          "compartment": {
+            "anyOf": [
+              {
+                "type": "string",
+                "maxLength": 128,
+                "minLength": 1,
+                "pattern": "^[A-Za-z0-9_.:-]+$"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Compartment"
+          },
+          "phase": {
+            "type": "string",
+            "enum": [
+              "PRE_MISSION",
+              "IN_MISSION",
+              "POST_MISSION"
+            ],
+            "title": "Phase"
+          },
+          "reported_quality": {
+            "type": "string",
+            "enum": [
+              "ACCEPTABLE",
+              "DEGRADED",
+              "INVALID",
+              "UNKNOWN",
+              "NOT_MEASURED"
+            ],
+            "title": "Reported Quality"
+          },
+          "synthetic": {
+            "type": "boolean",
+            "title": "Synthetic"
+          },
+          "provenance": {
+            "type": "string",
+            "minLength": 1,
+            "title": "Provenance"
+          }
+        },
+        "additionalProperties": false,
+        "type": "object",
+        "required": [
+          "id",
+          "subject_id",
+          "mission_id",
+          "variable",
+          "value",
+          "unit",
+          "timestamp",
+          "device_id",
+          "calibration_id",
+          "method",
+          "protocol",
+          "phase",
+          "reported_quality",
+          "synthetic",
+          "provenance"
+        ],
+        "title": "Measurement"
+      },
+      "MeasurementBinding": {
+        "properties": {
+          "measurement_id": {
+            "type": "string",
+            "maxLength": 128,
+            "minLength": 1,
+            "pattern": "^[A-Za-z0-9_.:-]+$",
+            "title": "Measurement Id"
+          },
+          "concept": {
+            "type": "string",
+            "title": "Concept"
+          },
+          "sample_id": {
+            "type": "string",
+            "maxLength": 128,
+            "minLength": 1,
+            "pattern": "^[A-Za-z0-9_.:-]+$",
+            "title": "Sample Id"
+          }
+        },
+        "additionalProperties": false,
+        "type": "object",
+        "required": [
+          "measurement_id",
+          "concept",
+          "sample_id"
+        ],
+        "title": "MeasurementBinding"
+      },
+      "MissionContext": {
+        "properties": {
+          "id": {
+            "type": "string",
+            "maxLength": 128,
+            "minLength": 1,
+            "pattern": "^[A-Za-z0-9_.:-]+$",
+            "title": "Id"
+          },
+          "phase": {
+            "type": "string",
+            "enum": [
+              "PRE_MISSION",
+              "IN_MISSION",
+              "POST_MISSION"
+            ],
+            "title": "Phase"
+          },
+          "gravity": {
+            "type": "string",
+            "enum": [
+              "MICROGRAVITY",
+              "PARTIAL",
+              "EARTH"
+            ],
+            "title": "Gravity"
+          },
+          "environment": {
+            "type": "string",
+            "enum": [
+              "HABITABLE_VOLUME",
+              "HABITABLE_CABIN",
+              "FREE_SPACE",
+              "PLANETARY_SURFACE"
+            ],
+            "title": "Environment"
+          },
+          "mode": {
+            "type": "string",
+            "enum": [
+              "NOMINAL",
+              "OFF_NOMINAL"
+            ],
+            "title": "Mode"
+          },
+          "microgravity_eva_planned_or_required": {
+            "anyOf": [
+              {
+                "type": "boolean"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Microgravity Eva Planned Or Required"
+          },
+          "extraterrestrial_surface_eva_planned_or_required": {
+            "anyOf": [
+              {
+                "type": "boolean"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Extraterrestrial Surface Eva Planned Or Required"
+          },
+          "exposure_context": {
+            "anyOf": [
+              {
+                "type": "string",
+                "enum": [
+                  "INDEFINITE_CABIN",
+                  "LIMITED_SPECIAL_OPERATION"
+                ]
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Exposure Context"
+          },
+          "synthetic": {
+            "type": "boolean",
+            "title": "Synthetic"
+          }
+        },
+        "additionalProperties": false,
+        "type": "object",
+        "required": [
+          "id",
+          "phase",
+          "gravity",
+          "environment",
+          "mode",
+          "synthetic"
+        ],
+        "title": "MissionContext"
+      },
+      "MissionContextVersion": {
+        "properties": {
+          "id": {
+            "type": "string",
+            "maxLength": 128,
+            "minLength": 1,
+            "pattern": "^[A-Za-z0-9_.:-]+$",
+            "title": "Id"
+          },
+          "mission_id": {
+            "type": "string",
+            "maxLength": 128,
+            "minLength": 1,
+            "pattern": "^[A-Za-z0-9_.:-]+$",
+            "title": "Mission Id"
+          },
+          "effective_at": {
+            "type": "string",
+            "format": "date-time",
+            "title": "Effective At"
+          },
+          "context": {
+            "$ref": "#/components/schemas/MissionContext"
+          }
+        },
+        "additionalProperties": false,
+        "type": "object",
+        "required": [
+          "id",
+          "mission_id",
+          "effective_at",
+          "context"
+        ],
+        "title": "MissionContextVersion"
+      },
+      "MonitoringEvent": {
+        "properties": {
+          "id": {
+            "type": "string",
+            "title": "Id"
+          },
+          "key": {
+            "type": "string",
+            "title": "Key"
+          },
+          "kind": {
+            "type": "string",
+            "enum": [
+              "CLINICAL_CRITERIA",
+              "NORMATIVE_REQUIREMENT",
+              "DATA_QUALITY",
+              "DESCRIPTIVE_CHANGE"
+            ],
+            "title": "Kind"
+          },
+          "state": {
+            "type": "string",
+            "title": "State"
+          },
+          "urgency": {
+            "type": "string",
+            "enum": [
+              "ROUTINE",
+              "PROMPT",
+              "URGENT",
+              "EMERGENCY"
+            ],
+            "title": "Urgency"
+          },
+          "notify": {
+            "type": "boolean",
+            "title": "Notify"
+          },
+          "reason": {
+            "type": "string",
+            "title": "Reason"
+          },
+          "evidence_ids": {
+            "items": {
+              "type": "string"
+            },
+            "type": "array",
+            "title": "Evidence Ids"
+          },
+          "source_ids": {
+            "items": {
+              "type": "string"
+            },
+            "type": "array",
+            "title": "Source Ids"
+          },
+          "diagnosis": {
+            "type": "null",
+            "title": "Diagnosis"
+          },
+          "clinical_execution": {
+            "type": "string",
+            "const": "BLOCKED",
+            "title": "Clinical Execution",
+            "default": "BLOCKED"
+          }
+        },
+        "additionalProperties": false,
+        "type": "object",
+        "required": [
+          "id",
+          "key",
+          "kind",
+          "state",
+          "urgency",
+          "notify",
+          "reason",
+          "evidence_ids",
+          "source_ids"
+        ],
+        "title": "MonitoringEvent"
+      },
+      "MonitoringRequest": {
+        "properties": {
+          "id": {
+            "type": "string",
+            "maxLength": 128,
+            "minLength": 1,
+            "pattern": "^[A-Za-z0-9_.:-]+$",
+            "title": "Id"
+          },
+          "subject_id": {
+            "type": "string",
+            "maxLength": 128,
+            "minLength": 1,
+            "pattern": "^[A-Za-z0-9_.:-]+$",
+            "title": "Subject Id"
+          },
+          "mission_id": {
+            "type": "string",
+            "maxLength": 128,
+            "minLength": 1,
+            "pattern": "^[A-Za-z0-9_.:-]+$",
+            "title": "Mission Id"
+          },
+          "previous_run_id": {
+            "anyOf": [
+              {
+                "type": "string",
+                "maxLength": 128,
+                "minLength": 1,
+                "pattern": "^[A-Za-z0-9_.:-]+$"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Previous Run Id"
+          },
+          "as_of": {
+            "type": "string",
+            "format": "date-time",
+            "title": "As Of"
+          },
+          "history_start": {
+            "type": "string",
+            "format": "date-time",
+            "title": "History Start"
+          },
+          "clinical_window_start": {
+            "type": "string",
+            "format": "date-time",
+            "title": "Clinical Window Start"
+          },
+          "clinical_context_id": {
+            "type": "string",
+            "maxLength": 128,
+            "minLength": 1,
+            "pattern": "^[A-Za-z0-9_.:-]+$",
+            "title": "Clinical Context Id"
+          },
+          "policy_reference": {
+            "type": "string",
+            "maxLength": 200,
+            "minLength": 1,
+            "title": "Policy Reference"
+          },
+          "population": {
+            "type": "string",
+            "enum": [
+              "ADULT",
+              "NONPREGNANT_ADULT",
+              "UNKNOWN"
+            ],
+            "title": "Population",
+            "default": "UNKNOWN"
+          },
+          "age_years": {
+            "anyOf": [
+              {
+                "type": "integer",
+                "minimum": 0.0
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Age Years"
+          },
+          "measurements": {
+            "items": {
+              "$ref": "#/components/schemas/Measurement"
+            },
+            "type": "array",
+            "maxItems": 256,
+            "title": "Measurements"
+          },
+          "observations": {
+            "items": {
+              "$ref": "#/components/schemas/ClinicalObservation"
+            },
+            "type": "array",
+            "maxItems": 256,
+            "title": "Observations"
+          },
+          "sample_ids": {
+            "patternProperties": {
+              "^[A-Za-z0-9_.:-]+$": {
+                "type": "string",
+                "maxLength": 128,
+                "minLength": 1,
+                "pattern": "^[A-Za-z0-9_.:-]+$"
+              }
+            },
+            "propertyNames": {
+              "maxLength": 128,
+              "minLength": 1
+            },
+            "type": "object",
+            "maxProperties": 256,
+            "title": "Sample Ids"
+          },
+          "baseline_ids": {
+            "items": {
+              "type": "string",
+              "maxLength": 128,
+              "minLength": 1,
+              "pattern": "^[A-Za-z0-9_.:-]+$"
+            },
+            "type": "array",
+            "maxItems": 32,
+            "title": "Baseline Ids"
+          },
+          "followup_at": {
+            "anyOf": [
+              {
+                "type": "string",
+                "format": "date-time"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Followup At"
+          },
+          "ewma_lambda": {
+            "type": "number",
+            "maximum": 1.0,
+            "exclusiveMinimum": 0.0,
+            "title": "Ewma Lambda",
+            "default": 1
+          },
+          "cusum_allowance": {
+            "type": "number",
+            "minimum": 0.0,
+            "title": "Cusum Allowance",
+            "default": 0
+          }
+        },
+        "additionalProperties": false,
+        "type": "object",
+        "required": [
+          "id",
+          "subject_id",
+          "mission_id",
+          "as_of",
+          "history_start",
+          "clinical_window_start",
+          "clinical_context_id",
+          "policy_reference"
+        ],
+        "title": "MonitoringRequest"
+      },
+      "MonitoringResult": {
+        "properties": {
+          "id": {
+            "type": "string",
+            "title": "Id"
+          },
+          "subject_id": {
+            "type": "string",
+            "title": "Subject Id"
+          },
+          "mission_id": {
+            "type": "string",
+            "title": "Mission Id"
+          },
+          "previous_run_id": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Previous Run Id"
+          },
+          "as_of": {
+            "type": "string",
+            "title": "As Of"
+          },
+          "mode": {
+            "type": "string",
+            "const": "EXPERIMENTAL_NOT_CLINICALLY_VALIDATED",
+            "title": "Mode"
+          },
+          "domains": {
+            "items": {
+              "$ref": "#/components/schemas/DomainResult"
+            },
+            "type": "array",
+            "title": "Domains"
+          },
+          "clinical_evaluations": {
+            "additionalProperties": {
+              "$ref": "#/components/schemas/ClinicalEvaluationResponse"
+            },
+            "type": "object",
+            "title": "Clinical Evaluations"
+          },
+          "events": {
+            "items": {
+              "$ref": "#/components/schemas/MonitoringEvent"
+            },
+            "type": "array",
+            "title": "Events"
+          },
+          "episode_ids": {
+            "additionalProperties": {
+              "type": "string"
+            },
+            "type": "object",
+            "title": "Episode Ids"
+          },
+          "followup_ids": {
+            "items": {
+              "type": "string"
+            },
+            "type": "array",
+            "title": "Followup Ids"
+          },
+          "clinical_context_id": {
+            "type": "string",
+            "title": "Clinical Context Id"
+          },
+          "event_states": {
+            "additionalProperties": {
+              "additionalProperties": {
+                "$ref": "#/components/schemas/JsonValue"
+              },
+              "type": "object"
+            },
+            "type": "object",
+            "title": "Event States"
+          },
+          "input_hash": {
+            "type": "string",
+            "title": "Input Hash"
+          },
+          "output_hash": {
+            "type": "string",
+            "title": "Output Hash"
+          },
+          "implementation_hash": {
+            "type": "string",
+            "title": "Implementation Hash"
+          },
+          "knowledge_hash": {
+            "type": "string",
+            "title": "Knowledge Hash"
+          },
+          "policy_reference": {
+            "type": "string",
+            "title": "Policy Reference"
+          },
+          "clinical_execution": {
+            "type": "string",
+            "const": "BLOCKED",
+            "title": "Clinical Execution"
+          }
+        },
+        "additionalProperties": false,
+        "type": "object",
+        "required": [
+          "id",
+          "subject_id",
+          "mission_id",
+          "previous_run_id",
+          "as_of",
+          "mode",
+          "domains",
+          "clinical_evaluations",
+          "events",
+          "episode_ids",
+          "followup_ids",
+          "clinical_context_id",
+          "event_states",
+          "input_hash",
+          "output_hash",
+          "implementation_hash",
+          "knowledge_hash",
+          "policy_reference",
+          "clinical_execution"
+        ],
+        "title": "MonitoringResult"
+      },
+      "MultisystemRequest": {
+        "properties": {
+          "finding_ids": {
+            "items": {
+              "type": "string",
+              "maxLength": 128,
+              "minLength": 1,
+              "pattern": "^[A-Za-z0-9_.:-]+$"
+            },
+            "type": "array",
+            "minItems": 2,
+            "title": "Finding Ids"
+          },
+          "interaction_id": {
+            "type": "string",
+            "maxLength": 128,
+            "minLength": 1,
+            "pattern": "^[A-Za-z0-9_.:-]+$",
+            "title": "Interaction Id"
+          },
+          "max_separation_seconds": {
+            "type": "integer",
+            "exclusiveMinimum": 0.0,
+            "title": "Max Separation Seconds"
+          },
+          "policy_reference": {
+            "type": "string",
+            "minLength": 1,
+            "title": "Policy Reference"
+          }
+        },
+        "additionalProperties": false,
+        "type": "object",
+        "required": [
+          "finding_ids",
+          "interaction_id",
+          "max_separation_seconds",
+          "policy_reference"
+        ],
+        "title": "MultisystemRequest"
+      },
+      "PendingTest": {
+        "properties": {
+          "test_id": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Test Id"
+          },
+          "action": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Action"
+          },
+          "catalogue_status": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Catalogue Status"
+          },
+          "reasons": {
+            "items": {
+              "$ref": "#/components/schemas/TestReason"
+            },
+            "type": "array",
+            "title": "Reasons"
+          },
+          "urgency": {
+            "type": "string",
+            "enum": [
+              "ROUTINE",
+              "PROMPT",
+              "URGENT",
+              "EMERGENCY"
+            ],
+            "title": "Urgency"
+          },
+          "availability": {
+            "anyOf": [
+              {
+                "type": "boolean"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Availability"
+          },
+          "risk": {
+            "type": "string",
+            "title": "Risk"
+          },
+          "cost": {
+            "type": "string",
+            "title": "Cost"
+          },
+          "execution_authorized": {
+            "type": "boolean",
+            "const": false,
+            "title": "Execution Authorized"
+          }
+        },
+        "additionalProperties": false,
+        "type": "object",
+        "required": [
+          "test_id",
+          "reasons",
+          "urgency",
+          "availability",
+          "risk",
+          "cost",
+          "execution_authorized"
+        ],
+        "title": "PendingTest"
+      },
+      "ProtocolDecision": {
+        "properties": {
+          "protocol_id": {
+            "type": "string",
+            "title": "Protocol Id"
+          },
+          "indication_supported": {
+            "type": "boolean",
+            "title": "Indication Supported"
+          },
+          "status": {
+            "type": "string",
+            "enum": [
+              "NOT_INDICATED",
+              "BLOCKED_MISSING_DATA",
+              "BLOCKED_CONTRAINDICATION",
+              "BLOCKED_RESOURCE",
+              "BLOCKED_AUTHORIZATION"
+            ],
+            "title": "Status"
+          },
+          "block_reasons": {
+            "items": {
+              "type": "string"
+            },
+            "type": "array",
+            "title": "Block Reasons"
+          },
+          "required_for_protocol_safety": {
+            "anyOf": [
+              {
+                "items": {
+                  "type": "string"
+                },
+                "type": "array"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Required For Protocol Safety"
+          },
+          "missing_resources": {
+            "anyOf": [
+              {
+                "items": {
+                  "type": "string"
+                },
+                "type": "array"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Missing Resources"
+          },
+          "authorization": {
+            "type": "string",
+            "const": "NO_VERIFIED_MISSION_POLICY",
+            "title": "Authorization"
+          },
+          "automatic_execution": {
+            "type": "boolean",
+            "const": false,
+            "title": "Automatic Execution"
+          }
+        },
+        "additionalProperties": false,
+        "type": "object",
+        "required": [
+          "protocol_id",
+          "indication_supported",
+          "status",
+          "block_reasons",
+          "authorization",
+          "automatic_execution"
+        ],
+        "title": "ProtocolDecision"
+      },
+      "ProtocolEligibilityRequest": {
+        "properties": {
+          "evaluation_id": {
+            "type": "string",
+            "maxLength": 128,
+            "minLength": 1,
+            "pattern": "^[A-Za-z0-9_.:-]+$",
+            "title": "Evaluation Id"
+          }
+        },
+        "additionalProperties": false,
+        "type": "object",
+        "required": [
+          "evaluation_id"
+        ],
+        "title": "ProtocolEligibilityRequest"
+      },
+      "QualityRequest": {
+        "properties": {
+          "measurement_ids": {
+            "items": {
+              "type": "string",
+              "maxLength": 128,
+              "minLength": 1,
+              "pattern": "^[A-Za-z0-9_.:-]+$"
+            },
+            "type": "array",
+            "maxItems": 1000,
+            "minItems": 1,
+            "title": "Measurement Ids"
+          },
+          "as_of": {
+            "type": "string",
+            "format": "date-time",
+            "title": "As Of"
+          },
+          "historical": {
+            "type": "boolean",
+            "title": "Historical",
+            "default": false
+          }
+        },
+        "additionalProperties": false,
+        "type": "object",
+        "required": [
+          "measurement_ids",
+          "as_of"
+        ],
+        "title": "QualityRequest"
+      },
+      "ResourceAssessment": {
+        "properties": {
+          "mode": {
+            "type": "string",
+            "enum": [
+              "FULL",
+              "LOW_POWER",
+              "EMERGENCY_POWER"
+            ],
+            "title": "Mode"
+          },
+          "proposed_interval_seconds": {
+            "type": "integer",
+            "exclusiveMinimum": 0.0,
+            "title": "Proposed Interval Seconds"
+          },
+          "required_interval_seconds": {
+            "type": "integer",
+            "exclusiveMinimum": 0.0,
+            "title": "Required Interval Seconds"
+          },
+          "policy_reference": {
+            "type": "string",
+            "minLength": 1,
+            "title": "Policy Reference"
+          },
+          "measurement_ids": {
+            "items": {
+              "type": "string",
+              "maxLength": 128,
+              "minLength": 1,
+              "pattern": "^[A-Za-z0-9_.:-]+$"
+            },
+            "type": "array",
+            "maxItems": 1000,
+            "minItems": 1,
+            "title": "Measurement Ids"
+          },
+          "as_of": {
+            "type": "string",
+            "format": "date-time",
+            "title": "As Of"
+          }
+        },
+        "additionalProperties": false,
+        "type": "object",
+        "required": [
+          "mode",
+          "proposed_interval_seconds",
+          "required_interval_seconds",
+          "policy_reference",
+          "measurement_ids",
+          "as_of"
+        ],
+        "title": "ResourceAssessment"
+      },
+      "TestReason": {
+        "properties": {
+          "condition_id": {
+            "type": "string",
+            "title": "Condition Id"
+          },
+          "reason": {
+            "type": "string",
+            "title": "Reason"
+          },
+          "concepts": {
+            "anyOf": [
+              {
+                "items": {
+                  "type": "string"
+                },
+                "type": "array"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Concepts"
+          },
+          "unresolved_candidates": {
+            "anyOf": [
+              {
+                "items": {
+                  "type": "string"
+                },
+                "type": "array"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Unresolved Candidates"
+          },
+          "purpose": {
+            "anyOf": [
+              {
+                "type": "string",
+                "enum": [
+                  "DIAGNOSTIC_RESOLUTION",
+                  "PROTOCOL_SAFETY"
+                ]
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Purpose"
+          },
+          "alternatives_follow_evaluation_tree": {
+            "anyOf": [
+              {
+                "type": "boolean"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Alternatives Follow Evaluation Tree"
+          },
+          "source_ids": {
+            "anyOf": [
+              {
+                "items": {
+                  "type": "string"
+                },
+                "type": "array"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Source Ids"
+          }
+        },
+        "additionalProperties": false,
+        "type": "object",
+        "required": [
+          "condition_id",
+          "reason"
+        ],
+        "title": "TestReason"
+      },
+      "TraceNode": {
+        "properties": {
+          "operator": {
+            "type": "string",
+            "title": "Operator"
+          },
+          "state": {
+            "anyOf": [
+              {
+                "type": "boolean"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "State"
+          },
+          "truth_state": {
+            "anyOf": [
+              {
+                "type": "string",
+                "enum": [
+                  "TRUE",
+                  "FALSE",
+                  "UNKNOWN",
+                  "INVALID"
+                ]
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Truth State"
+          },
+          "field": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Field"
+          },
+          "expected": {
+            "$ref": "#/components/schemas/JsonValue"
+          },
+          "actual": {
+            "$ref": "#/components/schemas/JsonValue"
+          },
+          "path": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Path"
+          },
+          "logic_version": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Logic Version"
+          },
+          "children": {
+            "anyOf": [
+              {
+                "items": {
+                  "$ref": "#/components/schemas/TraceNode"
+                },
+                "type": "array"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Children"
+          },
+          "decisive_children": {
+            "anyOf": [
+              {
+                "items": {
+                  "type": "string"
+                },
+                "type": "array"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Decisive Children"
+          },
+          "reasons": {
+            "anyOf": [
+              {
+                "items": {
+                  "type": "string"
+                },
+                "type": "array"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Reasons"
+          },
+          "required_for_resolution": {
+            "anyOf": [
+              {
+                "type": "boolean"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Required For Resolution"
+          },
+          "nonblocking_ancestor": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Nonblocking Ancestor"
+          },
+          "path_id": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Path Id"
+          },
+          "sample_id": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Sample Id"
+          },
+          "context_observation_ids": {
+            "anyOf": [
+              {
+                "items": {
+                  "type": "string"
+                },
+                "type": "array"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Context Observation Ids"
+          },
+          "confirmation_rule": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Confirmation Rule"
+          },
+          "confirmation_evidence": {
+            "anyOf": [
+              {
+                "items": {
+                  "$ref": "#/components/schemas/ConfirmationEvidence"
+                },
+                "type": "array"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Confirmation Evidence"
+          }
+        },
+        "additionalProperties": false,
+        "type": "object",
+        "required": [
+          "operator",
+          "state"
+        ],
+        "title": "TraceNode"
+      },
+      "TransitionRequest": {
+        "properties": {
+          "target": {
+            "type": "string",
+            "enum": [
+              "FINDING",
+              "ASSESSMENT",
+              "TRIAGE",
+              "AUTHORIZED_ACTION",
+              "RECOVERY",
+              "FOLLOW_UP",
+              "CLOSED"
+            ],
+            "title": "Target"
+          },
+          "note": {
+            "type": "string",
+            "minLength": 1,
+            "title": "Note"
+          },
+          "authorization_id": {
+            "anyOf": [
+              {
+                "type": "string",
+                "maxLength": 128,
+                "minLength": 1,
+                "pattern": "^[A-Za-z0-9_.:-]+$"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Authorization Id"
+          },
+          "expected_state": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Expected State"
+          }
+        },
+        "additionalProperties": false,
+        "type": "object",
+        "required": [
+          "target",
+          "note"
+        ],
+        "title": "TransitionRequest"
+      },
+      "TrendRequest": {
+        "properties": {
+          "measurement_ids": {
+            "items": {
+              "type": "string",
+              "maxLength": 128,
+              "minLength": 1,
+              "pattern": "^[A-Za-z0-9_.:-]+$"
+            },
+            "type": "array",
+            "minItems": 2,
+            "title": "Measurement Ids"
+          },
+          "as_of": {
+            "type": "string",
+            "format": "date-time",
+            "title": "As Of"
+          },
+          "ewma_lambda": {
+            "type": "number",
+            "maximum": 1.0,
+            "exclusiveMinimum": 0.0,
+            "title": "Ewma Lambda"
+          },
+          "cusum_target": {
+            "type": "number",
+            "title": "Cusum Target"
+          },
+          "cusum_allowance": {
+            "type": "number",
+            "minimum": 0.0,
+            "title": "Cusum Allowance"
+          },
+          "baseline_id": {
+            "anyOf": [
+              {
+                "type": "string",
+                "maxLength": 128,
+                "minLength": 1,
+                "pattern": "^[A-Za-z0-9_.:-]+$"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Baseline Id"
+          },
+          "max_gap_seconds": {
+            "anyOf": [
+              {
+                "type": "integer",
+                "exclusiveMinimum": 0.0
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Max Gap Seconds"
+          },
+          "ewma_initial": {
+            "anyOf": [
+              {
+                "type": "number"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Ewma Initial"
+          },
+          "cusum_decision_limit": {
+            "anyOf": [
+              {
+                "type": "number",
+                "exclusiveMinimum": 0.0
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Cusum Decision Limit"
+          },
+          "policy_reference": {
+            "type": "string",
+            "minLength": 1,
+            "title": "Policy Reference",
+            "default": "RESEARCH_CONFIGURATION_UNVALIDATED"
+          }
+        },
+        "additionalProperties": false,
+        "type": "object",
+        "required": [
+          "measurement_ids",
+          "as_of",
+          "ewma_lambda",
+          "cusum_target",
+          "cusum_allowance"
+        ],
+        "title": "TrendRequest"
+      },
+      "ValidationError": {
+        "properties": {
+          "loc": {
+            "items": {
+              "anyOf": [
+                {
+                  "type": "string"
+                },
+                {
+                  "type": "integer"
+                }
+              ]
+            },
+            "type": "array",
+            "title": "Location"
+          },
+          "msg": {
+            "type": "string",
+            "title": "Message"
+          },
+          "type": {
+            "type": "string",
+            "title": "Error Type"
+          },
+          "input": {
+            "title": "Input"
+          },
+          "ctx": {
+            "type": "object",
+            "title": "Context"
+          }
+        },
+        "type": "object",
+        "required": [
+          "loc",
+          "msg",
+          "type"
+        ],
+        "title": "ValidationError"
+      }
+    },
+    "securitySchemes": {
+      "BearerAuth": {
+        "type": "http",
+        "scheme": "bearer",
+        "description": "Server-owned identity, role and subject/mission scope. Reader cannot write."
+      }
+    }
+  }
+}

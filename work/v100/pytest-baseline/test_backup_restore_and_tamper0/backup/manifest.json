@@ -1,0 +1,14 @@
+{
+  "format": "VIGILE_SQLITE_BACKUP_1",
+  "source": "C:\\Users\\Gianni\\Desktop\\Vigile\\work\\v100\\pytest-baseline\\test_backup_restore_and_tamper0\\data\\test.sqlite3",
+  "database": "vigile.sqlite3",
+  "sha256": "6856c344e8142bf23b82ed608a093841a2374005ad3845ff998bdd7196170c52",
+  "state": {
+    "record_sequence": 1,
+    "record_count": 1,
+    "records_hash": "4a1891f8745536b3287f182eae642aeacb767da5e5c7216c1d3b38c360411deb",
+    "audit_sequence": 1,
+    "audit_hash": "925b24969090d9b3a8e1e52f3a97e974c069765d29222390fc92c3da5020a27c"
+  },
+  "sqlite_encryption": "NONE"
+}

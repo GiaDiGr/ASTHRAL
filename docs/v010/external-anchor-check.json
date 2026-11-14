@@ -1,0 +1,35 @@
+{
+  "acl": {
+    "path": "C:\\Users\\Gianni\\AppData\\Local\\Packages\\OpenAI.Codex_2p2nqsd0c76g0\\LocalCache\\Local\\Vigile\\integrity",
+    "user_sid": "S-1-5-21-4266034318-2299397883-1611257766-1001",
+    "scope": "CURRENT_USER_AND_SYSTEM",
+    "same_user_processes_isolated": false
+  },
+  "anchor": {
+    "anchor": "C:\\Users\\Gianni\\AppData\\Local\\Vigile\\integrity\\v090-before-v010.anchor.json",
+    "algorithm": "HMAC-SHA256",
+    "checkpoint": {
+      "record_sequence": 244,
+      "record_count": 244,
+      "records_hash": "906291208b74476602d22c041e61992580ea7ad1b57b8bb596ce61ce5d9c18f1",
+      "audit_sequence": 250,
+      "audit_hash": "0e193dc1ebab2c4bb3af4ba89d2705b2e63e2e12fa06c98386f1383712ba327a"
+    },
+    "same_user_compromise_resistant": false
+  },
+  "verification": {
+    "valid": true,
+    "anchored_prefix": {
+      "record_sequence": 244,
+      "record_count": 244,
+      "records_hash": "906291208b74476602d22c041e61992580ea7ad1b57b8bb596ce61ce5d9c18f1",
+      "audit_sequence": 250,
+      "audit_hash": "0e193dc1ebab2c4bb3af4ba89d2705b2e63e2e12fa06c98386f1383712ba327a"
+    },
+    "latest_checkpoint": {
+      "sequence": 250,
+      "hash": "0e193dc1ebab2c4bb3af4ba89d2705b2e63e2e12fa06c98386f1383712ba327a"
+    },
+    "protection": "DB_ONLY_TAMPERING_DETECTION_NOT_SAME_USER_COMPROMISE"
+  }
+}

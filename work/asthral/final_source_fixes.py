@@ -1,0 +1,7 @@
+from pathlib import Path
+R=Path(__file__).resolve().parents[2]
+p=R/'engine/vigile/knowledge_v08.py';s=p.read_text(encoding='utf8').replace("for name,authority,version in (SOURCES if sources is None else sources):", "active_sources=(SOURCES[1:] if (root/SOURCES[1][0]).exists() else SOURCES) if sources is None else sources\n    for name,authority,version in active_sources:");p.write_text(s,encoding='utf8')
+p=R/'engine/vigile/english.py';s=p.read_text(encoding='utf8').replace(")?)astral(?=", ")?)(?:astral|as thrill)(?=");assert '(?:astral|as thrill)' in s;p.write_text(s,encoding='utf8')
+p=R/'engine/tests/test_asthral_hybrid.py';s=p.read_text(encoding='utf8');s=s.replace("('astral projection','astral projection')", "('as thrill what is potassium 3.2 mmol/L, no insulin','ASTHRAL what is potassium 3.2 mmol/L, no insulin'),('as thrill increases','as thrill increases'),('astral projection','astral projection')");p.write_text(s,encoding='utf8')
+p=R/'engine/tests/test_v08_ai.py';s=p.read_text(encoding='utf8').replace("def test_independent_bank_critical(engine,library):", "def test_independent_bank_critical(engine,library):\n    if not (ROOT/'docs/clinical/deep-research-report-2026-10-16.md').exists():pytest.skip('Historical supplied research pack is not redistributed; ASTHRAL English retrieval has separate tests.')");p.write_text(s,encoding='utf8')
+print('Legacy retrieval corpus behavior preserved; observed assistant-name variant scoped to leading address only')

@@ -1,0 +1,30 @@
+Loading annotated-types, pydantic, pydantic_core, sqlite3, typing-extensions, typing-inspection
+Loaded annotated-types, pydantic, pydantic_core, sqlite3, typing-extensions, typing-inspection
+✔ all browser WASM clinical outputs match CPython reference fixtures exactly (358.0077ms)
+✔ SQLite serialization preserves audits and blocks foreign profile recovery (36.9202ms)
+✔ reference baseline and trend calculations run in real WASM (16.8107ms)
+✔ original voice parser extracts measurements without inventing missing units (3.9887ms)
+(node:154828) [MODULE_TYPELESS_PACKAGE_JSON] Warning: Module type of file:///C:/Users/Gianni/Desktop/Vigile/web-local/src/vault.js is not specified and it doesn't parse as CommonJS.
+Reparsing as ES module because module syntax was detected. This incurs a performance overhead.
+To eliminate this warning, add "type": "module" to \\?\C:\Users\Gianni\Desktop\Vigile\web-local\package.json.
+(Use `node --trace-warnings ...` to show where the warning was created)
+✔ different local profiles have different salts and cannot unlock each other (349.9733ms)
+✔ encrypted export recovers after local deletion and rejects accidental overwrite (135.4779ms)
+✔ stale tabs cannot overwrite a newer encrypted revision (208.8841ms)
+✔ tampered ciphertext fails authentication after recovery (136.9057ms)
+✔ import policies reject unsupported KDF and schema versions (68.9331ms)
+✔ a profile locked while encryption is pending cannot commit the late write (137.5022ms)
+(node:154876) [MODULE_TYPELESS_PACKAGE_JSON] Warning: Module type of file:///C:/Users/Gianni/Desktop/Vigile/web-local/src/vectors.js is not specified and it doesn't parse as CommonJS.
+Reparsing as ES module because module syntax was detected. This incurs a performance overhead.
+To eliminate this warning, add "type": "module" to \\?\C:\Users\Gianni\Desktop\Vigile\web-local\package.json.
+(Use `node --trace-warnings ...` to show where the warning was created)
+✔ hybrid reranking never admits a source absent from verified lexical candidates (1.1524ms)
+✔ stale or malformed public indexes fail closed to the caller fallback (0.9816ms)
+ℹ tests 12
+ℹ suites 0
+ℹ pass 12
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 2233.4216

@@ -1,0 +1,917 @@
+{
+  "corpus": "SYNTHETIC_INSTALLED_SAPI_NOT_HUMAN_MEDICAL_SPEECH",
+  "reference_independent_of_stt": true,
+  "clinical_validation": false,
+  "microphone_capture_latency": "NOT_MEASURED_BY_SYNTHETIC_CORPUS",
+  "power": "NOT_MEASURED",
+  "rows": [
+    {
+      "language": "en",
+      "id": 0,
+      "reference": "Microgravity.",
+      "prediction": "microgravity",
+      "word_errors": 0,
+      "reference_words": 1,
+      "wer": 0.0,
+      "stt_seconds": 3.9040343999949982,
+      "tts": {
+        "synthesis_seconds": 2.318606800006819,
+        "voice": "Microsoft David Desktop",
+        "audio_bytes": 57324,
+        "audio_retained": false
+      },
+      "synthetic_audio_seconds": 1.79,
+      "roundtrip_seconds": 6.237536799992085,
+      "error": null,
+      "negation_review_required": false,
+      "process": {
+        "pid": 40516,
+        "working_set_bytes": 162516992,
+        "private_bytes": 428716032,
+        "cpu_seconds": 4.046875
+      }
+    },
+    {
+      "language": "en",
+      "id": 1,
+      "reference": "Hypoglycemia.",
+      "prediction": "hypoglycemia",
+      "word_errors": 0,
+      "reference_words": 1,
+      "wer": 0.0,
+      "stt_seconds": 1.8861854999995558,
+      "tts": {
+        "synthesis_seconds": 0.8485072000039509,
+        "voice": "Microsoft David Desktop",
+        "audio_bytes": 63084,
+        "audio_retained": false
+      },
+      "synthetic_audio_seconds": 1.97,
+      "roundtrip_seconds": 2.74778810000862,
+      "error": null,
+      "negation_review_required": false,
+      "process": {
+        "pid": 40516,
+        "working_set_bytes": 160563200,
+        "private_bytes": 425086976,
+        "cpu_seconds": 5.90625
+      }
+    },
+    {
+      "language": "en",
+      "id": 2,
+      "reference": "Diabetic ketoacidosis.",
+      "prediction": "diabetic ketoacidosis",
+      "word_errors": 0,
+      "reference_words": 2,
+      "wer": 0.0,
+      "stt_seconds": 2.261592800001381,
+      "tts": {
+        "synthesis_seconds": 0.7692462999984855,
+        "voice": "Microsoft David Desktop",
+        "audio_bytes": 85164,
+        "audio_retained": false
+      },
+      "synthetic_audio_seconds": 2.66,
+      "roundtrip_seconds": 3.0465624000062235,
+      "error": null,
+      "negation_review_required": false,
+      "process": {
+        "pid": 40516,
+        "working_set_bytes": 161681408,
+        "private_bytes": 427773952,
+        "cpu_seconds": 8.09375
+      }
+    },
+    {
+      "language": "en",
+      "id": 3,
+      "reference": "Orthostatic hypotension.",
+      "prediction": "or the static hypertension",
+      "word_errors": 4,
+      "reference_words": 2,
+      "wer": 2.0,
+      "stt_seconds": 1.8571893000043929,
+      "tts": {
+        "synthesis_seconds": 0.7172158000030322,
+        "voice": "Microsoft David Desktop",
+        "audio_bytes": 76844,
+        "audio_retained": false
+      },
+      "synthetic_audio_seconds": 2.4,
+      "roundtrip_seconds": 2.588885899996967,
+      "error": null,
+      "negation_review_required": false,
+      "process": {
+        "pid": 40516,
+        "working_set_bytes": 160337920,
+        "private_bytes": 424591360,
+        "cpu_seconds": 9.9375
+      }
+    },
+    {
+      "language": "en",
+      "id": 4,
+      "reference": "Radiation exposure.",
+      "prediction": "radiation exposure",
+      "word_errors": 0,
+      "reference_words": 2,
+      "wer": 0.0,
+      "stt_seconds": 1.8721579999983078,
+      "tts": {
+        "synthesis_seconds": 0.735593899997184,
+        "voice": "Microsoft David Desktop",
+        "audio_bytes": 67244,
+        "audio_retained": false
+      },
+      "synthetic_audio_seconds": 2.1,
+      "roundtrip_seconds": 2.625471799998195,
+      "error": null,
+      "negation_review_required": false,
+      "process": {
+        "pid": 40516,
+        "working_set_bytes": 162848768,
+        "private_bytes": 428601344,
+        "cpu_seconds": 11.859375
+      }
+    },
+    {
+      "language": "en",
+      "id": 5,
+      "reference": "Heart rate.",
+      "prediction": "heart rate",
+      "word_errors": 0,
+      "reference_words": 2,
+      "wer": 0.0,
+      "stt_seconds": 1.6035918999987189,
+      "tts": {
+        "synthesis_seconds": 0.8770088999881409,
+        "voice": "Microsoft David Desktop",
+        "audio_bytes": 45644,
+        "audio_retained": false
+      },
+      "synthetic_audio_seconds": 1.425,
+      "roundtrip_seconds": 2.490555399999721,
+      "error": null,
+      "negation_review_required": false,
+      "process": {
+        "pid": 40516,
+        "working_set_bytes": 161812480,
+        "private_bytes": 427642880,
+        "cpu_seconds": 13.4375
+      }
+    },
+    {
+      "language": "en",
+      "id": 6,
+      "reference": "Personal baseline.",
+      "prediction": "personal baseline",
+      "word_errors": 0,
+      "reference_words": 2,
+      "wer": 0.0,
+      "stt_seconds": 2.082873400009703,
+      "tts": {
+        "synthesis_seconds": 0.8173670000105631,
+        "voice": "Microsoft David Desktop",
+        "audio_bytes": 66124,
+        "audio_retained": false
+      },
+      "synthetic_audio_seconds": 2.065,
+      "roundtrip_seconds": 2.9160362999973586,
+      "error": null,
+      "negation_review_required": false,
+      "process": {
+        "pid": 40516,
+        "working_set_bytes": 161349632,
+        "private_bytes": 426291200,
+        "cpu_seconds": 15.453125
+      }
+    },
+    {
+      "language": "en",
+      "id": 7,
+      "reference": "Potassium.",
+      "prediction": "potassium",
+      "word_errors": 0,
+      "reference_words": 1,
+      "wer": 0.0,
+      "stt_seconds": 1.6840282000048319,
+      "tts": {
+        "synthesis_seconds": 0.7211700000043493,
+        "voice": "Microsoft David Desktop",
+        "audio_bytes": 54764,
+        "audio_retained": false
+      },
+      "synthetic_audio_seconds": 1.71,
+      "roundtrip_seconds": 2.415005000002566,
+      "error": null,
+      "negation_review_required": false,
+      "process": {
+        "pid": 40516,
+        "working_set_bytes": 162656256,
+        "private_bytes": 429551616,
+        "cpu_seconds": 17.109375
+      }
+    },
+    {
+      "language": "en",
+      "id": 8,
+      "reference": "Oxygen saturation.",
+      "prediction": "oxygen saturation",
+      "word_errors": 0,
+      "reference_words": 2,
+      "wer": 0.0,
+      "stt_seconds": 2.0401111999963177,
+      "tts": {
+        "synthesis_seconds": 0.7270833999937167,
+        "voice": "Microsoft David Desktop",
+        "audio_bytes": 71564,
+        "audio_retained": false
+      },
+      "synthetic_audio_seconds": 2.235,
+      "roundtrip_seconds": 2.782141399991815,
+      "error": null,
+      "negation_review_required": false,
+      "process": {
+        "pid": 40516,
+        "working_set_bytes": 160722944,
+        "private_bytes": 424919040,
+        "cpu_seconds": 19.046875
+      }
+    },
+    {
+      "language": "en",
+      "id": 9,
+      "reference": "VIGILE, how has my physical condition changed during the mission?",
+      "prediction": "vigil how has my physical condition changed during the mission",
+      "word_errors": 1,
+      "reference_words": 10,
+      "wer": 0.1,
+      "stt_seconds": 2.6599208999978146,
+      "tts": {
+        "synthesis_seconds": 0.8577141999994637,
+        "voice": "Microsoft David Desktop",
+        "audio_bytes": 145804,
+        "audio_retained": false
+      },
+      "synthetic_audio_seconds": 4.555,
+      "roundtrip_seconds": 3.539805399996112,
+      "error": null,
+      "negation_review_required": false,
+      "process": {
+        "pid": 40516,
+        "working_set_bytes": 161619968,
+        "private_bytes": 427114496,
+        "cpu_seconds": 21.734375
+      }
+    },
+    {
+      "language": "en",
+      "id": 10,
+      "reference": "VIGILE, why am I receiving this medical alert?",
+      "prediction": "vigil why am i receiving this medical alert",
+      "word_errors": 1,
+      "reference_words": 8,
+      "wer": 0.125,
+      "stt_seconds": 2.219900799987954,
+      "tts": {
+        "synthesis_seconds": 0.7270306999998866,
+        "voice": "Microsoft David Desktop",
+        "audio_bytes": 119564,
+        "audio_retained": false
+      },
+      "synthetic_audio_seconds": 3.735,
+      "roundtrip_seconds": 2.9680075999931432,
+      "error": null,
+      "negation_review_required": false,
+      "process": {
+        "pid": 40516,
+        "working_set_bytes": 162275328,
+        "private_bytes": 428838912,
+        "cpu_seconds": 23.9375
+      }
+    },
+    {
+      "language": "en",
+      "id": 11,
+      "reference": "What information is missing from my evaluation?",
+      "prediction": "what information is missing from my evaluation",
+      "word_errors": 0,
+      "reference_words": 7,
+      "wer": 0.0,
+      "stt_seconds": 2.1820668000000296,
+      "tts": {
+        "synthesis_seconds": 0.7825309999898309,
+        "voice": "Microsoft David Desktop",
+        "audio_bytes": 112524,
+        "audio_retained": false
+      },
+      "synthetic_audio_seconds": 3.515,
+      "roundtrip_seconds": 2.9823769999929937,
+      "error": null,
+      "negation_review_required": false,
+      "process": {
+        "pid": 40516,
+        "working_set_bytes": 162910208,
+        "private_bytes": 428535808,
+        "cpu_seconds": 26.125
+      }
+    },
+    {
+      "language": "en",
+      "id": 12,
+      "reference": "Glucose is one hundred eighty milligrams per deciliter.",
+      "prediction": "glucose is one hundred eighty milligrams per deciliter",
+      "word_errors": 0,
+      "reference_words": 8,
+      "wer": 0.0,
+      "stt_seconds": 2.4640039000078104,
+      "tts": {
+        "synthesis_seconds": 0.7185376999987056,
+        "voice": "Microsoft David Desktop",
+        "audio_bytes": 128844,
+        "audio_retained": false
+      },
+      "synthetic_audio_seconds": 4.025,
+      "roundtrip_seconds": 3.2041663999989396,
+      "error": null,
+      "negation_review_required": false,
+      "process": {
+        "pid": 40516,
+        "working_set_bytes": 162308096,
+        "private_bytes": 428068864,
+        "cpu_seconds": 28.5625
+      }
+    },
+    {
+      "language": "en",
+      "id": 13,
+      "reference": "Venous p H is seven point two two.",
+      "prediction": "venus p h's seven point two two",
+      "word_errors": 2,
+      "reference_words": 8,
+      "wer": 0.25,
+      "stt_seconds": 2.1024254000076326,
+      "tts": {
+        "synthesis_seconds": 0.725223300003563,
+        "voice": "Microsoft David Desktop",
+        "audio_bytes": 94124,
+        "audio_retained": false
+      },
+      "synthetic_audio_seconds": 2.94,
+      "roundtrip_seconds": 2.8426630000030855,
+      "error": null,
+      "negation_review_required": false,
+      "process": {
+        "pid": 40516,
+        "working_set_bytes": 162062336,
+        "private_bytes": 427675648,
+        "cpu_seconds": 30.640625
+      }
+    },
+    {
+      "language": "en",
+      "id": 14,
+      "reference": "Treatment is not authorized. The protocol is blocked.",
+      "prediction": "treatment is not authorized the protocol is blocked",
+      "word_errors": 0,
+      "reference_words": 8,
+      "wer": 0.0,
+      "stt_seconds": 2.4868748000008054,
+      "tts": {
+        "synthesis_seconds": 0.7476338999986183,
+        "voice": "Microsoft David Desktop",
+        "audio_bytes": 150284,
+        "audio_retained": false
+      },
+      "synthetic_audio_seconds": 4.695,
+      "roundtrip_seconds": 3.254187600003206,
+      "error": null,
+      "negation_review_required": false,
+      "process": {
+        "pid": 40516,
+        "working_set_bytes": 163192832,
+        "private_bytes": 430739456,
+        "cpu_seconds": 33.046875
+      }
+    },
+    {
+      "language": "en",
+      "id": 15,
+      "reference": "A missing measurement is not a normal result.",
+      "prediction": "a missing measurement is not a normal result",
+      "word_errors": 0,
+      "reference_words": 8,
+      "wer": 0.0,
+      "stt_seconds": 1.9919676999998046,
+      "tts": {
+        "synthesis_seconds": 0.7244042000093032,
+        "voice": "Microsoft David Desktop",
+        "audio_bytes": 102764,
+        "audio_retained": false
+      },
+      "synthetic_audio_seconds": 3.21,
+      "roundtrip_seconds": 2.7340403999987757,
+      "error": null,
+      "negation_review_required": false,
+      "process": {
+        "pid": 40516,
+        "working_set_bytes": 162525184,
+        "private_bytes": 429228032,
+        "cpu_seconds": 35.015625
+      }
+    },
+    {
+      "language": "es",
+      "id": 0,
+      "reference": "Microgravedad.",
+      "prediction": "micro gravedad",
+      "word_errors": 2,
+      "reference_words": 1,
+      "wer": 2.0,
+      "stt_seconds": 1.4186382000043523,
+      "tts": {
+        "synthesis_seconds": 0.7845481999975163,
+        "voice": "Microsoft Helena Desktop",
+        "audio_bytes": 51884,
+        "audio_retained": false
+      },
+      "synthetic_audio_seconds": 1.62,
+      "roundtrip_seconds": 2.209897299995646,
+      "error": null,
+      "negation_review_required": false,
+      "process": {
+        "pid": 40516,
+        "working_set_bytes": 143802368,
+        "private_bytes": 538337280,
+        "cpu_seconds": 36.515625
+      }
+    },
+    {
+      "language": "es",
+      "id": 1,
+      "reference": "Hipoglucemia.",
+      "prediction": "hipoglucemia",
+      "word_errors": 0,
+      "reference_words": 1,
+      "wer": 0.0,
+      "stt_seconds": 0.7640300999919418,
+      "tts": {
+        "synthesis_seconds": 0.7686342000088189,
+        "voice": "Microsoft Helena Desktop",
+        "audio_bytes": 52204,
+        "audio_retained": false
+      },
+      "synthetic_audio_seconds": 1.63,
+      "roundtrip_seconds": 1.542854500003159,
+      "error": null,
+      "negation_review_required": false,
+      "process": {
+        "pid": 40516,
+        "working_set_bytes": 145481728,
+        "private_bytes": 541229056,
+        "cpu_seconds": 37.296875
+      }
+    },
+    {
+      "language": "es",
+      "id": 2,
+      "reference": "Cetoacidosis diabética.",
+      "prediction": "se todas y dosis diabética",
+      "word_errors": 4,
+      "reference_words": 2,
+      "wer": 2.0,
+      "stt_seconds": 0.8791532000032021,
+      "tts": {
+        "synthesis_seconds": 0.7559970000002068,
+        "voice": "Microsoft Helena Desktop",
+        "audio_bytes": 72204,
+        "audio_retained": false
+      },
+      "synthetic_audio_seconds": 2.255,
+      "roundtrip_seconds": 1.6459326000040164,
+      "error": null,
+      "negation_review_required": false,
+      "process": {
+        "pid": 40516,
+        "working_set_bytes": 145121280,
+        "private_bytes": 539967488,
+        "cpu_seconds": 38.1875
+      }
+    },
+    {
+      "language": "es",
+      "id": 3,
+      "reference": "Hipotensión ortostática.",
+      "prediction": "hipotensión orto estática",
+      "word_errors": 2,
+      "reference_words": 2,
+      "wer": 1.0,
+      "stt_seconds": 0.817284999997355,
+      "tts": {
+        "synthesis_seconds": 0.7903675000125077,
+        "voice": "Microsoft Helena Desktop",
+        "audio_bytes": 72044,
+        "audio_retained": false
+      },
+      "synthetic_audio_seconds": 2.25,
+      "roundtrip_seconds": 1.6189555999881122,
+      "error": null,
+      "negation_review_required": false,
+      "process": {
+        "pid": 40516,
+        "working_set_bytes": 145297408,
+        "private_bytes": 541384704,
+        "cpu_seconds": 39.015625
+      }
+    },
+    {
+      "language": "es",
+      "id": 4,
+      "reference": "Exposición a radiación.",
+      "prediction": "exposición a radiación",
+      "word_errors": 0,
+      "reference_words": 3,
+      "wer": 0.0,
+      "stt_seconds": 0.7778070999920601,
+      "tts": {
+        "synthesis_seconds": 0.7681452999968315,
+        "voice": "Microsoft Helena Desktop",
+        "audio_bytes": 72364,
+        "audio_retained": false
+      },
+      "synthetic_audio_seconds": 2.26,
+      "roundtrip_seconds": 1.5559826999960933,
+      "error": null,
+      "negation_review_required": false,
+      "process": {
+        "pid": 40516,
+        "working_set_bytes": 144527360,
+        "private_bytes": 541675520,
+        "cpu_seconds": 39.71875
+      }
+    },
+    {
+      "language": "es",
+      "id": 5,
+      "reference": "Frecuencia cardíaca.",
+      "prediction": "frecuencia cardíaca",
+      "word_errors": 0,
+      "reference_words": 2,
+      "wer": 0.0,
+      "stt_seconds": 0.8135041000059573,
+      "tts": {
+        "synthesis_seconds": 0.7903698000009172,
+        "voice": "Microsoft Helena Desktop",
+        "audio_bytes": 66604,
+        "audio_retained": false
+      },
+      "synthetic_audio_seconds": 2.08,
+      "roundtrip_seconds": 1.6138020000071265,
+      "error": null,
+      "negation_review_required": false,
+      "process": {
+        "pid": 40516,
+        "working_set_bytes": 144683008,
+        "private_bytes": 539324416,
+        "cpu_seconds": 40.53125
+      }
+    },
+    {
+      "language": "es",
+      "id": 6,
+      "reference": "Valor basal personal.",
+      "prediction": "valor basal personal",
+      "word_errors": 0,
+      "reference_words": 3,
+      "wer": 0.0,
+      "stt_seconds": 0.8836606999975629,
+      "tts": {
+        "synthesis_seconds": 0.8150199999945471,
+        "voice": "Microsoft Helena Desktop",
+        "audio_bytes": 65164,
+        "audio_retained": false
+      },
+      "synthetic_audio_seconds": 2.035,
+      "roundtrip_seconds": 1.7106371999980183,
+      "error": null,
+      "negation_review_required": false,
+      "process": {
+        "pid": 40516,
+        "working_set_bytes": 144510976,
+        "private_bytes": 539660288,
+        "cpu_seconds": 41.40625
+      }
+    },
+    {
+      "language": "es",
+      "id": 7,
+      "reference": "Potasio.",
+      "prediction": "potasio",
+      "word_errors": 0,
+      "reference_words": 1,
+      "wer": 0.0,
+      "stt_seconds": 0.7654160000092816,
+      "tts": {
+        "synthesis_seconds": 1.4489699999976438,
+        "voice": "Microsoft Helena Desktop",
+        "audio_bytes": 49644,
+        "audio_retained": false
+      },
+      "synthetic_audio_seconds": 1.55,
+      "roundtrip_seconds": 2.2245985999907134,
+      "error": null,
+      "negation_review_required": false,
+      "process": {
+        "pid": 40516,
+        "working_set_bytes": 143286272,
+        "private_bytes": 537743360,
+        "cpu_seconds": 42.1875
+      }
+    },
+    {
+      "language": "es",
+      "id": 8,
+      "reference": "Saturación de oxígeno.",
+      "prediction": "saturación de oxígeno",
+      "word_errors": 0,
+      "reference_words": 3,
+      "wer": 0.0,
+      "stt_seconds": 0.872220200006268,
+      "tts": {
+        "synthesis_seconds": 0.8528791999997338,
+        "voice": "Microsoft Helena Desktop",
+        "audio_bytes": 68684,
+        "audio_retained": false
+      },
+      "synthetic_audio_seconds": 2.145,
+      "roundtrip_seconds": 1.7383688999980222,
+      "error": null,
+      "negation_review_required": false,
+      "process": {
+        "pid": 40516,
+        "working_set_bytes": 143810560,
+        "private_bytes": 538886144,
+        "cpu_seconds": 43.09375
+      }
+    },
+    {
+      "language": "es",
+      "id": 9,
+      "reference": "VIGILE, cómo cambió mi condición física durante la misión?",
+      "prediction": "vigile como cambio mi condición física durante la misión",
+      "word_errors": 2,
+      "reference_words": 9,
+      "wer": 0.2222222222222222,
+      "stt_seconds": 1.2744583999883616,
+      "tts": {
+        "synthesis_seconds": 0.8104881000035675,
+        "voice": "Microsoft Helena Desktop",
+        "audio_bytes": 139244,
+        "audio_retained": false
+      },
+      "synthetic_audio_seconds": 4.35,
+      "roundtrip_seconds": 2.107163099994068,
+      "error": null,
+      "negation_review_required": false,
+      "process": {
+        "pid": 40516,
+        "working_set_bytes": 144846848,
+        "private_bytes": 540594176,
+        "cpu_seconds": 44.40625
+      }
+    },
+    {
+      "language": "es",
+      "id": 10,
+      "reference": "VIGILE, por qué recibo esta alerta médica?",
+      "prediction": "vigile porque recibo esta alerta médica",
+      "word_errors": 2,
+      "reference_words": 7,
+      "wer": 0.2857142857142857,
+      "stt_seconds": 1.0547851000010269,
+      "tts": {
+        "synthesis_seconds": 0.8646736000082456,
+        "voice": "Microsoft Helena Desktop",
+        "audio_bytes": 111244,
+        "audio_retained": false
+      },
+      "synthetic_audio_seconds": 3.475,
+      "roundtrip_seconds": 1.933950199992978,
+      "error": null,
+      "negation_review_required": false,
+      "process": {
+        "pid": 40516,
+        "working_set_bytes": 143552512,
+        "private_bytes": 536911872,
+        "cpu_seconds": 45.40625
+      }
+    },
+    {
+      "language": "es",
+      "id": 11,
+      "reference": "Qué cambió desde mi última evaluación?",
+      "prediction": "que cambio desde mi última evaluación",
+      "word_errors": 2,
+      "reference_words": 6,
+      "wer": 0.3333333333333333,
+      "stt_seconds": 0.9129715000017313,
+      "tts": {
+        "synthesis_seconds": 0.8120664000016404,
+        "voice": "Microsoft Helena Desktop",
+        "audio_bytes": 89804,
+        "audio_retained": false
+      },
+      "synthetic_audio_seconds": 2.805,
+      "roundtrip_seconds": 1.7402259999944363,
+      "error": null,
+      "negation_review_required": false,
+      "process": {
+        "pid": 40516,
+        "working_set_bytes": 143470592,
+        "private_bytes": 537378816,
+        "cpu_seconds": 46.296875
+      }
+    },
+    {
+      "language": "es",
+      "id": 12,
+      "reference": "La glucosa es ciento ochenta miligramos por decilitro.",
+      "prediction": "la glucosa es ciento ochenta miligramos por litro",
+      "word_errors": 1,
+      "reference_words": 8,
+      "wer": 0.125,
+      "stt_seconds": 1.2834409999923082,
+      "tts": {
+        "synthesis_seconds": 0.8819910000020172,
+        "voice": "Microsoft Helena Desktop",
+        "audio_bytes": 115244,
+        "audio_retained": false
+      },
+      "synthetic_audio_seconds": 3.6,
+      "roundtrip_seconds": 2.1844355999928666,
+      "error": null,
+      "negation_review_required": false,
+      "process": {
+        "pid": 40516,
+        "working_set_bytes": 143495168,
+        "private_bytes": 536821760,
+        "cpu_seconds": 47.53125
+      }
+    },
+    {
+      "language": "es",
+      "id": 13,
+      "reference": "El p H venoso es siete coma veintidós.",
+      "prediction": "el peace venoso y siete coma veintidós",
+      "word_errors": 3,
+      "reference_words": 8,
+      "wer": 0.375,
+      "stt_seconds": 0.9917445999890333,
+      "tts": {
+        "synthesis_seconds": 0.8060414000065066,
+        "voice": "Microsoft Helena Desktop",
+        "audio_bytes": 95244,
+        "audio_retained": false
+      },
+      "synthetic_audio_seconds": 2.975,
+      "roundtrip_seconds": 1.8081175999977859,
+      "error": null,
+      "negation_review_required": false,
+      "process": {
+        "pid": 40516,
+        "working_set_bytes": 154210304,
+        "private_bytes": 547811328,
+        "cpu_seconds": 48.515625
+      }
+    },
+    {
+      "language": "es",
+      "id": 14,
+      "reference": "El tratamiento no está autorizado. El protocolo está bloqueado.",
+      "prediction": "el tratamiento no está autorizado el protocolo está bloqueado",
+      "word_errors": 0,
+      "reference_words": 9,
+      "wer": 0.0,
+      "stt_seconds": 1.2659424000012223,
+      "tts": {
+        "synthesis_seconds": 0.9069974000012735,
+        "voice": "Microsoft Helena Desktop",
+        "audio_bytes": 155884,
+        "audio_retained": false
+      },
+      "synthetic_audio_seconds": 4.87,
+      "roundtrip_seconds": 2.1922427999961656,
+      "error": null,
+      "negation_review_required": false,
+      "process": {
+        "pid": 40516,
+        "working_set_bytes": 145285120,
+        "private_bytes": 539697152,
+        "cpu_seconds": 49.78125
+      }
+    },
+    {
+      "language": "es",
+      "id": 15,
+      "reference": "Un dato ausente no es un resultado normal.",
+      "prediction": "un dato ausente no es un resultado normal",
+      "word_errors": 0,
+      "reference_words": 8,
+      "wer": 0.0,
+      "stt_seconds": 0.9666623999946751,
+      "tts": {
+        "synthesis_seconds": 0.9535692999925232,
+        "voice": "Microsoft Helena Desktop",
+        "audio_bytes": 96044,
+        "audio_retained": false
+      },
+      "synthetic_audio_seconds": 3.0,
+      "roundtrip_seconds": 1.9334681000036653,
+      "error": null,
+      "negation_review_required": false,
+      "process": {
+        "pid": 40516,
+        "working_set_bytes": 146264064,
+        "private_bytes": 542363648,
+        "cpu_seconds": 50.796875
+      }
+    }
+  ],
+  "failures": [
+    {
+      "case": "empty",
+      "rejected": "AUDIO_SIZE_INVALID"
+    },
+    {
+      "case": "corrupt",
+      "rejected": "AUDIO_SIZE_INVALID"
+    },
+    {
+      "case": "wrong-language",
+      "recognized": "a o sea es físico que intención cheng joven game jam",
+      "review_required": true
+    },
+    {
+      "case": "silence",
+      "rejected": "AUDIO_SILENCE_OR_TOO_QUIET"
+    },
+    {
+      "case": "seeded-white-noise",
+      "recognized": "huh",
+      "possible_noise_false_positive": true,
+      "review_required": true
+    }
+  ],
+  "before": {
+    "monotonic": 88859.1894419,
+    "available_ram_bytes": 6104047616,
+    "processes": [
+      {
+        "pid": 40516,
+        "working_set_bytes": 23756800,
+        "private_bytes": 14225408,
+        "cpu_seconds": 0.171875
+      }
+    ],
+    "energy": "NOT_MEASURED",
+    "gpu_global": {
+      "vram_used_MiB": 3948,
+      "gpu_utilization_percent": 0,
+      "memory_utilization_percent": 0
+    }
+  },
+  "after": {
+    "monotonic": 88943.5430426,
+    "available_ram_bytes": 6532108288,
+    "processes": [
+      {
+        "pid": 40516,
+        "working_set_bytes": 168284160,
+        "private_bytes": 570093568,
+        "cpu_seconds": 55.109375
+      }
+    ],
+    "energy": "NOT_MEASURED",
+    "gpu_global": {
+      "vram_used_MiB": 3948,
+      "gpu_utilization_percent": 0,
+      "memory_utilization_percent": 0
+    }
+  },
+  "cpu_seconds": 54.9375,
+  "summary": {
+    "en": {
+      "utterances": 16,
+      "corpus_wer": 0.1111111111111111,
+      "exact_transcripts": 12,
+      "negation_flags": 0
+    },
+    "es": {
+      "utterances": 16,
+      "corpus_wer": 0.2465753424657534,
+      "exact_transcripts": 8,
+      "negation_flags": 0
+    }
+  }
+}

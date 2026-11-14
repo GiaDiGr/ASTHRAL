@@ -1,0 +1,347 @@
+{
+  "scope": "CONTROLLED_SYNTHETIC_FAILURE_DIAGNOSIS_NOT_LLM_AUDIT",
+  "question": "Explain recorded baseline values.",
+  "rows": [
+    {
+      "mode": "FULL",
+      "repetition": 0,
+      "seconds": 6.772924999997485,
+      "requests_attempted": 1,
+      "status": "EXTRACTIVE_FALLBACK",
+      "generated_count": 0,
+      "stages": [
+        {
+          "stage": "GENERATION",
+          "result": {
+            "sentences": [
+              {
+                "evidence_ids": [
+                  "M5"
+                ],
+                "text": "The baseline value for VO2 max is 50.0 mL/min/kg, described as a physiological measurement, not a diagnosis."
+              },
+              {
+                "evidence_ids": [
+                  "M25"
+                ],
+                "text": "The baseline heart rate is 72.0 bpm, recorded as a descriptive value without clinical significance."
+              }
+            ]
+          },
+          "metrics": {
+            "elapsed_ms": 6485.240300011355,
+            "usage": {},
+            "timings": {},
+            "load_duration_ns": 4546396500,
+            "total_duration_ns": 6470286900,
+            "prompt_eval_count": 1814,
+            "eval_count": 85,
+            "eval_duration_ns": 1291817000
+          },
+          "seconds": 6.485326700028963
+        }
+      ],
+      "errors": [
+        {
+          "type": "ValueError",
+          "safe_code": "CLINICAL_CLAIM_REQUIRES_EXACT_ENGINE_TEXT"
+        }
+      ],
+      "engine_result_ids": [
+        "M1",
+        "M5",
+        "M24",
+        "M6",
+        "M25",
+        "M8",
+        "C-29",
+        "M13"
+      ]
+    },
+    {
+      "mode": "FULL",
+      "repetition": 1,
+      "seconds": 1.6633645999827422,
+      "requests_attempted": 1,
+      "status": "EXTRACTIVE_FALLBACK",
+      "generated_count": 0,
+      "stages": [
+        {
+          "stage": "GENERATION",
+          "result": {
+            "sentences": [
+              {
+                "evidence_ids": [
+                  "M5"
+                ],
+                "text": "The baseline value for VO2 max is 50.0 mL/min/kg, described as a physiological measurement, not a diagnosis."
+              },
+              {
+                "evidence_ids": [
+                  "M25"
+                ],
+                "text": "The baseline heart rate is 72.0 bpm, recorded as a descriptive value without clinical significance."
+              }
+            ]
+          },
+          "metrics": {
+            "elapsed_ms": 1389.712399977725,
+            "usage": {},
+            "timings": {},
+            "load_duration_ns": 19622700,
+            "total_duration_ns": 1348635300,
+            "prompt_eval_count": 1814,
+            "eval_count": 85,
+            "eval_duration_ns": 1265842000
+          },
+          "seconds": 1.3898315000114962
+        }
+      ],
+      "errors": [
+        {
+          "type": "ValueError",
+          "safe_code": "CLINICAL_CLAIM_REQUIRES_EXACT_ENGINE_TEXT"
+        }
+      ],
+      "engine_result_ids": [
+        "M1",
+        "M5",
+        "M24",
+        "M6",
+        "M25",
+        "M8",
+        "C-29",
+        "M13"
+      ]
+    },
+    {
+      "mode": "FULL",
+      "repetition": 2,
+      "seconds": 1.7699349999893457,
+      "requests_attempted": 1,
+      "status": "EXTRACTIVE_FALLBACK",
+      "generated_count": 0,
+      "stages": [
+        {
+          "stage": "GENERATION",
+          "result": {
+            "sentences": [
+              {
+                "evidence_ids": [
+                  "M5"
+                ],
+                "text": "The baseline value for VO2 max is 50.0 mL/min/kg, described as a physiological measurement, not a diagnosis."
+              },
+              {
+                "evidence_ids": [
+                  "M25"
+                ],
+                "text": "The baseline heart rate is 72.0 bpm, recorded as a descriptive value without clinical significance."
+              }
+            ]
+          },
+          "metrics": {
+            "elapsed_ms": 1424.5200000004843,
+            "usage": {},
+            "timings": {},
+            "load_duration_ns": 18984800,
+            "total_duration_ns": 1389045600,
+            "prompt_eval_count": 1814,
+            "eval_count": 85,
+            "eval_duration_ns": 1284348000
+          },
+          "seconds": 1.4246272000018507
+        }
+      ],
+      "errors": [
+        {
+          "type": "ValueError",
+          "safe_code": "CLINICAL_CLAIM_REQUIRES_EXACT_ENGINE_TEXT"
+        }
+      ],
+      "engine_result_ids": [
+        "M1",
+        "M5",
+        "M24",
+        "M6",
+        "M25",
+        "M8",
+        "C-29",
+        "M13"
+      ]
+    },
+    {
+      "mode": "LOW_POWER",
+      "repetition": 0,
+      "seconds": 6.1730714999721386,
+      "requests_attempted": 1,
+      "status": "EXTRACTIVE_FALLBACK",
+      "generated_count": 0,
+      "stages": [
+        {
+          "stage": "GENERATION",
+          "result": {
+            "sentences": [
+              {
+                "evidence_ids": [
+                  "M5"
+                ],
+                "text": "The baseline value for VO2 max is 50.0 mL/min/kg, described as a physiological measurement, not a diagnosis."
+              },
+              {
+                "evidence_ids": [
+                  "M25"
+                ],
+                "text": "The baseline heart rate is 72.0 beats per minute, recorded as a descriptive value without clinical significance."
+              }
+            ]
+          },
+          "metrics": {
+            "elapsed_ms": 5849.697199999355,
+            "usage": {},
+            "timings": {},
+            "load_duration_ns": 4166676200,
+            "total_duration_ns": 5815242300,
+            "prompt_eval_count": 1399,
+            "eval_count": 87,
+            "eval_duration_ns": 1213476000
+          },
+          "seconds": 5.8497840000200085
+        }
+      ],
+      "errors": [
+        {
+          "type": "ValueError",
+          "safe_code": "CLINICAL_CLAIM_REQUIRES_EXACT_ENGINE_TEXT"
+        }
+      ],
+      "engine_result_ids": [
+        "M1",
+        "M5",
+        "M24",
+        "M6",
+        "M25",
+        "M8",
+        "C-29",
+        "M13"
+      ]
+    },
+    {
+      "mode": "LOW_POWER",
+      "repetition": 1,
+      "seconds": 1.8476110000046901,
+      "requests_attempted": 1,
+      "status": "EXTRACTIVE_FALLBACK",
+      "generated_count": 0,
+      "stages": [
+        {
+          "stage": "GENERATION",
+          "result": {
+            "sentences": [
+              {
+                "evidence_ids": [
+                  "M5"
+                ],
+                "text": "The baseline value for VO2 max is 50.0 mL/min/kg, described as a physiological measurement, not a diagnosis."
+              },
+              {
+                "evidence_ids": [
+                  "M6"
+                ],
+                "text": "The trend for VO2 max shows a slope of -0.643 mL/min/kg/day, calculated per observation and labeled as research-only with no clinical threshold."
+              }
+            ]
+          },
+          "metrics": {
+            "elapsed_ms": 1488.3221000200137,
+            "usage": {},
+            "timings": {},
+            "load_duration_ns": 17648600,
+            "total_duration_ns": 1468297800,
+            "prompt_eval_count": 1399,
+            "eval_count": 97,
+            "eval_duration_ns": 1388749000
+          },
+          "seconds": 1.4884131000144407
+        }
+      ],
+      "errors": [
+        {
+          "type": "ValueError",
+          "safe_code": "CLINICAL_CLAIM_REQUIRES_EXACT_ENGINE_TEXT"
+        }
+      ],
+      "engine_result_ids": [
+        "M1",
+        "M5",
+        "M24",
+        "M6",
+        "M25",
+        "M8",
+        "C-29",
+        "M13"
+      ]
+    },
+    {
+      "mode": "LOW_POWER",
+      "repetition": 2,
+      "seconds": 1.9051843999768607,
+      "requests_attempted": 1,
+      "status": "EXTRACTIVE_FALLBACK",
+      "generated_count": 0,
+      "stages": [
+        {
+          "stage": "GENERATION",
+          "result": {
+            "sentences": [
+              {
+                "evidence_ids": [
+                  "M5"
+                ],
+                "text": "The baseline value for VO2 max is 50.0 mL/min/kg, described as a physiological measurement, not a diagnosis."
+              },
+              {
+                "evidence_ids": [
+                  "M6"
+                ],
+                "text": "The trend for VO2 max shows a slope of -0.643 mL/min/kg/day, calculated per observation and labeled as research-only with no clinical threshold."
+              }
+            ]
+          },
+          "metrics": {
+            "elapsed_ms": 1552.1358999540098,
+            "usage": {},
+            "timings": {},
+            "load_duration_ns": 26336300,
+            "total_duration_ns": 1496817400,
+            "prompt_eval_count": 1399,
+            "eval_count": 97,
+            "eval_duration_ns": 1392564000
+          },
+          "seconds": 1.552225699997507
+        }
+      ],
+      "errors": [
+        {
+          "type": "ValueError",
+          "safe_code": "CLINICAL_CLAIM_REQUIRES_EXACT_ENGINE_TEXT"
+        }
+      ],
+      "engine_result_ids": [
+        "M1",
+        "M5",
+        "M24",
+        "M6",
+        "M25",
+        "M8",
+        "C-29",
+        "M13"
+      ]
+    }
+  ],
+  "guards_modified": false,
+  "portal_status_probe": {
+    "state": "OBSERVED",
+    "assistant_busy": false
+  }
+}

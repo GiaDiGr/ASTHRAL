@@ -1,0 +1,14 @@
+{
+  "format": "VIGILE_SQLITE_BACKUP_1",
+  "source": "C:\\Users\\Gianni\\Desktop\\Vigile\\engine\\data\\asthral-release\\vigile.sqlite3",
+  "database": "vigile.sqlite3",
+  "sha256": "3ceab98f5704c5179e27b5976a004bdc841709bdcda55842ce19afc5e9f7becd",
+  "state": {
+    "record_sequence": 553,
+    "record_count": 553,
+    "records_hash": "16d25853298b68005bd46b74429b3a4ef3ba4ef420da6a0588bc987bb5be2d89",
+    "audit_sequence": 556,
+    "audit_hash": "e46925b1b80a24b7c0e2b2f4999527a69e6705effb2eb13ba7fe54f5486363cc"
+  },
+  "sqlite_encryption": "NONE"
+}

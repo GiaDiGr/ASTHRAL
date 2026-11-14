@@ -1,0 +1,38 @@
+{
+  "created": [
+    "engine/vigile/dashboard_api.py",
+    "engine/vigile/portal.py",
+    "engine/vigile/local_assistant.py",
+    "engine/vigile/portal_demo.py",
+    "engine/vigile/web/index.html",
+    "engine/vigile/web/style.css",
+    "engine/vigile/web/app.js",
+    "engine/tests/test_portal.py"
+  ],
+  "modified": [
+    "engine/vigile/api.py",
+    "engine/vigile/security.py",
+    "engine/vigile/service.py",
+    "engine/vigile/__init__.py",
+    "engine/pyproject.toml",
+    "engine/README.md"
+  ],
+  "sha256": {
+    "engine/vigile/dashboard_api.py": "f6c3308e343137bd7d5708f5df3e3ffc0530f42fbc4e3faeb9ff8af47e8a5843",
+    "engine/vigile/portal.py": "66916f19699b3211475be04b2d23e78ba844afd64aa083bd9b6c54dc835a8cc3",
+    "engine/vigile/local_assistant.py": "958f6e6525a74c6f66eea183130baa297868e4a8bfbd3be17c7fc06fc4802a06",
+    "engine/vigile/portal_demo.py": "d314ea8eb790662f3ac9ac670a70b4d2eb9e0815bf3d583570cd17def2ba424b",
+    "engine/vigile/web/index.html": "64bf1469b7d8f388e1c48eb272d2ba40f16120ef15cd9ef27f95722895821dda",
+    "engine/vigile/web/style.css": "79aff26a4cfc222e9129735124faa72179c4e22099ab9bfbafa5079fbe743ade",
+    "engine/vigile/web/app.js": "b36beabb3e03633d318808f655bde1b1db6caaf565cf02f844233dad1a4fb88c",
+    "engine/tests/test_portal.py": "372ea133a8d108f38d14224c618adf71e8a14e9de22542d92c2ee9d1f1544c4b",
+    "engine/vigile/api.py": "95a331634d9b943948000f99337a3dab3c54e210d888d371b555c2d057152472",
+    "engine/vigile/security.py": "ffbc7d89f64f5f9f913c61a21cd7cd2c2e4b07d9ebd89ccf63e622e28732a92c",
+    "engine/vigile/service.py": "da112b6438f6110ae44b272acc980861db3cfb4082494865e3cbce362025377a",
+    "engine/vigile/__init__.py": "a59cc476cb80137b839d3b0c383905001aa6934dd024037e48416b151ab8cb55",
+    "engine/pyproject.toml": "5b96770430e621ec5eb8ecf6a881a99806b90850742c81a989c4f031595b2b88",
+    "engine/README.md": "e30ac032519f6131ca28954a853953a80d880519a470b7bc59b30c791b0b35a6"
+  },
+  "scientific_rules_changed": false,
+  "database_migration": false
+}

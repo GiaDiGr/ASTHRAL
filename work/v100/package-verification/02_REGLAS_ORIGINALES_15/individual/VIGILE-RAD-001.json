@@ -1,0 +1,158 @@
+{
+  "rule_id": "VIGILE-RAD-001",
+  "rule_version": "1.0.0",
+  "title": "Career spaceflight effective radiation dose limit",
+  "domain": "RADIATION",
+  "condition_id": "CUMULATIVE_SPACEFLIGHT_RADIATION_EXPOSURE",
+  "purpose": "Evaluate career NASA effective dose from spaceflight radiation against the career PEL.",
+  "rule_kind": "SPACE_PERMISSIBLE_EXPOSURE_LIMIT",
+  "evidence_class": "NASA_STANDARD",
+  "evidence_status": "DOCUMENTED_AND_COMPUTABLE_WITH_NASA_EFFECTIVE_DOSE_INPUT",
+  "software_validation_status": "REQUIRES_IMPLEMENTATION_VALIDATION",
+  "authorization": {
+    "evaluation": "AUTO_EVALUATION_ALLOWED",
+    "dosimetry_conversion": "REQUIRES_MISSION_AUTHORIZATION",
+    "clinical_action": "REQUIRES_MEDICAL_AUTHORIZATION"
+  },
+  "applicability": {
+    "population": "CREWMEMBER",
+    "exposure_type": "SPACEFLIGHT_RADIATION"
+  },
+  "inputs": [
+    {
+      "name": "past_spaceflight_effective_dose",
+      "type": "number",
+      "canonical_unit": "mSv",
+      "required": true
+    },
+    {
+      "name": "projected_upcoming_mission_effective_dose",
+      "type": "number",
+      "canonical_unit": "mSv",
+      "required_for": "MISSION_PLANNING"
+    },
+    {
+      "name": "evaluation_mode",
+      "type": "enum",
+      "values": [
+        "CURRENT_CAREER_RECORD",
+        "MISSION_PLANNING"
+      ],
+      "required": true
+    },
+    {
+      "name": "dose_methodology",
+      "type": "string",
+      "required": true
+    }
+  ],
+  "derived_variables": [
+    {
+      "name": "evaluated_career_effective_dose",
+      "formula": "CURRENT_CAREER_RECORD: past_spaceflight_effective_dose; MISSION_PLANNING: past_spaceflight_effective_dose + projected_upcoming_mission_effective_dose",
+      "unit": "mSv"
+    }
+  ],
+  "logic": {
+    "preconditions": [
+      "dose values represent NASA effective dose appropriate to V1 4030",
+      "no incompatible absorbed-dose units have been silently summed"
+    ],
+    "decision": [
+      {
+        "when": "evaluated_career_effective_dose < 600",
+        "result": "PASS"
+      },
+      {
+        "when": "evaluated_career_effective_dose >= 600",
+        "result": "FAIL_REQUIREMENT"
+      }
+    ]
+  },
+  "thresholds": {
+    "career_effective_dose": {
+      "value": 600,
+      "unit": "mSv",
+      "operator": "<"
+    }
+  },
+  "temporal_window": {
+    "type": "CAREER_CUMULATIVE"
+  },
+  "confounders": [
+    "incorrect dose-equivalent conversion",
+    "incorrect NASA quality-factor application",
+    "missing prior mission exposure",
+    "mixing effective dose with organ absorbed dose"
+  ],
+  "missing_data_policy": "INCONCLUSIVE",
+  "data_quality_policy": "Do not convert or combine mSv, mGy and mGy-Eq without a validated dosimetric method.",
+  "output": {
+    "primary": "rule_result",
+    "derived": "evaluated_career_effective_dose",
+    "radiation_injury_diagnosis": "NOT_DETERMINED_BY_THIS_RULE"
+  },
+  "severity_semantics": {
+    "on_failure": "PEL_NONCOMPLIANCE",
+    "clinical_severity": "NOT_DETERMINED"
+  },
+  "follow_up": [
+    "ALARA review.",
+    "Mission radiation-protection review.",
+    "Medical interpretation under authorized radiation-health protocol."
+  ],
+  "special_handling": {
+    "medical_and_biomedical_research_exposure": "TRACK_IN_EXPOSURE_HISTORY_BUT_EXCLUDE_FROM_V1_4030_LIMIT_COMPARISON"
+  },
+  "source_locators": [
+    {
+      "source_id": "NASA-STD-3001-V1-REV-C",
+      "requirement": "V1 4030",
+      "section": "4.8.2",
+      "printed_pages": [
+        40,
+        41
+      ],
+      "pdf_page_indices_0based": [
+        39,
+        40
+      ],
+      "url": "https://standards.nasa.gov/sites/default/files/standards/NASA/C//nasa-std-3001-vol-1-rev-c-signature.pdf"
+    }
+  ],
+  "test_cases": [
+    {
+      "id": "RAD001-T01",
+      "synthetic": true,
+      "inputs": {
+        "past_spaceflight_effective_dose": 599.9,
+        "projected_upcoming_mission_effective_dose": 0,
+        "evaluation_mode": "CURRENT_CAREER_RECORD",
+        "dose_methodology": "NASA_APPROVED"
+      },
+      "expected": "PASS"
+    },
+    {
+      "id": "RAD001-T02",
+      "synthetic": true,
+      "inputs": {
+        "past_spaceflight_effective_dose": 600.0,
+        "projected_upcoming_mission_effective_dose": 0,
+        "evaluation_mode": "CURRENT_CAREER_RECORD",
+        "dose_methodology": "NASA_APPROVED"
+      },
+      "expected": "FAIL_REQUIREMENT"
+    },
+    {
+      "id": "RAD001-T03",
+      "synthetic": true,
+      "inputs": {
+        "past_spaceflight_effective_dose": 450,
+        "projected_upcoming_mission_effective_dose": 160,
+        "evaluation_mode": "MISSION_PLANNING",
+        "dose_methodology": "NASA_APPROVED"
+      },
+      "expected": "FAIL_REQUIREMENT"
+    }
+  ]
+}

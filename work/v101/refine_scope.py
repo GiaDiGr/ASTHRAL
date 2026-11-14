@@ -1,0 +1,11 @@
+from pathlib import Path
+R=Path(__file__).resolve().parents[2]
+p=R/'engine/vigile/management.py';s=p.read_text(encoding='utf8')
+s=s.replace("        if condition=='DKA':entries.append", "        for i,step in enumerate(p.get('additional_actions',[])):entries.append((pid+'.additional.'+str(i),step,'DOCUMENTED_REVIEW',{}))\n        if condition=='DKA':entries.append")
+s=s.replace("            if condition=='ANAPHYLAXIS':required=['epinephrine_inventory','verified_drug_concentration','IM_delivery_capability']", "            if condition=='ANAPHYLAXIS':required=['epinephrine_inventory','verified_drug_concentration','IM_delivery_capability'] if title=='EPINEPHRINE_IM' else []")
+s=s.replace("reference_only=reference).model_dump", "reference_only=reference or {k:p[k] for k in ('rules','initial_IV_epinephrine_bolus','pharmacologic_automation','purpose') if k in p}).model_dump")
+s=s.replace("'MISSION_PROTOCOL_AND_HUMAN_REVIEW_REQUIRED']", "'MISSION_PROTOCOL_AND_HUMAN_REVIEW_REQUIRED','RESOURCE_AVAILABLE_NOT_QUANTITY_ADEQUACY','PRECAUTION_CLASSIFICATION_INCOMPLETE_REQUIRES_REVIEW']")
+s=s.replace("'source_ids':registry.get('conditions',cid)['source_ids'],'execution_enabled'", "'source_ids':registry.get('conditions',cid)['source_ids'],'documentary_coverage':registry.get('conditions',cid)['coverage_states'],'execution_enabled'")
+p.write_text(s,encoding='utf8')
+p=R/'engine/vigile/dashboard_api.py';s=p.read_text(encoding='utf8').replace("cutoff=datetime.fromisoformat(cycles[-1]['as_of']) if cycles else datetime.now(timezone.utc)","cutoff=datetime.now(timezone.utc)");p.write_text(s,encoding='utf8')
+p=R/'engine/vigile/mission_frames.py';s=p.read_text(encoding='utf8');needle="        for ev in snapshot['evaluations']:";s=s.replace(needle,"        if 'management_records' in snapshot:snapshot['management_records']=[r for r in snapshot['management_records'] if datetime.fromisoformat(r['recorded_at'])<=at and datetime.fromisoformat(r['occurred_at'])<=at]\n"+needle);p.write_text(s,encoding='utf8')

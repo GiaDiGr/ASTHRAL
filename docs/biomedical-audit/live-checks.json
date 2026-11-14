@@ -1,0 +1,107 @@
+{
+  "synthetic_only": true,
+  "clinical_validation": false,
+  "backend_http": 200,
+  "portal_http": 200,
+  "reader_replays": 4,
+  "reader_write_denied": true,
+  "scope_enforced": true,
+  "audit_valid": true,
+  "persisted_records_unchanged": true,
+  "model_present": "vigile-qwen3-4b:latest",
+  "ollama_configuration_unchanged": true,
+  "assistant_inference_attempted": false,
+  "assistant_consistency_policy": "ENGINE_DATA_REQUIREMENTS_ONLY",
+  "assistant_reply": {
+    "status": "DETERMINISTIC_DATA_SUFFICIENCY",
+    "inference_executed": false,
+    "inference_attempted": false,
+    "message": "Clasificación emitida directamente por el motor; sin reinterpretación del LLM.",
+    "retrieved": [
+      {
+        "id": "E2",
+        "kind": "ENGINE",
+        "text": "DKA: suficiencia de datos. Estado del motor: CRITERIA_MET. Datos pendientes para resolver ramas indeterminadas: ninguno. Las opciones siguen la lógica AND/OR; esta lista no significa que deban medirse todas. Alternativas no medidas que no bloquean este resultado: bicarbonato, cetonas urinarias. Datos inválidos que impiden resolver ramas: ninguno. Datos pendientes para seguridad del protocolo: potasio. Protocolo: BLOCKED_MISSING_DATA. La seguridad terapéutica es independiente de los criterios diagnósticos. Cumplir criterios no es un diagnóstico firmado ni autoriza tratamiento.",
+        "reference": {
+          "evaluation_id": "ce-36f555482a49440eacdb11efed786b10",
+          "condition_id": "DKA",
+          "source_ids": [
+            "SRC-DKA-2024"
+          ],
+          "input_hash": "c2c168db768e4e73e298159fd80df2c4c39e057eda6aa5dc915abd27ccef4723"
+        },
+        "clinical_contract": {
+          "diagnostic_status": "CRITERIA_MET",
+          "missing_required": [],
+          "optional_not_measured": [
+            "bicarbonate_mmol_l",
+            "urine_ketones_plus"
+          ],
+          "required_for_protocol_safety": [
+            "potassium_mmol_l"
+          ]
+        }
+      }
+    ],
+    "answer": [
+      {
+        "id": "E2",
+        "kind": "ENGINE",
+        "text": "DKA: suficiencia de datos. Estado del motor: CRITERIA_MET. Datos pendientes para resolver ramas indeterminadas: ninguno. Las opciones siguen la lógica AND/OR; esta lista no significa que deban medirse todas. Alternativas no medidas que no bloquean este resultado: bicarbonato, cetonas urinarias. Datos inválidos que impiden resolver ramas: ninguno. Datos pendientes para seguridad del protocolo: potasio. Protocolo: BLOCKED_MISSING_DATA. La seguridad terapéutica es independiente de los criterios diagnósticos. Cumplir criterios no es un diagnóstico firmado ni autoriza tratamiento.",
+        "reference": {
+          "evaluation_id": "ce-36f555482a49440eacdb11efed786b10",
+          "condition_id": "DKA",
+          "source_ids": [
+            "SRC-DKA-2024"
+          ],
+          "input_hash": "c2c168db768e4e73e298159fd80df2c4c39e057eda6aa5dc915abd27ccef4723"
+        },
+        "clinical_contract": {
+          "diagnostic_status": "CRITERIA_MET",
+          "missing_required": [],
+          "optional_not_measured": [
+            "bicarbonate_mmol_l",
+            "urine_ketones_plus"
+          ],
+          "required_for_protocol_safety": [
+            "potassium_mmol_l"
+          ]
+        }
+      }
+    ],
+    "sources": [
+      {
+        "source": {
+          "source_id": "SRC-DKA-2024",
+          "organization": "ADA/EASD/AACE/JBDS/DTS expert panel",
+          "title": "Hyperglycemic Crises in Adults With Diabetes: A Consensus Report",
+          "year": 2024,
+          "section": "Section 3, Figure 2A, Table 2; Section 4",
+          "doi": "10.2337/dci24-0032",
+          "url": "https://doi.org/10.2337/dci24-0032",
+          "type": "MULTISOCIETY_CONSENSUS_REPORT",
+          "verification": "VERIFIED",
+          "use": [
+            "DKA_diagnosis",
+            "DKA_monitoring",
+            "DKA_treatment"
+          ]
+        },
+        "source_status": "PINNED_VERIFIED_AT_REPORT_DATE_NOT_CONTINUOUSLY_VERIFIED"
+      }
+    ],
+    "model_status": {
+      "available": true,
+      "reason": "LOCAL_MODEL_READY",
+      "model": "vigile-qwen3-4b:latest",
+      "mode": "FULL",
+      "provider": "ollama"
+    },
+    "evaluation_id": "ce-36f555482a49440eacdb11efed786b10",
+    "generated": [],
+    "mode": "FULL",
+    "document_issues": [],
+    "consistency_policy": "ENGINE_DATA_REQUIREMENTS_ONLY"
+  },
+  "implementation_hash": "fc0f2bc44bcd3a742b0a52d593607168be803cad5df77e7b383fb1472ff29433"
+}

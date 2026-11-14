@@ -1,0 +1,535 @@
+{
+  "original_inventory_files": [
+    {
+      "path": "LEEME_PRIMERO.md",
+      "exists": true,
+      "unchanged": true
+    },
+    {
+      "path": "MANIFIESTO_CONTEOS.json",
+      "exists": true,
+      "unchanged": true
+    },
+    {
+      "path": "MANIFIESTO_SHA256.json",
+      "exists": true,
+      "unchanged": true
+    },
+    {
+      "path": "01_INFORMES\\15_REGLAS_ENTREGA_ORIGINAL_COMPLETA.md",
+      "exists": true,
+      "unchanged": true
+    },
+    {
+      "path": "01_INFORMES\\INVESTIGACION_INTERMEDIA.md",
+      "exists": true,
+      "unchanged": true
+    },
+    {
+      "path": "01_INFORMES\\PRIMERA_INVESTIGACION_ITALIANO.md",
+      "exists": true,
+      "unchanged": true
+    },
+    {
+      "path": "01_INFORMES\\REPORTE_CONSOLIDADO_COMPLETO.md",
+      "exists": true,
+      "unchanged": true
+    },
+    {
+      "path": "01_INFORMES\\SEGUNDA_INVESTIGACION_CON_ZIP_NO_RECUPERADO.md",
+      "exists": true,
+      "unchanged": true
+    },
+    {
+      "path": "02_REGLAS_ORIGINALES_15\\ESQUEMA_DE_REGLAS_ORIGINAL.json",
+      "exists": true,
+      "unchanged": true
+    },
+    {
+      "path": "02_REGLAS_ORIGINALES_15\\inventario_10_reconstruidas.csv",
+      "exists": true,
+      "unchanged": true
+    },
+    {
+      "path": "02_REGLAS_ORIGINALES_15\\inventario_10_reconstruidas.json",
+      "exists": true,
+      "unchanged": true
+    },
+    {
+      "path": "02_REGLAS_ORIGINALES_15\\inventario_15_reglas.csv",
+      "exists": true,
+      "unchanged": true
+    },
+    {
+      "path": "02_REGLAS_ORIGINALES_15\\POLITICA_DE_SEPARACION_CLINICA.json",
+      "exists": true,
+      "unchanged": true
+    },
+    {
+      "path": "02_REGLAS_ORIGINALES_15\\posibles_correspondencias_sin_validar.csv",
+      "exists": true,
+      "unchanged": true
+    },
+    {
+      "path": "02_REGLAS_ORIGINALES_15\\posibles_correspondencias_sin_validar.json",
+      "exists": true,
+      "unchanged": true
+    },
+    {
+      "path": "02_REGLAS_ORIGINALES_15\\REGLAS_15_ORIGINALES.json",
+      "exists": true,
+      "unchanged": true
+    },
+    {
+      "path": "02_REGLAS_ORIGINALES_15\\individual\\VIGILE-AER-001.json",
+      "exists": true,
+      "unchanged": true
+    },
+    {
+      "path": "02_REGLAS_ORIGINALES_15\\individual\\VIGILE-AER-002.json",
+      "exists": true,
+      "unchanged": true
+    },
+    {
+      "path": "02_REGLAS_ORIGINALES_15\\individual\\VIGILE-AER-003.json",
+      "exists": true,
+      "unchanged": true
+    },
+    {
+      "path": "02_REGLAS_ORIGINALES_15\\individual\\VIGILE-BONE-001.json",
+      "exists": true,
+      "unchanged": true
+    },
+    {
+      "path": "02_REGLAS_ORIGINALES_15\\individual\\VIGILE-ENV-001.json",
+      "exists": true,
+      "unchanged": true
+    },
+    {
+      "path": "02_REGLAS_ORIGINALES_15\\individual\\VIGILE-ENV-002.json",
+      "exists": true,
+      "unchanged": true
+    },
+    {
+      "path": "02_REGLAS_ORIGINALES_15\\individual\\VIGILE-ENV-003.json",
+      "exists": true,
+      "unchanged": true
+    },
+    {
+      "path": "02_REGLAS_ORIGINALES_15\\individual\\VIGILE-ENV-004.json",
+      "exists": true,
+      "unchanged": true
+    },
+    {
+      "path": "02_REGLAS_ORIGINALES_15\\individual\\VIGILE-MUS-001.json",
+      "exists": true,
+      "unchanged": true
+    },
+    {
+      "path": "02_REGLAS_ORIGINALES_15\\individual\\VIGILE-MUS-002.json",
+      "exists": true,
+      "unchanged": true
+    },
+    {
+      "path": "02_REGLAS_ORIGINALES_15\\individual\\VIGILE-NUT-001.json",
+      "exists": true,
+      "unchanged": true
+    },
+    {
+      "path": "02_REGLAS_ORIGINALES_15\\individual\\VIGILE-RAD-001.json",
+      "exists": true,
+      "unchanged": true
+    },
+    {
+      "path": "02_REGLAS_ORIGINALES_15\\individual\\VIGILE-RAD-002.json",
+      "exists": true,
+      "unchanged": true
+    },
+    {
+      "path": "02_REGLAS_ORIGINALES_15\\individual\\VIGILE-RAD-003.json",
+      "exists": true,
+      "unchanged": true
+    },
+    {
+      "path": "02_REGLAS_ORIGINALES_15\\individual\\VIGILE-RAD-004.json",
+      "exists": true,
+      "unchanged": true
+    },
+    {
+      "path": "03_CATALOGO\\condiciones_con_rutas_y_cobertura.json",
+      "exists": true,
+      "unchanged": true
+    },
+    {
+      "path": "03_CATALOGO\\condiciones.csv",
+      "exists": true,
+      "unchanged": true
+    },
+    {
+      "path": "03_CATALOGO\\condiciones.json",
+      "exists": true,
+      "unchanged": true
+    },
+    {
+      "path": "03_CATALOGO\\matriz_cobertura_44x11.csv",
+      "exists": true,
+      "unchanged": true
+    },
+    {
+      "path": "03_CATALOGO\\matriz_cobertura_44x11.json",
+      "exists": true,
+      "unchanged": true
+    },
+    {
+      "path": "03_CATALOGO\\plantilla_pathway_original.json",
+      "exists": true,
+      "unchanged": true
+    },
+    {
+      "path": "03_CATALOGO\\rutas_clinicas.csv",
+      "exists": true,
+      "unchanged": true
+    },
+    {
+      "path": "03_CATALOGO\\rutas_clinicas.json",
+      "exists": true,
+      "unchanged": true
+    },
+    {
+      "path": "03_CATALOGO\\condiciones_individuales\\C001.json",
+      "exists": true,
+      "unchanged": true
+    },
+    {
+      "path": "03_CATALOGO\\condiciones_individuales\\C002.json",
+      "exists": true,
+      "unchanged": true
+    },
+    {
+      "path": "03_CATALOGO\\condiciones_individuales\\C003.json",
+      "exists": true,
+      "unchanged": true
+    },
+    {
+      "path": "03_CATALOGO\\condiciones_individuales\\C004.json",
+      "exists": true,
+      "unchanged": true
+    },
+    {
+      "path": "03_CATALOGO\\condiciones_individuales\\C005.json",
+      "exists": true,
+      "unchanged": true
+    },
+    {
+      "path": "03_CATALOGO\\condiciones_individuales\\C006.json",
+      "exists": true,
+      "unchanged": true
+    },
+    {
+      "path": "03_CATALOGO\\condiciones_individuales\\C007.json",
+      "exists": true,
+      "unchanged": true
+    },
+    {
+      "path": "03_CATALOGO\\condiciones_individuales\\C008.json",
+      "exists": true,
+      "unchanged": true
+    },
+    {
+      "path": "03_CATALOGO\\condiciones_individuales\\C009.json",
+      "exists": true,
+      "unchanged": true
+    },
+    {
+      "path": "03_CATALOGO\\condiciones_individuales\\C010.json",
+      "exists": true,
+      "unchanged": true
+    },
+    {
+      "path": "03_CATALOGO\\condiciones_individuales\\C011.json",
+      "exists": true,
+      "unchanged": true
+    },
+    {
+      "path": "03_CATALOGO\\condiciones_individuales\\C012.json",
+      "exists": true,
+      "unchanged": true
+    },
+    {
+      "path": "03_CATALOGO\\condiciones_individuales\\C013.json",
+      "exists": true,
+      "unchanged": true
+    },
+    {
+      "path": "03_CATALOGO\\condiciones_individuales\\C014.json",
+      "exists": true,
+      "unchanged": true
+    },
+    {
+      "path": "03_CATALOGO\\condiciones_individuales\\C015.json",
+      "exists": true,
+      "unchanged": true
+    },
+    {
+      "path": "03_CATALOGO\\condiciones_individuales\\C016.json",
+      "exists": true,
+      "unchanged": true
+    },
+    {
+      "path": "03_CATALOGO\\condiciones_individuales\\C017.json",
+      "exists": true,
+      "unchanged": true
+    },
+    {
+      "path": "03_CATALOGO\\condiciones_individuales\\C018.json",
+      "exists": true,
+      "unchanged": true
+    },
+    {
+      "path": "03_CATALOGO\\condiciones_individuales\\C019.json",
+      "exists": true,
+      "unchanged": true
+    },
+    {
+      "path": "03_CATALOGO\\condiciones_individuales\\C020.json",
+      "exists": true,
+      "unchanged": true
+    },
+    {
+      "path": "03_CATALOGO\\condiciones_individuales\\C021.json",
+      "exists": true,
+      "unchanged": true
+    },
+    {
+      "path": "03_CATALOGO\\condiciones_individuales\\C022.json",
+      "exists": true,
+      "unchanged": true
+    },
+    {
+      "path": "03_CATALOGO\\condiciones_individuales\\C023.json",
+      "exists": true,
+      "unchanged": true
+    },
+    {
+      "path": "03_CATALOGO\\condiciones_individuales\\C024.json",
+      "exists": true,
+      "unchanged": true
+    },
+    {
+      "path": "03_CATALOGO\\condiciones_individuales\\C025.json",
+      "exists": true,
+      "unchanged": true
+    },
+    {
+      "path": "03_CATALOGO\\condiciones_individuales\\C026.json",
+      "exists": true,
+      "unchanged": true
+    },
+    {
+      "path": "03_CATALOGO\\condiciones_individuales\\C027.json",
+      "exists": true,
+      "unchanged": true
+    },
+    {
+      "path": "03_CATALOGO\\condiciones_individuales\\C028.json",
+      "exists": true,
+      "unchanged": true
+    },
+    {
+      "path": "03_CATALOGO\\condiciones_individuales\\C029.json",
+      "exists": true,
+      "unchanged": true
+    },
+    {
+      "path": "03_CATALOGO\\condiciones_individuales\\C030.json",
+      "exists": true,
+      "unchanged": true
+    },
+    {
+      "path": "03_CATALOGO\\condiciones_individuales\\C031.json",
+      "exists": true,
+      "unchanged": true
+    },
+    {
+      "path": "03_CATALOGO\\condiciones_individuales\\C032.json",
+      "exists": true,
+      "unchanged": true
+    },
+    {
+      "path": "03_CATALOGO\\condiciones_individuales\\C033.json",
+      "exists": true,
+      "unchanged": true
+    },
+    {
+      "path": "03_CATALOGO\\condiciones_individuales\\C034.json",
+      "exists": true,
+      "unchanged": true
+    },
+    {
+      "path": "03_CATALOGO\\condiciones_individuales\\C035.json",
+      "exists": true,
+      "unchanged": true
+    },
+    {
+      "path": "03_CATALOGO\\condiciones_individuales\\C036.json",
+      "exists": true,
+      "unchanged": true
+    },
+    {
+      "path": "03_CATALOGO\\condiciones_individuales\\C037.json",
+      "exists": true,
+      "unchanged": true
+    },
+    {
+      "path": "03_CATALOGO\\condiciones_individuales\\C038.json",
+      "exists": true,
+      "unchanged": true
+    },
+    {
+      "path": "03_CATALOGO\\condiciones_individuales\\C039.json",
+      "exists": true,
+      "unchanged": true
+    },
+    {
+      "path": "03_CATALOGO\\condiciones_individuales\\C040.json",
+      "exists": true,
+      "unchanged": true
+    },
+    {
+      "path": "03_CATALOGO\\condiciones_individuales\\C041.json",
+      "exists": true,
+      "unchanged": true
+    },
+    {
+      "path": "03_CATALOGO\\condiciones_individuales\\C042.json",
+      "exists": true,
+      "unchanged": true
+    },
+    {
+      "path": "03_CATALOGO\\condiciones_individuales\\C043.json",
+      "exists": true,
+      "unchanged": true
+    },
+    {
+      "path": "03_CATALOGO\\condiciones_individuales\\C044.json",
+      "exists": true,
+      "unchanged": true
+    },
+    {
+      "path": "04_ALGORITMOS\\algoritmos.csv",
+      "exists": true,
+      "unchanged": true
+    },
+    {
+      "path": "04_ALGORITMOS\\algoritmos.json",
+      "exists": true,
+      "unchanged": true
+    },
+    {
+      "path": "05_SENSORES\\sensores_biomarcadores.csv",
+      "exists": true,
+      "unchanged": true
+    },
+    {
+      "path": "05_SENSORES\\sensores_biomarcadores.json",
+      "exists": true,
+      "unchanged": true
+    },
+    {
+      "path": "06_MULTISISTEMA\\interacciones.csv",
+      "exists": true,
+      "unchanged": true
+    },
+    {
+      "path": "06_MULTISISTEMA\\interacciones.json",
+      "exists": true,
+      "unchanged": true
+    },
+    {
+      "path": "07_EVIDENCIAS\\enlaces_fuente_por_investigacion.csv",
+      "exists": true,
+      "unchanged": true
+    },
+    {
+      "path": "07_EVIDENCIAS\\enlaces_fuente_por_investigacion.json",
+      "exists": true,
+      "unchanged": true
+    },
+    {
+      "path": "07_EVIDENCIAS\\extracciones.csv",
+      "exists": true,
+      "unchanged": true
+    },
+    {
+      "path": "07_EVIDENCIAS\\extracciones.json",
+      "exists": true,
+      "unchanged": true
+    },
+    {
+      "path": "07_EVIDENCIAS\\fuentes.csv",
+      "exists": true,
+      "unchanged": true
+    },
+    {
+      "path": "07_EVIDENCIAS\\fuentes.json",
+      "exists": true,
+      "unchanged": true
+    },
+    {
+      "path": "08_DATASETS\\datasets.csv",
+      "exists": true,
+      "unchanged": true
+    },
+    {
+      "path": "08_DATASETS\\datasets.json",
+      "exists": true,
+      "unchanged": true
+    },
+    {
+      "path": "09_TESTS\\casos_sinteticos.csv",
+      "exists": true,
+      "unchanged": true
+    },
+    {
+      "path": "09_TESTS\\casos_sinteticos.json",
+      "exists": true,
+      "unchanged": true
+    },
+    {
+      "path": "10_CODEx_ESPECIFICACION\\modelos_core_original.json",
+      "exists": true,
+      "unchanged": true
+    },
+    {
+      "path": "10_CODEx_ESPECIFICACION\\PROMPT_PARA_CODEX.md",
+      "exists": true,
+      "unchanged": true
+    },
+    {
+      "path": "10_CODEx_ESPECIFICACION\\regla_ejemplo_co2_original.json",
+      "exists": true,
+      "unchanged": true
+    },
+    {
+      "path": "99_MATERIALES_HISTORICOS_SOLO_REFERENCIA\\PROMPT_FINAL_CODEX_VIGILE.md",
+      "exists": true,
+      "unchanged": true
+    },
+    {
+      "path": "99_MATERIALES_HISTORICOS_SOLO_REFERENCIA\\VIGILE_Investigacion_RECUPERADA_PARCIAL.zip",
+      "exists": true,
+      "unchanged": true
+    },
+    {
+      "path": "99_MATERIALES_HISTORICOS_SOLO_REFERENCIA\\VIGILE_Paquete_Revisado_Codex.zip",
+      "exists": true,
+      "unchanged": true
+    },
+    {
+      "path": "99_MATERIALES_HISTORICOS_SOLO_REFERENCIA\\VIGILE_PROMPT_CODEX_POST_DEEP_RESEARCH.md",
+      "exists": true,
+      "unchanged": true
+    }
+  ],
+  "clinical_report_byte_identical": true
+}

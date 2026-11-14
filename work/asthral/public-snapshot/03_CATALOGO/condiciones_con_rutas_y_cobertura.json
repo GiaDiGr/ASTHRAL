@@ -1,0 +1,1386 @@
+[
+  {
+    "condition_id": "C001",
+    "catalog_record": {
+      "condition_id": "C001",
+      "name_specialty": "Capacidad aeróbica reducida / fisiología cardiovascular",
+      "description_spaceflight": "Pérdida de rendimiento cardiorrespiratorio que puede comprometer EVA y tareas físicas.",
+      "risks_symptoms": "Microgravedad, desacondicionamiento; fatiga y reducción de tolerancia al esfuerzo.",
+      "biomarkers_sensors_tests": "VO₂max/VO₂peak, ergometría, HR.",
+      "baselines_environment_interactions": "VO₂ preflight; fase de misión, gravedad, EVA. Interactúa con músculo y CV.",
+      "primary_evidence": "S01, S04. citeturn6view0turn18search3",
+      "limits_authorizations_state": "Requisitos de rendimiento ≠ enfermedad. `ES`."
+    },
+    "clinical_pathway_profile_as_published": "**P:** programa de contramedidas autorizado `[ES:S04]`; **M:** VO₂max comparable `[ES:S01]`; **Q:** validar unidad/método/baseline/contexto EVA; **D:** aplicar 32,9/36,5 y 80 % solo donde corresponda `[ES:S01]`; **A:** revisar síntomas/rendimiento; **DD:** causas no espaciales y multisistema `[RV]`; **T:** misión/humano; **I:** ejercicio autorizado, no prescripción generada `[RMA]`; **R:** objetivo de reacondicionamiento hacia preflight `[ES:S01]`; **F:** tendencia longitudinal; **G:** `INCONCLUSIVE` para predicción clínica individual.",
+    "coverage_states": {
+      "prevention": "ES",
+      "monitoring": "ES",
+      "data_quality": "ES",
+      "detection": "ES",
+      "assessment": "RV",
+      "differential_diagnosis": "RV",
+      "triage": "RMA",
+      "intervention_authorized": "RMA",
+      "recovery": "ES",
+      "follow_up": "ES",
+      "prognosis": "RO"
+    },
+    "source_ids": [
+      "S01",
+      "S04"
+    ],
+    "NOTICE": "Pathway text is an outline; not an authorized diagnostic or treatment protocol."
+  },
+  {
+    "condition_id": "C002",
+    "catalog_record": {
+      "condition_id": "C002",
+      "name_specialty": "Pérdida de tamaño/fuerza/resistencia muscular / muscular",
+      "description_spaceflight": "Microgravedad descarga musculatura y puede reducir fuerza y resistencia funcionales.",
+      "risks_symptoms": "Desuso, ejercicio insuficiente; debilidad funcional.",
+      "biomarkers_sensors_tests": "Fuerza, dinamometría/ejercicio resistivo, rendimiento funcional.",
+      "baselines_environment_interactions": "Baseline por grupo muscular y método; gravedad y programa de ejercicio.",
+      "primary_evidence": "S01, S04. citeturn6view1turn12search3",
+      "limits_authorizations_state": "No combinar pruebas/grupos incompatibles. `ES`."
+    },
+    "clinical_pathway_profile_as_published": "**P:** ejercicio resistivo `[ES]`; **M:** fuerza mismo grupo/método; **Q:** impedir comparación heterogénea; **D:** ratio actual/preflight y requisito 80 % `[S01]`; **A/DD:** lesión, dolor, nutrición, neurológico; **T:** human review si deterioro funcional; **I:** plan autorizado; **R:** retornar hacia baseline `[S01]`; **F:** repetir prueba; **G:** sin predictor validado.",
+    "coverage_states": {
+      "prevention": "ES",
+      "monitoring": "ES",
+      "data_quality": "ES",
+      "detection": "ES",
+      "assessment": "RV",
+      "differential_diagnosis": "RV",
+      "triage": "RMA",
+      "intervention_authorized": "RMA",
+      "recovery": "ES",
+      "follow_up": "ES",
+      "prognosis": "RO"
+    },
+    "source_ids": [
+      "S01",
+      "S04"
+    ],
+    "NOTICE": "Pathway text is an outline; not an authorized diagnostic or treatment protocol."
+  },
+  {
+    "condition_id": "C003",
+    "catalog_record": {
+      "condition_id": "C003",
+      "name_specialty": "Pérdida ósea y riesgo de fractura / óseo",
+      "description_spaceflight": "Alteraciones esqueléticas y de resistencia ósea durante exposición a gravedad reducida.",
+      "risks_symptoms": "Descarga, duración, nutrición; fractura puede ocurrir sin osteoporosis.",
+      "biomarkers_sensors_tests": "DXA, QCT, BMD, marcadores de recambio cuando disponibles.",
+      "baselines_environment_interactions": "DXA preflight; gravedad, ejercicio, nutrición. Interacción renal.",
+      "primary_evidence": "S01, S06. citeturn6view2turn11search7",
+      "limits_authorizations_state": "BMD por sí sola no predice fractura individual. `ES`."
+    },
+    "clinical_pathway_profile_as_published": "**P:** ejercicio/nutrición/contramedidas autorizadas; **M:** DXA/QCT cuando programado; **Q:** región y tecnología coherentes; **D:** conservación 95/95/90 % `[S01]`; **A:** integrar fractura/riesgo, no solo BMD; **DD:** causas metabólicas/trauma; **T/I:** médico; **R:** reacondicionamiento hacia baseline; **F:** vigilancia postflight; **G:** no inferir fractura individual únicamente de DXA.",
+    "coverage_states": {
+      "prevention": "ES",
+      "monitoring": "ES",
+      "data_quality": "ES",
+      "detection": "ES",
+      "assessment": "RV",
+      "differential_diagnosis": "RV",
+      "triage": "RMA",
+      "intervention_authorized": "RMA",
+      "recovery": "ES",
+      "follow_up": "ES",
+      "prognosis": "RV"
+    },
+    "source_ids": [
+      "S01",
+      "S06"
+    ],
+    "NOTICE": "Pathway text is an outline; not an authorized diagnostic or treatment protocol."
+  },
+  {
+    "condition_id": "C004",
+    "catalog_record": {
+      "condition_id": "C004",
+      "name_specialty": "Desacondicionamiento cardiovascular / cardiovascular",
+      "description_spaceflight": "Adaptaciones de circulación, corazón y vasos durante microgravedad.",
+      "risks_symptoms": "Microgravedad, duración; menor tolerancia funcional/postural.",
+      "biomarkers_sensors_tests": "HR, BP, ECG, volumen sistólico/cardiaco si disponible, ejercicio.",
+      "baselines_environment_interactions": "Baseline CV; gravedad y fase de misión.",
+      "primary_evidence": "S05. citeturn11search0",
+      "limits_authorizations_state": "No existe un único biomarcador diagnóstico. `RV`."
+    },
+    "clinical_pathway_profile_as_published": "**P:** ejercicio y gestión de misión; **M:** HR/BP/rendimiento; **Q:** postura, gravedad, actividad, sensor; **D:** tendencia vs baseline sin umbral diagnóstico `[RV]`; **A:** evaluación CV; **DD:** volumen, ritmo, sueño, enfermedad; **T/I:** autorización médica; **R/F:** tendencia postflight; **G:** research-only.",
+    "coverage_states": {
+      "prevention": "ES",
+      "monitoring": "ES",
+      "data_quality": "ES",
+      "detection": "RV",
+      "assessment": "RV",
+      "differential_diagnosis": "RV",
+      "triage": "RMA",
+      "intervention_authorized": "RMA",
+      "recovery": "RV",
+      "follow_up": "RV",
+      "prognosis": "RO"
+    },
+    "source_ids": [
+      "S05"
+    ],
+    "NOTICE": "Pathway text is an outline; not an authorized diagnostic or treatment protocol."
+  },
+  {
+    "condition_id": "C005",
+    "catalog_record": {
+      "condition_id": "C005",
+      "name_specialty": "Intolerancia ortostática / cardiovascular-autonómica",
+      "description_spaceflight": "Riesgo principalmente en transición a gravedad/reentrada/aterrizaje.",
+      "risks_symptoms": "Desacondicionamiento, cambios hemodinámicos; mareo, presíncope/síncope.",
+      "biomarkers_sensors_tests": "HR, BP beat-to-beat si disponible, test de pie/tilt postflight, síntomas.",
+      "baselines_environment_interactions": "Baseline preflight; aplicabilidad condicionada a gravedad.",
+      "primary_evidence": "S02, S05, S34. citeturn19search2turn26search0",
+      "limits_authorizations_state": "No ejecutar “stand test” en microgravedad como equivalente. Intervención según misión. `RMA`."
+    },
+    "clinical_pathway_profile_as_published": "**P:** contramedidas de transición a gravedad `[S02]`; **M:** síntomas+HR/BP bajo protocolo; **Q:** prohibir extrapolación de prueba postflight a microgravedad; **D:** desviaciones según protocolo autorizado; **A:** stand/tilt solo contexto válido; **DD:** hipovolemia, arritmia, neurológico; **T:** misión; **I:** compresión/u otras contramedidas solo autorizadas; **R/F:** reevaluar en gravedad; **G:** no predictor autónomo.",
+    "coverage_states": {
+      "prevention": "ES",
+      "monitoring": "ES",
+      "data_quality": "ES",
+      "detection": "RV",
+      "assessment": "RV",
+      "differential_diagnosis": "RV",
+      "triage": "RMA",
+      "intervention_authorized": "RMA",
+      "recovery": "RV",
+      "follow_up": "RV",
+      "prognosis": "RO"
+    },
+    "source_ids": [
+      "S02",
+      "S05",
+      "S34"
+    ],
+    "NOTICE": "Pathway text is an outline; not an authorized diagnostic or treatment protocol."
+  },
+  {
+    "condition_id": "C006",
+    "catalog_record": {
+      "condition_id": "C006",
+      "name_specialty": "Tromboembolismo venoso / cardiovascular-hematológico",
+      "description_spaceflight": "Hallazgo emergente de estasis/flujo retrógrado yugular y trombosis durante vuelo.",
+      "risks_symptoms": "Alteración de flujo venoso y factores individuales.",
+      "biomarkers_sensors_tests": "Ecografía venosa, síntomas, evaluación clínica.",
+      "baselines_environment_interactions": "Anatomía/flujo preflight si disponible; fluid shift.",
+      "primary_evidence": "S35. citeturn27search0",
+      "limits_authorizations_state": "NASA reportó estasis/flujo reverso en 6/11 y un trombo oclusivo; no derivar de ello umbral diagnóstico automático. `RMA`."
+    },
+    "clinical_pathway_profile_as_published": "**P:** configuración médica de misión; **M:** síntomas/ultrasonido si indicado; **Q:** adquisición ecográfica adecuada; **D:** no regla automática basada en flujo aislado; **A:** revisión médica; **DD:** variantes anatómicas/compresión/artefacto; **T:** `HUMAN_MEDICAL_REVIEW_REQUIRED`; **I:** bloqueado sin médico; **R/F/G:** protocolo autorizado, pronóstico no automatizado.",
+    "coverage_states": {
+      "prevention": "RV",
+      "monitoring": "RV",
+      "data_quality": "ES",
+      "detection": "RV",
+      "assessment": "RMA",
+      "differential_diagnosis": "RMA",
+      "triage": "RMA",
+      "intervention_authorized": "RMA",
+      "recovery": "RV",
+      "follow_up": "RV",
+      "prognosis": "RO"
+    },
+    "source_ids": [
+      "S35"
+    ],
+    "NOTICE": "Pathway text is an outline; not an authorized diagnostic or treatment protocol."
+  },
+  {
+    "condition_id": "C007",
+    "catalog_record": {
+      "condition_id": "C007",
+      "name_specialty": "Arritmia/evento cardiovascular agudo / cardiovascular-emergencias",
+      "description_spaceflight": "Condición incluida en el espacio de planificación médica de NASA.",
+      "risks_symptoms": "Factores personales, fisiología espacial, enfermedad aguda.",
+      "biomarkers_sensors_tests": "ECG, HR, BP, síntomas.",
+      "baselines_environment_interactions": "Baseline ECG/historia si autorizado.",
+      "primary_evidence": "S17. citeturn21search0turn21search2",
+      "limits_authorizations_state": "Protocolo de diagnóstico/tratamiento requiere autoridad médica. `RMA`."
+    },
+    "clinical_pathway_profile_as_published": "**P:** selección/baseline; **M:** ECG/HR/BP/síntomas; **Q:** señal ECG; **D:** algoritmos de dispositivo validados únicamente; **A/DD/T:** médico; **I:** bloqueado salvo protocolo de emergencia; **R/F:** registro episodio; **G:** IMM puede informar planificación, no diagnóstico.",
+    "coverage_states": {
+      "prevention": "RV",
+      "monitoring": "ES",
+      "data_quality": "ES",
+      "detection": "RV",
+      "assessment": "RMA",
+      "differential_diagnosis": "RMA",
+      "triage": "RMA",
+      "intervention_authorized": "RMA",
+      "recovery": "RV",
+      "follow_up": "RV",
+      "prognosis": "RO"
+    },
+    "source_ids": [
+      "S17"
+    ],
+    "NOTICE": "Pathway text is an outline; not an authorized diagnostic or treatment protocol."
+  },
+  {
+    "condition_id": "C008",
+    "catalog_record": {
+      "condition_id": "C008",
+      "name_specialty": "Redistribución de fluidos/hipovolemia relativa / cardiovascular",
+      "description_spaceflight": "El cambio gravitatorio altera circulación y contribuye a adaptación CV/ortostática.",
+      "risks_symptoms": "Microgravedad, hidratación, retorno a gravedad.",
+      "biomarkers_sensors_tests": "Peso/masa corporal, HR/BP, ultrasonido/hemodinámica según recursos.",
+      "baselines_environment_interactions": "Baselines personales; hidratación y gravedad.",
+      "primary_evidence": "S05. citeturn11search0",
+      "limits_authorizations_state": "No hay umbral operacional único extraído. `RO`."
+    },
+    "clinical_pathway_profile_as_published": "**P:** hidratación/contramedidas configuradas; **M:** hemodinámica; **Q:** postura/gravedad; **D:** tendencias `[RO]`; **A/DD:** causas de volumen; **T/I:** humano; **R/F:** volver al baseline; **G:** research-only.",
+    "coverage_states": {
+      "prevention": "RO",
+      "monitoring": "RV",
+      "data_quality": "ES",
+      "detection": "RO",
+      "assessment": "RV",
+      "differential_diagnosis": "RV",
+      "triage": "RMA",
+      "intervention_authorized": "RMA",
+      "recovery": "RV",
+      "follow_up": "RV",
+      "prognosis": "RO"
+    },
+    "source_ids": [
+      "S05"
+    ],
+    "NOTICE": "Pathway text is an outline; not an authorized diagnostic or treatment protocol."
+  },
+  {
+    "condition_id": "C009",
+    "catalog_record": {
+      "condition_id": "C009",
+      "name_specialty": "SANS / neuro-oftalmología",
+      "description_spaceflight": "Cambios estructurales oculares y cerebrales relacionados con vuelo prolongado.",
+      "risks_symptoms": "Gravedad alterada, susceptibilidad individual; mecanismo incompleto.",
+      "biomarkers_sensors_tests": "Agudeza visual, refracción, fondo de ojo, OCT, IOP cuando disponible.",
+      "baselines_environment_interactions": "Evaluación ocular preflight; duración y fluid shift.",
+      "primary_evidence": "S07. citeturn11search2",
+      "limits_authorizations_state": "NASA señala que no existe equivalente terrestre directo; no diagnosticar por una sola métrica. `RV`."
+    },
+    "clinical_pathway_profile_as_published": "**P:** contramedidas aún en investigación; **M:** visión/OCT/fondo/IOP según disponibilidad; **Q:** mismo equipo/protocolo; **D:** cambio longitudinal; **A:** neuro-oftalmología; **DD:** patología ocular/neurológica terrestre; **T:** pérdida visual aguda → protocolo médico; **I:** bloqueado salvo autorización; **R/F:** seguimiento longitudinal; **G:** no pronóstico validado.",
+    "coverage_states": {
+      "prevention": "RV",
+      "monitoring": "ES",
+      "data_quality": "ES",
+      "detection": "RV",
+      "assessment": "RV",
+      "differential_diagnosis": "RV",
+      "triage": "RMA",
+      "intervention_authorized": "RMA",
+      "recovery": "RV",
+      "follow_up": "ES",
+      "prognosis": "RO"
+    },
+    "source_ids": [
+      "S07"
+    ],
+    "NOTICE": "Pathway text is an outline; not an authorized diagnostic or treatment protocol."
+  },
+  {
+    "condition_id": "C010",
+    "catalog_record": {
+      "condition_id": "C010",
+      "name_specialty": "Space Motion Sickness / neurovestibular",
+      "description_spaceflight": "Síntomas durante adaptación a cambios gravitatorios.",
+      "risks_symptoms": "Transición gravitatoria; náusea, vómito, mareo, desorientación.",
+      "biomarkers_sensors_tests": "Síntomas, función vestibular, rendimiento.",
+      "baselines_environment_interactions": "Susceptibilidad/historia preflight.",
+      "primary_evidence": "S11, S17. citeturn12search2turn21search1",
+      "limits_authorizations_state": "Tratamiento farmacológico bloqueado sin protocolo autorizado. `RMA`."
+    },
+    "clinical_pathway_profile_as_published": "**P:** entrenamiento/plan de adaptación; **M:** síntomas/rendimiento; **Q:** fase gravitatoria; **D:** cuestionario/protocolo autorizado; **A/DD:** vestibular vs GI/neurológico; **T:** según impacto funcional; **I:** medicación solo autorizada; **R/F:** adaptación y recurrencia; **G:** individualización `RV`.",
+    "coverage_states": {
+      "prevention": "ES",
+      "monitoring": "ES",
+      "data_quality": "ES",
+      "detection": "RV",
+      "assessment": "RV",
+      "differential_diagnosis": "RV",
+      "triage": "RMA",
+      "intervention_authorized": "RMA",
+      "recovery": "ES",
+      "follow_up": "ES",
+      "prognosis": "RO"
+    },
+    "source_ids": [
+      "S11",
+      "S17"
+    ],
+    "NOTICE": "Pathway text is an outline; not an authorized diagnostic or treatment protocol."
+  },
+  {
+    "condition_id": "C011",
+    "catalog_record": {
+      "condition_id": "C011",
+      "name_specialty": "Deterioro sensorimotor/postural/locomotor / sensorimotor",
+      "description_spaceflight": "Puede afectar marcha, coordinación, control fino y tareas críticas, sobre todo en transiciones G.",
+      "risks_symptoms": "Gravedad alterada; desorientación, déficit de coordinación.",
+      "biomarkers_sensors_tests": "Balance, marcha, coordinación, pruebas motoras.",
+      "baselines_environment_interactions": "Baseline funcional; fase de transición.",
+      "primary_evidence": "S11. citeturn12search2",
+      "limits_authorizations_state": "Recuperación puede requerir horas-días; predicción individual no validada. `RV`."
+    },
+    "clinical_pathway_profile_as_published": "**P:** contramedidas/entrenamiento; **M:** balance/marcha/coordinación; **Q:** superficie/gravedad/protocolo; **D:** cambio vs baseline; **A:** funcional; **DD:** ortostático, neurológico, lesión; **T:** task-safety review; **I:** rehabilitación autorizada; **R/F:** readaptación; **G:** no extrapolar plazo individual.",
+    "coverage_states": {
+      "prevention": "ES",
+      "monitoring": "ES",
+      "data_quality": "ES",
+      "detection": "RV",
+      "assessment": "RV",
+      "differential_diagnosis": "RV",
+      "triage": "RMA",
+      "intervention_authorized": "RMA",
+      "recovery": "ES",
+      "follow_up": "ES",
+      "prognosis": "RO"
+    },
+    "source_ids": [
+      "S11"
+    ],
+    "NOTICE": "Pathway text is an outline; not an authorized diagnostic or treatment protocol."
+  },
+  {
+    "condition_id": "C012",
+    "catalog_record": {
+      "condition_id": "C012",
+      "name_specialty": "Pérdida de sueño / medicina del sueño",
+      "description_spaceflight": "Sueño insuficiente compromete salud y rendimiento cognitivo.",
+      "risks_symptoms": "Carga de trabajo, ambiente, horarios, luz, ruido.",
+      "biomarkers_sensors_tests": "Duración/eficiencia, actigrafía, diarios, somnolencia.",
+      "baselines_environment_interactions": "Baseline de sueño; luz/ruido/temperatura.",
+      "primary_evidence": "S10. citeturn12search1",
+      "limits_authorizations_state": "No convertir reducción de sueño en diagnóstico psiquiátrico. `ES`."
+    },
+    "clinical_pathway_profile_as_published": "**P:** horario/luz/ambiente; **M:** duración/eficiencia/diario; **Q:** wear time y ventanas válidas; **D:** desviación personal, no diagnóstico; **A/DD:** carga, ruido, circadiano, salud mental; **T:** por deterioro funcional; **I:** contramedidas autorizadas; **R/F:** retorno al patrón; **G:** tendencia, no diagnóstico.",
+    "coverage_states": {
+      "prevention": "ES",
+      "monitoring": "ES",
+      "data_quality": "ES",
+      "detection": "RV",
+      "assessment": "RV",
+      "differential_diagnosis": "RV",
+      "triage": "RMA",
+      "intervention_authorized": "RMA",
+      "recovery": "ES",
+      "follow_up": "ES",
+      "prognosis": "RO"
+    },
+    "source_ids": [
+      "S10"
+    ],
+    "NOTICE": "Pathway text is an outline; not an authorized diagnostic or treatment protocol."
+  },
+  {
+    "condition_id": "C013",
+    "catalog_record": {
+      "condition_id": "C013",
+      "name_specialty": "Desincronización circadiana / sueño",
+      "description_spaceflight": "Horarios irregulares y señales ambientales pueden desalinear ritmos.",
+      "risks_symptoms": "Turnos, luz, cambios horarios.",
+      "biomarkers_sensors_tests": "Horario sueño-vigilia, luz, actigrafía; biomarcadores circadianos si disponibles.",
+      "baselines_environment_interactions": "Patrón preflight.",
+      "primary_evidence": "S10. citeturn12search1",
+      "limits_authorizations_state": "Umbrales diagnósticos operacionales `NOT_FOUND`. `RV`."
+    },
+    "clinical_pathway_profile_as_published": "**P:** planificación circadiana; **M:** sueño-vigilia/luz; **Q:** sincronización temporal; **D:** desfase según algoritmo de misión `[RV]`; **A/DD:** horarios/sueño; **T/I:** autorización; **R/F:** realineamiento; **G:** research-only.",
+    "coverage_states": {
+      "prevention": "ES",
+      "monitoring": "ES",
+      "data_quality": "ES",
+      "detection": "RV",
+      "assessment": "RV",
+      "differential_diagnosis": "RV",
+      "triage": "RMA",
+      "intervention_authorized": "RMA",
+      "recovery": "RV",
+      "follow_up": "ES",
+      "prognosis": "RO"
+    },
+    "source_ids": [
+      "S10"
+    ],
+    "NOTICE": "Pathway text is an outline; not an authorized diagnostic or treatment protocol."
+  },
+  {
+    "condition_id": "C014",
+    "catalog_record": {
+      "condition_id": "C014",
+      "name_specialty": "Fatiga y sobrecarga de trabajo / factores humanos",
+      "description_spaceflight": "Carga crónica y sueño insuficiente incrementan riesgo de errores y bajo rendimiento.",
+      "risks_symptoms": "Workload, sueño, estrés.",
+      "biomarkers_sensors_tests": "Escalas, sueño, desempeño de tareas.",
+      "baselines_environment_interactions": "Baseline individual y de tarea.",
+      "primary_evidence": "S10. citeturn12search1",
+      "limits_authorizations_state": "No usar una puntuación aislada como incapacidad médica. `RV`."
+    },
+    "clinical_pathway_profile_as_published": "**P:** límites de carga programáticos; **M:** workload+sueño+rendimiento; **Q:** escalas completas y temporalmente alineadas; **D:** combinación multivariable `[RV]`; **A/DD:** sueño, enfermedad, estrés; **T:** riesgo operacional; **I:** reajuste autorizado; **R/F:** desempeño; **G:** sin predictor universal.",
+    "coverage_states": {
+      "prevention": "ES",
+      "monitoring": "ES",
+      "data_quality": "ES",
+      "detection": "RV",
+      "assessment": "RV",
+      "differential_diagnosis": "RV",
+      "triage": "RMA",
+      "intervention_authorized": "RMA",
+      "recovery": "RV",
+      "follow_up": "ES",
+      "prognosis": "RO"
+    },
+    "source_ids": [
+      "S10"
+    ],
+    "NOTICE": "Pathway text is an outline; not an authorized diagnostic or treatment protocol."
+  },
+  {
+    "condition_id": "C015",
+    "catalog_record": {
+      "condition_id": "C015",
+      "name_specialty": "Deterioro cognitivo funcional / neurocognición",
+      "description_spaceflight": "Atención, reacción y decisión pueden verse afectados por sueño, hipoxia, CO₂ y otros factores.",
+      "risks_symptoms": "Sueño, fatiga, hipoxia, ambiente, estrés.",
+      "biomarkers_sensors_tests": "Batería cognitiva, tiempo de reacción, precisión.",
+      "baselines_environment_interactions": "Baseline repetido con control de aprendizaje.",
+      "primary_evidence": "S10, S14, S27. citeturn12search1turn18search10turn19search4",
+      "limits_authorizations_state": "Etiología no inferible de una prueba aislada. `RV`."
+    },
+    "clinical_pathway_profile_as_published": "**P:** sueño/ambiente/carga; **M:** batería cognitiva; **Q:** práctica, versión, latencia de dispositivo; **D:** cambio robusto vs baseline; **A/DD:** sueño, CO₂, hipoxia, estrés, medicación; **T:** desempeño crítico; **I:** tratar causa solo si identificada/autorizada; **R/F:** reevaluación; **G:** research-only.",
+    "coverage_states": {
+      "prevention": "ES",
+      "monitoring": "ES",
+      "data_quality": "ES",
+      "detection": "RV",
+      "assessment": "RV",
+      "differential_diagnosis": "RV",
+      "triage": "RMA",
+      "intervention_authorized": "RMA",
+      "recovery": "RV",
+      "follow_up": "ES",
+      "prognosis": "RO"
+    },
+    "source_ids": [
+      "S10",
+      "S14",
+      "S27"
+    ],
+    "NOTICE": "Pathway text is an outline; not an authorized diagnostic or treatment protocol."
+  },
+  {
+    "condition_id": "C016",
+    "catalog_record": {
+      "condition_id": "C016",
+      "name_specialty": "Cambios conductuales/psiquiátricos / salud conductual",
+      "description_spaceflight": "Aislamiento, distancia y otros estresores pueden comprometer bienestar y desempeño.",
+      "risks_symptoms": "Aislamiento, estrés, sueño, conflicto.",
+      "biomarkers_sensors_tests": "Cuestionarios autorizados, entrevistas, cambios conductuales.",
+      "baselines_environment_interactions": "Baseline conductual cuando sea ético/operacionalmente autorizado.",
+      "primary_evidence": "S12. citeturn18search7",
+      "limits_authorizations_state": "Datos altamente sensibles; diagnóstico requiere profesional. `RMA`."
+    },
+    "clinical_pathway_profile_as_published": "**P:** apoyo conductual/privacidad; **M:** instrumentos autorizados; **Q:** confidencialidad y validez; **D:** señales predefinidas, no inferencia LLM; **A/DD:** profesional; **T:** protocolo médico; **I:** bloqueado sin autoridad; **R/F:** seguimiento confidencial; **G:** no scoring autónomo de pronóstico.",
+    "coverage_states": {
+      "prevention": "ES",
+      "monitoring": "RV",
+      "data_quality": "ES",
+      "detection": "RV",
+      "assessment": "RMA",
+      "differential_diagnosis": "RMA",
+      "triage": "RMA",
+      "intervention_authorized": "RMA",
+      "recovery": "RV",
+      "follow_up": "RV",
+      "prognosis": "RO"
+    },
+    "source_ids": [
+      "S12"
+    ],
+    "NOTICE": "Pathway text is an outline; not an authorized diagnostic or treatment protocol."
+  },
+  {
+    "condition_id": "C017",
+    "catalog_record": {
+      "condition_id": "C017",
+      "name_specialty": "Deterioro de trabajo en equipo/adaptación psicosocial / factores humanos",
+      "description_spaceflight": "Mala coordinación/comunicación puede afectar seguridad y misión.",
+      "risks_symptoms": "Aislamiento, conflicto, carga de trabajo.",
+      "biomarkers_sensors_tests": "Indicadores de equipo, autorreportes, desempeño colectivo.",
+      "baselines_environment_interactions": "Perfil de equipo y misión.",
+      "primary_evidence": "S12. citeturn18search7turn27search5",
+      "limits_authorizations_state": "No patologizar desacuerdos ni inferir estados mentales ocultos. `RO`."
+    },
+    "clinical_pathway_profile_as_published": "**P:** selección/entrenamiento de equipo; **M:** desempeño/comunicación; **Q:** evitar vigilancia invasiva no autorizada; **D:** patrones de misión; **A:** factores humanos; **DD:** no patologizar; **T/I:** organizational support; **R/F:** resiliencia del equipo; **G:** research-only.",
+    "coverage_states": {
+      "prevention": "ES",
+      "monitoring": "RV",
+      "data_quality": "ES",
+      "detection": "RO",
+      "assessment": "RV",
+      "differential_diagnosis": "RV",
+      "triage": "RMA",
+      "intervention_authorized": "RMA",
+      "recovery": "RV",
+      "follow_up": "RV",
+      "prognosis": "RO"
+    },
+    "source_ids": [
+      "S12"
+    ],
+    "NOTICE": "Pathway text is an outline; not an authorized diagnostic or treatment protocol."
+  },
+  {
+    "condition_id": "C018",
+    "catalog_record": {
+      "condition_id": "C018",
+      "name_specialty": "Alteración de respuesta inmunitaria / inmunología",
+      "description_spaceflight": "El vuelo espacial altera respuestas inmunes; la magnitud clínica individual sigue incierta.",
+      "risks_symptoms": "Microgravedad, estrés, sueño, radiación.",
+      "biomarkers_sensors_tests": "Sangre/saliva/orina, células y mediadores según protocolo.",
+      "baselines_environment_interactions": "Baselines inmunológicos longitudinales.",
+      "primary_evidence": "S09. citeturn12search0turn12search7",
+      "limits_authorizations_state": "Cambio biomarcador ≠ inmunodeficiencia clínica. `RV`."
+    },
+    "clinical_pathway_profile_as_published": "**P:** sueño/nutrición/mitigación de estrés; **M:** biomarcadores autorizados; **Q:** muestra, lote, timing; **D:** cambio longitudinal `[RV]`; **A/DD:** infección, estrés, variabilidad; **T/I:** médico; **R/F:** biomarcadores+clínica; **G:** no pronóstico clínico autónomo.",
+    "coverage_states": {
+      "prevention": "ES",
+      "monitoring": "RV",
+      "data_quality": "ES",
+      "detection": "RV",
+      "assessment": "RV",
+      "differential_diagnosis": "RV",
+      "triage": "RMA",
+      "intervention_authorized": "RMA",
+      "recovery": "RV",
+      "follow_up": "ES",
+      "prognosis": "RO"
+    },
+    "source_ids": [
+      "S09"
+    ],
+    "NOTICE": "Pathway text is an outline; not an authorized diagnostic or treatment protocol."
+  },
+  {
+    "condition_id": "C019",
+    "catalog_record": {
+      "condition_id": "C019",
+      "name_specialty": "Reactivación viral latente / infeccioso-inmunológico",
+      "description_spaceflight": "Reactivación viral ha sido observada durante vuelo y se relaciona con cambios inmunes.",
+      "risks_symptoms": "Estrés e inmunomodulación.",
+      "biomarkers_sensors_tests": "PCR/serología/biomarcadores cuando autorizados; síntomas.",
+      "baselines_environment_interactions": "Baseline/historia viral.",
+      "primary_evidence": "S09. citeturn12search0turn12search7",
+      "limits_authorizations_state": "No diagnosticar reactivación por síntomas inespecíficos. `RV`."
+    },
+    "clinical_pathway_profile_as_published": "**P:** control de factores de estrés; **M:** síntomas+ensayos si disponibles; **Q:** calidad PCR/serología; **D:** laboratorio, no síntomas solos; **A/DD:** otras infecciones; **T/I:** médico; **R/F:** resolución; **G:** `RV`.",
+    "coverage_states": {
+      "prevention": "ES",
+      "monitoring": "RV",
+      "data_quality": "ES",
+      "detection": "RV",
+      "assessment": "RV",
+      "differential_diagnosis": "RV",
+      "triage": "RMA",
+      "intervention_authorized": "RMA",
+      "recovery": "RV",
+      "follow_up": "RV",
+      "prognosis": "RO"
+    },
+    "source_ids": [
+      "S09"
+    ],
+    "NOTICE": "Pathway text is an outline; not an authorized diagnostic or treatment protocol."
+  },
+  {
+    "condition_id": "C020",
+    "catalog_record": {
+      "condition_id": "C020",
+      "name_specialty": "Infección/host–microorganism interaction / infeccioso",
+      "description_spaceflight": "Microbiomas y huésped pueden cambiar en el ambiente espacial; infecciones forman parte de condiciones IMM.",
+      "risks_symptoms": "Entorno cerrado, microbioma, inmunidad.",
+      "biomarkers_sensors_tests": "Temperatura, síntomas, cultivos/PCR/lab según recursos.",
+      "baselines_environment_interactions": "Historia y baseline; calidad aire/agua.",
+      "primary_evidence": "S03, S17. citeturn18search0turn21search1",
+      "limits_authorizations_state": "Tratamiento antimicrobiano requiere protocolo médico. `RMA`."
+    },
+    "clinical_pathway_profile_as_published": "**P:** higiene/aire/agua/contención; **M:** síntomas+ambiente; **Q:** muestra/sensor; **D:** screening autorizado; **A/DD:** etiología infecciosa vs ambiental; **T:** médico; **I:** antimicrobianos bloqueados sin protocolo; **R/F:** respuesta/recurrencia; **G:** no modelo causal individual.",
+    "coverage_states": {
+      "prevention": "ES",
+      "monitoring": "ES",
+      "data_quality": "ES",
+      "detection": "RV",
+      "assessment": "RV",
+      "differential_diagnosis": "RV",
+      "triage": "RMA",
+      "intervention_authorized": "RMA",
+      "recovery": "RV",
+      "follow_up": "RV",
+      "prognosis": "RO"
+    },
+    "source_ids": [
+      "S03",
+      "S17"
+    ],
+    "NOTICE": "Pathway text is an outline; not an authorized diagnostic or treatment protocol."
+  },
+  {
+    "condition_id": "C021",
+    "catalog_record": {
+      "condition_id": "C021",
+      "name_specialty": "Formación de cálculos renales / nefro-urología",
+      "description_spaceflight": "Descarga ósea y cambios urinarios pueden elevar riesgo de litiasis.",
+      "risks_symptoms": "Hipercalciuria, hidratación, dieta, pérdida ósea.",
+      "biomarkers_sensors_tests": "Orina, química urinaria, ecografía cuando disponible.",
+      "baselines_environment_interactions": "Historia renal, orina preflight; hidratación.",
+      "primary_evidence": "S08. citeturn11search3turn21search15",
+      "limits_authorizations_state": "Herramienta predictiva individual requiere validación. `RV`."
+    },
+    "clinical_pathway_profile_as_published": "**P:** hidratación/dieta/contramedidas de misión; **M:** química urinaria/síntomas; **Q:** colección y volumen; **D:** algoritmo probabilístico solo modo investigación; **A/DD:** cólico, UTI, GI; **T/I:** médico; **R/F:** recurrencia/química; **G:** RSFM solo si validado para misión.",
+    "coverage_states": {
+      "prevention": "ES",
+      "monitoring": "ES",
+      "data_quality": "ES",
+      "detection": "RV",
+      "assessment": "RV",
+      "differential_diagnosis": "RV",
+      "triage": "RMA",
+      "intervention_authorized": "RMA",
+      "recovery": "RV",
+      "follow_up": "ES",
+      "prognosis": "RO"
+    },
+    "source_ids": [
+      "S08"
+    ],
+    "NOTICE": "Pathway text is an outline; not an authorized diagnostic or treatment protocol."
+  },
+  {
+    "condition_id": "C022",
+    "catalog_record": {
+      "condition_id": "C022",
+      "name_specialty": "Retención urinaria / urología",
+      "description_spaceflight": "Riesgo HSRB explícito y condición relevante en asistencia autónoma.",
+      "risks_symptoms": "Medicación, fisiología, obstrucción u otros factores.",
+      "biomarkers_sensors_tests": "Síntomas, volumen vesical/ultrasonido si disponible.",
+      "baselines_environment_interactions": "Historia urológica.",
+      "primary_evidence": "S03. citeturn27search5",
+      "limits_authorizations_state": "Umbrales y procedimientos operacionales públicos insuficientes. `NPA`."
+    },
+    "clinical_pathway_profile_as_published": "**P:** revisión de riesgo; **M:** síntomas/volumen vesical; **Q:** ultrasonido si utilizado; **D:** reglas clínicas `NPA`; **A/DD/T/I:** médico; **R/F:** vaciamiento/recurrencia; **G:** no disponible.",
+    "coverage_states": {
+      "prevention": "RV",
+      "monitoring": "RV",
+      "data_quality": "ES",
+      "detection": "NPA",
+      "assessment": "RMA",
+      "differential_diagnosis": "RMA",
+      "triage": "RMA",
+      "intervention_authorized": "RMA",
+      "recovery": "RV",
+      "follow_up": "RV",
+      "prognosis": "RO"
+    },
+    "source_ids": [
+      "S03"
+    ],
+    "NOTICE": "Pathway text is an outline; not an authorized diagnostic or treatment protocol."
+  },
+  {
+    "condition_id": "C023",
+    "catalog_record": {
+      "condition_id": "C023",
+      "name_specialty": "Nutrición/energía inadecuadas / nutrición-metabolismo",
+      "description_spaceflight": "Alimentación segura, suficiente y aceptable es necesaria para salud/rendimiento; exploración limita reabastecimiento.",
+      "risks_symptoms": "Duración, degradación alimento, ingesta insuficiente, palatabilidad.",
+      "biomarkers_sensors_tests": "Ingesta, masa corporal, paneles bioquímicos cuando disponibles.",
+      "baselines_environment_interactions": "Peso, composición corporal, dieta preflight.",
+      "primary_evidence": "S13. citeturn18search2turn18search11",
+      "limits_authorizations_state": "No generar prescripción dietética clínica sin objetivos autorizados. `ES`."
+    },
+    "clinical_pathway_profile_as_published": "**P:** menú nutricional seguro/adecuado; **M:** ingesta, masa, paneles; **Q:** completitud de registro; **D:** objetivos de misión; **A/DD:** enfermedad, absorción, preferencias; **T/I:** nutricionista/médico según gravedad; **R/F:** balance longitudinal; **G:** modelos de reservas solo validados.",
+    "coverage_states": {
+      "prevention": "ES",
+      "monitoring": "ES",
+      "data_quality": "ES",
+      "detection": "RV",
+      "assessment": "RV",
+      "differential_diagnosis": "RV",
+      "triage": "RMA",
+      "intervention_authorized": "RMA",
+      "recovery": "RV",
+      "follow_up": "ES",
+      "prognosis": "RO"
+    },
+    "source_ids": [
+      "S13"
+    ],
+    "NOTICE": "Pathway text is an outline; not an authorized diagnostic or treatment protocol."
+  },
+  {
+    "condition_id": "C024",
+    "catalog_record": {
+      "condition_id": "C024",
+      "name_specialty": "Deshidratación/desequilibrio hidroelectrolítico / nutrición-renal",
+      "description_spaceflight": "Variable transversal relevante a CV, renal y desempeño.",
+      "risks_symptoms": "Ingesta insuficiente, pérdidas GI, ejercicio/EVA.",
+      "biomarkers_sensors_tests": "Ingesta/salida, masa, orina y electrolitos si disponibles.",
+      "baselines_environment_interactions": "Baselines personales; ambiente/EVA.",
+      "primary_evidence": "S13, S02. citeturn18search2turn18search8",
+      "limits_authorizations_state": "No se extrajo un umbral NASA único universal. `RV`."
+    },
+    "clinical_pathway_profile_as_published": "**P:** plan hídrico; **M:** ingesta/salida, masa, orina; **Q:** sincronizar pérdidas/consumo; **D:** thresholds `NOT_FOUND` salvo protocolo; **A/DD:** GI, renal, EVA; **T/I:** médico; **R/F:** retorno a estado personal; **G:** `RV`.",
+    "coverage_states": {
+      "prevention": "ES",
+      "monitoring": "RV",
+      "data_quality": "ES",
+      "detection": "RV",
+      "assessment": "RV",
+      "differential_diagnosis": "RV",
+      "triage": "RMA",
+      "intervention_authorized": "RMA",
+      "recovery": "RV",
+      "follow_up": "RV",
+      "prognosis": "RO"
+    },
+    "source_ids": [
+      "S13",
+      "S02"
+    ],
+    "NOTICE": "Pathway text is an outline; not an authorized diagnostic or treatment protocol."
+  },
+  {
+    "condition_id": "C025",
+    "catalog_record": {
+      "condition_id": "C025",
+      "name_specialty": "Enfermedad gastrointestinal aguda / gastroenterología",
+      "description_spaceflight": "Condiciones GI forman parte del conjunto médico que debe poder manejarse en vuelo.",
+      "risks_symptoms": "Infección, dieta, fármacos, adaptación.",
+      "biomarkers_sensors_tests": "Síntomas, hidratación, examen/lab según recursos.",
+      "baselines_environment_interactions": "Historia GI.",
+      "primary_evidence": "S17. citeturn21search0turn21search2",
+      "limits_authorizations_state": "Diagnóstico/tratamiento específico requiere protocolo clínico. `RMA`."
+    },
+    "clinical_pathway_profile_as_published": "**P:** higiene/food safety; **M:** síntomas/hidratación; **Q:** timing y gravedad; **D:** screening; **A/DD:** infección, adaptación, fármaco, abdomen agudo; **T/I:** médico; **R/F:** tolerancia oral/síntomas; **G:** no autónomo.",
+    "coverage_states": {
+      "prevention": "ES",
+      "monitoring": "ES",
+      "data_quality": "ES",
+      "detection": "RV",
+      "assessment": "RMA",
+      "differential_diagnosis": "RMA",
+      "triage": "RMA",
+      "intervention_authorized": "RMA",
+      "recovery": "RV",
+      "follow_up": "RV",
+      "prognosis": "RO"
+    },
+    "source_ids": [
+      "S17"
+    ],
+    "NOTICE": "Pathway text is an outline; not an authorized diagnostic or treatment protocol."
+  },
+  {
+    "condition_id": "C026",
+    "catalog_record": {
+      "condition_id": "C026",
+      "name_specialty": "Hipoxia / respiratorio-ambiental",
+      "description_spaceflight": "Atmósferas de presión reducida pueden elevar riesgo de hipoxia, especialmente en preparaciones EVA.",
+      "risks_symptoms": "ppO₂/presión, protocolos prebreathe.",
+      "biomarkers_sensors_tests": "ppO₂ ambiental, SpO₂, síntomas, rendimiento.",
+      "baselines_environment_interactions": "SpO₂ si se usa; presión/atmósfera/suit.",
+      "primary_evidence": "S14, S02. citeturn18search10turn18search8",
+      "limits_authorizations_state": "NASA continúa estudiando niveles tolerables; no inventar umbral clínico adicional. `RV`."
+    },
+    "clinical_pathway_profile_as_published": "**P:** control atmósfera/protocolo EVA; **M:** ppO₂/SpO₂/síntomas; **Q:** calibración/contexto presión; **D:** límites ambientales configurados, no umbral clínico inventado; **A/DD:** respiratorio, CO₂, perfusión; **T/I:** protocolo de misión; **R/F:** normalización; **G:** tolerancia individual `RV`.",
+    "coverage_states": {
+      "prevention": "ES",
+      "monitoring": "ES",
+      "data_quality": "ES",
+      "detection": "RV",
+      "assessment": "RV",
+      "differential_diagnosis": "RV",
+      "triage": "RMA",
+      "intervention_authorized": "RMA",
+      "recovery": "RV",
+      "follow_up": "RV",
+      "prognosis": "RO"
+    },
+    "source_ids": [
+      "S14",
+      "S02"
+    ],
+    "NOTICE": "Pathway text is an outline; not an authorized diagnostic or treatment protocol."
+  },
+  {
+    "condition_id": "C027",
+    "catalog_record": {
+      "condition_id": "C027",
+      "name_specialty": "Exposición nominal/crónica a CO₂ / ambiental-respiratorio-neurológico",
+      "description_spaceflight": "CO₂ elevado se asocia con cefalea y otros síntomas y tiene límite ambiental específico.",
+      "risks_symptoms": "Ventilación, carga metabólica, acumulación local.",
+      "biomarkers_sensors_tests": "ppCO₂ ambiental continuo, síntomas.",
+      "baselines_environment_interactions": "Patrón ambiental; actividad/ventilación.",
+      "primary_evidence": "S02, S27. citeturn19search4turn10search0",
+      "limits_authorizations_state": "3 mmHg es límite del promedio horario del hábitat, no umbral diagnóstico individual. `ES`."
+    },
+    "clinical_pathway_profile_as_published": "**P:** ventilación/ECLSS; **M:** ppCO₂ continuo; **Q:** cobertura suficiente de ventana; **D:** promedio temporal 1 h >3 mmHg → `REQUIREMENT_NOT_MET`; **A/DD:** síntomas y fluid shift pueden confundir; **T:** alerta ambiental; **I:** acción de vehículo según autoridad, clínica si sintomático; **R/F:** comprobar descenso; **G:** no diagnosticar hipercapnia clínica solo por ambiente.",
+    "coverage_states": {
+      "prevention": "ES",
+      "monitoring": "ES",
+      "data_quality": "ES",
+      "detection": "ES",
+      "assessment": "RV",
+      "differential_diagnosis": "RV",
+      "triage": "RMA",
+      "intervention_authorized": "RMA",
+      "recovery": "ES",
+      "follow_up": "ES",
+      "prognosis": "RO"
+    },
+    "source_ids": [
+      "S02"
+    ],
+    "NOTICE": "Pathway text is an outline; not an authorized diagnostic or treatment protocol."
+  },
+  {
+    "condition_id": "C028",
+    "catalog_record": {
+      "condition_id": "C028",
+      "name_specialty": "Exposición a sustancias tóxicas / toxicología",
+      "description_spaceflight": "Fugas, off-gassing, combustión y contaminantes pueden causar efectos agudos/graves.",
+      "risks_symptoms": "Fallos ECLSS/payload, humo, químicos, propulsantes.",
+      "biomarkers_sensors_tests": "Sensores ambientales específicos + fisiología/lab según agente.",
+      "baselines_environment_interactions": "Concentraciones ambientales normales.",
+      "primary_evidence": "S37. citeturn27search2turn27search7",
+      "limits_authorizations_state": "Límites son sustancia-específicos; no se ha extraído catálogo completo aquí. `RMA`."
+    },
+    "clinical_pathway_profile_as_published": "**P:** materiales/monitorización/contención; **M:** detector específico; **Q:** compuesto/calibración; **D:** límite específico de misión; **A/DD:** inhalación/dermal/ocular; **T:** emergencia; **I:** scrubber/PPE y medicina solo por protocolo; **R/F:** vigilancia; **G:** toxicante-específico.",
+    "coverage_states": {
+      "prevention": "ES",
+      "monitoring": "ES",
+      "data_quality": "ES",
+      "detection": "RV",
+      "assessment": "RMA",
+      "differential_diagnosis": "RMA",
+      "triage": "RMA",
+      "intervention_authorized": "RMA",
+      "recovery": "RV",
+      "follow_up": "RV",
+      "prognosis": "RO"
+    },
+    "source_ids": [
+      "S37"
+    ],
+    "NOTICE": "Pathway text is an outline; not an authorized diagnostic or treatment protocol."
+  },
+  {
+    "condition_id": "C029",
+    "catalog_record": {
+      "condition_id": "C029",
+      "name_specialty": "Exposición a polvo celestial/lunar / ocupacional-respiratorio",
+      "description_spaceflight": "Polvo externo puede introducirse en vehículos/hábitats de superficie.",
+      "risks_symptoms": "EVA y hábitat de superficie.",
+      "biomarkers_sensors_tests": "Monitoreo partículas/exposición, síntomas.",
+      "baselines_environment_interactions": "Exposición cero/normal; operaciones EVA.",
+      "primary_evidence": "S03, S37. citeturn27search5turn27search7",
+      "limits_authorizations_state": "Umbrales operacionales específicos no recuperados. `RV`."
+    },
+    "clinical_pathway_profile_as_published": "**P:** exclusión/mitigación de polvo; **M:** partículas/exposición; **Q:** sensor/ubicación; **D:** regla mission-specific; **A/DD:** irritación, toxicidad, infección; **T/I:** misión; **R/F:** síntomas/exposición acumulada; **G:** `RV`.",
+    "coverage_states": {
+      "prevention": "ES",
+      "monitoring": "RV",
+      "data_quality": "ES",
+      "detection": "RV",
+      "assessment": "RV",
+      "differential_diagnosis": "RV",
+      "triage": "RMA",
+      "intervention_authorized": "RMA",
+      "recovery": "RV",
+      "follow_up": "RV",
+      "prognosis": "RO"
+    },
+    "source_ids": [
+      "S03",
+      "S37"
+    ],
+    "NOTICE": "Pathway text is an outline; not an authorized diagnostic or treatment protocol."
+  },
+  {
+    "condition_id": "C030",
+    "catalog_record": {
+      "condition_id": "C030",
+      "name_specialty": "Enfermedad por descompresión / aeroespacial",
+      "description_spaceflight": "Burbujas de nitrógeno durante transición de alta a baja presión pueden causar enfermedad y comprometer EVA.",
+      "risks_symptoms": "Presión, nitrógeno tisular, prebreathe insuficiente.",
+      "biomarkers_sensors_tests": "Presión/suit, síntomas clínicos, exposición.",
+      "baselines_environment_interactions": "Perfil presión/respiración.",
+      "primary_evidence": "S36. citeturn27search1turn27search4",
+      "limits_authorizations_state": "Protocolos detallados de misión deben ser autorizados; fracción de gravedad añade incertidumbre. `RMA`."
+    },
+    "clinical_pathway_profile_as_published": "**P:** prebreathe/atmósfera/suit autorizado; **M:** perfil presión + síntomas; **Q:** cronología de presión; **D:** DCS sospechada requiere evaluación; **A/DD:** trauma, hipoxia, barotrauma; **T:** finalizar EVA de forma segura según protocolo; **I:** misión/médico; **R/F:** vigilancia postevento; **G:** gravedad parcial incierta.",
+    "coverage_states": {
+      "prevention": "ES",
+      "monitoring": "ES",
+      "data_quality": "ES",
+      "detection": "RV",
+      "assessment": "RMA",
+      "differential_diagnosis": "RMA",
+      "triage": "RMA",
+      "intervention_authorized": "RMA",
+      "recovery": "RV",
+      "follow_up": "RV",
+      "prognosis": "RO"
+    },
+    "source_ids": [
+      "S36"
+    ],
+    "NOTICE": "Pathway text is an outline; not an authorized diagnostic or treatment protocol."
+  },
+  {
+    "condition_id": "C031",
+    "catalog_record": {
+      "condition_id": "C031",
+      "name_specialty": "Barotrauma/ear-sinus block / ORL",
+      "description_spaceflight": "Condición ambiental incluida en IMM para cambios de presión.",
+      "risks_symptoms": "Cambios de presión.",
+      "biomarkers_sensors_tests": "Síntomas, examen otológico si disponible, presión.",
+      "baselines_environment_interactions": "Historia ORL.",
+      "primary_evidence": "S17. citeturn21search0turn21search1",
+      "limits_authorizations_state": "Protocolo específico no extraído. `RMA`."
+    },
+    "clinical_pathway_profile_as_published": "**P:** perfiles de presión; **M:** síntomas+presión; **Q:** cronología; **D:** screening; **A/DD:** DCS/ORL; **T/I:** médico; **R/F:** resolución; **G:** `NPA`.",
+    "coverage_states": {
+      "prevention": "ES",
+      "monitoring": "RV",
+      "data_quality": "ES",
+      "detection": "RV",
+      "assessment": "RMA",
+      "differential_diagnosis": "RMA",
+      "triage": "RMA",
+      "intervention_authorized": "RMA",
+      "recovery": "RV",
+      "follow_up": "RV",
+      "prognosis": "NPA"
+    },
+    "source_ids": [
+      "S17"
+    ],
+    "NOTICE": "Pathway text is an outline; not an authorized diagnostic or treatment protocol."
+  },
+  {
+    "condition_id": "C032",
+    "catalog_record": {
+      "condition_id": "C032",
+      "name_specialty": "Exposición acumulada a radiación ionizante/carcinogénesis / radiobiología",
+      "description_spaceflight": "Riesgo de cáncer y otros efectos obliga a seguimiento dosimétrico.",
+      "risks_symptoms": "GCR/SPE/duración/escudo.",
+      "biomarkers_sensors_tests": "Dosimetría efectiva y órgano-específica.",
+      "baselines_environment_interactions": "Dosis acumulada previa; entorno de radiación.",
+      "primary_evidence": "S01, S16. citeturn6view3turn18search9",
+      "limits_authorizations_state": "Dosis ≠ diagnóstico de cáncer; conversiones dosimétricas deben ser válidas. `ES`."
+    },
+    "clinical_pathway_profile_as_published": "**P:** ALARA y shielding; **M:** dosimetría; **Q:** tipo de dosis/unidad/órgano; **D:** acumulación vs límites; **A:** exposición, no cáncer; **DD:** N/A para cumplimiento; **T:** evento radiológico separado; **I:** reducción de exposición según misión; **R/F:** vigilancia de carrera; **G:** modelos de riesgo independientes.",
+    "coverage_states": {
+      "prevention": "ES",
+      "monitoring": "ES",
+      "data_quality": "ES",
+      "detection": "ES",
+      "assessment": "RV",
+      "differential_diagnosis": "NA",
+      "triage": "RMA",
+      "intervention_authorized": "RMA",
+      "recovery": "NA",
+      "follow_up": "ES",
+      "prognosis": "RV"
+    },
+    "source_ids": [
+      "S01",
+      "S16"
+    ],
+    "NOTICE": "Pathway text is an outline; not an authorized diagnostic or treatment protocol."
+  },
+  {
+    "condition_id": "C033",
+    "catalog_record": {
+      "condition_id": "C033",
+      "name_specialty": "Síndrome/efectos agudos de radiación / emergencias-radiobiología",
+      "description_spaceflight": "IMM contempla radiation sickness para planificación médica.",
+      "risks_symptoms": "Evento radiológico suficientemente intenso.",
+      "biomarkers_sensors_tests": "Dosimetría, síntomas, hematología según protocolo.",
+      "baselines_environment_interactions": "Dosis previa y evento.",
+      "primary_evidence": "S17, S01. citeturn21search1turn6view3",
+      "limits_authorizations_state": "Umbrales clínicos detallados no extraídos; intervención bloqueada. `RMA`."
+    },
+    "clinical_pathway_profile_as_published": "**P:** monitoring/SPE shelter; **M:** dosis + clínica; **Q:** dosimetría compatible; **D:** thresholds ARS no consolidados aquí; **A/DD/T/I:** protocolo médico; **R/F:** hematología/órganos; **G:** blocked.",
+    "coverage_states": {
+      "prevention": "ES",
+      "monitoring": "ES",
+      "data_quality": "ES",
+      "detection": "RV",
+      "assessment": "RMA",
+      "differential_diagnosis": "RMA",
+      "triage": "RMA",
+      "intervention_authorized": "RMA",
+      "recovery": "RV",
+      "follow_up": "RV",
+      "prognosis": "RO"
+    },
+    "source_ids": [
+      "S01",
+      "S17"
+    ],
+    "NOTICE": "Pathway text is an outline; not an authorized diagnostic or treatment protocol."
+  },
+  {
+    "condition_id": "C034",
+    "catalog_record": {
+      "condition_id": "C034",
+      "name_specialty": "Radiación no ionizante / ambiental",
+      "description_spaceflight": "HSRB mantiene riesgo específico por NIR.",
+      "risks_symptoms": "Fuentes electromagnéticas/ópticas según misión.",
+      "biomarkers_sensors_tests": "Dosimetría/monitorización específica a fuente.",
+      "baselines_environment_interactions": "Exposición nominal.",
+      "primary_evidence": "S03. citeturn27search5",
+      "limits_authorizations_state": "Límites específicos no recuperados. `RV`."
+    },
+    "clinical_pathway_profile_as_published": "**P:** control de fuentes; **M:** exposición; **Q:** frecuencia/espectro; **D:** límites específicos no consolidados; **A/DD/T/I:** misión/médico; **R/F:** exposición; **G:** `RV`.",
+    "coverage_states": {
+      "prevention": "ES",
+      "monitoring": "RV",
+      "data_quality": "ES",
+      "detection": "RV",
+      "assessment": "RV",
+      "differential_diagnosis": "RV",
+      "triage": "RMA",
+      "intervention_authorized": "RMA",
+      "recovery": "RV",
+      "follow_up": "RV",
+      "prognosis": "RO"
+    },
+    "source_ids": [
+      "S03"
+    ],
+    "NOTICE": "Pathway text is an outline; not an authorized diagnostic or treatment protocol."
+  },
+  {
+    "condition_id": "C035",
+    "catalog_record": {
+      "condition_id": "C035",
+      "name_specialty": "Pérdida auditiva/exposición acústica / audiología",
+      "description_spaceflight": "Ruido puede afectar audición, sueño, comunicación y desempeño.",
+      "risks_symptoms": "SPL, duración, frecuencias.",
+      "biomarkers_sensors_tests": "Dosimetría acústica, audiometría/hearing test.",
+      "baselines_environment_interactions": "Audiograma preflight; ambiente acústico.",
+      "primary_evidence": "S38, S02. citeturn27search3turn27search6",
+      "limits_authorizations_state": "Límite ambiental no equivale a diagnóstico de pérdida auditiva. `ES`."
+    },
+    "clinical_pathway_profile_as_published": "**P:** diseño acústico; **M:** SPL/dosis+audiometría; **Q:** calibración/frecuencia/duración; **D:** incumplimiento ambiental separado de pérdida auditiva; **A/DD:** audiología; **T/I:** misión/médico; **R/F:** hearing surveillance; **G:** daño individual no deducible únicamente de SPL.",
+    "coverage_states": {
+      "prevention": "ES",
+      "monitoring": "ES",
+      "data_quality": "ES",
+      "detection": "ES",
+      "assessment": "RV",
+      "differential_diagnosis": "RV",
+      "triage": "RMA",
+      "intervention_authorized": "RMA",
+      "recovery": "RV",
+      "follow_up": "ES",
+      "prognosis": "RV"
+    },
+    "source_ids": [
+      "S38",
+      "S02"
+    ],
+    "NOTICE": "Pathway text is an outline; not an authorized diagnostic or treatment protocol."
+  },
+  {
+    "condition_id": "C036",
+    "catalog_record": {
+      "condition_id": "C036",
+      "name_specialty": "Lesión por cargas dinámicas / trauma",
+      "description_spaceflight": "Lanzamiento/aterrizaje y cargas pueden lesionar.",
+      "risks_symptoms": "Aceleraciones, impacto, postura.",
+      "biomarkers_sensors_tests": "Acelerometría + evaluación clínica.",
+      "baselines_environment_interactions": "Perfil misión y antropometría.",
+      "primary_evidence": "S03. citeturn27search5",
+      "limits_authorizations_state": "Diagnóstico de lesión requiere evaluación. `RMA`."
+    },
+    "clinical_pathway_profile_as_published": "**P:** diseño/restricción de cargas; **M:** aceleración/evento; **Q:** sensor y orientación; **D:** evento sobre límites → ingeniería + evaluación, no diagnóstico; **A/DD/T/I:** trauma protocol; **R/F:** función; **G:** no autónomo.",
+    "coverage_states": {
+      "prevention": "ES",
+      "monitoring": "ES",
+      "data_quality": "ES",
+      "detection": "RV",
+      "assessment": "RMA",
+      "differential_diagnosis": "RMA",
+      "triage": "RMA",
+      "intervention_authorized": "RMA",
+      "recovery": "RV",
+      "follow_up": "RV",
+      "prognosis": "RO"
+    },
+    "source_ids": [
+      "S03"
+    ],
+    "NOTICE": "Pathway text is an outline; not an authorized diagnostic or treatment protocol."
+  },
+  {
+    "condition_id": "C037",
+    "catalog_record": {
+      "condition_id": "C037",
+      "name_specialty": "Lesión/rendimiento comprometido durante EVA / medicina EVA",
+      "description_spaceflight": "EVA combina carga física, suit, DCS, hipoxia, CO₂ y fatiga.",
+      "risks_symptoms": "Suit, duración, ambiente, carga de trabajo.",
+      "biomarkers_sensors_tests": "Suit telemetry, HR, gases, síntomas/rendimiento.",
+      "baselines_environment_interactions": "Baseline funcional y perfil EVA.",
+      "primary_evidence": "S03. citeturn18search0",
+      "limits_authorizations_state": "Triaje e interrupción se rigen por reglas de misión. `RMA`."
+    },
+    "clinical_pathway_profile_as_published": "**P:** preparación EVA; **M:** suit+biomed; **Q:** tiempo y sensor sincronizados; **D:** reglas de EVA; **A/DD:** DCS/hipoxia/CO₂/lesión; **T/I:** mission control/onboard authority; **R/F:** post-EVA; **G:** task performance.",
+    "coverage_states": {
+      "prevention": "ES",
+      "monitoring": "ES",
+      "data_quality": "ES",
+      "detection": "RV",
+      "assessment": "RV",
+      "differential_diagnosis": "RV",
+      "triage": "RMA",
+      "intervention_authorized": "RMA",
+      "recovery": "RV",
+      "follow_up": "ES",
+      "prognosis": "RO"
+    },
+    "source_ids": [
+      "S03"
+    ],
+    "NOTICE": "Pathway text is an outline; not an authorized diagnostic or treatment protocol."
+  },
+  {
+    "condition_id": "C038",
+    "catalog_record": {
+      "condition_id": "C038",
+      "name_specialty": "Trauma, heridas y fractura aguda / emergencias",
+      "description_spaceflight": "El modelo médico NASA contempla abrasiones, laceraciones, quemaduras, esguinces, fracturas y lesiones craneales.",
+      "risks_symptoms": "EVA, mantenimiento, cargas, accidente.",
+      "biomarkers_sensors_tests": "Evaluación clínica, imagen/ultrasonido según capacidad.",
+      "baselines_environment_interactions": "Historia/función baseline.",
+      "primary_evidence": "S17. citeturn21search0",
+      "limits_authorizations_state": "Procedimientos invasivos y analgesia requieren autorización. `RMA`."
+    },
+    "clinical_pathway_profile_as_published": "**P:** safety; **M:** evento/síntomas; **Q:** mecanismo y tiempos; **D:** injury screening; **A/DD:** protocolo de trauma; **T/I:** autoridad médica; **R:** funcional; **F:** herida/dolor/función; **G:** outcome model solo si validado.",
+    "coverage_states": {
+      "prevention": "ES",
+      "monitoring": "RV",
+      "data_quality": "ES",
+      "detection": "RV",
+      "assessment": "RMA",
+      "differential_diagnosis": "RMA",
+      "triage": "RMA",
+      "intervention_authorized": "RMA",
+      "recovery": "RV",
+      "follow_up": "RV",
+      "prognosis": "RO"
+    },
+    "source_ids": [
+      "S17"
+    ],
+    "NOTICE": "Pathway text is an outline; not an authorized diagnostic or treatment protocol."
+  },
+  {
+    "condition_id": "C039",
+    "catalog_record": {
+      "condition_id": "C039",
+      "name_specialty": "Patología/emergencia dental / odontología",
+      "description_spaceflight": "IMM utiliza historia dental y contempla daño, caries/abscesos.",
+      "risks_symptoms": "Restauraciones previas, trauma, enfermedad dental.",
+      "biomarkers_sensors_tests": "Historia, examen/imágenes según recursos.",
+      "baselines_environment_interactions": "Evaluación dental preflight.",
+      "primary_evidence": "S17, S19. citeturn21search0turn21search4",
+      "limits_authorizations_state": "Contenido operacional completo de tratamiento no consolidado. `RMA`."
+    },
+    "clinical_pathway_profile_as_published": "**P:** dental clearance; **M:** dolor/lesión; **Q:** documentación; **D:** screening; **A/DD:** caries, absceso, trauma; **T/I:** médico/dental autorizado; **R/F:** dolor/infección/función; **G:** no automático.",
+    "coverage_states": {
+      "prevention": "ES",
+      "monitoring": "RV",
+      "data_quality": "ES",
+      "detection": "RV",
+      "assessment": "RMA",
+      "differential_diagnosis": "RMA",
+      "triage": "RMA",
+      "intervention_authorized": "RMA",
+      "recovery": "RV",
+      "follow_up": "RV",
+      "prognosis": "NPA"
+    },
+    "source_ids": [
+      "S17",
+      "S19"
+    ],
+    "NOTICE": "Pathway text is an outline; not an authorized diagnostic or treatment protocol."
+  },
+  {
+    "condition_id": "C040",
+    "catalog_record": {
+      "condition_id": "C040",
+      "name_specialty": "Medicamento ineficaz o tóxico / farmacología",
+      "description_spaceflight": "Estabilidad, reabastecimiento y fisiología espacial pueden alterar eficacia/toxicidad; PK/PD puede diferir.",
+      "risks_symptoms": "Duración, almacenamiento, cambios fisiológicos, interacción.",
+      "biomarkers_sensors_tests": "Inventario, lote/caducidad/condiciones, respuesta clínica.",
+      "baselines_environment_interactions": "Medicación previa, ambiente de almacenamiento.",
+      "primary_evidence": "S15. citeturn18search5",
+      "limits_authorizations_state": "VIGILE no calcula dosis nuevas ni prescribe. `RMA`."
+    },
+    "clinical_pathway_profile_as_published": "**P:** inventario/estabilidad; **M:** lote, caducidad, storage, respuesta; **Q:** identidad/dosis prescrita sin alterarla; **D:** flag de almacenamiento/caducidad o respuesta atípica; **A/DD:** enfermedad vs fármaco; **T:** médico; **I:** VIGILE jamás crea dosis; **R/F:** eficacia/eventos adversos; **G:** PK/PD espacial `RV`.",
+    "coverage_states": {
+      "prevention": "ES",
+      "monitoring": "ES",
+      "data_quality": "ES",
+      "detection": "RV",
+      "assessment": "RMA",
+      "differential_diagnosis": "RMA",
+      "triage": "RMA",
+      "intervention_authorized": "RMA",
+      "recovery": "RV",
+      "follow_up": "ES",
+      "prognosis": "RO"
+    },
+    "source_ids": [
+      "S15"
+    ],
+    "NOTICE": "Pathway text is an outline; not an authorized diagnostic or treatment protocol."
+  },
+  {
+    "condition_id": "C041",
+    "catalog_record": {
+      "condition_id": "C041",
+      "name_specialty": "Infección respiratoria/inhalación de humo / respiratorio-emergencias",
+      "description_spaceflight": "IMM incluye infecciones respiratorias y smoke inhalation; ambiente cerrado amplifica exposición.",
+      "risks_symptoms": "Infección, combustión, contaminantes.",
+      "biomarkers_sensors_tests": "SpO₂, síntomas, ambiente, examen/lab.",
+      "baselines_environment_interactions": "Respiratorio preflight; aire ambiental.",
+      "primary_evidence": "S17, S37. citeturn21search1turn27search2",
+      "limits_authorizations_state": "Diagnóstico y tratamiento requieren supervisión. `RMA`."
+    },
+    "clinical_pathway_profile_as_published": "**P:** control infección/humo; **M:** síntomas, SpO₂, atmósfera; **Q:** sensor/exposición; **D:** screening; **A/DD:** infección, toxicidad, hipoxia; **T/I:** médico/emergencia; **R/F:** respiratorio; **G:** no automático.",
+    "coverage_states": {
+      "prevention": "ES",
+      "monitoring": "ES",
+      "data_quality": "ES",
+      "detection": "RV",
+      "assessment": "RMA",
+      "differential_diagnosis": "RMA",
+      "triage": "RMA",
+      "intervention_authorized": "RMA",
+      "recovery": "RV",
+      "follow_up": "RV",
+      "prognosis": "RO"
+    },
+    "source_ids": [
+      "S17",
+      "S37"
+    ],
+    "NOTICE": "Pathway text is an outline; not an authorized diagnostic or treatment protocol."
+  },
+  {
+    "condition_id": "C042",
+    "catalog_record": {
+      "condition_id": "C042",
+      "name_specialty": "Choque eléctrico / emergencias",
+      "description_spaceflight": "HSRB mantiene riesgo explícito de daño eléctrico.",
+      "risks_symptoms": "Fallos/energía/mantenimiento.",
+      "biomarkers_sensors_tests": "Evento eléctrico + evaluación fisiológica/ECG cuando corresponda.",
+      "baselines_environment_interactions": "Contexto técnico.",
+      "primary_evidence": "S03. citeturn27search5",
+      "limits_authorizations_state": "Protocolo médico operacional específico `NPA`."
+    },
+    "clinical_pathway_profile_as_published": "**P:** electrical safety; **M:** evento; **Q:** verificar exposición; **D:** cualquier evento relevante activa protocolo de seguridad; **A/DD/T/I:** médico + engineering; **R/F:** seguimiento; **G:** `NPA`.",
+    "coverage_states": {
+      "prevention": "ES",
+      "monitoring": "RV",
+      "data_quality": "ES",
+      "detection": "RV",
+      "assessment": "RMA",
+      "differential_diagnosis": "RMA",
+      "triage": "RMA",
+      "intervention_authorized": "RMA",
+      "recovery": "RV",
+      "follow_up": "RV",
+      "prognosis": "NPA"
+    },
+    "source_ids": [
+      "S03"
+    ],
+    "NOTICE": "Pathway text is an outline; not an authorized diagnostic or treatment protocol."
+  },
+  {
+    "condition_id": "C043",
+    "catalog_record": {
+      "condition_id": "C043",
+      "name_specialty": "Incapacidad de egress/tarea tras transición de gravedad / rendimiento",
+      "description_spaceflight": "Readaptación sensorimotora/ortostática puede comprometer aterrizaje, salida y tareas críticas.",
+      "risks_symptoms": "Retorno a gravedad, desacondicionamiento.",
+      "biomarkers_sensors_tests": "Marcha, balance, HR/BP, capacidad funcional.",
+      "baselines_environment_interactions": "Preflight + fase de transición.",
+      "primary_evidence": "S03, S11, S02. citeturn27search5turn12search2turn19search2",
+      "limits_authorizations_state": "“Fit for task” necesita regla de misión. `RMA`."
+    },
+    "clinical_pathway_profile_as_published": "**P:** countermeasures/readaptation; **M:** función+ortostatismo+sensorimotor; **Q:** gravedad/tarea; **D:** task-specific gate; **A/DD:** CV/sensorimotor/músculo; **T:** no autorizar tarea si regla de misión falla; **I:** rehabilitation/countermeasure; **R/F:** re-test; **G:** misión-específico.",
+    "coverage_states": {
+      "prevention": "ES",
+      "monitoring": "ES",
+      "data_quality": "ES",
+      "detection": "RV",
+      "assessment": "RV",
+      "differential_diagnosis": "RV",
+      "triage": "RMA",
+      "intervention_authorized": "RMA",
+      "recovery": "ES",
+      "follow_up": "ES",
+      "prognosis": "RO"
+    },
+    "source_ids": [
+      "S03",
+      "S11",
+      "S02"
+    ],
+    "NOTICE": "Pathway text is an outline; not an authorized diagnostic or treatment protocol."
+  },
+  {
+    "condition_id": "C044",
+    "catalog_record": {
+      "condition_id": "C044",
+      "name_specialty": "Alteración dermatológica/infección cutánea / dermatología-inmunología",
+      "description_spaceflight": "Rashes e infecciones cutáneas aparecen dentro del espectro inmunológico/médico relevante.",
+      "risks_symptoms": "Inmunidad, ambiente cerrado, humedad/contacto.",
+      "biomarkers_sensors_tests": "Inspección/imágenes clínicas, síntomas, microbiología si disponible.",
+      "baselines_environment_interactions": "Estado cutáneo preflight.",
+      "primary_evidence": "S09, S17. citeturn12search7turn21search0",
+      "limits_authorizations_state": "Clasificación automatizada por imagen necesitaría validación específica. `RV`."
+    },
+    "clinical_pathway_profile_as_published": "**P:** higiene/protección; **M:** piel/síntomas; **Q:** imagen/iluminación si utilizada; **D:** cambio sospechoso; **A/DD:** dermatitis, infección, trauma; **T/I:** médico; **R/F:** cicatrización/recurrencia; **G:** visión artificial `RV`.",
+    "coverage_states": {
+      "prevention": "ES",
+      "monitoring": "RV",
+      "data_quality": "ES",
+      "detection": "RV",
+      "assessment": "RV",
+      "differential_diagnosis": "RV",
+      "triage": "RMA",
+      "intervention_authorized": "RMA",
+      "recovery": "RV",
+      "follow_up": "RV",
+      "prognosis": "RO"
+    },
+    "source_ids": [
+      "S09",
+      "S17"
+    ],
+    "NOTICE": "Pathway text is an outline; not an authorized diagnostic or treatment protocol."
+  }
+]

@@ -1,0 +1,56 @@
+[
+  {
+    "original_rule_id": "VIGILE-AER-001",
+    "consolidated_rule_id": "R-AER-001",
+    "equivalence_status": "CANDIDATE_REQUIRES_REVIEW",
+    "action": "COMPARE_CONTEXT_VERSION_UNITS_LOGIC_DO_NOT_AUTO_MERGE"
+  },
+  {
+    "original_rule_id": "VIGILE-AER-002",
+    "consolidated_rule_id": "R-AER-002",
+    "equivalence_status": "CANDIDATE_REQUIRES_REVIEW",
+    "action": "COMPARE_CONTEXT_VERSION_UNITS_LOGIC_DO_NOT_AUTO_MERGE"
+  },
+  {
+    "original_rule_id": "VIGILE-AER-003",
+    "consolidated_rule_id": "R-AER-003",
+    "equivalence_status": "CANDIDATE_REQUIRES_REVIEW",
+    "action": "COMPARE_CONTEXT_VERSION_UNITS_LOGIC_DO_NOT_AUTO_MERGE"
+  },
+  {
+    "original_rule_id": "VIGILE-MUS-001",
+    "consolidated_rule_id": "R-MUS-001",
+    "equivalence_status": "CANDIDATE_REQUIRES_REVIEW",
+    "action": "COMPARE_CONTEXT_VERSION_UNITS_LOGIC_DO_NOT_AUTO_MERGE"
+  },
+  {
+    "original_rule_id": "VIGILE-MUS-002",
+    "consolidated_rule_id": "R-MUS-002",
+    "equivalence_status": "CANDIDATE_REQUIRES_REVIEW",
+    "action": "COMPARE_CONTEXT_VERSION_UNITS_LOGIC_DO_NOT_AUTO_MERGE"
+  },
+  {
+    "original_rule_id": "VIGILE-BONE-001",
+    "consolidated_rule_id": "R-BONE-001",
+    "equivalence_status": "CANDIDATE_REQUIRES_REVIEW",
+    "action": "COMPARE_CONTEXT_VERSION_UNITS_LOGIC_DO_NOT_AUTO_MERGE"
+  },
+  {
+    "original_rule_id": "VIGILE-RAD-001",
+    "consolidated_rule_id": "R-RAD-001",
+    "equivalence_status": "CANDIDATE_REQUIRES_REVIEW",
+    "action": "COMPARE_CONTEXT_VERSION_UNITS_LOGIC_DO_NOT_AUTO_MERGE"
+  },
+  {
+    "original_rule_id": "VIGILE-ENV-002",
+    "consolidated_rule_id": "R-CO2-001",
+    "equivalence_status": "CANDIDATE_REQUIRES_REVIEW",
+    "action": "COMPARE_CONTEXT_VERSION_UNITS_LOGIC_DO_NOT_AUTO_MERGE"
+  },
+  {
+    "original_rule_id": "VIGILE-ENV-003",
+    "consolidated_rule_id": "R-PRESS-001",
+    "equivalence_status": "CANDIDATE_REQUIRES_REVIEW",
+    "action": "COMPARE_CONTEXT_VERSION_UNITS_LOGIC_DO_NOT_AUTO_MERGE"
+  }
+]

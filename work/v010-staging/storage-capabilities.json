@@ -1,0 +1,9 @@
+{
+  "active_database_encrypted": false,
+  "migration_executed": false,
+  "plaintext_compatibility": "historical credentials remain unchanged",
+  "official_sources": [
+    "https://www.zetetic.net/sqlcipher/sqlcipher-api/",
+    "https://learn.microsoft.com/en-us/windows/win32/seccrypto/example-c-program-using-cryptprotectdata"
+  ]
+}

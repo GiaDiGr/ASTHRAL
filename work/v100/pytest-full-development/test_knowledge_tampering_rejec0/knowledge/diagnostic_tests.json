@@ -1,0 +1,121 @@
+{
+  "schema_version": "1.0.0",
+  "tests": [
+    {
+      "test_id": "TEST-PLASMA-GLUCOSE",
+      "measure": "plasma_glucose",
+      "canonical_unit": "mg/dL",
+      "alternatives": ["mmol/L"],
+      "conversion": "mmol/L * 18 ≈ mg/dL",
+      "diagnostic_use": ["DM", "DKA"],
+      "quality": ["sample_type_recorded", "fasting_status_when_required"],
+      "missing_behavior": "UNKNOWN"
+    },
+    {
+      "test_id": "TEST-A1C",
+      "measure": "A1C",
+      "canonical_unit": "%",
+      "diagnostic_use": ["DM"],
+      "quality": ["validated_diagnostic_method", "assay_interference_assessed_when_discordant"],
+      "missing_behavior": "UNKNOWN"
+    },
+    {
+      "test_id": "TEST-OGTT-75G",
+      "measure": "2h_plasma_glucose",
+      "canonical_unit": "mg/dL",
+      "diagnostic_use": ["DM"],
+      "quality": ["75_g_glucose_load", "2h_timing_valid"],
+      "missing_behavior": "UNKNOWN"
+    },
+    {
+      "test_id": "TEST-BETA-OHB",
+      "measure": "beta_hydroxybutyrate",
+      "canonical_unit": "mmol/L",
+      "diagnostic_use": ["DKA"],
+      "quality": ["device_or_lab_valid", "operator_training"],
+      "missing_behavior": "UNKNOWN"
+    },
+    {
+      "test_id": "TEST-VENOUS-PH-BICARB",
+      "measure": ["venous_pH", "bicarbonate"],
+      "canonical_unit": ["pH", "mmol/L"],
+      "diagnostic_use": ["DKA"],
+      "missing_behavior": "UNKNOWN"
+    },
+    {
+      "test_id": "TEST-ORTHOSTATIC-BP-HR",
+      "measure": ["blood_pressure", "heart_rate"],
+      "diagnostic_use": ["ORTHOSTATIC_HYPOTENSION", "POTS"],
+      "quality": [
+        "gravity_context_recorded",
+        "baseline_position_recorded",
+        "upright_time_recorded",
+        "valid_BP_device",
+        "valid_HR_device"
+      ],
+      "missing_behavior": "UNKNOWN"
+    },
+    {
+      "test_id": "TEST-POTS-EXCLUSIONS",
+      "measure": "clinical_exclusion_set",
+      "diagnostic_use": ["POTS"],
+      "required_review": [
+        "dehydration",
+        "recent_blood_loss",
+        "anemia",
+        "fever",
+        "infection",
+        "pain",
+        "hyperthyroidism",
+        "medications",
+        "severe_deconditioning"
+      ],
+      "missing_behavior": "UNRESOLVED_EXCLUSION"
+    },
+    {
+      "test_id": "TEST-SERUM-CREATININE",
+      "measure": "serum_creatinine",
+      "canonical_unit": "mg/dL",
+      "alternatives": ["micromol/L"],
+      "diagnostic_use": ["AKI"],
+      "quality": ["timestamp", "comparable_assay_context"],
+      "missing_behavior": "UNKNOWN"
+    },
+    {
+      "test_id": "TEST-URINE-OUTPUT",
+      "measure": "urine_output",
+      "canonical_unit": "mL/kg/h",
+      "diagnostic_use": ["AKI"],
+      "quality": ["body_mass_known", "collection_window_known", "collection_reliable"],
+      "missing_behavior": "UNKNOWN"
+    },
+    {
+      "test_id": "TEST-ANAPH-CLINICAL",
+      "measure": [
+        "skin_mucosal",
+        "respiratory",
+        "laryngeal",
+        "GI",
+        "allergen_context"
+      ],
+      "diagnostic_use": ["ANAPHYLAXIS"],
+      "missing_behavior": "PARTIAL_CLINICAL_INFORMATION"
+    },
+    {
+      "test_id": "TEST-BP",
+      "measure": "blood_pressure",
+      "canonical_unit": "mmHg",
+      "diagnostic_use": ["ANAPHYLAXIS", "ORTHOSTATIC_HYPOTENSION"],
+      "quality": ["device_valid", "timestamp", "position"],
+      "missing_behavior": "UNKNOWN"
+    },
+    {
+      "test_id": "TEST-ECG",
+      "measure": "electrocardiogram",
+      "diagnostic_use": ["EXTERNAL_ARRHYTHMIA_PATHWAY"],
+      "quality": ["signal_quality"],
+      "criteria_implemented_in_this_release": false,
+      "missing_behavior": "EXTERNAL_PATHWAY_UNRESOLVED"
+    }
+  ]
+}

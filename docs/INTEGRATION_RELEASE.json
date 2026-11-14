@@ -1,0 +1,88 @@
+{
+  "version": "0.3.0",
+  "date": "2026-10-15",
+  "tests": 172,
+  "baseline_tests": 157,
+  "new_tests": 15,
+  "failures": 0,
+  "original_files_unchanged": 106,
+  "dataset_hash": "5091e65d64ebe5eebc6701a17d306ef365cc50684769c2cfd7e947a951260f1a",
+  "clinical_validation": false,
+  "operational_validation": false,
+  "client_checks": {
+    "reader": {
+      "authorized_findings": 12,
+      "inconclusive": 7,
+      "existing_reasons": [
+        "INSUFFICIENT_TEMPORAL_COVERAGE",
+        "NOT_MEASURED",
+        "INVALID",
+        "INVALID_CALIBRATION",
+        "DIMENSIONAL_MISMATCH",
+        "OUTSIDE_TECHNICAL_RANGE",
+        "PHASE_MISMATCH"
+      ],
+      "clinical_activation": "BLOCKED"
+    },
+    "frontend": {
+      "profiles": 1,
+      "measurements": 38,
+      "baselines": 2,
+      "trends": 2,
+      "episodes": 2,
+      "findings": 12,
+      "replay_after_http_restart": true
+    }
+  },
+  "performance": {
+    "host_platform": "Windows-11-10.0.26300-SP0",
+    "python": "3.13.16",
+    "logical_cpus": 32,
+    "startup_seconds": 1.6897753999946872,
+    "workload_seconds": 2.070415900001535,
+    "server_pid_measured": 480,
+    "requests": 90,
+    "request_latency_ms": {
+      "median": 19.19869999983348,
+      "p95": 35.34310001123231,
+      "max": 111.354399996344
+    },
+    "server_counters_before": {
+      "available": true,
+      "working_set_bytes": 62832640,
+      "peak_working_set_bytes": 62832640,
+      "cpu_seconds": 1.046875
+    },
+    "server_counters_after": {
+      "available": true,
+      "working_set_bytes": 65789952,
+      "peak_working_set_bytes": 67149824,
+      "cpu_seconds": 1.5625
+    },
+    "workload_cpu_seconds": 0.515625,
+    "cpu_percent_one_core": 24.90441654740082,
+    "sqlite_live_bytes_including_wal": 1672536,
+    "scope": "Single sequential synthetic workload. Includes audit and client overhead; not flight qualification or a load test.",
+    "sqlite_closed_bytes": 585728
+  },
+  "code_hashes": {
+    "engine\\vigile\\adapters.py": "8d2b7e6815a0301559da09b01553af574c662eb5cf21ff22dc261fb8fc6cbd89",
+    "engine\\vigile\\algorithms.py": "983fe436222ee786dc444fe637dd3921498cbdaae627a007fd00a852ad6b5590",
+    "engine\\vigile\\api.py": "cf0db73fcc3886bc56fd7a2d9f2ff822bd93075be9bb7809b446632dd5de4e5f",
+    "engine\\vigile\\credentials.py": "5e84fa82d14324acb303238f1072e56cbdc6f36f69a5aff47cef91583df30a72",
+    "engine\\vigile\\demo.py": "6c7b3433bef72e1cd022f472e7f792463a5fed332d934f51c21a20863c93f179",
+    "engine\\vigile\\extensions.py": "c258fdc0ac16ddc0a4648a94019d0af184ea4bcf2eda8c8ece778e47b877559d",
+    "engine\\vigile\\integration.py": "3b4d4e204d225ad9599724cda3ea9f9e67206eb3d52f6e9d11f020c1df94e440",
+    "engine\\vigile\\models.py": "c8bbac4e9f29bbf504666d20b63a64b098515bb80e166a305a660a4b08ee8765",
+    "engine\\vigile\\pathways.py": "9d349d467beadeccf202b5fbbf533640adef6930998a862d24dcc47e6a523747",
+    "engine\\vigile\\quality.py": "6471a190cd1e1d162a6ce055652e50aa15bf884a7570aa5e0e7b7dbdfc908c5e",
+    "engine\\vigile\\registry.py": "0203e80997e20ad0fed2757be2046d62e0ebdbce2fe23554c1ea42bef55cbd34",
+    "engine\\vigile\\rules.py": "a80f37fa03730de692afd77b7d248265bbceb15b5a912eb976bc0e9682641f20",
+    "engine\\vigile\\security.py": "1b3d7d20bbe7ce06b14f0915b1768d2e4749108a2df390ded619d954fb2f1530",
+    "engine\\vigile\\service.py": "3b37bfdbfd02be8512e92f84bbd227cdbc689f196c03586083c74b954e68cd6f",
+    "engine\\vigile\\simulator.py": "42b01a2c697ee50d8320e7c0eb7501e3cbe21ae7a229ea3da8eeb882c918bbf8",
+    "engine\\vigile\\store.py": "2774b06f9e49733ada5e3e3216020c692aed8965916c6966aeabdf28309487a8",
+    "engine\\vigile\\__init__.py": "b98ddc30032976a30a139efcbeef3a1479492ba1609a74f3c86405176f0ca71d",
+    "engine\\vigile\\__main__.py": "98814ae54c81afd09ea00929bba19d0fc9efa0e2f11e2608b035b260aa8aa61c"
+  }
+}

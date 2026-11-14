@@ -1,0 +1,64 @@
+{
+  "schema_version": "1.0.0",
+  "classifications": [
+    {
+      "condition_id": "DM",
+      "classification": "REQUIRES_SPACE_SPECIFIC_VALIDATION",
+      "terrestrial_rule_preserved": true,
+      "threshold_adjustment": "NONE",
+      "reason": "No verified space-specific diagnostic thresholds identified."
+    },
+    {
+      "condition_id": "DKA",
+      "classification": "REQUIRES_SPACE_SPECIFIC_VALIDATION",
+      "terrestrial_rule_preserved": true,
+      "threshold_adjustment": "NONE",
+      "reason": "Diagnostic and treatment criteria are terrestrial; mission resources and physiology require validation."
+    },
+    {
+      "condition_id": "ORTHOSTATIC_HYPOTENSION",
+      "classification": "CONTEXT_DEPENDENT",
+      "contexts": {
+        "FREE_MICROGRAVITY": "NOT_APPLICABLE",
+        "EARTH_GRAVITY": "DIRECTLY_APPLICABLE_WITH_STANDARD_CLINICAL_LIMITATIONS",
+        "POST_SPACEFLIGHT_GRAVITY_TRANSITION": "APPLICABLE_WITH_LIMITATIONS",
+        "PARTIAL_GRAVITY": "REQUIRES_SPACE_SPECIFIC_VALIDATION"
+      },
+      "threshold_adjustment": "NONE"
+    },
+    {
+      "condition_id": "POTS",
+      "classification": "REQUIRES_SPACE_SPECIFIC_VALIDATION",
+      "contexts": {
+        "FREE_MICROGRAVITY": "NOT_APPLICABLE_FOR_STANDARD_STANDING_TEST",
+        "POST_SPACEFLIGHT": "APPLICABLE_WITH_LIMITATIONS"
+      },
+      "special_confounder": "SPACEFLIGHT_DECONDITIONING",
+      "threshold_adjustment": "NONE"
+    },
+    {
+      "condition_id": "AKI",
+      "classification": "REQUIRES_SPACE_SPECIFIC_VALIDATION",
+      "terrestrial_rule_preserved": true,
+      "threshold_adjustment": "NONE",
+      "reason": "Spaceflight alters renal physiology, fluids and body composition; no replacement KDIGO thresholds verified."
+    },
+    {
+      "condition_id": "ANAPHYLAXIS",
+      "classification": "APPLICABLE_WITH_LIMITATIONS",
+      "terrestrial_rule_preserved": true,
+      "threshold_adjustment": "NONE",
+      "limitations": [
+        "positioning_in_microgravity",
+        "drug_inventory",
+        "route_execution",
+        "monitoring_resources"
+      ]
+    },
+    {
+      "condition_id": "DIZZINESS_TACHYCARDIA_PRESENTATION",
+      "classification": "CONTEXT_DEPENDENT",
+      "reason": "Orthostatic branches depend on gravity; metabolic/allergic branches do not use standing criteria."
+    }
+  ]
+}

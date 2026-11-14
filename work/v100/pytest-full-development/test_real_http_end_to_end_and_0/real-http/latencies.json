@@ -1,0 +1,542 @@
+[
+  {
+    "method": "POST",
+    "path": "/missions",
+    "status": 201,
+    "milliseconds": 35.793900009593926
+  },
+  {
+    "method": "POST",
+    "path": "/profiles",
+    "status": 201,
+    "milliseconds": 29.140800004824996
+  },
+  {
+    "method": "POST",
+    "path": "/devices",
+    "status": 201,
+    "milliseconds": 22.56939999642782
+  },
+  {
+    "method": "POST",
+    "path": "/devices",
+    "status": 201,
+    "milliseconds": 20.036200003232807
+  },
+  {
+    "method": "POST",
+    "path": "/devices",
+    "status": 201,
+    "milliseconds": 25.193399997078814
+  },
+  {
+    "method": "POST",
+    "path": "/devices",
+    "status": 201,
+    "milliseconds": 20.230900001479313
+  },
+  {
+    "method": "POST",
+    "path": "/devices",
+    "status": 201,
+    "milliseconds": 26.084100012667477
+  },
+  {
+    "method": "POST",
+    "path": "/measurements",
+    "status": 201,
+    "milliseconds": 25.971499999286607
+  },
+  {
+    "method": "POST",
+    "path": "/measurements",
+    "status": 201,
+    "milliseconds": 19.830799996270798
+  },
+  {
+    "method": "POST",
+    "path": "/measurements",
+    "status": 201,
+    "milliseconds": 21.03220000572037
+  },
+  {
+    "method": "POST",
+    "path": "/measurements",
+    "status": 201,
+    "milliseconds": 24.095000000670552
+  },
+  {
+    "method": "POST",
+    "path": "/measurements",
+    "status": 201,
+    "milliseconds": 25.662400003056973
+  },
+  {
+    "method": "POST",
+    "path": "/measurements",
+    "status": 201,
+    "milliseconds": 24.011900008190423
+  },
+  {
+    "method": "POST",
+    "path": "/measurements",
+    "status": 201,
+    "milliseconds": 21.242299990262836
+  },
+  {
+    "method": "POST",
+    "path": "/measurements",
+    "status": 201,
+    "milliseconds": 19.185599987395108
+  },
+  {
+    "method": "POST",
+    "path": "/measurements",
+    "status": 201,
+    "milliseconds": 17.32790000096429
+  },
+  {
+    "method": "POST",
+    "path": "/measurements",
+    "status": 201,
+    "milliseconds": 33.24920000159182
+  },
+  {
+    "method": "POST",
+    "path": "/measurements",
+    "status": 201,
+    "milliseconds": 18.667800002731383
+  },
+  {
+    "method": "POST",
+    "path": "/measurements",
+    "status": 201,
+    "milliseconds": 22.53220000420697
+  },
+  {
+    "method": "POST",
+    "path": "/measurements",
+    "status": 201,
+    "milliseconds": 17.975900002056733
+  },
+  {
+    "method": "POST",
+    "path": "/measurements",
+    "status": 201,
+    "milliseconds": 19.220700007281266
+  },
+  {
+    "method": "POST",
+    "path": "/measurements",
+    "status": 201,
+    "milliseconds": 18.487800000002608
+  },
+  {
+    "method": "POST",
+    "path": "/measurements",
+    "status": 201,
+    "milliseconds": 19.11780000955332
+  },
+  {
+    "method": "POST",
+    "path": "/measurements",
+    "status": 201,
+    "milliseconds": 21.994399998220615
+  },
+  {
+    "method": "POST",
+    "path": "/measurements",
+    "status": 201,
+    "milliseconds": 22.70870000938885
+  },
+  {
+    "method": "POST",
+    "path": "/measurements",
+    "status": 201,
+    "milliseconds": 189.35039998905268
+  },
+  {
+    "method": "POST",
+    "path": "/measurements",
+    "status": 201,
+    "milliseconds": 19.054999997024424
+  },
+  {
+    "method": "POST",
+    "path": "/measurements",
+    "status": 201,
+    "milliseconds": 20.782299994607456
+  },
+  {
+    "method": "POST",
+    "path": "/measurements",
+    "status": 201,
+    "milliseconds": 18.469000002369285
+  },
+  {
+    "method": "POST",
+    "path": "/measurements",
+    "status": 201,
+    "milliseconds": 19.012300006579608
+  },
+  {
+    "method": "POST",
+    "path": "/measurements",
+    "status": 201,
+    "milliseconds": 18.939700006740168
+  },
+  {
+    "method": "POST",
+    "path": "/measurements",
+    "status": 201,
+    "milliseconds": 18.907799996668473
+  },
+  {
+    "method": "POST",
+    "path": "/measurements",
+    "status": 201,
+    "milliseconds": 19.396000003325753
+  },
+  {
+    "method": "POST",
+    "path": "/measurements",
+    "status": 201,
+    "milliseconds": 20.07519999460783
+  },
+  {
+    "method": "POST",
+    "path": "/measurements",
+    "status": 201,
+    "milliseconds": 15.344500003266148
+  },
+  {
+    "method": "POST",
+    "path": "/measurements",
+    "status": 201,
+    "milliseconds": 16.679700012900867
+  },
+  {
+    "method": "POST",
+    "path": "/measurements",
+    "status": 201,
+    "milliseconds": 24.09619999525603
+  },
+  {
+    "method": "POST",
+    "path": "/measurements",
+    "status": 201,
+    "milliseconds": 16.147900008945726
+  },
+  {
+    "method": "POST",
+    "path": "/measurements",
+    "status": 201,
+    "milliseconds": 19.153000001097098
+  },
+  {
+    "method": "POST",
+    "path": "/measurements",
+    "status": 201,
+    "milliseconds": 19.737099995836616
+  },
+  {
+    "method": "POST",
+    "path": "/measurements",
+    "status": 201,
+    "milliseconds": 20.79589999630116
+  },
+  {
+    "method": "POST",
+    "path": "/measurements",
+    "status": 201,
+    "milliseconds": 22.47749999514781
+  },
+  {
+    "method": "POST",
+    "path": "/measurements",
+    "status": 201,
+    "milliseconds": 18.77480000257492
+  },
+  {
+    "method": "POST",
+    "path": "/measurements",
+    "status": 201,
+    "milliseconds": 18.20469999802299
+  },
+  {
+    "method": "POST",
+    "path": "/measurements",
+    "status": 201,
+    "milliseconds": 18.39500000642147
+  },
+  {
+    "method": "POST",
+    "path": "/baselines",
+    "status": 201,
+    "milliseconds": 21.76099999633152
+  },
+  {
+    "method": "POST",
+    "path": "/baselines",
+    "status": 201,
+    "milliseconds": 23.21319999464322
+  },
+  {
+    "method": "POST",
+    "path": "/trends",
+    "status": 201,
+    "milliseconds": 27.89189999748487
+  },
+  {
+    "method": "POST",
+    "path": "/trends",
+    "status": 201,
+    "milliseconds": 26.787799986777827
+  },
+  {
+    "method": "POST",
+    "path": "/evaluations",
+    "status": 200,
+    "milliseconds": 31.135600002016872
+  },
+  {
+    "method": "POST",
+    "path": "/evaluations",
+    "status": 200,
+    "milliseconds": 43.01639999903273
+  },
+  {
+    "method": "POST",
+    "path": "/evaluations",
+    "status": 200,
+    "milliseconds": 30.84570000646636
+  },
+  {
+    "method": "POST",
+    "path": "/evaluations",
+    "status": 200,
+    "milliseconds": 41.99299999163486
+  },
+  {
+    "method": "POST",
+    "path": "/evaluations",
+    "status": 200,
+    "milliseconds": 28.397800007951446
+  },
+  {
+    "method": "POST",
+    "path": "/evaluations",
+    "status": 200,
+    "milliseconds": 28.260999999474734
+  },
+  {
+    "method": "POST",
+    "path": "/evaluations",
+    "status": 200,
+    "milliseconds": 28.6099000077229
+  },
+  {
+    "method": "POST",
+    "path": "/evaluations",
+    "status": 200,
+    "milliseconds": 34.00500000861939
+  },
+  {
+    "method": "POST",
+    "path": "/evaluations",
+    "status": 200,
+    "milliseconds": 38.4219999978086
+  },
+  {
+    "method": "POST",
+    "path": "/evaluations",
+    "status": 200,
+    "milliseconds": 27.636099999654107
+  },
+  {
+    "method": "POST",
+    "path": "/quality/assessments",
+    "status": 201,
+    "milliseconds": 23.79300000029616
+  },
+  {
+    "method": "POST",
+    "path": "/episodes",
+    "status": 201,
+    "milliseconds": 26.089400009368546
+  },
+  {
+    "method": "POST",
+    "path": "/clinical-notes",
+    "status": 200,
+    "milliseconds": 23.75989999563899
+  },
+  {
+    "method": "POST",
+    "path": "/multisystem",
+    "status": 200,
+    "milliseconds": 19.882399996276945
+  },
+  {
+    "method": "POST",
+    "path": "/episodes",
+    "status": 201,
+    "milliseconds": 27.141799990204163
+  },
+  {
+    "method": "POST",
+    "path": "/episodes/sim-episode/transitions",
+    "status": 200,
+    "milliseconds": 26.680299997678958
+  },
+  {
+    "method": "POST",
+    "path": "/episodes/sim-episode/transitions",
+    "status": 200,
+    "milliseconds": 19.47959999961313
+  },
+  {
+    "method": "POST",
+    "path": "/followups",
+    "status": 200,
+    "milliseconds": 22.257500007981434
+  },
+  {
+    "method": "POST",
+    "path": "/followups/reviews",
+    "status": 200,
+    "milliseconds": 21.236700005829334
+  },
+  {
+    "method": "POST",
+    "path": "/action-requests",
+    "status": 200,
+    "milliseconds": 21.244299990939908
+  },
+  {
+    "method": "POST",
+    "path": "/evaluations",
+    "status": 200,
+    "milliseconds": 33.56779999739956
+  },
+  {
+    "method": "GET",
+    "path": "/findings/082638206be6928e430a0f9cbeac732ff68a364ccf005231702209db9c9008c3/explanation",
+    "status": 200,
+    "milliseconds": 48.75490000995342
+  },
+  {
+    "method": "POST",
+    "path": "/resources/assessments",
+    "status": 201,
+    "milliseconds": 56.2352999986615
+  },
+  {
+    "method": "GET",
+    "path": "/audit/verify",
+    "status": 200,
+    "milliseconds": 52.786700005526654
+  },
+  {
+    "method": "GET",
+    "path": "/rag/findings/082638206be6928e430a0f9cbeac732ff68a364ccf005231702209db9c9008c3",
+    "status": 200,
+    "milliseconds": 41.957599998568185
+  },
+  {
+    "method": "POST",
+    "path": "/evaluations",
+    "status": 403,
+    "milliseconds": 21.256299995002337
+  },
+  {
+    "method": "GET",
+    "path": "/measurements",
+    "status": 403,
+    "milliseconds": 14.753400013432838
+  },
+  {
+    "method": "GET",
+    "path": "/rag/findings",
+    "status": 403,
+    "milliseconds": 12.43649999378249
+  },
+  {
+    "method": "GET",
+    "path": "/evidence/rules/VIGILE-ENV-002",
+    "status": 200,
+    "milliseconds": 13.183600007323548
+  },
+  {
+    "method": "GET",
+    "path": "/rag/findings",
+    "status": 200,
+    "milliseconds": 15.907299995888025
+  },
+  {
+    "method": "GET",
+    "path": "/capabilities/coverage",
+    "status": 200,
+    "milliseconds": 187.48369999229908
+  },
+  {
+    "method": "GET",
+    "path": "/research-records/baseline/baseline-vo2",
+    "status": 200,
+    "milliseconds": 20.68640000652522
+  },
+  {
+    "method": "GET",
+    "path": "/baselines/baseline-vo2/status",
+    "status": 200,
+    "milliseconds": 15.133599998080172
+  },
+  {
+    "method": "GET",
+    "path": "/followups/sim-followup/status",
+    "status": 200,
+    "milliseconds": 13.64109999849461
+  },
+  {
+    "method": "GET",
+    "path": "/followups/sim-followup/status",
+    "status": 200,
+    "milliseconds": 10.33199999073986
+  },
+  {
+    "method": "GET",
+    "path": "/profiles",
+    "status": 200,
+    "milliseconds": 13.019100006204098
+  },
+  {
+    "method": "GET",
+    "path": "/profiles/sim-crew",
+    "status": 200,
+    "milliseconds": 12.912199992570095
+  },
+  {
+    "method": "GET",
+    "path": "/measurements",
+    "status": 200,
+    "milliseconds": 22.216199999093078
+  },
+  {
+    "method": "GET",
+    "path": "/baselines",
+    "status": 200,
+    "milliseconds": 13.45680000667926
+  },
+  {
+    "method": "GET",
+    "path": "/trends",
+    "status": 200,
+    "milliseconds": 13.58329999493435
+  },
+  {
+    "method": "GET",
+    "path": "/episodes/sim-episode/pathway",
+    "status": 200,
+    "milliseconds": 19.088799992459826
+  }
+]

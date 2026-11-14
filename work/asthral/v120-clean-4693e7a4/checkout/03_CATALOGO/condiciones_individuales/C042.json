@@ -1,0 +1,31 @@
+{
+  "condition_id": "C042",
+  "catalog_record": {
+    "condition_id": "C042",
+    "name_specialty": "Choque eléctrico / emergencias",
+    "description_spaceflight": "HSRB mantiene riesgo explícito de daño eléctrico.",
+    "risks_symptoms": "Fallos/energía/mantenimiento.",
+    "biomarkers_sensors_tests": "Evento eléctrico + evaluación fisiológica/ECG cuando corresponda.",
+    "baselines_environment_interactions": "Contexto técnico.",
+    "primary_evidence": "S03. citeturn27search5",
+    "limits_authorizations_state": "Protocolo médico operacional específico `NPA`."
+  },
+  "clinical_pathway_profile_as_published": "**P:** electrical safety; **M:** evento; **Q:** verificar exposición; **D:** cualquier evento relevante activa protocolo de seguridad; **A/DD/T/I:** médico + engineering; **R/F:** seguimiento; **G:** `NPA`.",
+  "coverage_states": {
+    "prevention": "ES",
+    "monitoring": "RV",
+    "data_quality": "ES",
+    "detection": "RV",
+    "assessment": "RMA",
+    "differential_diagnosis": "RMA",
+    "triage": "RMA",
+    "intervention_authorized": "RMA",
+    "recovery": "RV",
+    "follow_up": "RV",
+    "prognosis": "NPA"
+  },
+  "source_ids": [
+    "S03"
+  ],
+  "NOTICE": "Pathway text is an outline; not an authorized diagnostic or treatment protocol."
+}

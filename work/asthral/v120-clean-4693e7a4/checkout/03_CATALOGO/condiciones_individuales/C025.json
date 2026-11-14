@@ -1,0 +1,31 @@
+{
+  "condition_id": "C025",
+  "catalog_record": {
+    "condition_id": "C025",
+    "name_specialty": "Enfermedad gastrointestinal aguda / gastroenterología",
+    "description_spaceflight": "Condiciones GI forman parte del conjunto médico que debe poder manejarse en vuelo.",
+    "risks_symptoms": "Infección, dieta, fármacos, adaptación.",
+    "biomarkers_sensors_tests": "Síntomas, hidratación, examen/lab según recursos.",
+    "baselines_environment_interactions": "Historia GI.",
+    "primary_evidence": "S17. citeturn21search0turn21search2",
+    "limits_authorizations_state": "Diagnóstico/tratamiento específico requiere protocolo clínico. `RMA`."
+  },
+  "clinical_pathway_profile_as_published": "**P:** higiene/food safety; **M:** síntomas/hidratación; **Q:** timing y gravedad; **D:** screening; **A/DD:** infección, adaptación, fármaco, abdomen agudo; **T/I:** médico; **R/F:** tolerancia oral/síntomas; **G:** no autónomo.",
+  "coverage_states": {
+    "prevention": "ES",
+    "monitoring": "ES",
+    "data_quality": "ES",
+    "detection": "RV",
+    "assessment": "RMA",
+    "differential_diagnosis": "RMA",
+    "triage": "RMA",
+    "intervention_authorized": "RMA",
+    "recovery": "RV",
+    "follow_up": "RV",
+    "prognosis": "RO"
+  },
+  "source_ids": [
+    "S17"
+  ],
+  "NOTICE": "Pathway text is an outline; not an authorized diagnostic or treatment protocol."
+}

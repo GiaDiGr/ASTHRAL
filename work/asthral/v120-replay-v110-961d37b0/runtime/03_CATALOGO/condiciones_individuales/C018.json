@@ -1,0 +1,31 @@
+{
+  "condition_id": "C018",
+  "catalog_record": {
+    "condition_id": "C018",
+    "name_specialty": "Alteración de respuesta inmunitaria / inmunología",
+    "description_spaceflight": "El vuelo espacial altera respuestas inmunes; la magnitud clínica individual sigue incierta.",
+    "risks_symptoms": "Microgravedad, estrés, sueño, radiación.",
+    "biomarkers_sensors_tests": "Sangre/saliva/orina, células y mediadores según protocolo.",
+    "baselines_environment_interactions": "Baselines inmunológicos longitudinales.",
+    "primary_evidence": "S09. citeturn12search0turn12search7",
+    "limits_authorizations_state": "Cambio biomarcador ≠ inmunodeficiencia clínica. `RV`."
+  },
+  "clinical_pathway_profile_as_published": "**P:** sueño/nutrición/mitigación de estrés; **M:** biomarcadores autorizados; **Q:** muestra, lote, timing; **D:** cambio longitudinal `[RV]`; **A/DD:** infección, estrés, variabilidad; **T/I:** médico; **R/F:** biomarcadores+clínica; **G:** no pronóstico clínico autónomo.",
+  "coverage_states": {
+    "prevention": "ES",
+    "monitoring": "RV",
+    "data_quality": "ES",
+    "detection": "RV",
+    "assessment": "RV",
+    "differential_diagnosis": "RV",
+    "triage": "RMA",
+    "intervention_authorized": "RMA",
+    "recovery": "RV",
+    "follow_up": "ES",
+    "prognosis": "RO"
+  },
+  "source_ids": [
+    "S09"
+  ],
+  "NOTICE": "Pathway text is an outline; not an authorized diagnostic or treatment protocol."
+}

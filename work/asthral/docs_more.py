@@ -1,0 +1,72 @@
+from pathlib import Path
+R=Path(__file__).resolve().parents[2];D=R/'docs/asthral'
+(D/'HYBRID_RAG.md').write_text('''# ASTHRAL hybrid retrieval contract
+
+## Actual integration
+
+The existing FastAPI reader portal continues to call the existing local clinical/monitoring answer functions, sparse local library and citation guards. `english_result` is a presentation boundary; original records and source hashes remain unchanged. The local answer and approved speech envelope are finalized first. Optional `public_topic` then passes to `HybridRetrieval.retrieve(topic_id)`. No question, history, target ID, reader client, model, credential, clinical object, or mission context is accepted by that component. Remote results are attached as `supplementary_science` and rendered in an independent panel. They never enter generation, clinical rules, the local corpus, speech tickets, or authorization.
+
+`POST /api/assistant` retains the existing single evaluation_id/monitoring_id requirement and adds optional public_topic: cardiovascular, muscle_bone, sleep_fatigue, radiation, or hyperglycemic_consensus. Unknown topic strings and extra privilege/configuration fields are rejected. Language is canonically English; the legacy es request value is accepted for compatibility but does not enable Spanish UI or output. Block IDs, source identifiers, codes, values, units, and authority remain distinct from translated presentation text. Consumers must use structured codes rather than matching old Spanish prose.
+
+## Permission and modes
+
+`online_retrieval.enabled` is a strict Boolean in trusted local configuration. Default false. The CLI `demo_asthral.py prepare --enable-online` is an explicit local provisioning action. The existing mode controller supplies the actual mode; there is no second mode switch. Session readers can select a public topic only after prior configuration authorization. They cannot enable Internet access, acquire write credentials, or authorize medicine. FULL indicates supported capability, not available electrical power or Internet connectivity.
+
+FULL + enabled + allowed provider + approved topic + budget permits an attempt. Provider TLS/response success establishes reachability for that attempt, not a global connectivity assertion. LOW_POWER/CRITICAL make zero external requests and return local-only behavior. Mode changes invalidate pending results before subsequent provider calls, cache writes and result use. The UI also invalidates pending replies and clears remote results after a successful mode change. Fresh/stale caches are never silently described as a live connection.
+
+## Provider and privacy
+
+Implemented provider: **PubMed/NCBI E-utilities only**. API documentation: https://www.ncbi.nlm.nih.gov/books/NBK25499/ and https://www.nlm.nih.gov/dataguide/eutilities/utilities.html. No arbitrary search websites, general browser, NASA API adapter, abstract scraper or full-text importer is implemented. Spaceflight topics search PubMed; this does not imply that NASA HRP, NTRS or OSDR are separately integrated.
+
+Fixed destination: TLS to eutils.ncbi.nlm.nih.gov:443. Fixed utilities: esearch.fcgi and esummary.fcgi under /entrez/eutils/. ESearch receives a constant query from TOPICS; ESummary receives only bounded numeric PMIDs returned by ESearch. Headers are fixed Accept, Accept-Encoding and User-Agent (plus standard HTTP host handling). No private data, environment proxy credentials, authentication cookies, private query text, private embeddings or clinical identity are forwarded. Anonymous access needs no API key. Future credentialed providers need separately protected configuration and fresh review; they cannot be enabled by arbitrary host strings.
+
+The registered provider allowlist is configurable as a subset of implemented providers. It is not an arbitrary domain list. No redirect is followed. DNS results must be public/non-special, and the numeric address is used for the connection while TLS verifies the approved hostname. This prevents redirect/private-network access and a second unchecked DNS resolution. TLS uses the system trusted CA context, including the Windows trust store; certificate verification is never disabled. DNS work, connection, reads, body size, retry count, request spacing and topic rate are bounded. DNS timeouts return while the bounded resolver thread finishes independently; same-process resource isolation remains a limitation.
+
+## Evidence and cache
+
+Local origin: LOCAL_PINNED. Remote origin: REMOTE_UNREVIEWED; review_status is always NOT_CLINICALLY_REVIEWED. Result statuses: LOCAL_ONLY, REMOTE_OPTIONAL, REMOTE_UNAVAILABLE. A successful retrieval with no results is explicit, not a normal clinical finding. Malformed/oversized/non-JSON responses, invalid PMIDs/DOIs, missing required metadata and detected instructions are rejected or excluded. Older/contradictory bibliography is not promoted or resolved into a clinical conclusion.
+
+Remote fields: topic, provider, title, publisher, canonical PMID URL, PMID, DOI when available, publication date, UTC retrieval time, NCBI_PUBMED_ESUMMARY_V2 version, title excerpt, content hash, review status and limitations. Missing DOI is allowed only with valid stable PMID. Excerpt kind explicitly says TITLE_METADATA_ONLY_NOT_FULL_TEXT. The hash establishes stored content consistency, not truth, authority or a clinical signature. No citation of a title implies review of its full article.
+
+Cache is optional, public-only and separate from clinical evidence/data. At most five fixed topic records, each <=16 KiB; <=3 documents per record, hashes/schema checked. Default fresh TTL 24 hours; stale fallback <=7 days after provider failure, labeled STALE_CACHE_NOT_LIVE. No user data are cache keys or values. No external telemetry. In-memory retrieval events contain only topic, status/reason, latency and delivery; no question, target, notes, credentials or response request headers. An attacker controlling the same account/storage remains outside this capability boundary.
+
+## Safety and failure behavior
+
+Source text is untrusted. It has no tools or executable route. Remote documents cannot change system prompts, mode, rules, diagnoses, urgency, missingness, potassium gates, inventory, authorizations, or records. Remote results do not use the LLM evidence path because its existing guard was not expanded to authorize unreviewed references. Local operation remains available after DNS, TLS, timeout, HTTP/rate-limit, empty, parse, cache, or mode failures. No treatment execution or medical order is created.
+
+Tests instrument requests and public caches, insert synthetic private/secret-shaped values locally, and verify absence externally. Mock fixtures test edge conditions reproducibly; live provider smoke is a separate result. This is tested data-flow minimization, not an absolute guarantee against a compromised OS, provider, same-user process, or storage administrator. No data-at-rest encryption or operational authorization policy is added.
+''',encoding='utf8')
+(D/'DEMO.md').write_text('''# ASTHRAL demonstration — approximately five minutes
+
+Use synthetic data only. The prepared owner demonstration is at http://127.0.0.1:8922/ while its supervisor is active. Current dataset: engine/data/asthral-release. Access codes remain protected locally. Reproduce a new instance using README instructions; do not overwrite an existing dataset or falsify dates/results.
+
+1. **0:00–0:40 — Identity and context.** Sign in with the portal code. Confirm ASTHRAL and its full acronym. Select synthetic astronaut A, checkpoint frame-mission-crew-A-cycle-35. Show mission phase, gravity and recorded date. This is historical synthetic context, not current patient health.
+2. **0:40–1:20 — Longitudinal health.** Open Measurements and trends. Select aerobic capacity; inspect samples, the actual comparison baseline and table. Open recorded findings. A normative performance shortfall is not a diagnosis.
+3. **1:20–1:50 — Prevention.** Open Documented prevention. Show the English reference outline, uncertainty, source identifiers, missing resource requirements and mission authorization conditions. No exercise schedule, medication, or personalized preventive order is generated.
+4. **1:50–2:40 — Urgent clinical assessment.** Switch to astronaut B, checkpoint frame-mission-crew-B-cycle-18, and DKA from that cycle. Show CRITERIA_MET + EMERGENCY. Missing bicarbonate/urine ketones are nonblocking alternatives in this recorded tree; potassium remains separate protocol safety data. Open documented interventions, resource states and AUTHORIZATION_REQUIRED. Urgency remains visible while treatment execution stays blocked.
+5. **2:40–3:10 — Reassessment and follow-up.** Switch to B cycle 18p1. Potassium now appears in the synthetic reassessment, but no mission authority or treatment execution is granted. Open episodes/plans; a record or pending plan does not demonstrate efficacy or recovery.
+6. **3:10–3:50 — Local RAG and optional public references.** Return to A cycle 35, select monitoring context and ask “What changed from my personal baseline?” with Local knowledge only. The owner smoke verified two accepted English local-model sentences; model unavailability still returns local evidence. Select the public 2024 hyperglycemic crises topic for a supplementary scientific query. In FULL with trusted enablement, show PubMed metadata, publication/retrieval time, PMID/DOI, and External Source — Not Clinically Reviewed. This is not a clinical recommendation or full-text review.
+7. **3:50–4:30 — Failure and modes.** Show LOW_POWER and CRITICAL: online status disabled, no external retrieval. CRITICAL also prevents inference. Automated transport tests verify zero external calls. A controlled provider-timeout fixture preserves local answers; physical Internet disconnection is a separate manual acceptance test. Do not change Norton or block localhost to demonstrate it.
+8. **4:30–5:00 — Traceability and limitations.** Show replay/receipt checkpoint and source hashes. Explain private repository, synthetic-only data, pending clinical/operational/flight validation, plaintext SQLite, missing process isolation and human voice/visual acceptance. Do not claim those checks passed because software tests did.
+
+## Voice example (optional, outside the five-minute timing)
+
+Use English push-to-talk: “ASTHRAL, what changed from my baseline?” Review the editable transcript, including numbers, units and negations, then explicitly send and play the approved visible text. Stop/cancel remains available. A synthetic SAPI→Vosk test recognized the name as “as thrill”; narrowly scoped leading-name aliases handle that and “astral” without changing medical content. No human microphone accuracy or listening acceptance has been completed.
+
+## Visual acceptance status
+
+The computer-use runtime initialized and detected Chrome, but policy stopped it because the current browser URL could not be determined confidently. No application screenshot inspection or full visual walkthrough was completed. Do not retry with alternate browser automation to bypass that stop. Human checklist: verify all navigation, keyboard focus, responsive layout, English states/sources, persistent emergency visibility, different-checkpoint warnings, cached/live reference labeling, error states, no Spanish voice option, and sign-out/expiry. No screenshot with credentials, cookies, raw private records or access codes should be shared.
+''',encoding='utf8')
+(D/'HISTORICAL_COMPATIBILITY.md').write_text('''# Historical compatibility and translation boundaries
+
+Original clinical knowledge, diagnostic/confirmation algorithms, AND/OR logic, thresholds, doses, resource restrictions, and medical authorization behavior remain unchanged. The working project retains the original supplied corpus and manifests. A clean team checkout uses a reduced hash manifest for safely redistributable computable records and metadata. The catalogue fingerprint and rule semantics are preserved. Git attributes retain byte-level hashes across checkouts.
+
+Original R2 and v1.0.1 UX archives remain intact locally. Fifty clinical and 26 monitoring replays were verified for EACH archived version using isolated database copies and the matching archived runtime. The original databases were not used as mutable test targets. New ASTHRAL requests have a new implementation hash because presentation/network modules changed; historical replays must use their original runtime. Do not silently reevaluate a frozen historical database with current code. Git history also preserves the initial source baseline; exact archived replay remains tied to the original byte-hashed archive, not an arbitrary line-ending-normalized export.
+
+Legacy Python package, identifiers, API paths, cookies, model tag, and immutable scientific records may retain VIGILE names. Current branding and astronaut-facing content are ASTHRAL. Structured codes are not translated. Presentation translations preserve values, units, negations and safety meaning; translation memory is separate from clinical_knowledge. Source text lacking an approved English rendering is withheld with an explicit limitation rather than paraphrased by the model. Original provenance and language remain in the record. Independent clinical review of translation nuance remains pending.
+
+The English local knowledge notes are project-authored implementation documentation, not a new medical guideline. They live in a separate pinned manifest; default historical retrieval behavior remains unchanged when the original research pack is available. Clean setup generates a compatibility library-v080 filename only if absent and never overwrites an existing historical library. Full third-party texts, models, private configuration and generated databases are not included in Git. One historical corpus-dependent benchmark is explicitly omitted if that corpus is absent, rather than presented as reproduced. Current English/hybrid tests remain available.
+
+Scientific disagreements documented previously, including the declarative versus runtime potassium boundary and incomplete therapeutic source locators/precaution classification, remain pending human review. No attempt was made to resolve them through branding, translation or retrieval. All treatment execution remains blocked.
+''',encoding='utf8')
+print('Hybrid contract, current English demonstration and historical compatibility documented')

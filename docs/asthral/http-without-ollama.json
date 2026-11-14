@@ -1,0 +1,167 @@
+{
+  "real_loopback_HTTP": true,
+  "English_UI_and_ASTHRAL_identity": true,
+  "model": "vigile-qwen3-4b:latest",
+  "model_configuration_changed": false,
+  "status_before": {
+    "assistant": {
+      "available": false,
+      "reason": "LOCAL_RUNTIME_UNAVAILABLE",
+      "mode": "FULL",
+      "provider": "ollama"
+    },
+    "scientific_retrieval": {
+      "local_origin": "LOCAL_PINNED",
+      "online_enabled_by_trusted_configuration": true,
+      "mode": "FULL",
+      "approved_providers": [
+        "pubmed"
+      ],
+      "network_permitted": true,
+      "topics": [
+        {
+          "id": "cardiovascular",
+          "label": "Spaceflight cardiovascular deconditioning"
+        },
+        {
+          "id": "muscle_bone",
+          "label": "Spaceflight muscle and bone countermeasures"
+        },
+        {
+          "id": "sleep_fatigue",
+          "label": "Spaceflight sleep and fatigue research"
+        },
+        {
+          "id": "radiation",
+          "label": "Space radiation health research"
+        },
+        {
+          "id": "hyperglycemic_consensus",
+          "label": "2024 hyperglycemic crises consensus report"
+        }
+      ],
+      "remote_authority": "REMOTE_UNREVIEWED",
+      "no_private_context_accepted": true
+    }
+  },
+  "cases": [
+    {
+      "case": "local_personal_baseline",
+      "status": "EXTRACTIVE_ONLY",
+      "latency_seconds": 2.412988300000052,
+      "generated_sentences": 0,
+      "model_requests": 0,
+      "science_status": "LOCAL_ONLY",
+      "science_delivery": "NONE",
+      "references": [],
+      "message": "ASTHRAL is showing stored engine evidence and local references. Any accepted explanation remains subject to the displayed safety restrictions."
+    },
+    {
+      "case": "DKA_missingness_with_public_science",
+      "status": "DETERMINISTIC_DATA_SUFFICIENCY",
+      "latency_seconds": 1.6827920000000631,
+      "generated_sentences": 0,
+      "model_requests": 0,
+      "science_status": "REMOTE_OPTIONAL",
+      "science_delivery": "LIVE",
+      "references": [
+        {
+          "origin": "REMOTE_UNREVIEWED",
+          "provider": "pubmed",
+          "topic_id": "hyperglycemic_consensus",
+          "title": "Hyperglycemic Crises in Adults With Diabetes: A Consensus Report.",
+          "publisher": "Diabetes care",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/39052901/",
+          "pmid": "39052901",
+          "doi": "10.2337/dci24-0032",
+          "publication_date": "2024 Aug 1",
+          "retrieved_at": "2026-11-04T15:15:44.217177+00:00",
+          "version": "NCBI_PUBMED_ESUMMARY_V2",
+          "excerpt": "Hyperglycemic Crises in Adults With Diabetes: A Consensus Report.",
+          "excerpt_kind": "TITLE_METADATA_ONLY_NOT_FULL_TEXT",
+          "content_hash": "69608a37b42e41c064c91fc1d4a411c38aeff27295d56f05ad594516a9b5537f",
+          "review_status": "NOT_CLINICALLY_REVIEWED",
+          "limitations": [
+            "NOT_PATIENT_GUIDANCE",
+            "PUBLICATION_DATE_IS_NOT_AUTHORITY",
+            "NOT_ELIGIBLE_FOR_RULE_UPDATES",
+            "NO_CLAIM_OF_FULL_TEXT_REVIEW"
+          ]
+        },
+        {
+          "origin": "REMOTE_UNREVIEWED",
+          "provider": "pubmed",
+          "topic_id": "hyperglycemic_consensus",
+          "title": "Hyperglycaemic crises in adults with diabetes: a consensus report.",
+          "publisher": "Diabetologia",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/38907161/",
+          "pmid": "38907161",
+          "doi": "10.1007/s00125-024-06183-8",
+          "publication_date": "2024 Aug",
+          "retrieved_at": "2026-11-04T15:15:44.217373+00:00",
+          "version": "NCBI_PUBMED_ESUMMARY_V2",
+          "excerpt": "Hyperglycaemic crises in adults with diabetes: a consensus report.",
+          "excerpt_kind": "TITLE_METADATA_ONLY_NOT_FULL_TEXT",
+          "content_hash": "f861363138c26f93ecd79d49d0cee37408806396e2bd3d07bf69b7cfc572fcec",
+          "review_status": "NOT_CLINICALLY_REVIEWED",
+          "limitations": [
+            "NOT_PATIENT_GUIDANCE",
+            "PUBLICATION_DATE_IS_NOT_AUTHORITY",
+            "NOT_ELIGIBLE_FOR_RULE_UPDATES",
+            "NO_CLAIM_OF_FULL_TEXT_REVIEW"
+          ]
+        },
+        {
+          "origin": "REMOTE_UNREVIEWED",
+          "provider": "pubmed",
+          "topic_id": "hyperglycemic_consensus",
+          "title": "Hyperglycemic crises in adults: A look at the 2024 consensus report.",
+          "publisher": "Cleveland Clinic journal of medicine",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/40032308/",
+          "pmid": "40032308",
+          "doi": "10.3949/ccjm.92a.24089",
+          "publication_date": "2025 Mar 3",
+          "retrieved_at": "2026-11-04T15:15:44.217444+00:00",
+          "version": "NCBI_PUBMED_ESUMMARY_V2",
+          "excerpt": "Hyperglycemic crises in adults: A look at the 2024 consensus report.",
+          "excerpt_kind": "TITLE_METADATA_ONLY_NOT_FULL_TEXT",
+          "content_hash": "d4503f634915c1fb523064adfdcd2272a94df7b7b1b27c2f17a9f97464215ceb",
+          "review_status": "NOT_CLINICALLY_REVIEWED",
+          "limitations": [
+            "NOT_PATIENT_GUIDANCE",
+            "PUBLICATION_DATE_IS_NOT_AUTHORITY",
+            "NOT_ELIGIBLE_FOR_RULE_UPDATES",
+            "NO_CLAIM_OF_FULL_TEXT_REVIEW"
+          ]
+        }
+      ],
+      "message": "ASTHRAL is showing the stored engine data requirements, without LLM reinterpretation."
+    },
+    {
+      "case": "LOW_POWER",
+      "status": "DETERMINISTIC_CLINICAL_EXPLANATION",
+      "latency_seconds": 0.46065100000032544,
+      "generated_sentences": 0,
+      "model_requests": 0,
+      "science_status": "LOCAL_ONLY",
+      "science_delivery": "NONE",
+      "references": [],
+      "message": "ASTHRAL is showing existing clinical states and restrictions. No treatment is authorized."
+    },
+    {
+      "case": "CRITICAL",
+      "status": "DETERMINISTIC_CLINICAL_EXPLANATION",
+      "latency_seconds": 0.3556422999999995,
+      "generated_sentences": 0,
+      "model_requests": 0,
+      "science_status": "LOCAL_ONLY",
+      "science_delivery": "NONE",
+      "references": [],
+      "message": "ASTHRAL is showing existing clinical states and restrictions. No treatment is authorized."
+    }
+  ],
+  "credentials_omitted": true,
+  "physical_microphone": false,
+  "visual_acceptance": "PENDING_COMPUTER_USE_URL_POLICY_STOP",
+  "no_Internet_disconnection_claim": true
+}

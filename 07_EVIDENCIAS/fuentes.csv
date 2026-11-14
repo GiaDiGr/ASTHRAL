@@ -1,0 +1,39 @@
+source_id,source,type_date,priority_utility
+S01,"NASA-STD-3001 Volume 1, Crew Health, Rev C","`NASA_STANDARD`, 15-09-2023, activo. citeturn19search0turn20view1","P0. Aeróbico, músculo, hueso, radiación, operaciones médicas, registros."
+S02,"NASA-STD-3001 Volume 2, Human Factors, Habitability, and Environmental Health, Rev F","`NASA_STANDARD`, 14-07-2026 según índice NTSS. citeturn19search1turn19search3","P0. Ambiente, atmósfera, habitabilidad, ortostatismo, EVA."
+S03,NASA Human System Risk Board — Human System Risks,"Riesgos oficiales, actualizado 2025. citeturn27search5",P0. Ontología superior de riesgos.
+S04,NASA HHC Spaceflight Risks,Riesgo fisiológico/contramedidas. citeturn18search3,"P0. Fitness, hueso, SANS, inmunidad, DCS, EVA."
+S05,NASA Cardiovascular Adaptations Risk,`SPACEFLIGHT_EVIDENCE`. citeturn11search0,P0. Cardiovascular/ortostatismo.
+S06,NASA Bone Fracture / Bone Changes Risk Record,`SPACEFLIGHT_EVIDENCE`. citeturn11search1turn11search7,"P0. BMD, QCT, fractura."
+S07,NASA SANS Risk,`SPACEFLIGHT_EVIDENCE`. citeturn11search2,P0. Neuro-ocular.
+S08,NASA Renal Stone Formation Risk,`SPACEFLIGHT_EVIDENCE`. citeturn11search3,P0. Litiasis renal.
+S09,NASA Altered Immune Response,`SPACEFLIGHT_EVIDENCE`. citeturn12search0turn12search7,P0. Inmunidad/reactivación.
+S10,NASA Sleep/Circadian/Workload Risk,`SPACEFLIGHT_EVIDENCE`. citeturn12search1,"P0. Sueño, circadiano, fatiga."
+S11,NASA Sensorimotor/Vestibular Risk,`SPACEFLIGHT_EVIDENCE`. citeturn12search2,"P0. Vestibular, marcha, G-transition."
+S12,NASA Behavioral Health / HFBP Risks,Riesgo oficial. citeturn18search7turn18search12,P0. Conductual/equipo.
+S13,NASA Food and Nutrition Risk + Human Adaptation to Spaceflight,Evidence/risk review. citeturn18search2turn18search11,P0/P1. Nutrición.
+S14,NASA Risk of Hypoxia,Riesgo oficial. citeturn18search10,P0. Hipoxia/atmósfera EVA.
+S15,NASA Ineffective or Toxic Medications Risk,Riesgo oficial. citeturn18search5,P0. Farmacología.
+S16,NASA Space Radiation Risks,Riesgo oficial. citeturn18search9,P0. Radiación/cáncer.
+S17,NASA Integrated Medical Model documentation / 2026 overview,Modelo probabilístico de condiciones médicas. citeturn21search0turn21search1turn21search2,"P0. Enfermedades, emergencias, recursos."
+S18,Earth-Independent Medical Operations Concept of Operations,Arquitectura médica de exploración. citeturn17search7,P0. Autonomía.
+S19,Exploration Medical Capability / Accepted Medical Condition List,NASA ExMC. citeturn21search13turn21search18,P0. Selección sistemática de capacidades.
+S20,NIST EWMA documentation,Método estadístico. citeturn16search0,P1. Detección de tendencia; `ENGINEERING_CHOICE`.
+S21,NIST Z-score/MAD,Método estadístico. citeturn16search2turn16search3,P1. Normalización/anomalías.
+S22,NIST CUSUM,Método estadístico. citeturn16search1,P1. Detección de cambio.
+S23,NASA Open Science Data Repository,Repositorio oficial. citeturn13search0turn24search4,P0. Datos para desarrollo.
+S24,NASA Life Sciences Portal / LSDA,Archivo humano/análogos. citeturn24search2turn24search3,P0. Datos humanos.
+S25,ESA Human Research Data Archive,Repositorio ESA; acceso puede requerir autenticación. citeturn13search3,P1. Datos ESA.
+S26,OSD-195,"21 d bed rest, músculo, humanos. citeturn22search0",P1 dataset.
+S27,OSD-198,"21 d bed rest + hypoxia, músculo, humanos. citeturn22search1",P1 dataset.
+S28,OSD-942,"70 d bed rest + exercise, músculo, humanos. citeturn22search2",P1 dataset.
+S29,OSD-370,"Bed rest/retraining, humanos. citeturn22search3",P1 dataset.
+S30,OSD-816,Ex vivo human SANS/TAS. citeturn23search0,P1. SANS experimental.
+S31,OSD-53,Astronaut whole-blood gene expression pre/post. citeturn23search1,P1. Inmunidad/stress omics.
+S32,OSD-530,"JAXA CFE: seis astronautas >120 días ISS, plasma cfRNA. citeturn23search2",P1. JAXA/human longitudinal omics.
+S33,Inspiration4 OSDR mission collections,"Humanos, LEO, multimodal. citeturn23search3",P1. Biomarkers/multi-omics.
+S34,"Lee et al., *J Appl Physiol* 2025, standing ± compression after long-duration flight","Peer reviewed, DOI 10.1152/japplphysiol.00646.2024. citeturn26search0turn26search2",P1. Ortostatismo postflight.
+S35,NASA Concern of Venous Thromboembolism,Evidencia de vuelo; hoy componente de CV risk. citeturn27search0,P0/P1. VTE.
+S36,NASA Risk of Decompression Sickness,Riesgo/procedimientos generales. citeturn27search1turn27search4,P0. DCS/EVA.
+S37,NASA Toxic Substance Exposure + DAG,Riesgo/DAG. citeturn27search2turn27search7,P0. Toxicología.
+S38,NASA Hearing Loss and Acoustics Risk,Riesgo oficial. citeturn27search3,P0. Audición/acústica.

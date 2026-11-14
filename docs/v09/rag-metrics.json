@@ -1,0 +1,61 @@
+{
+  "annotation": "12 fixed narrow passage queries; path precision counts retrieved fragments belonging to a labelled document, fragment precision counts only labelled exact passage IDs; does not measure relevance of every corpus passage",
+  "reports": {
+    "audit-before.json": {
+      "3": {
+        "document_path_precision_per_fragment_rank": 0.19444444444444442,
+        "document_coverage": 0.5,
+        "fragment_precision": 0.1111111111111111,
+        "fragment_coverage": 0.3333333333333333
+      },
+      "5": {
+        "document_path_precision_per_fragment_rank": 0.25,
+        "document_coverage": 0.9166666666666666,
+        "fragment_precision": 0.13333333333333333,
+        "fragment_coverage": 0.6666666666666666
+      }
+    },
+    "audit-final-full.json": {
+      "3": {
+        "document_path_precision_per_fragment_rank": 0.19444444444444442,
+        "document_coverage": 0.5,
+        "fragment_precision": 0.1111111111111111,
+        "fragment_coverage": 0.3333333333333333
+      },
+      "5": {
+        "document_path_precision_per_fragment_rank": 0.25,
+        "document_coverage": 0.9166666666666666,
+        "fragment_precision": 0.13333333333333333,
+        "fragment_coverage": 0.6666666666666666
+      }
+    },
+    "audit-after-low.json": {
+      "3": {
+        "document_path_precision_per_fragment_rank": 0.19444444444444442,
+        "document_coverage": 0.5,
+        "fragment_precision": 0.1111111111111111,
+        "fragment_coverage": 0.3333333333333333
+      },
+      "5": {
+        "document_path_precision_per_fragment_rank": 0.25,
+        "document_coverage": 0.9166666666666666,
+        "fragment_precision": 0.13333333333333333,
+        "fragment_coverage": 0.6666666666666666
+      }
+    },
+    "audit-after-critical.json": {
+      "3": {
+        "document_path_precision_per_fragment_rank": 0.19444444444444442,
+        "document_coverage": 0.5,
+        "fragment_precision": 0.1111111111111111,
+        "fragment_coverage": 0.3333333333333333
+      },
+      "5": {
+        "document_path_precision_per_fragment_rank": 0.25,
+        "document_coverage": 0.9166666666666666,
+        "fragment_precision": 0.13333333333333333,
+        "fragment_coverage": 0.6666666666666666
+      }
+    }
+  }
+}

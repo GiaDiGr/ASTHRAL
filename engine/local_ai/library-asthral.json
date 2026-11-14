@@ -1,0 +1,100 @@
+{
+  "schema_version": 2,
+  "retrieval_version": "SPARSE-BILINGUAL-1",
+  "documents": [
+    {
+      "document": "docs/knowledge/ASTHRAL_LOCAL_KNOWLEDGE.md",
+      "sha256": "75122940173b5f70c38deeb6ca4021006df40f1dab222376671da0b1084293d6",
+      "authority": "IMPLEMENTATION_DOCUMENTATION_NOT_GUIDELINE",
+      "version": "1.1.0"
+    }
+  ],
+  "missing_documents": [],
+  "blocks": [
+    {
+      "id": "D-9b65e36bcfba629823ac",
+      "kind": "DOCUMENT",
+      "text": "# ASTHRAL local knowledge: scope and existing evidence\r\n\r\nASTHRAL means Astronaut Support Tool for Health Risk Assessment and Logistics. It is an offline-first astronaut health monitoring and medical decision-support research prototype. Structured clinical outcomes come exclusively from the deterministic engine, never from retrieved text, Internet sources, or the language model. Clinical execution remains blocked and no verified mission medical authorization policy is implemented.\r\n\r\n## Recorded measurements, baselines, and trends\r\n\r\nA personal baseline is a documented comparison reference built from eligible observations under an identified protocol. A descriptive change in aerobic capacity, measured strength, sleep duration, or other indicator does not establish clinical worsening, normality, recovery, or a diagnosis. Missing, invalid, conflicting, or out-of-date measurements remain insufficient evidence. Measurement method, units, anatomical site, acquisition quality, mission phase, gravity, observation window, and receipt checkpoint affect whether comparison is possible. A graph ",
+      "reference": {
+        "document": "docs/knowledge/ASTHRAL_LOCAL_KNOWLEDGE.md",
+        "sha256": "75122940173b5f70c38deeb6ca4021006df40f1dab222376671da0b1084293d6",
+        "version": "1.1.0",
+        "authority": "IMPLEMENTATION_DOCUMENTATION_NOT_GUIDELINE",
+        "char_start": 0,
+        "char_end": 1100,
+        "line": 1
+      }
+    },
+    {
+      "id": "D-3307585bf598d1824dcb",
+      "kind": "DOCUMENT",
+      "text": "must use the baseline actually compared by the selected cycle and must not combine heterogeneous units silently.\r\n\r\n## DKA data sufficiency and independent safety\r\n\r\nThe stored diabetic ketoacidosis evaluation distinguishes diagnostic criteria from protocol safety. AND/OR alternatives must be evaluated as a tree. A missing alternative is not automatically required when another valid branch already satisfies its criterion. In a stored assessment, missing_required, optional_not_measured, invalid_required, and required_for_protocol_safety have different meanings. Potassium safety restrictions remain independent of whether diagnostic criteria are met. Bicarbonate and urine ketones must not be described as mandatory when other valid acidosis and ketosis alternatives have already satisfied the recorded criteria. These statements describe the existing engine contract; they are not instructions to diagnose or treat a person. Consult the pinned clinical criteria and primary sources before independent medical review.\r\n\r\n## Seven implemented pathways and documented management\r\n\r\nThe existing pa",
+      "reference": {
+        "document": "docs/knowledge/ASTHRAL_LOCAL_KNOWLEDGE.md",
+        "sha256": "75122940173b5f70c38deeb6ca4021006df40f1dab222376671da0b1084293d6",
+        "version": "1.1.0",
+        "authority": "IMPLEMENTATION_DOCUMENTATION_NOT_GUIDELINE",
+        "char_start": 1100,
+        "char_end": 2200,
+        "line": 7
+      }
+    },
+    {
+      "id": "D-54cb228d33a0aa2d36a9",
+      "kind": "DOCUMENT",
+      "text": "thways cover diabetes, diabetic ketoacidosis, hypoglycemia in adults with diabetes, orthostatic hypotension, POTS, acute kidney injury, and anaphylaxis. A differential assessment is a set of hypotheses, not a probability or a signed diagnosis. Meeting computed criteria does not constitute independent clinical confirmation. Urgency, confirmation, protocol eligibility, resource availability, and treatment status are separate states. Documentary interventions, synthetic resource manifests, and human-reported follow-up do not authorize administration, demonstrate execution, or verify efficacy. Insulin-specific potassium restrictions must not be represented as a general contraindication of all DKA support. In suspected anaphylaxis, stored emergency priority must remain visible even when criteria are incomplete or resources are unavailable.\r\n\r\n## Spaceflight cardiovascular, muscle, and bone monitoring\r\n\r\nThe existing catalogue documents cardiovascular deconditioning, changes in aerobic performance, muscle strength, and bone health in reduced-gravity contexts. These links are documentary co",
+      "reference": {
+        "document": "docs/knowledge/ASTHRAL_LOCAL_KNOWLEDGE.md",
+        "sha256": "75122940173b5f70c38deeb6ca4021006df40f1dab222376671da0b1084293d6",
+        "version": "1.1.0",
+        "authority": "IMPLEMENTATION_DOCUMENTATION_NOT_GUIDELINE",
+        "char_start": 2200,
+        "char_end": 3300,
+        "line": 15
+      }
+    },
+    {
+      "id": "D-da666da56e3e243ecf3b",
+      "kind": "DOCUMENT",
+      "text": "ntext and do not establish a causal diagnosis for an individual astronaut. Existing reference outlines discuss authorized exercise or mission countermeasure plans; ASTHRAL does not generate an exercise prescription, assume equipment availability, or replace mission review. DXA and laboratory capability are not assumed available in flight. Standing-test interpretations cannot be transferred automatically to free microgravity. Recovery and follow-up require the appropriate gravity context and comparable measurements.\r\n\r\n## Sleep, fatigue, cognition, immune markers, and radiation\r\n\r\nRecorded sleep duration, sleep efficiency, fatigue scales, reaction-time tests, viral measurements, and radiation records require their original methods, units, timing, and context. A fatigue score must match its declared scale. A PCR trend alone is not a reactivation diagnosis. Dosimetric exposure is not a cancer diagnosis, and a recorded interval total is not a lifetime dose. The application does not create individual cancer predictions, SANS treatments, universal spaceflight thresholds, medication adjustm",
+      "reference": {
+        "document": "docs/knowledge/ASTHRAL_LOCAL_KNOWLEDGE.md",
+        "sha256": "75122940173b5f70c38deeb6ca4021006df40f1dab222376671da0b1084293d6",
+        "version": "1.1.0",
+        "authority": "IMPLEMENTATION_DOCUMENTATION_NOT_GUIDELINE",
+        "char_start": 3300,
+        "char_end": 4400,
+        "line": 19
+      }
+    },
+    {
+      "id": "D-b80215a1dfa3c1091b04",
+      "kind": "DOCUMENT",
+      "text": "ents for microgravity, or new preventive schedules. Where evidence, resources, or an approved countermeasure mapping are absent, the limitation remains explicit.\r\n\r\n## Local and supplementary scientific references\r\n\r\nLOCAL_PINNED means a local document with fixed provenance; it does not itself declare clinical validation. REMOTE_UNREVIEWED means public scientific reference metadata retrieved online and not approved to update rules. Publication date is not a measure of medical authority. The public PubMed adapter can retrieve title metadata and stable PMIDs for approved general topics only. It never receives astronaut records, identifiers, measurements, private questions, voice, tokens, or clinical context. External results remain in a separate panel and never enter the clinical evidence guard or LLM prompt. Cached remote references remain unreviewed, timestamped, and separate from the approved corpus. FULL requires explicit trusted online enablement; LOW_POWER and CRITICAL initiate no external retrieval.\r\n\r\n## Scientific attribution and review boundaries\r\n\r\nClinical source metadata a",
+      "reference": {
+        "document": "docs/knowledge/ASTHRAL_LOCAL_KNOWLEDGE.md",
+        "sha256": "75122940173b5f70c38deeb6ca4021006df40f1dab222376671da0b1084293d6",
+        "version": "1.1.0",
+        "authority": "IMPLEMENTATION_DOCUMENTATION_NOT_GUIDELINE",
+        "char_start": 4400,
+        "char_end": 5500,
+        "line": 23
+      }
+    },
+    {
+      "id": "D-a86149b904d065746b5f",
+      "kind": "DOCUMENT",
+      "text": "nd precise criterion versions remain in engine/vigile/clinical_knowledge/sources_verified.json and its hash-pinned manifest. Existing primary references include the 2024 hyperglycemic crises consensus, WAO anaphylaxis guidance, KDIGO acute kidney injury definitions, orthostatic/POTS references, and the cited ADA standards. Spaceflight bibliography remains in 07_EVIDENCIAS/fuentes.json. Citation metadata is not a redistribution license for a full article. This project-authored implementation note does not replace any primary source, resolve pending clinical disagreements, or add treatment criteria. Human clinical, operational, flight, physical microphone, and visual acceptance remain independent of software tests.\r",
+      "reference": {
+        "document": "docs/knowledge/ASTHRAL_LOCAL_KNOWLEDGE.md",
+        "sha256": "75122940173b5f70c38deeb6ca4021006df40f1dab222376671da0b1084293d6",
+        "version": "1.1.0",
+        "authority": "IMPLEMENTATION_DOCUMENTATION_NOT_GUIDELINE",
+        "char_start": 5500,
+        "char_end": 6223,
+        "line": 31
+      }
+    }
+  ],
+  "sha256": "38df58cf68235b6b7dd3756b7633521c2dcd60f2079c58c037afad2b3b83eca8"
+}

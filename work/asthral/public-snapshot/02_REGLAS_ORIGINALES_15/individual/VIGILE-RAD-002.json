@@ -1,0 +1,113 @@
+{
+  "rule_id": "VIGILE-RAD-002",
+  "rule_version": "1.0.0",
+  "title": "Design-reference Solar Particle Event effective-dose requirement",
+  "domain": "RADIATION",
+  "condition_id": "SOLAR_PARTICLE_EVENT_PROTECTION",
+  "purpose": "Evaluate design protection against NASA's design-reference SPE environment.",
+  "rule_kind": "DESIGN_EXPOSURE_REQUIREMENT",
+  "evidence_class": "NASA_STANDARD",
+  "evidence_status": "DOCUMENTED_AND_COMPUTABLE_WITH_APPROVED_MODEL",
+  "software_validation_status": "REQUIRES_IMPLEMENTATION_VALIDATION",
+  "authorization": {
+    "evaluation": "AUTO_EVALUATION_ALLOWED",
+    "dosimetry_model": "REQUIRES_MISSION_AUTHORIZATION",
+    "acute_event_triage": "REQUIRES_MEDICAL_AUTHORIZATION"
+  },
+  "applicability": {
+    "context": "DESIGN_REFERENCE_SOLAR_PARTICLE_EVENT",
+    "reference_environment": "SUM_OF_OCTOBER_1989_EVENTS"
+  },
+  "inputs": [
+    {
+      "name": "modeled_design_reference_spe_effective_dose",
+      "type": "number",
+      "canonical_unit": "mSv",
+      "required": true
+    },
+    {
+      "name": "reference_environment_verified",
+      "type": "boolean",
+      "required": true
+    }
+  ],
+  "derived_variables": [],
+  "logic": {
+    "decision": [
+      {
+        "when": "reference_environment_verified != true",
+        "result": "INCONCLUSIVE"
+      },
+      {
+        "when": "modeled_design_reference_spe_effective_dose < 250",
+        "result": "PASS"
+      },
+      {
+        "when": "modeled_design_reference_spe_effective_dose >= 250",
+        "result": "FAIL_REQUIREMENT"
+      }
+    ]
+  },
+  "thresholds": {
+    "effective_dose": {
+      "value": 250,
+      "unit": "mSv",
+      "operator": "<"
+    }
+  },
+  "temporal_window": {
+    "type": "DESIGN_REFERENCE_EVENT"
+  },
+  "confounders": [
+    "shielding model",
+    "crew location",
+    "reference spectrum",
+    "geometry",
+    "dose methodology"
+  ],
+  "missing_data_policy": "INCONCLUSIVE",
+  "data_quality_policy": "Only evaluate using an approved model of the specified reference SPE environment.",
+  "output": {
+    "primary": "rule_result",
+    "acute_radiation_syndrome_diagnosis": "NOT_DETERMINED_BY_THIS_RULE"
+  },
+  "severity_semantics": {
+    "on_failure": "DESIGN_RADIATION_REQUIREMENT_NOT_MET",
+    "clinical_severity": "NOT_DETERMINED"
+  },
+  "follow_up": [
+    "Radiation-protection design review.",
+    "Apply ALARA.",
+    "Do not repurpose the 250 mSv design threshold as an autonomous in-flight clinical triage rule."
+  ],
+  "source_locators": [
+    {
+      "source_id": "NASA-STD-3001-V1-REV-C",
+      "requirement": "V1 4031",
+      "section": "4.8.3",
+      "printed_page": 42,
+      "pdf_page_index_0based": 41,
+      "url": "https://standards.nasa.gov/sites/default/files/standards/NASA/C//nasa-std-3001-vol-1-rev-c-signature.pdf"
+    }
+  ],
+  "test_cases": [
+    {
+      "id": "RAD002-T01",
+      "synthetic": true,
+      "inputs": {
+        "modeled_design_reference_spe_effective_dose": 249.9,
+        "reference_environment_verified": true
+      },
+      "expected": "PASS"
+    },
+    {
+      "id": "RAD002-T02",
+      "synthetic": true,
+      "inputs": {
+        "modeled_design_reference_spe_effective_dose": 250.0,
+        "reference_environment_verified": true
+      },
+      "expected": "FAIL_REQUIREMENT"
+    }
+  ]
+}

@@ -1,0 +1,10 @@
+{
+  "version": "v110",
+  "clinical_replays": 50,
+  "monitoring_replays": 26,
+  "all_match": true,
+  "audit_valid": true,
+  "implementation_hash": "0afee93407b54baafbef1dd2c4692d190be2030a0bc8ac980eaf8b48d46d1e27",
+  "isolated_copy_only": true,
+  "original_database_opened": false
+}

@@ -1,0 +1,62 @@
+{
+  "id": "A-cycle-14",
+  "subject_id": "v07-crew-A",
+  "mission_id": "v07-mission-A",
+  "previous_run_id": "A-cycle-7",
+  "as_of": "2026-09-15T12:00:00Z",
+  "history_start": "2026-09-01T12:00:00Z",
+  "clinical_window_start": "2026-09-14T12:00:00Z",
+  "clinical_context_id": "A-context",
+  "policy_reference": "V07_SYNTHETIC_SOFTWARE_POLICY_NOT_A_CLINICAL_PROTOCOL",
+  "population": "NONPREGNANT_ADULT",
+  "age_years": 35,
+  "measurements": [
+    {
+      "id": "A-physiology-vo2max-14",
+      "subject_id": "v07-crew-A",
+      "mission_id": "v07-mission-A",
+      "variable": "physiology.vo2max",
+      "value": 39.0,
+      "unit": "mL/min/kg",
+      "timestamp": "2026-09-15T12:00:00Z",
+      "interval_end": null,
+      "device_id": "dev-A-0",
+      "calibration_id": "cal-dev-A-0",
+      "method": "DIRECT",
+      "protocol": "V07_SYNTHETIC_SOFTWARE_POLICY_NOT_A_CLINICAL_PROTOCOL",
+      "site": null,
+      "compartment": null,
+      "phase": "IN_MISSION",
+      "reported_quality": "ACCEPTABLE",
+      "synthetic": true,
+      "provenance": "DETERMINISTIC_SYNTHETIC_NOT_CLINICAL"
+    },
+    {
+      "id": "A-physiology-heart_rate-14",
+      "subject_id": "v07-crew-A",
+      "mission_id": "v07-mission-A",
+      "variable": "physiology.heart_rate",
+      "value": 79.0,
+      "unit": "bpm",
+      "timestamp": "2026-09-15T12:00:00Z",
+      "interval_end": null,
+      "device_id": "dev-A-1",
+      "calibration_id": "cal-dev-A-1",
+      "method": "DIRECT",
+      "protocol": "V07_SYNTHETIC_SOFTWARE_POLICY_NOT_A_CLINICAL_PROTOCOL",
+      "site": null,
+      "compartment": null,
+      "phase": "IN_MISSION",
+      "reported_quality": "ACCEPTABLE",
+      "synthetic": true,
+      "provenance": "DETERMINISTIC_SYNTHETIC_NOT_CLINICAL"
+    }
+  ],
+  "observations": [],
+  "baseline_ids": [
+    "A-baseline-0"
+  ],
+  "followup_at": "2026-09-16T12:00:00Z",
+  "ewma_lambda": 0.5,
+  "cusum_allowance": 0.0
+}

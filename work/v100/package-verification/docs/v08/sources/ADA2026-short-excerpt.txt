@@ -1,0 +1,2 @@
+Level 1: Glucose <70 mg/dL (<3.9 mmol/L) and ≥54 mg/dL (≥3.0 mmol/L).
+Level 2: Glucose <54 mg/dL (<3.0 mmol/L).

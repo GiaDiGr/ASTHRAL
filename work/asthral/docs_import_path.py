@@ -1,0 +1,3 @@
+from pathlib import Path
+R=Path(__file__).resolve().parents[2];p=R/'README.md';s=p.read_text(encoding='utf8');s=s.replace('# Run only on a new approved setup, from the folder containing the separately acquired GGUF.\nollama create vigile-qwen3-4b:latest -f path\\to\\ASTHRAL\\engine\\Modelfile.example', '# Run only on a new approved setup. Copy Modelfile.example beside the separately acquired GGUF.\n# Run from that folder; the FROM path is relative to the Modelfile.\nollama create vigile-qwen3-4b:latest -f .\\Modelfile.example');p.write_text(s,encoding='utf8')
+print('Clarified relative model import path for new teammate workstations')

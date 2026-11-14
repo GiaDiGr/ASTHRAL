@@ -1,0 +1,17 @@
+{
+  "folder": "C:\\Users\\Gianni\\Desktop\\Vigile\\engine\\data\\portal-consistency-v061",
+  "config": "C:\\Users\\Gianni\\Desktop\\Vigile\\engine\\data\\portal-consistency-v061\\portal-config.json",
+  "access_code_file": "C:\\Users\\Gianni\\Desktop\\Vigile\\engine\\data\\portal-consistency-v061\\portal-access.txt",
+  "scenarios": [
+    "DKA",
+    "ANAPHYLAXIS",
+    "PRES-DIZZINESS-TACHYCARDIA"
+  ],
+  "synthetic": true,
+  "model_downloaded": false,
+  "original_documents_unchanged": 106,
+  "clinical_knowledge_files_unchanged": 9,
+  "provider": "ollama",
+  "model": "vigile-qwen3-4b:latest",
+  "runtime_url": "http://127.0.0.1:8891"
+}

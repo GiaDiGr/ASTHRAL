@@ -1,0 +1,103 @@
+{
+  "schema_version": "1.0.0",
+  "ranking": [
+    "TIME_CRITICAL_CRITERIA_MET",
+    "TIME_CRITICAL_SUSPECTED",
+    "CRITERIA_MET",
+    "HIGH_PRIORITY_UNRESOLVED",
+    "COMPATIBLE",
+    "WEAK_SUPPORT",
+    "CONTRADICTED",
+    "NOT_EVALUABLE"
+  ],
+  "presentations": [
+    {
+      "presentation_id": "PRES-DIZZINESS-TACHYCARDIA",
+      "triggers": ["DIZZINESS", "TACHYCARDIA"],
+      "hypotheses": [
+        {
+          "id": "ANAPHYLAXIS",
+          "support": ["ALLERGEN_EXPOSURE", "BRONCHOSPASM", "LARYNGEAL", "HYPOTENSION", "SKIN_MUCOSAL"],
+          "test_ids": ["TEST-BP", "TEST-ANAPH-CLINICAL"],
+          "time_critical": true
+        },
+        {
+          "id": "ORTHOSTATIC_HYPOTENSION",
+          "support": ["POSTURAL_TRIGGER", "BP_DROP"],
+          "test_ids": ["TEST-ORTHOSTATIC-BP-HR"],
+          "time_critical": false
+        },
+        {
+          "id": "POTS",
+          "support": ["POSTURAL_TRIGGER", "CHRONIC_ORTHOSTATIC_SYMPTOMS", "HR_RISE"],
+          "contradictions": ["ORTHOSTATIC_HYPOTENSION", "DEHYDRATION", "ANEMIA", "INFECTION", "SEVERE_DECONDITIONING"],
+          "test_ids": ["TEST-ORTHOSTATIC-BP-HR", "TEST-POTS-EXCLUSIONS"],
+          "time_critical": false
+        },
+        {
+          "id": "DKA",
+          "support": ["HYPERGLYCEMIA_OR_DIABETES", "NAUSEA", "DEHYDRATION"],
+          "test_ids": ["TEST-PLASMA-GLUCOSE", "TEST-BETA-OHB", "TEST-VENOUS-PH-BICARB"],
+          "time_critical": true
+        },
+        {
+          "id": "EXTERNAL_ARRHYTHMIA_PATHWAY",
+          "support": ["NON_POSTURAL_TACHYCARDIA", "IRREGULAR_PULSE", "PALPITATIONS"],
+          "test_ids": ["TEST-ECG"],
+          "time_critical": true,
+          "criteria_implemented_here": false
+        }
+      ]
+    },
+    {
+      "presentation_id": "PRES-HYPOTENSION-WEAKNESS",
+      "triggers": ["HYPOTENSION", "WEAKNESS"],
+      "hypotheses": [
+        {"id": "ANAPHYLAXIS", "time_critical": true},
+        {"id": "ORTHOSTATIC_HYPOTENSION", "time_critical": false},
+        {"id": "HYPOVOLEMIA", "time_critical": true},
+        {"id": "DKA", "time_critical": true},
+        {"id": "EXTERNAL_BLEEDING_PATHWAY", "time_critical": true, "criteria_implemented_here": false}
+      ]
+    },
+    {
+      "presentation_id": "PRES-HYPERGLYCEMIA-NAUSEA",
+      "triggers": ["HYPERGLYCEMIA", "NAUSEA"],
+      "hypotheses": [
+        {"id": "DKA", "time_critical": true, "test_ids": ["TEST-BETA-OHB", "TEST-VENOUS-PH-BICARB"]},
+        {"id": "DIABETES", "time_critical": false, "test_ids": ["TEST-PLASMA-GLUCOSE"]},
+        {"id": "STRESS_HYPERGLYCEMIA_OR_OTHER", "time_critical": false, "criteria_implemented_here": false}
+      ]
+    },
+    {
+      "presentation_id": "PRES-TACHYCARDIA-DYSPNEA",
+      "triggers": ["TACHYCARDIA", "DYSPNEA"],
+      "hypotheses": [
+        {"id": "ANAPHYLAXIS", "time_critical": true},
+        {"id": "DKA", "time_critical": true},
+        {"id": "POTS", "time_critical": false},
+        {"id": "EXTERNAL_ARRHYTHMIA_PATHWAY", "time_critical": true, "criteria_implemented_here": false},
+        {"id": "EXTERNAL_PULMONARY_PATHWAY", "time_critical": true, "criteria_implemented_here": false}
+      ]
+    },
+    {
+      "presentation_id": "PRES-OLIGURIA-CREATININE",
+      "triggers": ["OLIGURIA_OR_ANURIA", "CREATININE_CHANGE"],
+      "hypotheses": [
+        {"id": "AKI", "time_critical": true, "test_ids": ["TEST-SERUM-CREATININE", "TEST-URINE-OUTPUT"]},
+        {"id": "HYPOVOLEMIC_PRERENAL_STATE", "time_critical": true},
+        {"id": "EXTERNAL_POSTRENAL_OBSTRUCTION", "time_critical": true, "criteria_implemented_here": false},
+        {"id": "EXTERNAL_INTRINSIC_RENAL_PATHWAY", "time_critical": true, "criteria_implemented_here": false}
+      ]
+    },
+    {
+      "presentation_id": "PRES-ALLERGEN-RESPIRATORY",
+      "triggers": ["ALLERGEN_EXPOSURE", "RESPIRATORY_SYMPTOMS"],
+      "hypotheses": [
+        {"id": "ANAPHYLAXIS", "time_critical": true, "test_ids": ["TEST-ANAPH-CLINICAL", "TEST-BP"]},
+        {"id": "NON_ANAPHYLACTIC_ALLERGIC_REACTION", "time_critical": false, "criteria_implemented_here": false},
+        {"id": "EXTERNAL_RESPIRATORY_PATHWAY", "time_critical": true, "criteria_implemented_here": false}
+      ]
+    }
+  ]
+}

@@ -1,0 +1,56 @@
+{
+  "version": "before",
+  "paired_same_original_receipt_prefixes": true,
+  "storage": "IN_MEMORY_SQLITE_TIMED_COMPUTE_ONLY",
+  "clinical_validation": false,
+  "rows": [
+    {
+      "day": "0",
+      "prefix_records": 80,
+      "prefix_json_bytes": 913194,
+      "seconds": [
+        0.06025709999084938,
+        0.05436110000300687,
+        0.05029060000379104
+      ],
+      "median_seconds": 0.05436110000300687,
+      "all_clinical_descriptive_events_unchanged": true
+    },
+    {
+      "day": "14",
+      "prefix_records": 158,
+      "prefix_json_bytes": 3049044,
+      "seconds": [
+        0.1495812999928603,
+        0.16171160001249518,
+        0.17587679999996908
+      ],
+      "median_seconds": 0.16171160001249518,
+      "all_clinical_descriptive_events_unchanged": true
+    },
+    {
+      "day": "21",
+      "prefix_records": 317,
+      "prefix_json_bytes": 10663988,
+      "seconds": [
+        0.35651789999974426,
+        0.6299699999945005,
+        0.7582036999956472
+      ],
+      "median_seconds": 0.6299699999945005,
+      "all_clinical_descriptive_events_unchanged": true
+    },
+    {
+      "day": "47",
+      "prefix_records": 506,
+      "prefix_json_bytes": 30580143,
+      "seconds": [
+        2.9102434999949764,
+        2.810804199994891,
+        3.0824649999995017
+      ],
+      "median_seconds": 2.9102434999949764,
+      "all_clinical_descriptive_events_unchanged": true
+    }
+  ]
+}

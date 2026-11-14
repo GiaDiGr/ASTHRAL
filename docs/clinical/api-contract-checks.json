@@ -1,0 +1,277 @@
+{
+  "checks": [
+    {
+      "method": "GET",
+      "path": "/clinical/sources/SRC-NASA-STD3001-V1-2023",
+      "role": "reader",
+      "status": 200
+    },
+    {
+      "method": "GET",
+      "path": "/clinical/sources/SRC-NASA-EIMO-2025",
+      "role": "reader",
+      "status": 200
+    },
+    {
+      "method": "GET",
+      "path": "/clinical/sources/SRC-NASA-CDSS-2023",
+      "role": "reader",
+      "status": 200
+    },
+    {
+      "method": "GET",
+      "path": "/clinical/sources/SRC-ADA-DX-2026",
+      "role": "reader",
+      "status": 200
+    },
+    {
+      "method": "GET",
+      "path": "/clinical/sources/SRC-DKA-2024",
+      "role": "reader",
+      "status": 200
+    },
+    {
+      "method": "GET",
+      "path": "/clinical/sources/SRC-AHA-OH-2024",
+      "role": "reader",
+      "status": 200
+    },
+    {
+      "method": "GET",
+      "path": "/clinical/sources/SRC-HRS-POTS-2015",
+      "role": "reader",
+      "status": 200
+    },
+    {
+      "method": "GET",
+      "path": "/clinical/sources/SRC-NIH-POTS-2021",
+      "role": "reader",
+      "status": 200
+    },
+    {
+      "method": "GET",
+      "path": "/clinical/sources/SRC-KDIGO-AKI-2012",
+      "role": "reader",
+      "status": 200
+    },
+    {
+      "method": "GET",
+      "path": "/clinical/sources/SRC-KDIGO-AKI-DRAFT-2026",
+      "role": "reader",
+      "status": 200
+    },
+    {
+      "method": "GET",
+      "path": "/clinical/sources/SRC-WAO-ANAPH-2020",
+      "role": "reader",
+      "status": 200
+    },
+    {
+      "method": "GET",
+      "path": "/clinical/sources/SRC-NASA-OI",
+      "role": "reader",
+      "status": 200
+    },
+    {
+      "method": "GET",
+      "path": "/clinical/sources/SRC-SPACE-KIDNEY-2024",
+      "role": "reader",
+      "status": 200
+    },
+    {
+      "method": "GET",
+      "path": "/clinical/conditions/DM",
+      "role": "reader",
+      "status": 200
+    },
+    {
+      "method": "GET",
+      "path": "/clinical/conditions/DM/criteria",
+      "role": "reader",
+      "status": 200
+    },
+    {
+      "method": "GET",
+      "path": "/clinical/criteria/CRIT-DM-ADA-2026",
+      "role": "reader",
+      "status": 200
+    },
+    {
+      "method": "GET",
+      "path": "/clinical/conditions/DKA",
+      "role": "reader",
+      "status": 200
+    },
+    {
+      "method": "GET",
+      "path": "/clinical/conditions/DKA/criteria",
+      "role": "reader",
+      "status": 200
+    },
+    {
+      "method": "GET",
+      "path": "/clinical/criteria/CRIT-DKA-2024",
+      "role": "reader",
+      "status": 200
+    },
+    {
+      "method": "GET",
+      "path": "/clinical/conditions/ORTHOSTATIC_HYPOTENSION",
+      "role": "reader",
+      "status": 200
+    },
+    {
+      "method": "GET",
+      "path": "/clinical/conditions/ORTHOSTATIC_HYPOTENSION/criteria",
+      "role": "reader",
+      "status": 200
+    },
+    {
+      "method": "GET",
+      "path": "/clinical/criteria/CRIT-OH-AHA-2024",
+      "role": "reader",
+      "status": 200
+    },
+    {
+      "method": "GET",
+      "path": "/clinical/conditions/POTS",
+      "role": "reader",
+      "status": 200
+    },
+    {
+      "method": "GET",
+      "path": "/clinical/conditions/POTS/criteria",
+      "role": "reader",
+      "status": 200
+    },
+    {
+      "method": "GET",
+      "path": "/clinical/criteria/CRIT-POTS-HRS-NIH",
+      "role": "reader",
+      "status": 200
+    },
+    {
+      "method": "GET",
+      "path": "/clinical/conditions/AKI",
+      "role": "reader",
+      "status": 200
+    },
+    {
+      "method": "GET",
+      "path": "/clinical/conditions/AKI/criteria",
+      "role": "reader",
+      "status": 200
+    },
+    {
+      "method": "GET",
+      "path": "/clinical/criteria/CRIT-AKI-KDIGO-2012",
+      "role": "reader",
+      "status": 200
+    },
+    {
+      "method": "GET",
+      "path": "/clinical/conditions/ANAPHYLAXIS",
+      "role": "reader",
+      "status": 200
+    },
+    {
+      "method": "GET",
+      "path": "/clinical/conditions/ANAPHYLAXIS/criteria",
+      "role": "reader",
+      "status": 200
+    },
+    {
+      "method": "GET",
+      "path": "/clinical/criteria/CRIT-ANAPH-WAO-2020",
+      "role": "reader",
+      "status": 200
+    },
+    {
+      "method": "GET",
+      "path": "/clinical/protocols/PROT-DM-CONFIRMATION",
+      "role": "reader",
+      "status": 200
+    },
+    {
+      "method": "GET",
+      "path": "/clinical/protocols/PROT-DKA-ADULT-2024",
+      "role": "reader",
+      "status": 200
+    },
+    {
+      "method": "GET",
+      "path": "/clinical/protocols/PROT-OH-POTS-INITIAL",
+      "role": "reader",
+      "status": 200
+    },
+    {
+      "method": "GET",
+      "path": "/clinical/protocols/PROT-AKI-INITIAL",
+      "role": "reader",
+      "status": 200
+    },
+    {
+      "method": "GET",
+      "path": "/clinical/protocols/PROT-ANAPH-IM-EPI",
+      "role": "reader",
+      "status": 200
+    },
+    {
+      "method": "GET",
+      "path": "/clinical/protocols/PROT-DIZZINESS-TACHY-TRIAGE",
+      "role": "reader",
+      "status": 200
+    },
+    {
+      "method": "POST",
+      "path": "/missions",
+      "role": "researcher",
+      "status": 201
+    },
+    {
+      "method": "POST",
+      "path": "/profiles",
+      "role": "researcher",
+      "status": 201
+    },
+    {
+      "method": "POST",
+      "path": "/clinical/presentations/evaluate",
+      "role": "researcher",
+      "status": 201
+    },
+    {
+      "method": "POST",
+      "path": "/clinical/protocols/PROT-DIZZINESS-TACHY-TRIAGE/eligibility",
+      "role": "researcher",
+      "status": 200
+    },
+    {
+      "method": "POST",
+      "path": "/clinical/protocols/PROT-DIZZINESS-TACHY-TRIAGE/eligibility",
+      "role": "reader",
+      "status": 403
+    },
+    {
+      "method": "PATCH",
+      "path": "/clinical/evaluations/ce-af1471a284084f4b886a1eae65d8e2d1",
+      "role": "reader",
+      "status": 403
+    },
+    {
+      "method": "GET",
+      "path": "/clinical/evaluations/ce-af1471a284084f4b886a1eae65d8e2d1/replay",
+      "role": "reader",
+      "status": 200
+    },
+    {
+      "method": "GET",
+      "path": "/audit/verify",
+      "role": "researcher",
+      "status": 200
+    }
+  ],
+  "count": 45,
+  "all_passed": true,
+  "transport": "ASGI HTTP TestClient"
+}

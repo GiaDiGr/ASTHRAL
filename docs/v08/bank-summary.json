@@ -1,0 +1,90 @@
+{
+  "clinical_validation": false,
+  "network": "LOOPBACK_ONLY_ENFORCED",
+  "bank_version": "0.8.0-1",
+  "modes": {
+    "FULL": {
+      "case_count": 16,
+      "passed": 16,
+      "rag": {
+        "document_expectations": 6,
+        "expected_document_retrieved_top5": 6,
+        "citations_verified_by_source_bytes": true,
+        "semantic_relevance_requires_independent_review": true
+      },
+      "llm": {
+        "attempted": 9,
+        "accepted_generations": 4,
+        "extractive_fallbacks": 4,
+        "correct_action_refusals": 4,
+        "undetected_semantic_errors": "NOT_MEASURED_REQUIRES_INDEPENDENT_REVIEW"
+      },
+      "clinical_validation": false,
+      "statuses": {
+        "ANSWERED": 4,
+        "EXTRACTIVE_FALLBACK": 4,
+        "INSUFFICIENT_INFORMATION": 2,
+        "DETERMINISTIC_DATA_SUFFICIENCY": 2,
+        "REFUSED_ACTION": 4
+      },
+      "seconds_median": 1.805294200021308,
+      "seconds_min": 0.4782450000056997,
+      "seconds_max": 8.94399290002184
+    },
+    "LOW_POWER": {
+      "case_count": 16,
+      "passed": 16,
+      "rag": {
+        "document_expectations": 6,
+        "expected_document_retrieved_top5": 6,
+        "citations_verified_by_source_bytes": true,
+        "semantic_relevance_requires_independent_review": true
+      },
+      "llm": {
+        "attempted": 9,
+        "accepted_generations": 2,
+        "extractive_fallbacks": 6,
+        "correct_action_refusals": 4,
+        "undetected_semantic_errors": "NOT_MEASURED_REQUIRES_INDEPENDENT_REVIEW"
+      },
+      "clinical_validation": false,
+      "statuses": {
+        "ANSWERED": 2,
+        "EXTRACTIVE_FALLBACK": 6,
+        "INSUFFICIENT_INFORMATION": 2,
+        "DETERMINISTIC_DATA_SUFFICIENCY": 2,
+        "REFUSED_ACTION": 4
+      },
+      "seconds_median": 1.5686534499982372,
+      "seconds_min": 0.5080260999966413,
+      "seconds_max": 8.052080900000874
+    },
+    "CRITICAL": {
+      "case_count": 16,
+      "passed": 16,
+      "rag": {
+        "document_expectations": 6,
+        "expected_document_retrieved_top5": 6,
+        "citations_verified_by_source_bytes": true,
+        "semantic_relevance_requires_independent_review": true
+      },
+      "llm": {
+        "attempted": 0,
+        "accepted_generations": 0,
+        "extractive_fallbacks": 0,
+        "correct_action_refusals": 4,
+        "undetected_semantic_errors": "NOT_MEASURED_REQUIRES_INDEPENDENT_REVIEW"
+      },
+      "clinical_validation": false,
+      "statuses": {
+        "EXTRACTIVE_ONLY": 9,
+        "DETERMINISTIC_DATA_SUFFICIENCY": 2,
+        "INSUFFICIENT_INFORMATION": 1,
+        "REFUSED_ACTION": 4
+      },
+      "seconds_median": 0.5644337999983691,
+      "seconds_min": 0.47803550004027784,
+      "seconds_max": 0.72042440000223
+    }
+  }
+}

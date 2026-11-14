@@ -1,0 +1,31 @@
+{
+  "condition_id": "C040",
+  "catalog_record": {
+    "condition_id": "C040",
+    "name_specialty": "Medicamento ineficaz o tóxico / farmacología",
+    "description_spaceflight": "Estabilidad, reabastecimiento y fisiología espacial pueden alterar eficacia/toxicidad; PK/PD puede diferir.",
+    "risks_symptoms": "Duración, almacenamiento, cambios fisiológicos, interacción.",
+    "biomarkers_sensors_tests": "Inventario, lote/caducidad/condiciones, respuesta clínica.",
+    "baselines_environment_interactions": "Medicación previa, ambiente de almacenamiento.",
+    "primary_evidence": "S15. citeturn18search5",
+    "limits_authorizations_state": "VIGILE no calcula dosis nuevas ni prescribe. `RMA`."
+  },
+  "clinical_pathway_profile_as_published": "**P:** inventario/estabilidad; **M:** lote, caducidad, storage, respuesta; **Q:** identidad/dosis prescrita sin alterarla; **D:** flag de almacenamiento/caducidad o respuesta atípica; **A/DD:** enfermedad vs fármaco; **T:** médico; **I:** VIGILE jamás crea dosis; **R/F:** eficacia/eventos adversos; **G:** PK/PD espacial `RV`.",
+  "coverage_states": {
+    "prevention": "ES",
+    "monitoring": "ES",
+    "data_quality": "ES",
+    "detection": "RV",
+    "assessment": "RMA",
+    "differential_diagnosis": "RMA",
+    "triage": "RMA",
+    "intervention_authorized": "RMA",
+    "recovery": "RV",
+    "follow_up": "ES",
+    "prognosis": "RO"
+  },
+  "source_ids": [
+    "S15"
+  ],
+  "NOTICE": "Pathway text is an outline; not an authorized diagnostic or treatment protocol."
+}

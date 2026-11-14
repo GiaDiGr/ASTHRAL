@@ -1,0 +1,24 @@
+{
+  "backend_url": "http://127.0.0.1:8921",
+  "reader_token_file": "data/your-demo/reader-token.txt",
+  "access_code_file": "data/your-demo/portal-access.txt",
+  "mode": "FULL",
+  "model_url": "http://127.0.0.1:8891",
+  "model": "vigile-qwen3-4b:latest",
+  "inference_provider": "ollama",
+  "structured_explanations": true,
+  "voice_enabled": true,
+  "library_manifest": "local_ai/library-asthral.json",
+  "online_retrieval": {
+    "enabled": false,
+    "providers": [
+      "pubmed"
+    ],
+    "timeout_seconds": 4,
+    "max_results": 3,
+    "max_response_bytes": 131072,
+    "queries_per_minute": 2,
+    "retries": 1
+  },
+  "public_science_cache": "data/public-science-cache"
+}

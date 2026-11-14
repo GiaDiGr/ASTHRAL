@@ -1,0 +1,48 @@
+{
+  "created_modules": [
+    "engine/vigile/clinical_models.py",
+    "engine/vigile/clinical_logic.py",
+    "engine/vigile/clinical_knowledge.py",
+    "engine/vigile/clinical_engine.py",
+    "engine/vigile/clinical_differential.py",
+    "engine/vigile/clinical_api.py",
+    "engine/vigile/clinical_simulator.py",
+    "engine/vigile/clinical_demo.py"
+  ],
+  "modified_files": [
+    "engine/vigile/api.py",
+    "engine/vigile/security.py",
+    "engine/vigile/quality.py",
+    "engine/vigile/__main__.py",
+    "engine/vigile/service.py",
+    "engine/vigile/__init__.py",
+    "engine/pyproject.toml",
+    "engine/README.md"
+  ],
+  "new_tests": [
+    "engine/tests/test_clinical.py"
+  ],
+  "knowledge_files": [
+    "sources_verified.json",
+    "diagnostic_criteria.json",
+    "differential_rules.json",
+    "diagnostic_tests.json",
+    "treatment_protocols.json",
+    "contraindications.json",
+    "space_applicability.json",
+    "synthetic_cases.json"
+  ],
+  "architecture_reused": [
+    "Engine",
+    "Store records/audit schema 1",
+    "Registry",
+    "MissionContext",
+    "AstronautProfile",
+    "Device",
+    "Measurement",
+    "authentication middleware",
+    "roles/scopes",
+    "existing CLI"
+  ],
+  "no_existing_database_migration": true
+}

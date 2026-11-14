@@ -1,0 +1,236 @@
+[
+  {
+    "id": "ce-d4421c0acf5b4200bdc5c322e9b8971c",
+    "matches": true,
+    "input_hash": "c2c168db768e4e73e298159fd80df2c4c39e057eda6aa5dc915abd27ccef4723",
+    "knowledge_hash": "b8c568bd645154e5fd67630c7a670ca53904dc04f54904315047a89923839d4e"
+  },
+  {
+    "id": "ce-00721e212857491d8a022b33e7f067e1",
+    "matches": true,
+    "input_hash": "c8bffe7d9e75f0894aa4f70ab7f24824a30a1f89cbba6dc0a15a6bec29ffc48f",
+    "knowledge_hash": "b8c568bd645154e5fd67630c7a670ca53904dc04f54904315047a89923839d4e"
+  },
+  {
+    "id": "ce-65bc6d503c104e218ae0981adca29bca",
+    "matches": true,
+    "input_hash": "a0f8ec0ff9f76084b9e43fd64bd6d26316d239b14dcfc9bd29cf8aa7d2536444",
+    "knowledge_hash": "b8c568bd645154e5fd67630c7a670ca53904dc04f54904315047a89923839d4e"
+  },
+  {
+    "id": "ce-b96995185d8045ba99553175a37a3f2c",
+    "matches": true,
+    "input_hash": "87dde14afc07761856fca1b42a73f0ab68de39cdb170797b90c91b766f6d99b9",
+    "knowledge_hash": "b8c568bd645154e5fd67630c7a670ca53904dc04f54904315047a89923839d4e"
+  },
+  {
+    "id": "ce-12d74ee38dd85f5b5de59754a4aa59a7",
+    "matches": true,
+    "input_hash": "12a2f53ceb6b439865a4adf0e55d9bd4eb9ae9d11f7196622312a84e73220e09",
+    "knowledge_hash": "b8c568bd645154e5fd67630c7a670ca53904dc04f54904315047a89923839d4e"
+  },
+  {
+    "id": "ce-3ea7170a1ff9ca64d2a5c4d3c9eeb95b",
+    "matches": true,
+    "input_hash": "271bf1e4e9a415906791fc0c515677b0503f2db4424a0df2d9a733edc1681eda",
+    "knowledge_hash": "b8c568bd645154e5fd67630c7a670ca53904dc04f54904315047a89923839d4e"
+  },
+  {
+    "id": "ce-8c60945c4d6f45236dacaed284fbb19d",
+    "matches": true,
+    "input_hash": "2dc3442e681c8228c03cb785cd273e188059ea2cfbc9e0fcf692b455dda49846",
+    "knowledge_hash": "b8c568bd645154e5fd67630c7a670ca53904dc04f54904315047a89923839d4e"
+  },
+  {
+    "id": "ce-95a21c7375dc35b79b8e74a289e853e2",
+    "matches": true,
+    "input_hash": "426731d203a744915d28352503b1f9d69309427ade846b1d8457b63b6dcb9bdd",
+    "knowledge_hash": "b8c568bd645154e5fd67630c7a670ca53904dc04f54904315047a89923839d4e"
+  },
+  {
+    "id": "ce-3667c4aed507bab1023639b342acbc1d",
+    "matches": true,
+    "input_hash": "7077dca58266f87d27c960baf594ef60f457fbd54e65050e60369be3346077f1",
+    "knowledge_hash": "b8c568bd645154e5fd67630c7a670ca53904dc04f54904315047a89923839d4e"
+  },
+  {
+    "id": "ce-363451e4c33baa6635f4be3630b9018d",
+    "matches": true,
+    "input_hash": "c717b39891c73262900980804c4a7d24b1857385b8e5aebac191c9dced6e20aa",
+    "knowledge_hash": "b8c568bd645154e5fd67630c7a670ca53904dc04f54904315047a89923839d4e"
+  },
+  {
+    "id": "ce-573e9ea7e583a338b19bfecc14c1f71e",
+    "matches": true,
+    "input_hash": "a147dc5d0d57d628e507da09f6643e4d4bef8a582aafcaa05c2c7c7395bff112",
+    "knowledge_hash": "b8c568bd645154e5fd67630c7a670ca53904dc04f54904315047a89923839d4e"
+  },
+  {
+    "id": "ce-e6871477f4211b9bf2fe3ecd27701724",
+    "matches": true,
+    "input_hash": "8524348a23b106e6fb169f3919f6e2ce9c1fa9507c0f7355cc72a201c330d15a",
+    "knowledge_hash": "b8c568bd645154e5fd67630c7a670ca53904dc04f54904315047a89923839d4e"
+  },
+  {
+    "id": "ce-513fd76f0285a41160a2c82dba4acacb",
+    "matches": true,
+    "input_hash": "f363861d39c8dd4bdf716ba085af993e1f9b9829e5b5168122cf49da0515fed1",
+    "knowledge_hash": "b8c568bd645154e5fd67630c7a670ca53904dc04f54904315047a89923839d4e"
+  },
+  {
+    "id": "ce-735d7aaafd9198459455e72c05c83378",
+    "matches": true,
+    "input_hash": "96683823f3ac05bbc19f5944195db64b3fdedaf9663fff950a7cbd97f372e471",
+    "knowledge_hash": "b8c568bd645154e5fd67630c7a670ca53904dc04f54904315047a89923839d4e"
+  },
+  {
+    "id": "A-cycle-0",
+    "matches": true,
+    "scope": "FULL_FROZEN_CYCLE_REEXECUTION",
+    "clinical_validation": false
+  },
+  {
+    "id": "A-cycle-7",
+    "matches": true,
+    "scope": "FULL_FROZEN_CYCLE_REEXECUTION",
+    "clinical_validation": false
+  },
+  {
+    "id": "A-cycle-14",
+    "matches": true,
+    "scope": "FULL_FROZEN_CYCLE_REEXECUTION",
+    "clinical_validation": false
+  },
+  {
+    "id": "A-cycle-15",
+    "matches": true,
+    "scope": "FULL_FROZEN_CYCLE_REEXECUTION",
+    "clinical_validation": false
+  },
+  {
+    "id": "A-cycle-16",
+    "matches": true,
+    "scope": "FULL_FROZEN_CYCLE_REEXECUTION",
+    "clinical_validation": false
+  },
+  {
+    "id": "ce-25021a33553fbbe9643c2f2fc020f163",
+    "matches": true,
+    "input_hash": "6b2fc1fd330879e4e8537af7c8fcd0efdeb315b0c725abb6b3e4e5ed6cdde135",
+    "knowledge_hash": "b8c568bd645154e5fd67630c7a670ca53904dc04f54904315047a89923839d4e"
+  },
+  {
+    "id": "ce-2d7b1fe54a2fd2702c75d7752efedce5",
+    "matches": true,
+    "input_hash": "1627b974184262d3b2575f7af0f768e5bbb5be1a53e466c2a9827649f4592ac8",
+    "knowledge_hash": "b8c568bd645154e5fd67630c7a670ca53904dc04f54904315047a89923839d4e"
+  },
+  {
+    "id": "ce-a7cd40dff4114fb0947f5858f9ec3c33",
+    "matches": true,
+    "input_hash": "6b2fc1fd330879e4e8537af7c8fcd0efdeb315b0c725abb6b3e4e5ed6cdde135",
+    "knowledge_hash": "b8c568bd645154e5fd67630c7a670ca53904dc04f54904315047a89923839d4e"
+  },
+  {
+    "id": "ce-ebbf9fe889d19b37ba4806eb86dccd63",
+    "matches": true,
+    "input_hash": "1627b974184262d3b2575f7af0f768e5bbb5be1a53e466c2a9827649f4592ac8",
+    "knowledge_hash": "b8c568bd645154e5fd67630c7a670ca53904dc04f54904315047a89923839d4e"
+  },
+  {
+    "id": "ce-5c38fa4b4fce37b514f494ab101b3a34",
+    "matches": true,
+    "input_hash": "e3e6ff805ab72046ecca51af94e96deb11a072714f304290d09204f7bcd3da69",
+    "knowledge_hash": "b8c568bd645154e5fd67630c7a670ca53904dc04f54904315047a89923839d4e"
+  },
+  {
+    "id": "ce-cdc3b2c9cdc3d14393938b238f512f73",
+    "matches": true,
+    "input_hash": "d65c1f890a13a95d29cdfb090dcc5d85cb1727b4e56a0e75e1d45f5529d9f86a",
+    "knowledge_hash": "b8c568bd645154e5fd67630c7a670ca53904dc04f54904315047a89923839d4e"
+  },
+  {
+    "id": "ce-87da4a5fb769ae3ab0988aa8a566f3c9",
+    "matches": true,
+    "input_hash": "589b5a403c1d75978256029ec0c5709791c96dfb8dbeb27d7fc433464762df69",
+    "knowledge_hash": "b8c568bd645154e5fd67630c7a670ca53904dc04f54904315047a89923839d4e"
+  },
+  {
+    "id": "ce-00d65359e6f6197a01d96f74c857eacd",
+    "matches": true,
+    "input_hash": "dff8aa04f051a2a806e8ce23905dba8f33f8077d1d108e8fb1b1441012f76b26",
+    "knowledge_hash": "b8c568bd645154e5fd67630c7a670ca53904dc04f54904315047a89923839d4e"
+  },
+  {
+    "id": "ce-c660b2572ea10db2761777f39c319ae6",
+    "matches": true,
+    "input_hash": "a9af6925c6ea8ab4098a79023b392cd9d1cf4ddf228968d98f1ceca10b265336",
+    "knowledge_hash": "b8c568bd645154e5fd67630c7a670ca53904dc04f54904315047a89923839d4e"
+  },
+  {
+    "id": "ce-a5a54e51c4cdc6a53c19937e3442ca4a",
+    "matches": true,
+    "input_hash": "ee690c6f5098215be2fa377937b5bf699fe81e2ce53cf757401d0535825fb0da",
+    "knowledge_hash": "b8c568bd645154e5fd67630c7a670ca53904dc04f54904315047a89923839d4e"
+  },
+  {
+    "id": "B-cycle-0",
+    "matches": true,
+    "scope": "FULL_FROZEN_CYCLE_REEXECUTION",
+    "clinical_validation": false
+  },
+  {
+    "id": "B-cycle-repeat",
+    "matches": true,
+    "scope": "FULL_FROZEN_CYCLE_REEXECUTION",
+    "clinical_validation": false
+  },
+  {
+    "id": "B-cycle-0.01",
+    "matches": true,
+    "scope": "FULL_FROZEN_CYCLE_REEXECUTION",
+    "clinical_validation": false
+  },
+  {
+    "id": "B-cycle-0.02",
+    "matches": true,
+    "scope": "FULL_FROZEN_CYCLE_REEXECUTION",
+    "clinical_validation": false
+  },
+  {
+    "id": "B-cycle-0.03",
+    "matches": true,
+    "scope": "FULL_FROZEN_CYCLE_REEXECUTION",
+    "clinical_validation": false
+  },
+  {
+    "id": "C-cycle-0",
+    "matches": true,
+    "scope": "FULL_FROZEN_CYCLE_REEXECUTION",
+    "clinical_validation": false
+  },
+  {
+    "id": "C-cycle-7",
+    "matches": true,
+    "scope": "FULL_FROZEN_CYCLE_REEXECUTION",
+    "clinical_validation": false
+  },
+  {
+    "id": "C-cycle-14",
+    "matches": true,
+    "scope": "FULL_FROZEN_CYCLE_REEXECUTION",
+    "clinical_validation": false
+  },
+  {
+    "id": "C-cycle-21",
+    "matches": true,
+    "scope": "FULL_FROZEN_CYCLE_REEXECUTION",
+    "clinical_validation": false
+  },
+  {
+    "id": "C-cycle-28",
+    "matches": true,
+    "scope": "FULL_FROZEN_CYCLE_REEXECUTION",
+    "clinical_validation": false
+  }
+]

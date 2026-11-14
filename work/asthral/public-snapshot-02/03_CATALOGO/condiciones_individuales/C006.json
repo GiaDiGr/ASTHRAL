@@ -1,0 +1,31 @@
+{
+  "condition_id": "C006",
+  "catalog_record": {
+    "condition_id": "C006",
+    "name_specialty": "Tromboembolismo venoso / cardiovascular-hematológico",
+    "description_spaceflight": "Hallazgo emergente de estasis/flujo retrógrado yugular y trombosis durante vuelo.",
+    "risks_symptoms": "Alteración de flujo venoso y factores individuales.",
+    "biomarkers_sensors_tests": "Ecografía venosa, síntomas, evaluación clínica.",
+    "baselines_environment_interactions": "Anatomía/flujo preflight si disponible; fluid shift.",
+    "primary_evidence": "S35. citeturn27search0",
+    "limits_authorizations_state": "NASA reportó estasis/flujo reverso en 6/11 y un trombo oclusivo; no derivar de ello umbral diagnóstico automático. `RMA`."
+  },
+  "clinical_pathway_profile_as_published": "**P:** configuración médica de misión; **M:** síntomas/ultrasonido si indicado; **Q:** adquisición ecográfica adecuada; **D:** no regla automática basada en flujo aislado; **A:** revisión médica; **DD:** variantes anatómicas/compresión/artefacto; **T:** `HUMAN_MEDICAL_REVIEW_REQUIRED`; **I:** bloqueado sin médico; **R/F/G:** protocolo autorizado, pronóstico no automatizado.",
+  "coverage_states": {
+    "prevention": "RV",
+    "monitoring": "RV",
+    "data_quality": "ES",
+    "detection": "RV",
+    "assessment": "RMA",
+    "differential_diagnosis": "RMA",
+    "triage": "RMA",
+    "intervention_authorized": "RMA",
+    "recovery": "RV",
+    "follow_up": "RV",
+    "prognosis": "RO"
+  },
+  "source_ids": [
+    "S35"
+  ],
+  "NOTICE": "Pathway text is an outline; not an authorized diagnostic or treatment protocol."
+}

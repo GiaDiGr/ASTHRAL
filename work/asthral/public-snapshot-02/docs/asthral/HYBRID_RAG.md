@@ -1,0 +1,35 @@
+# ASTHRAL hybrid retrieval contract
+
+## Actual integration
+
+The existing FastAPI reader portal continues to call the existing local clinical/monitoring answer functions, sparse local library and citation guards. `english_result` is a presentation boundary; original records and source hashes remain unchanged. The local answer and approved speech envelope are finalized first. Optional `public_topic` then passes to `HybridRetrieval.retrieve(topic_id)`. No question, history, target ID, reader client, model, credential, clinical object, or mission context is accepted by that component. Remote results are attached as `supplementary_science` and rendered in an independent panel. They never enter generation, clinical rules, the local corpus, speech tickets, or authorization.
+
+`POST /api/assistant` retains the existing single evaluation_id/monitoring_id requirement and adds optional public_topic: cardiovascular, muscle_bone, sleep_fatigue, radiation, or hyperglycemic_consensus. Unknown topic strings and extra privilege/configuration fields are rejected. Language is canonically English; the legacy es request value is accepted for compatibility but does not enable Spanish UI or output. Block IDs, source identifiers, codes, values, units, and authority remain distinct from translated presentation text. Consumers must use structured codes rather than matching old Spanish prose.
+
+## Permission and modes
+
+`online_retrieval.enabled` is a strict Boolean in trusted local configuration. Default false. The CLI `demo_asthral.py prepare --enable-online` is an explicit local provisioning action. The existing mode controller supplies the actual mode; there is no second mode switch. Session readers can select a public topic only after prior configuration authorization. They cannot enable Internet access, acquire write credentials, or authorize medicine. FULL indicates supported capability, not available electrical power or Internet connectivity.
+
+FULL + enabled + allowed provider + approved topic + budget permits an attempt. Provider TLS/response success establishes reachability for that attempt, not a global connectivity assertion. LOW_POWER/CRITICAL make zero external requests and return local-only behavior. Mode changes invalidate pending results before subsequent provider calls, cache writes and result use. The UI also invalidates pending replies and clears remote results after a successful mode change. Fresh/stale caches are never silently described as a live connection.
+
+## Provider and privacy
+
+Implemented provider: **PubMed/NCBI E-utilities only**. API documentation: https://www.ncbi.nlm.nih.gov/books/NBK25499/ and https://www.nlm.nih.gov/dataguide/eutilities/utilities.html. No arbitrary search websites, general browser, NASA API adapter, abstract scraper or full-text importer is implemented. Spaceflight topics search PubMed; this does not imply that NASA HRP, NTRS or OSDR are separately integrated.
+
+Fixed destination: TLS to eutils.ncbi.nlm.nih.gov:443. Fixed utilities: esearch.fcgi and esummary.fcgi under /entrez/eutils/. ESearch receives a constant query from TOPICS; ESummary receives only bounded numeric PMIDs returned by ESearch. Headers are fixed Accept, Accept-Encoding and User-Agent (plus standard HTTP host handling). No private data, environment proxy credentials, authentication cookies, private query text, private embeddings or clinical identity are forwarded. Anonymous access needs no API key. Future credentialed providers need separately protected configuration and fresh review; they cannot be enabled by arbitrary host strings.
+
+The registered provider allowlist is configurable as a subset of implemented providers. It is not an arbitrary domain list. No redirect is followed. DNS results must be public/non-special, and the numeric address is used for the connection while TLS verifies the approved hostname. This prevents redirect/private-network access and a second unchecked DNS resolution. TLS uses the system trusted CA context, including the Windows trust store; certificate verification is never disabled. DNS work, connection, reads, body size, retry count, request spacing and topic rate are bounded. DNS timeouts return while the bounded resolver thread finishes independently; same-process resource isolation remains a limitation.
+
+## Evidence and cache
+
+Local origin: LOCAL_PINNED. Remote origin: REMOTE_UNREVIEWED; review_status is always NOT_CLINICALLY_REVIEWED. Result statuses: LOCAL_ONLY, REMOTE_OPTIONAL, REMOTE_UNAVAILABLE. A successful retrieval with no results is explicit, not a normal clinical finding. Malformed/oversized/non-JSON responses, invalid PMIDs/DOIs, missing required metadata and detected instructions are rejected or excluded. Older/contradictory bibliography is not promoted or resolved into a clinical conclusion.
+
+Remote fields: topic, provider, title, publisher, canonical PMID URL, PMID, DOI when available, publication date, UTC retrieval time, NCBI_PUBMED_ESUMMARY_V2 version, title excerpt, content hash, review status and limitations. Missing DOI is allowed only with valid stable PMID. Excerpt kind explicitly says TITLE_METADATA_ONLY_NOT_FULL_TEXT. The hash establishes stored content consistency, not truth, authority or a clinical signature. No citation of a title implies review of its full article.
+
+Cache is optional, public-only and separate from clinical evidence/data. At most five fixed topic records, each <=16 KiB; <=3 documents per record, hashes/schema checked. Default fresh TTL 24 hours; stale fallback <=7 days after provider failure, labeled STALE_CACHE_NOT_LIVE. No user data are cache keys or values. No external telemetry. In-memory retrieval events contain only topic, status/reason, latency and delivery; no question, target, notes, credentials or response request headers. An attacker controlling the same account/storage remains outside this capability boundary.
+
+## Safety and failure behavior
+
+Source text is untrusted. It has no tools or executable route. Remote documents cannot change system prompts, mode, rules, diagnoses, urgency, missingness, potassium gates, inventory, authorizations, or records. Remote results do not use the LLM evidence path because its existing guard was not expanded to authorize unreviewed references. Local operation remains available after DNS, TLS, timeout, HTTP/rate-limit, empty, parse, cache, or mode failures. No treatment execution or medical order is created.
+
+Tests instrument requests and public caches, insert synthetic private/secret-shaped values locally, and verify absence externally. Mock fixtures test edge conditions reproducibly; live provider smoke is a separate result. This is tested data-flow minimization, not an absolute guarantee against a compromised OS, provider, same-user process, or storage administrator. No data-at-rest encryption or operational authorization policy is added.

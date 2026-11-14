@@ -1,0 +1,339 @@
+{
+  "provider": "ollama",
+  "version": "0.40.6",
+  "rows": [
+    {
+      "mode": "FULL",
+      "elapsed_ms": 8352,
+      "reply": {
+        "status": "ANSWERED",
+        "inference_executed": true,
+        "inference_attempted": true,
+        "message": "Explicación generada por un modelo local, vinculada a evidencia. No es una decisión clínica ni una autorización.",
+        "retrieved": [
+          {
+            "id": "E2",
+            "kind": "ENGINE",
+            "text": "DKA: datos faltantes bicarbonate_mmol_l, urine_ketones_plus. Limitaciones: RESEARCH_ONLY, TERRESTRIAL_CRITERIA_NOT_SPACE_VALIDATION, CRITERIA_NOT_MET_DOES_NOT_EXCLUDE_DISEASE.",
+            "reference": {
+              "evaluation_id": "ce-48ef923edd0a409cb348f4fe5c1e4c93",
+              "condition_id": "DKA",
+              "source_ids": [
+                "SRC-DKA-2024"
+              ],
+              "input_hash": "c2c168db768e4e73e298159fd80df2c4c39e057eda6aa5dc915abd27ccef4723"
+            }
+          },
+          {
+            "id": "E10",
+            "kind": "ENGINE",
+            "text": "Prueba recomendada OBTAIN_POTASSIUM_SAFETY_DATA: [{\"condition_id\": \"DKA\", \"reason\": \"PROTOCOL_REQUIRES_POTASSIUM\", \"source_ids\": [\"SRC-DKA-2024\"]}]. No es una orden autorizada.",
+            "reference": {
+              "evaluation_id": "ce-48ef923edd0a409cb348f4fe5c1e4c93"
+            }
+          }
+        ],
+        "answer": [
+          {
+            "id": "E2",
+            "kind": "ENGINE",
+            "text": "DKA: datos faltantes bicarbonate_mmol_l, urine_ketones_plus. Limitaciones: RESEARCH_ONLY, TERRESTRIAL_CRITERIA_NOT_SPACE_VALIDATION, CRITERIA_NOT_MET_DOES_NOT_EXCLUDE_DISEASE.",
+            "reference": {
+              "evaluation_id": "ce-48ef923edd0a409cb348f4fe5c1e4c93",
+              "condition_id": "DKA",
+              "source_ids": [
+                "SRC-DKA-2024"
+              ],
+              "input_hash": "c2c168db768e4e73e298159fd80df2c4c39e057eda6aa5dc915abd27ccef4723"
+            }
+          },
+          {
+            "id": "E10",
+            "kind": "ENGINE",
+            "text": "Prueba recomendada OBTAIN_POTASSIUM_SAFETY_DATA: [{\"condition_id\": \"DKA\", \"reason\": \"PROTOCOL_REQUIRES_POTASSIUM\", \"source_ids\": [\"SRC-DKA-2024\"]}]. No es una orden autorizada.",
+            "reference": {
+              "evaluation_id": "ce-48ef923edd0a409cb348f4fe5c1e4c93"
+            }
+          }
+        ],
+        "sources": [
+          {
+            "source": {
+              "source_id": "SRC-DKA-2024",
+              "organization": "ADA/EASD/AACE/JBDS/DTS expert panel",
+              "title": "Hyperglycemic Crises in Adults With Diabetes: A Consensus Report",
+              "year": 2024,
+              "section": "Section 3, Figure 2A, Table 2; Section 4",
+              "doi": "10.2337/dci24-0032",
+              "url": "https://doi.org/10.2337/dci24-0032",
+              "type": "MULTISOCIETY_CONSENSUS_REPORT",
+              "verification": "VERIFIED",
+              "use": [
+                "DKA_diagnosis",
+                "DKA_monitoring",
+                "DKA_treatment"
+              ]
+            },
+            "source_status": "PINNED_VERIFIED_AT_REPORT_DATE_NOT_CONTINUOUSLY_VERIFIED"
+          }
+        ],
+        "model_status": {
+          "available": true,
+          "reason": "LOCAL_MODEL_READY",
+          "model": "vigile-qwen3-4b:latest",
+          "mode": "FULL",
+          "provider": "ollama"
+        },
+        "evaluation_id": "ce-48ef923edd0a409cb348f4fe5c1e4c93",
+        "generated": [
+          {
+            "text": "Faltan datos de bicarbonato en mmol/l y de ketonas urinarias en positivo para evaluar DKA.",
+            "evidence_ids": [
+              "E2"
+            ],
+            "kind": "MODEL_EXPLANATION",
+            "references": [
+              {
+                "evaluation_id": "ce-48ef923edd0a409cb348f4fe5c1e4c93",
+                "condition_id": "DKA",
+                "source_ids": [
+                  "SRC-DKA-2024"
+                ],
+                "input_hash": "c2c168db768e4e73e298159fd80df2c4c39e057eda6aa5dc915abd27ccef4723"
+              }
+            ]
+          },
+          {
+            "text": "Falta información sobre la seguridad del potasio para la condición DKA.",
+            "evidence_ids": [
+              "E10"
+            ],
+            "kind": "MODEL_EXPLANATION",
+            "references": [
+              {
+                "evaluation_id": "ce-48ef923edd0a409cb348f4fe5c1e4c93"
+              }
+            ]
+          }
+        ],
+        "mode": "FULL",
+        "document_issues": [],
+        "metrics": {
+          "elapsed_ms": 7776.476900005946,
+          "usage": {},
+          "timings": {},
+          "load_duration_ns": 6336102700,
+          "verification": {
+            "elapsed_ms": 411.4058999984991,
+            "usage": {},
+            "timings": {},
+            "load_duration_ns": 14613800
+          }
+        },
+        "grounding": "CITATIONS_AND_LOCAL_MODEL_CHECK_NOT_CLINICAL_VALIDATION"
+      }
+    },
+    {
+      "mode": "LOW_POWER",
+      "elapsed_ms": 8175,
+      "reply": {
+        "status": "ANSWERED",
+        "inference_executed": true,
+        "inference_attempted": true,
+        "message": "Explicación generada por un modelo local, vinculada a evidencia. No es una decisión clínica ni una autorización.",
+        "retrieved": [
+          {
+            "id": "E2",
+            "kind": "ENGINE",
+            "text": "DKA: datos faltantes bicarbonate_mmol_l, urine_ketones_plus. Limitaciones: RESEARCH_ONLY, TERRESTRIAL_CRITERIA_NOT_SPACE_VALIDATION, CRITERIA_NOT_MET_DOES_NOT_EXCLUDE_DISEASE.",
+            "reference": {
+              "evaluation_id": "ce-48ef923edd0a409cb348f4fe5c1e4c93",
+              "condition_id": "DKA",
+              "source_ids": [
+                "SRC-DKA-2024"
+              ],
+              "input_hash": "c2c168db768e4e73e298159fd80df2c4c39e057eda6aa5dc915abd27ccef4723"
+            }
+          },
+          {
+            "id": "E10",
+            "kind": "ENGINE",
+            "text": "Prueba recomendada OBTAIN_POTASSIUM_SAFETY_DATA: [{\"condition_id\": \"DKA\", \"reason\": \"PROTOCOL_REQUIRES_POTASSIUM\", \"source_ids\": [\"SRC-DKA-2024\"]}]. No es una orden autorizada.",
+            "reference": {
+              "evaluation_id": "ce-48ef923edd0a409cb348f4fe5c1e4c93"
+            }
+          }
+        ],
+        "answer": [
+          {
+            "id": "E2",
+            "kind": "ENGINE",
+            "text": "DKA: datos faltantes bicarbonate_mmol_l, urine_ketones_plus. Limitaciones: RESEARCH_ONLY, TERRESTRIAL_CRITERIA_NOT_SPACE_VALIDATION, CRITERIA_NOT_MET_DOES_NOT_EXCLUDE_DISEASE.",
+            "reference": {
+              "evaluation_id": "ce-48ef923edd0a409cb348f4fe5c1e4c93",
+              "condition_id": "DKA",
+              "source_ids": [
+                "SRC-DKA-2024"
+              ],
+              "input_hash": "c2c168db768e4e73e298159fd80df2c4c39e057eda6aa5dc915abd27ccef4723"
+            }
+          },
+          {
+            "id": "E10",
+            "kind": "ENGINE",
+            "text": "Prueba recomendada OBTAIN_POTASSIUM_SAFETY_DATA: [{\"condition_id\": \"DKA\", \"reason\": \"PROTOCOL_REQUIRES_POTASSIUM\", \"source_ids\": [\"SRC-DKA-2024\"]}]. No es una orden autorizada.",
+            "reference": {
+              "evaluation_id": "ce-48ef923edd0a409cb348f4fe5c1e4c93"
+            }
+          }
+        ],
+        "sources": [
+          {
+            "source": {
+              "source_id": "SRC-DKA-2024",
+              "organization": "ADA/EASD/AACE/JBDS/DTS expert panel",
+              "title": "Hyperglycemic Crises in Adults With Diabetes: A Consensus Report",
+              "year": 2024,
+              "section": "Section 3, Figure 2A, Table 2; Section 4",
+              "doi": "10.2337/dci24-0032",
+              "url": "https://doi.org/10.2337/dci24-0032",
+              "type": "MULTISOCIETY_CONSENSUS_REPORT",
+              "verification": "VERIFIED",
+              "use": [
+                "DKA_diagnosis",
+                "DKA_monitoring",
+                "DKA_treatment"
+              ]
+            },
+            "source_status": "PINNED_VERIFIED_AT_REPORT_DATE_NOT_CONTINUOUSLY_VERIFIED"
+          }
+        ],
+        "model_status": {
+          "available": true,
+          "reason": "LOCAL_MODEL_READY",
+          "model": "vigile-qwen3-4b:latest",
+          "mode": "LOW_POWER",
+          "provider": "ollama"
+        },
+        "evaluation_id": "ce-48ef923edd0a409cb348f4fe5c1e4c93",
+        "generated": [
+          {
+            "text": "Faltan datos de bicarbonato en mmol/l y de ketonas urinarias en positivo para el diagnóstico de DKA.",
+            "evidence_ids": [
+              "E2"
+            ],
+            "kind": "MODEL_EXPLANATION",
+            "references": [
+              {
+                "evaluation_id": "ce-48ef923edd0a409cb348f4fe5c1e4c93",
+                "condition_id": "DKA",
+                "source_ids": [
+                  "SRC-DKA-2024"
+                ],
+                "input_hash": "c2c168db768e4e73e298159fd80df2c4c39e057eda6aa5dc915abd27ccef4723"
+              }
+            ]
+          },
+          {
+            "text": "Falta información sobre la seguridad del potasio para el manejo de DKA.",
+            "evidence_ids": [
+              "E10"
+            ],
+            "kind": "MODEL_EXPLANATION",
+            "references": [
+              {
+                "evaluation_id": "ce-48ef923edd0a409cb348f4fe5c1e4c93"
+              }
+            ]
+          }
+        ],
+        "mode": "LOW_POWER",
+        "document_issues": [],
+        "metrics": {
+          "elapsed_ms": 7589.861699991161,
+          "usage": {},
+          "timings": {},
+          "load_duration_ns": 6045759400,
+          "verification": {
+            "elapsed_ms": 412.21449998556636,
+            "usage": {},
+            "timings": {},
+            "load_duration_ns": 14879900
+          }
+        },
+        "grounding": "CITATIONS_AND_LOCAL_MODEL_CHECK_NOT_CLINICAL_VALIDATION"
+      }
+    },
+    {
+      "mode": "CRITICAL",
+      "elapsed_ms": 151,
+      "reply": {
+        "status": "EXTRACTIVE_ONLY",
+        "inference_executed": false,
+        "inference_attempted": false,
+        "message": "Modo CRITICAL: LLM desactivado. Consulta extractiva; el motor clínico permanece independiente.",
+        "retrieved": [
+          {
+            "id": "E2",
+            "kind": "ENGINE",
+            "text": "DKA: datos faltantes bicarbonate_mmol_l, urine_ketones_plus. Limitaciones: RESEARCH_ONLY, TERRESTRIAL_CRITERIA_NOT_SPACE_VALIDATION, CRITERIA_NOT_MET_DOES_NOT_EXCLUDE_DISEASE.",
+            "reference": {
+              "evaluation_id": "ce-48ef923edd0a409cb348f4fe5c1e4c93",
+              "condition_id": "DKA",
+              "source_ids": [
+                "SRC-DKA-2024"
+              ],
+              "input_hash": "c2c168db768e4e73e298159fd80df2c4c39e057eda6aa5dc915abd27ccef4723"
+            }
+          },
+          {
+            "id": "E10",
+            "kind": "ENGINE",
+            "text": "Prueba recomendada OBTAIN_POTASSIUM_SAFETY_DATA: [{\"condition_id\": \"DKA\", \"reason\": \"PROTOCOL_REQUIRES_POTASSIUM\", \"source_ids\": [\"SRC-DKA-2024\"]}]. No es una orden autorizada.",
+            "reference": {
+              "evaluation_id": "ce-48ef923edd0a409cb348f4fe5c1e4c93"
+            }
+          }
+        ],
+        "answer": [],
+        "sources": [
+          {
+            "source": {
+              "source_id": "SRC-DKA-2024",
+              "organization": "ADA/EASD/AACE/JBDS/DTS expert panel",
+              "title": "Hyperglycemic Crises in Adults With Diabetes: A Consensus Report",
+              "year": 2024,
+              "section": "Section 3, Figure 2A, Table 2; Section 4",
+              "doi": "10.2337/dci24-0032",
+              "url": "https://doi.org/10.2337/dci24-0032",
+              "type": "MULTISOCIETY_CONSENSUS_REPORT",
+              "verification": "VERIFIED",
+              "use": [
+                "DKA_diagnosis",
+                "DKA_monitoring",
+                "DKA_treatment"
+              ]
+            },
+            "source_status": "PINNED_VERIFIED_AT_REPORT_DATE_NOT_CONTINUOUSLY_VERIFIED"
+          }
+        ],
+        "model_status": {
+          "available": false,
+          "reason": "CRITICAL_LLM_DISABLED",
+          "mode": "CRITICAL",
+          "provider": "ollama"
+        },
+        "evaluation_id": "ce-48ef923edd0a409cb348f4fe5c1e4c93",
+        "generated": [],
+        "mode": "CRITICAL",
+        "document_issues": []
+      }
+    }
+  ],
+  "reader_write_denied": true,
+  "scope_enforced": true,
+  "replay_matches": true,
+  "records_unchanged": true,
+  "mode_csrf_enforced": true,
+  "clinical_validation": false
+}

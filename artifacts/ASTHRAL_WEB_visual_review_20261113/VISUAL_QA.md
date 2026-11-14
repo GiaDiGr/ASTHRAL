@@ -1,0 +1,11 @@
+# Visual QA — 2026-11-13 America/Lima
+
+Real desktop Chromium renderings, including emulated 360x800, 390x844 and 768x1024 viewports and 1440x1000 desktop. Actual image dimensions are authoritative in screenshots.json; narrow-panel captures from earlier model tests are labelled separately. No physical Android/iPhone/iPad/Safari captures were made. All records are synthetic and passphrase fields are empty in archived screenshots.
+
+Observed: landing, profile lock, measurement cards, DKA diagnostic/confirmation/safety separation, urgency, management/resource restrictions, history/audit, citations, model choices and reduced mode. At 360/390/768 widths the checked DOM scroll width did not exceed viewport width. Long identifiers wrap. Mobile header made nonsticky to avoid a stacked header obscuring controls; emergency banner remains sticky and can obscure the top edge of scrolled content, while its content stays visible. Detailed JSON remains dense and is a prototype developer affordance; future UX refinement is needed. The first DKA desktop screenshot was replaced after awaiting actual computation.
+
+The local MiniLM and Qwen0.5B evidence is captured on the desktop browser; it is not mobile acceptance. Qwen3-4B did not load successfully. Voice startup failed; no successful speech transcription is claimed. Origin-unavailable offline parity is recorded as JSON; an offline screenshot and full network-disconnection/airplane-mode acceptance remain pending. Screenshot filenames describe intended view/context and do not certify physical hardware.
+
+No screenshot is proof of clinical validation. Source safety remains independent of software correctness. See IMPLEMENTATION_REPORT.md for remaining functional gaps and independent clinical/security review requirements.
+
+Three captures taken during viewport transition were excluded after image inspection: their raster did not match the intended mobile/tablet layout. The accepted mobile landing is Android-sized; the accepted 390px view is profile lock; the accepted tablet image is the assessment. Output JPEG dimensions may differ from DOM viewport dimensions because the capture API crops/resizes browser chrome. No fabricated device evidence is included.

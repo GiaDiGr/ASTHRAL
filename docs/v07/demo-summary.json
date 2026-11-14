@@ -1,0 +1,124 @@
+{
+  "mode": "SYNTHETIC_SOFTWARE_DEMONSTRATION_NOT_CLINICAL_VALIDATION",
+  "cycles": 15,
+  "replays": [
+    {
+      "id": "A-cycle-0",
+      "matches": true,
+      "scope": "FULL_FROZEN_CYCLE_REEXECUTION",
+      "clinical_validation": false
+    },
+    {
+      "id": "A-cycle-7",
+      "matches": true,
+      "scope": "FULL_FROZEN_CYCLE_REEXECUTION",
+      "clinical_validation": false
+    },
+    {
+      "id": "A-cycle-14",
+      "matches": true,
+      "scope": "FULL_FROZEN_CYCLE_REEXECUTION",
+      "clinical_validation": false
+    },
+    {
+      "id": "A-cycle-15",
+      "matches": true,
+      "scope": "FULL_FROZEN_CYCLE_REEXECUTION",
+      "clinical_validation": false
+    },
+    {
+      "id": "A-cycle-16",
+      "matches": true,
+      "scope": "FULL_FROZEN_CYCLE_REEXECUTION",
+      "clinical_validation": false
+    },
+    {
+      "id": "B-cycle-0",
+      "matches": true,
+      "scope": "FULL_FROZEN_CYCLE_REEXECUTION",
+      "clinical_validation": false
+    },
+    {
+      "id": "B-cycle-repeat",
+      "matches": true,
+      "scope": "FULL_FROZEN_CYCLE_REEXECUTION",
+      "clinical_validation": false
+    },
+    {
+      "id": "B-cycle-0.01",
+      "matches": true,
+      "scope": "FULL_FROZEN_CYCLE_REEXECUTION",
+      "clinical_validation": false
+    },
+    {
+      "id": "B-cycle-0.02",
+      "matches": true,
+      "scope": "FULL_FROZEN_CYCLE_REEXECUTION",
+      "clinical_validation": false
+    },
+    {
+      "id": "B-cycle-0.03",
+      "matches": true,
+      "scope": "FULL_FROZEN_CYCLE_REEXECUTION",
+      "clinical_validation": false
+    },
+    {
+      "id": "C-cycle-0",
+      "matches": true,
+      "scope": "FULL_FROZEN_CYCLE_REEXECUTION",
+      "clinical_validation": false
+    },
+    {
+      "id": "C-cycle-7",
+      "matches": true,
+      "scope": "FULL_FROZEN_CYCLE_REEXECUTION",
+      "clinical_validation": false
+    },
+    {
+      "id": "C-cycle-14",
+      "matches": true,
+      "scope": "FULL_FROZEN_CYCLE_REEXECUTION",
+      "clinical_validation": false
+    },
+    {
+      "id": "C-cycle-21",
+      "matches": true,
+      "scope": "FULL_FROZEN_CYCLE_REEXECUTION",
+      "clinical_validation": false
+    },
+    {
+      "id": "C-cycle-28",
+      "matches": true,
+      "scope": "FULL_FROZEN_CYCLE_REEXECUTION",
+      "clinical_validation": false
+    }
+  ],
+  "audit_integrity": true,
+  "reader_integration": "PASS_READ_ALLOWED_WRITE_DENIED",
+  "performance": {
+    "cycle_latency_ms": [
+      75.11719997273758,
+      42.922799999359995,
+      38.315099955070764,
+      34.00390001479536,
+      41.11440002452582,
+      47.33819997636601,
+      41.2349000107497,
+      41.85530001996085,
+      47.410600003786385,
+      56.760800012853,
+      92.74210000876337,
+      105.9057000093162,
+      151.7394999973476,
+      166.63799999514595,
+      191.66010001208633
+    ],
+    "total_seconds": 3.440605800016783,
+    "note": "Local TestClient includes SQLite and snapshot serialization; synthetic workload, not flight benchmark",
+    "median_ms": 47.410600003786385,
+    "max_ms": 191.66010001208633,
+    "minimum_ms": 34.00390001479536,
+    "concurrent_workload": "Full pytest suite ran concurrently; not an isolated benchmark"
+  },
+  "database_bytes": 3133440
+}

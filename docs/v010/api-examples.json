@@ -1,0 +1,3796 @@
+{
+  "dashboard_request": "GET /api/dashboard/clinical-crew?mission_id=clinical-earth",
+  "dashboard_response": {
+    "episodes": [],
+    "followups": [],
+    "profile": {
+      "id": "clinical-crew",
+      "mission_id": "clinical-earth",
+      "synthetic": true
+    },
+    "mission": {
+      "environment": "HABITABLE_VOLUME",
+      "exposure_context": null,
+      "extraterrestrial_surface_eva_planned_or_required": null,
+      "gravity": "EARTH",
+      "id": "clinical-earth",
+      "microgravity_eva_planned_or_required": null,
+      "mode": "NOMINAL",
+      "phase": "PRE_MISSION",
+      "synthetic": true
+    },
+    "measurements": [
+      {
+        "ingestion_quality": "VALID",
+        "measurement": {
+          "calibration_id": "cal-demo-plasma_glucose_mg_dl",
+          "compartment": null,
+          "device_id": "demo-plasma_glucose_mg_dl",
+          "id": "demo-plasma_glucose_mg_dl",
+          "interval_end": null,
+          "method": "VENOUS_PLASMA",
+          "mission_id": "clinical-earth",
+          "phase": "PRE_MISSION",
+          "protocol": "SYNTHETIC_DEMO",
+          "provenance": "SYNTHETIC_ONLY",
+          "reported_quality": "ACCEPTABLE",
+          "site": null,
+          "subject_id": "clinical-crew",
+          "synthetic": true,
+          "timestamp": "2026-10-16T12:00:00Z",
+          "unit": "mg/dL",
+          "value": 180.0,
+          "variable": "plasma_glucose_mg_dl"
+        }
+      },
+      {
+        "ingestion_quality": "VALID",
+        "measurement": {
+          "calibration_id": "cal-demo-beta_hydroxybutyrate_mmol_l",
+          "compartment": null,
+          "device_id": "demo-beta_hydroxybutyrate_mmol_l",
+          "id": "demo-beta_hydroxybutyrate_mmol_l",
+          "interval_end": null,
+          "method": "SYNTHETIC_LAB",
+          "mission_id": "clinical-earth",
+          "phase": "PRE_MISSION",
+          "protocol": "SYNTHETIC_DEMO",
+          "provenance": "SYNTHETIC_ONLY",
+          "reported_quality": "ACCEPTABLE",
+          "site": null,
+          "subject_id": "clinical-crew",
+          "synthetic": true,
+          "timestamp": "2026-10-16T12:00:00Z",
+          "unit": "mmol/L",
+          "value": 4.2,
+          "variable": "beta_hydroxybutyrate_mmol_l"
+        }
+      },
+      {
+        "ingestion_quality": "VALID",
+        "measurement": {
+          "calibration_id": "cal-demo-venous_pH",
+          "compartment": null,
+          "device_id": "demo-venous_pH",
+          "id": "demo-venous_pH",
+          "interval_end": null,
+          "method": "VENOUS_BLOOD_GAS",
+          "mission_id": "clinical-earth",
+          "phase": "PRE_MISSION",
+          "protocol": "SYNTHETIC_DEMO",
+          "provenance": "SYNTHETIC_ONLY",
+          "reported_quality": "ACCEPTABLE",
+          "site": null,
+          "subject_id": "clinical-crew",
+          "synthetic": true,
+          "timestamp": "2026-10-16T12:00:00Z",
+          "unit": "pH",
+          "value": 7.22,
+          "variable": "venous_pH"
+        }
+      },
+      {
+        "ingestion_quality": "VALID",
+        "measurement": {
+          "calibration_id": "cal-portal-physiology.heart_rate",
+          "compartment": "HAB1",
+          "device_id": "portal-physiology.heart_rate",
+          "id": "portal-physiology.heart_rate-0",
+          "interval_end": null,
+          "method": "DIRECT",
+          "mission_id": "clinical-earth",
+          "phase": "PRE_MISSION",
+          "protocol": "SYNTHETIC_MONITORING",
+          "provenance": "SYNTHETIC_DISPLAY_SERIES_NOT_DIAGNOSTIC",
+          "reported_quality": "ACCEPTABLE",
+          "site": null,
+          "subject_id": "clinical-crew",
+          "synthetic": true,
+          "timestamp": "2026-10-16T04:00:00Z",
+          "unit": "bpm",
+          "value": 68.0,
+          "variable": "physiology.heart_rate"
+        }
+      },
+      {
+        "ingestion_quality": "VALID",
+        "measurement": {
+          "calibration_id": "cal-portal-physiology.heart_rate",
+          "compartment": "HAB1",
+          "device_id": "portal-physiology.heart_rate",
+          "id": "portal-physiology.heart_rate-1",
+          "interval_end": null,
+          "method": "DIRECT",
+          "mission_id": "clinical-earth",
+          "phase": "PRE_MISSION",
+          "protocol": "SYNTHETIC_MONITORING",
+          "provenance": "SYNTHETIC_DISPLAY_SERIES_NOT_DIAGNOSTIC",
+          "reported_quality": "ACCEPTABLE",
+          "site": null,
+          "subject_id": "clinical-crew",
+          "synthetic": true,
+          "timestamp": "2026-10-16T05:00:00Z",
+          "unit": "bpm",
+          "value": 69.0,
+          "variable": "physiology.heart_rate"
+        }
+      },
+      {
+        "ingestion_quality": "VALID",
+        "measurement": {
+          "calibration_id": "cal-portal-physiology.heart_rate",
+          "compartment": "HAB1",
+          "device_id": "portal-physiology.heart_rate",
+          "id": "portal-physiology.heart_rate-2",
+          "interval_end": null,
+          "method": "DIRECT",
+          "mission_id": "clinical-earth",
+          "phase": "PRE_MISSION",
+          "protocol": "SYNTHETIC_MONITORING",
+          "provenance": "SYNTHETIC_DISPLAY_SERIES_NOT_DIAGNOSTIC",
+          "reported_quality": "ACCEPTABLE",
+          "site": null,
+          "subject_id": "clinical-crew",
+          "synthetic": true,
+          "timestamp": "2026-10-16T06:00:00Z",
+          "unit": "bpm",
+          "value": 70.0,
+          "variable": "physiology.heart_rate"
+        }
+      },
+      {
+        "ingestion_quality": "VALID",
+        "measurement": {
+          "calibration_id": "cal-portal-physiology.heart_rate",
+          "compartment": "HAB1",
+          "device_id": "portal-physiology.heart_rate",
+          "id": "portal-physiology.heart_rate-3",
+          "interval_end": null,
+          "method": "DIRECT",
+          "mission_id": "clinical-earth",
+          "phase": "PRE_MISSION",
+          "protocol": "SYNTHETIC_MONITORING",
+          "provenance": "SYNTHETIC_DISPLAY_SERIES_NOT_DIAGNOSTIC",
+          "reported_quality": "ACCEPTABLE",
+          "site": null,
+          "subject_id": "clinical-crew",
+          "synthetic": true,
+          "timestamp": "2026-10-16T07:00:00Z",
+          "unit": "bpm",
+          "value": 71.0,
+          "variable": "physiology.heart_rate"
+        }
+      },
+      {
+        "ingestion_quality": "VALID",
+        "measurement": {
+          "calibration_id": "cal-portal-physiology.heart_rate",
+          "compartment": "HAB1",
+          "device_id": "portal-physiology.heart_rate",
+          "id": "portal-physiology.heart_rate-4",
+          "interval_end": null,
+          "method": "DIRECT",
+          "mission_id": "clinical-earth",
+          "phase": "PRE_MISSION",
+          "protocol": "SYNTHETIC_MONITORING",
+          "provenance": "SYNTHETIC_DISPLAY_SERIES_NOT_DIAGNOSTIC",
+          "reported_quality": "ACCEPTABLE",
+          "site": null,
+          "subject_id": "clinical-crew",
+          "synthetic": true,
+          "timestamp": "2026-10-16T08:00:00Z",
+          "unit": "bpm",
+          "value": 69.0,
+          "variable": "physiology.heart_rate"
+        }
+      },
+      {
+        "ingestion_quality": "VALID",
+        "measurement": {
+          "calibration_id": "cal-portal-physiology.heart_rate",
+          "compartment": "HAB1",
+          "device_id": "portal-physiology.heart_rate",
+          "id": "portal-physiology.heart_rate-5",
+          "interval_end": null,
+          "method": "DIRECT",
+          "mission_id": "clinical-earth",
+          "phase": "PRE_MISSION",
+          "protocol": "SYNTHETIC_MONITORING",
+          "provenance": "SYNTHETIC_DISPLAY_SERIES_NOT_DIAGNOSTIC",
+          "reported_quality": "ACCEPTABLE",
+          "site": null,
+          "subject_id": "clinical-crew",
+          "synthetic": true,
+          "timestamp": "2026-10-16T09:00:00Z",
+          "unit": "bpm",
+          "value": 72.0,
+          "variable": "physiology.heart_rate"
+        }
+      },
+      {
+        "ingestion_quality": "VALID",
+        "measurement": {
+          "calibration_id": "cal-portal-physiology.heart_rate",
+          "compartment": "HAB1",
+          "device_id": "portal-physiology.heart_rate",
+          "id": "portal-physiology.heart_rate-6",
+          "interval_end": null,
+          "method": "DIRECT",
+          "mission_id": "clinical-earth",
+          "phase": "PRE_MISSION",
+          "protocol": "SYNTHETIC_MONITORING",
+          "provenance": "SYNTHETIC_DISPLAY_SERIES_NOT_DIAGNOSTIC",
+          "reported_quality": "ACCEPTABLE",
+          "site": null,
+          "subject_id": "clinical-crew",
+          "synthetic": true,
+          "timestamp": "2026-10-16T10:00:00Z",
+          "unit": "bpm",
+          "value": 92.0,
+          "variable": "physiology.heart_rate"
+        }
+      },
+      {
+        "ingestion_quality": "VALID",
+        "measurement": {
+          "calibration_id": "cal-portal-physiology.heart_rate",
+          "compartment": "HAB1",
+          "device_id": "portal-physiology.heart_rate",
+          "id": "portal-physiology.heart_rate-7",
+          "interval_end": null,
+          "method": "DIRECT",
+          "mission_id": "clinical-earth",
+          "phase": "PRE_MISSION",
+          "protocol": "SYNTHETIC_MONITORING",
+          "provenance": "SYNTHETIC_DISPLAY_SERIES_NOT_DIAGNOSTIC",
+          "reported_quality": "ACCEPTABLE",
+          "site": null,
+          "subject_id": "clinical-crew",
+          "synthetic": true,
+          "timestamp": "2026-10-16T11:00:00Z",
+          "unit": "bpm",
+          "value": 104.0,
+          "variable": "physiology.heart_rate"
+        }
+      },
+      {
+        "ingestion_quality": "VALID",
+        "measurement": {
+          "calibration_id": "cal-portal-physiology.heart_rate",
+          "compartment": "HAB1",
+          "device_id": "portal-physiology.heart_rate",
+          "id": "portal-physiology.heart_rate-8",
+          "interval_end": null,
+          "method": "DIRECT",
+          "mission_id": "clinical-earth",
+          "phase": "PRE_MISSION",
+          "protocol": "SYNTHETIC_MONITORING",
+          "provenance": "SYNTHETIC_DISPLAY_SERIES_NOT_DIAGNOSTIC",
+          "reported_quality": "ACCEPTABLE",
+          "site": null,
+          "subject_id": "clinical-crew",
+          "synthetic": true,
+          "timestamp": "2026-10-16T12:00:00Z",
+          "unit": "bpm",
+          "value": 118.0,
+          "variable": "physiology.heart_rate"
+        }
+      },
+      {
+        "ingestion_quality": "VALID",
+        "measurement": {
+          "calibration_id": "cal-portal-environment.ppco2",
+          "compartment": "HAB1",
+          "device_id": "portal-environment.ppco2",
+          "id": "portal-environment.ppco2-0",
+          "interval_end": null,
+          "method": "DIRECT",
+          "mission_id": "clinical-earth",
+          "phase": "PRE_MISSION",
+          "protocol": "SYNTHETIC_MONITORING",
+          "provenance": "SYNTHETIC_DISPLAY_SERIES_NOT_DIAGNOSTIC",
+          "reported_quality": "ACCEPTABLE",
+          "site": null,
+          "subject_id": "clinical-crew",
+          "synthetic": true,
+          "timestamp": "2026-10-16T04:00:00Z",
+          "unit": "mmHg",
+          "value": 2.0,
+          "variable": "environment.ppco2"
+        }
+      },
+      {
+        "ingestion_quality": "VALID",
+        "measurement": {
+          "calibration_id": "cal-portal-environment.ppco2",
+          "compartment": "HAB1",
+          "device_id": "portal-environment.ppco2",
+          "id": "portal-environment.ppco2-1",
+          "interval_end": null,
+          "method": "DIRECT",
+          "mission_id": "clinical-earth",
+          "phase": "PRE_MISSION",
+          "protocol": "SYNTHETIC_MONITORING",
+          "provenance": "SYNTHETIC_DISPLAY_SERIES_NOT_DIAGNOSTIC",
+          "reported_quality": "ACCEPTABLE",
+          "site": null,
+          "subject_id": "clinical-crew",
+          "synthetic": true,
+          "timestamp": "2026-10-16T05:00:00Z",
+          "unit": "mmHg",
+          "value": 2.1,
+          "variable": "environment.ppco2"
+        }
+      },
+      {
+        "ingestion_quality": "VALID",
+        "measurement": {
+          "calibration_id": "cal-portal-environment.ppco2",
+          "compartment": "HAB1",
+          "device_id": "portal-environment.ppco2",
+          "id": "portal-environment.ppco2-2",
+          "interval_end": null,
+          "method": "DIRECT",
+          "mission_id": "clinical-earth",
+          "phase": "PRE_MISSION",
+          "protocol": "SYNTHETIC_MONITORING",
+          "provenance": "SYNTHETIC_DISPLAY_SERIES_NOT_DIAGNOSTIC",
+          "reported_quality": "ACCEPTABLE",
+          "site": null,
+          "subject_id": "clinical-crew",
+          "synthetic": true,
+          "timestamp": "2026-10-16T06:00:00Z",
+          "unit": "mmHg",
+          "value": 2.0,
+          "variable": "environment.ppco2"
+        }
+      },
+      {
+        "ingestion_quality": "VALID",
+        "measurement": {
+          "calibration_id": "cal-portal-environment.ppco2",
+          "compartment": "HAB1",
+          "device_id": "portal-environment.ppco2",
+          "id": "portal-environment.ppco2-3",
+          "interval_end": null,
+          "method": "DIRECT",
+          "mission_id": "clinical-earth",
+          "phase": "PRE_MISSION",
+          "protocol": "SYNTHETIC_MONITORING",
+          "provenance": "SYNTHETIC_DISPLAY_SERIES_NOT_DIAGNOSTIC",
+          "reported_quality": "ACCEPTABLE",
+          "site": null,
+          "subject_id": "clinical-crew",
+          "synthetic": true,
+          "timestamp": "2026-10-16T07:00:00Z",
+          "unit": "mmHg",
+          "value": 2.2,
+          "variable": "environment.ppco2"
+        }
+      },
+      {
+        "ingestion_quality": "VALID",
+        "measurement": {
+          "calibration_id": "cal-portal-environment.ppco2",
+          "compartment": "HAB1",
+          "device_id": "portal-environment.ppco2",
+          "id": "portal-environment.ppco2-4",
+          "interval_end": null,
+          "method": "DIRECT",
+          "mission_id": "clinical-earth",
+          "phase": "PRE_MISSION",
+          "protocol": "SYNTHETIC_MONITORING",
+          "provenance": "SYNTHETIC_DISPLAY_SERIES_NOT_DIAGNOSTIC",
+          "reported_quality": "ACCEPTABLE",
+          "site": null,
+          "subject_id": "clinical-crew",
+          "synthetic": true,
+          "timestamp": "2026-10-16T08:00:00Z",
+          "unit": "mmHg",
+          "value": 2.1,
+          "variable": "environment.ppco2"
+        }
+      },
+      {
+        "ingestion_quality": "VALID",
+        "measurement": {
+          "calibration_id": "cal-portal-environment.ppco2",
+          "compartment": "HAB1",
+          "device_id": "portal-environment.ppco2",
+          "id": "portal-environment.ppco2-5",
+          "interval_end": null,
+          "method": "DIRECT",
+          "mission_id": "clinical-earth",
+          "phase": "PRE_MISSION",
+          "protocol": "SYNTHETIC_MONITORING",
+          "provenance": "SYNTHETIC_DISPLAY_SERIES_NOT_DIAGNOSTIC",
+          "reported_quality": "ACCEPTABLE",
+          "site": null,
+          "subject_id": "clinical-crew",
+          "synthetic": true,
+          "timestamp": "2026-10-16T09:00:00Z",
+          "unit": "mmHg",
+          "value": 2.0,
+          "variable": "environment.ppco2"
+        }
+      },
+      {
+        "ingestion_quality": "VALID",
+        "measurement": {
+          "calibration_id": "cal-portal-environment.ppco2",
+          "compartment": "HAB1",
+          "device_id": "portal-environment.ppco2",
+          "id": "portal-environment.ppco2-6",
+          "interval_end": null,
+          "method": "DIRECT",
+          "mission_id": "clinical-earth",
+          "phase": "PRE_MISSION",
+          "protocol": "SYNTHETIC_MONITORING",
+          "provenance": "SYNTHETIC_DISPLAY_SERIES_NOT_DIAGNOSTIC",
+          "reported_quality": "ACCEPTABLE",
+          "site": null,
+          "subject_id": "clinical-crew",
+          "synthetic": true,
+          "timestamp": "2026-10-16T10:00:00Z",
+          "unit": "mmHg",
+          "value": 2.3,
+          "variable": "environment.ppco2"
+        }
+      },
+      {
+        "ingestion_quality": "VALID",
+        "measurement": {
+          "calibration_id": "cal-portal-environment.ppco2",
+          "compartment": "HAB1",
+          "device_id": "portal-environment.ppco2",
+          "id": "portal-environment.ppco2-7",
+          "interval_end": null,
+          "method": "DIRECT",
+          "mission_id": "clinical-earth",
+          "phase": "PRE_MISSION",
+          "protocol": "SYNTHETIC_MONITORING",
+          "provenance": "SYNTHETIC_DISPLAY_SERIES_NOT_DIAGNOSTIC",
+          "reported_quality": "ACCEPTABLE",
+          "site": null,
+          "subject_id": "clinical-crew",
+          "synthetic": true,
+          "timestamp": "2026-10-16T11:00:00Z",
+          "unit": "mmHg",
+          "value": 2.4,
+          "variable": "environment.ppco2"
+        }
+      },
+      {
+        "ingestion_quality": "VALID",
+        "measurement": {
+          "calibration_id": "cal-portal-environment.ppco2",
+          "compartment": "HAB1",
+          "device_id": "portal-environment.ppco2",
+          "id": "portal-environment.ppco2-8",
+          "interval_end": null,
+          "method": "DIRECT",
+          "mission_id": "clinical-earth",
+          "phase": "PRE_MISSION",
+          "protocol": "SYNTHETIC_MONITORING",
+          "provenance": "SYNTHETIC_DISPLAY_SERIES_NOT_DIAGNOSTIC",
+          "reported_quality": "ACCEPTABLE",
+          "site": null,
+          "subject_id": "clinical-crew",
+          "synthetic": true,
+          "timestamp": "2026-10-16T12:00:00Z",
+          "unit": "mmHg",
+          "value": 2.5,
+          "variable": "environment.ppco2"
+        }
+      }
+    ],
+    "baselines": [
+      {
+        "algorithm_version": "ALG001-2",
+        "id": "portal-heart-baseline",
+        "implementation_hash": "c896211d20b52ade1279aeb306421891f5e29b542f910074d542321c4b815db9",
+        "input_ids": [
+          "portal-physiology.heart_rate-0",
+          "portal-physiology.heart_rate-1",
+          "portal-physiology.heart_rate-2",
+          "portal-physiology.heart_rate-3",
+          "portal-physiology.heart_rate-4",
+          "portal-physiology.heart_rate-5"
+        ],
+        "mad": 1.0,
+        "method": "DIRECT",
+        "mission_id": "clinical-earth",
+        "protocol": "SYNTHETIC_MONITORING",
+        "request": {
+          "as_of": "2026-10-16T12:00:00Z",
+          "id": "portal-heart-baseline",
+          "measurement_ids": [
+            "portal-physiology.heart_rate-0",
+            "portal-physiology.heart_rate-1",
+            "portal-physiology.heart_rate-2",
+            "portal-physiology.heart_rate-3",
+            "portal-physiology.heart_rate-4",
+            "portal-physiology.heart_rate-5"
+          ],
+          "minimum_observations": 5,
+          "protocol_reference": "SYNTHETIC_BASELINE_TEST",
+          "supersedes": null,
+          "valid_until": "2026-10-17T12:00:00Z"
+        },
+        "site": null,
+        "snapshots": [
+          {
+            "device": {
+              "alignment_seconds": null,
+              "calibrated_at": "2026-09-16T12:00:00Z",
+              "calibration_id": "cal-portal-physiology.heart_rate",
+              "conflict_tolerance": null,
+              "id": "portal-physiology.heart_rate",
+              "max_age_seconds": 864000,
+              "policy_reference": "SYNTHETIC_ONLY_NOT_CLINICAL",
+              "synthetic": true,
+              "technical_max": 1000.0,
+              "technical_min": 0.0,
+              "unit": "bpm",
+              "valid_until": "2026-11-15T12:00:00Z",
+              "variable": "physiology.heart_rate"
+            },
+            "measurement": {
+              "calibration_id": "cal-portal-physiology.heart_rate",
+              "compartment": "HAB1",
+              "device_id": "portal-physiology.heart_rate",
+              "id": "portal-physiology.heart_rate-0",
+              "interval_end": null,
+              "method": "DIRECT",
+              "mission_id": "clinical-earth",
+              "phase": "PRE_MISSION",
+              "protocol": "SYNTHETIC_MONITORING",
+              "provenance": "SYNTHETIC_DISPLAY_SERIES_NOT_DIAGNOSTIC",
+              "reported_quality": "ACCEPTABLE",
+              "site": null,
+              "subject_id": "clinical-crew",
+              "synthetic": true,
+              "timestamp": "2026-10-16T04:00:00Z",
+              "unit": "bpm",
+              "value": 68.0,
+              "variable": "physiology.heart_rate"
+            }
+          },
+          {
+            "device": {
+              "alignment_seconds": null,
+              "calibrated_at": "2026-09-16T12:00:00Z",
+              "calibration_id": "cal-portal-physiology.heart_rate",
+              "conflict_tolerance": null,
+              "id": "portal-physiology.heart_rate",
+              "max_age_seconds": 864000,
+              "policy_reference": "SYNTHETIC_ONLY_NOT_CLINICAL",
+              "synthetic": true,
+              "technical_max": 1000.0,
+              "technical_min": 0.0,
+              "unit": "bpm",
+              "valid_until": "2026-11-15T12:00:00Z",
+              "variable": "physiology.heart_rate"
+            },
+            "measurement": {
+              "calibration_id": "cal-portal-physiology.heart_rate",
+              "compartment": "HAB1",
+              "device_id": "portal-physiology.heart_rate",
+              "id": "portal-physiology.heart_rate-1",
+              "interval_end": null,
+              "method": "DIRECT",
+              "mission_id": "clinical-earth",
+              "phase": "PRE_MISSION",
+              "protocol": "SYNTHETIC_MONITORING",
+              "provenance": "SYNTHETIC_DISPLAY_SERIES_NOT_DIAGNOSTIC",
+              "reported_quality": "ACCEPTABLE",
+              "site": null,
+              "subject_id": "clinical-crew",
+              "synthetic": true,
+              "timestamp": "2026-10-16T05:00:00Z",
+              "unit": "bpm",
+              "value": 69.0,
+              "variable": "physiology.heart_rate"
+            }
+          },
+          {
+            "device": {
+              "alignment_seconds": null,
+              "calibrated_at": "2026-09-16T12:00:00Z",
+              "calibration_id": "cal-portal-physiology.heart_rate",
+              "conflict_tolerance": null,
+              "id": "portal-physiology.heart_rate",
+              "max_age_seconds": 864000,
+              "policy_reference": "SYNTHETIC_ONLY_NOT_CLINICAL",
+              "synthetic": true,
+              "technical_max": 1000.0,
+              "technical_min": 0.0,
+              "unit": "bpm",
+              "valid_until": "2026-11-15T12:00:00Z",
+              "variable": "physiology.heart_rate"
+            },
+            "measurement": {
+              "calibration_id": "cal-portal-physiology.heart_rate",
+              "compartment": "HAB1",
+              "device_id": "portal-physiology.heart_rate",
+              "id": "portal-physiology.heart_rate-2",
+              "interval_end": null,
+              "method": "DIRECT",
+              "mission_id": "clinical-earth",
+              "phase": "PRE_MISSION",
+              "protocol": "SYNTHETIC_MONITORING",
+              "provenance": "SYNTHETIC_DISPLAY_SERIES_NOT_DIAGNOSTIC",
+              "reported_quality": "ACCEPTABLE",
+              "site": null,
+              "subject_id": "clinical-crew",
+              "synthetic": true,
+              "timestamp": "2026-10-16T06:00:00Z",
+              "unit": "bpm",
+              "value": 70.0,
+              "variable": "physiology.heart_rate"
+            }
+          },
+          {
+            "device": {
+              "alignment_seconds": null,
+              "calibrated_at": "2026-09-16T12:00:00Z",
+              "calibration_id": "cal-portal-physiology.heart_rate",
+              "conflict_tolerance": null,
+              "id": "portal-physiology.heart_rate",
+              "max_age_seconds": 864000,
+              "policy_reference": "SYNTHETIC_ONLY_NOT_CLINICAL",
+              "synthetic": true,
+              "technical_max": 1000.0,
+              "technical_min": 0.0,
+              "unit": "bpm",
+              "valid_until": "2026-11-15T12:00:00Z",
+              "variable": "physiology.heart_rate"
+            },
+            "measurement": {
+              "calibration_id": "cal-portal-physiology.heart_rate",
+              "compartment": "HAB1",
+              "device_id": "portal-physiology.heart_rate",
+              "id": "portal-physiology.heart_rate-3",
+              "interval_end": null,
+              "method": "DIRECT",
+              "mission_id": "clinical-earth",
+              "phase": "PRE_MISSION",
+              "protocol": "SYNTHETIC_MONITORING",
+              "provenance": "SYNTHETIC_DISPLAY_SERIES_NOT_DIAGNOSTIC",
+              "reported_quality": "ACCEPTABLE",
+              "site": null,
+              "subject_id": "clinical-crew",
+              "synthetic": true,
+              "timestamp": "2026-10-16T07:00:00Z",
+              "unit": "bpm",
+              "value": 71.0,
+              "variable": "physiology.heart_rate"
+            }
+          },
+          {
+            "device": {
+              "alignment_seconds": null,
+              "calibrated_at": "2026-09-16T12:00:00Z",
+              "calibration_id": "cal-portal-physiology.heart_rate",
+              "conflict_tolerance": null,
+              "id": "portal-physiology.heart_rate",
+              "max_age_seconds": 864000,
+              "policy_reference": "SYNTHETIC_ONLY_NOT_CLINICAL",
+              "synthetic": true,
+              "technical_max": 1000.0,
+              "technical_min": 0.0,
+              "unit": "bpm",
+              "valid_until": "2026-11-15T12:00:00Z",
+              "variable": "physiology.heart_rate"
+            },
+            "measurement": {
+              "calibration_id": "cal-portal-physiology.heart_rate",
+              "compartment": "HAB1",
+              "device_id": "portal-physiology.heart_rate",
+              "id": "portal-physiology.heart_rate-4",
+              "interval_end": null,
+              "method": "DIRECT",
+              "mission_id": "clinical-earth",
+              "phase": "PRE_MISSION",
+              "protocol": "SYNTHETIC_MONITORING",
+              "provenance": "SYNTHETIC_DISPLAY_SERIES_NOT_DIAGNOSTIC",
+              "reported_quality": "ACCEPTABLE",
+              "site": null,
+              "subject_id": "clinical-crew",
+              "synthetic": true,
+              "timestamp": "2026-10-16T08:00:00Z",
+              "unit": "bpm",
+              "value": 69.0,
+              "variable": "physiology.heart_rate"
+            }
+          },
+          {
+            "device": {
+              "alignment_seconds": null,
+              "calibrated_at": "2026-09-16T12:00:00Z",
+              "calibration_id": "cal-portal-physiology.heart_rate",
+              "conflict_tolerance": null,
+              "id": "portal-physiology.heart_rate",
+              "max_age_seconds": 864000,
+              "policy_reference": "SYNTHETIC_ONLY_NOT_CLINICAL",
+              "synthetic": true,
+              "technical_max": 1000.0,
+              "technical_min": 0.0,
+              "unit": "bpm",
+              "valid_until": "2026-11-15T12:00:00Z",
+              "variable": "physiology.heart_rate"
+            },
+            "measurement": {
+              "calibration_id": "cal-portal-physiology.heart_rate",
+              "compartment": "HAB1",
+              "device_id": "portal-physiology.heart_rate",
+              "id": "portal-physiology.heart_rate-5",
+              "interval_end": null,
+              "method": "DIRECT",
+              "mission_id": "clinical-earth",
+              "phase": "PRE_MISSION",
+              "protocol": "SYNTHETIC_MONITORING",
+              "provenance": "SYNTHETIC_DISPLAY_SERIES_NOT_DIAGNOSTIC",
+              "reported_quality": "ACCEPTABLE",
+              "site": null,
+              "subject_id": "clinical-crew",
+              "synthetic": true,
+              "timestamp": "2026-10-16T09:00:00Z",
+              "unit": "bpm",
+              "value": 72.0,
+              "variable": "physiology.heart_rate"
+            }
+          }
+        ],
+        "status": "RESEARCH_ONLY",
+        "subject_id": "clinical-crew",
+        "supersedes": null,
+        "unit": "bpm",
+        "valid_until": "2026-10-17T12:00:00+00:00",
+        "validity_policy": "EXPLICIT_EXPIRY",
+        "value": 69.5,
+        "variable": "physiology.heart_rate",
+        "version": 1
+      }
+    ],
+    "trends": [],
+    "findings": [],
+    "monitoring": [],
+    "evaluations": [
+      {
+        "differential": [
+          {
+            "condition_id": "DKA",
+            "contradictions": [],
+            "criteria_implemented": true,
+            "diagnostic_status": "CRITERIA_MET",
+            "external_evaluation_required": false,
+            "reported_condition_id": "DKA",
+            "source_ids": [
+              "SRC-DKA-2024"
+            ],
+            "support": [
+              "known_diabetes"
+            ],
+            "tier": "TIME_CRITICAL_CRITERIA_MET",
+            "urgency": "EMERGENCY"
+          }
+        ],
+        "id": "ce-d4421c0acf5b4200bdc5c322e9b8971c",
+        "implementation_hash": "c896211d20b52ade1279aeb306421891f5e29b542f910074d542321c4b815db9",
+        "input_hash": "c2c168db768e4e73e298159fd80df2c4c39e057eda6aa5dc915abd27ccef4723",
+        "knowledge_hash": "b8c568bd645154e5fd67630c7a670ca53904dc04f54904315047a89923839d4e",
+        "knowledge_version": "0.7.0",
+        "next_tests": [
+          {
+            "action": "OBTAIN_POTASSIUM_SAFETY_DATA",
+            "availability": null,
+            "catalogue_status": "TEST_ID_NOT_DEFINED_IN_REPORT",
+            "cost": "NOT_SPECIFIED_IN_REPORT",
+            "execution_authorized": false,
+            "reasons": [
+              {
+                "condition_id": "DKA",
+                "purpose": "PROTOCOL_SAFETY",
+                "reason": "PROTOCOL_REQUIRES_POTASSIUM",
+                "source_ids": [
+                  "SRC-DKA-2024"
+                ]
+              }
+            ],
+            "risk": "NOT_SPECIFIED_IN_REPORT",
+            "test_id": null,
+            "urgency": "EMERGENCY"
+          }
+        ],
+        "output_hash": "4ceb35d15570032a8f8d9dc7db32ff4920056843d7dd9ee31ad4d278b13a401b",
+        "parent_id": null,
+        "presentation_protocol": null,
+        "results": {
+          "DKA": {
+            "condition_id": "DKA",
+            "confirmation_status": "SATISFIED",
+            "criterion_id": "CRIT-DKA-2024",
+            "criterion_version": "2024.1",
+            "data_issues": [],
+            "data_requirement_version": "four-state-1",
+            "diagnostic_status": "CRITERIA_MET",
+            "evaluation_tree": {
+              "children": [
+                {
+                  "children": [
+                    {
+                      "actual": true,
+                      "expected": true,
+                      "field": "known_diabetes",
+                      "logic_version": "four-state-1",
+                      "nonblocking_ancestor": "root",
+                      "operator": "==",
+                      "path": "root/0/0",
+                      "reasons": [],
+                      "required_for_resolution": false,
+                      "state": true,
+                      "truth_state": "TRUE"
+                    },
+                    {
+                      "actual": 180.0,
+                      "expected": 200,
+                      "field": "plasma_glucose_mg_dl",
+                      "logic_version": "four-state-1",
+                      "nonblocking_ancestor": "root",
+                      "operator": ">=",
+                      "path": "root/0/1",
+                      "reasons": [],
+                      "required_for_resolution": false,
+                      "state": false,
+                      "truth_state": "FALSE"
+                    }
+                  ],
+                  "decisive_children": [
+                    "root/0/0"
+                  ],
+                  "logic_version": "four-state-1",
+                  "operator": "any_of",
+                  "path": "root/0",
+                  "required_for_resolution": false,
+                  "state": true,
+                  "truth_state": "TRUE"
+                },
+                {
+                  "children": [
+                    {
+                      "actual": 4.2,
+                      "expected": 3.0,
+                      "field": "beta_hydroxybutyrate_mmol_l",
+                      "logic_version": "four-state-1",
+                      "nonblocking_ancestor": "root",
+                      "operator": ">=",
+                      "path": "root/1/0",
+                      "reasons": [],
+                      "required_for_resolution": false,
+                      "state": true,
+                      "truth_state": "TRUE"
+                    },
+                    {
+                      "actual": null,
+                      "expected": 2,
+                      "field": "urine_ketones_plus",
+                      "logic_version": "four-state-1",
+                      "nonblocking_ancestor": "root",
+                      "operator": ">=",
+                      "path": "root/1/1",
+                      "reasons": [
+                        "NOT_AVAILABLE"
+                      ],
+                      "required_for_resolution": false,
+                      "state": null,
+                      "truth_state": "UNKNOWN"
+                    }
+                  ],
+                  "decisive_children": [
+                    "root/1/0"
+                  ],
+                  "logic_version": "four-state-1",
+                  "operator": "any_of",
+                  "path": "root/1",
+                  "required_for_resolution": false,
+                  "state": true,
+                  "truth_state": "TRUE"
+                },
+                {
+                  "children": [
+                    {
+                      "actual": 7.22,
+                      "expected": 7.3,
+                      "field": "venous_pH",
+                      "logic_version": "four-state-1",
+                      "nonblocking_ancestor": "root",
+                      "operator": "<",
+                      "path": "root/2/0",
+                      "reasons": [],
+                      "required_for_resolution": false,
+                      "state": true,
+                      "truth_state": "TRUE"
+                    },
+                    {
+                      "actual": null,
+                      "expected": 18,
+                      "field": "bicarbonate_mmol_l",
+                      "logic_version": "four-state-1",
+                      "nonblocking_ancestor": "root",
+                      "operator": "<",
+                      "path": "root/2/1",
+                      "reasons": [
+                        "NOT_AVAILABLE"
+                      ],
+                      "required_for_resolution": false,
+                      "state": null,
+                      "truth_state": "UNKNOWN"
+                    }
+                  ],
+                  "decisive_children": [
+                    "root/2/0"
+                  ],
+                  "logic_version": "four-state-1",
+                  "operator": "any_of",
+                  "path": "root/2",
+                  "required_for_resolution": false,
+                  "state": true,
+                  "truth_state": "TRUE"
+                }
+              ],
+              "decisive_children": [
+                "root/0",
+                "root/1",
+                "root/2"
+              ],
+              "logic_version": "four-state-1",
+              "operator": "all_of",
+              "path": "root",
+              "required_for_resolution": false,
+              "state": true,
+              "truth_state": "TRUE"
+            },
+            "invalid_fields": [],
+            "invalid_required": [],
+            "limitations": [
+              "RESEARCH_ONLY",
+              "TERRESTRIAL_CRITERIA_NOT_SPACE_VALIDATION",
+              "CRITERIA_NOT_MET_DOES_NOT_EXCLUDE_DISEASE",
+              "MANUAL_OBSERVATIONS_USE_DECLARED_WINDOW_NOT_VALIDATED_FRESHNESS",
+              "MEASUREMENT_CONTEXT_ATTESTED_NOT_INDEPENDENTLY_VERIFIED",
+              "URGENCY_RESEARCH_POLICY_NOT_VALIDATED_TRIAGE"
+            ],
+            "metadata": {
+              "aki_stage": null,
+              "aki_stage_is_minimum_supported": false,
+              "clinical_validation": "NOT_VALIDATED",
+              "derivation_inputs": {},
+              "disease_excluded": false,
+              "hypoglycemia_level_minimum_supported": null,
+              "resolution_status": "NOT_MET"
+            },
+            "missing_fields": [
+              "bicarbonate_mmol_l",
+              "urine_ketones_plus"
+            ],
+            "missing_required": [],
+            "missing_requirement_semantics": "UNRESOLVED_CANDIDATES_RESPECT_AND_OR_NOT_ALL_MANDATORY",
+            "optional_not_measured": [
+              "bicarbonate_mmol_l",
+              "urine_ketones_plus"
+            ],
+            "protocol": {
+              "authorization": "NO_VERIFIED_MISSION_POLICY",
+              "automatic_execution": false,
+              "block_reasons": [
+                "BLOCKED_MISSING_DATA:POTASSIUM",
+                "BLOCKED_RESOURCE",
+                "BLOCKED_AUTHORIZATION"
+              ],
+              "indication_supported": true,
+              "missing_resources": [
+                "validated_glucose_measurement",
+                "potassium_measurement",
+                "electrolytes",
+                "beta_hydroxybutyrate",
+                "venous_pH_or_bicarbonate",
+                "IV_access_capability",
+                "IV_fluid_capability",
+                "insulin_inventory",
+                "continuous_or_frequent_monitoring"
+              ],
+              "protocol_id": "PROT-DKA-ADULT-2024",
+              "required_for_protocol_safety": [
+                "potassium_mmol_l"
+              ],
+              "status": "BLOCKED_MISSING_DATA"
+            },
+            "protocol_status": "BLOCKED_MISSING_DATA",
+            "required_for_protocol_safety": [
+              "potassium_mmol_l"
+            ],
+            "source_ids": [
+              "SRC-DKA-2024"
+            ],
+            "source_statuses": {
+              "SRC-DKA-2024": "PINNED_VERIFIED_AT_REPORT_DATE_NOT_CONTINUOUSLY_VERIFIED"
+            },
+            "space_applicability": "REQUIRES_SPACE_SPECIFIC_VALIDATION",
+            "treatment_status": "NOT_STARTED",
+            "urgency": "EMERGENCY"
+          }
+        },
+        "treatment_status": "NOT_STARTED",
+        "urgency": "EMERGENCY",
+        "as_of": "2026-10-16T12:00:00Z",
+        "condition_id": "DKA",
+        "presentation_id": null,
+        "observations": [
+          {
+            "id": "known_diabetes-collection",
+            "concept": "known_diabetes",
+            "value": true,
+            "unit": "1",
+            "timestamp": "2026-10-16T12:00:00Z",
+            "quality": "VALID",
+            "method": "SYNTHETIC_OBSERVATION",
+            "provenance": "SYNTHETIC_REPORT_ADAPTER_NOT_CLINICAL_VALIDATION"
+          },
+          {
+            "id": "demo-plasma_glucose_mg_dl",
+            "concept": "plasma_glucose_mg_dl",
+            "value": 180.0,
+            "unit": "mg/dL",
+            "timestamp": "2026-10-16T12:00:00Z",
+            "quality": "VALID",
+            "method": "VENOUS_PLASMA",
+            "provenance": "SYNTHETIC_ONLY"
+          },
+          {
+            "id": "demo-beta_hydroxybutyrate_mmol_l",
+            "concept": "beta_hydroxybutyrate_mmol_l",
+            "value": 4.2,
+            "unit": "mmol/L",
+            "timestamp": "2026-10-16T12:00:00Z",
+            "quality": "VALID",
+            "method": "SYNTHETIC_LAB",
+            "provenance": "SYNTHETIC_ONLY"
+          },
+          {
+            "id": "demo-venous_pH",
+            "concept": "venous_pH",
+            "value": 7.22,
+            "unit": "pH",
+            "timestamp": "2026-10-16T12:00:00Z",
+            "quality": "VALID",
+            "method": "VENOUS_BLOOD_GAS",
+            "provenance": "SYNTHETIC_ONLY"
+          }
+        ]
+      },
+      {
+        "differential": [
+          {
+            "condition_id": "ANAPHYLAXIS",
+            "contradictions": [],
+            "criteria_implemented": true,
+            "diagnostic_status": "CRITERIA_MET",
+            "external_evaluation_required": false,
+            "reported_condition_id": "ANAPHYLAXIS",
+            "source_ids": [
+              "SRC-WAO-ANAPH-2020"
+            ],
+            "support": [
+              "known_or_highly_probable_allergen",
+              "laryngeal_involvement"
+            ],
+            "tier": "TIME_CRITICAL_CRITERIA_MET",
+            "urgency": "EMERGENCY"
+          }
+        ],
+        "id": "ce-00721e212857491d8a022b33e7f067e1",
+        "implementation_hash": "c896211d20b52ade1279aeb306421891f5e29b542f910074d542321c4b815db9",
+        "input_hash": "c8bffe7d9e75f0894aa4f70ab7f24824a30a1f89cbba6dc0a15a6bec29ffc48f",
+        "knowledge_hash": "b8c568bd645154e5fd67630c7a670ca53904dc04f54904315047a89923839d4e",
+        "knowledge_version": "0.7.0",
+        "next_tests": [],
+        "output_hash": "50e8b962fccd5d6790ae215e01e5dad81202f01b00df5f629bcf9e3e59abb64b",
+        "parent_id": null,
+        "presentation_protocol": null,
+        "results": {
+          "ANAPHYLAXIS": {
+            "condition_id": "ANAPHYLAXIS",
+            "confirmation_status": "NOT_REQUIRED",
+            "criterion_id": "CRIT-ANAPH-WAO-2020",
+            "criterion_version": "2020.1",
+            "data_issues": [],
+            "data_requirement_version": "four-state-1",
+            "diagnostic_status": "CRITERIA_MET",
+            "evaluation_tree": {
+              "children": [
+                {
+                  "children": [
+                    {
+                      "actual": true,
+                      "expected": true,
+                      "field": "acute_onset_minutes_to_hours",
+                      "logic_version": "four-state-1",
+                      "nonblocking_ancestor": "root",
+                      "operator": "==",
+                      "path": "root/0/0",
+                      "reasons": [],
+                      "required_for_resolution": false,
+                      "state": true,
+                      "truth_state": "TRUE"
+                    },
+                    {
+                      "actual": false,
+                      "expected": true,
+                      "field": "skin_or_mucosal_involvement",
+                      "logic_version": "four-state-1",
+                      "nonblocking_ancestor": "root",
+                      "operator": "==",
+                      "path": "root/0/1",
+                      "reasons": [],
+                      "required_for_resolution": false,
+                      "state": false,
+                      "truth_state": "FALSE"
+                    },
+                    {
+                      "children": [
+                        {
+                          "actual": null,
+                          "expected": true,
+                          "field": "respiratory_compromise",
+                          "logic_version": "four-state-1",
+                          "nonblocking_ancestor": "root",
+                          "operator": "==",
+                          "path": "root/0/2/0",
+                          "reasons": [
+                            "NOT_AVAILABLE"
+                          ],
+                          "required_for_resolution": false,
+                          "state": null,
+                          "truth_state": "UNKNOWN"
+                        },
+                        {
+                          "actual": null,
+                          "expected": true,
+                          "field": "reduced_bp_or_end_organ_symptoms",
+                          "logic_version": "four-state-1",
+                          "nonblocking_ancestor": "root",
+                          "operator": "==",
+                          "path": "root/0/2/1",
+                          "reasons": [
+                            "NOT_AVAILABLE"
+                          ],
+                          "required_for_resolution": false,
+                          "state": null,
+                          "truth_state": "UNKNOWN"
+                        },
+                        {
+                          "actual": null,
+                          "expected": true,
+                          "field": "severe_gi_symptoms",
+                          "logic_version": "four-state-1",
+                          "nonblocking_ancestor": "root",
+                          "operator": "==",
+                          "path": "root/0/2/2",
+                          "reasons": [
+                            "NOT_AVAILABLE"
+                          ],
+                          "required_for_resolution": false,
+                          "state": null,
+                          "truth_state": "UNKNOWN"
+                        }
+                      ],
+                      "decisive_children": [
+                        "root/0/2/0",
+                        "root/0/2/1",
+                        "root/0/2/2"
+                      ],
+                      "logic_version": "four-state-1",
+                      "operator": "any_of",
+                      "path": "root/0/2",
+                      "required_for_resolution": false,
+                      "state": null,
+                      "truth_state": "UNKNOWN"
+                    }
+                  ],
+                  "decisive_children": [
+                    "root/0/1"
+                  ],
+                  "logic_version": "four-state-1",
+                  "operator": "all_of",
+                  "path": "root/0",
+                  "required_for_resolution": false,
+                  "state": false,
+                  "truth_state": "FALSE"
+                },
+                {
+                  "children": [
+                    {
+                      "actual": true,
+                      "expected": true,
+                      "field": "acute_onset_minutes_to_hours",
+                      "logic_version": "four-state-1",
+                      "nonblocking_ancestor": "root",
+                      "operator": "==",
+                      "path": "root/1/0",
+                      "reasons": [],
+                      "required_for_resolution": false,
+                      "state": true,
+                      "truth_state": "TRUE"
+                    },
+                    {
+                      "actual": true,
+                      "expected": true,
+                      "field": "known_or_highly_probable_allergen",
+                      "logic_version": "four-state-1",
+                      "nonblocking_ancestor": "root",
+                      "operator": "==",
+                      "path": "root/1/1",
+                      "reasons": [],
+                      "required_for_resolution": false,
+                      "state": true,
+                      "truth_state": "TRUE"
+                    },
+                    {
+                      "children": [
+                        {
+                          "actual": null,
+                          "expected": 90,
+                          "field": "adult_sbp_mm_hg",
+                          "logic_version": "four-state-1",
+                          "nonblocking_ancestor": "root",
+                          "operator": "<",
+                          "path": "root/1/2/0",
+                          "reasons": [
+                            "NOT_AVAILABLE"
+                          ],
+                          "required_for_resolution": false,
+                          "state": null,
+                          "truth_state": "UNKNOWN"
+                        },
+                        {
+                          "actual": null,
+                          "expected": 30,
+                          "field": "sbp_drop_percent",
+                          "logic_version": "four-state-1",
+                          "nonblocking_ancestor": "root",
+                          "operator": ">",
+                          "path": "root/1/2/1",
+                          "reasons": [
+                            "NOT_AVAILABLE"
+                          ],
+                          "required_for_resolution": false,
+                          "state": null,
+                          "truth_state": "UNKNOWN"
+                        },
+                        {
+                          "children": [
+                            {
+                              "actual": null,
+                              "expected": true,
+                              "field": "bronchospasm",
+                              "logic_version": "four-state-1",
+                              "nonblocking_ancestor": "root",
+                              "operator": "==",
+                              "path": "root/1/2/2/0",
+                              "reasons": [
+                                "NOT_AVAILABLE"
+                              ],
+                              "required_for_resolution": false,
+                              "state": null,
+                              "truth_state": "UNKNOWN"
+                            },
+                            {
+                              "actual": null,
+                              "expected": false,
+                              "field": "common_inhalant_trigger",
+                              "logic_version": "four-state-1",
+                              "nonblocking_ancestor": "root",
+                              "operator": "==",
+                              "path": "root/1/2/2/1",
+                              "reasons": [
+                                "NOT_AVAILABLE"
+                              ],
+                              "required_for_resolution": false,
+                              "state": null,
+                              "truth_state": "UNKNOWN"
+                            },
+                            {
+                              "actual": null,
+                              "expected": false,
+                              "field": "food_inhalation_without_ingestion",
+                              "logic_version": "four-state-1",
+                              "nonblocking_ancestor": "root",
+                              "operator": "==",
+                              "path": "root/1/2/2/2",
+                              "reasons": [
+                                "NOT_AVAILABLE"
+                              ],
+                              "required_for_resolution": false,
+                              "state": null,
+                              "truth_state": "UNKNOWN"
+                            }
+                          ],
+                          "decisive_children": [
+                            "root/1/2/2/0",
+                            "root/1/2/2/1",
+                            "root/1/2/2/2"
+                          ],
+                          "logic_version": "four-state-1",
+                          "operator": "all_of",
+                          "path": "root/1/2/2",
+                          "required_for_resolution": false,
+                          "state": null,
+                          "truth_state": "UNKNOWN"
+                        },
+                        {
+                          "actual": true,
+                          "expected": true,
+                          "field": "laryngeal_involvement",
+                          "logic_version": "four-state-1",
+                          "nonblocking_ancestor": "root",
+                          "operator": "==",
+                          "path": "root/1/2/3",
+                          "reasons": [],
+                          "required_for_resolution": false,
+                          "state": true,
+                          "truth_state": "TRUE"
+                        }
+                      ],
+                      "decisive_children": [
+                        "root/1/2/3"
+                      ],
+                      "logic_version": "four-state-1",
+                      "operator": "any_of",
+                      "path": "root/1/2",
+                      "required_for_resolution": false,
+                      "state": true,
+                      "truth_state": "TRUE"
+                    }
+                  ],
+                  "decisive_children": [
+                    "root/1/0",
+                    "root/1/1",
+                    "root/1/2"
+                  ],
+                  "logic_version": "four-state-1",
+                  "operator": "all_of",
+                  "path": "root/1",
+                  "required_for_resolution": false,
+                  "state": true,
+                  "truth_state": "TRUE"
+                }
+              ],
+              "decisive_children": [
+                "root/1"
+              ],
+              "logic_version": "four-state-1",
+              "operator": "any_of",
+              "path": "root",
+              "required_for_resolution": false,
+              "state": true,
+              "truth_state": "TRUE"
+            },
+            "invalid_fields": [],
+            "invalid_required": [],
+            "limitations": [
+              "RESEARCH_ONLY",
+              "TERRESTRIAL_CRITERIA_NOT_SPACE_VALIDATION",
+              "CRITERIA_NOT_MET_DOES_NOT_EXCLUDE_DISEASE",
+              "MANUAL_OBSERVATIONS_USE_DECLARED_WINDOW_NOT_VALIDATED_FRESHNESS",
+              "MEASUREMENT_CONTEXT_ATTESTED_NOT_INDEPENDENTLY_VERIFIED",
+              "URGENCY_RESEARCH_POLICY_NOT_VALIDATED_TRIAGE"
+            ],
+            "metadata": {
+              "aki_stage": null,
+              "aki_stage_is_minimum_supported": false,
+              "clinical_validation": "NOT_VALIDATED",
+              "derivation_inputs": {},
+              "disease_excluded": false,
+              "hypoglycemia_level_minimum_supported": null,
+              "resolution_status": null
+            },
+            "missing_fields": [
+              "adult_sbp_mm_hg",
+              "bronchospasm",
+              "common_inhalant_trigger",
+              "food_inhalation_without_ingestion",
+              "reduced_bp_or_end_organ_symptoms",
+              "respiratory_compromise",
+              "sbp_drop_percent",
+              "severe_gi_symptoms"
+            ],
+            "missing_required": [],
+            "missing_requirement_semantics": "UNRESOLVED_CANDIDATES_RESPECT_AND_OR_NOT_ALL_MANDATORY",
+            "optional_not_measured": [
+              "adult_sbp_mm_hg",
+              "bronchospasm",
+              "common_inhalant_trigger",
+              "food_inhalation_without_ingestion",
+              "reduced_bp_or_end_organ_symptoms",
+              "respiratory_compromise",
+              "sbp_drop_percent",
+              "severe_gi_symptoms"
+            ],
+            "protocol": {
+              "authorization": "NO_VERIFIED_MISSION_POLICY",
+              "automatic_execution": false,
+              "block_reasons": [
+                "BLOCKED_RESOURCE",
+                "BLOCKED_AUTHORIZATION"
+              ],
+              "indication_supported": true,
+              "missing_resources": [
+                "epinephrine_inventory",
+                "verified_drug_concentration",
+                "IM_delivery_capability"
+              ],
+              "protocol_id": "PROT-ANAPH-IM-EPI",
+              "required_for_protocol_safety": [],
+              "status": "BLOCKED_RESOURCE"
+            },
+            "protocol_status": "BLOCKED_RESOURCE",
+            "required_for_protocol_safety": [],
+            "source_ids": [
+              "SRC-WAO-ANAPH-2020"
+            ],
+            "source_statuses": {
+              "SRC-WAO-ANAPH-2020": "PINNED_VERIFIED_AT_REPORT_DATE_NOT_CONTINUOUSLY_VERIFIED"
+            },
+            "space_applicability": "APPLICABLE_WITH_LIMITATIONS",
+            "treatment_status": "NOT_STARTED",
+            "urgency": "EMERGENCY"
+          }
+        },
+        "treatment_status": "NOT_STARTED",
+        "urgency": "EMERGENCY",
+        "as_of": "2026-10-16T12:00:00Z",
+        "condition_id": "ANAPHYLAXIS",
+        "presentation_id": null,
+        "observations": [
+          {
+            "id": "acute_onset_minutes_to_hours-collection",
+            "concept": "acute_onset_minutes_to_hours",
+            "value": true,
+            "unit": "1",
+            "timestamp": "2026-10-16T12:00:00Z",
+            "quality": "VALID",
+            "method": "SYNTHETIC_OBSERVATION",
+            "provenance": "SYNTHETIC_REPORT_ADAPTER_NOT_CLINICAL_VALIDATION"
+          },
+          {
+            "id": "known_or_highly_probable_allergen-collection",
+            "concept": "known_or_highly_probable_allergen",
+            "value": true,
+            "unit": "1",
+            "timestamp": "2026-10-16T12:00:00Z",
+            "quality": "VALID",
+            "method": "SYNTHETIC_OBSERVATION",
+            "provenance": "SYNTHETIC_REPORT_ADAPTER_NOT_CLINICAL_VALIDATION"
+          },
+          {
+            "id": "laryngeal_involvement-collection",
+            "concept": "laryngeal_involvement",
+            "value": true,
+            "unit": "1",
+            "timestamp": "2026-10-16T12:00:00Z",
+            "quality": "VALID",
+            "method": "SYNTHETIC_OBSERVATION",
+            "provenance": "SYNTHETIC_REPORT_ADAPTER_NOT_CLINICAL_VALIDATION"
+          },
+          {
+            "id": "skin_or_mucosal_involvement-collection",
+            "concept": "skin_or_mucosal_involvement",
+            "value": false,
+            "unit": "1",
+            "timestamp": "2026-10-16T12:00:00Z",
+            "quality": "VALID",
+            "method": "SYNTHETIC_OBSERVATION",
+            "provenance": "SYNTHETIC_REPORT_ADAPTER_NOT_CLINICAL_VALIDATION"
+          }
+        ]
+      },
+      {
+        "differential": [
+          {
+            "condition_id": "EXTERNAL_ARRHYTHMIA_PATHWAY",
+            "contradictions": [],
+            "criteria_implemented": false,
+            "diagnostic_status": "NOT_EVALUATED",
+            "external_evaluation_required": true,
+            "reported_condition_id": "EXTERNAL_ARRHYTHMIA_PATHWAY",
+            "source_ids": [],
+            "support": [
+              "irregular_pulse"
+            ],
+            "tier": "TIME_CRITICAL_SUSPECTED",
+            "urgency": "URGENT"
+          },
+          {
+            "condition_id": "AKI",
+            "contradictions": [],
+            "criteria_implemented": true,
+            "diagnostic_status": "INSUFFICIENT_DATA",
+            "external_evaluation_required": false,
+            "reported_condition_id": "AKI",
+            "source_ids": [
+              "SRC-KDIGO-AKI-2012"
+            ],
+            "support": [],
+            "tier": "NOT_EVALUABLE",
+            "urgency": "PROMPT"
+          },
+          {
+            "condition_id": "ANAPHYLAXIS",
+            "contradictions": [],
+            "criteria_implemented": true,
+            "diagnostic_status": "INSUFFICIENT_DATA",
+            "external_evaluation_required": false,
+            "reported_condition_id": "ANAPHYLAXIS",
+            "source_ids": [
+              "SRC-WAO-ANAPH-2020"
+            ],
+            "support": [],
+            "tier": "NOT_EVALUABLE",
+            "urgency": "PROMPT"
+          },
+          {
+            "condition_id": "DKA",
+            "contradictions": [],
+            "criteria_implemented": true,
+            "diagnostic_status": "INSUFFICIENT_DATA",
+            "external_evaluation_required": false,
+            "reported_condition_id": "DKA",
+            "source_ids": [
+              "SRC-DKA-2024"
+            ],
+            "support": [],
+            "tier": "NOT_EVALUABLE",
+            "urgency": "PROMPT"
+          },
+          {
+            "condition_id": "HYPOGLYCEMIA",
+            "contradictions": [],
+            "criteria_implemented": true,
+            "diagnostic_status": "INSUFFICIENT_DATA",
+            "external_evaluation_required": false,
+            "reported_condition_id": "HYPOGLYCEMIA",
+            "source_ids": [
+              "SRC-ADA-HYPO-2026"
+            ],
+            "support": [],
+            "tier": "NOT_EVALUABLE",
+            "urgency": "PROMPT"
+          },
+          {
+            "condition_id": "HYPOVOLEMIA",
+            "contradictions": [],
+            "criteria_implemented": false,
+            "diagnostic_status": "NOT_EVALUATED",
+            "external_evaluation_required": true,
+            "reported_condition_id": "HYPOVOLEMIA",
+            "source_ids": [],
+            "support": [],
+            "tier": "NOT_EVALUABLE",
+            "urgency": "PROMPT"
+          },
+          {
+            "condition_id": "ORTHOSTATIC_HYPOTENSION",
+            "contradictions": [],
+            "criteria_implemented": true,
+            "diagnostic_status": "INSUFFICIENT_DATA",
+            "external_evaluation_required": false,
+            "reported_condition_id": "ORTHOSTATIC_HYPOTENSION",
+            "source_ids": [
+              "SRC-AHA-OH-2024"
+            ],
+            "support": [],
+            "tier": "NOT_EVALUABLE",
+            "urgency": "PROMPT"
+          },
+          {
+            "condition_id": "POTS",
+            "contradictions": [],
+            "criteria_implemented": true,
+            "diagnostic_status": "INSUFFICIENT_DATA",
+            "external_evaluation_required": false,
+            "reported_condition_id": "POTS",
+            "source_ids": [
+              "SRC-HRS-POTS-2015",
+              "SRC-NIH-POTS-2021"
+            ],
+            "support": [],
+            "tier": "NOT_EVALUABLE",
+            "urgency": "PROMPT"
+          }
+        ],
+        "id": "ce-65bc6d503c104e218ae0981adca29bca",
+        "implementation_hash": "c896211d20b52ade1279aeb306421891f5e29b542f910074d542321c4b815db9",
+        "input_hash": "a0f8ec0ff9f76084b9e43fd64bd6d26316d239b14dcfc9bd29cf8aa7d2536444",
+        "knowledge_hash": "b8c568bd645154e5fd67630c7a670ca53904dc04f54904315047a89923839d4e",
+        "knowledge_version": "0.7.0",
+        "next_tests": [
+          {
+            "availability": null,
+            "cost": "NOT_SPECIFIED_IN_REPORT",
+            "execution_authorized": false,
+            "reasons": [
+              {
+                "alternatives_follow_evaluation_tree": true,
+                "concepts": [],
+                "condition_id": "EXTERNAL_ARRHYTHMIA_PATHWAY",
+                "purpose": "DIAGNOSTIC_RESOLUTION",
+                "reason": "CONFIRMATION_OR_MISSING_DISCRIMINATING_DATA",
+                "unresolved_candidates": []
+              }
+            ],
+            "risk": "NOT_SPECIFIED_IN_REPORT",
+            "test_id": "TEST-ECG",
+            "urgency": "URGENT"
+          }
+        ],
+        "output_hash": "db1d6b9a7893816742a738d9768e96fb9898dd6515f68ac9c1285ec3d0297f32",
+        "parent_id": null,
+        "presentation_protocol": {
+          "authorization": "NO_VERIFIED_MISSION_POLICY",
+          "automatic_execution": false,
+          "block_reasons": [
+            "BLOCKED_AUTHORIZATION"
+          ],
+          "indication_supported": true,
+          "protocol_id": "PROT-DIZZINESS-TACHY-TRIAGE",
+          "status": "BLOCKED_AUTHORIZATION"
+        },
+        "results": {
+          "AKI": {
+            "condition_id": "AKI",
+            "confirmation_status": "REQUIRED",
+            "criterion_id": "CRIT-AKI-KDIGO-2012",
+            "criterion_version": "2012.final",
+            "data_issues": [],
+            "data_requirement_version": "four-state-1",
+            "diagnostic_status": "INSUFFICIENT_DATA",
+            "evaluation_tree": {
+              "children": [
+                {
+                  "actual": null,
+                  "expected": 0.3,
+                  "field": "serum_creatinine_delta_mg_dl_48h",
+                  "logic_version": "four-state-1",
+                  "nonblocking_ancestor": null,
+                  "operator": ">=",
+                  "path": "root/0",
+                  "reasons": [
+                    "NOT_AVAILABLE"
+                  ],
+                  "required_for_resolution": true,
+                  "state": null,
+                  "truth_state": "UNKNOWN"
+                },
+                {
+                  "actual": null,
+                  "expected": 1.5,
+                  "field": "serum_creatinine_ratio_to_baseline_7d",
+                  "logic_version": "four-state-1",
+                  "nonblocking_ancestor": null,
+                  "operator": ">=",
+                  "path": "root/1",
+                  "reasons": [
+                    "NOT_AVAILABLE"
+                  ],
+                  "required_for_resolution": true,
+                  "state": null,
+                  "truth_state": "UNKNOWN"
+                },
+                {
+                  "children": [
+                    {
+                      "actual": null,
+                      "expected": 0.5,
+                      "field": "urine_output_ml_kg_h",
+                      "logic_version": "four-state-1",
+                      "nonblocking_ancestor": null,
+                      "operator": "<",
+                      "path": "root/2/0",
+                      "reasons": [
+                        "NOT_AVAILABLE"
+                      ],
+                      "required_for_resolution": true,
+                      "state": null,
+                      "truth_state": "UNKNOWN"
+                    },
+                    {
+                      "actual": null,
+                      "expected": 6,
+                      "field": "urine_output_duration_h",
+                      "logic_version": "four-state-1",
+                      "nonblocking_ancestor": null,
+                      "operator": ">=",
+                      "path": "root/2/1",
+                      "reasons": [
+                        "NOT_AVAILABLE"
+                      ],
+                      "required_for_resolution": true,
+                      "state": null,
+                      "truth_state": "UNKNOWN"
+                    }
+                  ],
+                  "decisive_children": [
+                    "root/2/0",
+                    "root/2/1"
+                  ],
+                  "logic_version": "four-state-1",
+                  "operator": "all_of",
+                  "path": "root/2",
+                  "required_for_resolution": true,
+                  "state": null,
+                  "truth_state": "UNKNOWN"
+                }
+              ],
+              "decisive_children": [
+                "root/0",
+                "root/1",
+                "root/2"
+              ],
+              "logic_version": "four-state-1",
+              "operator": "any_of",
+              "path": "root",
+              "required_for_resolution": true,
+              "state": null,
+              "truth_state": "UNKNOWN"
+            },
+            "invalid_fields": [],
+            "invalid_required": [],
+            "limitations": [
+              "RESEARCH_ONLY",
+              "TERRESTRIAL_CRITERIA_NOT_SPACE_VALIDATION",
+              "CRITERIA_NOT_MET_DOES_NOT_EXCLUDE_DISEASE",
+              "MANUAL_OBSERVATIONS_USE_DECLARED_WINDOW_NOT_VALIDATED_FRESHNESS",
+              "MEASUREMENT_CONTEXT_ATTESTED_NOT_INDEPENDENTLY_VERIFIED",
+              "URGENCY_RESEARCH_POLICY_NOT_VALIDATED_TRIAGE"
+            ],
+            "metadata": {
+              "aki_stage": null,
+              "aki_stage_is_minimum_supported": false,
+              "clinical_validation": "NOT_VALIDATED",
+              "derivation_inputs": {},
+              "disease_excluded": false,
+              "hypoglycemia_level_minimum_supported": null,
+              "resolution_status": null
+            },
+            "missing_fields": [
+              "serum_creatinine_delta_mg_dl_48h",
+              "serum_creatinine_ratio_to_baseline_7d",
+              "urine_output_duration_h",
+              "urine_output_ml_kg_h"
+            ],
+            "missing_required": [
+              "serum_creatinine_delta_mg_dl_48h",
+              "serum_creatinine_ratio_to_baseline_7d",
+              "urine_output_duration_h",
+              "urine_output_ml_kg_h"
+            ],
+            "missing_requirement_semantics": "UNRESOLVED_CANDIDATES_RESPECT_AND_OR_NOT_ALL_MANDATORY",
+            "optional_not_measured": [],
+            "protocol": {
+              "authorization": "NO_VERIFIED_MISSION_POLICY",
+              "automatic_execution": false,
+              "block_reasons": [
+                "BLOCKED_MISSING_DATA",
+                "BLOCKED_AUTHORIZATION"
+              ],
+              "indication_supported": false,
+              "missing_resources": [],
+              "protocol_id": "PROT-AKI-INITIAL",
+              "required_for_protocol_safety": [],
+              "status": "BLOCKED_MISSING_DATA"
+            },
+            "protocol_status": "BLOCKED_MISSING_DATA",
+            "required_for_protocol_safety": [],
+            "source_ids": [
+              "SRC-KDIGO-AKI-2012"
+            ],
+            "source_statuses": {
+              "SRC-KDIGO-AKI-2012": "PINNED_VERIFIED_AT_REPORT_DATE_NOT_CONTINUOUSLY_VERIFIED"
+            },
+            "space_applicability": "REQUIRES_SPACE_SPECIFIC_VALIDATION",
+            "treatment_status": "NOT_STARTED",
+            "urgency": "PROMPT"
+          },
+          "ANAPHYLAXIS": {
+            "condition_id": "ANAPHYLAXIS",
+            "confirmation_status": "PENDING",
+            "criterion_id": "CRIT-ANAPH-WAO-2020",
+            "criterion_version": "2020.1",
+            "data_issues": [],
+            "data_requirement_version": "four-state-1",
+            "diagnostic_status": "INSUFFICIENT_DATA",
+            "evaluation_tree": {
+              "children": [
+                {
+                  "children": [
+                    {
+                      "actual": null,
+                      "expected": true,
+                      "field": "acute_onset_minutes_to_hours",
+                      "logic_version": "four-state-1",
+                      "nonblocking_ancestor": null,
+                      "operator": "==",
+                      "path": "root/0/0",
+                      "reasons": [
+                        "NOT_AVAILABLE"
+                      ],
+                      "required_for_resolution": true,
+                      "state": null,
+                      "truth_state": "UNKNOWN"
+                    },
+                    {
+                      "actual": null,
+                      "expected": true,
+                      "field": "skin_or_mucosal_involvement",
+                      "logic_version": "four-state-1",
+                      "nonblocking_ancestor": null,
+                      "operator": "==",
+                      "path": "root/0/1",
+                      "reasons": [
+                        "NOT_AVAILABLE"
+                      ],
+                      "required_for_resolution": true,
+                      "state": null,
+                      "truth_state": "UNKNOWN"
+                    },
+                    {
+                      "children": [
+                        {
+                          "actual": null,
+                          "expected": true,
+                          "field": "respiratory_compromise",
+                          "logic_version": "four-state-1",
+                          "nonblocking_ancestor": null,
+                          "operator": "==",
+                          "path": "root/0/2/0",
+                          "reasons": [
+                            "NOT_AVAILABLE"
+                          ],
+                          "required_for_resolution": true,
+                          "state": null,
+                          "truth_state": "UNKNOWN"
+                        },
+                        {
+                          "actual": null,
+                          "expected": true,
+                          "field": "reduced_bp_or_end_organ_symptoms",
+                          "logic_version": "four-state-1",
+                          "nonblocking_ancestor": null,
+                          "operator": "==",
+                          "path": "root/0/2/1",
+                          "reasons": [
+                            "NOT_AVAILABLE"
+                          ],
+                          "required_for_resolution": true,
+                          "state": null,
+                          "truth_state": "UNKNOWN"
+                        },
+                        {
+                          "actual": null,
+                          "expected": true,
+                          "field": "severe_gi_symptoms",
+                          "logic_version": "four-state-1",
+                          "nonblocking_ancestor": null,
+                          "operator": "==",
+                          "path": "root/0/2/2",
+                          "reasons": [
+                            "NOT_AVAILABLE"
+                          ],
+                          "required_for_resolution": true,
+                          "state": null,
+                          "truth_state": "UNKNOWN"
+                        }
+                      ],
+                      "decisive_children": [
+                        "root/0/2/0",
+                        "root/0/2/1",
+                        "root/0/2/2"
+                      ],
+                      "logic_version": "four-state-1",
+                      "operator": "any_of",
+                      "path": "root/0/2",
+                      "required_for_resolution": true,
+                      "state": null,
+                      "truth_state": "UNKNOWN"
+                    }
+                  ],
+                  "decisive_children": [
+                    "root/0/0",
+                    "root/0/1",
+                    "root/0/2"
+                  ],
+                  "logic_version": "four-state-1",
+                  "operator": "all_of",
+                  "path": "root/0",
+                  "required_for_resolution": true,
+                  "state": null,
+                  "truth_state": "UNKNOWN"
+                },
+                {
+                  "children": [
+                    {
+                      "actual": null,
+                      "expected": true,
+                      "field": "acute_onset_minutes_to_hours",
+                      "logic_version": "four-state-1",
+                      "nonblocking_ancestor": null,
+                      "operator": "==",
+                      "path": "root/1/0",
+                      "reasons": [
+                        "NOT_AVAILABLE"
+                      ],
+                      "required_for_resolution": true,
+                      "state": null,
+                      "truth_state": "UNKNOWN"
+                    },
+                    {
+                      "actual": null,
+                      "expected": true,
+                      "field": "known_or_highly_probable_allergen",
+                      "logic_version": "four-state-1",
+                      "nonblocking_ancestor": null,
+                      "operator": "==",
+                      "path": "root/1/1",
+                      "reasons": [
+                        "NOT_AVAILABLE"
+                      ],
+                      "required_for_resolution": true,
+                      "state": null,
+                      "truth_state": "UNKNOWN"
+                    },
+                    {
+                      "children": [
+                        {
+                          "actual": null,
+                          "expected": 90,
+                          "field": "adult_sbp_mm_hg",
+                          "logic_version": "four-state-1",
+                          "nonblocking_ancestor": null,
+                          "operator": "<",
+                          "path": "root/1/2/0",
+                          "reasons": [
+                            "NOT_AVAILABLE"
+                          ],
+                          "required_for_resolution": true,
+                          "state": null,
+                          "truth_state": "UNKNOWN"
+                        },
+                        {
+                          "actual": null,
+                          "expected": 30,
+                          "field": "sbp_drop_percent",
+                          "logic_version": "four-state-1",
+                          "nonblocking_ancestor": null,
+                          "operator": ">",
+                          "path": "root/1/2/1",
+                          "reasons": [
+                            "NOT_AVAILABLE"
+                          ],
+                          "required_for_resolution": true,
+                          "state": null,
+                          "truth_state": "UNKNOWN"
+                        },
+                        {
+                          "children": [
+                            {
+                              "actual": null,
+                              "expected": true,
+                              "field": "bronchospasm",
+                              "logic_version": "four-state-1",
+                              "nonblocking_ancestor": null,
+                              "operator": "==",
+                              "path": "root/1/2/2/0",
+                              "reasons": [
+                                "NOT_AVAILABLE"
+                              ],
+                              "required_for_resolution": true,
+                              "state": null,
+                              "truth_state": "UNKNOWN"
+                            },
+                            {
+                              "actual": null,
+                              "expected": false,
+                              "field": "common_inhalant_trigger",
+                              "logic_version": "four-state-1",
+                              "nonblocking_ancestor": null,
+                              "operator": "==",
+                              "path": "root/1/2/2/1",
+                              "reasons": [
+                                "NOT_AVAILABLE"
+                              ],
+                              "required_for_resolution": true,
+                              "state": null,
+                              "truth_state": "UNKNOWN"
+                            },
+                            {
+                              "actual": null,
+                              "expected": false,
+                              "field": "food_inhalation_without_ingestion",
+                              "logic_version": "four-state-1",
+                              "nonblocking_ancestor": null,
+                              "operator": "==",
+                              "path": "root/1/2/2/2",
+                              "reasons": [
+                                "NOT_AVAILABLE"
+                              ],
+                              "required_for_resolution": true,
+                              "state": null,
+                              "truth_state": "UNKNOWN"
+                            }
+                          ],
+                          "decisive_children": [
+                            "root/1/2/2/0",
+                            "root/1/2/2/1",
+                            "root/1/2/2/2"
+                          ],
+                          "logic_version": "four-state-1",
+                          "operator": "all_of",
+                          "path": "root/1/2/2",
+                          "required_for_resolution": true,
+                          "state": null,
+                          "truth_state": "UNKNOWN"
+                        },
+                        {
+                          "actual": null,
+                          "expected": true,
+                          "field": "laryngeal_involvement",
+                          "logic_version": "four-state-1",
+                          "nonblocking_ancestor": null,
+                          "operator": "==",
+                          "path": "root/1/2/3",
+                          "reasons": [
+                            "NOT_AVAILABLE"
+                          ],
+                          "required_for_resolution": true,
+                          "state": null,
+                          "truth_state": "UNKNOWN"
+                        }
+                      ],
+                      "decisive_children": [
+                        "root/1/2/0",
+                        "root/1/2/1",
+                        "root/1/2/2",
+                        "root/1/2/3"
+                      ],
+                      "logic_version": "four-state-1",
+                      "operator": "any_of",
+                      "path": "root/1/2",
+                      "required_for_resolution": true,
+                      "state": null,
+                      "truth_state": "UNKNOWN"
+                    }
+                  ],
+                  "decisive_children": [
+                    "root/1/0",
+                    "root/1/1",
+                    "root/1/2"
+                  ],
+                  "logic_version": "four-state-1",
+                  "operator": "all_of",
+                  "path": "root/1",
+                  "required_for_resolution": true,
+                  "state": null,
+                  "truth_state": "UNKNOWN"
+                }
+              ],
+              "decisive_children": [
+                "root/0",
+                "root/1"
+              ],
+              "logic_version": "four-state-1",
+              "operator": "any_of",
+              "path": "root",
+              "required_for_resolution": true,
+              "state": null,
+              "truth_state": "UNKNOWN"
+            },
+            "invalid_fields": [],
+            "invalid_required": [],
+            "limitations": [
+              "RESEARCH_ONLY",
+              "TERRESTRIAL_CRITERIA_NOT_SPACE_VALIDATION",
+              "CRITERIA_NOT_MET_DOES_NOT_EXCLUDE_DISEASE",
+              "MANUAL_OBSERVATIONS_USE_DECLARED_WINDOW_NOT_VALIDATED_FRESHNESS",
+              "MEASUREMENT_CONTEXT_ATTESTED_NOT_INDEPENDENTLY_VERIFIED",
+              "URGENCY_RESEARCH_POLICY_NOT_VALIDATED_TRIAGE"
+            ],
+            "metadata": {
+              "aki_stage": null,
+              "aki_stage_is_minimum_supported": false,
+              "clinical_validation": "NOT_VALIDATED",
+              "derivation_inputs": {},
+              "disease_excluded": false,
+              "hypoglycemia_level_minimum_supported": null,
+              "resolution_status": null
+            },
+            "missing_fields": [
+              "acute_onset_minutes_to_hours",
+              "adult_sbp_mm_hg",
+              "bronchospasm",
+              "common_inhalant_trigger",
+              "food_inhalation_without_ingestion",
+              "known_or_highly_probable_allergen",
+              "laryngeal_involvement",
+              "reduced_bp_or_end_organ_symptoms",
+              "respiratory_compromise",
+              "sbp_drop_percent",
+              "severe_gi_symptoms",
+              "skin_or_mucosal_involvement"
+            ],
+            "missing_required": [
+              "acute_onset_minutes_to_hours",
+              "adult_sbp_mm_hg",
+              "bronchospasm",
+              "common_inhalant_trigger",
+              "food_inhalation_without_ingestion",
+              "known_or_highly_probable_allergen",
+              "laryngeal_involvement",
+              "reduced_bp_or_end_organ_symptoms",
+              "respiratory_compromise",
+              "sbp_drop_percent",
+              "severe_gi_symptoms",
+              "skin_or_mucosal_involvement"
+            ],
+            "missing_requirement_semantics": "UNRESOLVED_CANDIDATES_RESPECT_AND_OR_NOT_ALL_MANDATORY",
+            "optional_not_measured": [],
+            "protocol": {
+              "authorization": "NO_VERIFIED_MISSION_POLICY",
+              "automatic_execution": false,
+              "block_reasons": [
+                "BLOCKED_MISSING_DATA",
+                "BLOCKED_RESOURCE",
+                "BLOCKED_AUTHORIZATION"
+              ],
+              "indication_supported": false,
+              "missing_resources": [
+                "epinephrine_inventory",
+                "verified_drug_concentration",
+                "IM_delivery_capability"
+              ],
+              "protocol_id": "PROT-ANAPH-IM-EPI",
+              "required_for_protocol_safety": [],
+              "status": "BLOCKED_MISSING_DATA"
+            },
+            "protocol_status": "BLOCKED_MISSING_DATA",
+            "required_for_protocol_safety": [],
+            "source_ids": [
+              "SRC-WAO-ANAPH-2020"
+            ],
+            "source_statuses": {
+              "SRC-WAO-ANAPH-2020": "PINNED_VERIFIED_AT_REPORT_DATE_NOT_CONTINUOUSLY_VERIFIED"
+            },
+            "space_applicability": "APPLICABLE_WITH_LIMITATIONS",
+            "treatment_status": "NOT_STARTED",
+            "urgency": "PROMPT"
+          },
+          "DKA": {
+            "condition_id": "DKA",
+            "confirmation_status": "REQUIRED",
+            "criterion_id": "CRIT-DKA-2024",
+            "criterion_version": "2024.1",
+            "data_issues": [],
+            "data_requirement_version": "four-state-1",
+            "diagnostic_status": "INSUFFICIENT_DATA",
+            "evaluation_tree": {
+              "children": [
+                {
+                  "children": [
+                    {
+                      "actual": null,
+                      "expected": true,
+                      "field": "known_diabetes",
+                      "logic_version": "four-state-1",
+                      "nonblocking_ancestor": null,
+                      "operator": "==",
+                      "path": "root/0/0",
+                      "reasons": [
+                        "NOT_AVAILABLE"
+                      ],
+                      "required_for_resolution": true,
+                      "state": null,
+                      "truth_state": "UNKNOWN"
+                    },
+                    {
+                      "actual": null,
+                      "expected": 200,
+                      "field": "plasma_glucose_mg_dl",
+                      "logic_version": "four-state-1",
+                      "nonblocking_ancestor": null,
+                      "operator": ">=",
+                      "path": "root/0/1",
+                      "reasons": [
+                        "NOT_AVAILABLE"
+                      ],
+                      "required_for_resolution": true,
+                      "state": null,
+                      "truth_state": "UNKNOWN"
+                    }
+                  ],
+                  "decisive_children": [
+                    "root/0/0",
+                    "root/0/1"
+                  ],
+                  "logic_version": "four-state-1",
+                  "operator": "any_of",
+                  "path": "root/0",
+                  "required_for_resolution": true,
+                  "state": null,
+                  "truth_state": "UNKNOWN"
+                },
+                {
+                  "children": [
+                    {
+                      "actual": null,
+                      "expected": 3.0,
+                      "field": "beta_hydroxybutyrate_mmol_l",
+                      "logic_version": "four-state-1",
+                      "nonblocking_ancestor": null,
+                      "operator": ">=",
+                      "path": "root/1/0",
+                      "reasons": [
+                        "NOT_AVAILABLE"
+                      ],
+                      "required_for_resolution": true,
+                      "state": null,
+                      "truth_state": "UNKNOWN"
+                    },
+                    {
+                      "actual": null,
+                      "expected": 2,
+                      "field": "urine_ketones_plus",
+                      "logic_version": "four-state-1",
+                      "nonblocking_ancestor": null,
+                      "operator": ">=",
+                      "path": "root/1/1",
+                      "reasons": [
+                        "NOT_AVAILABLE"
+                      ],
+                      "required_for_resolution": true,
+                      "state": null,
+                      "truth_state": "UNKNOWN"
+                    }
+                  ],
+                  "decisive_children": [
+                    "root/1/0",
+                    "root/1/1"
+                  ],
+                  "logic_version": "four-state-1",
+                  "operator": "any_of",
+                  "path": "root/1",
+                  "required_for_resolution": true,
+                  "state": null,
+                  "truth_state": "UNKNOWN"
+                },
+                {
+                  "children": [
+                    {
+                      "actual": null,
+                      "expected": 7.3,
+                      "field": "venous_pH",
+                      "logic_version": "four-state-1",
+                      "nonblocking_ancestor": null,
+                      "operator": "<",
+                      "path": "root/2/0",
+                      "reasons": [
+                        "NOT_AVAILABLE"
+                      ],
+                      "required_for_resolution": true,
+                      "state": null,
+                      "truth_state": "UNKNOWN"
+                    },
+                    {
+                      "actual": null,
+                      "expected": 18,
+                      "field": "bicarbonate_mmol_l",
+                      "logic_version": "four-state-1",
+                      "nonblocking_ancestor": null,
+                      "operator": "<",
+                      "path": "root/2/1",
+                      "reasons": [
+                        "NOT_AVAILABLE"
+                      ],
+                      "required_for_resolution": true,
+                      "state": null,
+                      "truth_state": "UNKNOWN"
+                    }
+                  ],
+                  "decisive_children": [
+                    "root/2/0",
+                    "root/2/1"
+                  ],
+                  "logic_version": "four-state-1",
+                  "operator": "any_of",
+                  "path": "root/2",
+                  "required_for_resolution": true,
+                  "state": null,
+                  "truth_state": "UNKNOWN"
+                }
+              ],
+              "decisive_children": [
+                "root/0",
+                "root/1",
+                "root/2"
+              ],
+              "logic_version": "four-state-1",
+              "operator": "all_of",
+              "path": "root",
+              "required_for_resolution": true,
+              "state": null,
+              "truth_state": "UNKNOWN"
+            },
+            "invalid_fields": [],
+            "invalid_required": [],
+            "limitations": [
+              "RESEARCH_ONLY",
+              "TERRESTRIAL_CRITERIA_NOT_SPACE_VALIDATION",
+              "CRITERIA_NOT_MET_DOES_NOT_EXCLUDE_DISEASE",
+              "MANUAL_OBSERVATIONS_USE_DECLARED_WINDOW_NOT_VALIDATED_FRESHNESS",
+              "MEASUREMENT_CONTEXT_ATTESTED_NOT_INDEPENDENTLY_VERIFIED",
+              "URGENCY_RESEARCH_POLICY_NOT_VALIDATED_TRIAGE"
+            ],
+            "metadata": {
+              "aki_stage": null,
+              "aki_stage_is_minimum_supported": false,
+              "clinical_validation": "NOT_VALIDATED",
+              "derivation_inputs": {},
+              "disease_excluded": false,
+              "hypoglycemia_level_minimum_supported": null,
+              "resolution_status": "UNKNOWN"
+            },
+            "missing_fields": [
+              "beta_hydroxybutyrate_mmol_l",
+              "bicarbonate_mmol_l",
+              "known_diabetes",
+              "plasma_glucose_mg_dl",
+              "urine_ketones_plus",
+              "venous_pH"
+            ],
+            "missing_required": [
+              "beta_hydroxybutyrate_mmol_l",
+              "bicarbonate_mmol_l",
+              "known_diabetes",
+              "plasma_glucose_mg_dl",
+              "urine_ketones_plus",
+              "venous_pH"
+            ],
+            "missing_requirement_semantics": "UNRESOLVED_CANDIDATES_RESPECT_AND_OR_NOT_ALL_MANDATORY",
+            "optional_not_measured": [],
+            "protocol": {
+              "authorization": "NO_VERIFIED_MISSION_POLICY",
+              "automatic_execution": false,
+              "block_reasons": [
+                "BLOCKED_MISSING_DATA",
+                "BLOCKED_MISSING_DATA:POTASSIUM",
+                "BLOCKED_RESOURCE",
+                "BLOCKED_AUTHORIZATION"
+              ],
+              "indication_supported": false,
+              "missing_resources": [
+                "validated_glucose_measurement",
+                "potassium_measurement",
+                "electrolytes",
+                "beta_hydroxybutyrate",
+                "venous_pH_or_bicarbonate",
+                "IV_access_capability",
+                "IV_fluid_capability",
+                "insulin_inventory",
+                "continuous_or_frequent_monitoring"
+              ],
+              "protocol_id": "PROT-DKA-ADULT-2024",
+              "required_for_protocol_safety": [
+                "potassium_mmol_l"
+              ],
+              "status": "BLOCKED_MISSING_DATA"
+            },
+            "protocol_status": "BLOCKED_MISSING_DATA",
+            "required_for_protocol_safety": [
+              "potassium_mmol_l"
+            ],
+            "source_ids": [
+              "SRC-DKA-2024"
+            ],
+            "source_statuses": {
+              "SRC-DKA-2024": "PINNED_VERIFIED_AT_REPORT_DATE_NOT_CONTINUOUSLY_VERIFIED"
+            },
+            "space_applicability": "REQUIRES_SPACE_SPECIFIC_VALIDATION",
+            "treatment_status": "NOT_STARTED",
+            "urgency": "PROMPT"
+          },
+          "DM": {
+            "condition_id": "DM",
+            "confirmation_status": "REQUIRED",
+            "criterion_id": "CRIT-DM-ADA-2026",
+            "criterion_version": "2026.1",
+            "data_issues": [],
+            "data_requirement_version": "four-state-1",
+            "diagnostic_status": "INSUFFICIENT_DATA",
+            "evaluation_tree": {
+              "children": [
+                {
+                  "children": [
+                    {
+                      "actual": null,
+                      "expected": 6.5,
+                      "field": "a1c_percent",
+                      "logic_version": "four-state-1",
+                      "nonblocking_ancestor": null,
+                      "operator": ">=",
+                      "path": "root/A1C/0",
+                      "reasons": [
+                        "NOT_AVAILABLE"
+                      ],
+                      "required_for_resolution": true,
+                      "state": null,
+                      "truth_state": "UNKNOWN"
+                    },
+                    {
+                      "actual": null,
+                      "expected": true,
+                      "field": "assay_quality.a1c_valid",
+                      "logic_version": "four-state-1",
+                      "nonblocking_ancestor": null,
+                      "operator": "==",
+                      "path": "root/A1C/1",
+                      "reasons": [
+                        "NOT_AVAILABLE"
+                      ],
+                      "required_for_resolution": true,
+                      "state": null,
+                      "truth_state": "UNKNOWN"
+                    }
+                  ],
+                  "decisive_children": [
+                    "root/A1C/0",
+                    "root/A1C/1"
+                  ],
+                  "logic_version": "four-state-1",
+                  "operator": "all_of",
+                  "path": "root/A1C",
+                  "path_id": "A1C",
+                  "required_for_resolution": true,
+                  "state": null,
+                  "truth_state": "UNKNOWN"
+                },
+                {
+                  "children": [
+                    {
+                      "actual": null,
+                      "expected": 126,
+                      "field": "fasting_plasma_glucose_mg_dl",
+                      "logic_version": "four-state-1",
+                      "nonblocking_ancestor": null,
+                      "operator": ">=",
+                      "path": "root/FPG/0",
+                      "reasons": [
+                        "NOT_AVAILABLE"
+                      ],
+                      "required_for_resolution": true,
+                      "state": null,
+                      "truth_state": "UNKNOWN"
+                    },
+                    {
+                      "actual": null,
+                      "expected": 8,
+                      "field": "fasting_hours",
+                      "logic_version": "four-state-1",
+                      "nonblocking_ancestor": null,
+                      "operator": ">=",
+                      "path": "root/FPG/1",
+                      "reasons": [
+                        "NOT_AVAILABLE"
+                      ],
+                      "required_for_resolution": true,
+                      "state": null,
+                      "truth_state": "UNKNOWN"
+                    }
+                  ],
+                  "decisive_children": [
+                    "root/FPG/0",
+                    "root/FPG/1"
+                  ],
+                  "logic_version": "four-state-1",
+                  "operator": "all_of",
+                  "path": "root/FPG",
+                  "path_id": "FPG",
+                  "required_for_resolution": true,
+                  "state": null,
+                  "truth_state": "UNKNOWN"
+                },
+                {
+                  "children": [
+                    {
+                      "children": [
+                        {
+                          "actual": null,
+                          "expected": 200,
+                          "field": "ogtt_2h_plasma_glucose_mg_dl",
+                          "logic_version": "four-state-1",
+                          "nonblocking_ancestor": null,
+                          "operator": ">=",
+                          "path": "root/OGTT/0/0",
+                          "reasons": [
+                            "NOT_AVAILABLE"
+                          ],
+                          "required_for_resolution": true,
+                          "state": null,
+                          "truth_state": "UNKNOWN"
+                        },
+                        {
+                          "actual": null,
+                          "expected": 75,
+                          "field": "ogtt_glucose_load_g",
+                          "logic_version": "four-state-1",
+                          "nonblocking_ancestor": null,
+                          "operator": "==",
+                          "path": "root/OGTT/0/1",
+                          "reasons": [
+                            "NOT_AVAILABLE"
+                          ],
+                          "required_for_resolution": true,
+                          "state": null,
+                          "truth_state": "UNKNOWN"
+                        }
+                      ],
+                      "decisive_children": [
+                        "root/OGTT/0/0",
+                        "root/OGTT/0/1"
+                      ],
+                      "logic_version": "four-state-1",
+                      "operator": "all_of",
+                      "path": "root/OGTT/0",
+                      "required_for_resolution": true,
+                      "state": null,
+                      "truth_state": "UNKNOWN"
+                    },
+                    {
+                      "actual": null,
+                      "expected": true,
+                      "field": "ogtt_2h_timing_valid",
+                      "logic_version": "four-state-1",
+                      "nonblocking_ancestor": null,
+                      "operator": "==",
+                      "path": "root/OGTT/1",
+                      "reasons": [
+                        "NOT_AVAILABLE"
+                      ],
+                      "required_for_resolution": true,
+                      "state": null,
+                      "truth_state": "UNKNOWN"
+                    }
+                  ],
+                  "decisive_children": [
+                    "root/OGTT/0",
+                    "root/OGTT/1"
+                  ],
+                  "logic_version": "four-state-1",
+                  "operator": "all_of",
+                  "path": "root/OGTT",
+                  "path_id": "OGTT",
+                  "required_for_resolution": true,
+                  "state": null,
+                  "truth_state": "UNKNOWN"
+                },
+                {
+                  "children": [
+                    {
+                      "actual": null,
+                      "expected": 200,
+                      "field": "random_plasma_glucose_mg_dl",
+                      "logic_version": "four-state-1",
+                      "nonblocking_ancestor": null,
+                      "operator": ">=",
+                      "path": "root/RANDOM_SYMPTOMATIC/0",
+                      "reasons": [
+                        "NOT_AVAILABLE"
+                      ],
+                      "required_for_resolution": true,
+                      "state": null,
+                      "truth_state": "UNKNOWN"
+                    },
+                    {
+                      "children": [
+                        {
+                          "actual": null,
+                          "expected": true,
+                          "field": "classic_hyperglycemia_symptoms",
+                          "logic_version": "four-state-1",
+                          "nonblocking_ancestor": null,
+                          "operator": "==",
+                          "path": "root/RANDOM_SYMPTOMATIC/1/0",
+                          "reasons": [
+                            "NOT_AVAILABLE"
+                          ],
+                          "required_for_resolution": true,
+                          "state": null,
+                          "truth_state": "UNKNOWN"
+                        },
+                        {
+                          "actual": null,
+                          "expected": true,
+                          "field": "hyperglycemic_crisis",
+                          "logic_version": "four-state-1",
+                          "nonblocking_ancestor": null,
+                          "operator": "==",
+                          "path": "root/RANDOM_SYMPTOMATIC/1/1",
+                          "reasons": [
+                            "NOT_AVAILABLE"
+                          ],
+                          "required_for_resolution": true,
+                          "state": null,
+                          "truth_state": "UNKNOWN"
+                        }
+                      ],
+                      "decisive_children": [
+                        "root/RANDOM_SYMPTOMATIC/1/0",
+                        "root/RANDOM_SYMPTOMATIC/1/1"
+                      ],
+                      "logic_version": "four-state-1",
+                      "operator": "any_of",
+                      "path": "root/RANDOM_SYMPTOMATIC/1",
+                      "required_for_resolution": true,
+                      "state": null,
+                      "truth_state": "UNKNOWN"
+                    }
+                  ],
+                  "decisive_children": [
+                    "root/RANDOM_SYMPTOMATIC/0",
+                    "root/RANDOM_SYMPTOMATIC/1"
+                  ],
+                  "logic_version": "four-state-1",
+                  "operator": "all_of",
+                  "path": "root/RANDOM_SYMPTOMATIC",
+                  "path_id": "RANDOM_SYMPTOMATIC",
+                  "required_for_resolution": true,
+                  "state": null,
+                  "truth_state": "UNKNOWN"
+                }
+              ],
+              "confirmation_evidence": [],
+              "confirmation_rule": "TWO_DISTINCT_TESTS_OR_REPEAT_SEPARATE_COLLECTIONS_OR_UNEQUIVOCAL_RANDOM",
+              "logic_version": "four-state-1",
+              "operator": "ADA_CONFIRMATION",
+              "path": "root",
+              "required_for_resolution": true,
+              "state": null,
+              "truth_state": "UNKNOWN"
+            },
+            "invalid_fields": [],
+            "invalid_required": [],
+            "limitations": [
+              "RESEARCH_ONLY",
+              "TERRESTRIAL_CRITERIA_NOT_SPACE_VALIDATION",
+              "CRITERIA_NOT_MET_DOES_NOT_EXCLUDE_DISEASE",
+              "MANUAL_OBSERVATIONS_USE_DECLARED_WINDOW_NOT_VALIDATED_FRESHNESS",
+              "MEASUREMENT_CONTEXT_ATTESTED_NOT_INDEPENDENTLY_VERIFIED",
+              "URGENCY_RESEARCH_POLICY_NOT_VALIDATED_TRIAGE"
+            ],
+            "metadata": {
+              "aki_stage": null,
+              "aki_stage_is_minimum_supported": false,
+              "clinical_validation": "NOT_VALIDATED",
+              "derivation_inputs": {},
+              "disease_excluded": false,
+              "hypoglycemia_level_minimum_supported": null,
+              "resolution_status": null
+            },
+            "missing_fields": [
+              "a1c_percent",
+              "assay_quality.a1c_valid",
+              "classic_hyperglycemia_symptoms",
+              "fasting_hours",
+              "fasting_plasma_glucose_mg_dl",
+              "hyperglycemic_crisis",
+              "ogtt_2h_plasma_glucose_mg_dl",
+              "ogtt_2h_timing_valid",
+              "ogtt_glucose_load_g",
+              "random_plasma_glucose_mg_dl"
+            ],
+            "missing_required": [
+              "a1c_percent",
+              "assay_quality.a1c_valid",
+              "classic_hyperglycemia_symptoms",
+              "fasting_hours",
+              "fasting_plasma_glucose_mg_dl",
+              "hyperglycemic_crisis",
+              "ogtt_2h_plasma_glucose_mg_dl",
+              "ogtt_2h_timing_valid",
+              "ogtt_glucose_load_g",
+              "random_plasma_glucose_mg_dl"
+            ],
+            "missing_requirement_semantics": "UNRESOLVED_CANDIDATES_RESPECT_AND_OR_NOT_ALL_MANDATORY",
+            "optional_not_measured": [],
+            "protocol": {
+              "authorization": "NO_VERIFIED_MISSION_POLICY",
+              "automatic_execution": false,
+              "block_reasons": [
+                "BLOCKED_MISSING_DATA",
+                "BLOCKED_AUTHORIZATION"
+              ],
+              "indication_supported": false,
+              "missing_resources": [],
+              "protocol_id": "PROT-DM-CONFIRMATION",
+              "required_for_protocol_safety": [],
+              "status": "BLOCKED_MISSING_DATA"
+            },
+            "protocol_status": "BLOCKED_MISSING_DATA",
+            "required_for_protocol_safety": [],
+            "source_ids": [
+              "SRC-ADA-DX-2026"
+            ],
+            "source_statuses": {
+              "SRC-ADA-DX-2026": "PINNED_VERIFIED_AT_REPORT_DATE_NOT_CONTINUOUSLY_VERIFIED"
+            },
+            "space_applicability": "REQUIRES_SPACE_SPECIFIC_VALIDATION",
+            "treatment_status": "NOT_STARTED",
+            "urgency": "PROMPT"
+          },
+          "HYPOGLYCEMIA": {
+            "condition_id": "HYPOGLYCEMIA",
+            "confirmation_status": "REQUIRED",
+            "criterion_id": "CRIT-HYPO-ADA-2026",
+            "criterion_version": "2026.1-restricted-adult-diabetes",
+            "data_issues": [],
+            "data_requirement_version": "four-state-1",
+            "diagnostic_status": "INSUFFICIENT_DATA",
+            "evaluation_tree": {
+              "children": [
+                {
+                  "actual": null,
+                  "expected": true,
+                  "field": "known_diabetes",
+                  "logic_version": "four-state-1",
+                  "nonblocking_ancestor": null,
+                  "operator": "==",
+                  "path": "root/0",
+                  "reasons": [
+                    "NOT_AVAILABLE"
+                  ],
+                  "required_for_resolution": true,
+                  "state": null,
+                  "truth_state": "UNKNOWN"
+                },
+                {
+                  "children": [
+                    {
+                      "actual": null,
+                      "expected": 70,
+                      "field": "plasma_glucose_mg_dl",
+                      "logic_version": "four-state-1",
+                      "nonblocking_ancestor": null,
+                      "operator": "<",
+                      "path": "root/1/0",
+                      "reasons": [
+                        "NOT_AVAILABLE"
+                      ],
+                      "required_for_resolution": true,
+                      "state": null,
+                      "truth_state": "UNKNOWN"
+                    },
+                    {
+                      "actual": null,
+                      "expected": 70,
+                      "field": "capillary_glucose_mg_dl",
+                      "logic_version": "four-state-1",
+                      "nonblocking_ancestor": null,
+                      "operator": "<",
+                      "path": "root/1/1",
+                      "reasons": [
+                        "NOT_AVAILABLE"
+                      ],
+                      "required_for_resolution": true,
+                      "state": null,
+                      "truth_state": "UNKNOWN"
+                    },
+                    {
+                      "children": [
+                        {
+                          "actual": null,
+                          "expected": true,
+                          "field": "altered_mental_or_physical_status",
+                          "logic_version": "four-state-1",
+                          "nonblocking_ancestor": null,
+                          "operator": "==",
+                          "path": "root/1/2/0",
+                          "reasons": [
+                            "NOT_AVAILABLE"
+                          ],
+                          "required_for_resolution": true,
+                          "state": null,
+                          "truth_state": "UNKNOWN"
+                        },
+                        {
+                          "actual": null,
+                          "expected": true,
+                          "field": "assistance_required_for_hypoglycemia",
+                          "logic_version": "four-state-1",
+                          "nonblocking_ancestor": null,
+                          "operator": "==",
+                          "path": "root/1/2/1",
+                          "reasons": [
+                            "NOT_AVAILABLE"
+                          ],
+                          "required_for_resolution": true,
+                          "state": null,
+                          "truth_state": "UNKNOWN"
+                        },
+                        {
+                          "actual": null,
+                          "expected": true,
+                          "field": "hypoglycemia_event_clinically_attributed",
+                          "logic_version": "four-state-1",
+                          "nonblocking_ancestor": null,
+                          "operator": "==",
+                          "path": "root/1/2/2",
+                          "reasons": [
+                            "NOT_AVAILABLE"
+                          ],
+                          "required_for_resolution": true,
+                          "state": null,
+                          "truth_state": "UNKNOWN"
+                        }
+                      ],
+                      "decisive_children": [
+                        "root/1/2/0",
+                        "root/1/2/1",
+                        "root/1/2/2"
+                      ],
+                      "logic_version": "four-state-1",
+                      "operator": "all_of",
+                      "path": "root/1/2",
+                      "required_for_resolution": true,
+                      "state": null,
+                      "truth_state": "UNKNOWN"
+                    }
+                  ],
+                  "decisive_children": [
+                    "root/1/0",
+                    "root/1/1",
+                    "root/1/2"
+                  ],
+                  "logic_version": "four-state-1",
+                  "operator": "any_of",
+                  "path": "root/1",
+                  "required_for_resolution": true,
+                  "state": null,
+                  "truth_state": "UNKNOWN"
+                }
+              ],
+              "decisive_children": [
+                "root/0",
+                "root/1"
+              ],
+              "logic_version": "four-state-1",
+              "operator": "all_of",
+              "path": "root",
+              "required_for_resolution": true,
+              "state": null,
+              "truth_state": "UNKNOWN"
+            },
+            "invalid_fields": [],
+            "invalid_required": [],
+            "limitations": [
+              "RESEARCH_ONLY",
+              "TERRESTRIAL_CRITERIA_NOT_SPACE_VALIDATION",
+              "CRITERIA_NOT_MET_DOES_NOT_EXCLUDE_DISEASE",
+              "MANUAL_OBSERVATIONS_USE_DECLARED_WINDOW_NOT_VALIDATED_FRESHNESS",
+              "MEASUREMENT_CONTEXT_ATTESTED_NOT_INDEPENDENTLY_VERIFIED",
+              "URGENCY_RESEARCH_POLICY_NOT_VALIDATED_TRIAGE",
+              "RESTRICTED_TO_KNOWN_DIABETES",
+              "HYPOGLYCEMIA_CLASSIFICATION_NOT_ETIOLOGY",
+              "LEVEL_3_REQUIRES_CLINICAL_ATTRIBUTION",
+              "CGM_ALONE_NOT_USED",
+              "REEVALUATE_WITH_NEW_BLOOD_GLUCOSE_NO_AUTOMATIC_RECOVERY"
+            ],
+            "metadata": {
+              "aki_stage": null,
+              "aki_stage_is_minimum_supported": false,
+              "clinical_validation": "NOT_VALIDATED",
+              "derivation_inputs": {},
+              "disease_excluded": false,
+              "hypoglycemia_level_minimum_supported": null,
+              "resolution_status": null
+            },
+            "missing_fields": [
+              "altered_mental_or_physical_status",
+              "assistance_required_for_hypoglycemia",
+              "capillary_glucose_mg_dl",
+              "hypoglycemia_event_clinically_attributed",
+              "known_diabetes",
+              "plasma_glucose_mg_dl"
+            ],
+            "missing_required": [
+              "altered_mental_or_physical_status",
+              "assistance_required_for_hypoglycemia",
+              "capillary_glucose_mg_dl",
+              "hypoglycemia_event_clinically_attributed",
+              "known_diabetes",
+              "plasma_glucose_mg_dl"
+            ],
+            "missing_requirement_semantics": "UNRESOLVED_CANDIDATES_RESPECT_AND_OR_NOT_ALL_MANDATORY",
+            "optional_not_measured": [],
+            "protocol": {
+              "authorization": "NO_VERIFIED_MISSION_POLICY",
+              "automatic_execution": false,
+              "block_reasons": [
+                "BLOCKED_MISSING_DATA",
+                "BLOCKED_RESOURCE",
+                "BLOCKED_AUTHORIZATION"
+              ],
+              "indication_supported": false,
+              "missing_resources": [
+                "verified_glucose_measurement",
+                "qualified_medical_review"
+              ],
+              "protocol_id": "PROT-HYPO-REVIEW-2026",
+              "required_for_protocol_safety": [],
+              "status": "BLOCKED_MISSING_DATA"
+            },
+            "protocol_status": "BLOCKED_MISSING_DATA",
+            "required_for_protocol_safety": [],
+            "source_ids": [
+              "SRC-ADA-HYPO-2026"
+            ],
+            "source_statuses": {
+              "SRC-ADA-HYPO-2026": "PINNED_VERIFIED_AT_REPORT_DATE_NOT_CONTINUOUSLY_VERIFIED"
+            },
+            "space_applicability": "REQUIRES_SPACE_SPECIFIC_VALIDATION",
+            "treatment_status": "NOT_STARTED",
+            "urgency": "PROMPT"
+          },
+          "ORTHOSTATIC_HYPOTENSION": {
+            "condition_id": "ORTHOSTATIC_HYPOTENSION",
+            "confirmation_status": "REQUIRED",
+            "criterion_id": "CRIT-OH-AHA-2024",
+            "criterion_version": "2024.1",
+            "data_issues": [],
+            "data_requirement_version": "four-state-1",
+            "diagnostic_status": "INSUFFICIENT_DATA",
+            "evaluation_tree": {
+              "children": [
+                {
+                  "children": [
+                    {
+                      "actual": null,
+                      "expected": -20,
+                      "field": "delta_sbp_mm_hg",
+                      "logic_version": "four-state-1",
+                      "nonblocking_ancestor": null,
+                      "operator": "<=",
+                      "path": "root/0/0",
+                      "reasons": [
+                        "NOT_AVAILABLE"
+                      ],
+                      "required_for_resolution": true,
+                      "state": null,
+                      "truth_state": "UNKNOWN"
+                    },
+                    {
+                      "actual": null,
+                      "expected": -10,
+                      "field": "delta_dbp_mm_hg",
+                      "logic_version": "four-state-1",
+                      "nonblocking_ancestor": null,
+                      "operator": "<=",
+                      "path": "root/0/1",
+                      "reasons": [
+                        "NOT_AVAILABLE"
+                      ],
+                      "required_for_resolution": true,
+                      "state": null,
+                      "truth_state": "UNKNOWN"
+                    }
+                  ],
+                  "decisive_children": [
+                    "root/0/0",
+                    "root/0/1"
+                  ],
+                  "logic_version": "four-state-1",
+                  "operator": "any_of",
+                  "path": "root/0",
+                  "required_for_resolution": true,
+                  "state": null,
+                  "truth_state": "UNKNOWN"
+                },
+                {
+                  "actual": null,
+                  "expected": 3,
+                  "field": "upright_window_minutes",
+                  "logic_version": "four-state-1",
+                  "nonblocking_ancestor": null,
+                  "operator": "<=",
+                  "path": "root/1",
+                  "reasons": [
+                    "NOT_AVAILABLE"
+                  ],
+                  "required_for_resolution": true,
+                  "state": null,
+                  "truth_state": "UNKNOWN"
+                },
+                {
+                  "actual": null,
+                  "expected": true,
+                  "field": "sustained_reduction",
+                  "logic_version": "four-state-1",
+                  "nonblocking_ancestor": null,
+                  "operator": "==",
+                  "path": "root/2",
+                  "reasons": [
+                    "NOT_AVAILABLE"
+                  ],
+                  "required_for_resolution": true,
+                  "state": null,
+                  "truth_state": "UNKNOWN"
+                }
+              ],
+              "decisive_children": [
+                "root/0",
+                "root/1",
+                "root/2"
+              ],
+              "logic_version": "four-state-1",
+              "operator": "all_of",
+              "path": "root",
+              "required_for_resolution": true,
+              "state": null,
+              "truth_state": "UNKNOWN"
+            },
+            "invalid_fields": [],
+            "invalid_required": [],
+            "limitations": [
+              "RESEARCH_ONLY",
+              "TERRESTRIAL_CRITERIA_NOT_SPACE_VALIDATION",
+              "CRITERIA_NOT_MET_DOES_NOT_EXCLUDE_DISEASE",
+              "MANUAL_OBSERVATIONS_USE_DECLARED_WINDOW_NOT_VALIDATED_FRESHNESS",
+              "MEASUREMENT_CONTEXT_ATTESTED_NOT_INDEPENDENTLY_VERIFIED",
+              "URGENCY_RESEARCH_POLICY_NOT_VALIDATED_TRIAGE"
+            ],
+            "metadata": {
+              "aki_stage": null,
+              "aki_stage_is_minimum_supported": false,
+              "clinical_validation": "NOT_VALIDATED",
+              "derivation_inputs": {},
+              "disease_excluded": false,
+              "hypoglycemia_level_minimum_supported": null,
+              "resolution_status": null
+            },
+            "missing_fields": [
+              "delta_dbp_mm_hg",
+              "delta_sbp_mm_hg",
+              "sustained_reduction",
+              "upright_window_minutes"
+            ],
+            "missing_required": [
+              "delta_dbp_mm_hg",
+              "delta_sbp_mm_hg",
+              "sustained_reduction",
+              "upright_window_minutes"
+            ],
+            "missing_requirement_semantics": "UNRESOLVED_CANDIDATES_RESPECT_AND_OR_NOT_ALL_MANDATORY",
+            "optional_not_measured": [],
+            "protocol": {
+              "authorization": "NO_VERIFIED_MISSION_POLICY",
+              "automatic_execution": false,
+              "block_reasons": [
+                "BLOCKED_MISSING_DATA",
+                "BLOCKED_AUTHORIZATION"
+              ],
+              "indication_supported": false,
+              "missing_resources": [],
+              "protocol_id": "PROT-OH-POTS-INITIAL",
+              "required_for_protocol_safety": [],
+              "status": "BLOCKED_MISSING_DATA"
+            },
+            "protocol_status": "BLOCKED_MISSING_DATA",
+            "required_for_protocol_safety": [],
+            "source_ids": [
+              "SRC-AHA-OH-2024"
+            ],
+            "source_statuses": {
+              "SRC-AHA-OH-2024": "PINNED_VERIFIED_AT_REPORT_DATE_NOT_CONTINUOUSLY_VERIFIED"
+            },
+            "space_applicability": "APPLICABLE_WITH_LIMITATIONS",
+            "treatment_status": "NOT_STARTED",
+            "urgency": "PROMPT"
+          },
+          "POTS": {
+            "condition_id": "POTS",
+            "confirmation_status": "REQUIRED",
+            "criterion_id": "CRIT-POTS-HRS-NIH",
+            "criterion_version": "2015-2021.1",
+            "data_issues": [],
+            "data_requirement_version": "four-state-1",
+            "diagnostic_status": "INSUFFICIENT_DATA",
+            "evaluation_tree": {
+              "children": [
+                {
+                  "actual": null,
+                  "expected": 30,
+                  "field": "sustained_delta_hr_bpm",
+                  "logic_version": "four-state-1",
+                  "nonblocking_ancestor": null,
+                  "operator": ">=",
+                  "path": "root/0",
+                  "reasons": [
+                    "NOT_AVAILABLE"
+                  ],
+                  "required_for_resolution": true,
+                  "state": null,
+                  "truth_state": "UNKNOWN"
+                },
+                {
+                  "actual": null,
+                  "expected": 10,
+                  "field": "upright_window_minutes",
+                  "logic_version": "four-state-1",
+                  "nonblocking_ancestor": null,
+                  "operator": "<=",
+                  "path": "root/1",
+                  "reasons": [
+                    "NOT_AVAILABLE"
+                  ],
+                  "required_for_resolution": true,
+                  "state": null,
+                  "truth_state": "UNKNOWN"
+                },
+                {
+                  "actual": null,
+                  "expected": false,
+                  "field": "orthostatic_hypotension_present",
+                  "logic_version": "four-state-1",
+                  "nonblocking_ancestor": null,
+                  "operator": "==",
+                  "path": "root/2",
+                  "reasons": [
+                    "NOT_AVAILABLE"
+                  ],
+                  "required_for_resolution": true,
+                  "state": null,
+                  "truth_state": "UNKNOWN"
+                },
+                {
+                  "actual": null,
+                  "expected": true,
+                  "field": "orthostatic_symptoms_frequent",
+                  "logic_version": "four-state-1",
+                  "nonblocking_ancestor": null,
+                  "operator": "==",
+                  "path": "root/3",
+                  "reasons": [
+                    "NOT_AVAILABLE"
+                  ],
+                  "required_for_resolution": true,
+                  "state": null,
+                  "truth_state": "UNKNOWN"
+                },
+                {
+                  "actual": null,
+                  "expected": true,
+                  "field": "symptoms_improve_supine",
+                  "logic_version": "four-state-1",
+                  "nonblocking_ancestor": null,
+                  "operator": "==",
+                  "path": "root/4",
+                  "reasons": [
+                    "NOT_AVAILABLE"
+                  ],
+                  "required_for_resolution": true,
+                  "state": null,
+                  "truth_state": "UNKNOWN"
+                },
+                {
+                  "actual": null,
+                  "expected": 3,
+                  "field": "symptom_duration_months",
+                  "logic_version": "four-state-1",
+                  "nonblocking_ancestor": null,
+                  "operator": ">=",
+                  "path": "root/5",
+                  "reasons": [
+                    "NOT_AVAILABLE"
+                  ],
+                  "required_for_resolution": true,
+                  "state": null,
+                  "truth_state": "UNKNOWN"
+                },
+                {
+                  "actual": null,
+                  "expected": false,
+                  "field": "alternative_cause_present",
+                  "logic_version": "four-state-1",
+                  "nonblocking_ancestor": null,
+                  "operator": "==",
+                  "path": "root/6",
+                  "reasons": [
+                    "NOT_AVAILABLE"
+                  ],
+                  "required_for_resolution": true,
+                  "state": null,
+                  "truth_state": "UNKNOWN"
+                }
+              ],
+              "decisive_children": [
+                "root/0",
+                "root/1",
+                "root/2",
+                "root/3",
+                "root/4",
+                "root/5",
+                "root/6"
+              ],
+              "logic_version": "four-state-1",
+              "operator": "all_of",
+              "path": "root",
+              "required_for_resolution": true,
+              "state": null,
+              "truth_state": "UNKNOWN"
+            },
+            "invalid_fields": [],
+            "invalid_required": [],
+            "limitations": [
+              "RESEARCH_ONLY",
+              "TERRESTRIAL_CRITERIA_NOT_SPACE_VALIDATION",
+              "CRITERIA_NOT_MET_DOES_NOT_EXCLUDE_DISEASE",
+              "MANUAL_OBSERVATIONS_USE_DECLARED_WINDOW_NOT_VALIDATED_FRESHNESS",
+              "MEASUREMENT_CONTEXT_ATTESTED_NOT_INDEPENDENTLY_VERIFIED",
+              "URGENCY_RESEARCH_POLICY_NOT_VALIDATED_TRIAGE",
+              "ADULT_20_PLUS_PATH_ONLY_12_TO_19_THRESHOLD_NOT_IMPLEMENTED"
+            ],
+            "metadata": {
+              "aki_stage": null,
+              "aki_stage_is_minimum_supported": false,
+              "clinical_validation": "NOT_VALIDATED",
+              "derivation_inputs": {},
+              "disease_excluded": false,
+              "hypoglycemia_level_minimum_supported": null,
+              "resolution_status": null
+            },
+            "missing_fields": [
+              "alternative_cause_present",
+              "orthostatic_hypotension_present",
+              "orthostatic_symptoms_frequent",
+              "sustained_delta_hr_bpm",
+              "symptom_duration_months",
+              "symptoms_improve_supine",
+              "upright_window_minutes"
+            ],
+            "missing_required": [
+              "alternative_cause_present",
+              "orthostatic_hypotension_present",
+              "orthostatic_symptoms_frequent",
+              "sustained_delta_hr_bpm",
+              "symptom_duration_months",
+              "symptoms_improve_supine",
+              "upright_window_minutes"
+            ],
+            "missing_requirement_semantics": "UNRESOLVED_CANDIDATES_RESPECT_AND_OR_NOT_ALL_MANDATORY",
+            "optional_not_measured": [],
+            "protocol": {
+              "authorization": "NO_VERIFIED_MISSION_POLICY",
+              "automatic_execution": false,
+              "block_reasons": [
+                "BLOCKED_MISSING_DATA",
+                "BLOCKED_AUTHORIZATION"
+              ],
+              "indication_supported": false,
+              "missing_resources": [],
+              "protocol_id": "PROT-OH-POTS-INITIAL",
+              "required_for_protocol_safety": [],
+              "status": "BLOCKED_MISSING_DATA"
+            },
+            "protocol_status": "BLOCKED_MISSING_DATA",
+            "required_for_protocol_safety": [],
+            "source_ids": [
+              "SRC-HRS-POTS-2015",
+              "SRC-NIH-POTS-2021"
+            ],
+            "source_statuses": {
+              "SRC-HRS-POTS-2015": "PINNED_VERIFIED_AT_REPORT_DATE_NOT_CONTINUOUSLY_VERIFIED",
+              "SRC-NIH-POTS-2021": "PINNED_VERIFIED_AT_REPORT_DATE_NOT_CONTINUOUSLY_VERIFIED"
+            },
+            "space_applicability": "APPLICABLE_WITH_LIMITATIONS",
+            "treatment_status": "NOT_STARTED",
+            "urgency": "PROMPT"
+          }
+        },
+        "treatment_status": "NOT_STARTED",
+        "urgency": "URGENT",
+        "as_of": "2026-10-16T12:00:00Z",
+        "condition_id": null,
+        "presentation_id": "PRES-DIZZINESS-TACHYCARDIA",
+        "observations": [
+          {
+            "id": "dizziness-collection",
+            "concept": "dizziness",
+            "value": true,
+            "unit": "1",
+            "timestamp": "2026-10-16T12:00:00Z",
+            "quality": "VALID",
+            "method": "SYNTHETIC_OBSERVATION",
+            "provenance": "SYNTHETIC_REPORT_ADAPTER_NOT_CLINICAL_VALIDATION"
+          },
+          {
+            "id": "tachycardia-collection",
+            "concept": "tachycardia",
+            "value": true,
+            "unit": "1",
+            "timestamp": "2026-10-16T12:00:00Z",
+            "quality": "VALID",
+            "method": "SYNTHETIC_OBSERVATION",
+            "provenance": "SYNTHETIC_REPORT_ADAPTER_NOT_CLINICAL_VALIDATION"
+          },
+          {
+            "id": "postural_trigger-collection",
+            "concept": "postural_trigger",
+            "value": false,
+            "unit": "1",
+            "timestamp": "2026-10-16T12:00:00Z",
+            "quality": "VALID",
+            "method": "SYNTHETIC_OBSERVATION",
+            "provenance": "SYNTHETIC_REPORT_ADAPTER_NOT_CLINICAL_VALIDATION"
+          },
+          {
+            "id": "irregular_pulse-collection",
+            "concept": "irregular_pulse",
+            "value": true,
+            "unit": "1",
+            "timestamp": "2026-10-16T12:00:00Z",
+            "quality": "VALID",
+            "method": "SYNTHETIC_OBSERVATION",
+            "provenance": "SYNTHETIC_REPORT_ADAPTER_NOT_CLINICAL_VALIDATION"
+          }
+        ]
+      },
+      {
+        "differential": [
+          {
+            "condition_id": "DKA",
+            "contradictions": [],
+            "criteria_implemented": true,
+            "diagnostic_status": "CRITERIA_MET",
+            "external_evaluation_required": false,
+            "reported_condition_id": "DKA",
+            "source_ids": [
+              "SRC-DKA-2024"
+            ],
+            "support": [
+              "known_diabetes"
+            ],
+            "tier": "TIME_CRITICAL_CRITERIA_MET",
+            "urgency": "EMERGENCY"
+          }
+        ],
+        "id": "ce-b96995185d8045ba99553175a37a3f2c",
+        "implementation_hash": "c896211d20b52ade1279aeb306421891f5e29b542f910074d542321c4b815db9",
+        "input_hash": "87dde14afc07761856fca1b42a73f0ab68de39cdb170797b90c91b766f6d99b9",
+        "knowledge_hash": "b8c568bd645154e5fd67630c7a670ca53904dc04f54904315047a89923839d4e",
+        "knowledge_version": "0.7.0",
+        "next_tests": [],
+        "output_hash": "f802b7beb36c9a558da5b6856db291828b8143b22b0b0137f9126f65417f05c0",
+        "parent_id": "ce-d4421c0acf5b4200bdc5c322e9b8971c",
+        "presentation_protocol": null,
+        "results": {
+          "DKA": {
+            "condition_id": "DKA",
+            "confirmation_status": "SATISFIED",
+            "criterion_id": "CRIT-DKA-2024",
+            "criterion_version": "2024.1",
+            "data_issues": [],
+            "data_requirement_version": "four-state-1",
+            "diagnostic_status": "CRITERIA_MET",
+            "evaluation_tree": {
+              "children": [
+                {
+                  "children": [
+                    {
+                      "actual": true,
+                      "expected": true,
+                      "field": "known_diabetes",
+                      "logic_version": "four-state-1",
+                      "nonblocking_ancestor": "root",
+                      "operator": "==",
+                      "path": "root/0/0",
+                      "reasons": [],
+                      "required_for_resolution": false,
+                      "state": true,
+                      "truth_state": "TRUE"
+                    },
+                    {
+                      "actual": 180.0,
+                      "expected": 200,
+                      "field": "plasma_glucose_mg_dl",
+                      "logic_version": "four-state-1",
+                      "nonblocking_ancestor": "root",
+                      "operator": ">=",
+                      "path": "root/0/1",
+                      "reasons": [],
+                      "required_for_resolution": false,
+                      "state": false,
+                      "truth_state": "FALSE"
+                    }
+                  ],
+                  "decisive_children": [
+                    "root/0/0"
+                  ],
+                  "logic_version": "four-state-1",
+                  "operator": "any_of",
+                  "path": "root/0",
+                  "required_for_resolution": false,
+                  "state": true,
+                  "truth_state": "TRUE"
+                },
+                {
+                  "children": [
+                    {
+                      "actual": 4.2,
+                      "expected": 3.0,
+                      "field": "beta_hydroxybutyrate_mmol_l",
+                      "logic_version": "four-state-1",
+                      "nonblocking_ancestor": "root",
+                      "operator": ">=",
+                      "path": "root/1/0",
+                      "reasons": [],
+                      "required_for_resolution": false,
+                      "state": true,
+                      "truth_state": "TRUE"
+                    },
+                    {
+                      "actual": null,
+                      "expected": 2,
+                      "field": "urine_ketones_plus",
+                      "logic_version": "four-state-1",
+                      "nonblocking_ancestor": "root",
+                      "operator": ">=",
+                      "path": "root/1/1",
+                      "reasons": [
+                        "NOT_AVAILABLE"
+                      ],
+                      "required_for_resolution": false,
+                      "state": null,
+                      "truth_state": "UNKNOWN"
+                    }
+                  ],
+                  "decisive_children": [
+                    "root/1/0"
+                  ],
+                  "logic_version": "four-state-1",
+                  "operator": "any_of",
+                  "path": "root/1",
+                  "required_for_resolution": false,
+                  "state": true,
+                  "truth_state": "TRUE"
+                },
+                {
+                  "children": [
+                    {
+                      "actual": 7.22,
+                      "expected": 7.3,
+                      "field": "venous_pH",
+                      "logic_version": "four-state-1",
+                      "nonblocking_ancestor": "root",
+                      "operator": "<",
+                      "path": "root/2/0",
+                      "reasons": [],
+                      "required_for_resolution": false,
+                      "state": true,
+                      "truth_state": "TRUE"
+                    },
+                    {
+                      "actual": null,
+                      "expected": 18,
+                      "field": "bicarbonate_mmol_l",
+                      "logic_version": "four-state-1",
+                      "nonblocking_ancestor": "root",
+                      "operator": "<",
+                      "path": "root/2/1",
+                      "reasons": [
+                        "NOT_AVAILABLE"
+                      ],
+                      "required_for_resolution": false,
+                      "state": null,
+                      "truth_state": "UNKNOWN"
+                    }
+                  ],
+                  "decisive_children": [
+                    "root/2/0"
+                  ],
+                  "logic_version": "four-state-1",
+                  "operator": "any_of",
+                  "path": "root/2",
+                  "required_for_resolution": false,
+                  "state": true,
+                  "truth_state": "TRUE"
+                }
+              ],
+              "decisive_children": [
+                "root/0",
+                "root/1",
+                "root/2"
+              ],
+              "logic_version": "four-state-1",
+              "operator": "all_of",
+              "path": "root",
+              "required_for_resolution": false,
+              "state": true,
+              "truth_state": "TRUE"
+            },
+            "invalid_fields": [],
+            "invalid_required": [],
+            "limitations": [
+              "RESEARCH_ONLY",
+              "TERRESTRIAL_CRITERIA_NOT_SPACE_VALIDATION",
+              "CRITERIA_NOT_MET_DOES_NOT_EXCLUDE_DISEASE",
+              "MANUAL_OBSERVATIONS_USE_DECLARED_WINDOW_NOT_VALIDATED_FRESHNESS",
+              "MEASUREMENT_CONTEXT_ATTESTED_NOT_INDEPENDENTLY_VERIFIED",
+              "URGENCY_RESEARCH_POLICY_NOT_VALIDATED_TRIAGE"
+            ],
+            "metadata": {
+              "aki_stage": null,
+              "aki_stage_is_minimum_supported": false,
+              "clinical_validation": "NOT_VALIDATED",
+              "derivation_inputs": {},
+              "disease_excluded": false,
+              "hypoglycemia_level_minimum_supported": null,
+              "resolution_status": "NOT_MET"
+            },
+            "missing_fields": [
+              "bicarbonate_mmol_l",
+              "urine_ketones_plus"
+            ],
+            "missing_required": [],
+            "missing_requirement_semantics": "UNRESOLVED_CANDIDATES_RESPECT_AND_OR_NOT_ALL_MANDATORY",
+            "optional_not_measured": [
+              "bicarbonate_mmol_l",
+              "urine_ketones_plus"
+            ],
+            "protocol": {
+              "authorization": "NO_VERIFIED_MISSION_POLICY",
+              "automatic_execution": false,
+              "block_reasons": [
+                "BLOCKED_CONTRAINDICATION:POTASSIUM_NOT_ABOVE_3_5",
+                "BLOCKED_RESOURCE",
+                "BLOCKED_AUTHORIZATION"
+              ],
+              "indication_supported": true,
+              "missing_resources": [
+                "validated_glucose_measurement",
+                "potassium_measurement",
+                "electrolytes",
+                "beta_hydroxybutyrate",
+                "venous_pH_or_bicarbonate",
+                "IV_access_capability",
+                "IV_fluid_capability",
+                "insulin_inventory",
+                "continuous_or_frequent_monitoring"
+              ],
+              "protocol_id": "PROT-DKA-ADULT-2024",
+              "required_for_protocol_safety": [],
+              "status": "BLOCKED_CONTRAINDICATION"
+            },
+            "protocol_status": "BLOCKED_CONTRAINDICATION",
+            "required_for_protocol_safety": [],
+            "source_ids": [
+              "SRC-DKA-2024"
+            ],
+            "source_statuses": {
+              "SRC-DKA-2024": "PINNED_VERIFIED_AT_REPORT_DATE_NOT_CONTINUOUSLY_VERIFIED"
+            },
+            "space_applicability": "REQUIRES_SPACE_SPECIFIC_VALIDATION",
+            "treatment_status": "NOT_STARTED",
+            "urgency": "EMERGENCY"
+          }
+        },
+        "treatment_status": "NOT_STARTED",
+        "urgency": "EMERGENCY",
+        "as_of": "2026-10-16T12:00:00Z",
+        "condition_id": "DKA",
+        "presentation_id": null,
+        "observations": [
+          {
+            "id": "known_diabetes-collection",
+            "concept": "known_diabetes",
+            "value": true,
+            "unit": "1",
+            "timestamp": "2026-10-16T12:00:00Z",
+            "quality": "VALID",
+            "method": "SYNTHETIC_OBSERVATION",
+            "provenance": "SYNTHETIC_REPORT_ADAPTER_NOT_CLINICAL_VALIDATION"
+          },
+          {
+            "id": "potassium_mmol_l-collection",
+            "concept": "potassium_mmol_l",
+            "value": 3.2,
+            "unit": "mmol/L",
+            "timestamp": "2026-10-16T12:00:00Z",
+            "quality": "VALID",
+            "method": "SYNTHETIC_OBSERVATION",
+            "provenance": "SYNTHETIC_REPORT_ADAPTER_NOT_CLINICAL_VALIDATION"
+          },
+          {
+            "id": "demo-plasma_glucose_mg_dl",
+            "concept": "plasma_glucose_mg_dl",
+            "value": 180.0,
+            "unit": "mg/dL",
+            "timestamp": "2026-10-16T12:00:00Z",
+            "quality": "VALID",
+            "method": "VENOUS_PLASMA",
+            "provenance": "SYNTHETIC_ONLY"
+          },
+          {
+            "id": "demo-beta_hydroxybutyrate_mmol_l",
+            "concept": "beta_hydroxybutyrate_mmol_l",
+            "value": 4.2,
+            "unit": "mmol/L",
+            "timestamp": "2026-10-16T12:00:00Z",
+            "quality": "VALID",
+            "method": "SYNTHETIC_LAB",
+            "provenance": "SYNTHETIC_ONLY"
+          },
+          {
+            "id": "demo-venous_pH",
+            "concept": "venous_pH",
+            "value": 7.22,
+            "unit": "pH",
+            "timestamp": "2026-10-16T12:00:00Z",
+            "quality": "VALID",
+            "method": "VENOUS_BLOOD_GAS",
+            "provenance": "SYNTHETIC_ONLY"
+          }
+        ]
+      }
+    ],
+    "limits": {
+      "measurements": 1000,
+      "evaluations": 100
+    },
+    "clinical_execution": "BLOCKED"
+  },
+  "assistant_request": {
+    "evaluation_id": "ce-d4421c0acf5b4200bdc5c322e9b8971c",
+    "question": "¿Qué datos faltan y qué pruebas se recomiendan?"
+  },
+  "assistant_response": {
+    "status": "DETERMINISTIC_DATA_SUFFICIENCY",
+    "inference_executed": false,
+    "inference_attempted": false,
+    "message": "Clasificación emitida directamente por el motor; sin reinterpretación del LLM.",
+    "retrieved": [
+      {
+        "id": "E10",
+        "kind": "ENGINE",
+        "text": "Prueba recomendada OBTAIN_POTASSIUM_SAFETY_DATA: [{\"condition_id\": \"DKA\", \"reason\": \"PROTOCOL_REQUIRES_POTASSIUM\", \"purpose\": \"PROTOCOL_SAFETY\", \"source_ids\": [\"SRC-DKA-2024\"]}]. No es una orden autorizada.",
+        "reference": {
+          "evaluation_id": "ce-d4421c0acf5b4200bdc5c322e9b8971c"
+        }
+      },
+      {
+        "id": "E2",
+        "kind": "ENGINE",
+        "text": "DKA: suficiencia de datos. Estado del motor: CRITERIA_MET. Datos pendientes para resolver ramas indeterminadas: ninguno. Las opciones siguen la lógica AND/OR; esta lista no significa que deban medirse todas. Alternativas no medidas que no bloquean este resultado: bicarbonato, cetonas urinarias. Datos inválidos que impiden resolver ramas: ninguno. Datos pendientes para seguridad del protocolo: potasio. Protocolo: BLOCKED_MISSING_DATA. La seguridad terapéutica es independiente de los criterios diagnósticos. Cumplir criterios no es un diagnóstico firmado ni autoriza tratamiento.",
+        "reference": {
+          "evaluation_id": "ce-d4421c0acf5b4200bdc5c322e9b8971c",
+          "condition_id": "DKA",
+          "source_ids": [
+            "SRC-DKA-2024"
+          ],
+          "input_hash": "c2c168db768e4e73e298159fd80df2c4c39e057eda6aa5dc915abd27ccef4723"
+        },
+        "clinical_contract": {
+          "diagnostic_status": "CRITERIA_MET",
+          "missing_required": [],
+          "optional_not_measured": [
+            "bicarbonate_mmol_l",
+            "urine_ketones_plus"
+          ],
+          "required_for_protocol_safety": [
+            "potassium_mmol_l"
+          ]
+        }
+      }
+    ],
+    "answer": [
+      {
+        "id": "E10",
+        "kind": "ENGINE",
+        "text": "Prueba recomendada OBTAIN_POTASSIUM_SAFETY_DATA: [{\"condition_id\": \"DKA\", \"reason\": \"PROTOCOL_REQUIRES_POTASSIUM\", \"purpose\": \"PROTOCOL_SAFETY\", \"source_ids\": [\"SRC-DKA-2024\"]}]. No es una orden autorizada.",
+        "reference": {
+          "evaluation_id": "ce-d4421c0acf5b4200bdc5c322e9b8971c"
+        }
+      },
+      {
+        "id": "E2",
+        "kind": "ENGINE",
+        "text": "DKA: suficiencia de datos. Estado del motor: CRITERIA_MET. Datos pendientes para resolver ramas indeterminadas: ninguno. Las opciones siguen la lógica AND/OR; esta lista no significa que deban medirse todas. Alternativas no medidas que no bloquean este resultado: bicarbonato, cetonas urinarias. Datos inválidos que impiden resolver ramas: ninguno. Datos pendientes para seguridad del protocolo: potasio. Protocolo: BLOCKED_MISSING_DATA. La seguridad terapéutica es independiente de los criterios diagnósticos. Cumplir criterios no es un diagnóstico firmado ni autoriza tratamiento.",
+        "reference": {
+          "evaluation_id": "ce-d4421c0acf5b4200bdc5c322e9b8971c",
+          "condition_id": "DKA",
+          "source_ids": [
+            "SRC-DKA-2024"
+          ],
+          "input_hash": "c2c168db768e4e73e298159fd80df2c4c39e057eda6aa5dc915abd27ccef4723"
+        },
+        "clinical_contract": {
+          "diagnostic_status": "CRITERIA_MET",
+          "missing_required": [],
+          "optional_not_measured": [
+            "bicarbonate_mmol_l",
+            "urine_ketones_plus"
+          ],
+          "required_for_protocol_safety": [
+            "potassium_mmol_l"
+          ]
+        }
+      }
+    ],
+    "sources": [
+      {
+        "source": {
+          "source_id": "SRC-DKA-2024",
+          "organization": "ADA/EASD/AACE/JBDS/DTS expert panel",
+          "title": "Hyperglycemic Crises in Adults With Diabetes: A Consensus Report",
+          "year": 2024,
+          "section": "Section 3, Figure 2A, Table 2; Section 4",
+          "doi": "10.2337/dci24-0032",
+          "url": "https://doi.org/10.2337/dci24-0032",
+          "type": "MULTISOCIETY_CONSENSUS_REPORT",
+          "verification": "VERIFIED",
+          "use": [
+            "DKA_diagnosis",
+            "DKA_monitoring",
+            "DKA_treatment"
+          ]
+        },
+        "source_status": "PINNED_VERIFIED_AT_REPORT_DATE_NOT_CONTINUOUSLY_VERIFIED"
+      }
+    ],
+    "model_status": {
+      "available": true,
+      "reason": "LOCAL_MODEL_READY",
+      "model": "vigile-qwen3-4b:latest",
+      "mode": "FULL",
+      "provider": "ollama"
+    },
+    "evaluation_id": "ce-d4421c0acf5b4200bdc5c322e9b8971c",
+    "generated": [],
+    "mode": "FULL",
+    "document_issues": [],
+    "consistency_policy": "ENGINE_DATA_REQUIREMENTS_ONLY",
+    "history_used": false,
+    "inference_trace": {
+      "model_requests_attempted": 0,
+      "explanation_accepted": false,
+      "request_attempt_is_not_completed_inference": true,
+      "legacy_inference_executed_is_not_a_runtime_counter": true
+    }
+  }
+}

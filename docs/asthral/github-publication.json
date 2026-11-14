@@ -1,0 +1,22 @@
+{
+  "account": "GiaDiGr",
+  "repo_url": "https://github.com/GiaDiGr/ASTHRAL",
+  "visibility": "PRIVATE",
+  "default_branch": "main",
+  "branches": {
+    "main": "a28b70837cb4202b610b6239f2a1e88244d1fa2c",
+    "feature/asthral-hybrid": "a28b70837cb4202b610b6239f2a1e88244d1fa2c"
+  },
+  "commit_sha": "a28b70837cb4202b610b6239f2a1e88244d1fa2c",
+  "remote_tree_files": 208,
+  "remote_tree_matches_exact_reviewed_manifest": true,
+  "source_pushed": true,
+  "secrets_databases_models_and_private_configs_excluded": true,
+  "no_force_push": true,
+  "collaborator_invitations_sent": false,
+  "project_license_added": false,
+  "git_remote_sha_verified_with_Windows_trusted_TLS": true,
+  "repo_local_git_ssl_backend": "schannel",
+  "certificate_verification_disabled": false,
+  "temporary_DPAPI_credential_copy_removed": true
+}

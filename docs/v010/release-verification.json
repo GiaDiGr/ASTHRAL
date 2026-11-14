@@ -1,0 +1,446 @@
+{
+  "clinical_validation": false,
+  "replays": [
+    {
+      "id": "ce-d4421c0acf5b4200bdc5c322e9b8971c",
+      "matches": true
+    },
+    {
+      "id": "ce-00721e212857491d8a022b33e7f067e1",
+      "matches": true
+    },
+    {
+      "id": "ce-65bc6d503c104e218ae0981adca29bca",
+      "matches": true
+    },
+    {
+      "id": "ce-b96995185d8045ba99553175a37a3f2c",
+      "matches": true
+    },
+    {
+      "id": "ce-12d74ee38dd85f5b5de59754a4aa59a7",
+      "matches": true
+    },
+    {
+      "id": "ce-3ea7170a1ff9ca64d2a5c4d3c9eeb95b",
+      "matches": true
+    },
+    {
+      "id": "ce-8c60945c4d6f45236dacaed284fbb19d",
+      "matches": true
+    },
+    {
+      "id": "ce-95a21c7375dc35b79b8e74a289e853e2",
+      "matches": true
+    },
+    {
+      "id": "ce-3667c4aed507bab1023639b342acbc1d",
+      "matches": true
+    },
+    {
+      "id": "ce-363451e4c33baa6635f4be3630b9018d",
+      "matches": true
+    },
+    {
+      "id": "ce-573e9ea7e583a338b19bfecc14c1f71e",
+      "matches": true
+    },
+    {
+      "id": "ce-e6871477f4211b9bf2fe3ecd27701724",
+      "matches": true
+    },
+    {
+      "id": "ce-513fd76f0285a41160a2c82dba4acacb",
+      "matches": true
+    },
+    {
+      "id": "ce-735d7aaafd9198459455e72c05c83378",
+      "matches": true
+    },
+    {
+      "id": "A-cycle-0",
+      "matches": true
+    },
+    {
+      "id": "A-cycle-7",
+      "matches": true
+    },
+    {
+      "id": "A-cycle-14",
+      "matches": true
+    },
+    {
+      "id": "A-cycle-15",
+      "matches": true
+    },
+    {
+      "id": "A-cycle-16",
+      "matches": true
+    },
+    {
+      "id": "ce-25021a33553fbbe9643c2f2fc020f163",
+      "matches": true
+    },
+    {
+      "id": "ce-2d7b1fe54a2fd2702c75d7752efedce5",
+      "matches": true
+    },
+    {
+      "id": "ce-a7cd40dff4114fb0947f5858f9ec3c33",
+      "matches": true
+    },
+    {
+      "id": "ce-ebbf9fe889d19b37ba4806eb86dccd63",
+      "matches": true
+    },
+    {
+      "id": "ce-5c38fa4b4fce37b514f494ab101b3a34",
+      "matches": true
+    },
+    {
+      "id": "ce-cdc3b2c9cdc3d14393938b238f512f73",
+      "matches": true
+    },
+    {
+      "id": "ce-87da4a5fb769ae3ab0988aa8a566f3c9",
+      "matches": true
+    },
+    {
+      "id": "ce-00d65359e6f6197a01d96f74c857eacd",
+      "matches": true
+    },
+    {
+      "id": "ce-c660b2572ea10db2761777f39c319ae6",
+      "matches": true
+    },
+    {
+      "id": "ce-a5a54e51c4cdc6a53c19937e3442ca4a",
+      "matches": true
+    },
+    {
+      "id": "B-cycle-0",
+      "matches": true
+    },
+    {
+      "id": "B-cycle-repeat",
+      "matches": true
+    },
+    {
+      "id": "B-cycle-0.01",
+      "matches": true
+    },
+    {
+      "id": "B-cycle-0.02",
+      "matches": true
+    },
+    {
+      "id": "B-cycle-0.03",
+      "matches": true
+    },
+    {
+      "id": "C-cycle-0",
+      "matches": true
+    },
+    {
+      "id": "C-cycle-7",
+      "matches": true
+    },
+    {
+      "id": "C-cycle-14",
+      "matches": true
+    },
+    {
+      "id": "C-cycle-21",
+      "matches": true
+    },
+    {
+      "id": "C-cycle-28",
+      "matches": true
+    }
+  ],
+  "health": {
+    "status": "ok",
+    "mode": "RESEARCH_ONLY",
+    "clinical_execution": "BLOCKED",
+    "version": "0.10.0"
+  },
+  "reader_write_status": 403,
+  "cross_scope_status": 403,
+  "openapi_status": 200,
+  "implementation_hashes": [
+    "c896211d20b52ade1279aeb306421891f5e29b542f910074d542321c4b815db9"
+  ],
+  "knowledge_hashes": [
+    "b8c568bd645154e5fd67630c7a670ca53904dc04f54904315047a89923839d4e"
+  ],
+  "clinical_vectors": [
+    {
+      "old_id": "ce-65acc9ab2aae40f38446416de43d3f56",
+      "new_id": "ce-d4421c0acf5b4200bdc5c322e9b8971c",
+      "equal": true
+    },
+    {
+      "old_id": "ce-681622a6d0eb4098a1f9a5d79a4a1195",
+      "new_id": "ce-00721e212857491d8a022b33e7f067e1",
+      "equal": true
+    },
+    {
+      "old_id": "ce-fbee88aa8d0a49a79b737142db4bcc76",
+      "new_id": "ce-65bc6d503c104e218ae0981adca29bca",
+      "equal": true
+    },
+    {
+      "old_id": "ce-68c6e2082e194d2d8114f74551a5a25a",
+      "new_id": "ce-b96995185d8045ba99553175a37a3f2c",
+      "equal": true
+    },
+    {
+      "old_id": "ce-12d74ee38dd85f5b5de59754a4aa59a7",
+      "new_id": "ce-12d74ee38dd85f5b5de59754a4aa59a7",
+      "equal": true
+    },
+    {
+      "old_id": "ce-3ea7170a1ff9ca64d2a5c4d3c9eeb95b",
+      "new_id": "ce-3ea7170a1ff9ca64d2a5c4d3c9eeb95b",
+      "equal": true
+    },
+    {
+      "old_id": "ce-8c60945c4d6f45236dacaed284fbb19d",
+      "new_id": "ce-8c60945c4d6f45236dacaed284fbb19d",
+      "equal": true
+    },
+    {
+      "old_id": "ce-95a21c7375dc35b79b8e74a289e853e2",
+      "new_id": "ce-95a21c7375dc35b79b8e74a289e853e2",
+      "equal": true
+    },
+    {
+      "old_id": "ce-3667c4aed507bab1023639b342acbc1d",
+      "new_id": "ce-3667c4aed507bab1023639b342acbc1d",
+      "equal": true
+    },
+    {
+      "old_id": "ce-363451e4c33baa6635f4be3630b9018d",
+      "new_id": "ce-363451e4c33baa6635f4be3630b9018d",
+      "equal": true
+    },
+    {
+      "old_id": "ce-573e9ea7e583a338b19bfecc14c1f71e",
+      "new_id": "ce-573e9ea7e583a338b19bfecc14c1f71e",
+      "equal": true
+    },
+    {
+      "old_id": "ce-e6871477f4211b9bf2fe3ecd27701724",
+      "new_id": "ce-e6871477f4211b9bf2fe3ecd27701724",
+      "equal": true
+    },
+    {
+      "old_id": "ce-513fd76f0285a41160a2c82dba4acacb",
+      "new_id": "ce-513fd76f0285a41160a2c82dba4acacb",
+      "equal": true
+    },
+    {
+      "old_id": "ce-735d7aaafd9198459455e72c05c83378",
+      "new_id": "ce-735d7aaafd9198459455e72c05c83378",
+      "equal": true
+    },
+    {
+      "old_id": "ce-25021a33553fbbe9643c2f2fc020f163",
+      "new_id": "ce-25021a33553fbbe9643c2f2fc020f163",
+      "equal": true
+    },
+    {
+      "old_id": "ce-2d7b1fe54a2fd2702c75d7752efedce5",
+      "new_id": "ce-2d7b1fe54a2fd2702c75d7752efedce5",
+      "equal": true
+    },
+    {
+      "old_id": "ce-a7cd40dff4114fb0947f5858f9ec3c33",
+      "new_id": "ce-a7cd40dff4114fb0947f5858f9ec3c33",
+      "equal": true
+    },
+    {
+      "old_id": "ce-ebbf9fe889d19b37ba4806eb86dccd63",
+      "new_id": "ce-ebbf9fe889d19b37ba4806eb86dccd63",
+      "equal": true
+    },
+    {
+      "old_id": "ce-5c38fa4b4fce37b514f494ab101b3a34",
+      "new_id": "ce-5c38fa4b4fce37b514f494ab101b3a34",
+      "equal": true
+    },
+    {
+      "old_id": "ce-cdc3b2c9cdc3d14393938b238f512f73",
+      "new_id": "ce-cdc3b2c9cdc3d14393938b238f512f73",
+      "equal": true
+    },
+    {
+      "old_id": "ce-87da4a5fb769ae3ab0988aa8a566f3c9",
+      "new_id": "ce-87da4a5fb769ae3ab0988aa8a566f3c9",
+      "equal": true
+    },
+    {
+      "old_id": "ce-00d65359e6f6197a01d96f74c857eacd",
+      "new_id": "ce-00d65359e6f6197a01d96f74c857eacd",
+      "equal": true
+    },
+    {
+      "old_id": "ce-c660b2572ea10db2761777f39c319ae6",
+      "new_id": "ce-c660b2572ea10db2761777f39c319ae6",
+      "equal": true
+    },
+    {
+      "old_id": "ce-a5a54e51c4cdc6a53c19937e3442ca4a",
+      "new_id": "ce-a5a54e51c4cdc6a53c19937e3442ca4a",
+      "equal": true
+    }
+  ],
+  "clinical_counts": [
+    24,
+    24
+  ],
+  "monitoring_vectors": [
+    {
+      "id": "A-cycle-0",
+      "equal": {
+        "domains": false,
+        "events": true,
+        "relations": true
+      }
+    },
+    {
+      "id": "A-cycle-7",
+      "equal": {
+        "domains": false,
+        "events": true,
+        "relations": true
+      }
+    },
+    {
+      "id": "A-cycle-14",
+      "equal": {
+        "domains": false,
+        "events": true,
+        "relations": true
+      }
+    },
+    {
+      "id": "A-cycle-15",
+      "equal": {
+        "domains": true,
+        "events": true,
+        "relations": true
+      }
+    },
+    {
+      "id": "A-cycle-16",
+      "equal": {
+        "domains": true,
+        "events": true,
+        "relations": true
+      }
+    },
+    {
+      "id": "B-cycle-0",
+      "equal": {
+        "domains": true,
+        "events": true,
+        "relations": true
+      }
+    },
+    {
+      "id": "B-cycle-repeat",
+      "equal": {
+        "domains": true,
+        "events": true,
+        "relations": true
+      }
+    },
+    {
+      "id": "B-cycle-0.01",
+      "equal": {
+        "domains": true,
+        "events": true,
+        "relations": true
+      }
+    },
+    {
+      "id": "B-cycle-0.02",
+      "equal": {
+        "domains": true,
+        "events": true,
+        "relations": true
+      }
+    },
+    {
+      "id": "B-cycle-0.03",
+      "equal": {
+        "domains": true,
+        "events": true,
+        "relations": true
+      }
+    },
+    {
+      "id": "C-cycle-0",
+      "equal": {
+        "domains": false,
+        "events": true,
+        "relations": true
+      }
+    },
+    {
+      "id": "C-cycle-7",
+      "equal": {
+        "domains": false,
+        "events": true,
+        "relations": true
+      }
+    },
+    {
+      "id": "C-cycle-14",
+      "equal": {
+        "domains": false,
+        "events": true,
+        "relations": true
+      }
+    },
+    {
+      "id": "C-cycle-21",
+      "equal": {
+        "domains": false,
+        "events": true,
+        "relations": true
+      }
+    },
+    {
+      "id": "C-cycle-28",
+      "equal": {
+        "domains": false,
+        "events": true,
+        "relations": true
+      }
+    }
+  ],
+  "monitoring_descriptive_values_equal": true,
+  "audit_valid": true,
+  "checkpoint": {
+    "sequence": 254,
+    "hash": "6da2ec8ddd24fc5859279214f46053c8c4c8e69d682eb881de04ed7a3a015387"
+  },
+  "external_anchor": {
+    "valid": true,
+    "anchored_prefix": {
+      "record_sequence": 244,
+      "record_count": 244,
+      "records_hash": "6782696de2c725d1db9c12bc1760ca6e0bab77b28dc255905bcddb120e079d1d",
+      "audit_sequence": 246,
+      "audit_hash": "a8e0e228e8ab6d649c12cc3250db211db1f368ed1ed8c7db18b88c9326f6b65e"
+    },
+    "latest_checkpoint": {
+      "sequence": 254,
+      "hash": "6da2ec8ddd24fc5859279214f46053c8c4c8e69d682eb881de04ed7a3a015387"
+    },
+    "protection": "DB_ONLY_TAMPERING_DETECTION_NOT_SAME_USER_COMPROMISE"
+  },
+  "reserved_bank_unchanged": true
+}

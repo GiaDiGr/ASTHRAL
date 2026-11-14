@@ -1,0 +1,3070 @@
+{
+  "version": "before",
+  "reserved_bank_read": false,
+  "rows": [
+    {
+      "kind": "baseline",
+      "target": "mission-crew-A-cycle-35",
+      "question": "What is changing compared with my baseline?",
+      "seconds": 11.445245900002192,
+      "response": {
+        "status": "EXTRACTIVE_FALLBACK",
+        "run_id": "mission-crew-A-cycle-35",
+        "evaluation_id": null,
+        "as_of": "2026-09-05T12:00:00+00:00",
+        "mode": "FULL",
+        "message": "Explicación rechazada o fallida; se muestran resultados exactos del motor. / Generation rejected or failed; exact engine results retained.",
+        "answer": [
+          {
+            "id": "M1",
+            "kind": "ENGINE",
+            "category": "LIMITATION",
+            "text": "Monitorización experimental / Experimental monitoring. Cambios numéricos no equivalen a empeoramiento clínico / numeric changes are not clinical worsening. No diagnóstico firmado, no tratamiento autorizado. / No signed diagnosis or treatment authorization.",
+            "reference": {
+              "run_id": "mission-crew-A-cycle-35",
+              "as_of": "2026-09-05T12:00:00+00:00",
+              "output_hash": "e3cf716890d2a0c7b86b4459fa8e948b4915f3d2202f1a4a36b33ed91b8a8490"
+            }
+          },
+          {
+            "id": "M12",
+            "kind": "ENGINE",
+            "category": "BASELINE",
+            "text": "physiology.strength: baseline 500.0 N; cambio absoluto / absolute change -105.0; retención / retention 79.0%. Descriptivo, no diagnóstico / descriptive, not diagnosis.",
+            "reference": {
+              "run_id": "mission-crew-A-cycle-35",
+              "as_of": "2026-09-05T12:00:00+00:00",
+              "output_hash": "e3cf716890d2a0c7b86b4459fa8e948b4915f3d2202f1a4a36b33ed91b8a8490",
+              "variable": "physiology.strength",
+              "baseline_id": "mission-crew-A-baseline-1",
+              "source_ids": [
+                "S01",
+                "S06"
+              ]
+            }
+          },
+          {
+            "id": "M39",
+            "kind": "ENGINE",
+            "category": "CHANGE",
+            "text": "Cambio desde revisión anterior / change since previous review: {\"variable\": \"physiology.vo2max\", \"previous\": 38.193, \"current\": 35.315, \"previous_state\": \"DESCRIPTIVE_AVAILABLE\", \"current_state\": \"DESCRIPTIVE_AVAILABLE\"}",
+            "reference": {
+              "run_id": "mission-crew-A-cycle-35",
+              "as_of": "2026-09-05T12:00:00+00:00",
+              "output_hash": "e3cf716890d2a0c7b86b4459fa8e948b4915f3d2202f1a4a36b33ed91b8a8490",
+              "previous_run_id": "mission-crew-A-cycle-28"
+            }
+          },
+          {
+            "id": "M13",
+            "kind": "ENGINE",
+            "category": "TREND",
+            "text": "physiology.strength: pendiente / slope -3.0 N/day; EWMA/CUSUM por observación / per observation; RESEARCH_ONLY. No umbral clínico / no clinical threshold.",
+            "reference": {
+              "run_id": "mission-crew-A-cycle-35",
+              "as_of": "2026-09-05T12:00:00+00:00",
+              "output_hash": "e3cf716890d2a0c7b86b4459fa8e948b4915f3d2202f1a4a36b33ed91b8a8490",
+              "variable": "physiology.strength",
+              "source_ids": [
+                "S01",
+                "S06"
+              ]
+            }
+          },
+          {
+            "id": "M20",
+            "kind": "ENGINE",
+            "category": "BASELINE",
+            "text": "sleep.duration: baseline 8.0 h; cambio absoluto / absolute change -1.4000000000000004; retención / retention 82.5%. Descriptivo, no diagnóstico / descriptive, not diagnosis.",
+            "reference": {
+              "run_id": "mission-crew-A-cycle-35",
+              "as_of": "2026-09-05T12:00:00+00:00",
+              "output_hash": "e3cf716890d2a0c7b86b4459fa8e948b4915f3d2202f1a4a36b33ed91b8a8490",
+              "variable": "sleep.duration",
+              "baseline_id": "mission-crew-A-baseline-2",
+              "source_ids": [
+                "S10",
+                "S12"
+              ]
+            }
+          },
+          {
+            "id": "M5",
+            "kind": "ENGINE",
+            "category": "BASELINE",
+            "text": "physiology.vo2max: baseline 50.0 mL/min/kg; cambio absoluto / absolute change -14.685000000000002; retención / retention 70.63%. Descriptivo, no diagnóstico / descriptive, not diagnosis.",
+            "reference": {
+              "run_id": "mission-crew-A-cycle-35",
+              "as_of": "2026-09-05T12:00:00+00:00",
+              "output_hash": "e3cf716890d2a0c7b86b4459fa8e948b4915f3d2202f1a4a36b33ed91b8a8490",
+              "variable": "physiology.vo2max",
+              "baseline_id": "mission-crew-A-baseline-0",
+              "source_ids": [
+                "S01",
+                "S05"
+              ]
+            }
+          },
+          {
+            "id": "M21",
+            "kind": "ENGINE",
+            "category": "TREND",
+            "text": "sleep.duration: pendiente / slope -0.04000000000000001 h/day; EWMA/CUSUM por observación / per observation; RESEARCH_ONLY. No umbral clínico / no clinical threshold.",
+            "reference": {
+              "run_id": "mission-crew-A-cycle-35",
+              "as_of": "2026-09-05T12:00:00+00:00",
+              "output_hash": "e3cf716890d2a0c7b86b4459fa8e948b4915f3d2202f1a4a36b33ed91b8a8490",
+              "variable": "sleep.duration",
+              "source_ids": [
+                "S10",
+                "S12"
+              ]
+            }
+          },
+          {
+            "id": "M28",
+            "kind": "ENGINE",
+            "category": "TREND",
+            "text": "environment.ppo2: pendiente / slope 0.03172792398235928 kPa/day; EWMA/CUSUM por observación / per observation; RESEARCH_ONLY. No umbral clínico / no clinical threshold.",
+            "reference": {
+              "run_id": "mission-crew-A-cycle-35",
+              "as_of": "2026-09-05T12:00:00+00:00",
+              "output_hash": "e3cf716890d2a0c7b86b4459fa8e948b4915f3d2202f1a4a36b33ed91b8a8490",
+              "variable": "environment.ppo2",
+              "source_ids": [
+                "S14",
+                "SRC-DKA-2024"
+              ]
+            }
+          },
+          {
+            "id": "M40",
+            "kind": "ENGINE",
+            "category": "CHANGE",
+            "text": "Cambio desde revisión anterior / change since previous review: {\"variable\": \"physiology.heart_rate\", \"previous\": 79.2, \"current\": 82.0, \"previous_state\": \"DESCRIPTIVE_AVAILABLE\", \"current_state\": \"DESCRIPTIVE_AVAILABLE\"}",
+            "reference": {
+              "run_id": "mission-crew-A-cycle-35",
+              "as_of": "2026-09-05T12:00:00+00:00",
+              "output_hash": "e3cf716890d2a0c7b86b4459fa8e948b4915f3d2202f1a4a36b33ed91b8a8490",
+              "previous_run_id": "mission-crew-A-cycle-28"
+            }
+          },
+          {
+            "id": "M41",
+            "kind": "ENGINE",
+            "category": "CHANGE",
+            "text": "Cambio desde revisión anterior / change since previous review: {\"variable\": \"physiology.strength\", \"previous\": 416.0, \"current\": 395.0, \"previous_state\": \"DESCRIPTIVE_AVAILABLE\", \"current_state\": \"DESCRIPTIVE_AVAILABLE\"}",
+            "reference": {
+              "run_id": "mission-crew-A-cycle-35",
+              "as_of": "2026-09-05T12:00:00+00:00",
+              "output_hash": "e3cf716890d2a0c7b86b4459fa8e948b4915f3d2202f1a4a36b33ed91b8a8490",
+              "previous_run_id": "mission-crew-A-cycle-28"
+            }
+          },
+          {
+            "id": "M42",
+            "kind": "ENGINE",
+            "category": "CHANGE",
+            "text": "Cambio desde revisión anterior / change since previous review: {\"variable\": \"sleep.duration\", \"previous\": 6.88, \"current\": 6.6, \"previous_state\": \"DESCRIPTIVE_AVAILABLE\", \"current_state\": \"DESCRIPTIVE_AVAILABLE\"}",
+            "reference": {
+              "run_id": "mission-crew-A-cycle-35",
+              "as_of": "2026-09-05T12:00:00+00:00",
+              "output_hash": "e3cf716890d2a0c7b86b4459fa8e948b4915f3d2202f1a4a36b33ed91b8a8490",
+              "previous_run_id": "mission-crew-A-cycle-28"
+            }
+          }
+        ],
+        "retrieved": [
+          {
+            "id": "M1",
+            "kind": "ENGINE",
+            "category": "LIMITATION",
+            "text": "Monitorización experimental / Experimental monitoring. Cambios numéricos no equivalen a empeoramiento clínico / numeric changes are not clinical worsening. No diagnóstico firmado, no tratamiento autorizado. / No signed diagnosis or treatment authorization.",
+            "reference": {
+              "run_id": "mission-crew-A-cycle-35",
+              "as_of": "2026-09-05T12:00:00+00:00",
+              "output_hash": "e3cf716890d2a0c7b86b4459fa8e948b4915f3d2202f1a4a36b33ed91b8a8490"
+            }
+          },
+          {
+            "id": "M12",
+            "kind": "ENGINE",
+            "category": "BASELINE",
+            "text": "physiology.strength: baseline 500.0 N; cambio absoluto / absolute change -105.0; retención / retention 79.0%. Descriptivo, no diagnóstico / descriptive, not diagnosis.",
+            "reference": {
+              "run_id": "mission-crew-A-cycle-35",
+              "as_of": "2026-09-05T12:00:00+00:00",
+              "output_hash": "e3cf716890d2a0c7b86b4459fa8e948b4915f3d2202f1a4a36b33ed91b8a8490",
+              "variable": "physiology.strength",
+              "baseline_id": "mission-crew-A-baseline-1",
+              "source_ids": [
+                "S01",
+                "S06"
+              ]
+            }
+          },
+          {
+            "id": "M39",
+            "kind": "ENGINE",
+            "category": "CHANGE",
+            "text": "Cambio desde revisión anterior / change since previous review: {\"variable\": \"physiology.vo2max\", \"previous\": 38.193, \"current\": 35.315, \"previous_state\": \"DESCRIPTIVE_AVAILABLE\", \"current_state\": \"DESCRIPTIVE_AVAILABLE\"}",
+            "reference": {
+              "run_id": "mission-crew-A-cycle-35",
+              "as_of": "2026-09-05T12:00:00+00:00",
+              "output_hash": "e3cf716890d2a0c7b86b4459fa8e948b4915f3d2202f1a4a36b33ed91b8a8490",
+              "previous_run_id": "mission-crew-A-cycle-28"
+            }
+          },
+          {
+            "id": "M13",
+            "kind": "ENGINE",
+            "category": "TREND",
+            "text": "physiology.strength: pendiente / slope -3.0 N/day; EWMA/CUSUM por observación / per observation; RESEARCH_ONLY. No umbral clínico / no clinical threshold.",
+            "reference": {
+              "run_id": "mission-crew-A-cycle-35",
+              "as_of": "2026-09-05T12:00:00+00:00",
+              "output_hash": "e3cf716890d2a0c7b86b4459fa8e948b4915f3d2202f1a4a36b33ed91b8a8490",
+              "variable": "physiology.strength",
+              "source_ids": [
+                "S01",
+                "S06"
+              ]
+            }
+          },
+          {
+            "id": "M20",
+            "kind": "ENGINE",
+            "category": "BASELINE",
+            "text": "sleep.duration: baseline 8.0 h; cambio absoluto / absolute change -1.4000000000000004; retención / retention 82.5%. Descriptivo, no diagnóstico / descriptive, not diagnosis.",
+            "reference": {
+              "run_id": "mission-crew-A-cycle-35",
+              "as_of": "2026-09-05T12:00:00+00:00",
+              "output_hash": "e3cf716890d2a0c7b86b4459fa8e948b4915f3d2202f1a4a36b33ed91b8a8490",
+              "variable": "sleep.duration",
+              "baseline_id": "mission-crew-A-baseline-2",
+              "source_ids": [
+                "S10",
+                "S12"
+              ]
+            }
+          },
+          {
+            "id": "M5",
+            "kind": "ENGINE",
+            "category": "BASELINE",
+            "text": "physiology.vo2max: baseline 50.0 mL/min/kg; cambio absoluto / absolute change -14.685000000000002; retención / retention 70.63%. Descriptivo, no diagnóstico / descriptive, not diagnosis.",
+            "reference": {
+              "run_id": "mission-crew-A-cycle-35",
+              "as_of": "2026-09-05T12:00:00+00:00",
+              "output_hash": "e3cf716890d2a0c7b86b4459fa8e948b4915f3d2202f1a4a36b33ed91b8a8490",
+              "variable": "physiology.vo2max",
+              "baseline_id": "mission-crew-A-baseline-0",
+              "source_ids": [
+                "S01",
+                "S05"
+              ]
+            }
+          },
+          {
+            "id": "M21",
+            "kind": "ENGINE",
+            "category": "TREND",
+            "text": "sleep.duration: pendiente / slope -0.04000000000000001 h/day; EWMA/CUSUM por observación / per observation; RESEARCH_ONLY. No umbral clínico / no clinical threshold.",
+            "reference": {
+              "run_id": "mission-crew-A-cycle-35",
+              "as_of": "2026-09-05T12:00:00+00:00",
+              "output_hash": "e3cf716890d2a0c7b86b4459fa8e948b4915f3d2202f1a4a36b33ed91b8a8490",
+              "variable": "sleep.duration",
+              "source_ids": [
+                "S10",
+                "S12"
+              ]
+            }
+          },
+          {
+            "id": "M28",
+            "kind": "ENGINE",
+            "category": "TREND",
+            "text": "environment.ppo2: pendiente / slope 0.03172792398235928 kPa/day; EWMA/CUSUM por observación / per observation; RESEARCH_ONLY. No umbral clínico / no clinical threshold.",
+            "reference": {
+              "run_id": "mission-crew-A-cycle-35",
+              "as_of": "2026-09-05T12:00:00+00:00",
+              "output_hash": "e3cf716890d2a0c7b86b4459fa8e948b4915f3d2202f1a4a36b33ed91b8a8490",
+              "variable": "environment.ppo2",
+              "source_ids": [
+                "S14",
+                "SRC-DKA-2024"
+              ]
+            }
+          },
+          {
+            "id": "M40",
+            "kind": "ENGINE",
+            "category": "CHANGE",
+            "text": "Cambio desde revisión anterior / change since previous review: {\"variable\": \"physiology.heart_rate\", \"previous\": 79.2, \"current\": 82.0, \"previous_state\": \"DESCRIPTIVE_AVAILABLE\", \"current_state\": \"DESCRIPTIVE_AVAILABLE\"}",
+            "reference": {
+              "run_id": "mission-crew-A-cycle-35",
+              "as_of": "2026-09-05T12:00:00+00:00",
+              "output_hash": "e3cf716890d2a0c7b86b4459fa8e948b4915f3d2202f1a4a36b33ed91b8a8490",
+              "previous_run_id": "mission-crew-A-cycle-28"
+            }
+          },
+          {
+            "id": "M41",
+            "kind": "ENGINE",
+            "category": "CHANGE",
+            "text": "Cambio desde revisión anterior / change since previous review: {\"variable\": \"physiology.strength\", \"previous\": 416.0, \"current\": 395.0, \"previous_state\": \"DESCRIPTIVE_AVAILABLE\", \"current_state\": \"DESCRIPTIVE_AVAILABLE\"}",
+            "reference": {
+              "run_id": "mission-crew-A-cycle-35",
+              "as_of": "2026-09-05T12:00:00+00:00",
+              "output_hash": "e3cf716890d2a0c7b86b4459fa8e948b4915f3d2202f1a4a36b33ed91b8a8490",
+              "previous_run_id": "mission-crew-A-cycle-28"
+            }
+          },
+          {
+            "id": "M42",
+            "kind": "ENGINE",
+            "category": "CHANGE",
+            "text": "Cambio desde revisión anterior / change since previous review: {\"variable\": \"sleep.duration\", \"previous\": 6.88, \"current\": 6.6, \"previous_state\": \"DESCRIPTIVE_AVAILABLE\", \"current_state\": \"DESCRIPTIVE_AVAILABLE\"}",
+            "reference": {
+              "run_id": "mission-crew-A-cycle-35",
+              "as_of": "2026-09-05T12:00:00+00:00",
+              "output_hash": "e3cf716890d2a0c7b86b4459fa8e948b4915f3d2202f1a4a36b33ed91b8a8490",
+              "previous_run_id": "mission-crew-A-cycle-28"
+            }
+          },
+          {
+            "id": "D-3441ce8f662c3ba32532",
+            "kind": "DOCUMENT",
+            "text": " AKI | **VERIFIED** con KDIGO 2012 | Baseline/ventana o diuresis | **VERIFIED** en alto nivel | Evaluación etiológica y soporte | `REQUIRES_SPACE_SPECIFIC_VALIDATION` | Implementar |\n| Anafilaxia | **VERIFIED** | No requiere una prueba de laboratorio previa | **VERIFIED** | Epinefrina IM de primera línea bien definida | `APPLICABLE_WITH_LIMITATIONS` | Implementar como emergencia |\n| Mareo/taquicardia | No es un diagnóstico | No aplica | **Motor determinista propuesto** | Deriva a la ruta apropiada | Dependiente del contexto gravitatorio | Implementar como orquestador |",
+            "reference": {
+              "document": "docs/clinical/deep-research-report-2026-10-16.md",
+              "sha256": "38ad3ab166f25a8b46c1e1f483ba813510c34dc766171389307635ecf7e8a715",
+              "version": "2026-10-16",
+              "authority": "CLINICAL_RESEARCH_SYNTHESIS",
+              "char_start": 3314,
+              "char_end": 3889,
+              "line": 19
+            },
+            "retrieval_score": 4.615569
+          },
+          {
+            "id": "D-550983fa4595c114e10d",
+            "kind": "DOCUMENT",
+            "text": "```text\nglucose wrong unit\ncreatinine wrong unit\nunconvertible unit\ntimestamp missing\nmeasurement outside temporal window\ninvalid assay\ninvalid fasting duration\nA1C-glucose discordance\nCGM supplied instead of plasma glucose\nDKA missing ketones\nDKA missing acid-base data\nDKA potassium missing before treatment eligibility\nDKA potassium <3.5\nOH measurement >3 min when evaluating classic criterion\nOH missing baseline\nPOTS symptoms <3 months\nPOTS dehydration\nPOTS infection\nPOTS orthostatic hypotension present\northostatic test in free microgravity\nAKI missing baseline and missing urine output\nAKI invalid urine collection window\nanaphylaxis without sufficient clinical combination\nanaphylaxis without skin but valid WAO pathway 2\nepinephrine inventory unavailable\nmission authorization absent\nknowledge source superseded\ncriterion source marked DRAFT\nLLM attempts to modify criterion\nLLM attempts to authorize protocol\nLLM attempts to change a dose\nreplay with same input and knowledge hash\n```",
+            "reference": {
+              "document": "docs/clinical/deep-research-report-2026-10-16.md",
+              "sha256": "38ad3ab166f25a8b46c1e1f483ba813510c34dc766171389307635ecf7e8a715",
+              "version": "2026-10-16",
+              "authority": "CLINICAL_RESEARCH_SYNTHESIS",
+              "char_start": 96013,
+              "char_end": 97008,
+              "line": 2600
+            },
+            "retrieval_score": 3.879465
+          },
+          {
+            "id": "D-348f6f6e276875605f09",
+            "kind": "DOCUMENT",
+            "text": "\": \"REQUIRES_SPACE_SPECIFIC_VALIDATION\",\r\n      \"classification\": {\r\n        \"level_1\": \"54 <= glucose < 70 mg/dL\",\r\n        \"level_2\": \"glucose < 54 mg/dL\",\r\n        \"level_3\": \"Clinically attributed severe event with altered mental/physical function requiring assistance, independent of measured glucose\"\r\n      },\r\n      \"limitations\": [\r\n        \"NOT_ETIOLOGIC_DIAGNOSIS\",\r\n        \"CGM_ALONE_NOT_USED_IN_THIS_RESTRICTED_ROUTE\",\r\n        \"NO_FIXED_RECHECK_INTERVAL_WITHOUT_CONTEXT\",\r\n        \"NO_NONDIABETIC_HYPOGLYCEMIA_DIAGNOSIS\"\r\n      ]\r\n    }\r\n  ],\r\n  \"protocols\": [\r\n    {\r\n      \"protocol_id\": \"PROT-HYPO-REVIEW-2026\",\r\n      \"source_ids\": [\r\n        \"SRC-ADA-HYPO-2026\"\r\n      ],\r\n      \"required_resources\": [\r\n        \"verified_glucose_measurement\",\r\n        \"qualified_medical_review\"\r\n      ],\r\n      \"purpose\": \"Review only; no doses or execution\",\r\n      \"mission_approved\": false\r\n    }\r\n  ],\r\n  \"tests\": [\r\n    {\r\n      \"test_id\": \"TEST-HYPO-GLUCOSE\",\r\n      \"source_ids\": [\r\n        \"SRC-ADA-HYPO-2026\"\r\n      ],\r\n      \"purpose\": \"Obtain or verify blood glucose with suitable me",
+            "reference": {
+              "document": "engine/vigile/clinical_knowledge/v07-extension.json",
+              "sha256": "b258ff2d79ab79355f65826466c9fc3e7a52380b749ec18ef2eb4700759e4fd8",
+              "version": "2026.1",
+              "authority": "IMPLEMENTED_CRITERION_NOT_ORIGINAL_ARTICLE",
+              "char_start": 2200,
+              "char_end": 3300,
+              "line": 70
+            },
+            "retrieval_score": 2.569055
+          }
+        ],
+        "generated": [],
+        "documents": [
+          {
+            "id": "D-3441ce8f662c3ba32532",
+            "kind": "DOCUMENT",
+            "text": " AKI | **VERIFIED** con KDIGO 2012 | Baseline/ventana o diuresis | **VERIFIED** en alto nivel | Evaluación etiológica y soporte | `REQUIRES_SPACE_SPECIFIC_VALIDATION` | Implementar |\n| Anafilaxia | **VERIFIED** | No requiere una prueba de laboratorio previa | **VERIFIED** | Epinefrina IM de primera línea bien definida | `APPLICABLE_WITH_LIMITATIONS` | Implementar como emergencia |\n| Mareo/taquicardia | No es un diagnóstico | No aplica | **Motor determinista propuesto** | Deriva a la ruta apropiada | Dependiente del contexto gravitatorio | Implementar como orquestador |",
+            "reference": {
+              "document": "docs/clinical/deep-research-report-2026-10-16.md",
+              "sha256": "38ad3ab166f25a8b46c1e1f483ba813510c34dc766171389307635ecf7e8a715",
+              "version": "2026-10-16",
+              "authority": "CLINICAL_RESEARCH_SYNTHESIS",
+              "char_start": 3314,
+              "char_end": 3889,
+              "line": 19
+            },
+            "retrieval_score": 4.615569
+          },
+          {
+            "id": "D-550983fa4595c114e10d",
+            "kind": "DOCUMENT",
+            "text": "```text\nglucose wrong unit\ncreatinine wrong unit\nunconvertible unit\ntimestamp missing\nmeasurement outside temporal window\ninvalid assay\ninvalid fasting duration\nA1C-glucose discordance\nCGM supplied instead of plasma glucose\nDKA missing ketones\nDKA missing acid-base data\nDKA potassium missing before treatment eligibility\nDKA potassium <3.5\nOH measurement >3 min when evaluating classic criterion\nOH missing baseline\nPOTS symptoms <3 months\nPOTS dehydration\nPOTS infection\nPOTS orthostatic hypotension present\northostatic test in free microgravity\nAKI missing baseline and missing urine output\nAKI invalid urine collection window\nanaphylaxis without sufficient clinical combination\nanaphylaxis without skin but valid WAO pathway 2\nepinephrine inventory unavailable\nmission authorization absent\nknowledge source superseded\ncriterion source marked DRAFT\nLLM attempts to modify criterion\nLLM attempts to authorize protocol\nLLM attempts to change a dose\nreplay with same input and knowledge hash\n```",
+            "reference": {
+              "document": "docs/clinical/deep-research-report-2026-10-16.md",
+              "sha256": "38ad3ab166f25a8b46c1e1f483ba813510c34dc766171389307635ecf7e8a715",
+              "version": "2026-10-16",
+              "authority": "CLINICAL_RESEARCH_SYNTHESIS",
+              "char_start": 96013,
+              "char_end": 97008,
+              "line": 2600
+            },
+            "retrieval_score": 3.879465
+          },
+          {
+            "id": "D-348f6f6e276875605f09",
+            "kind": "DOCUMENT",
+            "text": "\": \"REQUIRES_SPACE_SPECIFIC_VALIDATION\",\r\n      \"classification\": {\r\n        \"level_1\": \"54 <= glucose < 70 mg/dL\",\r\n        \"level_2\": \"glucose < 54 mg/dL\",\r\n        \"level_3\": \"Clinically attributed severe event with altered mental/physical function requiring assistance, independent of measured glucose\"\r\n      },\r\n      \"limitations\": [\r\n        \"NOT_ETIOLOGIC_DIAGNOSIS\",\r\n        \"CGM_ALONE_NOT_USED_IN_THIS_RESTRICTED_ROUTE\",\r\n        \"NO_FIXED_RECHECK_INTERVAL_WITHOUT_CONTEXT\",\r\n        \"NO_NONDIABETIC_HYPOGLYCEMIA_DIAGNOSIS\"\r\n      ]\r\n    }\r\n  ],\r\n  \"protocols\": [\r\n    {\r\n      \"protocol_id\": \"PROT-HYPO-REVIEW-2026\",\r\n      \"source_ids\": [\r\n        \"SRC-ADA-HYPO-2026\"\r\n      ],\r\n      \"required_resources\": [\r\n        \"verified_glucose_measurement\",\r\n        \"qualified_medical_review\"\r\n      ],\r\n      \"purpose\": \"Review only; no doses or execution\",\r\n      \"mission_approved\": false\r\n    }\r\n  ],\r\n  \"tests\": [\r\n    {\r\n      \"test_id\": \"TEST-HYPO-GLUCOSE\",\r\n      \"source_ids\": [\r\n        \"SRC-ADA-HYPO-2026\"\r\n      ],\r\n      \"purpose\": \"Obtain or verify blood glucose with suitable me",
+            "reference": {
+              "document": "engine/vigile/clinical_knowledge/v07-extension.json",
+              "sha256": "b258ff2d79ab79355f65826466c9fc3e7a52380b749ec18ef2eb4700759e4fd8",
+              "version": "2026.1",
+              "authority": "IMPLEMENTED_CRITERION_NOT_ORIGINAL_ARTICLE",
+              "char_start": 2200,
+              "char_end": 3300,
+              "line": 70
+            },
+            "retrieval_score": 2.569055
+          }
+        ],
+        "document_issues": [],
+        "sources": [
+          {
+            "document": "docs/clinical/deep-research-report-2026-10-16.md",
+            "sha256": "38ad3ab166f25a8b46c1e1f483ba813510c34dc766171389307635ecf7e8a715",
+            "version": "2026-10-16",
+            "authority": "CLINICAL_RESEARCH_SYNTHESIS",
+            "char_start": 3314,
+            "char_end": 3889,
+            "line": 19
+          },
+          {
+            "document": "docs/clinical/deep-research-report-2026-10-16.md",
+            "sha256": "38ad3ab166f25a8b46c1e1f483ba813510c34dc766171389307635ecf7e8a715",
+            "version": "2026-10-16",
+            "authority": "CLINICAL_RESEARCH_SYNTHESIS",
+            "char_start": 96013,
+            "char_end": 97008,
+            "line": 2600
+          },
+          {
+            "document": "engine/vigile/clinical_knowledge/v07-extension.json",
+            "sha256": "b258ff2d79ab79355f65826466c9fc3e7a52380b749ec18ef2eb4700759e4fd8",
+            "version": "2026.1",
+            "authority": "IMPLEMENTED_CRITERION_NOT_ORIGINAL_ARTICLE",
+            "char_start": 2200,
+            "char_end": 3300,
+            "line": 70
+          }
+        ],
+        "inference_attempted": true,
+        "inference_executed": false,
+        "clinical_execution": "BLOCKED",
+        "authority": "DETERMINISTIC_ENGINE_ONLY",
+        "clinical_validation": false,
+        "limitations": [
+          "DOCUMENTS_DO_NOT_OVERRIDE_ENGINE",
+          "SEMANTIC_VERIFICATION_IS_NOT_CLINICAL_VALIDATION",
+          "UNKNOWN_UNDETECTED_ERRORS_REQUIRE_INDEPENDENT_REVIEW"
+        ],
+        "context": {
+          "subject_id": "mission-crew-A",
+          "mission_id": "mission-v011",
+          "target_id": "mission-crew-A-cycle-35"
+        },
+        "failure_trace": {
+          "category": "SAFETY_REJECTION",
+          "code": "UNSUPPORTED_NUMBER",
+          "stage": "DETERMINISTIC_VALIDATION",
+          "exception_type": "ValueError",
+          "clinical_state_changed": false
+        },
+        "failure_type": "ValueError"
+      },
+      "raw_model_calls": [
+        {
+          "raw_model_output": {
+            "sentences": [
+              {
+                "evidence_ids": [
+                  "M12",
+                  "M20",
+                  "M5"
+                ],
+                "text": "The baseline strength decreased by 105.0 N with a retention of 79.0%, and sleep duration decreased by 1.4 hours with a retention of 82.5%. The baseline VO2max decreased by 14.685 mL/min/kg with a retention of 70.63%."
+              },
+              {
+                "evidence_ids": [
+                  "M39",
+                  "M40",
+                  "M41"
+                ],
+                "text": "The current value of VO2max decreased from 38.193 to 35.315, heart rate increased from 79.2 to 82.0, and strength decreased from 416.0 to 395.0."
+              }
+            ]
+          },
+          "metrics": {
+            "elapsed_ms": 11129.763699995237,
+            "usage": {},
+            "timings": {},
+            "load_duration_ns": 7041198000,
+            "total_duration_ns": 11105466000,
+            "prompt_eval_count": 2571,
+            "eval_count": 187,
+            "eval_duration_ns": 3107748000
+          }
+        }
+      ]
+    },
+    {
+      "kind": "condition",
+      "target": "mission-crew-A-cycle-35",
+      "question": "VIGILE, how has my physical condition changed during the mission?",
+      "seconds": 4.253113600003417,
+      "response": {
+        "status": "EXTRACTIVE_FALLBACK",
+        "run_id": "mission-crew-A-cycle-35",
+        "evaluation_id": null,
+        "as_of": "2026-09-05T12:00:00+00:00",
+        "mode": "FULL",
+        "message": "Explicación rechazada o fallida; se muestran resultados exactos del motor. / Generation rejected or failed; exact engine results retained.",
+        "answer": [
+          {
+            "id": "M1",
+            "kind": "ENGINE",
+            "category": "LIMITATION",
+            "text": "Monitorización experimental / Experimental monitoring. Cambios numéricos no equivalen a empeoramiento clínico / numeric changes are not clinical worsening. No diagnóstico firmado, no tratamiento autorizado. / No signed diagnosis or treatment authorization.",
+            "reference": {
+              "run_id": "mission-crew-A-cycle-35",
+              "as_of": "2026-09-05T12:00:00+00:00",
+              "output_hash": "e3cf716890d2a0c7b86b4459fa8e948b4915f3d2202f1a4a36b33ed91b8a8490"
+            }
+          },
+          {
+            "id": "M12",
+            "kind": "ENGINE",
+            "category": "BASELINE",
+            "text": "physiology.strength: baseline 500.0 N; cambio absoluto / absolute change -105.0; retención / retention 79.0%. Descriptivo, no diagnóstico / descriptive, not diagnosis.",
+            "reference": {
+              "run_id": "mission-crew-A-cycle-35",
+              "as_of": "2026-09-05T12:00:00+00:00",
+              "output_hash": "e3cf716890d2a0c7b86b4459fa8e948b4915f3d2202f1a4a36b33ed91b8a8490",
+              "variable": "physiology.strength",
+              "baseline_id": "mission-crew-A-baseline-1",
+              "source_ids": [
+                "S01",
+                "S06"
+              ]
+            }
+          },
+          {
+            "id": "M39",
+            "kind": "ENGINE",
+            "category": "CHANGE",
+            "text": "Cambio desde revisión anterior / change since previous review: {\"variable\": \"physiology.vo2max\", \"previous\": 38.193, \"current\": 35.315, \"previous_state\": \"DESCRIPTIVE_AVAILABLE\", \"current_state\": \"DESCRIPTIVE_AVAILABLE\"}",
+            "reference": {
+              "run_id": "mission-crew-A-cycle-35",
+              "as_of": "2026-09-05T12:00:00+00:00",
+              "output_hash": "e3cf716890d2a0c7b86b4459fa8e948b4915f3d2202f1a4a36b33ed91b8a8490",
+              "previous_run_id": "mission-crew-A-cycle-28"
+            }
+          },
+          {
+            "id": "M13",
+            "kind": "ENGINE",
+            "category": "TREND",
+            "text": "physiology.strength: pendiente / slope -3.0 N/day; EWMA/CUSUM por observación / per observation; RESEARCH_ONLY. No umbral clínico / no clinical threshold.",
+            "reference": {
+              "run_id": "mission-crew-A-cycle-35",
+              "as_of": "2026-09-05T12:00:00+00:00",
+              "output_hash": "e3cf716890d2a0c7b86b4459fa8e948b4915f3d2202f1a4a36b33ed91b8a8490",
+              "variable": "physiology.strength",
+              "source_ids": [
+                "S01",
+                "S06"
+              ]
+            }
+          },
+          {
+            "id": "M20",
+            "kind": "ENGINE",
+            "category": "BASELINE",
+            "text": "sleep.duration: baseline 8.0 h; cambio absoluto / absolute change -1.4000000000000004; retención / retention 82.5%. Descriptivo, no diagnóstico / descriptive, not diagnosis.",
+            "reference": {
+              "run_id": "mission-crew-A-cycle-35",
+              "as_of": "2026-09-05T12:00:00+00:00",
+              "output_hash": "e3cf716890d2a0c7b86b4459fa8e948b4915f3d2202f1a4a36b33ed91b8a8490",
+              "variable": "sleep.duration",
+              "baseline_id": "mission-crew-A-baseline-2",
+              "source_ids": [
+                "S10",
+                "S12"
+              ]
+            }
+          },
+          {
+            "id": "M40",
+            "kind": "ENGINE",
+            "category": "CHANGE",
+            "text": "Cambio desde revisión anterior / change since previous review: {\"variable\": \"physiology.heart_rate\", \"previous\": 79.2, \"current\": 82.0, \"previous_state\": \"DESCRIPTIVE_AVAILABLE\", \"current_state\": \"DESCRIPTIVE_AVAILABLE\"}",
+            "reference": {
+              "run_id": "mission-crew-A-cycle-35",
+              "as_of": "2026-09-05T12:00:00+00:00",
+              "output_hash": "e3cf716890d2a0c7b86b4459fa8e948b4915f3d2202f1a4a36b33ed91b8a8490",
+              "previous_run_id": "mission-crew-A-cycle-28"
+            }
+          },
+          {
+            "id": "M41",
+            "kind": "ENGINE",
+            "category": "CHANGE",
+            "text": "Cambio desde revisión anterior / change since previous review: {\"variable\": \"physiology.strength\", \"previous\": 416.0, \"current\": 395.0, \"previous_state\": \"DESCRIPTIVE_AVAILABLE\", \"current_state\": \"DESCRIPTIVE_AVAILABLE\"}",
+            "reference": {
+              "run_id": "mission-crew-A-cycle-35",
+              "as_of": "2026-09-05T12:00:00+00:00",
+              "output_hash": "e3cf716890d2a0c7b86b4459fa8e948b4915f3d2202f1a4a36b33ed91b8a8490",
+              "previous_run_id": "mission-crew-A-cycle-28"
+            }
+          },
+          {
+            "id": "M42",
+            "kind": "ENGINE",
+            "category": "CHANGE",
+            "text": "Cambio desde revisión anterior / change since previous review: {\"variable\": \"sleep.duration\", \"previous\": 6.88, \"current\": 6.6, \"previous_state\": \"DESCRIPTIVE_AVAILABLE\", \"current_state\": \"DESCRIPTIVE_AVAILABLE\"}",
+            "reference": {
+              "run_id": "mission-crew-A-cycle-35",
+              "as_of": "2026-09-05T12:00:00+00:00",
+              "output_hash": "e3cf716890d2a0c7b86b4459fa8e948b4915f3d2202f1a4a36b33ed91b8a8490",
+              "previous_run_id": "mission-crew-A-cycle-28"
+            }
+          },
+          {
+            "id": "M43",
+            "kind": "ENGINE",
+            "category": "CHANGE",
+            "text": "Cambio desde revisión anterior / change since previous review: {\"variable\": \"environment.ppo2\", \"previous\": 20.79829243674, \"current\": 20.931614824155, \"previous_state\": \"DESCRIPTIVE_AVAILABLE\", \"current_state\": \"DESCRIPTIVE_AVAILABLE\"}",
+            "reference": {
+              "run_id": "mission-crew-A-cycle-35",
+              "as_of": "2026-09-05T12:00:00+00:00",
+              "output_hash": "e3cf716890d2a0c7b86b4459fa8e948b4915f3d2202f1a4a36b33ed91b8a8490",
+              "previous_run_id": "mission-crew-A-cycle-28"
+            }
+          },
+          {
+            "id": "M5",
+            "kind": "ENGINE",
+            "category": "BASELINE",
+            "text": "physiology.vo2max: baseline 50.0 mL/min/kg; cambio absoluto / absolute change -14.685000000000002; retención / retention 70.63%. Descriptivo, no diagnóstico / descriptive, not diagnosis.",
+            "reference": {
+              "run_id": "mission-crew-A-cycle-35",
+              "as_of": "2026-09-05T12:00:00+00:00",
+              "output_hash": "e3cf716890d2a0c7b86b4459fa8e948b4915f3d2202f1a4a36b33ed91b8a8490",
+              "variable": "physiology.vo2max",
+              "baseline_id": "mission-crew-A-baseline-0",
+              "source_ids": [
+                "S01",
+                "S05"
+              ]
+            }
+          },
+          {
+            "id": "M21",
+            "kind": "ENGINE",
+            "category": "TREND",
+            "text": "sleep.duration: pendiente / slope -0.04000000000000001 h/day; EWMA/CUSUM por observación / per observation; RESEARCH_ONLY. No umbral clínico / no clinical threshold.",
+            "reference": {
+              "run_id": "mission-crew-A-cycle-35",
+              "as_of": "2026-09-05T12:00:00+00:00",
+              "output_hash": "e3cf716890d2a0c7b86b4459fa8e948b4915f3d2202f1a4a36b33ed91b8a8490",
+              "variable": "sleep.duration",
+              "source_ids": [
+                "S10",
+                "S12"
+              ]
+            }
+          }
+        ],
+        "retrieved": [
+          {
+            "id": "M1",
+            "kind": "ENGINE",
+            "category": "LIMITATION",
+            "text": "Monitorización experimental / Experimental monitoring. Cambios numéricos no equivalen a empeoramiento clínico / numeric changes are not clinical worsening. No diagnóstico firmado, no tratamiento autorizado. / No signed diagnosis or treatment authorization.",
+            "reference": {
+              "run_id": "mission-crew-A-cycle-35",
+              "as_of": "2026-09-05T12:00:00+00:00",
+              "output_hash": "e3cf716890d2a0c7b86b4459fa8e948b4915f3d2202f1a4a36b33ed91b8a8490"
+            }
+          },
+          {
+            "id": "M12",
+            "kind": "ENGINE",
+            "category": "BASELINE",
+            "text": "physiology.strength: baseline 500.0 N; cambio absoluto / absolute change -105.0; retención / retention 79.0%. Descriptivo, no diagnóstico / descriptive, not diagnosis.",
+            "reference": {
+              "run_id": "mission-crew-A-cycle-35",
+              "as_of": "2026-09-05T12:00:00+00:00",
+              "output_hash": "e3cf716890d2a0c7b86b4459fa8e948b4915f3d2202f1a4a36b33ed91b8a8490",
+              "variable": "physiology.strength",
+              "baseline_id": "mission-crew-A-baseline-1",
+              "source_ids": [
+                "S01",
+                "S06"
+              ]
+            }
+          },
+          {
+            "id": "M39",
+            "kind": "ENGINE",
+            "category": "CHANGE",
+            "text": "Cambio desde revisión anterior / change since previous review: {\"variable\": \"physiology.vo2max\", \"previous\": 38.193, \"current\": 35.315, \"previous_state\": \"DESCRIPTIVE_AVAILABLE\", \"current_state\": \"DESCRIPTIVE_AVAILABLE\"}",
+            "reference": {
+              "run_id": "mission-crew-A-cycle-35",
+              "as_of": "2026-09-05T12:00:00+00:00",
+              "output_hash": "e3cf716890d2a0c7b86b4459fa8e948b4915f3d2202f1a4a36b33ed91b8a8490",
+              "previous_run_id": "mission-crew-A-cycle-28"
+            }
+          },
+          {
+            "id": "M13",
+            "kind": "ENGINE",
+            "category": "TREND",
+            "text": "physiology.strength: pendiente / slope -3.0 N/day; EWMA/CUSUM por observación / per observation; RESEARCH_ONLY. No umbral clínico / no clinical threshold.",
+            "reference": {
+              "run_id": "mission-crew-A-cycle-35",
+              "as_of": "2026-09-05T12:00:00+00:00",
+              "output_hash": "e3cf716890d2a0c7b86b4459fa8e948b4915f3d2202f1a4a36b33ed91b8a8490",
+              "variable": "physiology.strength",
+              "source_ids": [
+                "S01",
+                "S06"
+              ]
+            }
+          },
+          {
+            "id": "M20",
+            "kind": "ENGINE",
+            "category": "BASELINE",
+            "text": "sleep.duration: baseline 8.0 h; cambio absoluto / absolute change -1.4000000000000004; retención / retention 82.5%. Descriptivo, no diagnóstico / descriptive, not diagnosis.",
+            "reference": {
+              "run_id": "mission-crew-A-cycle-35",
+              "as_of": "2026-09-05T12:00:00+00:00",
+              "output_hash": "e3cf716890d2a0c7b86b4459fa8e948b4915f3d2202f1a4a36b33ed91b8a8490",
+              "variable": "sleep.duration",
+              "baseline_id": "mission-crew-A-baseline-2",
+              "source_ids": [
+                "S10",
+                "S12"
+              ]
+            }
+          },
+          {
+            "id": "M40",
+            "kind": "ENGINE",
+            "category": "CHANGE",
+            "text": "Cambio desde revisión anterior / change since previous review: {\"variable\": \"physiology.heart_rate\", \"previous\": 79.2, \"current\": 82.0, \"previous_state\": \"DESCRIPTIVE_AVAILABLE\", \"current_state\": \"DESCRIPTIVE_AVAILABLE\"}",
+            "reference": {
+              "run_id": "mission-crew-A-cycle-35",
+              "as_of": "2026-09-05T12:00:00+00:00",
+              "output_hash": "e3cf716890d2a0c7b86b4459fa8e948b4915f3d2202f1a4a36b33ed91b8a8490",
+              "previous_run_id": "mission-crew-A-cycle-28"
+            }
+          },
+          {
+            "id": "M41",
+            "kind": "ENGINE",
+            "category": "CHANGE",
+            "text": "Cambio desde revisión anterior / change since previous review: {\"variable\": \"physiology.strength\", \"previous\": 416.0, \"current\": 395.0, \"previous_state\": \"DESCRIPTIVE_AVAILABLE\", \"current_state\": \"DESCRIPTIVE_AVAILABLE\"}",
+            "reference": {
+              "run_id": "mission-crew-A-cycle-35",
+              "as_of": "2026-09-05T12:00:00+00:00",
+              "output_hash": "e3cf716890d2a0c7b86b4459fa8e948b4915f3d2202f1a4a36b33ed91b8a8490",
+              "previous_run_id": "mission-crew-A-cycle-28"
+            }
+          },
+          {
+            "id": "M42",
+            "kind": "ENGINE",
+            "category": "CHANGE",
+            "text": "Cambio desde revisión anterior / change since previous review: {\"variable\": \"sleep.duration\", \"previous\": 6.88, \"current\": 6.6, \"previous_state\": \"DESCRIPTIVE_AVAILABLE\", \"current_state\": \"DESCRIPTIVE_AVAILABLE\"}",
+            "reference": {
+              "run_id": "mission-crew-A-cycle-35",
+              "as_of": "2026-09-05T12:00:00+00:00",
+              "output_hash": "e3cf716890d2a0c7b86b4459fa8e948b4915f3d2202f1a4a36b33ed91b8a8490",
+              "previous_run_id": "mission-crew-A-cycle-28"
+            }
+          },
+          {
+            "id": "M43",
+            "kind": "ENGINE",
+            "category": "CHANGE",
+            "text": "Cambio desde revisión anterior / change since previous review: {\"variable\": \"environment.ppo2\", \"previous\": 20.79829243674, \"current\": 20.931614824155, \"previous_state\": \"DESCRIPTIVE_AVAILABLE\", \"current_state\": \"DESCRIPTIVE_AVAILABLE\"}",
+            "reference": {
+              "run_id": "mission-crew-A-cycle-35",
+              "as_of": "2026-09-05T12:00:00+00:00",
+              "output_hash": "e3cf716890d2a0c7b86b4459fa8e948b4915f3d2202f1a4a36b33ed91b8a8490",
+              "previous_run_id": "mission-crew-A-cycle-28"
+            }
+          },
+          {
+            "id": "M5",
+            "kind": "ENGINE",
+            "category": "BASELINE",
+            "text": "physiology.vo2max: baseline 50.0 mL/min/kg; cambio absoluto / absolute change -14.685000000000002; retención / retention 70.63%. Descriptivo, no diagnóstico / descriptive, not diagnosis.",
+            "reference": {
+              "run_id": "mission-crew-A-cycle-35",
+              "as_of": "2026-09-05T12:00:00+00:00",
+              "output_hash": "e3cf716890d2a0c7b86b4459fa8e948b4915f3d2202f1a4a36b33ed91b8a8490",
+              "variable": "physiology.vo2max",
+              "baseline_id": "mission-crew-A-baseline-0",
+              "source_ids": [
+                "S01",
+                "S05"
+              ]
+            }
+          },
+          {
+            "id": "M21",
+            "kind": "ENGINE",
+            "category": "TREND",
+            "text": "sleep.duration: pendiente / slope -0.04000000000000001 h/day; EWMA/CUSUM por observación / per observation; RESEARCH_ONLY. No umbral clínico / no clinical threshold.",
+            "reference": {
+              "run_id": "mission-crew-A-cycle-35",
+              "as_of": "2026-09-05T12:00:00+00:00",
+              "output_hash": "e3cf716890d2a0c7b86b4459fa8e948b4915f3d2202f1a4a36b33ed91b8a8490",
+              "variable": "sleep.duration",
+              "source_ids": [
+                "S10",
+                "S12"
+              ]
+            }
+          },
+          {
+            "id": "D-a276fe7ea1723f886b45",
+            "kind": "DOCUMENT",
+            "text": "betes\",\r\n            \"op\": \"==\",\r\n            \"value\": true\r\n          },\r\n          {\r\n            \"any_of\": [\r\n              {\r\n                \"field\": \"plasma_glucose_mg_dl\",\r\n                \"op\": \"<\",\r\n                \"value\": 70\r\n              },\r\n              {\r\n                \"field\": \"capillary_glucose_mg_dl\",\r\n                \"op\": \"<\",\r\n                \"value\": 70\r\n              },\r\n              {\r\n                \"all_of\": [\r\n                  {\r\n                    \"field\": \"altered_mental_or_physical_status\",\r\n                    \"op\": \"==\",\r\n                    \"value\": true\r\n                  },\r\n                  {\r\n                    \"field\": \"assistance_required_for_hypoglycemia\",\r\n                    \"op\": \"==\",\r\n                    \"value\": true\r\n                  },\r\n                  {\r\n                    \"field\": \"hypoglycemia_event_clinically_attributed\",\r\n                    \"op\": \"==\",\r\n                    \"value\": true\r\n                  }\r\n                ]\r\n              }\r\n            ]\r\n          }\r\n        ]\r\n      },\r\n      \"space_applicability",
+            "reference": {
+              "document": "engine/vigile/clinical_knowledge/v07-extension.json",
+              "sha256": "b258ff2d79ab79355f65826466c9fc3e7a52380b749ec18ef2eb4700759e4fd8",
+              "version": "2026.1",
+              "authority": "IMPLEMENTED_CRITERION_NOT_ORIGINAL_ARTICLE",
+              "char_start": 1100,
+              "char_end": 2200,
+              "line": 31
+            },
+            "retrieval_score": 4.62039
+          },
+          {
+            "id": "D-b8605c91c85ed9492120",
+            "kind": "DOCUMENT",
+            "text": "```text\nvigile/\n  evidence/\n    sources.json\n    extractions.json\n    revisions.json\n  clinical/\n    conditions.json\n    pathways/\n    interactions.json\n    sensors.json\n  rules/\n    normative/\n    research_only/\n    schemas/\n  algorithms/\n  datasets/\n    registry.json\n    adapters/\n  engine/\n    quality/\n    baseline/\n    trend/\n    rules/\n    multisystem/\n    episodes/\n    pathways/\n    authorization/\n    audit/\n  rag/\n  api/\n  tests/\n    unit/\n    rule_boundaries/\n    synthetic_clinical/\n    context/\n    authorization/\n    provenance/\n  docs/\n    EVIDENCE_TRACEABILITY.md\n    CLINICAL_COVERAGE.md\n    VALIDATION_STATUS.md\n    LIMITATIONS.md\n    HANDOFF.md\n```",
+            "reference": {
+              "document": "01_INFORMES/REPORTE_CONSOLIDADO_COMPLETO.md",
+              "sha256": "97e9fdc86925b6b973db75900e64f222c149ae3bd9cade8c182f2264c46831e5",
+              "version": "PINNED_CORPUS",
+              "authority": "SPACE_RESEARCH_SYNTHESIS",
+              "char_start": 89841,
+              "char_end": 90509,
+              "line": 1016
+            },
+            "retrieval_score": 3.865224
+          },
+          {
+            "id": "D-348f6f6e276875605f09",
+            "kind": "DOCUMENT",
+            "text": "\": \"REQUIRES_SPACE_SPECIFIC_VALIDATION\",\r\n      \"classification\": {\r\n        \"level_1\": \"54 <= glucose < 70 mg/dL\",\r\n        \"level_2\": \"glucose < 54 mg/dL\",\r\n        \"level_3\": \"Clinically attributed severe event with altered mental/physical function requiring assistance, independent of measured glucose\"\r\n      },\r\n      \"limitations\": [\r\n        \"NOT_ETIOLOGIC_DIAGNOSIS\",\r\n        \"CGM_ALONE_NOT_USED_IN_THIS_RESTRICTED_ROUTE\",\r\n        \"NO_FIXED_RECHECK_INTERVAL_WITHOUT_CONTEXT\",\r\n        \"NO_NONDIABETIC_HYPOGLYCEMIA_DIAGNOSIS\"\r\n      ]\r\n    }\r\n  ],\r\n  \"protocols\": [\r\n    {\r\n      \"protocol_id\": \"PROT-HYPO-REVIEW-2026\",\r\n      \"source_ids\": [\r\n        \"SRC-ADA-HYPO-2026\"\r\n      ],\r\n      \"required_resources\": [\r\n        \"verified_glucose_measurement\",\r\n        \"qualified_medical_review\"\r\n      ],\r\n      \"purpose\": \"Review only; no doses or execution\",\r\n      \"mission_approved\": false\r\n    }\r\n  ],\r\n  \"tests\": [\r\n    {\r\n      \"test_id\": \"TEST-HYPO-GLUCOSE\",\r\n      \"source_ids\": [\r\n        \"SRC-ADA-HYPO-2026\"\r\n      ],\r\n      \"purpose\": \"Obtain or verify blood glucose with suitable me",
+            "reference": {
+              "document": "engine/vigile/clinical_knowledge/v07-extension.json",
+              "sha256": "b258ff2d79ab79355f65826466c9fc3e7a52380b749ec18ef2eb4700759e4fd8",
+              "version": "2026.1",
+              "authority": "IMPLEMENTED_CRITERION_NOT_ORIGINAL_ARTICLE",
+              "char_start": 2200,
+              "char_end": 3300,
+              "line": 70
+            },
+            "retrieval_score": 3.687635
+          }
+        ],
+        "generated": [],
+        "documents": [
+          {
+            "id": "D-a276fe7ea1723f886b45",
+            "kind": "DOCUMENT",
+            "text": "betes\",\r\n            \"op\": \"==\",\r\n            \"value\": true\r\n          },\r\n          {\r\n            \"any_of\": [\r\n              {\r\n                \"field\": \"plasma_glucose_mg_dl\",\r\n                \"op\": \"<\",\r\n                \"value\": 70\r\n              },\r\n              {\r\n                \"field\": \"capillary_glucose_mg_dl\",\r\n                \"op\": \"<\",\r\n                \"value\": 70\r\n              },\r\n              {\r\n                \"all_of\": [\r\n                  {\r\n                    \"field\": \"altered_mental_or_physical_status\",\r\n                    \"op\": \"==\",\r\n                    \"value\": true\r\n                  },\r\n                  {\r\n                    \"field\": \"assistance_required_for_hypoglycemia\",\r\n                    \"op\": \"==\",\r\n                    \"value\": true\r\n                  },\r\n                  {\r\n                    \"field\": \"hypoglycemia_event_clinically_attributed\",\r\n                    \"op\": \"==\",\r\n                    \"value\": true\r\n                  }\r\n                ]\r\n              }\r\n            ]\r\n          }\r\n        ]\r\n      },\r\n      \"space_applicability",
+            "reference": {
+              "document": "engine/vigile/clinical_knowledge/v07-extension.json",
+              "sha256": "b258ff2d79ab79355f65826466c9fc3e7a52380b749ec18ef2eb4700759e4fd8",
+              "version": "2026.1",
+              "authority": "IMPLEMENTED_CRITERION_NOT_ORIGINAL_ARTICLE",
+              "char_start": 1100,
+              "char_end": 2200,
+              "line": 31
+            },
+            "retrieval_score": 4.62039
+          },
+          {
+            "id": "D-b8605c91c85ed9492120",
+            "kind": "DOCUMENT",
+            "text": "```text\nvigile/\n  evidence/\n    sources.json\n    extractions.json\n    revisions.json\n  clinical/\n    conditions.json\n    pathways/\n    interactions.json\n    sensors.json\n  rules/\n    normative/\n    research_only/\n    schemas/\n  algorithms/\n  datasets/\n    registry.json\n    adapters/\n  engine/\n    quality/\n    baseline/\n    trend/\n    rules/\n    multisystem/\n    episodes/\n    pathways/\n    authorization/\n    audit/\n  rag/\n  api/\n  tests/\n    unit/\n    rule_boundaries/\n    synthetic_clinical/\n    context/\n    authorization/\n    provenance/\n  docs/\n    EVIDENCE_TRACEABILITY.md\n    CLINICAL_COVERAGE.md\n    VALIDATION_STATUS.md\n    LIMITATIONS.md\n    HANDOFF.md\n```",
+            "reference": {
+              "document": "01_INFORMES/REPORTE_CONSOLIDADO_COMPLETO.md",
+              "sha256": "97e9fdc86925b6b973db75900e64f222c149ae3bd9cade8c182f2264c46831e5",
+              "version": "PINNED_CORPUS",
+              "authority": "SPACE_RESEARCH_SYNTHESIS",
+              "char_start": 89841,
+              "char_end": 90509,
+              "line": 1016
+            },
+            "retrieval_score": 3.865224
+          },
+          {
+            "id": "D-348f6f6e276875605f09",
+            "kind": "DOCUMENT",
+            "text": "\": \"REQUIRES_SPACE_SPECIFIC_VALIDATION\",\r\n      \"classification\": {\r\n        \"level_1\": \"54 <= glucose < 70 mg/dL\",\r\n        \"level_2\": \"glucose < 54 mg/dL\",\r\n        \"level_3\": \"Clinically attributed severe event with altered mental/physical function requiring assistance, independent of measured glucose\"\r\n      },\r\n      \"limitations\": [\r\n        \"NOT_ETIOLOGIC_DIAGNOSIS\",\r\n        \"CGM_ALONE_NOT_USED_IN_THIS_RESTRICTED_ROUTE\",\r\n        \"NO_FIXED_RECHECK_INTERVAL_WITHOUT_CONTEXT\",\r\n        \"NO_NONDIABETIC_HYPOGLYCEMIA_DIAGNOSIS\"\r\n      ]\r\n    }\r\n  ],\r\n  \"protocols\": [\r\n    {\r\n      \"protocol_id\": \"PROT-HYPO-REVIEW-2026\",\r\n      \"source_ids\": [\r\n        \"SRC-ADA-HYPO-2026\"\r\n      ],\r\n      \"required_resources\": [\r\n        \"verified_glucose_measurement\",\r\n        \"qualified_medical_review\"\r\n      ],\r\n      \"purpose\": \"Review only; no doses or execution\",\r\n      \"mission_approved\": false\r\n    }\r\n  ],\r\n  \"tests\": [\r\n    {\r\n      \"test_id\": \"TEST-HYPO-GLUCOSE\",\r\n      \"source_ids\": [\r\n        \"SRC-ADA-HYPO-2026\"\r\n      ],\r\n      \"purpose\": \"Obtain or verify blood glucose with suitable me",
+            "reference": {
+              "document": "engine/vigile/clinical_knowledge/v07-extension.json",
+              "sha256": "b258ff2d79ab79355f65826466c9fc3e7a52380b749ec18ef2eb4700759e4fd8",
+              "version": "2026.1",
+              "authority": "IMPLEMENTED_CRITERION_NOT_ORIGINAL_ARTICLE",
+              "char_start": 2200,
+              "char_end": 3300,
+              "line": 70
+            },
+            "retrieval_score": 3.687635
+          }
+        ],
+        "document_issues": [],
+        "sources": [
+          {
+            "document": "engine/vigile/clinical_knowledge/v07-extension.json",
+            "sha256": "b258ff2d79ab79355f65826466c9fc3e7a52380b749ec18ef2eb4700759e4fd8",
+            "version": "2026.1",
+            "authority": "IMPLEMENTED_CRITERION_NOT_ORIGINAL_ARTICLE",
+            "char_start": 1100,
+            "char_end": 2200,
+            "line": 31
+          },
+          {
+            "document": "01_INFORMES/REPORTE_CONSOLIDADO_COMPLETO.md",
+            "sha256": "97e9fdc86925b6b973db75900e64f222c149ae3bd9cade8c182f2264c46831e5",
+            "version": "PINNED_CORPUS",
+            "authority": "SPACE_RESEARCH_SYNTHESIS",
+            "char_start": 89841,
+            "char_end": 90509,
+            "line": 1016
+          },
+          {
+            "document": "engine/vigile/clinical_knowledge/v07-extension.json",
+            "sha256": "b258ff2d79ab79355f65826466c9fc3e7a52380b749ec18ef2eb4700759e4fd8",
+            "version": "2026.1",
+            "authority": "IMPLEMENTED_CRITERION_NOT_ORIGINAL_ARTICLE",
+            "char_start": 2200,
+            "char_end": 3300,
+            "line": 70
+          }
+        ],
+        "inference_attempted": true,
+        "inference_executed": false,
+        "clinical_execution": "BLOCKED",
+        "authority": "DETERMINISTIC_ENGINE_ONLY",
+        "clinical_validation": false,
+        "limitations": [
+          "DOCUMENTS_DO_NOT_OVERRIDE_ENGINE",
+          "SEMANTIC_VERIFICATION_IS_NOT_CLINICAL_VALIDATION",
+          "UNKNOWN_UNDETECTED_ERRORS_REQUIRE_INDEPENDENT_REVIEW"
+        ],
+        "context": {
+          "subject_id": "mission-crew-A",
+          "mission_id": "mission-v011",
+          "target_id": "mission-crew-A-cycle-35"
+        },
+        "failure_trace": {
+          "category": "SAFETY_REJECTION",
+          "code": "UNSUPPORTED_NUMBER",
+          "stage": "DETERMINISTIC_VALIDATION",
+          "exception_type": "ValueError",
+          "clinical_state_changed": false
+        },
+        "failure_type": "ValueError"
+      },
+      "raw_model_calls": [
+        {
+          "raw_model_output": {
+            "sentences": [
+              {
+                "evidence_ids": [
+                  "M12",
+                  "M20",
+                  "M42"
+                ],
+                "text": "The baseline strength decreased by 105.0 N with 79.0% retention, sleep duration dropped by 1.4 hours with 82.5% retention, and sleep duration decreased from 6.88 to 6.6 hours."
+              },
+              {
+                "evidence_ids": [
+                  "M39",
+                  "M5"
+                ],
+                "text": "VO2max decreased from 38.193 to 35.315 and from baseline 50.0 to 35.315 mL/min/kg, showing a significant absolute decline."
+              },
+              {
+                "evidence_ids": [
+                  "M40"
+                ],
+                "text": "Heart rate increased from 79.2 to 82.0 beats per minute."
+              }
+            ]
+          },
+          "metrics": {
+            "elapsed_ms": 3952.217900005053,
+            "usage": {},
+            "timings": {},
+            "load_duration_ns": 16842900,
+            "total_duration_ns": 3926480400,
+            "prompt_eval_count": 2578,
+            "eval_count": 189,
+            "eval_duration_ns": 2962461000
+          }
+        }
+      ]
+    },
+    {
+      "kind": "alert",
+      "target": "mission-crew-B-cycle-18",
+      "question": "VIGILE, why am I receiving this medical alert?",
+      "seconds": 3.629600500004017,
+      "response": {
+        "status": "EXTRACTIVE_FALLBACK",
+        "run_id": "mission-crew-B-cycle-18",
+        "evaluation_id": null,
+        "as_of": "2026-08-19T12:00:00+00:00",
+        "mode": "FULL",
+        "message": "Explicación rechazada o fallida; se muestran resultados exactos del motor. / Generation rejected or failed; exact engine results retained.",
+        "answer": [
+          {
+            "id": "M1",
+            "kind": "ENGINE",
+            "category": "LIMITATION",
+            "text": "Monitorización experimental / Experimental monitoring. Cambios numéricos no equivalen a empeoramiento clínico / numeric changes are not clinical worsening. No diagnóstico firmado, no tratamiento autorizado. / No signed diagnosis or treatment authorization.",
+            "reference": {
+              "run_id": "mission-crew-B-cycle-18",
+              "as_of": "2026-08-19T12:00:00+00:00",
+              "output_hash": "814b1ea4d2207462bf4acbd19f04cfa2968a04e279b55121e9bc19c8e655e7d5"
+            }
+          },
+          {
+            "id": "M29",
+            "kind": "ENGINE",
+            "category": "ALERT",
+            "text": "Evento o alerta / alert event norm:physiology.vo2max: REQUIREMENT_MET; prioridad / priority ROUTINE; nueva notificación / notify False; motivo / reason UNCHANGED_STATE_NO_REPEAT_NOTIFICATION; clase / kind NORMATIVE_REQUIREMENT. No diagnóstico / not a diagnosis.",
+            "reference": {
+              "run_id": "mission-crew-B-cycle-18",
+              "as_of": "2026-08-19T12:00:00+00:00",
+              "output_hash": "814b1ea4d2207462bf4acbd19f04cfa2968a04e279b55121e9bc19c8e655e7d5",
+              "event_id": "me-4b90e47ab26ac8a015603619f4cf604c",
+              "source_ids": [
+                "S01",
+                "S05"
+              ]
+            }
+          },
+          {
+            "id": "C-40",
+            "kind": "ENGINE",
+            "text": "DKA: diagnóstico CRITERIA_MET; urgencia EMERGENCY; confirmación SATISFIED. Cumplir criterios no equivale a diagnóstico clínico firmado.",
+            "reference": {
+              "evaluation_id": "ce-e5eacc1a2aff89131abff094d62f6fc1",
+              "condition_id": "DKA",
+              "source_ids": [
+                "SRC-DKA-2024"
+              ],
+              "input_hash": "ccbe4b133a650d28c921bf40e7c5723f3cf02f1ecd00271b30fc158fa9fc35a0"
+            },
+            "logic_trace": {
+              "truth_state": "TRUE",
+              "operator": "all_of",
+              "children": [
+                {
+                  "truth_state": "TRUE",
+                  "operator": "any_of",
+                  "children": [
+                    {
+                      "truth_state": "TRUE",
+                      "field": "known_diabetes",
+                      "operator": "==",
+                      "expected": true,
+                      "actual": true
+                    },
+                    {
+                      "truth_state": "FALSE",
+                      "field": "plasma_glucose_mg_dl",
+                      "operator": ">=",
+                      "expected": 200,
+                      "actual": 180.0
+                    }
+                  ]
+                },
+                {
+                  "truth_state": "TRUE",
+                  "operator": "any_of",
+                  "children": [
+                    {
+                      "truth_state": "TRUE",
+                      "field": "beta_hydroxybutyrate_mmol_l",
+                      "operator": ">=",
+                      "expected": 3.0,
+                      "actual": 4.2
+                    },
+                    {
+                      "truth_state": "UNKNOWN",
+                      "field": "urine_ketones_plus",
+                      "operator": ">=",
+                      "expected": 2,
+                      "actual": null
+                    }
+                  ]
+                },
+                {
+                  "truth_state": "TRUE",
+                  "operator": "any_of",
+                  "children": [
+                    {
+                      "truth_state": "TRUE",
+                      "field": "venous_pH",
+                      "operator": "<",
+                      "expected": 7.3,
+                      "actual": 7.22
+                    },
+                    {
+                      "truth_state": "UNKNOWN",
+                      "field": "bicarbonate_mmol_l",
+                      "operator": "<",
+                      "expected": 18,
+                      "actual": null
+                    }
+                  ]
+                }
+              ]
+            },
+            "category": "CLINICAL_CRITERIA"
+          },
+          {
+            "id": "C-50",
+            "kind": "ENGINE",
+            "text": "HYPOGLYCEMIA: diagnóstico SUSPECTED; urgencia PROMPT; confirmación REQUIRED. Cumplir criterios no equivale a diagnóstico clínico firmado.",
+            "reference": {
+              "evaluation_id": "ce-16077d0959d6ddea3541d4a5f039bccd",
+              "condition_id": "HYPOGLYCEMIA",
+              "source_ids": [
+                "SRC-ADA-HYPO-2026"
+              ],
+              "input_hash": "dcd4eebd2304d692c3424452690a64c165eaf43feb5384e02a4242d0bf0c5976"
+            },
+            "logic_trace": {
+              "truth_state": "UNKNOWN",
+              "operator": "all_of",
+              "children": [
+                {
+                  "truth_state": "TRUE",
+                  "field": "known_diabetes",
+                  "operator": "==",
+                  "expected": true,
+                  "actual": true
+                },
+                {
+                  "truth_state": "UNKNOWN",
+                  "operator": "any_of",
+                  "children": [
+                    {
+                      "truth_state": "FALSE",
+                      "field": "plasma_glucose_mg_dl",
+                      "operator": "<",
+                      "expected": 70,
+                      "actual": 180.0
+                    },
+                    {
+                      "truth_state": "UNKNOWN",
+                      "field": "capillary_glucose_mg_dl",
+                      "operator": "<",
+                      "expected": 70,
+                      "actual": null
+                    },
+                    {
+                      "truth_state": "UNKNOWN",
+                      "operator": "all_of",
+                      "children": [
+                        {
+                          "truth_state": "UNKNOWN",
+                          "field": "altered_mental_or_physical_status",
+                          "operator": "==",
+                          "expected": true,
+                          "actual": null
+                        },
+                        {
+                          "truth_state": "UNKNOWN",
+                          "field": "assistance_required_for_hypoglycemia",
+                          "operator": "==",
+                          "expected": true,
+                          "actual": null
+                        },
+                        {
+                          "truth_state": "UNKNOWN",
+                          "field": "hypoglycemia_event_clinically_attributed",
+                          "operator": "==",
+                          "expected": true,
+                          "actual": null
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            "category": "CLINICAL_CRITERIA"
+          },
+          {
+            "id": "C-51",
+            "kind": "ENGINE",
+            "text": "HYPOGLYCEMIA: suficiencia de datos. Estado del motor: SUSPECTED. Datos pendientes para resolver ramas indeterminadas: altered mental or physical status, assistance required for hypoglycemia, capillary glucose mg dl, hypoglycemia event clinically attributed. Las opciones siguen la lógica AND/OR; esta lista no significa que deban medirse todas. Alternativas no medidas que no bloquean este resultado: ninguno. Datos inválidos que impiden resolver ramas: ninguno. Datos pendientes para seguridad del protocolo: ninguno. Protocolo: BLOCKED_MISSING_DATA. La seguridad terapéutica es independiente de los criterios diagnósticos. Cumplir criterios no es un diagnóstico firmado ni autoriza tratamiento.",
+            "reference": {
+              "evaluation_id": "ce-16077d0959d6ddea3541d4a5f039bccd",
+              "condition_id": "HYPOGLYCEMIA",
+              "source_ids": [
+                "SRC-ADA-HYPO-2026"
+              ],
+              "input_hash": "dcd4eebd2304d692c3424452690a64c165eaf43feb5384e02a4242d0bf0c5976"
+            },
+            "clinical_contract": {
+              "diagnostic_status": "SUSPECTED",
+              "missing_required": [
+                "altered_mental_or_physical_status",
+                "assistance_required_for_hypoglycemia",
+                "capillary_glucose_mg_dl",
+                "hypoglycemia_event_clinically_attributed"
+              ],
+              "optional_not_measured": [],
+              "required_for_protocol_safety": []
+            },
+            "category": "CLINICAL_CRITERIA"
+          },
+          {
+            "id": "C-52",
+            "kind": "ENGINE",
+            "text": "HYPOGLYCEMIA: protocolo BLOCKED_MISSING_DATA. Motivos de bloqueo: BLOCKED_MISSING_DATA, BLOCKED_RESOURCE, BLOCKED_AUTHORIZATION. Recursos faltantes: verified_glucose_measurement, qualified_medical_review. Tratamiento: NOT_STARTED.",
+            "reference": {
+              "evaluation_id": "ce-16077d0959d6ddea3541d4a5f039bccd",
+              "condition_id": "HYPOGLYCEMIA",
+              "source_ids": [
+                "SRC-ADA-HYPO-2026"
+              ],
+              "input_hash": "dcd4eebd2304d692c3424452690a64c165eaf43feb5384e02a4242d0bf0c5976"
+            },
+            "category": "CLINICAL_CRITERIA"
+          },
+          {
+            "id": "C-57",
+            "kind": "ENGINE",
+            "text": "Prueba recomendada TEST-HYPO-CONTEXT: [{\"condition_id\": \"HYPOGLYCEMIA\", \"reason\": \"CONFIRMATION_OR_MISSING_DISCRIMINATING_DATA\", \"concepts\": [\"known_diabetes\", \"altered_mental_or_physical_status\", \"assistance_required_for_hypoglycemia\", \"hypoglycemia_event_clinically_attributed\"], \"unresolved_candidates\": [\"altered_mental_or_physical_status\", \"assistance_required_for_hypoglycemia\", \"hypoglycemia_event_clinically_attributed\"], \"purpose\": \"DIAGNOSTIC_RESOLUTION\", \"alternatives_follow_evaluation_tree\": true}]. No es una orden autorizada.",
+            "reference": {
+              "evaluation_id": "ce-16077d0959d6ddea3541d4a5f039bccd"
+            },
+            "category": "CLINICAL_CRITERIA"
+          },
+          {
+            "id": "C-59",
+            "kind": "ENGINE",
+            "text": "ORTHOSTATIC_HYPOTENSION: diagnóstico NOT_APPLICABLE; urgencia ROUTINE; confirmación NOT_APPLICABLE. Cumplir criterios no equivale a diagnóstico clínico firmado.",
+            "reference": {
+              "evaluation_id": "ce-221df73f0af2ba70de297fcbef1979e1",
+              "condition_id": "ORTHOSTATIC_HYPOTENSION",
+              "source_ids": [
+                "SRC-AHA-OH-2024"
+              ],
+              "input_hash": "dfdc9c096d00aaf7d0d540519f5d25e15696ac9af96b293b8c331f4f0333eebd"
+            },
+            "logic_trace": {
+              "truth_state": "UNKNOWN",
+              "operator": "all_of",
+              "children": [
+                {
+                  "truth_state": "UNKNOWN",
+                  "operator": "any_of",
+                  "children": [
+                    {
+                      "truth_state": "UNKNOWN",
+                      "field": "delta_sbp_mm_hg",
+                      "operator": "<=",
+                      "expected": -20,
+                      "actual": null
+                    },
+                    {
+                      "truth_state": "UNKNOWN",
+                      "field": "delta_dbp_mm_hg",
+                      "operator": "<=",
+                      "expected": -10,
+                      "actual": null
+                    }
+                  ]
+                },
+                {
+                  "truth_state": "UNKNOWN",
+                  "field": "upright_window_minutes",
+                  "operator": "<=",
+                  "expected": 3,
+                  "actual": null
+                },
+                {
+                  "truth_state": "UNKNOWN",
+                  "field": "sustained_reduction",
+                  "operator": "==",
+                  "expected": true,
+                  "actual": null
+                }
+              ]
+            },
+            "category": "CLINICAL_CRITERIA"
+          },
+          {
+            "id": "C-64",
+            "kind": "ENGINE",
+            "text": "POTS: diagnóstico NOT_APPLICABLE; urgencia ROUTINE; confirmación NOT_APPLICABLE. Cumplir criterios no equivale a diagnóstico clínico firmado.",
+            "reference": {
+              "evaluation_id": "ce-d61e51efc3cbcf142fb17eafda1df6fb",
+              "condition_id": "POTS",
+              "source_ids": [
+                "SRC-HRS-POTS-2015",
+                "SRC-NIH-POTS-2021"
+              ],
+              "input_hash": "d1891b112057d987f15056bb96eccbd865f4df1fb8f31fe575225ee8412b64ce"
+            },
+            "logic_trace": {
+              "truth_state": "UNKNOWN",
+              "operator": "all_of",
+              "children": [
+                {
+                  "truth_state": "UNKNOWN",
+                  "field": "sustained_delta_hr_bpm",
+                  "operator": ">=",
+                  "expected": 30,
+                  "actual": null
+                },
+                {
+                  "truth_state": "UNKNOWN",
+                  "field": "upright_window_minutes",
+                  "operator": "<=",
+                  "expected": 10,
+                  "actual": null
+                },
+                {
+                  "truth_state": "UNKNOWN",
+                  "field": "orthostatic_hypotension_present",
+                  "operator": "==",
+                  "expected": false,
+                  "actual": null
+                },
+                {
+                  "truth_state": "UNKNOWN",
+                  "field": "orthostatic_symptoms_frequent",
+                  "operator": "==",
+                  "expected": true,
+                  "actual": null
+                },
+                {
+                  "truth_state": "UNKNOWN",
+                  "field": "symptoms_improve_supine",
+                  "operator": "==",
+                  "expected": true,
+                  "actual": null
+                },
+                {
+                  "truth_state": "UNKNOWN",
+                  "field": "symptom_duration_months",
+                  "operator": ">=",
+                  "expected": 3,
+                  "actual": null
+                },
+                {
+                  "truth_state": "UNKNOWN",
+                  "field": "alternative_cause_present",
+                  "operator": "==",
+                  "expected": false,
+                  "actual": null
+                }
+              ]
+            },
+            "category": "CLINICAL_CRITERIA"
+          },
+          {
+            "id": "M30",
+            "kind": "ENGINE",
+            "category": "ALERT",
+            "text": "Evento o alerta / alert event norm:physiology.strength: REQUIREMENT_MET; prioridad / priority ROUTINE; nueva notificación / notify False; motivo / reason UNCHANGED_STATE_NO_REPEAT_NOTIFICATION; clase / kind NORMATIVE_REQUIREMENT. No diagnóstico / not a diagnosis.",
+            "reference": {
+              "run_id": "mission-crew-B-cycle-18",
+              "as_of": "2026-08-19T12:00:00+00:00",
+              "output_hash": "814b1ea4d2207462bf4acbd19f04cfa2968a04e279b55121e9bc19c8e655e7d5",
+              "event_id": "me-e25a6def9fe799690cb93d149d46ced5",
+              "source_ids": [
+                "S01",
+                "S06"
+              ]
+            }
+          },
+          {
+            "id": "M31",
+            "kind": "ENGINE",
+            "category": "ALERT",
+            "text": "Evento o alerta / alert event quality:physiology.spo2: STALE; prioridad / priority ROUTINE; nueva notificación / notify False; motivo / reason UNCHANGED_STATE_NO_REPEAT_NOTIFICATION; clase / kind DATA_QUALITY. No diagnóstico / not a diagnosis.",
+            "reference": {
+              "run_id": "mission-crew-B-cycle-18",
+              "as_of": "2026-08-19T12:00:00+00:00",
+              "output_hash": "814b1ea4d2207462bf4acbd19f04cfa2968a04e279b55121e9bc19c8e655e7d5",
+              "event_id": "me-bfac348b0aa4fd0b1956c3ef44a728d3",
+              "source_ids": [
+                "S14",
+                "SRC-DKA-2024"
+              ]
+            }
+          }
+        ],
+        "retrieved": [
+          {
+            "id": "M1",
+            "kind": "ENGINE",
+            "category": "LIMITATION",
+            "text": "Monitorización experimental / Experimental monitoring. Cambios numéricos no equivalen a empeoramiento clínico / numeric changes are not clinical worsening. No diagnóstico firmado, no tratamiento autorizado. / No signed diagnosis or treatment authorization.",
+            "reference": {
+              "run_id": "mission-crew-B-cycle-18",
+              "as_of": "2026-08-19T12:00:00+00:00",
+              "output_hash": "814b1ea4d2207462bf4acbd19f04cfa2968a04e279b55121e9bc19c8e655e7d5"
+            }
+          },
+          {
+            "id": "M29",
+            "kind": "ENGINE",
+            "category": "ALERT",
+            "text": "Evento o alerta / alert event norm:physiology.vo2max: REQUIREMENT_MET; prioridad / priority ROUTINE; nueva notificación / notify False; motivo / reason UNCHANGED_STATE_NO_REPEAT_NOTIFICATION; clase / kind NORMATIVE_REQUIREMENT. No diagnóstico / not a diagnosis.",
+            "reference": {
+              "run_id": "mission-crew-B-cycle-18",
+              "as_of": "2026-08-19T12:00:00+00:00",
+              "output_hash": "814b1ea4d2207462bf4acbd19f04cfa2968a04e279b55121e9bc19c8e655e7d5",
+              "event_id": "me-4b90e47ab26ac8a015603619f4cf604c",
+              "source_ids": [
+                "S01",
+                "S05"
+              ]
+            }
+          },
+          {
+            "id": "C-40",
+            "kind": "ENGINE",
+            "text": "DKA: diagnóstico CRITERIA_MET; urgencia EMERGENCY; confirmación SATISFIED. Cumplir criterios no equivale a diagnóstico clínico firmado.",
+            "reference": {
+              "evaluation_id": "ce-e5eacc1a2aff89131abff094d62f6fc1",
+              "condition_id": "DKA",
+              "source_ids": [
+                "SRC-DKA-2024"
+              ],
+              "input_hash": "ccbe4b133a650d28c921bf40e7c5723f3cf02f1ecd00271b30fc158fa9fc35a0"
+            },
+            "logic_trace": {
+              "truth_state": "TRUE",
+              "operator": "all_of",
+              "children": [
+                {
+                  "truth_state": "TRUE",
+                  "operator": "any_of",
+                  "children": [
+                    {
+                      "truth_state": "TRUE",
+                      "field": "known_diabetes",
+                      "operator": "==",
+                      "expected": true,
+                      "actual": true
+                    },
+                    {
+                      "truth_state": "FALSE",
+                      "field": "plasma_glucose_mg_dl",
+                      "operator": ">=",
+                      "expected": 200,
+                      "actual": 180.0
+                    }
+                  ]
+                },
+                {
+                  "truth_state": "TRUE",
+                  "operator": "any_of",
+                  "children": [
+                    {
+                      "truth_state": "TRUE",
+                      "field": "beta_hydroxybutyrate_mmol_l",
+                      "operator": ">=",
+                      "expected": 3.0,
+                      "actual": 4.2
+                    },
+                    {
+                      "truth_state": "UNKNOWN",
+                      "field": "urine_ketones_plus",
+                      "operator": ">=",
+                      "expected": 2,
+                      "actual": null
+                    }
+                  ]
+                },
+                {
+                  "truth_state": "TRUE",
+                  "operator": "any_of",
+                  "children": [
+                    {
+                      "truth_state": "TRUE",
+                      "field": "venous_pH",
+                      "operator": "<",
+                      "expected": 7.3,
+                      "actual": 7.22
+                    },
+                    {
+                      "truth_state": "UNKNOWN",
+                      "field": "bicarbonate_mmol_l",
+                      "operator": "<",
+                      "expected": 18,
+                      "actual": null
+                    }
+                  ]
+                }
+              ]
+            },
+            "category": "CLINICAL_CRITERIA"
+          },
+          {
+            "id": "C-50",
+            "kind": "ENGINE",
+            "text": "HYPOGLYCEMIA: diagnóstico SUSPECTED; urgencia PROMPT; confirmación REQUIRED. Cumplir criterios no equivale a diagnóstico clínico firmado.",
+            "reference": {
+              "evaluation_id": "ce-16077d0959d6ddea3541d4a5f039bccd",
+              "condition_id": "HYPOGLYCEMIA",
+              "source_ids": [
+                "SRC-ADA-HYPO-2026"
+              ],
+              "input_hash": "dcd4eebd2304d692c3424452690a64c165eaf43feb5384e02a4242d0bf0c5976"
+            },
+            "logic_trace": {
+              "truth_state": "UNKNOWN",
+              "operator": "all_of",
+              "children": [
+                {
+                  "truth_state": "TRUE",
+                  "field": "known_diabetes",
+                  "operator": "==",
+                  "expected": true,
+                  "actual": true
+                },
+                {
+                  "truth_state": "UNKNOWN",
+                  "operator": "any_of",
+                  "children": [
+                    {
+                      "truth_state": "FALSE",
+                      "field": "plasma_glucose_mg_dl",
+                      "operator": "<",
+                      "expected": 70,
+                      "actual": 180.0
+                    },
+                    {
+                      "truth_state": "UNKNOWN",
+                      "field": "capillary_glucose_mg_dl",
+                      "operator": "<",
+                      "expected": 70,
+                      "actual": null
+                    },
+                    {
+                      "truth_state": "UNKNOWN",
+                      "operator": "all_of",
+                      "children": [
+                        {
+                          "truth_state": "UNKNOWN",
+                          "field": "altered_mental_or_physical_status",
+                          "operator": "==",
+                          "expected": true,
+                          "actual": null
+                        },
+                        {
+                          "truth_state": "UNKNOWN",
+                          "field": "assistance_required_for_hypoglycemia",
+                          "operator": "==",
+                          "expected": true,
+                          "actual": null
+                        },
+                        {
+                          "truth_state": "UNKNOWN",
+                          "field": "hypoglycemia_event_clinically_attributed",
+                          "operator": "==",
+                          "expected": true,
+                          "actual": null
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            "category": "CLINICAL_CRITERIA"
+          },
+          {
+            "id": "C-51",
+            "kind": "ENGINE",
+            "text": "HYPOGLYCEMIA: suficiencia de datos. Estado del motor: SUSPECTED. Datos pendientes para resolver ramas indeterminadas: altered mental or physical status, assistance required for hypoglycemia, capillary glucose mg dl, hypoglycemia event clinically attributed. Las opciones siguen la lógica AND/OR; esta lista no significa que deban medirse todas. Alternativas no medidas que no bloquean este resultado: ninguno. Datos inválidos que impiden resolver ramas: ninguno. Datos pendientes para seguridad del protocolo: ninguno. Protocolo: BLOCKED_MISSING_DATA. La seguridad terapéutica es independiente de los criterios diagnósticos. Cumplir criterios no es un diagnóstico firmado ni autoriza tratamiento.",
+            "reference": {
+              "evaluation_id": "ce-16077d0959d6ddea3541d4a5f039bccd",
+              "condition_id": "HYPOGLYCEMIA",
+              "source_ids": [
+                "SRC-ADA-HYPO-2026"
+              ],
+              "input_hash": "dcd4eebd2304d692c3424452690a64c165eaf43feb5384e02a4242d0bf0c5976"
+            },
+            "clinical_contract": {
+              "diagnostic_status": "SUSPECTED",
+              "missing_required": [
+                "altered_mental_or_physical_status",
+                "assistance_required_for_hypoglycemia",
+                "capillary_glucose_mg_dl",
+                "hypoglycemia_event_clinically_attributed"
+              ],
+              "optional_not_measured": [],
+              "required_for_protocol_safety": []
+            },
+            "category": "CLINICAL_CRITERIA"
+          },
+          {
+            "id": "C-52",
+            "kind": "ENGINE",
+            "text": "HYPOGLYCEMIA: protocolo BLOCKED_MISSING_DATA. Motivos de bloqueo: BLOCKED_MISSING_DATA, BLOCKED_RESOURCE, BLOCKED_AUTHORIZATION. Recursos faltantes: verified_glucose_measurement, qualified_medical_review. Tratamiento: NOT_STARTED.",
+            "reference": {
+              "evaluation_id": "ce-16077d0959d6ddea3541d4a5f039bccd",
+              "condition_id": "HYPOGLYCEMIA",
+              "source_ids": [
+                "SRC-ADA-HYPO-2026"
+              ],
+              "input_hash": "dcd4eebd2304d692c3424452690a64c165eaf43feb5384e02a4242d0bf0c5976"
+            },
+            "category": "CLINICAL_CRITERIA"
+          },
+          {
+            "id": "C-57",
+            "kind": "ENGINE",
+            "text": "Prueba recomendada TEST-HYPO-CONTEXT: [{\"condition_id\": \"HYPOGLYCEMIA\", \"reason\": \"CONFIRMATION_OR_MISSING_DISCRIMINATING_DATA\", \"concepts\": [\"known_diabetes\", \"altered_mental_or_physical_status\", \"assistance_required_for_hypoglycemia\", \"hypoglycemia_event_clinically_attributed\"], \"unresolved_candidates\": [\"altered_mental_or_physical_status\", \"assistance_required_for_hypoglycemia\", \"hypoglycemia_event_clinically_attributed\"], \"purpose\": \"DIAGNOSTIC_RESOLUTION\", \"alternatives_follow_evaluation_tree\": true}]. No es una orden autorizada.",
+            "reference": {
+              "evaluation_id": "ce-16077d0959d6ddea3541d4a5f039bccd"
+            },
+            "category": "CLINICAL_CRITERIA"
+          },
+          {
+            "id": "C-59",
+            "kind": "ENGINE",
+            "text": "ORTHOSTATIC_HYPOTENSION: diagnóstico NOT_APPLICABLE; urgencia ROUTINE; confirmación NOT_APPLICABLE. Cumplir criterios no equivale a diagnóstico clínico firmado.",
+            "reference": {
+              "evaluation_id": "ce-221df73f0af2ba70de297fcbef1979e1",
+              "condition_id": "ORTHOSTATIC_HYPOTENSION",
+              "source_ids": [
+                "SRC-AHA-OH-2024"
+              ],
+              "input_hash": "dfdc9c096d00aaf7d0d540519f5d25e15696ac9af96b293b8c331f4f0333eebd"
+            },
+            "logic_trace": {
+              "truth_state": "UNKNOWN",
+              "operator": "all_of",
+              "children": [
+                {
+                  "truth_state": "UNKNOWN",
+                  "operator": "any_of",
+                  "children": [
+                    {
+                      "truth_state": "UNKNOWN",
+                      "field": "delta_sbp_mm_hg",
+                      "operator": "<=",
+                      "expected": -20,
+                      "actual": null
+                    },
+                    {
+                      "truth_state": "UNKNOWN",
+                      "field": "delta_dbp_mm_hg",
+                      "operator": "<=",
+                      "expected": -10,
+                      "actual": null
+                    }
+                  ]
+                },
+                {
+                  "truth_state": "UNKNOWN",
+                  "field": "upright_window_minutes",
+                  "operator": "<=",
+                  "expected": 3,
+                  "actual": null
+                },
+                {
+                  "truth_state": "UNKNOWN",
+                  "field": "sustained_reduction",
+                  "operator": "==",
+                  "expected": true,
+                  "actual": null
+                }
+              ]
+            },
+            "category": "CLINICAL_CRITERIA"
+          },
+          {
+            "id": "C-64",
+            "kind": "ENGINE",
+            "text": "POTS: diagnóstico NOT_APPLICABLE; urgencia ROUTINE; confirmación NOT_APPLICABLE. Cumplir criterios no equivale a diagnóstico clínico firmado.",
+            "reference": {
+              "evaluation_id": "ce-d61e51efc3cbcf142fb17eafda1df6fb",
+              "condition_id": "POTS",
+              "source_ids": [
+                "SRC-HRS-POTS-2015",
+                "SRC-NIH-POTS-2021"
+              ],
+              "input_hash": "d1891b112057d987f15056bb96eccbd865f4df1fb8f31fe575225ee8412b64ce"
+            },
+            "logic_trace": {
+              "truth_state": "UNKNOWN",
+              "operator": "all_of",
+              "children": [
+                {
+                  "truth_state": "UNKNOWN",
+                  "field": "sustained_delta_hr_bpm",
+                  "operator": ">=",
+                  "expected": 30,
+                  "actual": null
+                },
+                {
+                  "truth_state": "UNKNOWN",
+                  "field": "upright_window_minutes",
+                  "operator": "<=",
+                  "expected": 10,
+                  "actual": null
+                },
+                {
+                  "truth_state": "UNKNOWN",
+                  "field": "orthostatic_hypotension_present",
+                  "operator": "==",
+                  "expected": false,
+                  "actual": null
+                },
+                {
+                  "truth_state": "UNKNOWN",
+                  "field": "orthostatic_symptoms_frequent",
+                  "operator": "==",
+                  "expected": true,
+                  "actual": null
+                },
+                {
+                  "truth_state": "UNKNOWN",
+                  "field": "symptoms_improve_supine",
+                  "operator": "==",
+                  "expected": true,
+                  "actual": null
+                },
+                {
+                  "truth_state": "UNKNOWN",
+                  "field": "symptom_duration_months",
+                  "operator": ">=",
+                  "expected": 3,
+                  "actual": null
+                },
+                {
+                  "truth_state": "UNKNOWN",
+                  "field": "alternative_cause_present",
+                  "operator": "==",
+                  "expected": false,
+                  "actual": null
+                }
+              ]
+            },
+            "category": "CLINICAL_CRITERIA"
+          },
+          {
+            "id": "M30",
+            "kind": "ENGINE",
+            "category": "ALERT",
+            "text": "Evento o alerta / alert event norm:physiology.strength: REQUIREMENT_MET; prioridad / priority ROUTINE; nueva notificación / notify False; motivo / reason UNCHANGED_STATE_NO_REPEAT_NOTIFICATION; clase / kind NORMATIVE_REQUIREMENT. No diagnóstico / not a diagnosis.",
+            "reference": {
+              "run_id": "mission-crew-B-cycle-18",
+              "as_of": "2026-08-19T12:00:00+00:00",
+              "output_hash": "814b1ea4d2207462bf4acbd19f04cfa2968a04e279b55121e9bc19c8e655e7d5",
+              "event_id": "me-e25a6def9fe799690cb93d149d46ced5",
+              "source_ids": [
+                "S01",
+                "S06"
+              ]
+            }
+          },
+          {
+            "id": "M31",
+            "kind": "ENGINE",
+            "category": "ALERT",
+            "text": "Evento o alerta / alert event quality:physiology.spo2: STALE; prioridad / priority ROUTINE; nueva notificación / notify False; motivo / reason UNCHANGED_STATE_NO_REPEAT_NOTIFICATION; clase / kind DATA_QUALITY. No diagnóstico / not a diagnosis.",
+            "reference": {
+              "run_id": "mission-crew-B-cycle-18",
+              "as_of": "2026-08-19T12:00:00+00:00",
+              "output_hash": "814b1ea4d2207462bf4acbd19f04cfa2968a04e279b55121e9bc19c8e655e7d5",
+              "event_id": "me-bfac348b0aa4fd0b1956c3ef44a728d3",
+              "source_ids": [
+                "S14",
+                "SRC-DKA-2024"
+              ]
+            }
+          },
+          {
+            "id": "D-a20fe68a3be9324a41ef",
+            "kind": "DOCUMENT",
+            "text": "NASA mantiene además un inventario explícito de riesgos humanos que incluye cardiovascular, VTE, sensorimotor, hueso, inmunidad, SANS, renal, músculo, capacidad aeróbica, sueño/circadiano, nutrición, CO₂, hipoxia, DCS, toxicidad, medicación, EVA, radiación, salud conductual y otros dominios. En paralelo, el Integrated Medical Model de NASA modela **más de 100 condiciones médicas**, incluidas enfermedades comunes, traumatismos y emergencias, lo que justifica que VIGILE no se limite a los riesgos fisiológicos clásicos de microgravedad. citeturn27search5turn21search0turn21search1turn21search2",
+            "reference": {
+              "document": "01_INFORMES/REPORTE_CONSOLIDADO_COMPLETO.md",
+              "sha256": "97e9fdc86925b6b973db75900e64f222c149ae3bd9cade8c182f2264c46831e5",
+              "version": "PINNED_CORPUS",
+              "authority": "SPACE_RESEARCH_SYNTHESIS",
+              "char_start": 1615,
+              "char_end": 2217,
+              "line": 11
+            },
+            "retrieval_score": 4.555289
+          },
+          {
+            "id": "D-047ad962ca5318a29657",
+            "kind": "DOCUMENT",
+            "text": "La premisa de autonomía es compatible con la dirección de investigación de NASA, pero no debe confundirse con una autorización de VIGILE. NASA-STD-3001 exige capacidades y recursos para diagnosticar y tratar problemas médicos durante la misión y contempla explícitamente medios para atención médica autónoma y soporte vital avanzado; paralelamente, Exploration Medical Capability investiga CDSS para que las tripulaciones de exploración puedan detectar, diagnosticar, tratar y prevenir problemas cuando la consulta inmediata con Tierra no sea práctica. El concepto EIMO describe una **transferencia gradual** de decisión médica desde Tierra hacia la tripulación y los sistemas de a bordo, no la eliminación de la gobernanza clínica. citeturn19search0turn19search1turn19search2turn19search5",
+            "reference": {
+              "document": "docs/clinical/deep-research-report-2026-10-16.md",
+              "sha256": "38ad3ab166f25a8b46c1e1f483ba813510c34dc766171389307635ecf7e8a715",
+              "version": "2026-10-16",
+              "authority": "CLINICAL_RESEARCH_SYNTHESIS",
+              "char_start": 793,
+              "char_end": 1588,
+              "line": 7
+            },
+            "retrieval_score": 4.364602
+          },
+          {
+            "id": "D-348f6f6e276875605f09",
+            "kind": "DOCUMENT",
+            "text": "\": \"REQUIRES_SPACE_SPECIFIC_VALIDATION\",\r\n      \"classification\": {\r\n        \"level_1\": \"54 <= glucose < 70 mg/dL\",\r\n        \"level_2\": \"glucose < 54 mg/dL\",\r\n        \"level_3\": \"Clinically attributed severe event with altered mental/physical function requiring assistance, independent of measured glucose\"\r\n      },\r\n      \"limitations\": [\r\n        \"NOT_ETIOLOGIC_DIAGNOSIS\",\r\n        \"CGM_ALONE_NOT_USED_IN_THIS_RESTRICTED_ROUTE\",\r\n        \"NO_FIXED_RECHECK_INTERVAL_WITHOUT_CONTEXT\",\r\n        \"NO_NONDIABETIC_HYPOGLYCEMIA_DIAGNOSIS\"\r\n      ]\r\n    }\r\n  ],\r\n  \"protocols\": [\r\n    {\r\n      \"protocol_id\": \"PROT-HYPO-REVIEW-2026\",\r\n      \"source_ids\": [\r\n        \"SRC-ADA-HYPO-2026\"\r\n      ],\r\n      \"required_resources\": [\r\n        \"verified_glucose_measurement\",\r\n        \"qualified_medical_review\"\r\n      ],\r\n      \"purpose\": \"Review only; no doses or execution\",\r\n      \"mission_approved\": false\r\n    }\r\n  ],\r\n  \"tests\": [\r\n    {\r\n      \"test_id\": \"TEST-HYPO-GLUCOSE\",\r\n      \"source_ids\": [\r\n        \"SRC-ADA-HYPO-2026\"\r\n      ],\r\n      \"purpose\": \"Obtain or verify blood glucose with suitable me",
+            "reference": {
+              "document": "engine/vigile/clinical_knowledge/v07-extension.json",
+              "sha256": "b258ff2d79ab79355f65826466c9fc3e7a52380b749ec18ef2eb4700759e4fd8",
+              "version": "2026.1",
+              "authority": "IMPLEMENTED_CRITERION_NOT_ORIGINAL_ARTICLE",
+              "char_start": 2200,
+              "char_end": 3300,
+              "line": 70
+            },
+            "retrieval_score": 4.306218
+          }
+        ],
+        "generated": [],
+        "documents": [
+          {
+            "id": "D-a20fe68a3be9324a41ef",
+            "kind": "DOCUMENT",
+            "text": "NASA mantiene además un inventario explícito de riesgos humanos que incluye cardiovascular, VTE, sensorimotor, hueso, inmunidad, SANS, renal, músculo, capacidad aeróbica, sueño/circadiano, nutrición, CO₂, hipoxia, DCS, toxicidad, medicación, EVA, radiación, salud conductual y otros dominios. En paralelo, el Integrated Medical Model de NASA modela **más de 100 condiciones médicas**, incluidas enfermedades comunes, traumatismos y emergencias, lo que justifica que VIGILE no se limite a los riesgos fisiológicos clásicos de microgravedad. citeturn27search5turn21search0turn21search1turn21search2",
+            "reference": {
+              "document": "01_INFORMES/REPORTE_CONSOLIDADO_COMPLETO.md",
+              "sha256": "97e9fdc86925b6b973db75900e64f222c149ae3bd9cade8c182f2264c46831e5",
+              "version": "PINNED_CORPUS",
+              "authority": "SPACE_RESEARCH_SYNTHESIS",
+              "char_start": 1615,
+              "char_end": 2217,
+              "line": 11
+            },
+            "retrieval_score": 4.555289
+          },
+          {
+            "id": "D-047ad962ca5318a29657",
+            "kind": "DOCUMENT",
+            "text": "La premisa de autonomía es compatible con la dirección de investigación de NASA, pero no debe confundirse con una autorización de VIGILE. NASA-STD-3001 exige capacidades y recursos para diagnosticar y tratar problemas médicos durante la misión y contempla explícitamente medios para atención médica autónoma y soporte vital avanzado; paralelamente, Exploration Medical Capability investiga CDSS para que las tripulaciones de exploración puedan detectar, diagnosticar, tratar y prevenir problemas cuando la consulta inmediata con Tierra no sea práctica. El concepto EIMO describe una **transferencia gradual** de decisión médica desde Tierra hacia la tripulación y los sistemas de a bordo, no la eliminación de la gobernanza clínica. citeturn19search0turn19search1turn19search2turn19search5",
+            "reference": {
+              "document": "docs/clinical/deep-research-report-2026-10-16.md",
+              "sha256": "38ad3ab166f25a8b46c1e1f483ba813510c34dc766171389307635ecf7e8a715",
+              "version": "2026-10-16",
+              "authority": "CLINICAL_RESEARCH_SYNTHESIS",
+              "char_start": 793,
+              "char_end": 1588,
+              "line": 7
+            },
+            "retrieval_score": 4.364602
+          },
+          {
+            "id": "D-348f6f6e276875605f09",
+            "kind": "DOCUMENT",
+            "text": "\": \"REQUIRES_SPACE_SPECIFIC_VALIDATION\",\r\n      \"classification\": {\r\n        \"level_1\": \"54 <= glucose < 70 mg/dL\",\r\n        \"level_2\": \"glucose < 54 mg/dL\",\r\n        \"level_3\": \"Clinically attributed severe event with altered mental/physical function requiring assistance, independent of measured glucose\"\r\n      },\r\n      \"limitations\": [\r\n        \"NOT_ETIOLOGIC_DIAGNOSIS\",\r\n        \"CGM_ALONE_NOT_USED_IN_THIS_RESTRICTED_ROUTE\",\r\n        \"NO_FIXED_RECHECK_INTERVAL_WITHOUT_CONTEXT\",\r\n        \"NO_NONDIABETIC_HYPOGLYCEMIA_DIAGNOSIS\"\r\n      ]\r\n    }\r\n  ],\r\n  \"protocols\": [\r\n    {\r\n      \"protocol_id\": \"PROT-HYPO-REVIEW-2026\",\r\n      \"source_ids\": [\r\n        \"SRC-ADA-HYPO-2026\"\r\n      ],\r\n      \"required_resources\": [\r\n        \"verified_glucose_measurement\",\r\n        \"qualified_medical_review\"\r\n      ],\r\n      \"purpose\": \"Review only; no doses or execution\",\r\n      \"mission_approved\": false\r\n    }\r\n  ],\r\n  \"tests\": [\r\n    {\r\n      \"test_id\": \"TEST-HYPO-GLUCOSE\",\r\n      \"source_ids\": [\r\n        \"SRC-ADA-HYPO-2026\"\r\n      ],\r\n      \"purpose\": \"Obtain or verify blood glucose with suitable me",
+            "reference": {
+              "document": "engine/vigile/clinical_knowledge/v07-extension.json",
+              "sha256": "b258ff2d79ab79355f65826466c9fc3e7a52380b749ec18ef2eb4700759e4fd8",
+              "version": "2026.1",
+              "authority": "IMPLEMENTED_CRITERION_NOT_ORIGINAL_ARTICLE",
+              "char_start": 2200,
+              "char_end": 3300,
+              "line": 70
+            },
+            "retrieval_score": 4.306218
+          }
+        ],
+        "document_issues": [],
+        "sources": [
+          {
+            "document": "01_INFORMES/REPORTE_CONSOLIDADO_COMPLETO.md",
+            "sha256": "97e9fdc86925b6b973db75900e64f222c149ae3bd9cade8c182f2264c46831e5",
+            "version": "PINNED_CORPUS",
+            "authority": "SPACE_RESEARCH_SYNTHESIS",
+            "char_start": 1615,
+            "char_end": 2217,
+            "line": 11
+          },
+          {
+            "document": "docs/clinical/deep-research-report-2026-10-16.md",
+            "sha256": "38ad3ab166f25a8b46c1e1f483ba813510c34dc766171389307635ecf7e8a715",
+            "version": "2026-10-16",
+            "authority": "CLINICAL_RESEARCH_SYNTHESIS",
+            "char_start": 793,
+            "char_end": 1588,
+            "line": 7
+          },
+          {
+            "document": "engine/vigile/clinical_knowledge/v07-extension.json",
+            "sha256": "b258ff2d79ab79355f65826466c9fc3e7a52380b749ec18ef2eb4700759e4fd8",
+            "version": "2026.1",
+            "authority": "IMPLEMENTED_CRITERION_NOT_ORIGINAL_ARTICLE",
+            "char_start": 2200,
+            "char_end": 3300,
+            "line": 70
+          }
+        ],
+        "inference_attempted": true,
+        "inference_executed": false,
+        "clinical_execution": "BLOCKED",
+        "authority": "DETERMINISTIC_ENGINE_ONLY",
+        "clinical_validation": false,
+        "limitations": [
+          "DOCUMENTS_DO_NOT_OVERRIDE_ENGINE",
+          "SEMANTIC_VERIFICATION_IS_NOT_CLINICAL_VALIDATION",
+          "UNKNOWN_UNDETECTED_ERRORS_REQUIRE_INDEPENDENT_REVIEW"
+        ],
+        "context": {
+          "subject_id": "mission-crew-B",
+          "mission_id": "mission-v011",
+          "target_id": "mission-crew-B-cycle-18"
+        },
+        "failure_trace": {
+          "category": "SAFETY_REJECTION",
+          "code": "CLINICAL_CLAIM_REQUIRES_EXACT_ENGINE_TEXT",
+          "stage": "DETERMINISTIC_VALIDATION",
+          "exception_type": "ValueError",
+          "clinical_state_changed": false
+        },
+        "failure_type": "ValueError"
+      },
+      "raw_model_calls": [
+        {
+          "raw_model_output": {
+            "sentences": [
+              {
+                "evidence_ids": [
+                  "M29"
+                ],
+                "text": "The medical alert is a normative requirement indicating a normal physiological state, not a diagnosis."
+              },
+              {
+                "evidence_ids": [
+                  "M1"
+                ],
+                "text": "No signed diagnosis or treatment authorization is present; the alert does not constitute a clinical diagnosis."
+              }
+            ]
+          },
+          "metrics": {
+            "elapsed_ms": 3462.0849000057206,
+            "usage": {},
+            "timings": {},
+            "load_duration_ns": 15471500,
+            "total_duration_ns": 3438566400,
+            "prompt_eval_count": 3700,
+            "eval_count": 73,
+            "eval_duration_ns": 1214528000
+          }
+        }
+      ]
+    },
+    {
+      "kind": "missing",
+      "target": "mission-crew-B-cycle-18",
+      "question": "What information is missing from my evaluation?",
+      "seconds": 0.16761570000380743,
+      "response": {
+        "status": "DETERMINISTIC_DATA_SUFFICIENCY",
+        "run_id": "mission-crew-B-cycle-18",
+        "evaluation_id": null,
+        "as_of": "2026-08-19T12:00:00+00:00",
+        "mode": "FULL",
+        "message": "Resultados del motor separados de documentación y texto generado. / Engine results are separate from documents and generated text.",
+        "answer": [
+          {
+            "id": "M1",
+            "kind": "ENGINE",
+            "category": "LIMITATION",
+            "text": "Monitorización experimental / Experimental monitoring. Cambios numéricos no equivalen a empeoramiento clínico / numeric changes are not clinical worsening. No diagnóstico firmado, no tratamiento autorizado. / No signed diagnosis or treatment authorization.",
+            "reference": {
+              "run_id": "mission-crew-B-cycle-18",
+              "as_of": "2026-08-19T12:00:00+00:00",
+              "output_hash": "814b1ea4d2207462bf4acbd19f04cfa2968a04e279b55121e9bc19c8e655e7d5"
+            }
+          },
+          {
+            "id": "C-57",
+            "kind": "ENGINE",
+            "text": "Prueba recomendada TEST-HYPO-CONTEXT: [{\"condition_id\": \"HYPOGLYCEMIA\", \"reason\": \"CONFIRMATION_OR_MISSING_DISCRIMINATING_DATA\", \"concepts\": [\"known_diabetes\", \"altered_mental_or_physical_status\", \"assistance_required_for_hypoglycemia\", \"hypoglycemia_event_clinically_attributed\"], \"unresolved_candidates\": [\"altered_mental_or_physical_status\", \"assistance_required_for_hypoglycemia\", \"hypoglycemia_event_clinically_attributed\"], \"purpose\": \"DIAGNOSTIC_RESOLUTION\", \"alternatives_follow_evaluation_tree\": true}]. No es una orden autorizada.",
+            "reference": {
+              "evaluation_id": "ce-16077d0959d6ddea3541d4a5f039bccd"
+            },
+            "category": "CLINICAL_CRITERIA"
+          },
+          {
+            "id": "M14",
+            "kind": "ENGINE",
+            "category": "DATA_SUFFICIENCY",
+            "text": "RADIATION: indicadores faltantes / missing indicators: radiation.interval_effective_dose, radiation.career_spaceflight. Fase / phase: IN_MISSION; gravedad / gravity: MICROGRAVITY.",
+            "reference": {
+              "run_id": "mission-crew-B-cycle-18",
+              "as_of": "2026-08-19T12:00:00+00:00",
+              "output_hash": "814b1ea4d2207462bf4acbd19f04cfa2968a04e279b55121e9bc19c8e655e7d5",
+              "domain": "RADIATION",
+              "source_ids": [
+                "S01",
+                "S16"
+              ]
+            }
+          },
+          {
+            "id": "M11",
+            "kind": "ENGINE",
+            "category": "DESCRIPTIVE",
+            "text": "physiology.strength: estado / state DESCRIPTIVE_AVAILABLE; valor / value 424.6 N. Calidad / quality: [].",
+            "reference": {
+              "run_id": "mission-crew-B-cycle-18",
+              "as_of": "2026-08-19T12:00:00+00:00",
+              "output_hash": "814b1ea4d2207462bf4acbd19f04cfa2968a04e279b55121e9bc19c8e655e7d5",
+              "variable": "physiology.strength",
+              "measurement_id": "mission-sample-58",
+              "source_ids": [
+                "S01",
+                "S06"
+              ]
+            }
+          },
+          {
+            "id": "C-58",
+            "kind": "ENGINE",
+            "text": "Prueba recomendada TEST-HYPO-GLUCOSE: [{\"condition_id\": \"HYPOGLYCEMIA\", \"reason\": \"CONFIRMATION_OR_MISSING_DISCRIMINATING_DATA\", \"concepts\": [\"plasma_glucose_mg_dl\", \"capillary_glucose_mg_dl\"], \"unresolved_candidates\": [\"capillary_glucose_mg_dl\"], \"purpose\": \"DIAGNOSTIC_RESOLUTION\", \"alternatives_follow_evaluation_tree\": true}]. No es una orden autorizada.",
+            "reference": {
+              "evaluation_id": "ce-16077d0959d6ddea3541d4a5f039bccd"
+            },
+            "category": "CLINICAL_CRITERIA"
+          },
+          {
+            "id": "C-41",
+            "kind": "ENGINE",
+            "text": "DKA: suficiencia de datos. Estado del motor: CRITERIA_MET. Datos pendientes para resolver ramas indeterminadas: ninguno. Las opciones siguen la lógica AND/OR; esta lista no significa que deban medirse todas. Alternativas no medidas que no bloquean este resultado: bicarbonato, cetonas urinarias. Datos inválidos que impiden resolver ramas: ninguno. Datos pendientes para seguridad del protocolo: potasio. Protocolo: BLOCKED_MISSING_DATA. La seguridad terapéutica es independiente de los criterios diagnósticos. Cumplir criterios no es un diagnóstico firmado ni autoriza tratamiento.",
+            "reference": {
+              "evaluation_id": "ce-e5eacc1a2aff89131abff094d62f6fc1",
+              "condition_id": "DKA",
+              "source_ids": [
+                "SRC-DKA-2024"
+              ],
+              "input_hash": "ccbe4b133a650d28c921bf40e7c5723f3cf02f1ecd00271b30fc158fa9fc35a0"
+            },
+            "clinical_contract": {
+              "diagnostic_status": "CRITERIA_MET",
+              "missing_required": [],
+              "optional_not_measured": [
+                "bicarbonate_mmol_l",
+                "urine_ketones_plus"
+              ],
+              "required_for_protocol_safety": [
+                "potassium_mmol_l"
+              ]
+            },
+            "category": "CLINICAL_CRITERIA"
+          },
+          {
+            "id": "C-42",
+            "kind": "ENGINE",
+            "text": "DKA: protocolo BLOCKED_MISSING_DATA. Motivos de bloqueo: BLOCKED_MISSING_DATA:POTASSIUM, BLOCKED_RESOURCE, BLOCKED_AUTHORIZATION. Recursos faltantes: validated_glucose_measurement, potassium_measurement, electrolytes, beta_hydroxybutyrate, venous_pH_or_bicarbonate, IV_access_capability, IV_fluid_capability, insulin_inventory, continuous_or_frequent_monitoring. Tratamiento: NOT_STARTED.",
+            "reference": {
+              "evaluation_id": "ce-e5eacc1a2aff89131abff094d62f6fc1",
+              "condition_id": "DKA",
+              "source_ids": [
+                "SRC-DKA-2024"
+              ],
+              "input_hash": "ccbe4b133a650d28c921bf40e7c5723f3cf02f1ecd00271b30fc158fa9fc35a0"
+            },
+            "category": "CLINICAL_CRITERIA"
+          },
+          {
+            "id": "C-51",
+            "kind": "ENGINE",
+            "text": "HYPOGLYCEMIA: suficiencia de datos. Estado del motor: SUSPECTED. Datos pendientes para resolver ramas indeterminadas: altered mental or physical status, assistance required for hypoglycemia, capillary glucose mg dl, hypoglycemia event clinically attributed. Las opciones siguen la lógica AND/OR; esta lista no significa que deban medirse todas. Alternativas no medidas que no bloquean este resultado: ninguno. Datos inválidos que impiden resolver ramas: ninguno. Datos pendientes para seguridad del protocolo: ninguno. Protocolo: BLOCKED_MISSING_DATA. La seguridad terapéutica es independiente de los criterios diagnósticos. Cumplir criterios no es un diagnóstico firmado ni autoriza tratamiento.",
+            "reference": {
+              "evaluation_id": "ce-16077d0959d6ddea3541d4a5f039bccd",
+              "condition_id": "HYPOGLYCEMIA",
+              "source_ids": [
+                "SRC-ADA-HYPO-2026"
+              ],
+              "input_hash": "dcd4eebd2304d692c3424452690a64c165eaf43feb5384e02a4242d0bf0c5976"
+            },
+            "clinical_contract": {
+              "diagnostic_status": "SUSPECTED",
+              "missing_required": [
+                "altered_mental_or_physical_status",
+                "assistance_required_for_hypoglycemia",
+                "capillary_glucose_mg_dl",
+                "hypoglycemia_event_clinically_attributed"
+              ],
+              "optional_not_measured": [],
+              "required_for_protocol_safety": []
+            },
+            "category": "CLINICAL_CRITERIA"
+          },
+          {
+            "id": "C-52",
+            "kind": "ENGINE",
+            "text": "HYPOGLYCEMIA: protocolo BLOCKED_MISSING_DATA. Motivos de bloqueo: BLOCKED_MISSING_DATA, BLOCKED_RESOURCE, BLOCKED_AUTHORIZATION. Recursos faltantes: verified_glucose_measurement, qualified_medical_review. Tratamiento: NOT_STARTED.",
+            "reference": {
+              "evaluation_id": "ce-16077d0959d6ddea3541d4a5f039bccd",
+              "condition_id": "HYPOGLYCEMIA",
+              "source_ids": [
+                "SRC-ADA-HYPO-2026"
+              ],
+              "input_hash": "dcd4eebd2304d692c3424452690a64c165eaf43feb5384e02a4242d0bf0c5976"
+            },
+            "category": "CLINICAL_CRITERIA"
+          },
+          {
+            "id": "C-61",
+            "kind": "ENGINE",
+            "text": "ORTHOSTATIC_HYPOTENSION: protocolo NOT_INDICATED. Motivos de bloqueo: NOT_INDICATED, BLOCKED_AUTHORIZATION. Recursos faltantes: . Tratamiento: NOT_STARTED.",
+            "reference": {
+              "evaluation_id": "ce-221df73f0af2ba70de297fcbef1979e1",
+              "condition_id": "ORTHOSTATIC_HYPOTENSION",
+              "source_ids": [
+                "SRC-AHA-OH-2024"
+              ],
+              "input_hash": "dfdc9c096d00aaf7d0d540519f5d25e15696ac9af96b293b8c331f4f0333eebd"
+            },
+            "category": "CLINICAL_CRITERIA"
+          },
+          {
+            "id": "C-66",
+            "kind": "ENGINE",
+            "text": "POTS: protocolo NOT_INDICATED. Motivos de bloqueo: NOT_INDICATED, BLOCKED_AUTHORIZATION. Recursos faltantes: . Tratamiento: NOT_STARTED.",
+            "reference": {
+              "evaluation_id": "ce-d61e51efc3cbcf142fb17eafda1df6fb",
+              "condition_id": "POTS",
+              "source_ids": [
+                "SRC-HRS-POTS-2015",
+                "SRC-NIH-POTS-2021"
+              ],
+              "input_hash": "d1891b112057d987f15056bb96eccbd865f4df1fb8f31fe575225ee8412b64ce"
+            },
+            "category": "CLINICAL_CRITERIA"
+          }
+        ],
+        "retrieved": [
+          {
+            "id": "M1",
+            "kind": "ENGINE",
+            "category": "LIMITATION",
+            "text": "Monitorización experimental / Experimental monitoring. Cambios numéricos no equivalen a empeoramiento clínico / numeric changes are not clinical worsening. No diagnóstico firmado, no tratamiento autorizado. / No signed diagnosis or treatment authorization.",
+            "reference": {
+              "run_id": "mission-crew-B-cycle-18",
+              "as_of": "2026-08-19T12:00:00+00:00",
+              "output_hash": "814b1ea4d2207462bf4acbd19f04cfa2968a04e279b55121e9bc19c8e655e7d5"
+            }
+          },
+          {
+            "id": "C-57",
+            "kind": "ENGINE",
+            "text": "Prueba recomendada TEST-HYPO-CONTEXT: [{\"condition_id\": \"HYPOGLYCEMIA\", \"reason\": \"CONFIRMATION_OR_MISSING_DISCRIMINATING_DATA\", \"concepts\": [\"known_diabetes\", \"altered_mental_or_physical_status\", \"assistance_required_for_hypoglycemia\", \"hypoglycemia_event_clinically_attributed\"], \"unresolved_candidates\": [\"altered_mental_or_physical_status\", \"assistance_required_for_hypoglycemia\", \"hypoglycemia_event_clinically_attributed\"], \"purpose\": \"DIAGNOSTIC_RESOLUTION\", \"alternatives_follow_evaluation_tree\": true}]. No es una orden autorizada.",
+            "reference": {
+              "evaluation_id": "ce-16077d0959d6ddea3541d4a5f039bccd"
+            },
+            "category": "CLINICAL_CRITERIA"
+          },
+          {
+            "id": "M14",
+            "kind": "ENGINE",
+            "category": "DATA_SUFFICIENCY",
+            "text": "RADIATION: indicadores faltantes / missing indicators: radiation.interval_effective_dose, radiation.career_spaceflight. Fase / phase: IN_MISSION; gravedad / gravity: MICROGRAVITY.",
+            "reference": {
+              "run_id": "mission-crew-B-cycle-18",
+              "as_of": "2026-08-19T12:00:00+00:00",
+              "output_hash": "814b1ea4d2207462bf4acbd19f04cfa2968a04e279b55121e9bc19c8e655e7d5",
+              "domain": "RADIATION",
+              "source_ids": [
+                "S01",
+                "S16"
+              ]
+            }
+          },
+          {
+            "id": "M11",
+            "kind": "ENGINE",
+            "category": "DESCRIPTIVE",
+            "text": "physiology.strength: estado / state DESCRIPTIVE_AVAILABLE; valor / value 424.6 N. Calidad / quality: [].",
+            "reference": {
+              "run_id": "mission-crew-B-cycle-18",
+              "as_of": "2026-08-19T12:00:00+00:00",
+              "output_hash": "814b1ea4d2207462bf4acbd19f04cfa2968a04e279b55121e9bc19c8e655e7d5",
+              "variable": "physiology.strength",
+              "measurement_id": "mission-sample-58",
+              "source_ids": [
+                "S01",
+                "S06"
+              ]
+            }
+          },
+          {
+            "id": "C-58",
+            "kind": "ENGINE",
+            "text": "Prueba recomendada TEST-HYPO-GLUCOSE: [{\"condition_id\": \"HYPOGLYCEMIA\", \"reason\": \"CONFIRMATION_OR_MISSING_DISCRIMINATING_DATA\", \"concepts\": [\"plasma_glucose_mg_dl\", \"capillary_glucose_mg_dl\"], \"unresolved_candidates\": [\"capillary_glucose_mg_dl\"], \"purpose\": \"DIAGNOSTIC_RESOLUTION\", \"alternatives_follow_evaluation_tree\": true}]. No es una orden autorizada.",
+            "reference": {
+              "evaluation_id": "ce-16077d0959d6ddea3541d4a5f039bccd"
+            },
+            "category": "CLINICAL_CRITERIA"
+          },
+          {
+            "id": "C-41",
+            "kind": "ENGINE",
+            "text": "DKA: suficiencia de datos. Estado del motor: CRITERIA_MET. Datos pendientes para resolver ramas indeterminadas: ninguno. Las opciones siguen la lógica AND/OR; esta lista no significa que deban medirse todas. Alternativas no medidas que no bloquean este resultado: bicarbonato, cetonas urinarias. Datos inválidos que impiden resolver ramas: ninguno. Datos pendientes para seguridad del protocolo: potasio. Protocolo: BLOCKED_MISSING_DATA. La seguridad terapéutica es independiente de los criterios diagnósticos. Cumplir criterios no es un diagnóstico firmado ni autoriza tratamiento.",
+            "reference": {
+              "evaluation_id": "ce-e5eacc1a2aff89131abff094d62f6fc1",
+              "condition_id": "DKA",
+              "source_ids": [
+                "SRC-DKA-2024"
+              ],
+              "input_hash": "ccbe4b133a650d28c921bf40e7c5723f3cf02f1ecd00271b30fc158fa9fc35a0"
+            },
+            "clinical_contract": {
+              "diagnostic_status": "CRITERIA_MET",
+              "missing_required": [],
+              "optional_not_measured": [
+                "bicarbonate_mmol_l",
+                "urine_ketones_plus"
+              ],
+              "required_for_protocol_safety": [
+                "potassium_mmol_l"
+              ]
+            },
+            "category": "CLINICAL_CRITERIA"
+          },
+          {
+            "id": "C-42",
+            "kind": "ENGINE",
+            "text": "DKA: protocolo BLOCKED_MISSING_DATA. Motivos de bloqueo: BLOCKED_MISSING_DATA:POTASSIUM, BLOCKED_RESOURCE, BLOCKED_AUTHORIZATION. Recursos faltantes: validated_glucose_measurement, potassium_measurement, electrolytes, beta_hydroxybutyrate, venous_pH_or_bicarbonate, IV_access_capability, IV_fluid_capability, insulin_inventory, continuous_or_frequent_monitoring. Tratamiento: NOT_STARTED.",
+            "reference": {
+              "evaluation_id": "ce-e5eacc1a2aff89131abff094d62f6fc1",
+              "condition_id": "DKA",
+              "source_ids": [
+                "SRC-DKA-2024"
+              ],
+              "input_hash": "ccbe4b133a650d28c921bf40e7c5723f3cf02f1ecd00271b30fc158fa9fc35a0"
+            },
+            "category": "CLINICAL_CRITERIA"
+          },
+          {
+            "id": "C-51",
+            "kind": "ENGINE",
+            "text": "HYPOGLYCEMIA: suficiencia de datos. Estado del motor: SUSPECTED. Datos pendientes para resolver ramas indeterminadas: altered mental or physical status, assistance required for hypoglycemia, capillary glucose mg dl, hypoglycemia event clinically attributed. Las opciones siguen la lógica AND/OR; esta lista no significa que deban medirse todas. Alternativas no medidas que no bloquean este resultado: ninguno. Datos inválidos que impiden resolver ramas: ninguno. Datos pendientes para seguridad del protocolo: ninguno. Protocolo: BLOCKED_MISSING_DATA. La seguridad terapéutica es independiente de los criterios diagnósticos. Cumplir criterios no es un diagnóstico firmado ni autoriza tratamiento.",
+            "reference": {
+              "evaluation_id": "ce-16077d0959d6ddea3541d4a5f039bccd",
+              "condition_id": "HYPOGLYCEMIA",
+              "source_ids": [
+                "SRC-ADA-HYPO-2026"
+              ],
+              "input_hash": "dcd4eebd2304d692c3424452690a64c165eaf43feb5384e02a4242d0bf0c5976"
+            },
+            "clinical_contract": {
+              "diagnostic_status": "SUSPECTED",
+              "missing_required": [
+                "altered_mental_or_physical_status",
+                "assistance_required_for_hypoglycemia",
+                "capillary_glucose_mg_dl",
+                "hypoglycemia_event_clinically_attributed"
+              ],
+              "optional_not_measured": [],
+              "required_for_protocol_safety": []
+            },
+            "category": "CLINICAL_CRITERIA"
+          },
+          {
+            "id": "C-52",
+            "kind": "ENGINE",
+            "text": "HYPOGLYCEMIA: protocolo BLOCKED_MISSING_DATA. Motivos de bloqueo: BLOCKED_MISSING_DATA, BLOCKED_RESOURCE, BLOCKED_AUTHORIZATION. Recursos faltantes: verified_glucose_measurement, qualified_medical_review. Tratamiento: NOT_STARTED.",
+            "reference": {
+              "evaluation_id": "ce-16077d0959d6ddea3541d4a5f039bccd",
+              "condition_id": "HYPOGLYCEMIA",
+              "source_ids": [
+                "SRC-ADA-HYPO-2026"
+              ],
+              "input_hash": "dcd4eebd2304d692c3424452690a64c165eaf43feb5384e02a4242d0bf0c5976"
+            },
+            "category": "CLINICAL_CRITERIA"
+          },
+          {
+            "id": "C-61",
+            "kind": "ENGINE",
+            "text": "ORTHOSTATIC_HYPOTENSION: protocolo NOT_INDICATED. Motivos de bloqueo: NOT_INDICATED, BLOCKED_AUTHORIZATION. Recursos faltantes: . Tratamiento: NOT_STARTED.",
+            "reference": {
+              "evaluation_id": "ce-221df73f0af2ba70de297fcbef1979e1",
+              "condition_id": "ORTHOSTATIC_HYPOTENSION",
+              "source_ids": [
+                "SRC-AHA-OH-2024"
+              ],
+              "input_hash": "dfdc9c096d00aaf7d0d540519f5d25e15696ac9af96b293b8c331f4f0333eebd"
+            },
+            "category": "CLINICAL_CRITERIA"
+          },
+          {
+            "id": "C-66",
+            "kind": "ENGINE",
+            "text": "POTS: protocolo NOT_INDICATED. Motivos de bloqueo: NOT_INDICATED, BLOCKED_AUTHORIZATION. Recursos faltantes: . Tratamiento: NOT_STARTED.",
+            "reference": {
+              "evaluation_id": "ce-d61e51efc3cbcf142fb17eafda1df6fb",
+              "condition_id": "POTS",
+              "source_ids": [
+                "SRC-HRS-POTS-2015",
+                "SRC-NIH-POTS-2021"
+              ],
+              "input_hash": "d1891b112057d987f15056bb96eccbd865f4df1fb8f31fe575225ee8412b64ce"
+            },
+            "category": "CLINICAL_CRITERIA"
+          },
+          {
+            "id": "D-187fa0be659498d879fb",
+            "kind": "DOCUMENT",
+            "text": "est_id\": \"TEST-SERUM-CREATININE\",\n      \"measure\": \"serum_creatinine\",\n      \"canonical_unit\": \"mg/dL\",\n      \"alternatives\": [\"micromol/L\"],\n      \"diagnostic_use\": [\"AKI\"],\n      \"quality\": [\"timestamp\", \"comparable_assay_context\"],\n      \"missing_behavior\": \"UNKNOWN\"\n    },\n    {\n      \"test_id\": \"TEST-URINE-OUTPUT\",\n      \"measure\": \"urine_output\",\n      \"canonical_unit\": \"mL/kg/h\",\n      \"diagnostic_use\": [\"AKI\"],\n      \"quality\": [\"body_mass_known\", \"collection_window_known\", \"collection_reliable\"],\n      \"missing_behavior\": \"UNKNOWN\"\n    },\n    {\n      \"test_id\": \"TEST-ANAPH-CLINICAL\",\n      \"measure\": [\n        \"skin_mucosal\",\n        \"respiratory\",\n        \"laryngeal\",\n        \"GI\",\n        \"allergen_context\"\n      ],\n      \"diagnostic_use\": [\"ANAPHYLAXIS\"],\n      \"missing_behavior\": \"PARTIAL_CLINICAL_INFORMATION\"\n    },\n    {\n      \"test_id\": \"TEST-BP\",\n      \"measure\": \"blood_pressure\",\n      \"canonical_unit\": \"mmHg\",\n      \"diagnostic_use\": [\"ANAPHYLAXIS\", \"ORTHOSTATIC_HYPOTENSION\"],\n      \"quality\": [\"device_valid\", \"timestamp\", \"position\"],\n      \"missing_behavior\": \"UN",
+            "reference": {
+              "document": "docs/clinical/deep-research-report-2026-10-16.md",
+              "sha256": "38ad3ab166f25a8b46c1e1f483ba813510c34dc766171389307635ecf7e8a715",
+              "version": "2026-10-16",
+              "authority": "CLINICAL_RESEARCH_SYNTHESIS",
+              "char_start": 54454,
+              "char_end": 55554,
+              "line": 1194
+            },
+            "retrieval_score": 6.039804
+          },
+          {
+            "id": "D-1f9c381e328be3783b5e",
+            "kind": "DOCUMENT",
+            "text": "```text\nDM_DIAGNOSTIC_EVALUATION",
+            "reference": {
+              "document": "docs/clinical/deep-research-report-2026-10-16.md",
+              "sha256": "38ad3ab166f25a8b46c1e1f483ba813510c34dc766171389307635ecf7e8a715",
+              "version": "2026-10-16",
+              "authority": "CLINICAL_RESEARCH_SYNTHESIS",
+              "char_start": 11836,
+              "char_end": 11868,
+              "line": 100
+            },
+            "retrieval_score": 4.310011
+          },
+          {
+            "id": "D-6408ebe00cb1b398d905",
+            "kind": "DOCUMENT",
+            "text": "        if missing_required(required):\n            emit(rule, INCONCLUSIVE, reason=\"MISSING_REQUIRED_INPUT\")\n            continue",
+            "reference": {
+              "document": "01_INFORMES/REPORTE_CONSOLIDADO_COMPLETO.md",
+              "sha256": "97e9fdc86925b6b973db75900e64f222c149ae3bd9cade8c182f2264c46831e5",
+              "version": "PINNED_CORPUS",
+              "authority": "SPACE_RESEARCH_SYNTHESIS",
+              "char_start": 41608,
+              "char_end": 41737,
+              "line": 210
+            },
+            "retrieval_score": 2.099633
+          }
+        ],
+        "generated": [],
+        "documents": [
+          {
+            "id": "D-187fa0be659498d879fb",
+            "kind": "DOCUMENT",
+            "text": "est_id\": \"TEST-SERUM-CREATININE\",\n      \"measure\": \"serum_creatinine\",\n      \"canonical_unit\": \"mg/dL\",\n      \"alternatives\": [\"micromol/L\"],\n      \"diagnostic_use\": [\"AKI\"],\n      \"quality\": [\"timestamp\", \"comparable_assay_context\"],\n      \"missing_behavior\": \"UNKNOWN\"\n    },\n    {\n      \"test_id\": \"TEST-URINE-OUTPUT\",\n      \"measure\": \"urine_output\",\n      \"canonical_unit\": \"mL/kg/h\",\n      \"diagnostic_use\": [\"AKI\"],\n      \"quality\": [\"body_mass_known\", \"collection_window_known\", \"collection_reliable\"],\n      \"missing_behavior\": \"UNKNOWN\"\n    },\n    {\n      \"test_id\": \"TEST-ANAPH-CLINICAL\",\n      \"measure\": [\n        \"skin_mucosal\",\n        \"respiratory\",\n        \"laryngeal\",\n        \"GI\",\n        \"allergen_context\"\n      ],\n      \"diagnostic_use\": [\"ANAPHYLAXIS\"],\n      \"missing_behavior\": \"PARTIAL_CLINICAL_INFORMATION\"\n    },\n    {\n      \"test_id\": \"TEST-BP\",\n      \"measure\": \"blood_pressure\",\n      \"canonical_unit\": \"mmHg\",\n      \"diagnostic_use\": [\"ANAPHYLAXIS\", \"ORTHOSTATIC_HYPOTENSION\"],\n      \"quality\": [\"device_valid\", \"timestamp\", \"position\"],\n      \"missing_behavior\": \"UN",
+            "reference": {
+              "document": "docs/clinical/deep-research-report-2026-10-16.md",
+              "sha256": "38ad3ab166f25a8b46c1e1f483ba813510c34dc766171389307635ecf7e8a715",
+              "version": "2026-10-16",
+              "authority": "CLINICAL_RESEARCH_SYNTHESIS",
+              "char_start": 54454,
+              "char_end": 55554,
+              "line": 1194
+            },
+            "retrieval_score": 6.039804
+          },
+          {
+            "id": "D-1f9c381e328be3783b5e",
+            "kind": "DOCUMENT",
+            "text": "```text\nDM_DIAGNOSTIC_EVALUATION",
+            "reference": {
+              "document": "docs/clinical/deep-research-report-2026-10-16.md",
+              "sha256": "38ad3ab166f25a8b46c1e1f483ba813510c34dc766171389307635ecf7e8a715",
+              "version": "2026-10-16",
+              "authority": "CLINICAL_RESEARCH_SYNTHESIS",
+              "char_start": 11836,
+              "char_end": 11868,
+              "line": 100
+            },
+            "retrieval_score": 4.310011
+          },
+          {
+            "id": "D-6408ebe00cb1b398d905",
+            "kind": "DOCUMENT",
+            "text": "        if missing_required(required):\n            emit(rule, INCONCLUSIVE, reason=\"MISSING_REQUIRED_INPUT\")\n            continue",
+            "reference": {
+              "document": "01_INFORMES/REPORTE_CONSOLIDADO_COMPLETO.md",
+              "sha256": "97e9fdc86925b6b973db75900e64f222c149ae3bd9cade8c182f2264c46831e5",
+              "version": "PINNED_CORPUS",
+              "authority": "SPACE_RESEARCH_SYNTHESIS",
+              "char_start": 41608,
+              "char_end": 41737,
+              "line": 210
+            },
+            "retrieval_score": 2.099633
+          }
+        ],
+        "document_issues": [],
+        "sources": [
+          {
+            "document": "docs/clinical/deep-research-report-2026-10-16.md",
+            "sha256": "38ad3ab166f25a8b46c1e1f483ba813510c34dc766171389307635ecf7e8a715",
+            "version": "2026-10-16",
+            "authority": "CLINICAL_RESEARCH_SYNTHESIS",
+            "char_start": 54454,
+            "char_end": 55554,
+            "line": 1194
+          },
+          {
+            "document": "docs/clinical/deep-research-report-2026-10-16.md",
+            "sha256": "38ad3ab166f25a8b46c1e1f483ba813510c34dc766171389307635ecf7e8a715",
+            "version": "2026-10-16",
+            "authority": "CLINICAL_RESEARCH_SYNTHESIS",
+            "char_start": 11836,
+            "char_end": 11868,
+            "line": 100
+          },
+          {
+            "document": "01_INFORMES/REPORTE_CONSOLIDADO_COMPLETO.md",
+            "sha256": "97e9fdc86925b6b973db75900e64f222c149ae3bd9cade8c182f2264c46831e5",
+            "version": "PINNED_CORPUS",
+            "authority": "SPACE_RESEARCH_SYNTHESIS",
+            "char_start": 41608,
+            "char_end": 41737,
+            "line": 210
+          }
+        ],
+        "inference_attempted": false,
+        "inference_executed": false,
+        "clinical_execution": "BLOCKED",
+        "authority": "DETERMINISTIC_ENGINE_ONLY",
+        "clinical_validation": false,
+        "limitations": [
+          "DOCUMENTS_DO_NOT_OVERRIDE_ENGINE",
+          "SEMANTIC_VERIFICATION_IS_NOT_CLINICAL_VALIDATION",
+          "UNKNOWN_UNDETECTED_ERRORS_REQUIRE_INDEPENDENT_REVIEW"
+        ],
+        "context": {
+          "subject_id": "mission-crew-B",
+          "mission_id": "mission-v011",
+          "target_id": "mission-crew-B-cycle-18"
+        },
+        "consistency_policy": "ENGINE_DATA_REQUIREMENTS_ONLY"
+      },
+      "raw_model_calls": []
+    },
+    {
+      "kind": "change",
+      "target": "mission-crew-B-cycle-18p1",
+      "question": "¿Qué cambió desde mi última evaluación?",
+      "seconds": 5.708168999990448,
+      "response": {
+        "status": "ANSWERED",
+        "run_id": "mission-crew-B-cycle-18p1",
+        "evaluation_id": null,
+        "as_of": "2026-08-19T14:24:00+00:00",
+        "mode": "FULL",
+        "message": "Resultados del motor separados de documentación y texto generado. / Engine results are separate from documents and generated text.",
+        "answer": [
+          {
+            "id": "M1",
+            "kind": "ENGINE",
+            "category": "LIMITATION",
+            "text": "Monitorización experimental / Experimental monitoring. Cambios numéricos no equivalen a empeoramiento clínico / numeric changes are not clinical worsening. No diagnóstico firmado, no tratamiento autorizado. / No signed diagnosis or treatment authorization.",
+            "reference": {
+              "run_id": "mission-crew-B-cycle-18p1",
+              "as_of": "2026-08-19T14:24:00+00:00",
+              "output_hash": "3d4d26b5d1e3ecba913940a16b10d05149c3acb03c268410805eb238084d26e1"
+            }
+          },
+          {
+            "id": "M12",
+            "kind": "ENGINE",
+            "category": "BASELINE",
+            "text": "physiology.strength: baseline 430.0 N; cambio absoluto / absolute change -5.430000000000007; retención / retention 98.73720930232558%. Descriptivo, no diagnóstico / descriptive, not diagnosis.",
+            "reference": {
+              "run_id": "mission-crew-B-cycle-18p1",
+              "as_of": "2026-08-19T14:24:00+00:00",
+              "output_hash": "3d4d26b5d1e3ecba913940a16b10d05149c3acb03c268410805eb238084d26e1",
+              "variable": "physiology.strength",
+              "baseline_id": "mission-crew-B-baseline-1",
+              "source_ids": [
+                "S01",
+                "S06"
+              ]
+            }
+          },
+          {
+            "id": "M38",
+            "kind": "ENGINE",
+            "category": "CHANGE",
+            "text": "Cambio desde revisión anterior / change since previous review: {\"variable\": \"physiology.vo2max\", \"previous\": 44.239, \"current\": 44.229, \"previous_state\": \"DESCRIPTIVE_AVAILABLE\", \"current_state\": \"DESCRIPTIVE_AVAILABLE\"}",
+            "reference": {
+              "run_id": "mission-crew-B-cycle-18p1",
+              "as_of": "2026-08-19T14:24:00+00:00",
+              "output_hash": "3d4d26b5d1e3ecba913940a16b10d05149c3acb03c268410805eb238084d26e1",
+              "previous_run_id": "mission-crew-B-cycle-18"
+            }
+          },
+          {
+            "id": "M13",
+            "kind": "ENGINE",
+            "category": "TREND",
+            "text": "physiology.strength: pendiente / slope -0.29999999999999905 N/day; EWMA/CUSUM por observación / per observation; RESEARCH_ONLY. No umbral clínico / no clinical threshold.",
+            "reference": {
+              "run_id": "mission-crew-B-cycle-18p1",
+              "as_of": "2026-08-19T14:24:00+00:00",
+              "output_hash": "3d4d26b5d1e3ecba913940a16b10d05149c3acb03c268410805eb238084d26e1",
+              "variable": "physiology.strength",
+              "source_ids": [
+                "S01",
+                "S06"
+              ]
+            }
+          },
+          {
+            "id": "M39",
+            "kind": "ENGINE",
+            "category": "CHANGE",
+            "text": "Cambio desde revisión anterior / change since previous review: {\"variable\": \"physiology.strength\", \"previous\": 424.6, \"current\": 424.57, \"previous_state\": \"DESCRIPTIVE_AVAILABLE\", \"current_state\": \"DESCRIPTIVE_AVAILABLE\"}",
+            "reference": {
+              "run_id": "mission-crew-B-cycle-18p1",
+              "as_of": "2026-08-19T14:24:00+00:00",
+              "output_hash": "3d4d26b5d1e3ecba913940a16b10d05149c3acb03c268410805eb238084d26e1",
+              "previous_run_id": "mission-crew-B-cycle-18"
+            }
+          },
+          {
+            "id": "M40",
+            "kind": "ENGINE",
+            "category": "CHANGE",
+            "text": "Cambio desde revisión anterior / change since previous review: {\"variable\": \"potassium_mmol_l\", \"previous\": null, \"current\": 4.0, \"previous_state\": \"NOT_MEASURED\", \"current_state\": \"DESCRIPTIVE_AVAILABLE\"}",
+            "reference": {
+              "run_id": "mission-crew-B-cycle-18p1",
+              "as_of": "2026-08-19T14:24:00+00:00",
+              "output_hash": "3d4d26b5d1e3ecba913940a16b10d05149c3acb03c268410805eb238084d26e1",
+              "previous_run_id": "mission-crew-B-cycle-18"
+            }
+          },
+          {
+            "id": "M41",
+            "kind": "ENGINE",
+            "category": "CHANGE",
+            "text": "Cambio desde revisión anterior / change since previous review: {\"variable\": \"environment.ppo2\", \"previous\": 20.664970049325, \"current\": 20.6783022880665, \"previous_state\": \"DESCRIPTIVE_AVAILABLE\", \"current_state\": \"DESCRIPTIVE_AVAILABLE\"}",
+            "reference": {
+              "run_id": "mission-crew-B-cycle-18p1",
+              "as_of": "2026-08-19T14:24:00+00:00",
+              "output_hash": "3d4d26b5d1e3ecba913940a16b10d05149c3acb03c268410805eb238084d26e1",
+              "previous_run_id": "mission-crew-B-cycle-18"
+            }
+          },
+          {
+            "id": "M20",
+            "kind": "ENGINE",
+            "category": "BASELINE",
+            "text": "sleep.duration: baseline 7.5 h; cambio absoluto / absolute change 0.0; retención / retention 100.0%. Descriptivo, no diagnóstico / descriptive, not diagnosis.",
+            "reference": {
+              "run_id": "mission-crew-B-cycle-18p1",
+              "as_of": "2026-08-19T14:24:00+00:00",
+              "output_hash": "3d4d26b5d1e3ecba913940a16b10d05149c3acb03c268410805eb238084d26e1",
+              "variable": "sleep.duration",
+              "baseline_id": "mission-crew-B-baseline-2",
+              "source_ids": [
+                "S10",
+                "S12"
+              ]
+            }
+          },
+          {
+            "id": "M5",
+            "kind": "ENGINE",
+            "category": "BASELINE",
+            "text": "physiology.vo2max: baseline 45.0 mL/min/kg; cambio absoluto / absolute change -0.7710000000000008; retención / retention 98.28666666666666%. Descriptivo, no diagnóstico / descriptive, not diagnosis.",
+            "reference": {
+              "run_id": "mission-crew-B-cycle-18p1",
+              "as_of": "2026-08-19T14:24:00+00:00",
+              "output_hash": "3d4d26b5d1e3ecba913940a16b10d05149c3acb03c268410805eb238084d26e1",
+              "variable": "physiology.vo2max",
+              "baseline_id": "mission-crew-B-baseline-0",
+              "source_ids": [
+                "S01",
+                "S05"
+              ]
+            }
+          },
+          {
+            "id": "M21",
+            "kind": "ENGINE",
+            "category": "TREND",
+            "text": "sleep.duration: pendiente / slope 0.0 h/day; EWMA/CUSUM por observación / per observation; RESEARCH_ONLY. No umbral clínico / no clinical threshold.",
+            "reference": {
+              "run_id": "mission-crew-B-cycle-18p1",
+              "as_of": "2026-08-19T14:24:00+00:00",
+              "output_hash": "3d4d26b5d1e3ecba913940a16b10d05149c3acb03c268410805eb238084d26e1",
+              "variable": "sleep.duration",
+              "source_ids": [
+                "S10",
+                "S12"
+              ]
+            }
+          },
+          {
+            "id": "M29",
+            "kind": "ENGINE",
+            "category": "TREND",
+            "text": "environment.ppo2: pendiente / slope 0.005758031800039099 kPa/day; EWMA/CUSUM por observación / per observation; RESEARCH_ONLY. No umbral clínico / no clinical threshold.",
+            "reference": {
+              "run_id": "mission-crew-B-cycle-18p1",
+              "as_of": "2026-08-19T14:24:00+00:00",
+              "output_hash": "3d4d26b5d1e3ecba913940a16b10d05149c3acb03c268410805eb238084d26e1",
+              "variable": "environment.ppo2",
+              "source_ids": [
+                "S14",
+                "SRC-DKA-2024"
+              ]
+            }
+          }
+        ],
+        "retrieved": [
+          {
+            "id": "M1",
+            "kind": "ENGINE",
+            "category": "LIMITATION",
+            "text": "Monitorización experimental / Experimental monitoring. Cambios numéricos no equivalen a empeoramiento clínico / numeric changes are not clinical worsening. No diagnóstico firmado, no tratamiento autorizado. / No signed diagnosis or treatment authorization.",
+            "reference": {
+              "run_id": "mission-crew-B-cycle-18p1",
+              "as_of": "2026-08-19T14:24:00+00:00",
+              "output_hash": "3d4d26b5d1e3ecba913940a16b10d05149c3acb03c268410805eb238084d26e1"
+            }
+          },
+          {
+            "id": "M12",
+            "kind": "ENGINE",
+            "category": "BASELINE",
+            "text": "physiology.strength: baseline 430.0 N; cambio absoluto / absolute change -5.430000000000007; retención / retention 98.73720930232558%. Descriptivo, no diagnóstico / descriptive, not diagnosis.",
+            "reference": {
+              "run_id": "mission-crew-B-cycle-18p1",
+              "as_of": "2026-08-19T14:24:00+00:00",
+              "output_hash": "3d4d26b5d1e3ecba913940a16b10d05149c3acb03c268410805eb238084d26e1",
+              "variable": "physiology.strength",
+              "baseline_id": "mission-crew-B-baseline-1",
+              "source_ids": [
+                "S01",
+                "S06"
+              ]
+            }
+          },
+          {
+            "id": "M38",
+            "kind": "ENGINE",
+            "category": "CHANGE",
+            "text": "Cambio desde revisión anterior / change since previous review: {\"variable\": \"physiology.vo2max\", \"previous\": 44.239, \"current\": 44.229, \"previous_state\": \"DESCRIPTIVE_AVAILABLE\", \"current_state\": \"DESCRIPTIVE_AVAILABLE\"}",
+            "reference": {
+              "run_id": "mission-crew-B-cycle-18p1",
+              "as_of": "2026-08-19T14:24:00+00:00",
+              "output_hash": "3d4d26b5d1e3ecba913940a16b10d05149c3acb03c268410805eb238084d26e1",
+              "previous_run_id": "mission-crew-B-cycle-18"
+            }
+          },
+          {
+            "id": "M13",
+            "kind": "ENGINE",
+            "category": "TREND",
+            "text": "physiology.strength: pendiente / slope -0.29999999999999905 N/day; EWMA/CUSUM por observación / per observation; RESEARCH_ONLY. No umbral clínico / no clinical threshold.",
+            "reference": {
+              "run_id": "mission-crew-B-cycle-18p1",
+              "as_of": "2026-08-19T14:24:00+00:00",
+              "output_hash": "3d4d26b5d1e3ecba913940a16b10d05149c3acb03c268410805eb238084d26e1",
+              "variable": "physiology.strength",
+              "source_ids": [
+                "S01",
+                "S06"
+              ]
+            }
+          },
+          {
+            "id": "M39",
+            "kind": "ENGINE",
+            "category": "CHANGE",
+            "text": "Cambio desde revisión anterior / change since previous review: {\"variable\": \"physiology.strength\", \"previous\": 424.6, \"current\": 424.57, \"previous_state\": \"DESCRIPTIVE_AVAILABLE\", \"current_state\": \"DESCRIPTIVE_AVAILABLE\"}",
+            "reference": {
+              "run_id": "mission-crew-B-cycle-18p1",
+              "as_of": "2026-08-19T14:24:00+00:00",
+              "output_hash": "3d4d26b5d1e3ecba913940a16b10d05149c3acb03c268410805eb238084d26e1",
+              "previous_run_id": "mission-crew-B-cycle-18"
+            }
+          },
+          {
+            "id": "M40",
+            "kind": "ENGINE",
+            "category": "CHANGE",
+            "text": "Cambio desde revisión anterior / change since previous review: {\"variable\": \"potassium_mmol_l\", \"previous\": null, \"current\": 4.0, \"previous_state\": \"NOT_MEASURED\", \"current_state\": \"DESCRIPTIVE_AVAILABLE\"}",
+            "reference": {
+              "run_id": "mission-crew-B-cycle-18p1",
+              "as_of": "2026-08-19T14:24:00+00:00",
+              "output_hash": "3d4d26b5d1e3ecba913940a16b10d05149c3acb03c268410805eb238084d26e1",
+              "previous_run_id": "mission-crew-B-cycle-18"
+            }
+          },
+          {
+            "id": "M41",
+            "kind": "ENGINE",
+            "category": "CHANGE",
+            "text": "Cambio desde revisión anterior / change since previous review: {\"variable\": \"environment.ppo2\", \"previous\": 20.664970049325, \"current\": 20.6783022880665, \"previous_state\": \"DESCRIPTIVE_AVAILABLE\", \"current_state\": \"DESCRIPTIVE_AVAILABLE\"}",
+            "reference": {
+              "run_id": "mission-crew-B-cycle-18p1",
+              "as_of": "2026-08-19T14:24:00+00:00",
+              "output_hash": "3d4d26b5d1e3ecba913940a16b10d05149c3acb03c268410805eb238084d26e1",
+              "previous_run_id": "mission-crew-B-cycle-18"
+            }
+          },
+          {
+            "id": "M20",
+            "kind": "ENGINE",
+            "category": "BASELINE",
+            "text": "sleep.duration: baseline 7.5 h; cambio absoluto / absolute change 0.0; retención / retention 100.0%. Descriptivo, no diagnóstico / descriptive, not diagnosis.",
+            "reference": {
+              "run_id": "mission-crew-B-cycle-18p1",
+              "as_of": "2026-08-19T14:24:00+00:00",
+              "output_hash": "3d4d26b5d1e3ecba913940a16b10d05149c3acb03c268410805eb238084d26e1",
+              "variable": "sleep.duration",
+              "baseline_id": "mission-crew-B-baseline-2",
+              "source_ids": [
+                "S10",
+                "S12"
+              ]
+            }
+          },
+          {
+            "id": "M5",
+            "kind": "ENGINE",
+            "category": "BASELINE",
+            "text": "physiology.vo2max: baseline 45.0 mL/min/kg; cambio absoluto / absolute change -0.7710000000000008; retención / retention 98.28666666666666%. Descriptivo, no diagnóstico / descriptive, not diagnosis.",
+            "reference": {
+              "run_id": "mission-crew-B-cycle-18p1",
+              "as_of": "2026-08-19T14:24:00+00:00",
+              "output_hash": "3d4d26b5d1e3ecba913940a16b10d05149c3acb03c268410805eb238084d26e1",
+              "variable": "physiology.vo2max",
+              "baseline_id": "mission-crew-B-baseline-0",
+              "source_ids": [
+                "S01",
+                "S05"
+              ]
+            }
+          },
+          {
+            "id": "M21",
+            "kind": "ENGINE",
+            "category": "TREND",
+            "text": "sleep.duration: pendiente / slope 0.0 h/day; EWMA/CUSUM por observación / per observation; RESEARCH_ONLY. No umbral clínico / no clinical threshold.",
+            "reference": {
+              "run_id": "mission-crew-B-cycle-18p1",
+              "as_of": "2026-08-19T14:24:00+00:00",
+              "output_hash": "3d4d26b5d1e3ecba913940a16b10d05149c3acb03c268410805eb238084d26e1",
+              "variable": "sleep.duration",
+              "source_ids": [
+                "S10",
+                "S12"
+              ]
+            }
+          },
+          {
+            "id": "M29",
+            "kind": "ENGINE",
+            "category": "TREND",
+            "text": "environment.ppo2: pendiente / slope 0.005758031800039099 kPa/day; EWMA/CUSUM por observación / per observation; RESEARCH_ONLY. No umbral clínico / no clinical threshold.",
+            "reference": {
+              "run_id": "mission-crew-B-cycle-18p1",
+              "as_of": "2026-08-19T14:24:00+00:00",
+              "output_hash": "3d4d26b5d1e3ecba913940a16b10d05149c3acb03c268410805eb238084d26e1",
+              "variable": "environment.ppo2",
+              "source_ids": [
+                "S14",
+                "SRC-DKA-2024"
+              ]
+            }
+          },
+          {
+            "id": "D-ae65db85b3cd75fb38e4",
+            "kind": "DOCUMENT",
+            "text": "Eventos distinguen `CLINICAL_CRITERIA`, `NORMATIVE_REQUIREMENT`, `DATA_QUALITY` y `DESCRIPTIVE_CHANGE`. Toda evaluación conserva su registro. `notify` cambia cuando cambia el estado; un evento URGENT/EMERGENCY con evidencia pertinente nueva vuelve a notificar. Un cambio numérico descriptivo no genera alerta clínica. La ausencia de datos no cierra episodios. El seguimiento tiene fecha explícita del solicitante, no una pauta inventada. Las reevaluaciones conservan `parent_id`; no se autodeclara curación ni se completa un seguimiento clínico por un resultado favorable.",
+            "reference": {
+              "document": "docs/v07/README.md",
+              "sha256": "ccdf9005a4892a004edac7d6cef95a2680b8ec594cc15ac1083f53e950e723a3",
+              "version": "0.7.0",
+              "authority": "IMPLEMENTATION_DOCUMENTATION_NOT_GUIDELINE",
+              "char_start": 4016,
+              "char_end": 4588,
+              "line": 47
+            },
+            "retrieval_score": 4.325593
+          },
+          {
+            "id": "D-a28f43a764c49b361923",
+            "kind": "DOCUMENT",
+            "text": "aciones HRE desde 1972; datos públicos/restringidos según entrada. citeturn13search3 | Autenticación obligatoria según help page; licencia dataset-specific `NOT_FOUND`. | Complemento ESA; no asumir descarga libre. |",
+            "reference": {
+              "document": "01_INFORMES/REPORTE_CONSOLIDADO_COMPLETO.md",
+              "sha256": "97e9fdc86925b6b973db75900e64f222c149ae3bd9cade8c182f2264c46831e5",
+              "version": "PINNED_CORPUS",
+              "authority": "SPACE_RESEARCH_SYNTHESIS",
+              "char_start": 65291,
+              "char_end": 65509,
+              "line": 417
+            },
+            "retrieval_score": 4.243313
+          },
+          {
+            "id": "D-a05eb0293d80d1805e8b",
+            "kind": "DOCUMENT",
+            "text": "oherentes; **D:** conservación 95/95/90 % `[S01]`; **A:** integrar fractura/riesgo, no solo BMD; **DD:** causas metabólicas/trauma; **T/I:** médico; **R:** reacondicionamiento hacia baseline; **F:** vigilancia postflight; **G:** no inferir fractura individual únicamente de DXA. |\n| C004 | **P:** ejercicio y gestión de misión; **M:** HR/BP/rendimiento; **Q:** postura, gravedad, actividad, sensor; **D:** tendencia vs baseline sin umbral diagnóstico `[RV]`; **A:** evaluación CV; **DD:** volumen, ritmo, sueño, enfermedad; **T/I:** autorización médica; **R/F:** tendencia postflight; **G:** research-only. |\n| C005 | **P:** contramedidas de transición a gravedad `[S02]`; **M:** síntomas+HR/BP bajo protocolo; **Q:** prohibir extrapolación de prueba postflight a microgravedad; **D:** desviaciones según protocolo autorizado; **A:** stand/tilt solo contexto válido; **DD:** hipovolemia, arritmia, neurológico; **T:** misión; **I:** compresión/u otras contramedidas solo autorizadas; **R/F:** reevaluar en gravedad; **G:** no predictor autónomo. |\n| C006 | **P:** configuración médica de misión; **M:",
+            "reference": {
+              "document": "01_INFORMES/REPORTE_CONSOLIDADO_COMPLETO.md",
+              "sha256": "97e9fdc86925b6b973db75900e64f222c149ae3bd9cade8c182f2264c46831e5",
+              "version": "PINNED_CORPUS",
+              "authority": "SPACE_RESEARCH_SYNTHESIS",
+              "char_start": 25292,
+              "char_end": 26392,
+              "line": 130
+            },
+            "retrieval_score": 3.92875
+          }
+        ],
+        "generated": [
+          {
+            "text": "Se midió por primera vez el potasio (4.0 mmol/L) en esta revisión.",
+            "evidence_ids": [
+              "M40"
+            ],
+            "kind": "MODEL_EXPLANATION",
+            "references": [
+              {
+                "run_id": "mission-crew-B-cycle-18p1",
+                "as_of": "2026-08-19T14:24:00+00:00",
+                "output_hash": "3d4d26b5d1e3ecba913940a16b10d05149c3acb03c268410805eb238084d26e1",
+                "previous_run_id": "mission-crew-B-cycle-18"
+              }
+            ]
+          },
+          {
+            "text": "El VO2 máximo disminuyó ligeramente de 44.239 a 44.229 mL/min/kg, pero no se considera un cambio clínico.",
+            "evidence_ids": [
+              "M38"
+            ],
+            "kind": "MODEL_EXPLANATION",
+            "references": [
+              {
+                "run_id": "mission-crew-B-cycle-18p1",
+                "as_of": "2026-08-19T14:24:00+00:00",
+                "output_hash": "3d4d26b5d1e3ecba913940a16b10d05149c3acb03c268410805eb238084d26e1",
+                "previous_run_id": "mission-crew-B-cycle-18"
+              }
+            ]
+          }
+        ],
+        "documents": [
+          {
+            "id": "D-ae65db85b3cd75fb38e4",
+            "kind": "DOCUMENT",
+            "text": "Eventos distinguen `CLINICAL_CRITERIA`, `NORMATIVE_REQUIREMENT`, `DATA_QUALITY` y `DESCRIPTIVE_CHANGE`. Toda evaluación conserva su registro. `notify` cambia cuando cambia el estado; un evento URGENT/EMERGENCY con evidencia pertinente nueva vuelve a notificar. Un cambio numérico descriptivo no genera alerta clínica. La ausencia de datos no cierra episodios. El seguimiento tiene fecha explícita del solicitante, no una pauta inventada. Las reevaluaciones conservan `parent_id`; no se autodeclara curación ni se completa un seguimiento clínico por un resultado favorable.",
+            "reference": {
+              "document": "docs/v07/README.md",
+              "sha256": "ccdf9005a4892a004edac7d6cef95a2680b8ec594cc15ac1083f53e950e723a3",
+              "version": "0.7.0",
+              "authority": "IMPLEMENTATION_DOCUMENTATION_NOT_GUIDELINE",
+              "char_start": 4016,
+              "char_end": 4588,
+              "line": 47
+            },
+            "retrieval_score": 4.325593
+          },
+          {
+            "id": "D-a28f43a764c49b361923",
+            "kind": "DOCUMENT",
+            "text": "aciones HRE desde 1972; datos públicos/restringidos según entrada. citeturn13search3 | Autenticación obligatoria según help page; licencia dataset-specific `NOT_FOUND`. | Complemento ESA; no asumir descarga libre. |",
+            "reference": {
+              "document": "01_INFORMES/REPORTE_CONSOLIDADO_COMPLETO.md",
+              "sha256": "97e9fdc86925b6b973db75900e64f222c149ae3bd9cade8c182f2264c46831e5",
+              "version": "PINNED_CORPUS",
+              "authority": "SPACE_RESEARCH_SYNTHESIS",
+              "char_start": 65291,
+              "char_end": 65509,
+              "line": 417
+            },
+            "retrieval_score": 4.243313
+          },
+          {
+            "id": "D-a05eb0293d80d1805e8b",
+            "kind": "DOCUMENT",
+            "text": "oherentes; **D:** conservación 95/95/90 % `[S01]`; **A:** integrar fractura/riesgo, no solo BMD; **DD:** causas metabólicas/trauma; **T/I:** médico; **R:** reacondicionamiento hacia baseline; **F:** vigilancia postflight; **G:** no inferir fractura individual únicamente de DXA. |\n| C004 | **P:** ejercicio y gestión de misión; **M:** HR/BP/rendimiento; **Q:** postura, gravedad, actividad, sensor; **D:** tendencia vs baseline sin umbral diagnóstico `[RV]`; **A:** evaluación CV; **DD:** volumen, ritmo, sueño, enfermedad; **T/I:** autorización médica; **R/F:** tendencia postflight; **G:** research-only. |\n| C005 | **P:** contramedidas de transición a gravedad `[S02]`; **M:** síntomas+HR/BP bajo protocolo; **Q:** prohibir extrapolación de prueba postflight a microgravedad; **D:** desviaciones según protocolo autorizado; **A:** stand/tilt solo contexto válido; **DD:** hipovolemia, arritmia, neurológico; **T:** misión; **I:** compresión/u otras contramedidas solo autorizadas; **R/F:** reevaluar en gravedad; **G:** no predictor autónomo. |\n| C006 | **P:** configuración médica de misión; **M:",
+            "reference": {
+              "document": "01_INFORMES/REPORTE_CONSOLIDADO_COMPLETO.md",
+              "sha256": "97e9fdc86925b6b973db75900e64f222c149ae3bd9cade8c182f2264c46831e5",
+              "version": "PINNED_CORPUS",
+              "authority": "SPACE_RESEARCH_SYNTHESIS",
+              "char_start": 25292,
+              "char_end": 26392,
+              "line": 130
+            },
+            "retrieval_score": 3.92875
+          }
+        ],
+        "document_issues": [],
+        "sources": [
+          {
+            "document": "docs/v07/README.md",
+            "sha256": "ccdf9005a4892a004edac7d6cef95a2680b8ec594cc15ac1083f53e950e723a3",
+            "version": "0.7.0",
+            "authority": "IMPLEMENTATION_DOCUMENTATION_NOT_GUIDELINE",
+            "char_start": 4016,
+            "char_end": 4588,
+            "line": 47
+          },
+          {
+            "document": "01_INFORMES/REPORTE_CONSOLIDADO_COMPLETO.md",
+            "sha256": "97e9fdc86925b6b973db75900e64f222c149ae3bd9cade8c182f2264c46831e5",
+            "version": "PINNED_CORPUS",
+            "authority": "SPACE_RESEARCH_SYNTHESIS",
+            "char_start": 65291,
+            "char_end": 65509,
+            "line": 417
+          },
+          {
+            "document": "01_INFORMES/REPORTE_CONSOLIDADO_COMPLETO.md",
+            "sha256": "97e9fdc86925b6b973db75900e64f222c149ae3bd9cade8c182f2264c46831e5",
+            "version": "PINNED_CORPUS",
+            "authority": "SPACE_RESEARCH_SYNTHESIS",
+            "char_start": 25292,
+            "char_end": 26392,
+            "line": 130
+          }
+        ],
+        "inference_attempted": true,
+        "inference_executed": true,
+        "clinical_execution": "BLOCKED",
+        "authority": "DETERMINISTIC_ENGINE_ONLY",
+        "clinical_validation": false,
+        "limitations": [
+          "DOCUMENTS_DO_NOT_OVERRIDE_ENGINE",
+          "SEMANTIC_VERIFICATION_IS_NOT_CLINICAL_VALIDATION",
+          "UNKNOWN_UNDETECTED_ERRORS_REQUIRE_INDEPENDENT_REVIEW"
+        ],
+        "context": {
+          "subject_id": "mission-crew-B",
+          "mission_id": "mission-v011",
+          "target_id": "mission-crew-B-cycle-18p1"
+        },
+        "metrics": {
+          "elapsed_ms": 3589.822300011292,
+          "usage": {},
+          "timings": {},
+          "load_duration_ns": 20786000,
+          "total_duration_ns": 3567799800,
+          "prompt_eval_count": 2602,
+          "eval_count": 102,
+          "eval_duration_ns": 1590606000,
+          "verification": {
+            "elapsed_ms": 1827.0367000077385,
+            "usage": {},
+            "timings": {},
+            "load_duration_ns": 15538900,
+            "total_duration_ns": 1802491200,
+            "prompt_eval_count": 320,
+            "eval_count": 6,
+            "eval_duration_ns": 153349000
+          }
+        },
+        "grounding": "CITATIONS_AND_LOCAL_MODEL_CHECK_NOT_CLINICAL_VALIDATION"
+      },
+      "raw_model_calls": [
+        {
+          "raw_model_output": {
+            "sentences": [
+              {
+                "evidence_ids": [
+                  "M40"
+                ],
+                "text": "Se midió por primera vez el potasio (4.0 mmol/L) en esta revisión."
+              },
+              {
+                "evidence_ids": [
+                  "M38"
+                ],
+                "text": "El VO2 máximo disminuyó ligeramente de 44.239 a 44.229 mL/min/kg, pero no se considera un cambio clínico."
+              }
+            ]
+          },
+          "metrics": {
+            "elapsed_ms": 3589.822300011292,
+            "usage": {},
+            "timings": {},
+            "load_duration_ns": 20786000,
+            "total_duration_ns": 3567799800,
+            "prompt_eval_count": 2602,
+            "eval_count": 102,
+            "eval_duration_ns": 1590606000,
+            "verification": {
+              "elapsed_ms": 1827.0367000077385,
+              "usage": {},
+              "timings": {},
+              "load_duration_ns": 15538900,
+              "total_duration_ns": 1802491200,
+              "prompt_eval_count": 320,
+              "eval_count": 6,
+              "eval_duration_ns": 153349000
+            }
+          }
+        },
+        {
+          "raw_model_output": {
+            "supported": true
+          },
+          "metrics": {
+            "elapsed_ms": 1827.0367000077385,
+            "usage": {},
+            "timings": {},
+            "load_duration_ns": 15538900,
+            "total_duration_ns": 1802491200,
+            "prompt_eval_count": 320,
+            "eval_count": 6,
+            "eval_duration_ns": 153349000
+          }
+        }
+      ]
+    }
+  ]
+}

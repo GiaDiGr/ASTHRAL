@@ -1,0 +1,102 @@
+{
+  "synthetic": true,
+  "clinical_validation": false,
+  "measurement_count": 38,
+  "dataset_hash": "5091e65d64ebe5eebc6701a17d306ef365cc50684769c2cfd7e947a951260f1a",
+  "baseline_value": 44.91,
+  "longitudinal_slope_per_day": -0.12917666666666666,
+  "postflight_slope_per_day": 0.449925,
+  "findings": {
+    "aerobic": "1ae291c4613140e1f94ab211c28821c494c3f19c4947e40061e9419d23597868",
+    "muscle": "715a1b94495bce7d2e43952363cf2e8f3c1e9074c1eee77d55654211e1dd975c",
+    "environment": "cc8b3ec09b0cbca9e938bc1411f6d1480bd1e1d63423929ba81ac1ad9ff9ce47",
+    "inconclusive": "5743a0c3622ac6c302ff3e76417e73f32085f12b89a30b5ce46cd4e113a1115c"
+  },
+  "rule_results": [
+    "REQUIREMENT_NOT_MET",
+    "REQUIREMENT_NOT_MET",
+    "REQUIREMENT_NOT_MET"
+  ],
+  "inconclusive_results": [
+    {
+      "result": "INCONCLUSIVE",
+      "reason": "INSUFFICIENT_TEMPORAL_COVERAGE"
+    },
+    {
+      "result": "INCONCLUSIVE",
+      "reason": "PHASE_MISMATCH"
+    },
+    {
+      "result": "INCONCLUSIVE",
+      "reason": "NOT_MEASURED"
+    },
+    {
+      "result": "INCONCLUSIVE",
+      "reason": "INVALID"
+    },
+    {
+      "result": "INCONCLUSIVE",
+      "reason": "INVALID_CALIBRATION"
+    },
+    {
+      "result": "INCONCLUSIVE",
+      "reason": "DIMENSIONAL_MISMATCH"
+    },
+    {
+      "result": "INCONCLUSIVE",
+      "reason": "OUTSIDE_TECHNICAL_RANGE"
+    }
+  ],
+  "quality_states": [
+    "NOT_MEASURED",
+    "INVALID",
+    "INVALID_CALIBRATION",
+    "DIMENSIONAL_MISMATCH",
+    "OUTSIDE_TECHNICAL_RANGE"
+  ],
+  "multisystem": "NOT_INFERRED",
+  "followup": "COMPLETED_BY_HUMAN",
+  "reader_results": 12,
+  "audit_valid": true,
+  "replay_verified": true,
+  "clinical_execution": "BLOCKED",
+  "resource_result": "POLICY_CONFLICT",
+  "performance": {
+    "host_platform": "Windows-11-10.0.26300-SP0",
+    "python": "3.13.16",
+    "logical_cpus": 32,
+    "startup_seconds": 1.2459852999891154,
+    "workload_seconds": 2.788970399997197,
+    "server_pid_measured": 56236,
+    "requests": 90,
+    "request_latency_ms": {
+      "median": 22.76704998803325,
+      "p95": 74.07950004562736,
+      "max": 160.07869999157265
+    },
+    "server_counters_before": {
+      "available": true,
+      "working_set_bytes": 65462272,
+      "peak_working_set_bytes": 65462272,
+      "cpu_seconds": 0.765625
+    },
+    "server_counters_after": {
+      "available": true,
+      "working_set_bytes": 69578752,
+      "peak_working_set_bytes": 69578752,
+      "cpu_seconds": 1.3125
+    },
+    "workload_cpu_seconds": 0.546875,
+    "cpu_percent_one_core": 19.608490645886725,
+    "sqlite_live_bytes_including_wal": 1672536,
+    "scope": "Single sequential synthetic workload. Includes audit and client overhead; not flight qualification or a load test.",
+    "sqlite_closed_bytes": 585728
+  },
+  "offline_test": "PASSED_WITH_PYTHON_EXTERNAL_SOCKET_GUARD_LOOPBACK_ALLOWED_NOT_OS_FIREWALL",
+  "output_directory": "C:\\Users\\Gianni\\Desktop\\Vigile\\work\\v011\\pytest-full-01\\test_real_http_end_to_end_and_0\\real-http",
+  "persisted_after_database_reopen": true,
+  "audit_checkpoint": {
+    "sequence": 77,
+    "hash": "191e53540df383f06a684a51a4180ac676585e6f713fe98262f67fd942ddcf0d"
+  }
+}

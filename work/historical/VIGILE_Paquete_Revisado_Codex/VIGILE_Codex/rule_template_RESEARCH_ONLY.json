@@ -1,0 +1,74 @@
+{
+  "rule_id": "CV-OI-RESEARCH-001",
+  "version": "0.1.0",
+  "domain": "cardiovascular",
+  "label": "Orthostatic response contextual assessment - research template",
+  "clinical_activation": "BLOCKED_PENDING_REVIEW",
+  "algorithm_implementation": "PLACEHOLDER_NOT_ACTIVE",
+  "mission_context": {
+    "gravity_environment": "EARTH_1G_OR_RETURN_GRAVITY",
+    "phase": "POSTFLIGHT_OR_GROUND",
+    "applicable_onboard_microgravity": false
+  },
+  "inputs": [
+    {
+      "id": "heart_rate",
+      "unit": "beats/min",
+      "missing_policy": "INCONCLUSIVE"
+    },
+    {
+      "id": "blood_pressure",
+      "unit": "mmHg",
+      "missing_policy": "INCONCLUSIVE"
+    },
+    {
+      "id": "posture",
+      "unit": "categorical",
+      "missing_policy": "INCONCLUSIVE"
+    },
+    {
+      "id": "symptoms",
+      "unit": "structured_report",
+      "missing_policy": "INCONCLUSIVE"
+    }
+  ],
+  "signal_quality_policy": {
+    "source": "REQUIRES_DEVICE_SPECIFIC_VALIDATION",
+    "numeric_min_quality": null
+  },
+  "logic": {
+    "type": "REQUIRES_VALIDATION",
+    "expression": null,
+    "critical_thresholds": null
+  },
+  "output": {
+    "finding": "MEASUREMENT_OR_RESEARCH_FLAG_ONLY",
+    "clinical_diagnosis": null,
+    "triage_action": "HUMAN_REVIEW_IF_CONFIGURED"
+  },
+  "evidence": [
+    {
+      "id": "CV-RISK",
+      "locator": "Cardiovascular Risk Overview",
+      "provenance_type": "NASA_RISK_REVIEW"
+    },
+    {
+      "id": "OI-GCG",
+      "locator": "Methods, standing response assessment",
+      "provenance_type": "SPACEFLIGHT_PRIMARY"
+    }
+  ],
+  "review": {
+    "clinical_validation": "REQUIRED",
+    "protocol_authorization": "REQUIRED",
+    "software_verification": "REQUIRED"
+  },
+  "tests_required": [
+    "missing_measurement",
+    "sensor_artifact",
+    "posture_conflict",
+    "wrong_gravity_context",
+    "synthetic_normal",
+    "synthetic_abnormal"
+  ]
+}

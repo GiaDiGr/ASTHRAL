@@ -1,0 +1,52 @@
+{
+  "rule_id": "R-CO2-001",
+  "version": "1.0.0",
+  "condition_id": "C027",
+  "purpose": "Evaluar cumplimiento de ppCO2 nominal del volumen habitable",
+  "inputs": [
+    {
+      "variable_id": "environment.ppco2",
+      "unit": "mmHg",
+      "required": true
+    }
+  ],
+  "applicability": {
+    "environment": "habitable_volume",
+    "operating_mode": "nominal"
+  },
+  "derived_variables": [
+    {
+      "id": "ppco2_1h_time_weighted_average",
+      "algorithm_id": "ALG003",
+      "window": "PT1H"
+    }
+  ],
+  "logic": {
+    "operator": "<=",
+    "left": "ppco2_1h_time_weighted_average",
+    "right": 3.0
+  },
+  "missing_data_policy": "INCONCLUSIVE",
+  "data_quality_policy": "REQUIRE_VALID_TEMPORAL_COVERAGE",
+  "output_if_true": "REQUIREMENT_MET",
+  "output_if_false": "REQUIREMENT_NOT_MET",
+  "explicit_non_outputs": [
+    "CO2_POISONING_DIAGNOSIS",
+    "HYPERCAPNIA_DIAGNOSIS"
+  ],
+  "evidence_refs": [
+    {
+      "source_id": "S02",
+      "evidence_type": "NASA_STANDARD",
+      "version": "Rev F / requirement ID confirmed",
+      "locator": {
+        "pdf_page": "NOT_FOUND",
+        "section": "6.2",
+        "requirement": "V2 6004",
+        "table": null,
+        "figure": null
+      }
+    }
+  ],
+  "authorization": "AUTOMATIC_ASSESSMENT_ONLY"
+}

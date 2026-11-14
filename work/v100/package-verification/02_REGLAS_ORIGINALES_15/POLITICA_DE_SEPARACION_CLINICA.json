@@ -1,0 +1,14 @@
+{
+  "vigile_decision_separation_policy": {
+    "measurement": "raw or derived datum",
+    "requirement_compliance": "deterministic comparison against a documented requirement",
+    "finding": "interpreted abnormality supported by evidence",
+    "clinical_hypothesis": "possible condition requiring assessment",
+    "diagnosis": "requires appropriate diagnostic evidence and authorization",
+    "triage": "requires condition-specific severity evidence and mission protocol",
+    "intervention": "requires an authorized protocol",
+    "treatment": "never inferred solely from a standards-compliance rule",
+    "recovery": "requires condition-specific reassessment criteria",
+    "llm_role": "retrieve, explain, guide and summarize; never modify deterministic decisions or authorize clinical actions"
+  }
+}

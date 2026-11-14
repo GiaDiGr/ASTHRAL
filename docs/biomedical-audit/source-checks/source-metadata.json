@@ -1,0 +1,18 @@
+[
+  {
+    "file": "KDIGO2012.xml",
+    "sha256": "5ccacbf4334ffc4aed9ab5ad85738956c4585cea78e0fb9770871ea7cdf0b26d",
+    "title": "Section 2: AKI Definition",
+    "doi": [
+      "10.1038/kisup.2011.32"
+    ]
+  },
+  {
+    "file": "WAO2020.xml",
+    "sha256": "1d6a6919aeb0a10e15ed82d92c8866f3946253980c334894bfd873e45aaa5726",
+    "title": "World allergy organization anaphylaxis guidance 2020",
+    "doi": [
+      "10.1016/j.waojou.2020.100472"
+    ]
+  }
+]

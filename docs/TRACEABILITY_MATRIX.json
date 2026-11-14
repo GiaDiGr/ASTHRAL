@@ -1,0 +1,809 @@
+[
+  {
+    "rule_id": "VIGILE-AER-001",
+    "rule_version": "1.0.0",
+    "rule_hash": "41402f21a4c768fe3bedc232edbe8d2dde4d13898363eebb71f929b9d4a18ff4",
+    "original_condition_id": "AEROBIC_CAPACITY_FOR_MICROGRAVITY_EVA",
+    "catalog_condition_candidates": [
+      "C001"
+    ],
+    "stage": "normative_assessment_simulation",
+    "inputs": [
+      {
+        "name": "vo2max_relative",
+        "type": "number",
+        "canonical_unit": "mL/min/kg",
+        "required": true
+      },
+      {
+        "name": "microgravity_eva_planned_or_required",
+        "type": "boolean",
+        "required": true
+      },
+      {
+        "name": "measurement_method",
+        "type": "enum",
+        "values": [
+          "DIRECT",
+          "INDIRECT"
+        ],
+        "required": true
+      },
+      {
+        "name": "data_quality_status",
+        "type": "enum",
+        "required": true
+      }
+    ],
+    "source_locators": [
+      {
+        "source_id": "NASA-STD-3001-V1-REV-C",
+        "requirement": "V1 4001",
+        "section": "4.1.1",
+        "printed_page": 32,
+        "pdf_page_index_0based": 31,
+        "url": "https://standards.nasa.gov/sites/default/files/standards/NASA/C//nasa-std-3001-vol-1-rev-c-signature.pdf"
+      }
+    ],
+    "tests": [
+      "AER001-T01",
+      "AER001-T02",
+      "AER001-T03"
+    ],
+    "operational_status": "REQUIRES_VALIDATION",
+    "clinical_execution": "BLOCKED"
+  },
+  {
+    "rule_id": "VIGILE-AER-002",
+    "rule_version": "1.0.0",
+    "rule_hash": "5366a9b50d281c8b11d55a7c163808eba8b71a7cbd4078f853261f139d5d7194",
+    "original_condition_id": "AEROBIC_CAPACITY_FOR_SURFACE_EVA",
+    "catalog_condition_candidates": [
+      "C001"
+    ],
+    "stage": "normative_assessment_simulation",
+    "inputs": [
+      {
+        "name": "vo2max_relative",
+        "type": "number",
+        "canonical_unit": "mL/min/kg",
+        "required": true
+      },
+      {
+        "name": "extraterrestrial_surface_eva_planned_or_required",
+        "type": "boolean",
+        "required": true
+      },
+      {
+        "name": "measurement_method",
+        "type": "enum",
+        "values": [
+          "DIRECT",
+          "INDIRECT"
+        ],
+        "required": true
+      },
+      {
+        "name": "data_quality_status",
+        "type": "enum",
+        "required": true
+      }
+    ],
+    "source_locators": [
+      {
+        "source_id": "NASA-STD-3001-V1-REV-C",
+        "requirement": "V1 4002",
+        "section": "4.1.2",
+        "printed_page": 33,
+        "pdf_page_index_0based": 32,
+        "url": "https://standards.nasa.gov/sites/default/files/standards/NASA/C//nasa-std-3001-vol-1-rev-c-signature.pdf"
+      }
+    ],
+    "tests": [
+      "AER002-T01",
+      "AER002-T02"
+    ],
+    "operational_status": "REQUIRES_VALIDATION",
+    "clinical_execution": "BLOCKED"
+  },
+  {
+    "rule_id": "VIGILE-AER-003",
+    "rule_version": "1.0.0",
+    "rule_hash": "6f2e8196d48b52e4c7685cfd22b7b3e3f854a6bee32069327647ce3421d5e9f1",
+    "original_condition_id": "AEROBIC_DECONDITIONING",
+    "catalog_condition_candidates": [
+      "C001"
+    ],
+    "stage": "normative_assessment_simulation",
+    "inputs": [
+      {
+        "name": "premission_aerobic_capacity",
+        "type": "number",
+        "required": true
+      },
+      {
+        "name": "current_aerobic_capacity",
+        "type": "number",
+        "required": true
+      },
+      {
+        "name": "measurement_unit",
+        "type": "string",
+        "required": true
+      },
+      {
+        "name": "measurement_comparability",
+        "type": "enum",
+        "values": [
+          "COMPARABLE",
+          "NOT_COMPARABLE",
+          "UNKNOWN"
+        ],
+        "required": true
+      },
+      {
+        "name": "data_quality_status",
+        "type": "enum",
+        "required": true
+      }
+    ],
+    "source_locators": [
+      {
+        "source_id": "NASA-STD-3001-V1-REV-C",
+        "requirement": "V1 4003",
+        "section": "4.1.3",
+        "printed_page": 33,
+        "pdf_page_index_0based": 32,
+        "url": "https://standards.nasa.gov/sites/default/files/standards/NASA/C//nasa-std-3001-vol-1-rev-c-signature.pdf"
+      }
+    ],
+    "tests": [
+      "AER003-T01",
+      "AER003-T02",
+      "AER003-T03"
+    ],
+    "operational_status": "REQUIRES_VALIDATION",
+    "clinical_execution": "BLOCKED"
+  },
+  {
+    "rule_id": "VIGILE-MUS-001",
+    "rule_version": "1.0.0",
+    "rule_hash": "8b007a03be3bb0485411cc0315505ffd5cf8934dd6e05d91d865c8ffea33e3ce",
+    "original_condition_id": "PREMISSION_FUNCTIONAL_STRENGTH",
+    "catalog_condition_candidates": [
+      "C002"
+    ],
+    "stage": "normative_assessment_simulation",
+    "inputs": [
+      {
+        "name": "body_weight",
+        "type": "number",
+        "canonical_unit": "kg_equivalent",
+        "required": true
+      },
+      {
+        "name": "deadlift_strength_value",
+        "type": "number",
+        "canonical_unit": "kg_equivalent",
+        "required": true
+      },
+      {
+        "name": "bench_press_strength_value",
+        "type": "number",
+        "canonical_unit": "kg_equivalent",
+        "required": true
+      },
+      {
+        "name": "applicable_mission_profiles",
+        "type": "array",
+        "required": true
+      },
+      {
+        "name": "approved_strength_test_protocol",
+        "type": "boolean",
+        "required": true
+      },
+      {
+        "name": "data_quality_status",
+        "type": "enum",
+        "required": true
+      }
+    ],
+    "source_locators": [
+      {
+        "source_id": "NASA-STD-3001-V1-REV-C",
+        "requirement": "V1 4023",
+        "section": "4.6.1",
+        "table": "Table 4.6-1",
+        "printed_page": 38,
+        "pdf_page_index_0based": 37,
+        "url": "https://standards.nasa.gov/sites/default/files/standards/NASA/C//nasa-std-3001-vol-1-rev-c-signature.pdf"
+      }
+    ],
+    "tests": [
+      "MUS001-T01",
+      "MUS001-T02",
+      "MUS001-T03"
+    ],
+    "operational_status": "REQUIRES_VALIDATION",
+    "clinical_execution": "BLOCKED"
+  },
+  {
+    "rule_id": "VIGILE-MUS-002",
+    "rule_version": "1.0.0",
+    "rule_hash": "374cfdcf713fdad6ad8e80fb3562a64ae3529ea9c4a6dcf6e30684a483685997",
+    "original_condition_id": "MUSCLE_STRENGTH_DECONDITIONING",
+    "catalog_condition_candidates": [
+      "C002"
+    ],
+    "stage": "normative_assessment_simulation",
+    "inputs": [
+      {
+        "name": "baseline_strength",
+        "type": "number",
+        "required": true
+      },
+      {
+        "name": "current_strength",
+        "type": "number",
+        "required": true
+      },
+      {
+        "name": "test_id",
+        "type": "string",
+        "required": true
+      },
+      {
+        "name": "measurement_comparability",
+        "type": "enum",
+        "required": true
+      },
+      {
+        "name": "data_quality_status",
+        "type": "enum",
+        "required": true
+      }
+    ],
+    "source_locators": [
+      {
+        "source_id": "NASA-STD-3001-V1-REV-C",
+        "requirement": "V1 4024",
+        "section": "4.6.2",
+        "printed_page": 38,
+        "pdf_page_index_0based": 37,
+        "url": "https://standards.nasa.gov/sites/default/files/standards/NASA/C//nasa-std-3001-vol-1-rev-c-signature.pdf"
+      }
+    ],
+    "tests": [
+      "MUS002-T01",
+      "MUS002-T02"
+    ],
+    "operational_status": "REQUIRES_VALIDATION",
+    "clinical_execution": "BLOCKED"
+  },
+  {
+    "rule_id": "VIGILE-BONE-001",
+    "rule_version": "1.0.0",
+    "rule_hash": "d57c7131d53bdecd8933b6d4c350913c2950166e56d08515986103a83ff1dd01",
+    "original_condition_id": "SPACEFLIGHT_ASSOCIATED_BMD_LOSS",
+    "catalog_condition_candidates": [
+      "C003"
+    ],
+    "stage": "normative_assessment_simulation",
+    "inputs": [
+      {
+        "name": "premission_bmd",
+        "type": "map_anatomical_site_to_number",
+        "canonical_unit": "g/cm2_or_validated_equivalent",
+        "required": true
+      },
+      {
+        "name": "current_bmd",
+        "type": "map_anatomical_site_to_number",
+        "canonical_unit": "same_as_baseline",
+        "required": true
+      },
+      {
+        "name": "measurement_comparability",
+        "type": "enum",
+        "required": true
+      },
+      {
+        "name": "data_quality_status",
+        "type": "enum",
+        "required": true
+      }
+    ],
+    "source_locators": [
+      {
+        "source_id": "NASA-STD-3001-V1-REV-C",
+        "requirement": "V1 4027",
+        "section": "4.7.2",
+        "printed_page": 39,
+        "pdf_page_index_0based": 38,
+        "url": "https://standards.nasa.gov/sites/default/files/standards/NASA/C//nasa-std-3001-vol-1-rev-c-signature.pdf"
+      },
+      {
+        "source_id": "NASA-HRP-FRACTURE-EVIDENCE-REPORT-2024",
+        "use": "LIMITATION_AND_CONTEXT",
+        "document_id": "20240005190",
+        "printed_page": 6,
+        "pdf_page_index_0based": 5,
+        "url": "https://ntrs.nasa.gov/citations/20240005190"
+      }
+    ],
+    "tests": [
+      "BONE001-T01",
+      "BONE001-T02"
+    ],
+    "operational_status": "REQUIRES_VALIDATION",
+    "clinical_execution": "BLOCKED"
+  },
+  {
+    "rule_id": "VIGILE-NUT-001",
+    "rule_version": "1.0.0",
+    "rule_hash": "1db275f3ccb26d9d6d550120157863fc681c2f3f4ca4236b36fab9907b4d5929",
+    "original_condition_id": "NUTRITIONAL_PROVISION_ADEQUACY",
+    "catalog_condition_candidates": [
+      "C023"
+    ],
+    "stage": "normative_assessment_simulation",
+    "inputs": [
+      {
+        "name": "calculated_requirements",
+        "type": "map_component_to_quantity",
+        "required": true,
+        "note": "Requirements must be calculated using an approved method considering age, sex, body mass, height and appropriate activity factor."
+      },
+      {
+        "name": "provided_amounts",
+        "type": "map_component_to_quantity",
+        "required": true
+      },
+      {
+        "name": "requirement_period",
+        "type": "mission_configured_time_period",
+        "required": true
+      },
+      {
+        "name": "requirement_calculation_method_approved",
+        "type": "boolean",
+        "required": true
+      }
+    ],
+    "source_locators": [
+      {
+        "source_id": "NASA-STD-3001-V1-REV-C",
+        "requirement": "V1 4020",
+        "section": "4.5.2",
+        "printed_page": 37,
+        "pdf_page_index_0based": 36,
+        "url": "https://standards.nasa.gov/sites/default/files/standards/NASA/C//nasa-std-3001-vol-1-rev-c-signature.pdf"
+      }
+    ],
+    "tests": [
+      "NUT001-T01",
+      "NUT001-T02",
+      "NUT001-T03"
+    ],
+    "operational_status": "REQUIRES_VALIDATION",
+    "clinical_execution": "BLOCKED"
+  },
+  {
+    "rule_id": "VIGILE-RAD-001",
+    "rule_version": "1.0.0",
+    "rule_hash": "4cf4c303253034f1da7fae872b7a50785830b7c1b6c1aec6354d80da17878e97",
+    "original_condition_id": "CUMULATIVE_SPACEFLIGHT_RADIATION_EXPOSURE",
+    "catalog_condition_candidates": [
+      "C032"
+    ],
+    "stage": "normative_assessment_simulation",
+    "inputs": [
+      {
+        "name": "past_spaceflight_effective_dose",
+        "type": "number",
+        "canonical_unit": "mSv",
+        "required": true
+      },
+      {
+        "name": "projected_upcoming_mission_effective_dose",
+        "type": "number",
+        "canonical_unit": "mSv",
+        "required_for": "MISSION_PLANNING"
+      },
+      {
+        "name": "evaluation_mode",
+        "type": "enum",
+        "values": [
+          "CURRENT_CAREER_RECORD",
+          "MISSION_PLANNING"
+        ],
+        "required": true
+      },
+      {
+        "name": "dose_methodology",
+        "type": "string",
+        "required": true
+      }
+    ],
+    "source_locators": [
+      {
+        "source_id": "NASA-STD-3001-V1-REV-C",
+        "requirement": "V1 4030",
+        "section": "4.8.2",
+        "printed_pages": [
+          40,
+          41
+        ],
+        "pdf_page_indices_0based": [
+          39,
+          40
+        ],
+        "url": "https://standards.nasa.gov/sites/default/files/standards/NASA/C//nasa-std-3001-vol-1-rev-c-signature.pdf"
+      }
+    ],
+    "tests": [
+      "RAD001-T01",
+      "RAD001-T02",
+      "RAD001-T03"
+    ],
+    "operational_status": "REQUIRES_VALIDATION",
+    "clinical_execution": "BLOCKED"
+  },
+  {
+    "rule_id": "VIGILE-RAD-002",
+    "rule_version": "1.0.0",
+    "rule_hash": "8261ac198891aad873285d009fa72fb825bce29a2ac9f0fd06f2d95bf7363388",
+    "original_condition_id": "SOLAR_PARTICLE_EVENT_PROTECTION",
+    "catalog_condition_candidates": [
+      "C032"
+    ],
+    "stage": "normative_assessment_simulation",
+    "inputs": [
+      {
+        "name": "modeled_design_reference_spe_effective_dose",
+        "type": "number",
+        "canonical_unit": "mSv",
+        "required": true
+      },
+      {
+        "name": "reference_environment_verified",
+        "type": "boolean",
+        "required": true
+      }
+    ],
+    "source_locators": [
+      {
+        "source_id": "NASA-STD-3001-V1-REV-C",
+        "requirement": "V1 4031",
+        "section": "4.8.3",
+        "printed_page": 42,
+        "pdf_page_index_0based": 41,
+        "url": "https://standards.nasa.gov/sites/default/files/standards/NASA/C//nasa-std-3001-vol-1-rev-c-signature.pdf"
+      }
+    ],
+    "tests": [
+      "RAD002-T01",
+      "RAD002-T02"
+    ],
+    "operational_status": "REQUIRES_VALIDATION",
+    "clinical_execution": "BLOCKED"
+  },
+  {
+    "rule_id": "VIGILE-RAD-003",
+    "rule_version": "1.0.0",
+    "rule_hash": "37ffc7f35f398548987bd184fcd869dbd006c8145e7c38dff9178e15b71fa5bc",
+    "original_condition_id": "NUCLEAR_TECHNOLOGY_IONIZING_EXPOSURE",
+    "catalog_condition_candidates": [
+      "C032"
+    ],
+    "stage": "normative_assessment_simulation",
+    "inputs": [
+      {
+        "name": "nuclear_technology_effective_dose",
+        "type": "number",
+        "canonical_unit": "mSv",
+        "required": true
+      },
+      {
+        "name": "mission_year_equivalent",
+        "type": "number",
+        "required": true,
+        "note": "Must use the approved program convention for prorating/extrapolating mission duration."
+      }
+    ],
+    "source_locators": [
+      {
+        "source_id": "NASA-STD-3001-V1-REV-C",
+        "requirement": "V1 4032",
+        "section": "4.8.4",
+        "printed_pages": [
+          43,
+          44
+        ],
+        "pdf_page_indices_0based": [
+          42,
+          43
+        ],
+        "url": "https://standards.nasa.gov/sites/default/files/standards/NASA/C//nasa-std-3001-vol-1-rev-c-signature.pdf"
+      }
+    ],
+    "tests": [
+      "RAD003-T01",
+      "RAD003-T02",
+      "RAD003-T03"
+    ],
+    "operational_status": "REQUIRES_VALIDATION",
+    "clinical_execution": "BLOCKED"
+  },
+  {
+    "rule_id": "VIGILE-RAD-004",
+    "rule_version": "1.0.0",
+    "rule_hash": "bbf763fa275970517497615a7286b4c307d9a353d75fabdf4fe58a08ce94d33e",
+    "original_condition_id": "LONG_DURATION_GCR_EXPOSURE",
+    "catalog_condition_candidates": [
+      "C032"
+    ],
+    "stage": "normative_assessment_simulation",
+    "inputs": [
+      {
+        "name": "crew_support_duration_days",
+        "type": "number",
+        "required": true
+      },
+      {
+        "name": "environment",
+        "type": "enum",
+        "values": [
+          "FREE_SPACE",
+          "PLANETARY_SURFACE"
+        ],
+        "required": true
+      },
+      {
+        "name": "nasa_effective_gcr_dose_rate",
+        "type": "number",
+        "canonical_unit": "mSv/day",
+        "required": true
+      },
+      {
+        "name": "design_verification_model_approved",
+        "type": "boolean",
+        "required": true
+      }
+    ],
+    "source_locators": [
+      {
+        "source_id": "NASA-STD-3001-V1-REV-C",
+        "requirement": "V1 4033",
+        "section": "4.8.5",
+        "printed_page": 45,
+        "pdf_page_index_0based": 44,
+        "url": "https://standards.nasa.gov/sites/default/files/standards/NASA/C//nasa-std-3001-vol-1-rev-c-signature.pdf"
+      }
+    ],
+    "tests": [
+      "RAD004-T01",
+      "RAD004-T02",
+      "RAD004-T03",
+      "RAD004-T04"
+    ],
+    "operational_status": "REQUIRES_VALIDATION",
+    "clinical_execution": "BLOCKED"
+  },
+  {
+    "rule_id": "VIGILE-ENV-001",
+    "rule_version": "1.0.0",
+    "rule_hash": "be8cf8b583691a0b9a8a6d0da3ba97a02edaac3884e238720459964f1278776e",
+    "original_condition_id": "CABIN_ATMOSPHERE_COMPOSITION",
+    "catalog_condition_candidates": [
+      "C026"
+    ],
+    "stage": "normative_assessment_simulation",
+    "inputs": [
+      {
+        "name": "diluent_fraction_percent",
+        "type": "number",
+        "canonical_unit": "%",
+        "required": true
+      },
+      {
+        "name": "diluent_type",
+        "type": "string",
+        "required": true
+      },
+      {
+        "name": "balance_oxygen_assumption_valid",
+        "type": "boolean",
+        "required": true
+      },
+      {
+        "name": "data_quality_status",
+        "type": "enum",
+        "required": true
+      }
+    ],
+    "source_locators": [
+      {
+        "source_id": "NASA-STD-3001-V2-REV-F",
+        "requirement": "V2 6002",
+        "section": "6.2.1.1",
+        "printed_page": 49,
+        "pdf_page_index_0based": 48,
+        "url": "https://standards.nasa.gov/system/files/tmp/NASA-STD-3001%20Vol%202%20Rev%20F.pdf"
+      }
+    ],
+    "tests": [
+      "ENV001-T01",
+      "ENV001-T02",
+      "ENV001-T03"
+    ],
+    "operational_status": "REQUIRES_VALIDATION",
+    "clinical_execution": "BLOCKED"
+  },
+  {
+    "rule_id": "VIGILE-ENV-002",
+    "rule_version": "1.0.0",
+    "rule_hash": "786dbbe0beefdfd0e67cbd695cabf42e9d0ff7830a186a458d3a4832a181d954",
+    "original_condition_id": "CABIN_CO2_EXPOSURE",
+    "catalog_condition_candidates": [
+      "C027"
+    ],
+    "stage": "normative_assessment_simulation",
+    "inputs": [
+      {
+        "name": "one_hour_average_ppco2",
+        "type": "number",
+        "canonical_unit": "mmHg",
+        "required": true
+      },
+      {
+        "name": "window_coverage_complete",
+        "type": "boolean",
+        "required": true
+      },
+      {
+        "name": "aggregation_method_validated",
+        "type": "boolean",
+        "required": true
+      },
+      {
+        "name": "compartment_id",
+        "type": "string",
+        "required": true
+      },
+      {
+        "name": "data_quality_status",
+        "type": "enum",
+        "required": true
+      }
+    ],
+    "source_locators": [
+      {
+        "source_id": "NASA-STD-3001-V2-REV-F",
+        "requirement": "V2 6004",
+        "section": "6.2.1.3",
+        "printed_page": 51,
+        "pdf_page_index_0based": 50,
+        "url": "https://standards.nasa.gov/system/files/tmp/NASA-STD-3001%20Vol%202%20Rev%20F.pdf"
+      },
+      {
+        "source_id": "NASA-STD-3001-V2-REV-F",
+        "requirement": "V2 6020",
+        "section": "6.2.5.1",
+        "printed_page": 58,
+        "pdf_page_index_0based": 57,
+        "use": "ATMOSPHERIC_DATA_RECORDING"
+      }
+    ],
+    "tests": [
+      "ENV002-T01",
+      "ENV002-T02",
+      "ENV002-T03"
+    ],
+    "operational_status": "REQUIRES_VALIDATION",
+    "clinical_execution": "BLOCKED"
+  },
+  {
+    "rule_id": "VIGILE-ENV-003",
+    "rule_version": "1.0.0",
+    "rule_hash": "7043d4b6a05c7f5a780e9876e8c2c518c7bb96916e1bfce5d40ccfa3419a6a17",
+    "original_condition_id": "CABIN_PRESSURE_EXPOSURE",
+    "catalog_condition_candidates": [
+      "C026",
+      "C030"
+    ],
+    "stage": "normative_assessment_simulation",
+    "inputs": [
+      {
+        "name": "total_pressure",
+        "type": "number",
+        "canonical_unit": "kPa",
+        "required": true
+      },
+      {
+        "name": "exposure_context",
+        "type": "enum",
+        "values": [
+          "INDEFINITE_CABIN",
+          "LIMITED_SPECIAL_OPERATION"
+        ],
+        "required": true
+      },
+      {
+        "name": "data_quality_status",
+        "type": "enum",
+        "required": true
+      }
+    ],
+    "source_locators": [
+      {
+        "source_id": "NASA-STD-3001-V2-REV-F",
+        "requirement": "V2 6006",
+        "section": "6.2.2.1",
+        "printed_page": 52,
+        "pdf_page_index_0based": 51,
+        "url": "https://standards.nasa.gov/system/files/tmp/NASA-STD-3001%20Vol%202%20Rev%20F.pdf"
+      }
+    ],
+    "tests": [
+      "ENV003-T01",
+      "ENV003-T02",
+      "ENV003-T03",
+      "ENV003-T04"
+    ],
+    "operational_status": "REQUIRES_VALIDATION",
+    "clinical_execution": "BLOCKED"
+  },
+  {
+    "rule_id": "VIGILE-ENV-004",
+    "rule_version": "1.0.0",
+    "rule_hash": "25e7b9cd8e699d8c12162a4aac541f7cdba0c237a878666b0304487814834354",
+    "original_condition_id": "PRESSURE_CHANGE_AND_BAROTRAUMA_RISK",
+    "catalog_condition_candidates": [
+      "C031"
+    ],
+    "stage": "normative_assessment_simulation",
+    "inputs": [
+      {
+        "name": "absolute_total_pressure_change",
+        "type": "number",
+        "canonical_unit": "psi",
+        "required": true
+      },
+      {
+        "name": "maximum_absolute_pressure_change_rate",
+        "type": "number",
+        "canonical_unit": "psi/min",
+        "required": true
+      },
+      {
+        "name": "rate_calculation_method_validated",
+        "type": "boolean",
+        "required": true
+      },
+      {
+        "name": "data_quality_status",
+        "type": "enum",
+        "required": true
+      }
+    ],
+    "source_locators": [
+      {
+        "source_id": "NASA-STD-3001-V2-REV-F",
+        "requirement": "V2 6007",
+        "section": "6.2.2.2",
+        "printed_page": 53,
+        "pdf_page_index_0based": 52,
+        "url": "https://standards.nasa.gov/system/files/tmp/NASA-STD-3001%20Vol%202%20Rev%20F.pdf"
+      }
+    ],
+    "tests": [
+      "ENV004-T01",
+      "ENV004-T02",
+      "ENV004-T03"
+    ],
+    "operational_status": "REQUIRES_VALIDATION",
+    "clinical_execution": "BLOCKED"
+  }
+]

@@ -1,0 +1,12 @@
+{
+  "tests": 522,
+  "failures": 0,
+  "errors": 0,
+  "skipped": 0,
+  "seconds": 74.862,
+  "added_tests": 32,
+  "biomedical_added_tests": 8,
+  "ai_added_tests": 24,
+  "clinical_validation": false,
+  "warning": "Starlette TestClient/httpx deprecation"
+}

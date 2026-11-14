@@ -1,0 +1,2322 @@
+{
+  "schema_version": 1,
+  "blocks": [
+    {
+      "id": "D1",
+      "kind": "DOCUMENT",
+      "text": "Este informe convierte la especificación clínica previa de VIGILE en una primera **base clínica ejecutable y auditable**. Mantiene deliberadamente un alcance estrecho: diabetes/hiperglucemia y cetoacidosis diabética; hipotensión ortostática/POTS; lesión renal aguda; anafilaxia; y un motor diferencial transversal para mareo/taquicardia. Ese alcance coincide con la especificación focalizada aportada para esta iteración y evita volver a expandirse prematuramente a decenas de condiciones. fileciteturn0file0 La arquitectura clínica más amplia y la intención de operar sin dependencia inmediata de Tierra proceden del diseño anterior de VIGILE. fileciteturn0file1",
+      "reference": {
+        "document": "deep-research-report-2026-10-16.md",
+        "sha256": "38ad3ab166f25a8b46c1e1f483ba813510c34dc766171389307635ecf7e8a715",
+        "line": 5,
+        "character_offset": 0,
+        "authority": "RESEARCH_REPORT_NOT_PATIENT_RESULT"
+      }
+    },
+    {
+      "id": "D2",
+      "kind": "DOCUMENT",
+      "text": "La premisa de autonomía es compatible con la dirección de investigación de NASA, pero no debe confundirse con una autorización de VIGILE. NASA-STD-3001 exige capacidades y recursos para diagnosticar y tratar problemas médicos durante la misión y contempla explícitamente medios para atención médica autónoma y soporte vital avanzado; paralelamente, Exploration Medical Capability investiga CDSS para que las tripulaciones de exploración puedan detectar, diagnosticar, tratar y prevenir problemas cuando la consulta inmediata con Tierra no sea práctica. El concepto EIMO describe una **transferencia gradual** de decisión médica desde Tierra hacia la tripulación y los sistemas de a bordo, no la eliminación de la gobernanza clínica. citeturn19search0turn19search1turn19search2turn19search5",
+      "reference": {
+        "document": "deep-research-report-2026-10-16.md",
+        "sha256": "38ad3ab166f25a8b46c1e1f483ba813510c34dc766171389307635ecf7e8a715",
+        "line": 7,
+        "character_offset": 0,
+        "authority": "RESEARCH_REPORT_NOT_PATIENT_RESULT"
+      }
+    },
+    {
+      "id": "D3",
+      "kind": "DOCUMENT",
+      "text": "La investigación permite ya construir reglas deterministas sólidas para varias rutas. ADA 2026 aporta criterios cuantitativos y reglas de confirmación para diabetes; el consenso internacional ADA/EASD/AACE/JBDS/DTS de 2024 define DKA mediante tres componentes simultáneos; AHA y los consensos HRS/NIH permiten formalizar hipotensión ortostática y POTS; KDIGO ofrece criterios temporales explícitos para AKI; y WAO ofrece dos vías clínicas bien especificadas para reconocer anafilaxia. citeturn18search0turn21search3turn17search0turn18search3turn27search3turn21search0",
+      "reference": {
+        "document": "deep-research-report-2026-10-16.md",
+        "sha256": "38ad3ab166f25a8b46c1e1f483ba813510c34dc766171389307635ecf7e8a715",
+        "line": 9,
+        "character_offset": 0,
+        "authority": "RESEARCH_REPORT_NOT_PATIENT_RESULT"
+      }
+    },
+    {
+      "id": "D4",
+      "kind": "DOCUMENT",
+      "text": "| Ruta | Criterios diagnósticos | Confirmación | Diferencial | Protocolo | Aplicabilidad espacial | Estado de implementación recomendado |\n|---|---|---|---|---|---|---|\n| Diabetes | **VERIFIED** | **VERIFIED** | **VERIFIED** para causas inmediatas relevantes | Confirmación/seguimiento; tratamiento crónico fuera de esta iteración | `REQUIRES_SPACE_SPECIFIC_VALIDATION` | Implementar |\n| DKA | **VERIFIED** | **VERIFIED** | **VERIFIED** para cetosis/acidosis y datos faltantes | **PARTIALLY_VERIFIED**; monitorización e insulinoterapia terrestre disponibles | `REQUIRES_SPACE_SPECIFIC_VALIDATION` | Implementar con autorización bloqueada |\n| Hipotensión ortostática | **VERIFIED** en gravedad | Medición ortostática válida | **VERIFIED** | Manejo etiológico/no farmacológico inicial | `NOT_APPLICABLE` en microgravedad libre; limitado tras transición | Implementar |\n| POTS | **VERIFIED/PARTIAL** | Síntomas crónicos + exclusión de imitadores | **VERIFIED** | Manejo inicial disponible; no automatizar farmacoterapia | `REQUIRES_SPACE_SPECIFIC_VALIDATION` | Implementar como síndrome condicionado |\n| AKI | **VERIFIED** con KDIGO 2012 | Baseline/ventana o diuresis | **VERIFIED** en alto nivel | Evaluación etiológica y soporte | `REQUIRES_SPACE_SPECIFIC_VALIDATION` | Implementar |\n| Anafilaxia | **VERIFIED** | No requiere una prueba de laboratorio previa | **VERIFIED** | Epinefrina IM de primera línea bien definida | `APPLICABLE_WITH_LIMITATIONS` | Implementar como emergencia |\n| Mareo/taquicar",
+      "reference": {
+        "document": "deep-research-report-2026-10-16.md",
+        "sha256": "38ad3ab166f25a8b46c1e1f483ba813510c34dc766171389307635ecf7e8a715",
+        "line": 13,
+        "character_offset": 0,
+        "authority": "RESEARCH_REPORT_NOT_PATIENT_RESULT"
+      }
+    },
+    {
+      "id": "D5",
+      "kind": "DOCUMENT",
+      "text": "dia | No es un diagnóstico | No aplica | **Motor determinista propuesto** | Deriva a la ruta apropiada | Dependiente del contexto gravitatorio | Implementar como orquestador |",
+      "reference": {
+        "document": "deep-research-report-2026-10-16.md",
+        "sha256": "38ad3ab166f25a8b46c1e1f483ba813510c34dc766171389307635ecf7e8a715",
+        "line": 13,
+        "character_offset": 1500,
+        "authority": "RESEARCH_REPORT_NOT_PATIENT_RESULT"
+      }
+    },
+    {
+      "id": "D6",
+      "kind": "DOCUMENT",
+      "text": "Una precisión importante sobre AKI: a 16 de octubre de 2026, KDIGO mantiene publicada una **actualización 2026 como borrador de revisión**, mientras el sitio oficial indica que el grupo de trabajo está preparando la publicación definitiva. Por tanto, VIGILE no debe sustituir automáticamente el criterio final de 2012 por el borrador 2026. citeturn17search5turn17search6turn17search8",
+      "reference": {
+        "document": "deep-research-report-2026-10-16.md",
+        "sha256": "38ad3ab166f25a8b46c1e1f483ba813510c34dc766171389307635ecf7e8a715",
+        "line": 23,
+        "character_offset": 0,
+        "authority": "RESEARCH_REPORT_NOT_PATIENT_RESULT"
+      }
+    },
+    {
+      "id": "D7",
+      "kind": "DOCUMENT",
+      "text": "El resultado clínico tampoco debe ser un único `ClinicalState`. Diagnóstico, urgencia, confirmación, elegibilidad de protocolo y tratamiento son dimensiones independientes. La misma persona puede tener simultáneamente `diagnostic_status=CRITERIA_MET`, `urgency=EMERGENCY`, `confirmation_status=NOT_REQUIRED`, `protocol_status=READY_FOR_CREW` y `treatment_status=NOT_STARTED`. Esta separación es especialmente importante para anafilaxia y DKA, donde una emergencia puede requerir actuación antes de alcanzar una certeza etiológica más amplia. La propuesta siguiente es una inferencia arquitectónica basada en cómo las guías separan diagnóstico, evaluación y tratamiento. citeturn21search0turn24search0",
+      "reference": {
+        "document": "deep-research-report-2026-10-16.md",
+        "sha256": "38ad3ab166f25a8b46c1e1f483ba813510c34dc766171389307635ecf7e8a715",
+        "line": 25,
+        "character_offset": 0,
+        "authority": "RESEARCH_REPORT_NOT_PATIENT_RESULT"
+      }
+    },
+    {
+      "id": "D8",
+      "kind": "DOCUMENT",
+      "text": "```text\nOBSERVACIONES\n     ↓\nVALIDACIÓN DE CALIDAD Y CONTEXTO\n     ↓\n┌─────────────────────────────────────────────┐\n│ evaluación diagnóstica                      │\n│ diagnostic_status                           │\n└─────────────────────────────────────────────┘\n     ↓                ↓\nURGENCIA          CONFIRMACIÓN\n     ↓                ↓\nDIAGNÓSTICO DIFERENCIAL\n     ↓\nPRUEBAS QUE FALTAN\n     ↓\nPROTOCOLO CANDIDATO\n     ↓\nAUTORIZACIÓN + RECURSOS + CONTRAINDICACIONES\n     ↓\nACTUACIÓN\n     ↓\nREEVALUACIÓN\n```",
+      "reference": {
+        "document": "deep-research-report-2026-10-16.md",
+        "sha256": "38ad3ab166f25a8b46c1e1f483ba813510c34dc766171389307635ecf7e8a715",
+        "line": 27,
+        "character_offset": 0,
+        "authority": "RESEARCH_REPORT_NOT_PATIENT_RESULT"
+      }
+    },
+    {
+      "id": "D9",
+      "kind": "DOCUMENT",
+      "text": "```text\ndato ausente ≠ dato normal\ncribado positivo ≠ diagnóstico\ncriterio no satisfecho ≠ enfermedad excluida\ncriterio terrestre ≠ criterio validado en microgravedad\nprotocolo respaldado por evidencia ≠ protocolo autorizado para la misión\n```",
+      "reference": {
+        "document": "deep-research-report-2026-10-16.md",
+        "sha256": "38ad3ab166f25a8b46c1e1f483ba813510c34dc766171389307635ecf7e8a715",
+        "line": 54,
+        "character_offset": 0,
+        "authority": "RESEARCH_REPORT_NOT_PATIENT_RESULT"
+      }
+    },
+    {
+      "id": "D10",
+      "kind": "DOCUMENT",
+      "text": "NASA proporciona una justificación operacional fuerte para construir este tipo de sistema. Su estándar de atención durante misión, `[V1 3004]`, exige que los programas proporcionen entrenamiento, capacidades y recursos para diagnosticar y tratar condiciones potenciales teniendo en cuenta guías clínicas, necesidades individuales, expertise médica, parámetros de misión y limitaciones del vehículo. El mismo requisito enumera laboratorios, ECG, medicamentos, tratamiento del disbarismo y medios de atención autónoma. El EIMO ConOps de NASA describe un sistema de sistemas que combine bases de referencia, wearables, point-of-care diagnostics y datos ambientales para ayudar al Crew Medical Officer cuando el apoyo terrestre esté retrasado o no disponible. citeturn19search0turn19search2",
+      "reference": {
+        "document": "deep-research-report-2026-10-16.md",
+        "sha256": "38ad3ab166f25a8b46c1e1f483ba813510c34dc766171389307635ecf7e8a715",
+        "line": 64,
+        "character_offset": 0,
+        "authority": "RESEARCH_REPORT_NOT_PATIENT_RESULT"
+      }
+    },
+    {
+      "id": "D11",
+      "kind": "DOCUMENT",
+      "text": "Eso **no demuestra que los criterios terrestres hayan sido validados automáticamente para astronautas**. NASA documenta, por ejemplo, que la intolerancia ortostática es particularmente relevante al volver a un entorno gravitatorio después de microgravedad y la relaciona con disminución del volumen plasmático y alteraciones del control simpático. NASA también documenta cambios de fluidos durante el vuelo. Por tanto, el test terrestre de ponerse de pie no es técnicamente equivalente durante microgravedad libre. citeturn24search3turn24search4",
+      "reference": {
+        "document": "deep-research-report-2026-10-16.md",
+        "sha256": "38ad3ab166f25a8b46c1e1f483ba813510c34dc766171389307635ecf7e8a715",
+        "line": 66,
+        "character_offset": 0,
+        "authority": "RESEARCH_REPORT_NOT_PATIENT_RESULT"
+      }
+    },
+    {
+      "id": "D12",
+      "kind": "DOCUMENT",
+      "text": "La situación renal merece una cautela similar. Investigación publicada en *Nature Communications* utilizando datos y muestras de vuelos espaciales encontró remodelación renal y alteraciones funcionales asociadas con microgravedad y exposición simulada a radiación de espacio profundo; NASA, por su parte, identifica deshidratación relativa, cambios en bioquímica urinaria, dinámica de fluidos y metabolismo óseo como factores relevantes para la salud urinaria espacial. Esto justifica conservar los criterios KDIGO terrestres como referencia explícita, pero etiquetarlos `REQUIRES_SPACE_SPECIFIC_VALIDATION`, no modificar sus umbrales sin evidencia. citeturn25search0turn25search5",
+      "reference": {
+        "document": "deep-research-report-2026-10-16.md",
+        "sha256": "38ad3ab166f25a8b46c1e1f483ba813510c34dc766171389307635ecf7e8a715",
+        "line": 68,
+        "character_offset": 0,
+        "authority": "RESEARCH_REPORT_NOT_PATIENT_RESULT"
+      }
+    },
+    {
+      "id": "D13",
+      "kind": "DOCUMENT",
+      "text": "| ID | Fuente | Uso |\n|---|---|---|\n| `SRC-NASA-STD3001-V1-2023` | NASA-STD-3001 Vol. 1, §3.5 `[V1 3004]` | Gobernanza y autonomía |\n| `SRC-NASA-EIMO-2025` | EIMO Concept of Operations | Arquitectura de autonomía |\n| `SRC-ADA-DX-2026` | ADA Standards 2026 §2, DOI `10.2337/dc26-S002` | Diabetes |\n| `SRC-DKA-2024` | Hyperglycemic Crises Consensus, DOI `10.2337/dci24-0032` | DKA |\n| `SRC-AHA-OH-2024` | AHA Scientific Statement, DOI `10.1161/HYP.0000000000000236` | Hipotensión ortostática |\n| `SRC-HRS-POTS-2015` | HRS Consensus, DOI `10.1016/j.hrthm.2015.03.029` | POTS |\n| `SRC-NIH-POTS-2021` | NIH expert consensus, DOI `10.1016/j.autneu.2021.102828` | POTS y exclusiones |\n| `SRC-KDIGO-AKI-2012` | KDIGO §2.1, DOI `10.1038/kisup.2011.32` | AKI |\n| `SRC-WAO-ANAPH-2020` | WAO Guidance, DOI `10.1016/j.waojou.2020.100472` | Anafilaxia |",
+      "reference": {
+        "document": "deep-research-report-2026-10-16.md",
+        "sha256": "38ad3ab166f25a8b46c1e1f483ba813510c34dc766171389307635ecf7e8a715",
+        "line": 72,
+        "character_offset": 0,
+        "authority": "RESEARCH_REPORT_NOT_PATIENT_RESULT"
+      }
+    },
+    {
+      "id": "D14",
+      "kind": "DOCUMENT",
+      "text": "Los criterios de diabetes están particularmente bien especificados. ADA 2026 acepta A1C ≥6,5 %, FPG ≥126 mg/dL tras al menos ocho horas sin aporte calórico, glucosa plasmática a las dos horas ≥200 mg/dL tras OGTT de 75 g o glucosa plasmática aleatoria ≥200 mg/dL acompañada de síntomas clásicos o crisis hiperglucémica. Salvo hiperglucemia inequívoca, son necesarios dos resultados anormales; ADA también declara insuficiente la evidencia para usar CGM como prueba diagnóstica de diabetes. citeturn18search0turn21search1",
+      "reference": {
+        "document": "deep-research-report-2026-10-16.md",
+        "sha256": "38ad3ab166f25a8b46c1e1f483ba813510c34dc766171389307635ecf7e8a715",
+        "line": 84,
+        "character_offset": 0,
+        "authority": "RESEARCH_REPORT_NOT_PATIENT_RESULT"
+      }
+    },
+    {
+      "id": "D15",
+      "kind": "DOCUMENT",
+      "text": "Para DKA, el consenso 2024 exige **los tres componentes**: diabetes conocida o glucosa ≥200 mg/dL; cetosis con β-hidroxibutirato ≥3,0 mmol/L o cetonuria ≥2+; y acidosis con pH <7,3 y/o bicarbonato <18 mmol/L. El nuevo criterio permite reconocer DKA euglucémica cuando existe diabetes conocida y se cumplen cetosis y acidosis. citeturn21search3turn21search6",
+      "reference": {
+        "document": "deep-research-report-2026-10-16.md",
+        "sha256": "38ad3ab166f25a8b46c1e1f483ba813510c34dc766171389307635ecf7e8a715",
+        "line": 86,
+        "character_offset": 0,
+        "authority": "RESEARCH_REPORT_NOT_PATIENT_RESULT"
+      }
+    },
+    {
+      "id": "D16",
+      "kind": "DOCUMENT",
+      "text": "AHA define hipotensión ortostática como una reducción sostenida de PAS de al menos 20 mmHg o PAD de al menos 10 mmHg dentro de los tres minutos posteriores a ponerse de pie. POTS, en cambio, requiere incremento sostenido de frecuencia cardíaca ≥30 lpm en adultos —≥40 lpm entre 12 y 19 años— durante los primeros diez minutos de postura erguida, ausencia de hipotensión ortostática, síntomas ortostáticos que mejoren al volver al decúbito, persistencia durante al menos tres meses y ausencia de causas alternativas como deshidratación, anemia, fiebre, infección, dolor, hipertiroidismo, medicamentos o desacondicionamiento severo. citeturn17search0turn18search3turn18search5",
+      "reference": {
+        "document": "deep-research-report-2026-10-16.md",
+        "sha256": "38ad3ab166f25a8b46c1e1f483ba813510c34dc766171389307635ecf7e8a715",
+        "line": 88,
+        "character_offset": 0,
+        "authority": "RESEARCH_REPORT_NOT_PATIENT_RESULT"
+      }
+    },
+    {
+      "id": "D17",
+      "kind": "DOCUMENT",
+      "text": "KDIGO define AKI mediante cualquiera de tres vías: aumento de creatinina sérica ≥0,3 mg/dL en 48 horas; creatinina ≥1,5 veces el baseline conocida o presumiblemente ocurrida en los siete días previos; o diuresis <0,5 mL/kg/h durante seis horas. La estratificación KDIGO utiliza el peor criterio de creatinina o diuresis. citeturn22view0turn23view0turn23view1turn27search3",
+      "reference": {
+        "document": "deep-research-report-2026-10-16.md",
+        "sha256": "38ad3ab166f25a8b46c1e1f483ba813510c34dc766171389307635ecf7e8a715",
+        "line": 90,
+        "character_offset": 0,
+        "authority": "RESEARCH_REPORT_NOT_PATIENT_RESULT"
+      }
+    },
+    {
+      "id": "D18",
+      "kind": "DOCUMENT",
+      "text": "WAO considera altamente probable anafilaxia mediante dos vías: inicio agudo con afectación cutáneo-mucosa más compromiso respiratorio, disminución de presión/disfunción de órgano diana o síntomas gastrointestinales graves; o hipotensión, broncoespasmo o compromiso laríngeo después de un alérgeno conocido o muy probable, incluso sin manifestaciones cutáneas. En adultos, hipotensión incluye PAS <90 mmHg o una reducción >30 % respecto del baseline. citeturn21search0turn21search5",
+      "reference": {
+        "document": "deep-research-report-2026-10-16.md",
+        "sha256": "38ad3ab166f25a8b46c1e1f483ba813510c34dc766171389307635ecf7e8a715",
+        "line": 92,
+        "character_offset": 0,
+        "authority": "RESEARCH_REPORT_NOT_PATIENT_RESULT"
+      }
+    },
+    {
+      "id": "D19",
+      "kind": "DOCUMENT",
+      "text": "VIGILE debe diferenciar cuatro clases de dato: glucosa plasmática en ayunas, glucosa plasmática aleatoria, glucosa plasmática a las dos horas de OGTT y A1C. Una lectura CGM/intersticial puede activar una necesidad de confirmación, pero no debe satisfacer directamente el criterio ADA 2026. A1C requiere método apropiado; si existe discordancia sustancial con glucosa o una situación que altera la relación A1C-glucemia, ADA recomienda investigar interferencias y utilizar criterios de glucosa plasmática en los contextos descritos. citeturn18search0turn21search1",
+      "reference": {
+        "document": "deep-research-report-2026-10-16.md",
+        "sha256": "38ad3ab166f25a8b46c1e1f483ba813510c34dc766171389307635ecf7e8a715",
+        "line": 98,
+        "character_offset": 0,
+        "authority": "RESEARCH_REPORT_NOT_PATIENT_RESULT"
+      }
+    },
+    {
+      "id": "D20",
+      "kind": "DOCUMENT",
+      "text": "if random_plasma_glucose >= 200 mg/dL\n   and (classic_hyperglycemia_symptoms or hyperglycemic_crisis):\n       diagnostic_status = CRITERIA_MET\n       confirmation_status = NOT_REQUIRED",
+      "reference": {
+        "document": "deep-research-report-2026-10-16.md",
+        "sha256": "38ad3ab166f25a8b46c1e1f483ba813510c34dc766171389307635ecf7e8a715",
+        "line": 103,
+        "character_offset": 0,
+        "authority": "RESEARCH_REPORT_NOT_PATIENT_RESULT"
+      }
+    },
+    {
+      "id": "D21",
+      "kind": "DOCUMENT",
+      "text": "else:\n    qualifying_results =\n        A1C >= 6.5% with valid method\n        OR FPG >= 126 mg/dL with fasting >= 8 h\n        OR 2h_PG >= 200 mg/dL after valid 75-g OGTT",
+      "reference": {
+        "document": "deep-research-report-2026-10-16.md",
+        "sha256": "38ad3ab166f25a8b46c1e1f483ba813510c34dc766171389307635ecf7e8a715",
+        "line": 108,
+        "character_offset": 0,
+        "authority": "RESEARCH_REPORT_NOT_PATIENT_RESULT"
+      }
+    },
+    {
+      "id": "D22",
+      "kind": "DOCUMENT",
+      "text": "if two qualifying abnormal results:\n        diagnostic_status = CRITERIA_MET\n        confirmation_status = SATISFIED\n    elif one qualifying result:\n        diagnostic_status = SUSPECTED\n        confirmation_status = REQUIRED\n    elif required measurement quality invalid:\n        diagnostic_status = INSUFFICIENT_DATA\n    else:\n        diagnostic_status = CRITERIA_NOT_MET\n```",
+      "reference": {
+        "document": "deep-research-report-2026-10-16.md",
+        "sha256": "38ad3ab166f25a8b46c1e1f483ba813510c34dc766171389307635ecf7e8a715",
+        "line": 114,
+        "character_offset": 0,
+        "authority": "RESEARCH_REPORT_NOT_PATIENT_RESULT"
+      }
+    },
+    {
+      "id": "D23",
+      "kind": "DOCUMENT",
+      "text": "La regla de confirmación no obliga a que sean dos pruebas distintas: ADA permite dos pruebas anormales diferentes en la misma ocasión o la misma prueba en dos momentos; ante resultados discordantes, debe repetirse la prueba que queda por encima de su punto diagnóstico. citeturn18search0",
+      "reference": {
+        "document": "deep-research-report-2026-10-16.md",
+        "sha256": "38ad3ab166f25a8b46c1e1f483ba813510c34dc766171389307635ecf7e8a715",
+        "line": 126,
+        "character_offset": 0,
+        "authority": "RESEARCH_REPORT_NOT_PATIENT_RESULT"
+      }
+    },
+    {
+      "id": "D24",
+      "kind": "DOCUMENT",
+      "text": "```text\nD = prior_diabetes OR plasma_glucose >= 200 mg/dL\nK = beta_hydroxybutyrate >= 3.0 mmol/L OR urine_ketones >= 2+\nA = venous_pH < 7.3 OR bicarbonate < 18 mmol/L",
+      "reference": {
+        "document": "deep-research-report-2026-10-16.md",
+        "sha256": "38ad3ab166f25a8b46c1e1f483ba813510c34dc766171389307635ecf7e8a715",
+        "line": 130,
+        "character_offset": 0,
+        "authority": "RESEARCH_REPORT_NOT_PATIENT_RESULT"
+      }
+    },
+    {
+      "id": "D25",
+      "kind": "DOCUMENT",
+      "text": "El β-hidroxibutirato sanguíneo es preferible cuando está disponible. El consenso señala que ≥3 mmol/L tiene una relación fuerte con el cuadro ácido-base y que la medición point-of-care puede utilizarse si existen salvaguardas de entrenamiento y rendimiento del instrumento. El anion gap puede ser informativo, pero no debe convertirse en requisito primario de diagnóstico o resolución. citeturn21search3turn24search0",
+      "reference": {
+        "document": "deep-research-report-2026-10-16.md",
+        "sha256": "38ad3ab166f25a8b46c1e1f483ba813510c34dc766171389307635ecf7e8a715",
+        "line": 138,
+        "character_offset": 0,
+        "authority": "RESEARCH_REPORT_NOT_PATIENT_RESULT"
+      }
+    },
+    {
+      "id": "D26",
+      "kind": "DOCUMENT",
+      "text": "La ruta terapéutica debe ser una máquina de estados. El consenso recomienda glucosa cada 1–2 horas y electrolitos, creatinina, fosfato, β-hidroxibutirato y pH venoso cada cuatro horas durante tratamiento; insulina IV de acción corta suele iniciarse a 0,1 U/kg/h; cuando la glucosa baja de 250 mg/dL se añade 5–10 % de dextrosa y se reduce a 0,05 U/kg/h. Si K <3,5 mmol/L, se inicia reposición de potasio y se retrasa la insulina hasta K >3,5 mmol/L. Estos son regímenes terrestres del consenso, no regímenes espacialmente validados. citeturn24search0",
+      "reference": {
+        "document": "deep-research-report-2026-10-16.md",
+        "sha256": "38ad3ab166f25a8b46c1e1f483ba813510c34dc766171389307635ecf7e8a715",
+        "line": 140,
+        "character_offset": 0,
+        "authority": "RESEARCH_REPORT_NOT_PATIENT_RESULT"
+      }
+    },
+    {
+      "id": "D27",
+      "kind": "DOCUMENT",
+      "text": "```text\nDKA_CRITERIA_MET\n   ↓\nmission protocol authorized?\n   NO → PROTOCOL_NOT_AUTHORIZED\n   YES\n   ↓\nrequired monitoring resources present?\n   NO → BLOCKED_RESOURCE\n   YES\n   ↓\nserum potassium known?\n   NO → BLOCKED_MISSING_SAFETY_DATA\n   YES\n   ↓\nK < 3.5 mmol/L?\n   YES → HOLD_INSULIN / potassium pathway\n   NO  → insulin pathway\n```",
+      "reference": {
+        "document": "deep-research-report-2026-10-16.md",
+        "sha256": "38ad3ab166f25a8b46c1e1f483ba813510c34dc766171389307635ecf7e8a715",
+        "line": 142,
+        "character_offset": 0,
+        "authority": "RESEARCH_REPORT_NOT_PATIENT_RESULT"
+      }
+    },
+    {
+      "id": "D28",
+      "kind": "DOCUMENT",
+      "text": "```text\nCLASSIC_OH =\n    standing_window <= 3 min\nAND\n    (\n       delta_SBP <= -20 mmHg\n       OR delta_DBP <= -10 mmHg\n    )\n```",
+      "reference": {
+        "document": "deep-research-report-2026-10-16.md",
+        "sha256": "38ad3ab166f25a8b46c1e1f483ba813510c34dc766171389307635ecf7e8a715",
+        "line": 164,
+        "character_offset": 0,
+        "authority": "RESEARCH_REPORT_NOT_PATIENT_RESULT"
+      }
+    },
+    {
+      "id": "D29",
+      "kind": "DOCUMENT",
+      "text": "Este resultado reconoce **hipotensión ortostática presente**, pero no su etiología. La AHA recomienda caracterizar patrones, desencadenantes y causa, además de revisar factores agravantes y medicamentos. citeturn17search0turn26search2",
+      "reference": {
+        "document": "deep-research-report-2026-10-16.md",
+        "sha256": "38ad3ab166f25a8b46c1e1f483ba813510c34dc766171389307635ecf7e8a715",
+        "line": 174,
+        "character_offset": 0,
+        "authority": "RESEARCH_REPORT_NOT_PATIENT_RESULT"
+      }
+    },
+    {
+      "id": "D30",
+      "kind": "DOCUMENT",
+      "text": "```text\nPOTS =\n    adult\nAND sustained_delta_HR >= 30 bpm within 10 min upright\nAND NOT classic_OH\nAND frequent_orthostatic_symptoms\nAND symptoms_improve_supine\nAND duration >= 3 months\nAND no_alternative_explanation\n```",
+      "reference": {
+        "document": "deep-research-report-2026-10-16.md",
+        "sha256": "38ad3ab166f25a8b46c1e1f483ba813510c34dc766171389307635ecf7e8a715",
+        "line": 178,
+        "character_offset": 0,
+        "authority": "RESEARCH_REPORT_NOT_PATIENT_RESULT"
+      }
+    },
+    {
+      "id": "D31",
+      "kind": "DOCUMENT",
+      "text": "El consenso HRS reconoce el umbral de ≥30 lpm en adultos y ≥40 lpm entre 12 y 19 años; el consenso NIH añade explícitamente duración mínima de tres meses y exclusión de causas alternativas. citeturn17search2turn17search7turn18search3",
+      "reference": {
+        "document": "deep-research-report-2026-10-16.md",
+        "sha256": "38ad3ab166f25a8b46c1e1f483ba813510c34dc766171389307635ecf7e8a715",
+        "line": 189,
+        "character_offset": 0,
+        "authority": "RESEARCH_REPORT_NOT_PATIENT_RESULT"
+      }
+    },
+    {
+      "id": "D32",
+      "kind": "DOCUMENT",
+      "text": "En VIGILE, `dehydration`, `recent_blood_loss`, `anemia`, `fever_or_infection`, `pain`, `hyperthyroidism`, determinados medicamentos y `severe_deconditioning` deben funcionar como **bloqueadores de la etiqueta POTS**, no como simples notas. citeturn18search3turn18search5",
+      "reference": {
+        "document": "deep-research-report-2026-10-16.md",
+        "sha256": "38ad3ab166f25a8b46c1e1f483ba813510c34dc766171389307635ecf7e8a715",
+        "line": 191,
+        "character_offset": 0,
+        "authority": "RESEARCH_REPORT_NOT_PATIENT_RESULT"
+      }
+    },
+    {
+      "id": "D33",
+      "kind": "DOCUMENT",
+      "text": "Durante microgravedad libre, VIGILE no debe ejecutar literalmente un test terrestre basado en «standing». Esto se clasifica `NOT_APPLICABLE` para esa fase; tras retorno a gravedad o en una superficie con gravedad, el test puede volver a ser conceptualmente aplicable, pero con `APPLICABLE_WITH_LIMITATIONS`. Esta clasificación es una inferencia de ingeniería clínica basada en el carácter gravitatorio de la prueba y en la fisiología espacial documentada por NASA, no un nuevo criterio NASA para POTS. citeturn24search3turn24search4",
+      "reference": {
+        "document": "deep-research-report-2026-10-16.md",
+        "sha256": "38ad3ab166f25a8b46c1e1f483ba813510c34dc766171389307635ecf7e8a715",
+        "line": 193,
+        "character_offset": 0,
+        "authority": "RESEARCH_REPORT_NOT_PATIENT_RESULT"
+      }
+    },
+    {
+      "id": "D34",
+      "kind": "DOCUMENT",
+      "text": "```text\nAKI =\n    SCr_increase >= 0.3 mg/dL within 48 h\nOR\n    SCr_current >= 1.5 * baseline within prior 7 days\nOR\n    urine_output < 0.5 mL/kg/h for >= 6 h\n```",
+      "reference": {
+        "document": "deep-research-report-2026-10-16.md",
+        "sha256": "38ad3ab166f25a8b46c1e1f483ba813510c34dc766171389307635ecf7e8a715",
+        "line": 197,
+        "character_offset": 0,
+        "authority": "RESEARCH_REPORT_NOT_PATIENT_RESULT"
+      }
+    },
+    {
+      "id": "D35",
+      "kind": "DOCUMENT",
+      "text": "```text\nStage 1:\n  creatinine = 1.5–1.9 × baseline OR increase >= 0.3 mg/dL\n  OR urine_output <0.5 mL/kg/h for 6–12 h",
+      "reference": {
+        "document": "deep-research-report-2026-10-16.md",
+        "sha256": "38ad3ab166f25a8b46c1e1f483ba813510c34dc766171389307635ecf7e8a715",
+        "line": 208,
+        "character_offset": 0,
+        "authority": "RESEARCH_REPORT_NOT_PATIENT_RESULT"
+      }
+    },
+    {
+      "id": "D36",
+      "kind": "DOCUMENT",
+      "text": "Stage 3:\n  creatinine = >=3.0 × baseline\n  OR creatinine >=4.0 mg/dL\n  OR renal_replacement_therapy_started\n  OR urine_output <0.3 mL/kg/h for >=24 h\n  OR anuria >=12 h\n```",
+      "reference": {
+        "document": "deep-research-report-2026-10-16.md",
+        "sha256": "38ad3ab166f25a8b46c1e1f483ba813510c34dc766171389307635ecf7e8a715",
+        "line": 217,
+        "character_offset": 0,
+        "authority": "RESEARCH_REPORT_NOT_PATIENT_RESULT"
+      }
+    },
+    {
+      "id": "D37",
+      "kind": "DOCUMENT",
+      "text": "Estos criterios corresponden a KDIGO 2012, que sigue siendo la base final verificable mientras el documento 2026 permanece en proceso de actualización. citeturn23view0turn23view1turn17search6",
+      "reference": {
+        "document": "deep-research-report-2026-10-16.md",
+        "sha256": "38ad3ab166f25a8b46c1e1f483ba813510c34dc766171389307635ecf7e8a715",
+        "line": 225,
+        "character_offset": 0,
+        "authority": "RESEARCH_REPORT_NOT_PATIENT_RESULT"
+      }
+    },
+    {
+      "id": "D38",
+      "kind": "DOCUMENT",
+      "text": "VIGILE debe calcular AKI tanto por creatinina como por diuresis y conservar el criterio más grave. Un baseline inexistente no puede transformarse en un valor «normal» inventado. Si no existe suficiente historial para la vía de creatinina y tampoco existe diuresis válida, la salida correcta es `INSUFFICIENT_DATA`. KDIGO además recomienda determinar la causa siempre que sea posible y monitorizar creatinina y diuresis. citeturn22view0turn27search3",
+      "reference": {
+        "document": "deep-research-report-2026-10-16.md",
+        "sha256": "38ad3ab166f25a8b46c1e1f483ba813510c34dc766171389307635ecf7e8a715",
+        "line": 227,
+        "character_offset": 0,
+        "authority": "RESEARCH_REPORT_NOT_PATIENT_RESULT"
+      }
+    },
+    {
+      "id": "D39",
+      "kind": "DOCUMENT",
+      "text": "```text\nPATH_A =\n    acute_onset_minutes_to_hours\nAND skin_or_mucosal_involvement\nAND (\n       respiratory_compromise\n       OR reduced_BP_or_end_organ_dysfunction\n       OR severe_GI_symptoms\n    )",
+      "reference": {
+        "document": "deep-research-report-2026-10-16.md",
+        "sha256": "38ad3ab166f25a8b46c1e1f483ba813510c34dc766171389307635ecf7e8a715",
+        "line": 231,
+        "character_offset": 0,
+        "authority": "RESEARCH_REPORT_NOT_PATIENT_RESULT"
+      }
+    },
+    {
+      "id": "D40",
+      "kind": "DOCUMENT",
+      "text": "PATH_B =\n    acute_onset_minutes_to_hours\nAND known_or_highly_probable_allergen\nAND (\n       hypotension\n       OR bronchospasm\n       OR laryngeal_involvement\n    )",
+      "reference": {
+        "document": "deep-research-report-2026-10-16.md",
+        "sha256": "38ad3ab166f25a8b46c1e1f483ba813510c34dc766171389307635ecf7e8a715",
+        "line": 241,
+        "character_offset": 0,
+        "authority": "RESEARCH_REPORT_NOT_PATIENT_RESULT"
+      }
+    },
+    {
+      "id": "D41",
+      "kind": "DOCUMENT",
+      "text": "La vía B es particularmente importante porque permite reconocer anafilaxia sin urticaria. citeturn21search0turn21search5",
+      "reference": {
+        "document": "deep-research-report-2026-10-16.md",
+        "sha256": "38ad3ab166f25a8b46c1e1f483ba813510c34dc766171389307635ecf7e8a715",
+        "line": 262,
+        "character_offset": 0,
+        "authority": "RESEARCH_REPORT_NOT_PATIENT_RESULT"
+      }
+    },
+    {
+      "id": "D42",
+      "kind": "DOCUMENT",
+      "text": "En este caso, diagnóstico y respuesta de emergencia deben procesarse en paralelo. La epinefrina IM es primera línea; WAO indica 0,01 mg/kg hasta un máximo de 0,5 mg y repetición cada 5–15 minutos si los síntomas son refractarios. WAO señala además que no existe una contraindicación absoluta para epinefrina IM en el tratamiento de anafilaxia, mientras que el bolo IV no es la vía inicial recomendada por su mayor riesgo y exige monitorización y personal experimentado si se emplean infusiones IV en casos refractarios. citeturn17search3turn17search4turn24search1",
+      "reference": {
+        "document": "deep-research-report-2026-10-16.md",
+        "sha256": "38ad3ab166f25a8b46c1e1f483ba813510c34dc766171389307635ecf7e8a715",
+        "line": 264,
+        "character_offset": 0,
+        "authority": "RESEARCH_REPORT_NOT_PATIENT_RESULT"
+      }
+    },
+    {
+      "id": "D43",
+      "kind": "DOCUMENT",
+      "text": "Esta quinta ruta no debe fingir que «mareo + taquicardia» es una enfermedad. Es un **orquestador de hipótesis**.",
+      "reference": {
+        "document": "deep-research-report-2026-10-16.md",
+        "sha256": "38ad3ab166f25a8b46c1e1f483ba813510c34dc766171389307635ecf7e8a715",
+        "line": 268,
+        "character_offset": 0,
+        "authority": "RESEARCH_REPORT_NOT_PATIENT_RESULT"
+      }
+    },
+    {
+      "id": "D44",
+      "kind": "DOCUMENT",
+      "text": "```text\n1. Buscar amenaza inmediata.\n2. Evaluar reglas clínicas completas disponibles.\n3. Detectar imitadores/exclusiones.\n4. Determinar datos que faltan.\n5. Seleccionar pruebas que discriminan varias hipótesis.\n6. Ordenar las hipótesis por categorías transparentes,\n   no por probabilidades inventadas.\n```",
+      "reference": {
+        "document": "deep-research-report-2026-10-16.md",
+        "sha256": "38ad3ab166f25a8b46c1e1f483ba813510c34dc766171389307635ecf7e8a715",
+        "line": 270,
+        "character_offset": 0,
+        "authority": "RESEARCH_REPORT_NOT_PATIENT_RESULT"
+      }
+    },
+    {
+      "id": "D45",
+      "kind": "DOCUMENT",
+      "text": "```text\nTIME_CRITICAL_CRITERIA_MET\nTIME_CRITICAL_SUSPECTED\nCRITERIA_MET\nHIGH_PRIORITY_UNRESOLVED\nCOMPATIBLE\nWEAK_SUPPORT\nCONTRADICTED\nNOT_EVALUABLE\n```",
+      "reference": {
+        "document": "deep-research-report-2026-10-16.md",
+        "sha256": "38ad3ab166f25a8b46c1e1f483ba813510c34dc766171389307635ecf7e8a715",
+        "line": 282,
+        "character_offset": 0,
+        "authority": "RESEARCH_REPORT_NOT_PATIENT_RESULT"
+      }
+    },
+    {
+      "id": "D46",
+      "kind": "DOCUMENT",
+      "text": "Así, un astronauta con mareo, taquicardia y caída de PAS de 25 mmHg durante una prueba ortostática válida debe priorizar la ruta de hipotensión ortostática y marcar POTS como contradictorio; un astronauta con aumento de FC de 35 lpm pero deshidratación aguda no debe recibir la etiqueta POTS; y un astronauta con taquicardia, broncoespasmo y exposición reciente a un alérgeno debe activar primero la ruta de anafilaxia. Estas son aplicaciones deterministas de los criterios anteriores, no probabilidades clínicas nuevas. citeturn17search0turn18search3turn21search0",
+      "reference": {
+        "document": "deep-research-report-2026-10-16.md",
+        "sha256": "38ad3ab166f25a8b46c1e1f483ba813510c34dc766171389307635ecf7e8a715",
+        "line": 293,
+        "character_offset": 0,
+        "authority": "RESEARCH_REPORT_NOT_PATIENT_RESULT"
+      }
+    },
+    {
+      "id": "D47",
+      "kind": "DOCUMENT",
+      "text": "La siguiente matriz es deliberadamente conservadora: VIGILE solo resuelve automáticamente las rutas cuyos criterios han sido incluidos en esta investigación. Enfermedades potencialmente graves ajenas al alcance, como embolia pulmonar o determinadas arritmias, pueden aparecer como `EXTERNAL_PATHWAY_REQUIRED`, pero Codex no debe inventar sus criterios para completar el diferencial.",
+      "reference": {
+        "document": "deep-research-report-2026-10-16.md",
+        "sha256": "38ad3ab166f25a8b46c1e1f483ba813510c34dc766171389307635ecf7e8a715",
+        "line": 297,
+        "character_offset": 0,
+        "authority": "RESEARCH_REPORT_NOT_PATIENT_RESULT"
+      }
+    },
+    {
+      "id": "D48",
+      "kind": "DOCUMENT",
+      "text": "| Presentación | Primero evaluar | Hipótesis dentro de esta versión | Prueba/dato discriminante |\n|---|---|---|---|\n| Mareo + taquicardia | Inestabilidad/anaphylaxis | OH, POTS, hipovolemia, DKA | BP/HR ortostáticos, exposición, glucosa, cetonas, pH/bicarbonato |\n| Hipotensión + debilidad | Anafilaxia/inestabilidad | OH, hipovolemia, DKA | Relación postural, alérgeno, glucosa/cetonas, historia de pérdidas |\n| Hiperglucemia + náuseas | DKA | Diabetes, DKA, hiperglucemia no confirmada | β-OHB, pH venoso, bicarbonato |\n| Taquicardia + disnea | Anafilaxia primero si exposición | POTS solo si claramente postural/crónico; causas externas | BP, SpO₂, exposición, ECG como ruta externa |\n| Oliguria + creatinina alterada | AKI | Prerrenal/renal/posrenal como etiologías | Serie SCr, UO, volumen, fármacos, evaluación de obstrucción |\n| Alérgeno + síntomas respiratorios | Anafilaxia | Reacción alérgica no anafiláctica / ruta respiratoria externa | BP, piel/mucosa, broncoespasmo, laringe |",
+      "reference": {
+        "document": "deep-research-report-2026-10-16.md",
+        "sha256": "38ad3ab166f25a8b46c1e1f483ba813510c34dc766171389307635ecf7e8a715",
+        "line": 299,
+        "character_offset": 0,
+        "authority": "RESEARCH_REPORT_NOT_PATIENT_RESULT"
+      }
+    },
+    {
+      "id": "D49",
+      "kind": "DOCUMENT",
+      "text": "KDIGO considera AKI un síndrome de múltiples etiologías, incluyendo causas prerrenales, intrínsecas y posrenales, y recomienda buscar causas reversibles. Por tanto, que VIGILE satisfaga el criterio AKI no debe cerrar el razonamiento etiológico. citeturn27search3turn22view0",
+      "reference": {
+        "document": "deep-research-report-2026-10-16.md",
+        "sha256": "38ad3ab166f25a8b46c1e1f483ba813510c34dc766171389307635ecf7e8a715",
+        "line": 308,
+        "character_offset": 0,
+        "authority": "RESEARCH_REPORT_NOT_PATIENT_RESULT"
+      }
+    },
+    {
+      "id": "D50",
+      "kind": "DOCUMENT",
+      "text": "De modo equivalente, la hipotensión ortostática es un hallazgo/síndrome hemodinámico que requiere caracterizar causas y factores agravantes; POTS exige excluir estados que producen taquicardia sinusal ortostática secundaria. citeturn26search2turn18search3",
+      "reference": {
+        "document": "deep-research-report-2026-10-16.md",
+        "sha256": "38ad3ab166f25a8b46c1e1f483ba813510c34dc766171389307635ecf7e8a715",
+        "line": 310,
+        "character_offset": 0,
+        "authority": "RESEARCH_REPORT_NOT_PATIENT_RESULT"
+      }
+    },
+    {
+      "id": "D51",
+      "kind": "DOCUMENT",
+      "text": "Para diabetes sin crisis, el protocolo implementado debe ser primordialmente de **confirmación**, no de prescripción farmacológica. Un resultado aislado que supera un umbral en una persona sin síntomas debe llevar a repetición apropiada; un CGM elevado debe conducir a una medición diagnóstica válida, no a `CRITERIA_MET`. citeturn18search0turn21search1",
+      "reference": {
+        "document": "deep-research-report-2026-10-16.md",
+        "sha256": "38ad3ab166f25a8b46c1e1f483ba813510c34dc766171389307635ecf7e8a715",
+        "line": 314,
+        "character_offset": 0,
+        "authority": "RESEARCH_REPORT_NOT_PATIENT_RESULT"
+      }
+    },
+    {
+      "id": "D52",
+      "kind": "DOCUMENT",
+      "text": "Para DKA, ya existe suficiente especificación terrestre para modelar diagnóstico, monitorización y varios guardarraíles terapéuticos, pero el protocolo espacial debe comenzar `MISSION_APPROVED=false`. El consenso de 2024 exige monitorización intensiva y advierte especialmente sobre potasio e hipoglucemia durante insulinoterapia. citeturn24search0",
+      "reference": {
+        "document": "deep-research-report-2026-10-16.md",
+        "sha256": "38ad3ab166f25a8b46c1e1f483ba813510c34dc766171389307635ecf7e8a715",
+        "line": 316,
+        "character_offset": 0,
+        "authority": "RESEARCH_REPORT_NOT_PATIENT_RESULT"
+      }
+    },
+    {
+      "id": "D53",
+      "kind": "DOCUMENT",
+      "text": "Para OH/POTS, HRS favorece comenzar con medidas no farmacológicas, revisión de medicamentos, volumen/hidratación, compresión y ejercicio; la evidencia farmacológica es más limitada y varias recomendaciones tienen clases de evidencia modestas. En VIGILE v1 clínica, conviene representar esas intervenciones como opciones respaldadas pero dejar la farmacoterapia específica fuera del protocolo ejecutable hasta disponer de una política médica de misión. citeturn26search0turn26search3",
+      "reference": {
+        "document": "deep-research-report-2026-10-16.md",
+        "sha256": "38ad3ab166f25a8b46c1e1f483ba813510c34dc766171389307635ecf7e8a715",
+        "line": 318,
+        "character_offset": 0,
+        "authority": "RESEARCH_REPORT_NOT_PATIENT_RESULT"
+      }
+    },
+    {
+      "id": "D54",
+      "kind": "DOCUMENT",
+      "text": "Para AKI, KDIGO recomienda evaluación pronta de la causa, atención especial a causas reversibles, monitorización de creatinina y diuresis y manejo acorde con etapa y causa. KDIGO favorece cristaloides isotónicos sobre coloides para expansión intravascular en pacientes con AKI o riesgo de AKI en ausencia de shock hemorrágico, y desaconseja utilizar diuréticos para prevenir AKI o tratarla salvo en manejo de sobrecarga de volumen. citeturn22view0",
+      "reference": {
+        "document": "deep-research-report-2026-10-16.md",
+        "sha256": "38ad3ab166f25a8b46c1e1f483ba813510c34dc766171389307635ecf7e8a715",
+        "line": 320,
+        "character_offset": 0,
+        "authority": "RESEARCH_REPORT_NOT_PATIENT_RESULT"
+      }
+    },
+    {
+      "id": "D55",
+      "kind": "DOCUMENT",
+      "text": "Para anafilaxia, la epinefrina IM es el caso más claro de protocolo de emergencia. WAO también contempla oxígeno de alto flujo ante dificultad respiratoria o dosis adicionales de epinefrina y cristaloides IV en inestabilidad cardiovascular. Sin embargo, VIGILE debe comprobar concentración, vía, inventario y autorización de misión antes de presentar un protocolo como operativo. citeturn24search1",
+      "reference": {
+        "document": "deep-research-report-2026-10-16.md",
+        "sha256": "38ad3ab166f25a8b46c1e1f483ba813510c34dc766171389307635ecf7e8a715",
+        "line": 322,
+        "character_offset": 0,
+        "authority": "RESEARCH_REPORT_NOT_PATIENT_RESULT"
+      }
+    },
+    {
+      "id": "D56",
+      "kind": "DOCUMENT",
+      "text": "| Ruta | Clasificación | Motivo |\n|---|---|---|\n| Diabetes | `REQUIRES_SPACE_SPECIFIC_VALIDATION` | Criterios terrestres bien establecidos; no se verificó validación diagnóstica específica en microgravedad |\n| DKA | `REQUIRES_SPACE_SPECIFIC_VALIDATION` | Diagnóstico y tratamiento terrestre verificables; monitorización intensiva y PK/PD/recursos de misión requieren validación |\n| OH | `NOT_APPLICABLE` en microgravedad libre; `APPLICABLE_WITH_LIMITATIONS` en gravedad | La prueba depende de transición a posición erguida/gravedad |\n| POTS | `NOT_APPLICABLE` para test de pie en microgravedad libre; `REQUIRES_SPACE_SPECIFIC_VALIDATION` después | Desacondicionamiento espacial puede imitar componentes del síndrome |\n| AKI | `REQUIRES_SPACE_SPECIFIC_VALIDATION` | Criterio terrestre válido como referencia, pero fisiología renal espacial cambia |\n| Anafilaxia | `APPLICABLE_WITH_LIMITATIONS` | Síndrome agudo clínico general; logística, posición, administración y recursos cambian |",
+      "reference": {
+        "document": "deep-research-report-2026-10-16.md",
+        "sha256": "38ad3ab166f25a8b46c1e1f483ba813510c34dc766171389307635ecf7e8a715",
+        "line": 326,
+        "character_offset": 0,
+        "authority": "RESEARCH_REPORT_NOT_PATIENT_RESULT"
+      }
+    },
+    {
+      "id": "D57",
+      "kind": "DOCUMENT",
+      "text": "Las clasificaciones espaciales anteriores son **decisiones de ingeniería clínica inferidas de la evidencia**, no categorías oficiales emitidas por NASA. NASA sí documenta cambios cardiovasculares/volémicos, intolerancia ortostática tras microgravedad, riesgos urinarios y la necesidad de atención autónoma contextualizada por los recursos de cada misión. citeturn19search2turn24search3turn25search0turn25search5",
+      "reference": {
+        "document": "deep-research-report-2026-10-16.md",
+        "sha256": "38ad3ab166f25a8b46c1e1f483ba813510c34dc766171389307635ecf7e8a715",
+        "line": 335,
+        "character_offset": 0,
+        "authority": "RESEARCH_REPORT_NOT_PATIENT_RESULT"
+      }
+    },
+    {
+      "id": "D58",
+      "kind": "DOCUMENT",
+      "text": "VIGILE debe abandonar la idea de un único enum clínico. El objeto resultante debe separar cinco dimensiones:",
+      "reference": {
+        "document": "deep-research-report-2026-10-16.md",
+        "sha256": "38ad3ab166f25a8b46c1e1f483ba813510c34dc766171389307635ecf7e8a715",
+        "line": 339,
+        "character_offset": 0,
+        "authority": "RESEARCH_REPORT_NOT_PATIENT_RESULT"
+      }
+    },
+    {
+      "id": "D59",
+      "kind": "DOCUMENT",
+      "text": "```text\ndiagnostic_status\n    NOT_EVALUATED\n    INSUFFICIENT_DATA\n    SUSPECTED\n    CRITERIA_MET\n    CRITERIA_NOT_MET\n    CONFLICTING_EVIDENCE\n    NOT_APPLICABLE",
+      "reference": {
+        "document": "deep-research-report-2026-10-16.md",
+        "sha256": "38ad3ab166f25a8b46c1e1f483ba813510c34dc766171389307635ecf7e8a715",
+        "line": 341,
+        "character_offset": 0,
+        "authority": "RESEARCH_REPORT_NOT_PATIENT_RESULT"
+      }
+    },
+    {
+      "id": "D60",
+      "kind": "DOCUMENT",
+      "text": "confirmation_status\n    NOT_APPLICABLE\n    NOT_REQUIRED\n    REQUIRED\n    PENDING\n    SATISFIED\n    UNAVAILABLE",
+      "reference": {
+        "document": "deep-research-report-2026-10-16.md",
+        "sha256": "38ad3ab166f25a8b46c1e1f483ba813510c34dc766171389307635ecf7e8a715",
+        "line": 357,
+        "character_offset": 0,
+        "authority": "RESEARCH_REPORT_NOT_PATIENT_RESULT"
+      }
+    },
+    {
+      "id": "D61",
+      "kind": "DOCUMENT",
+      "text": "protocol_status\n    NOT_EVALUATED\n    NOT_INDICATED\n    ELIGIBLE\n    BLOCKED_MISSING_DATA\n    BLOCKED_CONTRAINDICATION\n    BLOCKED_RESOURCE\n    BLOCKED_AUTHORIZATION\n    READY_FOR_CREW",
+      "reference": {
+        "document": "deep-research-report-2026-10-16.md",
+        "sha256": "38ad3ab166f25a8b46c1e1f483ba813510c34dc766171389307635ecf7e8a715",
+        "line": 365,
+        "character_offset": 0,
+        "authority": "RESEARCH_REPORT_NOT_PATIENT_RESULT"
+      }
+    },
+    {
+      "id": "D62",
+      "kind": "DOCUMENT",
+      "text": "```python\ndef evaluate_diagnostic_criterion(criterion, patient, context):\n    assert criterion.source_status == \"CURRENT\"",
+      "reference": {
+        "document": "deep-research-report-2026-10-16.md",
+        "sha256": "38ad3ab166f25a8b46c1e1f483ba813510c34dc766171389307635ecf7e8a715",
+        "line": 412,
+        "character_offset": 0,
+        "authority": "RESEARCH_REPORT_NOT_PATIENT_RESULT"
+      }
+    },
+    {
+      "id": "D63",
+      "kind": "DOCUMENT",
+      "text": "quality = validate_required_measurements(\n        patient=patient,\n        requirements=criterion.measurement_quality,\n    )",
+      "reference": {
+        "document": "deep-research-report-2026-10-16.md",
+        "sha256": "38ad3ab166f25a8b46c1e1f483ba813510c34dc766171389307635ecf7e8a715",
+        "line": 419,
+        "character_offset": 0,
+        "authority": "RESEARCH_REPORT_NOT_PATIENT_RESULT"
+      }
+    },
+    {
+      "id": "D64",
+      "kind": "DOCUMENT",
+      "text": "if quality.invalid_required:\n        return result(\n            diagnostic_status=\"INSUFFICIENT_DATA\",\n            missing=quality.missing,\n            invalid=quality.invalid,\n        )",
+      "reference": {
+        "document": "deep-research-report-2026-10-16.md",
+        "sha256": "38ad3ab166f25a8b46c1e1f483ba813510c34dc766171389307635ecf7e8a715",
+        "line": 424,
+        "character_offset": 0,
+        "authority": "RESEARCH_REPORT_NOT_PATIENT_RESULT"
+      }
+    },
+    {
+      "id": "D65",
+      "kind": "DOCUMENT",
+      "text": "tree_result = evaluate_boolean_tree(\n        criterion.logic,\n        patient=patient,\n        context=context,\n        missing_policy=\"UNKNOWN_NEVER_FALSE_OR_NORMAL\",\n    )",
+      "reference": {
+        "document": "deep-research-report-2026-10-16.md",
+        "sha256": "38ad3ab166f25a8b46c1e1f483ba813510c34dc766171389307635ecf7e8a715",
+        "line": 431,
+        "character_offset": 0,
+        "authority": "RESEARCH_REPORT_NOT_PATIENT_RESULT"
+      }
+    },
+    {
+      "id": "D66",
+      "kind": "DOCUMENT",
+      "text": "if tree_result.conflicting:\n        diagnostic_status = \"CONFLICTING_EVIDENCE\"\n    elif tree_result.true:\n        diagnostic_status = \"CRITERIA_MET\"\n    elif tree_result.missing_required:\n        diagnostic_status = \"INSUFFICIENT_DATA\"\n    elif tree_result.partial_support:\n        diagnostic_status = \"SUSPECTED\"\n    else:\n        diagnostic_status = \"CRITERIA_NOT_MET\"",
+      "reference": {
+        "document": "deep-research-report-2026-10-16.md",
+        "sha256": "38ad3ab166f25a8b46c1e1f483ba813510c34dc766171389307635ecf7e8a715",
+        "line": 438,
+        "character_offset": 0,
+        "authority": "RESEARCH_REPORT_NOT_PATIENT_RESULT"
+      }
+    },
+    {
+      "id": "D67",
+      "kind": "DOCUMENT",
+      "text": "confirmation = evaluate_confirmation_rule(\n        criterion.confirmation,\n        patient,\n        diagnostic_status,\n    )",
+      "reference": {
+        "document": "deep-research-report-2026-10-16.md",
+        "sha256": "38ad3ab166f25a8b46c1e1f483ba813510c34dc766171389307635ecf7e8a715",
+        "line": 449,
+        "character_offset": 0,
+        "authority": "RESEARCH_REPORT_NOT_PATIENT_RESULT"
+      }
+    },
+    {
+      "id": "D68",
+      "kind": "DOCUMENT",
+      "text": "return build_traceable_result(\n        diagnostic_status=diagnostic_status,\n        confirmation_status=confirmation,\n        evaluated_nodes=tree_result.trace,\n    )\n```",
+      "reference": {
+        "document": "deep-research-report-2026-10-16.md",
+        "sha256": "38ad3ab166f25a8b46c1e1f483ba813510c34dc766171389307635ecf7e8a715",
+        "line": 455,
+        "character_offset": 0,
+        "authority": "RESEARCH_REPORT_NOT_PATIENT_RESULT"
+      }
+    },
+    {
+      "id": "D69",
+      "kind": "DOCUMENT",
+      "text": "if result.time_critical and result.criteria_met:\n            tier = \"TIME_CRITICAL_CRITERIA_MET\"\n        elif result.time_critical and result.supported:\n            tier = \"TIME_CRITICAL_SUSPECTED\"\n        elif result.criteria_met:\n            tier = \"CRITERIA_MET\"\n        elif result.required_data_missing and result.supported:\n            tier = \"HIGH_PRIORITY_UNRESOLVED\"\n        elif result.supported:\n            tier = \"COMPATIBLE\"\n        elif result.contradicted:\n            tier = \"CONTRADICTED\"\n        else:\n            tier = \"NOT_EVALUABLE\"",
+      "reference": {
+        "document": "deep-research-report-2026-10-16.md",
+        "sha256": "38ad3ab166f25a8b46c1e1f483ba813510c34dc766171389307635ecf7e8a715",
+        "line": 471,
+        "character_offset": 0,
+        "authority": "RESEARCH_REPORT_NOT_PATIENT_RESULT"
+      }
+    },
+    {
+      "id": "D70",
+      "kind": "DOCUMENT",
+      "text": "No se genera un «73 % de probabilidad de POTS» porque este proyecto no dispone de una calibración probabilística validada para astronautas.",
+      "reference": {
+        "document": "deep-research-report-2026-10-16.md",
+        "sha256": "38ad3ab166f25a8b46c1e1f483ba813510c34dc766171389307635ecf7e8a715",
+        "line": 491,
+        "character_offset": 0,
+        "authority": "RESEARCH_REPORT_NOT_PATIENT_RESULT"
+      }
+    },
+    {
+      "id": "D71",
+      "kind": "DOCUMENT",
+      "text": "```python\ndef choose_next_tests(active_hypotheses, resources):\n    candidates = collect_missing_tests(active_hypotheses)",
+      "reference": {
+        "document": "deep-research-report-2026-10-16.md",
+        "sha256": "38ad3ab166f25a8b46c1e1f483ba813510c34dc766171389307635ecf7e8a715",
+        "line": 495,
+        "character_offset": 0,
+        "authority": "RESEARCH_REPORT_NOT_PATIENT_RESULT"
+      }
+    },
+    {
+      "id": "D72",
+      "kind": "DOCUMENT",
+      "text": "for test in candidates:\n        test.priority = lexicographic_rank(\n            time_critical_exclusion=test.rules_out_time_critical,\n            required_for_diagnosis=test.required_for_criterion,\n            discriminates_hypotheses=test.discrimination_count,\n            available=resources.contains(test.resource_id),\n            patient_risk=test.risk_class,\n            resource_cost=test.resource_cost,\n        )",
+      "reference": {
+        "document": "deep-research-report-2026-10-16.md",
+        "sha256": "38ad3ab166f25a8b46c1e1f483ba813510c34dc766171389307635ecf7e8a715",
+        "line": 499,
+        "character_offset": 0,
+        "authority": "RESEARCH_REPORT_NOT_PATIENT_RESULT"
+      }
+    },
+    {
+      "id": "D73",
+      "kind": "DOCUMENT",
+      "text": "La selección es lexicográfica y explicable; no pretende ser una utilidad clínica probabilística validada.",
+      "reference": {
+        "document": "deep-research-report-2026-10-16.md",
+        "sha256": "38ad3ab166f25a8b46c1e1f483ba813510c34dc766171389307635ecf7e8a715",
+        "line": 512,
+        "character_offset": 0,
+        "authority": "RESEARCH_REPORT_NOT_PATIENT_RESULT"
+      }
+    },
+    {
+      "id": "D74",
+      "kind": "DOCUMENT",
+      "text": "```python\ndef evaluate_protocol(protocol, clinical_result, patient, mission):\n    if clinical_result.diagnostic_status not in protocol.allowed_states:\n        return \"NOT_INDICATED\"",
+      "reference": {
+        "document": "deep-research-report-2026-10-16.md",
+        "sha256": "38ad3ab166f25a8b46c1e1f483ba813510c34dc766171389307635ecf7e8a715",
+        "line": 516,
+        "character_offset": 0,
+        "authority": "RESEARCH_REPORT_NOT_PATIENT_RESULT"
+      }
+    },
+    {
+      "id": "D75",
+      "kind": "DOCUMENT",
+      "text": "```python\ndef reevaluate(previous, new_observations, knowledge_version):\n    merged = append_immutable(previous.input_history, new_observations)",
+      "reference": {
+        "document": "deep-research-report-2026-10-16.md",
+        "sha256": "38ad3ab166f25a8b46c1e1f483ba813510c34dc766171389307635ecf7e8a715",
+        "line": 538,
+        "character_offset": 0,
+        "authority": "RESEARCH_REPORT_NOT_PATIENT_RESULT"
+      }
+    },
+    {
+      "id": "D76",
+      "kind": "DOCUMENT",
+      "text": "current = run_full_evaluation(\n        observations=merged,\n        knowledge_version=knowledge_version,\n    )",
+      "reference": {
+        "document": "deep-research-report-2026-10-16.md",
+        "sha256": "38ad3ab166f25a8b46c1e1f483ba813510c34dc766171389307635ecf7e8a715",
+        "line": 542,
+        "character_offset": 0,
+        "authority": "RESEARCH_REPORT_NOT_PATIENT_RESULT"
+      }
+    },
+    {
+      "id": "D77",
+      "kind": "DOCUMENT",
+      "text": "delta = compare(\n        old=previous,\n        new=current,\n        dimensions=[\n            \"diagnostic_status\",\n            \"urgency\",\n            \"confirmation_status\",\n            \"protocol_status\",\n            \"treatment_status\",\n        ],\n    )",
+      "reference": {
+        "document": "deep-research-report-2026-10-16.md",
+        "sha256": "38ad3ab166f25a8b46c1e1f483ba813510c34dc766171389307635ecf7e8a715",
+        "line": 547,
+        "character_offset": 0,
+        "authority": "RESEARCH_REPORT_NOT_PATIENT_RESULT"
+      }
+    },
+    {
+      "id": "D78",
+      "kind": "DOCUMENT",
+      "text": "El enfoque encaja con el concepto NASA de un CDSS que integre datos contextuales y ayude a la tripulación a observar, evaluar, decidir y actuar, pero la especificación concreta de algoritmos anterior es diseño de VIGILE, no software NASA. citeturn19search4turn19search5",
+      "reference": {
+        "document": "deep-research-report-2026-10-16.md",
+        "sha256": "38ad3ab166f25a8b46c1e1f483ba813510c34dc766171389307635ecf7e8a715",
+        "line": 566,
+        "character_offset": 0,
+        "authority": "RESEARCH_REPORT_NOT_PATIENT_RESULT"
+      }
+    },
+    {
+      "id": "D79",
+      "kind": "DOCUMENT",
+      "text": "Los siguientes bloques constituyen los artefactos que Codex debe materializar en archivos. Los identificadores entre ellos son consistentes. Las reglas clínicas se vinculan a las fuentes verificadas descritas arriba. citeturn18search0turn21search3turn17search0turn18search3turn27search3turn21search0",
+      "reference": {
+        "document": "deep-research-report-2026-10-16.md",
+        "sha256": "38ad3ab166f25a8b46c1e1f483ba813510c34dc766171389307635ecf7e8a715",
+        "line": 570,
+        "character_offset": 0,
+        "authority": "RESEARCH_REPORT_NOT_PATIENT_RESULT"
+      }
+    },
+    {
+      "id": "D80",
+      "kind": "DOCUMENT",
+      "text": "```json\n{\n  \"schema_version\": \"1.0.0\",\n  \"as_of_date\": \"2026-10-16\",\n  \"sources\": [\n    {\n      \"source_id\": \"SRC-NASA-STD3001-V1-2023\",\n      \"organization\": \"NASA\",\n      \"title\": \"NASA Spaceflight Human-System Standard Volume 1 — Crew Health\",\n      \"year\": 2023,\n      \"section\": \"3.5 In-Mission Medical Care; V1 3004\",\n      \"doi\": null,\n      \"url\": \"https://www.nasa.gov/reference/3-0-health-and-medical-care/\",\n      \"type\": \"OFFICIAL_STANDARD\",\n      \"verification\": \"VERIFIED\",\n      \"use\": [\"governance\", \"autonomous_medical_care\"]\n    },\n    {\n      \"source_id\": \"SRC-NASA-EIMO-2025\",\n      \"organization\": \"NASA\",\n      \"title\": \"Earth-Independent Medical Operations (EIMO) Concept of Operations\",\n      \"year\": 2025,\n      \"section\": \"Concept of Operations / system overview\",\n      \"doi\": null,\n      \"url\": \"https://ntrs.nasa.gov/citations/20250000009\",\n      \"type\": \"NASA_TECHNICAL_REPORT\",\n      \"verification\": \"VERIFIED\",\n      \"use\": [\"autonomy\", \"clinical_decision_support\"]\n    },\n    {\n      \"source_id\": \"SRC-NASA-CDSS-2023\",\n      \"organization\": \"NASA / npj Microgravity\",\n      \"title\": \"The Value of a Spaceflight Clinical Decision Support System for Earth-Independent Medical Operations\",\n      \"year\": 2023,\n      \"section\": \"Full article\",\n      \"doi\": \"10.1038/s41526-023-00284-1\",\n      \"url\": \"https://ntrs.nasa.gov/citations/20220007443\",\n      \"type\": \"PEER_REVIEWED_PRIMARY\",\n      \"verification\": \"VERIFIED\",\n      \"use\": [\"autonomy\", \"CDSS\"]\n    },\n    {\n    ",
+      "reference": {
+        "document": "deep-research-report-2026-10-16.md",
+        "sha256": "38ad3ab166f25a8b46c1e1f483ba813510c34dc766171389307635ecf7e8a715",
+        "line": 574,
+        "character_offset": 0,
+        "authority": "RESEARCH_REPORT_NOT_PATIENT_RESULT"
+      }
+    },
+    {
+      "id": "D81",
+      "kind": "DOCUMENT",
+      "text": "  \"source_id\": \"SRC-ADA-DX-2026\",\n      \"organization\": \"American Diabetes Association\",\n      \"title\": \"2. Diagnosis and Classification of Diabetes: Standards of Care in Diabetes—2026\",\n      \"year\": 2026,\n      \"section\": \"Table 2.1; Recommendations 2.1a–2.4; Confirming the Diagnosis\",\n      \"doi\": \"10.2337/dc26-S002\",\n      \"url\": \"https://doi.org/10.2337/dc26-S002\",\n      \"type\": \"CLINICAL_STANDARD\",\n      \"verification\": \"VERIFIED\",\n      \"use\": [\"diabetes_diagnosis\"]\n    },\n    {\n      \"source_id\": \"SRC-DKA-2024\",\n      \"organization\": \"ADA/EASD/AACE/JBDS/DTS expert panel\",\n      \"title\": \"Hyperglycemic Crises in Adults With Diabetes: A Consensus Report\",\n      \"year\": 2024,\n      \"section\": \"Section 3, Figure 2A, Table 2; Section 4\",\n      \"doi\": \"10.2337/dci24-0032\",\n      \"url\": \"https://doi.org/10.2337/dci24-0032\",\n      \"type\": \"MULTISOCIETY_CONSENSUS_REPORT\",\n      \"verification\": \"VERIFIED\",\n      \"use\": [\"DKA_diagnosis\", \"DKA_monitoring\", \"DKA_treatment\"]\n    },\n    {\n      \"source_id\": \"SRC-AHA-OH-2024\",\n      \"organization\": \"American Heart Association\",\n      \"title\": \"Orthostatic Hypotension in Adults With Hypertension: A Scientific Statement From the American Heart Association\",\n      \"year\": 2024,\n      \"section\": \"Definition and diagnostic/management discussion\",\n      \"doi\": \"10.1161/HYP.0000000000000236\",\n      \"url\": \"https://doi.org/10.1161/HYP.0000000000000236\",\n      \"type\": \"SCIENTIFIC_STATEMENT\",\n      \"verification\": \"VERIFIED\",\n      \"use\": [\"or",
+      "reference": {
+        "document": "deep-research-report-2026-10-16.md",
+        "sha256": "38ad3ab166f25a8b46c1e1f483ba813510c34dc766171389307635ecf7e8a715",
+        "line": 574,
+        "character_offset": 1500,
+        "authority": "RESEARCH_REPORT_NOT_PATIENT_RESULT"
+      }
+    },
+    {
+      "id": "D82",
+      "kind": "DOCUMENT",
+      "text": "thostatic_hypotension\"]\n    },\n    {\n      \"source_id\": \"SRC-HRS-POTS-2015\",\n      \"organization\": \"Heart Rhythm Society and collaborating societies\",\n      \"title\": \"2015 Heart Rhythm Society Expert Consensus Statement on POTS, Inappropriate Sinus Tachycardia, and Vasovagal Syncope\",\n      \"year\": 2015,\n      \"section\": \"Section 1 — POTS definition and treatment recommendations\",\n      \"doi\": \"10.1016/j.hrthm.2015.03.029\",\n      \"url\": \"https://www.hrsonline.org/resource/2015-heart-rhythm-society-expert-consensus-statement-diagnosis-and-treatment-postural-tachycardia/\",\n      \"type\": \"EXPERT_CONSENSUS\",\n      \"verification\": \"VERIFIED\",\n      \"use\": [\"POTS_definition\", \"POTS_management\"]\n    },\n    {\n      \"source_id\": \"SRC-NIH-POTS-2021\",\n      \"organization\": \"NIH expert consensus meeting participants\",\n      \"title\": \"Postural orthostatic tachycardia syndrome: State of the science and clinical care from a 2019 NIH Expert Consensus Meeting — Part 1\",\n      \"year\": 2021,\n      \"section\": \"Section 2 — Clinical description\",\n      \"doi\": \"10.1016/j.autneu.2021.102828\",\n      \"url\": \"https://pmc.ncbi.nlm.nih.gov/articles/PMC8455420/\",\n      \"type\": \"EXPERT_CONSENSUS_REPORT\",\n      \"verification\": \"VERIFIED\",\n      \"use\": [\"POTS_duration\", \"POTS_exclusions\"]\n    },\n    {\n      \"source_id\": \"SRC-KDIGO-AKI-2012\",\n      \"organization\": \"KDIGO\",\n      \"title\": \"KDIGO Clinical Practice Guideline for Acute Kidney Injury — Section 2: AKI Definition\",\n      \"year\": 2012,\n      \"section",
+      "reference": {
+        "document": "deep-research-report-2026-10-16.md",
+        "sha256": "38ad3ab166f25a8b46c1e1f483ba813510c34dc766171389307635ecf7e8a715",
+        "line": 574,
+        "character_offset": 3000,
+        "authority": "RESEARCH_REPORT_NOT_PATIENT_RESULT"
+      }
+    },
+    {
+      "id": "D83",
+      "kind": "DOCUMENT",
+      "text": "\": \"Chapter 2.1; Table 2\",\n      \"doi\": \"10.1038/kisup.2011.32\",\n      \"url\": \"https://pmc.ncbi.nlm.nih.gov/articles/PMC4089595/\",\n      \"type\": \"CLINICAL_GUIDELINE\",\n      \"verification\": \"VERIFIED\",\n      \"use\": [\"AKI_definition\", \"AKI_staging\"]\n    },\n    {\n      \"source_id\": \"SRC-KDIGO-AKI-DRAFT-2026\",\n      \"organization\": \"KDIGO\",\n      \"title\": \"KDIGO 2026 Clinical Practice Guideline for AKI and AKD — Public Review Draft\",\n      \"year\": 2026,\n      \"section\": \"Draft status only\",\n      \"doi\": null,\n      \"url\": \"https://kdigo.org/kdigo-2026-aki-akd-guideline-draft-available-for-public-review/\",\n      \"type\": \"DRAFT_GUIDELINE\",\n      \"verification\": \"DRAFT_NOT_FOR_PRODUCTION\",\n      \"use\": [\"version_monitoring\"]\n    },\n    {\n      \"source_id\": \"SRC-WAO-ANAPH-2020\",\n      \"organization\": \"World Allergy Organization\",\n      \"title\": \"World Allergy Organization Anaphylaxis Guidance 2020\",\n      \"year\": 2020,\n      \"section\": \"Figure 1 diagnostic criteria; Management; Table 6\",\n      \"doi\": \"10.1016/j.waojou.2020.100472\",\n      \"url\": \"https://doi.org/10.1016/j.waojou.2020.100472\",\n      \"type\": \"GUIDANCE\",\n      \"verification\": \"VERIFIED_CURRENT_DOCUMENT\",\n      \"use\": [\"anaphylaxis_diagnosis\", \"anaphylaxis_treatment\"]\n    },\n    {\n      \"source_id\": \"SRC-NASA-OI\",\n      \"organization\": \"NASA\",\n      \"title\": \"Fundamentals of Human Health — Orthostatic Intolerance\",\n      \"year\": null,\n      \"section\": \"Orthostatic Intolerance\",\n      \"doi\": null,\n      \"url\": \"https://www",
+      "reference": {
+        "document": "deep-research-report-2026-10-16.md",
+        "sha256": "38ad3ab166f25a8b46c1e1f483ba813510c34dc766171389307635ecf7e8a715",
+        "line": 574,
+        "character_offset": 4500,
+        "authority": "RESEARCH_REPORT_NOT_PATIENT_RESULT"
+      }
+    },
+    {
+      "id": "D84",
+      "kind": "DOCUMENT",
+      "text": ".nasa.gov/reference/fundamentals-of-human-health/\",\n      \"type\": \"NASA_OFFICIAL_REFERENCE\",\n      \"verification\": \"VERIFIED\",\n      \"use\": [\"space_orthostatic_context\"]\n    },\n    {\n      \"source_id\": \"SRC-SPACE-KIDNEY-2024\",\n      \"organization\": \"Nature Communications\",\n      \"title\": \"Cosmic kidney disease: an integrated pan-omic, physiological and morphological study into spaceflight-induced renal dysfunction\",\n      \"year\": 2024,\n      \"section\": \"Full article\",\n      \"doi\": \"10.1038/s41467-024-49212-1\",\n      \"url\": \"https://doi.org/10.1038/s41467-024-49212-1\",\n      \"type\": \"PRIMARY_RESEARCH\",\n      \"verification\": \"VERIFIED\",\n      \"use\": [\"space_renal_context\"]\n    }\n  ]\n}\n```",
+      "reference": {
+        "document": "deep-research-report-2026-10-16.md",
+        "sha256": "38ad3ab166f25a8b46c1e1f483ba813510c34dc766171389307635ecf7e8a715",
+        "line": 574,
+        "character_offset": 6000,
+        "authority": "RESEARCH_REPORT_NOT_PATIENT_RESULT"
+      }
+    },
+    {
+      "id": "D85",
+      "kind": "DOCUMENT",
+      "text": "Las versiones, DOI y estados del registro corresponden a las fuentes primarias u oficiales verificadas; en particular, KDIGO 2026 permanece identificado como borrador y no como sustituto del documento final 2012. citeturn19search2turn18search0turn21search3turn27search0turn27search1turn27search3turn27search4turn17search5turn25search0",
+      "reference": {
+        "document": "deep-research-report-2026-10-16.md",
+        "sha256": "38ad3ab166f25a8b46c1e1f483ba813510c34dc766171389307635ecf7e8a715",
+        "line": 739,
+        "character_offset": 0,
+        "authority": "RESEARCH_REPORT_NOT_PATIENT_RESULT"
+      }
+    },
+    {
+      "id": "D86",
+      "kind": "DOCUMENT",
+      "text": "```json\n{\n  \"schema_version\": \"1.0.0\",\n  \"criteria\": [\n    {\n      \"criterion_id\": \"CRIT-DM-ADA-2026\",\n      \"condition_id\": \"DM\",\n      \"version\": \"2026.1\",\n      \"population\": \"NONPREGNANT_ADULT\",\n      \"source_ids\": [\"SRC-ADA-DX-2026\"],\n      \"inputs\": [\n        \"a1c_percent\",\n        \"fasting_plasma_glucose_mg_dl\",\n        \"fasting_hours\",\n        \"ogtt_2h_plasma_glucose_mg_dl\",\n        \"ogtt_glucose_load_g\",\n        \"random_plasma_glucose_mg_dl\",\n        \"classic_hyperglycemia_symptoms\",\n        \"hyperglycemic_crisis\",\n        \"assay_quality\"\n      ],\n      \"logic\": {\n        \"qualifying_paths\": [\n          {\n            \"id\": \"A1C\",\n            \"all_of\": [\n              {\"field\": \"a1c_percent\", \"op\": \">=\", \"value\": 6.5},\n              {\"field\": \"assay_quality.a1c_valid\", \"op\": \"==\", \"value\": true}\n            ]\n          },\n          {\n            \"id\": \"FPG\",\n            \"all_of\": [\n              {\"field\": \"fasting_plasma_glucose_mg_dl\", \"op\": \">=\", \"value\": 126},\n              {\"field\": \"fasting_hours\", \"op\": \">=\", \"value\": 8}\n            ]\n          },\n          {\n            \"id\": \"OGTT\",\n            \"all_of\": [\n              {\"field\": \"ogtt_2h_plasma_glucose_mg_dl\", \"op\": \">=\", \"value\": 200},\n              {\"field\": \"ogtt_glucose_load_g\", \"op\": \"==\", \"value\": 75}\n            ]\n          },\n          {\n            \"id\": \"RANDOM_SYMPTOMATIC\",\n            \"all_of\": [\n              {\"field\": \"random_plasma_glucose_mg_dl\", \"op\": \">=\", \"value\": 200},\n              {\n    ",
+      "reference": {
+        "document": "deep-research-report-2026-10-16.md",
+        "sha256": "38ad3ab166f25a8b46c1e1f483ba813510c34dc766171389307635ecf7e8a715",
+        "line": 743,
+        "character_offset": 0,
+        "authority": "RESEARCH_REPORT_NOT_PATIENT_RESULT"
+      }
+    },
+    {
+      "id": "D87",
+      "kind": "DOCUMENT",
+      "text": "            \"any_of\": [\n                  {\"field\": \"classic_hyperglycemia_symptoms\", \"op\": \"==\", \"value\": true},\n                  {\"field\": \"hyperglycemic_crisis\", \"op\": \"==\", \"value\": true}\n                ]\n              }\n            ]\n          }\n        ]\n      },\n      \"confirmation\": {\n        \"RANDOM_SYMPTOMATIC\": \"NOT_REQUIRED\",\n        \"other_paths\": \"TWO_ABNORMAL_RESULTS_REQUIRED_IF_NO_UNEQUIVOCAL_HYPERGLYCEMIA\",\n        \"discordant_tests\": \"REPEAT_TEST_ABOVE_DIAGNOSTIC_CUTPOINT\"\n      },\n      \"measurement_quality\": {\n        \"glucose_sample\": \"VENOUS_PLASMA_FOR_DIAGNOSTIC_THRESHOLDS\",\n        \"a1c\": \"NGSP_CERTIFIED_DCCT_STANDARDIZED_OR_VALID_DIAGNOSTIC_METHOD\",\n        \"cgm\": \"NOT_DIAGNOSTIC\"\n      },\n      \"space_applicability\": \"REQUIRES_SPACE_SPECIFIC_VALIDATION\"\n    },\n    {\n      \"criterion_id\": \"CRIT-DKA-2024\",\n      \"condition_id\": \"DKA\",\n      \"version\": \"2024.1\",\n      \"population\": \"ADULT\",\n      \"source_ids\": [\"SRC-DKA-2024\"],\n      \"logic\": {\n        \"all_of\": [\n          {\n            \"any_of\": [\n              {\"field\": \"known_diabetes\", \"op\": \"==\", \"value\": true},\n              {\"field\": \"plasma_glucose_mg_dl\", \"op\": \">=\", \"value\": 200}\n            ]\n          },\n          {\n            \"any_of\": [\n              {\"field\": \"beta_hydroxybutyrate_mmol_l\", \"op\": \">=\", \"value\": 3.0},\n              {\"field\": \"urine_ketones_plus\", \"op\": \">=\", \"value\": 2}\n            ]\n          },\n          {\n            \"any_of\": [\n              {\"field\": \"venous_pH\", \"",
+      "reference": {
+        "document": "deep-research-report-2026-10-16.md",
+        "sha256": "38ad3ab166f25a8b46c1e1f483ba813510c34dc766171389307635ecf7e8a715",
+        "line": 743,
+        "character_offset": 1500,
+        "authority": "RESEARCH_REPORT_NOT_PATIENT_RESULT"
+      }
+    },
+    {
+      "id": "D88",
+      "kind": "DOCUMENT",
+      "text": "op\": \"<\", \"value\": 7.3},\n              {\"field\": \"bicarbonate_mmol_l\", \"op\": \"<\", \"value\": 18}\n            ]\n          }\n        ]\n      },\n      \"required_components\": [\"DIABETES_OR_HYPERGLYCEMIA\", \"KETOSIS\", \"ACIDOSIS\"],\n      \"preferred_ketone_test\": \"BETA_HYDROXYBUTYRATE\",\n      \"anion_gap_primary_diagnostic_criterion\": false,\n      \"resolution\": {\n        \"all_of\": [\n          {\"field\": \"beta_hydroxybutyrate_mmol_l\", \"op\": \"<\", \"value\": 0.6},\n          {\n            \"any_of\": [\n              {\"field\": \"venous_pH\", \"op\": \">=\", \"value\": 7.3},\n              {\"field\": \"bicarbonate_mmol_l\", \"op\": \">=\", \"value\": 18}\n            ]\n          }\n        ]\n      },\n      \"space_applicability\": \"REQUIRES_SPACE_SPECIFIC_VALIDATION\"\n    },\n    {\n      \"criterion_id\": \"CRIT-OH-AHA-2024\",\n      \"condition_id\": \"ORTHOSTATIC_HYPOTENSION\",\n      \"version\": \"2024.1\",\n      \"population\": \"ADULT\",\n      \"source_ids\": [\"SRC-AHA-OH-2024\"],\n      \"context\": {\n        \"requires_gravity_supporting_upright_transition\": true,\n        \"standing_window_minutes\": 3\n      },\n      \"logic\": {\n        \"any_of\": [\n          {\"derived_field\": \"delta_sbp_mm_hg\", \"op\": \"<=\", \"value\": -20},\n          {\"derived_field\": \"delta_dbp_mm_hg\", \"op\": \"<=\", \"value\": -10}\n        ]\n      },\n      \"measurement_quality\": {\n        \"baseline_and_upright_bp_required\": true,\n        \"time_since_upright_required\": true,\n        \"sustained_reduction_required\": true\n      },\n      \"etiology_confirmed_by_criterion\": false,\n     ",
+      "reference": {
+        "document": "deep-research-report-2026-10-16.md",
+        "sha256": "38ad3ab166f25a8b46c1e1f483ba813510c34dc766171389307635ecf7e8a715",
+        "line": 743,
+        "character_offset": 3000,
+        "authority": "RESEARCH_REPORT_NOT_PATIENT_RESULT"
+      }
+    },
+    {
+      "id": "D89",
+      "kind": "DOCUMENT",
+      "text": " \"space_applicability\": \"CONTEXT_DEPENDENT\"\n    },\n    {\n      \"criterion_id\": \"CRIT-POTS-HRS-NIH\",\n      \"condition_id\": \"POTS\",\n      \"version\": \"2015-2021.1\",\n      \"population\": \"ADULT\",\n      \"source_ids\": [\"SRC-HRS-POTS-2015\", \"SRC-NIH-POTS-2021\"],\n      \"logic\": {\n        \"all_of\": [\n          {\"derived_field\": \"sustained_delta_hr_bpm\", \"op\": \">=\", \"value\": 30},\n          {\"field\": \"upright_window_minutes\", \"op\": \"<=\", \"value\": 10},\n          {\"field\": \"orthostatic_hypotension_present\", \"op\": \"==\", \"value\": false},\n          {\"field\": \"orthostatic_symptoms_frequent\", \"op\": \"==\", \"value\": true},\n          {\"field\": \"symptoms_improve_supine\", \"op\": \"==\", \"value\": true},\n          {\"field\": \"symptom_duration_months\", \"op\": \">=\", \"value\": 3},\n          {\"field\": \"alternative_cause_present\", \"op\": \"==\", \"value\": false}\n        ]\n      },\n      \"alternative_causes\": [\n        \"DEHYDRATION\",\n        \"RECENT_BLOOD_LOSS\",\n        \"ANEMIA\",\n        \"FEVER\",\n        \"INFECTION\",\n        \"PAIN\",\n        \"HYPERTHYROIDISM\",\n        \"PHEOCHROMOCYTOMA\",\n        \"CARDIOACTIVE_OR_SYMPATHOMIMETIC_DRUG\",\n        \"SEVERE_DECONDITIONING\"\n      ],\n      \"space_applicability\": \"REQUIRES_SPACE_SPECIFIC_VALIDATION\"\n    },\n    {\n      \"criterion_id\": \"CRIT-AKI-KDIGO-2012\",\n      \"condition_id\": \"AKI\",\n      \"version\": \"2012.final\",\n      \"population\": \"ADULT\",\n      \"source_ids\": [\"SRC-KDIGO-AKI-2012\"],\n      \"logic\": {\n        \"any_of\": [\n          {\n            \"derived_field\": \"serum_creatini",
+      "reference": {
+        "document": "deep-research-report-2026-10-16.md",
+        "sha256": "38ad3ab166f25a8b46c1e1f483ba813510c34dc766171389307635ecf7e8a715",
+        "line": 743,
+        "character_offset": 4500,
+        "authority": "RESEARCH_REPORT_NOT_PATIENT_RESULT"
+      }
+    },
+    {
+      "id": "D90",
+      "kind": "DOCUMENT",
+      "text": "ne_delta_mg_dl_48h\",\n            \"op\": \">=\",\n            \"value\": 0.3\n          },\n          {\n            \"derived_field\": \"serum_creatinine_ratio_to_baseline_7d\",\n            \"op\": \">=\",\n            \"value\": 1.5\n          },\n          {\n            \"all_of\": [\n              {\"field\": \"urine_output_ml_kg_h\", \"op\": \"<\", \"value\": 0.5},\n              {\"field\": \"urine_output_duration_h\", \"op\": \">=\", \"value\": 6}\n            ]\n          }\n        ]\n      },\n      \"staging\": [\n        {\n          \"stage\": 1,\n          \"creatinine\": \"1.5-1.9x baseline OR increase >=0.3 mg/dL\",\n          \"urine_output\": \"<0.5 mL/kg/h for 6-12 h\"\n        },\n        {\n          \"stage\": 2,\n          \"creatinine\": \"2.0-2.9x baseline\",\n          \"urine_output\": \"<0.5 mL/kg/h for >=12 h\"\n        },\n        {\n          \"stage\": 3,\n          \"creatinine\": \">=3.0x baseline OR >=4.0 mg/dL OR RRT initiated\",\n          \"urine_output\": \"<0.3 mL/kg/h for >=24 h OR anuria >=12 h\"\n        }\n      ],\n      \"missing_baseline_policy\": \"DO_NOT_INVENT_BASELINE\",\n      \"space_applicability\": \"REQUIRES_SPACE_SPECIFIC_VALIDATION\"\n    },\n    {\n      \"criterion_id\": \"CRIT-ANAPH-WAO-2020\",\n      \"condition_id\": \"ANAPHYLAXIS\",\n      \"version\": \"2020.1\",\n      \"population\": \"ADULT\",\n      \"source_ids\": [\"SRC-WAO-ANAPH-2020\"],\n      \"logic\": {\n        \"any_of\": [\n          {\n            \"id\": \"WAO_PATH_1\",\n            \"all_of\": [\n              {\"field\": \"acute_onset_minutes_to_hours\", \"op\": \"==\", \"value\": true},\n              {\"",
+      "reference": {
+        "document": "deep-research-report-2026-10-16.md",
+        "sha256": "38ad3ab166f25a8b46c1e1f483ba813510c34dc766171389307635ecf7e8a715",
+        "line": 743,
+        "character_offset": 6000,
+        "authority": "RESEARCH_REPORT_NOT_PATIENT_RESULT"
+      }
+    },
+    {
+      "id": "D91",
+      "kind": "DOCUMENT",
+      "text": "field\": \"skin_or_mucosal_involvement\", \"op\": \"==\", \"value\": true},\n              {\n                \"any_of\": [\n                  {\"field\": \"respiratory_compromise\", \"op\": \"==\", \"value\": true},\n                  {\"field\": \"reduced_bp_or_end_organ_symptoms\", \"op\": \"==\", \"value\": true},\n                  {\"field\": \"severe_gi_symptoms\", \"op\": \"==\", \"value\": true}\n                ]\n              }\n            ]\n          },\n          {\n            \"id\": \"WAO_PATH_2\",\n            \"all_of\": [\n              {\"field\": \"acute_onset_minutes_to_hours\", \"op\": \"==\", \"value\": true},\n              {\"field\": \"known_or_highly_probable_allergen\", \"op\": \"==\", \"value\": true},\n              {\n                \"any_of\": [\n                  {\"field\": \"adult_sbp_mm_hg\", \"op\": \"<\", \"value\": 90},\n                  {\"derived_field\": \"sbp_drop_percent\", \"op\": \">\", \"value\": 30},\n                  {\"field\": \"bronchospasm\", \"op\": \"==\", \"value\": true},\n                  {\"field\": \"laryngeal_involvement\", \"op\": \"==\", \"value\": true}\n                ]\n              }\n            ]\n          }\n        ]\n      },\n      \"confirmation\": \"NO_LAB_CONFIRMATION_REQUIRED_BEFORE_EMERGENCY_MANAGEMENT\",\n      \"space_applicability\": \"APPLICABLE_WITH_LIMITATIONS\"\n    }\n  ]\n}\n```",
+      "reference": {
+        "document": "deep-research-report-2026-10-16.md",
+        "sha256": "38ad3ab166f25a8b46c1e1f483ba813510c34dc766171389307635ecf7e8a715",
+        "line": 743,
+        "character_offset": 7500,
+        "authority": "RESEARCH_REPORT_NOT_PATIENT_RESULT"
+      }
+    },
+    {
+      "id": "D92",
+      "kind": "DOCUMENT",
+      "text": "Los umbrales y condiciones de este archivo proceden de ADA 2026, el consenso DKA 2024, AHA 2024, HRS/NIH, KDIGO y WAO; ningún umbral espacial alternativo ha sido inventado. citeturn18search0turn21search3turn17search0turn18search3turn27search3turn21search0",
+      "reference": {
+        "document": "deep-research-report-2026-10-16.md",
+        "sha256": "38ad3ab166f25a8b46c1e1f483ba813510c34dc766171389307635ecf7e8a715",
+        "line": 1004,
+        "character_offset": 0,
+        "authority": "RESEARCH_REPORT_NOT_PATIENT_RESULT"
+      }
+    },
+    {
+      "id": "D93",
+      "kind": "DOCUMENT",
+      "text": "```json\n{\n  \"schema_version\": \"1.0.0\",\n  \"ranking\": [\n    \"TIME_CRITICAL_CRITERIA_MET\",\n    \"TIME_CRITICAL_SUSPECTED\",\n    \"CRITERIA_MET\",\n    \"HIGH_PRIORITY_UNRESOLVED\",\n    \"COMPATIBLE\",\n    \"WEAK_SUPPORT\",\n    \"CONTRADICTED\",\n    \"NOT_EVALUABLE\"\n  ],\n  \"presentations\": [\n    {\n      \"presentation_id\": \"PRES-DIZZINESS-TACHYCARDIA\",\n      \"triggers\": [\"DIZZINESS\", \"TACHYCARDIA\"],\n      \"hypotheses\": [\n        {\n          \"id\": \"ANAPHYLAXIS\",\n          \"support\": [\"ALLERGEN_EXPOSURE\", \"BRONCHOSPASM\", \"LARYNGEAL\", \"HYPOTENSION\", \"SKIN_MUCOSAL\"],\n          \"test_ids\": [\"TEST-BP\", \"TEST-ANAPH-CLINICAL\"],\n          \"time_critical\": true\n        },\n        {\n          \"id\": \"ORTHOSTATIC_HYPOTENSION\",\n          \"support\": [\"POSTURAL_TRIGGER\", \"BP_DROP\"],\n          \"test_ids\": [\"TEST-ORTHOSTATIC-BP-HR\"],\n          \"time_critical\": false\n        },\n        {\n          \"id\": \"POTS\",\n          \"support\": [\"POSTURAL_TRIGGER\", \"CHRONIC_ORTHOSTATIC_SYMPTOMS\", \"HR_RISE\"],\n          \"contradictions\": [\"ORTHOSTATIC_HYPOTENSION\", \"DEHYDRATION\", \"ANEMIA\", \"INFECTION\", \"SEVERE_DECONDITIONING\"],\n          \"test_ids\": [\"TEST-ORTHOSTATIC-BP-HR\", \"TEST-POTS-EXCLUSIONS\"],\n          \"time_critical\": false\n        },\n        {\n          \"id\": \"DKA\",\n          \"support\": [\"HYPERGLYCEMIA_OR_DIABETES\", \"NAUSEA\", \"DEHYDRATION\"],\n          \"test_ids\": [\"TEST-PLASMA-GLUCOSE\", \"TEST-BETA-OHB\", \"TEST-VENOUS-PH-BICARB\"],\n          \"time_critical\": true\n        },\n        {\n          \"id\": \"EXTERNAL_ARRHYTHMIA_",
+      "reference": {
+        "document": "deep-research-report-2026-10-16.md",
+        "sha256": "38ad3ab166f25a8b46c1e1f483ba813510c34dc766171389307635ecf7e8a715",
+        "line": 1008,
+        "character_offset": 0,
+        "authority": "RESEARCH_REPORT_NOT_PATIENT_RESULT"
+      }
+    },
+    {
+      "id": "D94",
+      "kind": "DOCUMENT",
+      "text": "PATHWAY\",\n          \"support\": [\"NON_POSTURAL_TACHYCARDIA\", \"IRREGULAR_PULSE\", \"PALPITATIONS\"],\n          \"test_ids\": [\"TEST-ECG\"],\n          \"time_critical\": true,\n          \"criteria_implemented_here\": false\n        }\n      ]\n    },\n    {\n      \"presentation_id\": \"PRES-HYPOTENSION-WEAKNESS\",\n      \"triggers\": [\"HYPOTENSION\", \"WEAKNESS\"],\n      \"hypotheses\": [\n        {\"id\": \"ANAPHYLAXIS\", \"time_critical\": true},\n        {\"id\": \"ORTHOSTATIC_HYPOTENSION\", \"time_critical\": false},\n        {\"id\": \"HYPOVOLEMIA\", \"time_critical\": true},\n        {\"id\": \"DKA\", \"time_critical\": true},\n        {\"id\": \"EXTERNAL_BLEEDING_PATHWAY\", \"time_critical\": true, \"criteria_implemented_here\": false}\n      ]\n    },\n    {\n      \"presentation_id\": \"PRES-HYPERGLYCEMIA-NAUSEA\",\n      \"triggers\": [\"HYPERGLYCEMIA\", \"NAUSEA\"],\n      \"hypotheses\": [\n        {\"id\": \"DKA\", \"time_critical\": true, \"test_ids\": [\"TEST-BETA-OHB\", \"TEST-VENOUS-PH-BICARB\"]},\n        {\"id\": \"DIABETES\", \"time_critical\": false, \"test_ids\": [\"TEST-PLASMA-GLUCOSE\"]},\n        {\"id\": \"STRESS_HYPERGLYCEMIA_OR_OTHER\", \"time_critical\": false, \"criteria_implemented_here\": false}\n      ]\n    },\n    {\n      \"presentation_id\": \"PRES-TACHYCARDIA-DYSPNEA\",\n      \"triggers\": [\"TACHYCARDIA\", \"DYSPNEA\"],\n      \"hypotheses\": [\n        {\"id\": \"ANAPHYLAXIS\", \"time_critical\": true},\n        {\"id\": \"DKA\", \"time_critical\": true},\n        {\"id\": \"POTS\", \"time_critical\": false},\n        {\"id\": \"EXTERNAL_ARRHYTHMIA_PATHWAY\", \"time_critical\": true, \"criteria_",
+      "reference": {
+        "document": "deep-research-report-2026-10-16.md",
+        "sha256": "38ad3ab166f25a8b46c1e1f483ba813510c34dc766171389307635ecf7e8a715",
+        "line": 1008,
+        "character_offset": 1500,
+        "authority": "RESEARCH_REPORT_NOT_PATIENT_RESULT"
+      }
+    },
+    {
+      "id": "D95",
+      "kind": "DOCUMENT",
+      "text": "implemented_here\": false},\n        {\"id\": \"EXTERNAL_PULMONARY_PATHWAY\", \"time_critical\": true, \"criteria_implemented_here\": false}\n      ]\n    },\n    {\n      \"presentation_id\": \"PRES-OLIGURIA-CREATININE\",\n      \"triggers\": [\"OLIGURIA_OR_ANURIA\", \"CREATININE_CHANGE\"],\n      \"hypotheses\": [\n        {\"id\": \"AKI\", \"time_critical\": true, \"test_ids\": [\"TEST-SERUM-CREATININE\", \"TEST-URINE-OUTPUT\"]},\n        {\"id\": \"HYPOVOLEMIC_PRERENAL_STATE\", \"time_critical\": true},\n        {\"id\": \"EXTERNAL_POSTRENAL_OBSTRUCTION\", \"time_critical\": true, \"criteria_implemented_here\": false},\n        {\"id\": \"EXTERNAL_INTRINSIC_RENAL_PATHWAY\", \"time_critical\": true, \"criteria_implemented_here\": false}\n      ]\n    },\n    {\n      \"presentation_id\": \"PRES-ALLERGEN-RESPIRATORY\",\n      \"triggers\": [\"ALLERGEN_EXPOSURE\", \"RESPIRATORY_SYMPTOMS\"],\n      \"hypotheses\": [\n        {\"id\": \"ANAPHYLAXIS\", \"time_critical\": true, \"test_ids\": [\"TEST-ANAPH-CLINICAL\", \"TEST-BP\"]},\n        {\"id\": \"NON_ANAPHYLACTIC_ALLERGIC_REACTION\", \"time_critical\": false, \"criteria_implemented_here\": false},\n        {\"id\": \"EXTERNAL_RESPIRATORY_PATHWAY\", \"time_critical\": true, \"criteria_implemented_here\": false}\n      ]\n    }\n  ]\n}\n```",
+      "reference": {
+        "document": "deep-research-report-2026-10-16.md",
+        "sha256": "38ad3ab166f25a8b46c1e1f483ba813510c34dc766171389307635ecf7e8a715",
+        "line": 1008,
+        "character_offset": 3000,
+        "authority": "RESEARCH_REPORT_NOT_PATIENT_RESULT"
+      }
+    },
+    {
+      "id": "D96",
+      "kind": "DOCUMENT",
+      "text": "La parte que ordena estas hipótesis es una **heurística de software explícita**, no una escala clínica validada. Las condiciones internas utilizan los criterios verificados; las rutas externas deben permanecer sin implementar hasta que sus propias especificaciones hayan sido verificadas. citeturn18search3turn21search0turn27search3",
+      "reference": {
+        "document": "deep-research-report-2026-10-16.md",
+        "sha256": "38ad3ab166f25a8b46c1e1f483ba813510c34dc766171389307635ecf7e8a715",
+        "line": 1114,
+        "character_offset": 0,
+        "authority": "RESEARCH_REPORT_NOT_PATIENT_RESULT"
+      }
+    },
+    {
+      "id": "D97",
+      "kind": "DOCUMENT",
+      "text": "```json\n{\n  \"schema_version\": \"1.0.0\",\n  \"tests\": [\n    {\n      \"test_id\": \"TEST-PLASMA-GLUCOSE\",\n      \"measure\": \"plasma_glucose\",\n      \"canonical_unit\": \"mg/dL\",\n      \"alternatives\": [\"mmol/L\"],\n      \"conversion\": \"mmol/L * 18 ≈ mg/dL\",\n      \"diagnostic_use\": [\"DM\", \"DKA\"],\n      \"quality\": [\"sample_type_recorded\", \"fasting_status_when_required\"],\n      \"missing_behavior\": \"UNKNOWN\"\n    },\n    {\n      \"test_id\": \"TEST-A1C\",\n      \"measure\": \"A1C\",\n      \"canonical_unit\": \"%\",\n      \"diagnostic_use\": [\"DM\"],\n      \"quality\": [\"validated_diagnostic_method\", \"assay_interference_assessed_when_discordant\"],\n      \"missing_behavior\": \"UNKNOWN\"\n    },\n    {\n      \"test_id\": \"TEST-OGTT-75G\",\n      \"measure\": \"2h_plasma_glucose\",\n      \"canonical_unit\": \"mg/dL\",\n      \"diagnostic_use\": [\"DM\"],\n      \"quality\": [\"75_g_glucose_load\", \"2h_timing_valid\"],\n      \"missing_behavior\": \"UNKNOWN\"\n    },\n    {\n      \"test_id\": \"TEST-BETA-OHB\",\n      \"measure\": \"beta_hydroxybutyrate\",\n      \"canonical_unit\": \"mmol/L\",\n      \"diagnostic_use\": [\"DKA\"],\n      \"quality\": [\"device_or_lab_valid\", \"operator_training\"],\n      \"missing_behavior\": \"UNKNOWN\"\n    },\n    {\n      \"test_id\": \"TEST-VENOUS-PH-BICARB\",\n      \"measure\": [\"venous_pH\", \"bicarbonate\"],\n      \"canonical_unit\": [\"pH\", \"mmol/L\"],\n      \"diagnostic_use\": [\"DKA\"],\n      \"missing_behavior\": \"UNKNOWN\"\n    },\n    {\n      \"test_id\": \"TEST-ORTHOSTATIC-BP-HR\",\n      \"measure\": [\"blood_pressure\", \"heart_rate\"],\n      \"diagnostic_use\": [\"OR",
+      "reference": {
+        "document": "deep-research-report-2026-10-16.md",
+        "sha256": "38ad3ab166f25a8b46c1e1f483ba813510c34dc766171389307635ecf7e8a715",
+        "line": 1118,
+        "character_offset": 0,
+        "authority": "RESEARCH_REPORT_NOT_PATIENT_RESULT"
+      }
+    },
+    {
+      "id": "D98",
+      "kind": "DOCUMENT",
+      "text": "THOSTATIC_HYPOTENSION\", \"POTS\"],\n      \"quality\": [\n        \"gravity_context_recorded\",\n        \"baseline_position_recorded\",\n        \"upright_time_recorded\",\n        \"valid_BP_device\",\n        \"valid_HR_device\"\n      ],\n      \"missing_behavior\": \"UNKNOWN\"\n    },\n    {\n      \"test_id\": \"TEST-POTS-EXCLUSIONS\",\n      \"measure\": \"clinical_exclusion_set\",\n      \"diagnostic_use\": [\"POTS\"],\n      \"required_review\": [\n        \"dehydration\",\n        \"recent_blood_loss\",\n        \"anemia\",\n        \"fever\",\n        \"infection\",\n        \"pain\",\n        \"hyperthyroidism\",\n        \"medications\",\n        \"severe_deconditioning\"\n      ],\n      \"missing_behavior\": \"UNRESOLVED_EXCLUSION\"\n    },\n    {\n      \"test_id\": \"TEST-SERUM-CREATININE\",\n      \"measure\": \"serum_creatinine\",\n      \"canonical_unit\": \"mg/dL\",\n      \"alternatives\": [\"micromol/L\"],\n      \"diagnostic_use\": [\"AKI\"],\n      \"quality\": [\"timestamp\", \"comparable_assay_context\"],\n      \"missing_behavior\": \"UNKNOWN\"\n    },\n    {\n      \"test_id\": \"TEST-URINE-OUTPUT\",\n      \"measure\": \"urine_output\",\n      \"canonical_unit\": \"mL/kg/h\",\n      \"diagnostic_use\": [\"AKI\"],\n      \"quality\": [\"body_mass_known\", \"collection_window_known\", \"collection_reliable\"],\n      \"missing_behavior\": \"UNKNOWN\"\n    },\n    {\n      \"test_id\": \"TEST-ANAPH-CLINICAL\",\n      \"measure\": [\n        \"skin_mucosal\",\n        \"respiratory\",\n        \"laryngeal\",\n        \"GI\",\n        \"allergen_context\"\n      ],\n      \"diagnostic_use\": [\"ANAPHYLAXIS\"],\n      \"missing_behavio",
+      "reference": {
+        "document": "deep-research-report-2026-10-16.md",
+        "sha256": "38ad3ab166f25a8b46c1e1f483ba813510c34dc766171389307635ecf7e8a715",
+        "line": 1118,
+        "character_offset": 1500,
+        "authority": "RESEARCH_REPORT_NOT_PATIENT_RESULT"
+      }
+    },
+    {
+      "id": "D99",
+      "kind": "DOCUMENT",
+      "text": "r\": \"PARTIAL_CLINICAL_INFORMATION\"\n    },\n    {\n      \"test_id\": \"TEST-BP\",\n      \"measure\": \"blood_pressure\",\n      \"canonical_unit\": \"mmHg\",\n      \"diagnostic_use\": [\"ANAPHYLAXIS\", \"ORTHOSTATIC_HYPOTENSION\"],\n      \"quality\": [\"device_valid\", \"timestamp\", \"position\"],\n      \"missing_behavior\": \"UNKNOWN\"\n    },\n    {\n      \"test_id\": \"TEST-ECG\",\n      \"measure\": \"electrocardiogram\",\n      \"diagnostic_use\": [\"EXTERNAL_ARRHYTHMIA_PATHWAY\"],\n      \"quality\": [\"signal_quality\"],\n      \"criteria_implemented_in_this_release\": false,\n      \"missing_behavior\": \"EXTERNAL_PATHWAY_UNRESOLVED\"\n    }\n  ]\n}\n```",
+      "reference": {
+        "document": "deep-research-report-2026-10-16.md",
+        "sha256": "38ad3ab166f25a8b46c1e1f483ba813510c34dc766171389307635ecf7e8a715",
+        "line": 1118,
+        "character_offset": 3000,
+        "authority": "RESEARCH_REPORT_NOT_PATIENT_RESULT"
+      }
+    },
+    {
+      "id": "D100",
+      "kind": "DOCUMENT",
+      "text": "ADA especifica plasma y A1C apropiadamente validados para diagnóstico y no acepta CGM como sustituto diagnóstico; el consenso DKA respalda β-hidroxibutirato y pH/bicarbonato; KDIGO exige temporalidad para creatinina y diuresis; y las rutas ortostáticas dependen de contexto postural/gravitatorio. citeturn18search0turn21search1turn24search0turn27search3turn17search0",
+      "reference": {
+        "document": "deep-research-report-2026-10-16.md",
+        "sha256": "38ad3ab166f25a8b46c1e1f483ba813510c34dc766171389307635ecf7e8a715",
+        "line": 1242,
+        "character_offset": 0,
+        "authority": "RESEARCH_REPORT_NOT_PATIENT_RESULT"
+      }
+    },
+    {
+      "id": "D101",
+      "kind": "DOCUMENT",
+      "text": "```json\n{\n  \"schema_version\": \"1.0.0\",\n  \"default_policy\": {\n    \"mission_approved\": false,\n    \"automatic_execution\": false\n  },\n  \"protocols\": [\n    {\n      \"protocol_id\": \"PROT-DM-CONFIRMATION\",\n      \"condition_id\": \"DM\",\n      \"source_ids\": [\"SRC-ADA-DX-2026\"],\n      \"trigger\": [\"SUSPECTED\", \"CRITERIA_MET\"],\n      \"steps\": [\n        \"VERIFY_DIAGNOSTIC_SAMPLE_AND_METHOD\",\n        \"APPLY_CONFIRMATION_RULE_IF_REQUIRED\",\n        \"INVESTIGATE_MAJOR_A1C_GLUCOSE_DISCORDANCE\",\n        \"PERSIST_RESULT_AND_SOURCE_VERSION\"\n      ],\n      \"medication_actions\": [],\n      \"mission_approved\": false,\n      \"execution\": \"DECISION_SUPPORT_ONLY\"\n    },\n    {\n      \"protocol_id\": \"PROT-DKA-ADULT-2024\",\n      \"condition_id\": \"DKA\",\n      \"source_ids\": [\"SRC-DKA-2024\"],\n      \"trigger\": [\"CRITERIA_MET\"],\n      \"urgency\": \"EMERGENCY\",\n      \"required_resources\": [\n        \"validated_glucose_measurement\",\n        \"potassium_measurement\",\n        \"electrolytes\",\n        \"beta_hydroxybutyrate\",\n        \"venous_pH_or_bicarbonate\",\n        \"IV_access_capability\",\n        \"IV_fluid_capability\",\n        \"insulin_inventory\",\n        \"continuous_or_frequent_monitoring\"\n      ],\n      \"safety_gates\": [\n        {\n          \"if\": \"potassium_mmol_l < 3.5\",\n          \"action\": \"HOLD_INSULIN_UNTIL_POTASSIUM_ABOVE_3_5\"\n        }\n      ],\n      \"therapy\": [\n        {\n          \"action\": \"IV_SHORT_ACTING_INSULIN\",\n          \"rate\": \"0.1 U/kg/h\",\n          \"requires_mission_authorization\": true\n        },\n      ",
+      "reference": {
+        "document": "deep-research-report-2026-10-16.md",
+        "sha256": "38ad3ab166f25a8b46c1e1f483ba813510c34dc766171389307635ecf7e8a715",
+        "line": 1246,
+        "character_offset": 0,
+        "authority": "RESEARCH_REPORT_NOT_PATIENT_RESULT"
+      }
+    },
+    {
+      "id": "D102",
+      "kind": "DOCUMENT",
+      "text": "  {\n          \"if\": \"glucose_mg_dl < 250\",\n          \"action\": \"ADD_5_TO_10_PERCENT_DEXTROSE_AND_REDUCE_INSULIN\",\n          \"new_rate\": \"0.05 U/kg/h\",\n          \"requires_mission_authorization\": true\n        }\n      ],\n      \"monitoring\": [\n        \"glucose_every_1_to_2_h\",\n        \"electrolytes_creatinine_phosphate_beta_OHB_pH_every_4_h\",\n        \"potassium_2_h_after_insulin_then_every_4_h\"\n      ],\n      \"resolution\": \"beta_OHB <0.6 AND (pH >=7.3 OR bicarbonate >=18)\",\n      \"mission_approved\": false,\n      \"automatic_execution\": false\n    },\n    {\n      \"protocol_id\": \"PROT-OH-POTS-INITIAL\",\n      \"condition_id\": \"ORTHOSTATIC_SYNDROME\",\n      \"source_ids\": [\"SRC-AHA-OH-2024\", \"SRC-HRS-POTS-2015\", \"SRC-NIH-POTS-2021\"],\n      \"steps\": [\n        \"CHARACTERIZE_TRIGGER_AND_PATTERN\",\n        \"REVIEW_AGGRAVATING_MEDICATIONS\",\n        \"ASSESS_DEHYDRATION_AND_VOLUME_STATUS\",\n        \"ASSESS_ALTERNATIVE_CAUSES\",\n        \"CONSIDER_NONPHARMACOLOGIC_COUNTERMEASURES\",\n        \"REASSESS\"\n      ],\n      \"pharmacologic_automation\": false,\n      \"mission_approved\": false\n    },\n    {\n      \"protocol_id\": \"PROT-AKI-INITIAL\",\n      \"condition_id\": \"AKI\",\n      \"source_ids\": [\"SRC-KDIGO-AKI-2012\"],\n      \"trigger\": [\"CRITERIA_MET\"],\n      \"steps\": [\n        \"DETERMINE_CAUSE_WHEN_POSSIBLE\",\n        \"LOOK_FOR_REVERSIBLE_CAUSES\",\n        \"REVIEW_NEPHROTOXIC_EXPOSURES\",\n        \"MONITOR_SERUM_CREATININE\",\n        \"MONITOR_URINE_OUTPUT\",\n        \"STAGE_AKI\",\n        \"MANAGE_ACCORDING_TO_CAUSE_AND_S",
+      "reference": {
+        "document": "deep-research-report-2026-10-16.md",
+        "sha256": "38ad3ab166f25a8b46c1e1f483ba813510c34dc766171389307635ecf7e8a715",
+        "line": 1246,
+        "character_offset": 1500,
+        "authority": "RESEARCH_REPORT_NOT_PATIENT_RESULT"
+      }
+    },
+    {
+      "id": "D103",
+      "kind": "DOCUMENT",
+      "text": "TAGE\"\n      ],\n      \"rules\": [\n        \"ISOTONIC_CRYSTALLOIDS_PREFERRED_TO_COLLOIDS_FOR_INTRAVASCULAR_EXPANSION_WHEN_APPROPRIATE_AND_NO_HEMORRHAGIC_SHOCK\",\n        \"DO_NOT_USE_DIURETICS_TO_PREVENT_AKI\",\n        \"DO_NOT_USE_DIURETICS_TO_TREAT_AKI_EXCEPT_VOLUME_OVERLOAD\"\n      ],\n      \"mission_approved\": false,\n      \"automatic_execution\": false\n    },\n    {\n      \"protocol_id\": \"PROT-ANAPH-IM-EPI\",\n      \"condition_id\": \"ANAPHYLAXIS\",\n      \"source_ids\": [\"SRC-WAO-ANAPH-2020\"],\n      \"trigger\": [\"CRITERIA_MET\", \"TIME_CRITICAL_SUSPECTED\"],\n      \"urgency\": \"EMERGENCY\",\n      \"therapy\": [\n        {\n          \"action\": \"EPINEPHRINE_IM\",\n          \"dose\": \"0.01 mg/kg\",\n          \"maximum_dose\": \"0.5 mg\",\n          \"repeat_if_refractory\": \"every 5-15 min\",\n          \"preferred_adult_site\": \"intramuscular\",\n          \"requires_mission_authorization\": true\n        }\n      ],\n      \"additional_actions\": [\n        \"POSITION_ACCORDING_TO_CLINICAL_STATE\",\n        \"OXYGEN_IF_RESPIRATORY_DISTRESS_OR_FURTHER_EPINEPHRINE_REQUIRED\",\n        \"IV_CRYSTALLOIDS_IF_CARDIOVASCULAR_INSTABILITY\"\n      ],\n      \"initial_IV_epinephrine_bolus\": \"NOT_RECOMMENDED\",\n      \"mission_approved\": false,\n      \"automatic_execution\": false\n    },\n    {\n      \"protocol_id\": \"PROT-DIZZINESS-TACHY-TRIAGE\",\n      \"condition_id\": \"DIZZINESS_TACHYCARDIA_PRESENTATION\",\n      \"source_ids\": [\n        \"SRC-AHA-OH-2024\",\n        \"SRC-HRS-POTS-2015\",\n        \"SRC-DKA-2024\",\n        \"SRC-WAO-ANAPH-2020\"\n      ],\n      \"step",
+      "reference": {
+        "document": "deep-research-report-2026-10-16.md",
+        "sha256": "38ad3ab166f25a8b46c1e1f483ba813510c34dc766171389307635ecf7e8a715",
+        "line": 1246,
+        "character_offset": 3000,
+        "authority": "RESEARCH_REPORT_NOT_PATIENT_RESULT"
+      }
+    },
+    {
+      "id": "D104",
+      "kind": "DOCUMENT",
+      "text": "s\": [\n        \"ASSESS_IMMEDIATE_INSTABILITY\",\n        \"ASSESS_ANAPHYLAXIS\",\n        \"ASSESS_DKA_IF_METABOLIC_FEATURES\",\n        \"ASSESS_ORTHOSTATIC_RELATION_IF_CONTEXT_APPLICABLE\",\n        \"ASSESS_POTS_EXCLUSIONS\",\n        \"REQUEST_ECG_FOR_NONPOSTURAL_OR_IRREGULAR_TACHYCARDIA\",\n        \"ROUTE_EXTERNAL_TIME_CRITICAL_CONDITIONS_TO_SEPARATE_PATHWAYS\"\n      ],\n      \"medication_actions\": [],\n      \"automatic_execution\": false\n    }\n  ]\n}\n```",
+      "reference": {
+        "document": "deep-research-report-2026-10-16.md",
+        "sha256": "38ad3ab166f25a8b46c1e1f483ba813510c34dc766171389307635ecf7e8a715",
+        "line": 1246,
+        "character_offset": 4500,
+        "authority": "RESEARCH_REPORT_NOT_PATIENT_RESULT"
+      }
+    },
+    {
+      "id": "D105",
+      "kind": "DOCUMENT",
+      "text": "Los regímenes de DKA y anafilaxia aquí representados reproducen datos explícitos de las fuentes terrestres y permanecen bloqueados por defecto para misión. La epinefrina IM y la insulinoterapia DKA tienen requisitos de monitorización muy distintos, por lo que nunca deben reducirse a una simple tabla «fármaco–dosis». citeturn24search0turn24search1",
+      "reference": {
+        "document": "deep-research-report-2026-10-16.md",
+        "sha256": "38ad3ab166f25a8b46c1e1f483ba813510c34dc766171389307635ecf7e8a715",
+        "line": 1401,
+        "character_offset": 0,
+        "authority": "RESEARCH_REPORT_NOT_PATIENT_RESULT"
+      }
+    },
+    {
+      "id": "D106",
+      "kind": "DOCUMENT",
+      "text": "```json\n{\n  \"schema_version\": \"1.0.0\",\n  \"rules\": [\n    {\n      \"rule_id\": \"BLOCK-DKA-INSULIN-LOW-K\",\n      \"protocol_id\": \"PROT-DKA-ADULT-2024\",\n      \"source_ids\": [\"SRC-DKA-2024\"],\n      \"condition\": \"potassium_mmol_l < 3.5\",\n      \"effect\": \"HOLD_INSULIN\",\n      \"reason\": \"risk_of_worsening_hypokalemia\"\n    },\n    {\n      \"rule_id\": \"BLOCK-DKA-MISSING-K\",\n      \"protocol_id\": \"PROT-DKA-ADULT-2024\",\n      \"condition\": \"potassium_unknown\",\n      \"effect\": \"BLOCKED_MISSING_SAFETY_DATA\",\n      \"reason\": \"potassium_required_for_safe_protocol_state_machine\"\n    },\n    {\n      \"rule_id\": \"BLOCK-DKA-NO-MONITOR\",\n      \"protocol_id\": \"PROT-DKA-ADULT-2024\",\n      \"condition\": \"required_monitoring_unavailable\",\n      \"effect\": \"BLOCKED_RESOURCE\"\n    },\n    {\n      \"rule_id\": \"ANAPH-IM-EPI-NO-ABSOLUTE-CLINICAL-CONTRAINDICATION\",\n      \"protocol_id\": \"PROT-ANAPH-IM-EPI\",\n      \"source_ids\": [\"SRC-WAO-ANAPH-2020\"],\n      \"condition\": \"anaphylaxis_emergency\",\n      \"effect\": \"DO_NOT_CREATE_HARD_CLINICAL_CONTRAINDICATION_TO_IM_EPINEPHRINE_FROM_UNSOURCED_RULES\"\n    },\n    {\n      \"rule_id\": \"BLOCK-ANAPH-WRONG-ROUTE\",\n      \"protocol_id\": \"PROT-ANAPH-IM-EPI\",\n      \"source_ids\": [\"SRC-WAO-ANAPH-2020\"],\n      \"condition\": \"initial_epinephrine_route == IV_BOLUS\",\n      \"effect\": \"BLOCK\"\n    },\n    {\n      \"rule_id\": \"BLOCK-ANAPH-NO-VERIFIED-DRUG\",\n      \"protocol_id\": \"PROT-ANAPH-IM-EPI\",\n      \"condition\": \"epinephrine_inventory_or_concentration_unverified\",\n      \"effect\": \"BLOCKED_RESOURC",
+      "reference": {
+        "document": "deep-research-report-2026-10-16.md",
+        "sha256": "38ad3ab166f25a8b46c1e1f483ba813510c34dc766171389307635ecf7e8a715",
+        "line": 1405,
+        "character_offset": 0,
+        "authority": "RESEARCH_REPORT_NOT_PATIENT_RESULT"
+      }
+    },
+    {
+      "id": "D107",
+      "kind": "DOCUMENT",
+      "text": "E\"\n    },\n    {\n      \"rule_id\": \"BLOCK-POTS-DEHYDRATION\",\n      \"criterion_id\": \"CRIT-POTS-HRS-NIH\",\n      \"source_ids\": [\"SRC-NIH-POTS-2021\"],\n      \"condition\": \"dehydration_present\",\n      \"effect\": \"POTS_CRITERIA_NOT_MET\"\n    },\n    {\n      \"rule_id\": \"BLOCK-POTS-OH\",\n      \"criterion_id\": \"CRIT-POTS-HRS-NIH\",\n      \"source_ids\": [\"SRC-HRS-POTS-2015\"],\n      \"condition\": \"orthostatic_hypotension_present\",\n      \"effect\": \"POTS_CRITERIA_NOT_MET\"\n    },\n    {\n      \"rule_id\": \"BLOCK-OH-FREE-MICROGRAVITY\",\n      \"criterion_id\": \"CRIT-OH-AHA-2024\",\n      \"condition\": \"gravity_context == FREE_MICROGRAVITY\",\n      \"effect\": \"NOT_APPLICABLE\"\n    },\n    {\n      \"rule_id\": \"BLOCK-MISSION-NOT-AUTHORIZED\",\n      \"protocol_id\": \"*\",\n      \"condition\": \"mission_authorization != AUTHORIZED\",\n      \"effect\": \"BLOCKED_AUTHORIZATION\"\n    }\n  ]\n}\n```",
+      "reference": {
+        "document": "deep-research-report-2026-10-16.md",
+        "sha256": "38ad3ab166f25a8b46c1e1f483ba813510c34dc766171389307635ecf7e8a715",
+        "line": 1405,
+        "character_offset": 1500,
+        "authority": "RESEARCH_REPORT_NOT_PATIENT_RESULT"
+      }
+    },
+    {
+      "id": "D108",
+      "kind": "DOCUMENT",
+      "text": "WAO especifica que no existe una contraindicación absoluta para epinefrina IM en anafilaxia, mientras que el consenso DKA exige retrasar la insulina cuando el potasio es <3,5 mmol/L. Las restantes barreras relativas a autorización, inventario y microgravedad son controles de VIGILE. citeturn17search4turn24search0",
+      "reference": {
+        "document": "deep-research-report-2026-10-16.md",
+        "sha256": "38ad3ab166f25a8b46c1e1f483ba813510c34dc766171389307635ecf7e8a715",
+        "line": 1480,
+        "character_offset": 0,
+        "authority": "RESEARCH_REPORT_NOT_PATIENT_RESULT"
+      }
+    },
+    {
+      "id": "D109",
+      "kind": "DOCUMENT",
+      "text": "```json\n{\n  \"schema_version\": \"1.0.0\",\n  \"classifications\": [\n    {\n      \"condition_id\": \"DM\",\n      \"classification\": \"REQUIRES_SPACE_SPECIFIC_VALIDATION\",\n      \"terrestrial_rule_preserved\": true,\n      \"threshold_adjustment\": \"NONE\",\n      \"reason\": \"No verified space-specific diagnostic thresholds identified.\"\n    },\n    {\n      \"condition_id\": \"DKA\",\n      \"classification\": \"REQUIRES_SPACE_SPECIFIC_VALIDATION\",\n      \"terrestrial_rule_preserved\": true,\n      \"threshold_adjustment\": \"NONE\",\n      \"reason\": \"Diagnostic and treatment criteria are terrestrial; mission resources and physiology require validation.\"\n    },\n    {\n      \"condition_id\": \"ORTHOSTATIC_HYPOTENSION\",\n      \"classification\": \"CONTEXT_DEPENDENT\",\n      \"contexts\": {\n        \"FREE_MICROGRAVITY\": \"NOT_APPLICABLE\",\n        \"EARTH_GRAVITY\": \"DIRECTLY_APPLICABLE_WITH_STANDARD_CLINICAL_LIMITATIONS\",\n        \"POST_SPACEFLIGHT_GRAVITY_TRANSITION\": \"APPLICABLE_WITH_LIMITATIONS\",\n        \"PARTIAL_GRAVITY\": \"REQUIRES_SPACE_SPECIFIC_VALIDATION\"\n      },\n      \"threshold_adjustment\": \"NONE\"\n    },\n    {\n      \"condition_id\": \"POTS\",\n      \"classification\": \"REQUIRES_SPACE_SPECIFIC_VALIDATION\",\n      \"contexts\": {\n        \"FREE_MICROGRAVITY\": \"NOT_APPLICABLE_FOR_STANDARD_STANDING_TEST\",\n        \"POST_SPACEFLIGHT\": \"APPLICABLE_WITH_LIMITATIONS\"\n      },\n      \"special_confounder\": \"SPACEFLIGHT_DECONDITIONING\",\n      \"threshold_adjustment\": \"NONE\"\n    },\n    {\n      \"condition_id\": \"AKI\",\n      \"classification\": \"REQU",
+      "reference": {
+        "document": "deep-research-report-2026-10-16.md",
+        "sha256": "38ad3ab166f25a8b46c1e1f483ba813510c34dc766171389307635ecf7e8a715",
+        "line": 1484,
+        "character_offset": 0,
+        "authority": "RESEARCH_REPORT_NOT_PATIENT_RESULT"
+      }
+    },
+    {
+      "id": "D110",
+      "kind": "DOCUMENT",
+      "text": "IRES_SPACE_SPECIFIC_VALIDATION\",\n      \"terrestrial_rule_preserved\": true,\n      \"threshold_adjustment\": \"NONE\",\n      \"reason\": \"Spaceflight alters renal physiology, fluids and body composition; no replacement KDIGO thresholds verified.\"\n    },\n    {\n      \"condition_id\": \"ANAPHYLAXIS\",\n      \"classification\": \"APPLICABLE_WITH_LIMITATIONS\",\n      \"terrestrial_rule_preserved\": true,\n      \"threshold_adjustment\": \"NONE\",\n      \"limitations\": [\n        \"positioning_in_microgravity\",\n        \"drug_inventory\",\n        \"route_execution\",\n        \"monitoring_resources\"\n      ]\n    },\n    {\n      \"condition_id\": \"DIZZINESS_TACHYCARDIA_PRESENTATION\",\n      \"classification\": \"CONTEXT_DEPENDENT\",\n      \"reason\": \"Orthostatic branches depend on gravity; metabolic/allergic branches do not use standing criteria.\"\n    }\n  ]\n}\n```",
+      "reference": {
+        "document": "deep-research-report-2026-10-16.md",
+        "sha256": "38ad3ab166f25a8b46c1e1f483ba813510c34dc766171389307635ecf7e8a715",
+        "line": 1484,
+        "character_offset": 1500,
+        "authority": "RESEARCH_REPORT_NOT_PATIENT_RESULT"
+      }
+    },
+    {
+      "id": "D111",
+      "kind": "DOCUMENT",
+      "text": "No se ha introducido ningún «umbral espacial» nuevo. La evidencia disponible justifica registrar incertidumbre y contexto, no alterar arbitrariamente ADA, KDIGO, AHA, HRS o WAO. citeturn24search3turn25search0turn19search0",
+      "reference": {
+        "document": "deep-research-report-2026-10-16.md",
+        "sha256": "38ad3ab166f25a8b46c1e1f483ba813510c34dc766171389307635ecf7e8a715",
+        "line": 1551,
+        "character_offset": 0,
+        "authority": "RESEARCH_REPORT_NOT_PATIENT_RESULT"
+      }
+    },
+    {
+      "id": "D112",
+      "kind": "DOCUMENT",
+      "text": "Los 30 casos siguientes son **casos de conformidad del software**, no pacientes ni evidencia de validación clínica.",
+      "reference": {
+        "document": "deep-research-report-2026-10-16.md",
+        "sha256": "38ad3ab166f25a8b46c1e1f483ba813510c34dc766171389307635ecf7e8a715",
+        "line": 1555,
+        "character_offset": 0,
+        "authority": "RESEARCH_REPORT_NOT_PATIENT_RESULT"
+      }
+    },
+    {
+      "id": "D113",
+      "kind": "DOCUMENT",
+      "text": "```json\n{\n  \"schema_version\": \"1.0.0\",\n  \"cases\": [\n    {\n      \"id\": \"DM-01\",\n      \"route\": \"DM_DKA\",\n      \"inputs\": {\n        \"fpg\": [\n          {\"value\": 132, \"unit\": \"mg/dL\", \"fasting_h\": 9, \"valid\": true},\n          {\"value\": 130, \"unit\": \"mg/dL\", \"fasting_h\": 10, \"valid\": true}\n        ],\n        \"classic_symptoms\": false\n      },\n      \"expected\": {\n        \"diagnostic_status\": \"CRITERIA_MET\",\n        \"urgency\": \"ROUTINE\",\n        \"confirmation_status\": \"SATISFIED\",\n        \"protocol_status\": \"ELIGIBLE\",\n        \"treatment_status\": \"NOT_STARTED\"\n      },\n      \"next_tests\": [],\n      \"source_ids\": [\"SRC-ADA-DX-2026\"]\n    },\n    {\n      \"id\": \"DM-02\",\n      \"route\": \"DM_DKA\",\n      \"inputs\": {\n        \"fpg\": [{\"value\": 130, \"unit\": \"mg/dL\", \"fasting_h\": 8, \"valid\": true}],\n        \"classic_symptoms\": false\n      },\n      \"expected\": {\n        \"diagnostic_status\": \"SUSPECTED\",\n        \"urgency\": \"ROUTINE\",\n        \"confirmation_status\": \"REQUIRED\",\n        \"protocol_status\": \"ELIGIBLE\",\n        \"treatment_status\": \"NOT_STARTED\"\n      },\n      \"next_tests\": [\"REPEAT_VALID_DIAGNOSTIC_TEST\"],\n      \"source_ids\": [\"SRC-ADA-DX-2026\"]\n    },\n    {\n      \"id\": \"DM-03\",\n      \"route\": \"DM_DKA\",\n      \"inputs\": {\n        \"random_plasma_glucose\": {\"value\": 220, \"unit\": \"mg/dL\", \"valid\": true},\n        \"classic_symptoms\": true\n      },\n      \"expected\": {\n        \"diagnostic_status\": \"CRITERIA_MET\",\n        \"urgency\": \"PROMPT\",\n        \"confirmation_status\": \"NOT_REQUIRED\",\n     ",
+      "reference": {
+        "document": "deep-research-report-2026-10-16.md",
+        "sha256": "38ad3ab166f25a8b46c1e1f483ba813510c34dc766171389307635ecf7e8a715",
+        "line": 1557,
+        "character_offset": 0,
+        "authority": "RESEARCH_REPORT_NOT_PATIENT_RESULT"
+      }
+    },
+    {
+      "id": "D114",
+      "kind": "DOCUMENT",
+      "text": "   \"protocol_status\": \"ELIGIBLE\",\n        \"treatment_status\": \"NOT_STARTED\"\n      },\n      \"next_tests\": [\"ASSESS_HYPERGLYCEMIC_CRISIS_IF_INDICATED\"],\n      \"source_ids\": [\"SRC-ADA-DX-2026\"]\n    },\n    {\n      \"id\": \"DM-04\",\n      \"route\": \"DM_DKA\",\n      \"inputs\": {\n        \"cgm_interstitial_glucose\": {\"value\": 245, \"unit\": \"mg/dL\"},\n        \"diagnostic_plasma_glucose\": null\n      },\n      \"expected\": {\n        \"diagnostic_status\": \"INSUFFICIENT_DATA\",\n        \"urgency\": \"PROMPT\",\n        \"confirmation_status\": \"REQUIRED\",\n        \"protocol_status\": \"BLOCKED_MISSING_DATA\",\n        \"treatment_status\": \"NOT_STARTED\"\n      },\n      \"next_tests\": [\"TEST-PLASMA-GLUCOSE\"],\n      \"source_ids\": [\"SRC-ADA-DX-2026\"]\n    },\n    {\n      \"id\": \"DM-05\",\n      \"route\": \"DM_DKA\",\n      \"inputs\": {\n        \"known_diabetes\": true,\n        \"plasma_glucose_mg_dl\": 180,\n        \"beta_hydroxybutyrate_mmol_l\": 4.2,\n        \"venous_pH\": 7.22\n      },\n      \"expected\": {\n        \"diagnostic_status\": \"CRITERIA_MET\",\n        \"urgency\": \"EMERGENCY\",\n        \"confirmation_status\": \"SATISFIED\",\n        \"protocol_status\": \"BLOCKED_AUTHORIZATION\",\n        \"treatment_status\": \"NOT_STARTED\"\n      },\n      \"next_tests\": [\"POTASSIUM\", \"ELECTROLYTES\", \"CREATININE\"],\n      \"source_ids\": [\"SRC-DKA-2024\"]\n    },\n    {\n      \"id\": \"DM-06\",\n      \"route\": \"DM_DKA\",\n      \"inputs\": {\n        \"plasma_glucose_mg_dl\": 310,\n        \"beta_hydroxybutyrate_mmol_l\": 4.0,\n        \"venous_pH\": null,\n        \"bicarbonate_mmol_l",
+      "reference": {
+        "document": "deep-research-report-2026-10-16.md",
+        "sha256": "38ad3ab166f25a8b46c1e1f483ba813510c34dc766171389307635ecf7e8a715",
+        "line": 1557,
+        "character_offset": 1500,
+        "authority": "RESEARCH_REPORT_NOT_PATIENT_RESULT"
+      }
+    },
+    {
+      "id": "D115",
+      "kind": "DOCUMENT",
+      "text": "\": null\n      },\n      \"expected\": {\n        \"diagnostic_status\": \"SUSPECTED\",\n        \"urgency\": \"URGENT\",\n        \"confirmation_status\": \"REQUIRED\",\n        \"protocol_status\": \"BLOCKED_MISSING_DATA\",\n        \"treatment_status\": \"NOT_STARTED\"\n      },\n      \"next_tests\": [\"TEST-VENOUS-PH-BICARB\"],\n      \"source_ids\": [\"SRC-DKA-2024\"]\n    },",
+      "reference": {
+        "document": "deep-research-report-2026-10-16.md",
+        "sha256": "38ad3ab166f25a8b46c1e1f483ba813510c34dc766171389307635ecf7e8a715",
+        "line": 1557,
+        "character_offset": 3000,
+        "authority": "RESEARCH_REPORT_NOT_PATIENT_RESULT"
+      }
+    },
+    {
+      "id": "D116",
+      "kind": "DOCUMENT",
+      "text": "{\n      \"id\": \"ORTHO-01\",\n      \"route\": \"OH_POTS\",\n      \"inputs\": {\n        \"gravity\": \"EARTH\",\n        \"baseline_bp\": \"125/80\",\n        \"bp_at_2min\": \"100/68\"\n      },\n      \"expected\": {\n        \"diagnostic_status\": \"CRITERIA_MET\",\n        \"urgency\": \"PROMPT\",\n        \"confirmation_status\": \"SATISFIED\",\n        \"protocol_status\": \"ELIGIBLE\",\n        \"treatment_status\": \"NOT_STARTED\"\n      },\n      \"expected_condition\": \"ORTHOSTATIC_HYPOTENSION\",\n      \"source_ids\": [\"SRC-AHA-OH-2024\"]\n    },\n    {\n      \"id\": \"ORTHO-02\",\n      \"route\": \"OH_POTS\",\n      \"inputs\": {\n        \"gravity\": \"EARTH\",\n        \"baseline_sbp\": 120,\n        \"standing_sbp\": 100,\n        \"standing_time_min\": 3\n      },\n      \"expected\": {\n        \"diagnostic_status\": \"CRITERIA_MET\",\n        \"urgency\": \"PROMPT\",\n        \"confirmation_status\": \"SATISFIED\",\n        \"protocol_status\": \"ELIGIBLE\",\n        \"treatment_status\": \"NOT_STARTED\"\n      },\n      \"boundary_test\": true,\n      \"source_ids\": [\"SRC-AHA-OH-2024\"]\n    },\n    {\n      \"id\": \"ORTHO-03\",\n      \"route\": \"OH_POTS\",\n      \"inputs\": {\n        \"baseline_bp\": null,\n        \"standing_bp\": \"90/60\",\n        \"standing_time_min\": 2\n      },\n      \"expected\": {\n        \"diagnostic_status\": \"INSUFFICIENT_DATA\",\n        \"urgency\": \"PROMPT\",\n        \"confirmation_status\": \"REQUIRED\",\n        \"protocol_status\": \"BLOCKED_MISSING_DATA\",\n        \"treatment_status\": \"NOT_STARTED\"\n      },\n      \"next_tests\": [\"VALID_BASELINE_AND_UPRIGHT_BP\"],\n      \"source_ids\": [",
+      "reference": {
+        "document": "deep-research-report-2026-10-16.md",
+        "sha256": "38ad3ab166f25a8b46c1e1f483ba813510c34dc766171389307635ecf7e8a715",
+        "line": 1671,
+        "character_offset": 0,
+        "authority": "RESEARCH_REPORT_NOT_PATIENT_RESULT"
+      }
+    },
+    {
+      "id": "D117",
+      "kind": "DOCUMENT",
+      "text": "\"SRC-AHA-OH-2024\"]\n    },\n    {\n      \"id\": \"ORTHO-04\",\n      \"route\": \"OH_POTS\",\n      \"inputs\": {\n        \"adult\": true,\n        \"delta_hr_bpm\": 35,\n        \"within_10_min\": true,\n        \"orthostatic_hypotension\": false,\n        \"orthostatic_symptoms\": true,\n        \"improve_supine\": true,\n        \"duration_months\": 5,\n        \"alternative_cause\": false\n      },\n      \"expected\": {\n        \"diagnostic_status\": \"CRITERIA_MET\",\n        \"urgency\": \"ROUTINE\",\n        \"confirmation_status\": \"SATISFIED\",\n        \"protocol_status\": \"ELIGIBLE\",\n        \"treatment_status\": \"NOT_STARTED\"\n      },\n      \"expected_condition\": \"POTS\",\n      \"source_ids\": [\"SRC-HRS-POTS-2015\", \"SRC-NIH-POTS-2021\"]\n    },\n    {\n      \"id\": \"ORTHO-05\",\n      \"route\": \"OH_POTS\",\n      \"inputs\": {\n        \"delta_hr_bpm\": 40,\n        \"orthostatic_hypotension\": false,\n        \"orthostatic_symptoms\": true,\n        \"duration_months\": 4,\n        \"dehydration\": true\n      },\n      \"expected\": {\n        \"diagnostic_status\": \"CRITERIA_NOT_MET\",\n        \"urgency\": \"PROMPT\",\n        \"confirmation_status\": \"NOT_APPLICABLE\",\n        \"protocol_status\": \"NOT_INDICATED\",\n        \"treatment_status\": \"NOT_STARTED\"\n      },\n      \"expected_condition\": \"POTS\",\n      \"differential\": [\"DEHYDRATION_OR_HYPOVOLEMIA\"],\n      \"source_ids\": [\"SRC-NIH-POTS-2021\"]\n    },\n    {\n      \"id\": \"ORTHO-06\",\n      \"route\": \"OH_POTS\",\n      \"inputs\": {\n        \"gravity\": \"FREE_MICROGRAVITY\",\n        \"requested_test\": \"STANDARD_STANDING_ORTHOSTA",
+      "reference": {
+        "document": "deep-research-report-2026-10-16.md",
+        "sha256": "38ad3ab166f25a8b46c1e1f483ba813510c34dc766171389307635ecf7e8a715",
+        "line": 1671,
+        "character_offset": 1500,
+        "authority": "RESEARCH_REPORT_NOT_PATIENT_RESULT"
+      }
+    },
+    {
+      "id": "D118",
+      "kind": "DOCUMENT",
+      "text": "TIC_TEST\"\n      },\n      \"expected\": {\n        \"diagnostic_status\": \"NOT_APPLICABLE\",\n        \"urgency\": \"ROUTINE\",\n        \"confirmation_status\": \"NOT_APPLICABLE\",\n        \"protocol_status\": \"NOT_INDICATED\",\n        \"treatment_status\": \"NOT_STARTED\"\n      },\n      \"source_ids\": [\"SRC-NASA-OI\"]\n    },",
+      "reference": {
+        "document": "deep-research-report-2026-10-16.md",
+        "sha256": "38ad3ab166f25a8b46c1e1f483ba813510c34dc766171389307635ecf7e8a715",
+        "line": 1671,
+        "character_offset": 3000,
+        "authority": "RESEARCH_REPORT_NOT_PATIENT_RESULT"
+      }
+    },
+    {
+      "id": "D119",
+      "kind": "DOCUMENT",
+      "text": "{\n      \"id\": \"AKI-01\",\n      \"route\": \"AKI\",\n      \"inputs\": {\n        \"creatinine_baseline_mg_dl\": 0.9,\n        \"creatinine_current_mg_dl\": 1.3,\n        \"elapsed_h\": 40\n      },\n      \"expected\": {\n        \"diagnostic_status\": \"CRITERIA_MET\",\n        \"urgency\": \"URGENT\",\n        \"confirmation_status\": \"SATISFIED\",\n        \"protocol_status\": \"ELIGIBLE\",\n        \"treatment_status\": \"NOT_STARTED\"\n      },\n      \"stage\": 1,\n      \"source_ids\": [\"SRC-KDIGO-AKI-2012\"]\n    },\n    {\n      \"id\": \"AKI-02\",\n      \"route\": \"AKI\",\n      \"inputs\": {\n        \"creatinine_baseline_mg_dl\": 1.0,\n        \"creatinine_current_mg_dl\": 1.6,\n        \"elapsed_days\": 5\n      },\n      \"expected\": {\n        \"diagnostic_status\": \"CRITERIA_MET\",\n        \"urgency\": \"URGENT\",\n        \"confirmation_status\": \"SATISFIED\",\n        \"protocol_status\": \"ELIGIBLE\",\n        \"treatment_status\": \"NOT_STARTED\"\n      },\n      \"stage\": 1,\n      \"source_ids\": [\"SRC-KDIGO-AKI-2012\"]\n    },\n    {\n      \"id\": \"AKI-03\",\n      \"route\": \"AKI\",\n      \"inputs\": {\n        \"urine_output_ml_kg_h\": 0.4,\n        \"duration_h\": 7\n      },\n      \"expected\": {\n        \"diagnostic_status\": \"CRITERIA_MET\",\n        \"urgency\": \"URGENT\",\n        \"confirmation_status\": \"SATISFIED\",\n        \"protocol_status\": \"ELIGIBLE\",\n        \"treatment_status\": \"NOT_STARTED\"\n      },\n      \"stage\": 1,\n      \"source_ids\": [\"SRC-KDIGO-AKI-2012\"]\n    },\n    {\n      \"id\": \"AKI-04\",\n      \"route\": \"AKI\",\n      \"inputs\": {\n        \"creatinine_baseline_mg_dl\": 0.8",
+      "reference": {
+        "document": "deep-research-report-2026-10-16.md",
+        "sha256": "38ad3ab166f25a8b46c1e1f483ba813510c34dc766171389307635ecf7e8a715",
+        "line": 1787,
+        "character_offset": 0,
+        "authority": "RESEARCH_REPORT_NOT_PATIENT_RESULT"
+      }
+    },
+    {
+      "id": "D120",
+      "kind": "DOCUMENT",
+      "text": ",\n        \"creatinine_current_mg_dl\": 1.84,\n        \"elapsed_days\": 3\n      },\n      \"expected\": {\n        \"diagnostic_status\": \"CRITERIA_MET\",\n        \"urgency\": \"URGENT\",\n        \"confirmation_status\": \"SATISFIED\",\n        \"protocol_status\": \"ELIGIBLE\",\n        \"treatment_status\": \"NOT_STARTED\"\n      },\n      \"stage\": 2,\n      \"source_ids\": [\"SRC-KDIGO-AKI-2012\"]\n    },\n    {\n      \"id\": \"AKI-05\",\n      \"route\": \"AKI\",\n      \"inputs\": {\n        \"creatinine_current_mg_dl\": 1.3,\n        \"baseline\": null,\n        \"prior_creatinines\": [],\n        \"urine_output\": null\n      },\n      \"expected\": {\n        \"diagnostic_status\": \"INSUFFICIENT_DATA\",\n        \"urgency\": \"PROMPT\",\n        \"confirmation_status\": \"REQUIRED\",\n        \"protocol_status\": \"BLOCKED_MISSING_DATA\",\n        \"treatment_status\": \"NOT_STARTED\"\n      },\n      \"next_tests\": [\"SERIAL_CREATININE\", \"URINE_OUTPUT\"],\n      \"source_ids\": [\"SRC-KDIGO-AKI-2012\"]\n    },\n    {\n      \"id\": \"AKI-06\",\n      \"route\": \"AKI\",\n      \"inputs\": {\n        \"gravity\": \"MICROGRAVITY\",\n        \"creatinine_baseline_mg_dl\": 0.7,\n        \"creatinine_current_mg_dl\": 1.05,\n        \"elapsed_days\": 5\n      },\n      \"expected\": {\n        \"diagnostic_status\": \"CRITERIA_MET\",\n        \"urgency\": \"URGENT\",\n        \"confirmation_status\": \"SATISFIED\",\n        \"protocol_status\": \"ELIGIBLE\",\n        \"treatment_status\": \"NOT_STARTED\"\n      },\n      \"space_warning\": \"REQUIRES_SPACE_SPECIFIC_VALIDATION\",\n      \"source_ids\": [\"SRC-KDIGO-AKI-2012\", \"SRC-SPACE-K",
+      "reference": {
+        "document": "deep-research-report-2026-10-16.md",
+        "sha256": "38ad3ab166f25a8b46c1e1f483ba813510c34dc766171389307635ecf7e8a715",
+        "line": 1787,
+        "character_offset": 1500,
+        "authority": "RESEARCH_REPORT_NOT_PATIENT_RESULT"
+      }
+    },
+    {
+      "id": "D121",
+      "kind": "DOCUMENT",
+      "text": "IDNEY-2024\"]\n    },",
+      "reference": {
+        "document": "deep-research-report-2026-10-16.md",
+        "sha256": "38ad3ab166f25a8b46c1e1f483ba813510c34dc766171389307635ecf7e8a715",
+        "line": 1787,
+        "character_offset": 3000,
+        "authority": "RESEARCH_REPORT_NOT_PATIENT_RESULT"
+      }
+    },
+    {
+      "id": "D122",
+      "kind": "DOCUMENT",
+      "text": "{\n      \"id\": \"ANAPH-01\",\n      \"route\": \"ANAPHYLAXIS\",\n      \"inputs\": {\n        \"acute\": true,\n        \"skin_mucosal\": true,\n        \"bronchospasm\": true\n      },\n      \"expected\": {\n        \"diagnostic_status\": \"CRITERIA_MET\",\n        \"urgency\": \"EMERGENCY\",\n        \"confirmation_status\": \"NOT_REQUIRED\",\n        \"protocol_status\": \"BLOCKED_AUTHORIZATION\",\n        \"treatment_status\": \"NOT_STARTED\"\n      },\n      \"source_ids\": [\"SRC-WAO-ANAPH-2020\"]\n    },\n    {\n      \"id\": \"ANAPH-02\",\n      \"route\": \"ANAPHYLAXIS\",\n      \"inputs\": {\n        \"acute\": true,\n        \"known_allergen\": true,\n        \"skin_mucosal\": false,\n        \"adult_sbp\": 82\n      },\n      \"expected\": {\n        \"diagnostic_status\": \"CRITERIA_MET\",\n        \"urgency\": \"EMERGENCY\",\n        \"confirmation_status\": \"NOT_REQUIRED\",\n        \"protocol_status\": \"BLOCKED_AUTHORIZATION\",\n        \"treatment_status\": \"NOT_STARTED\"\n      },\n      \"source_ids\": [\"SRC-WAO-ANAPH-2020\"]\n    },\n    {\n      \"id\": \"ANAPH-03\",\n      \"route\": \"ANAPHYLAXIS\",\n      \"inputs\": {\n        \"acute\": true,\n        \"probable_allergen\": true,\n        \"repetitive_vomiting\": true,\n        \"skin_mucosal\": false,\n        \"respiratory\": false,\n        \"hypotension\": false\n      },\n      \"expected\": {\n        \"diagnostic_status\": \"SUSPECTED\",\n        \"urgency\": \"PROMPT\",\n        \"confirmation_status\": \"PENDING\",\n        \"protocol_status\": \"NOT_INDICATED\",\n        \"treatment_status\": \"NOT_STARTED\"\n      },\n      \"next_tests\": [\"REASSESS_SKIN_RESPIRAT",
+      "reference": {
+        "document": "deep-research-report-2026-10-16.md",
+        "sha256": "38ad3ab166f25a8b46c1e1f483ba813510c34dc766171389307635ecf7e8a715",
+        "line": 1897,
+        "character_offset": 0,
+        "authority": "RESEARCH_REPORT_NOT_PATIENT_RESULT"
+      }
+    },
+    {
+      "id": "D123",
+      "kind": "DOCUMENT",
+      "text": "ORY_BP_LARYNGEAL\"],\n      \"source_ids\": [\"SRC-WAO-ANAPH-2020\"]\n    },\n    {\n      \"id\": \"ANAPH-04\",\n      \"route\": \"ANAPHYLAXIS\",\n      \"inputs\": {\n        \"acute\": true,\n        \"skin_mucosal\": true,\n        \"respiratory\": false,\n        \"hypotension\": false,\n        \"severe_gi\": false\n      },\n      \"expected\": {\n        \"diagnostic_status\": \"CRITERIA_NOT_MET\",\n        \"urgency\": \"PROMPT\",\n        \"confirmation_status\": \"NOT_APPLICABLE\",\n        \"protocol_status\": \"NOT_INDICATED\",\n        \"treatment_status\": \"NOT_STARTED\"\n      },\n      \"differential\": [\"NON_ANAPHYLACTIC_ALLERGIC_REACTION\"],\n      \"source_ids\": [\"SRC-WAO-ANAPH-2020\"]\n    },\n    {\n      \"id\": \"ANAPH-05\",\n      \"route\": \"ANAPHYLAXIS\",\n      \"inputs\": {\n        \"acute\": true,\n        \"known_allergen\": true,\n        \"laryngeal_involvement\": true,\n        \"skin_mucosal\": false\n      },\n      \"expected\": {\n        \"diagnostic_status\": \"CRITERIA_MET\",\n        \"urgency\": \"EMERGENCY\",\n        \"confirmation_status\": \"NOT_REQUIRED\",\n        \"protocol_status\": \"BLOCKED_AUTHORIZATION\",\n        \"treatment_status\": \"NOT_STARTED\"\n      },\n      \"source_ids\": [\"SRC-WAO-ANAPH-2020\"]\n    },\n    {\n      \"id\": \"ANAPH-06\",\n      \"route\": \"ANAPHYLAXIS\",\n      \"inputs\": {\n        \"acute\": true,\n        \"known_allergen\": true,\n        \"bronchospasm\": true,\n        \"epinephrine_inventory_verified\": false\n      },\n      \"expected\": {\n        \"diagnostic_status\": \"CRITERIA_MET\",\n        \"urgency\": \"EMERGENCY\",\n        \"confirmation_st",
+      "reference": {
+        "document": "deep-research-report-2026-10-16.md",
+        "sha256": "38ad3ab166f25a8b46c1e1f483ba813510c34dc766171389307635ecf7e8a715",
+        "line": 1897,
+        "character_offset": 1500,
+        "authority": "RESEARCH_REPORT_NOT_PATIENT_RESULT"
+      }
+    },
+    {
+      "id": "D124",
+      "kind": "DOCUMENT",
+      "text": "atus\": \"NOT_REQUIRED\",\n        \"protocol_status\": \"BLOCKED_RESOURCE\",\n        \"treatment_status\": \"NOT_STARTED\"\n      },\n      \"source_ids\": [\"SRC-WAO-ANAPH-2020\"]\n    },",
+      "reference": {
+        "document": "deep-research-report-2026-10-16.md",
+        "sha256": "38ad3ab166f25a8b46c1e1f483ba813510c34dc766171389307635ecf7e8a715",
+        "line": 1897,
+        "character_offset": 3000,
+        "authority": "RESEARCH_REPORT_NOT_PATIENT_RESULT"
+      }
+    },
+    {
+      "id": "D125",
+      "kind": "DOCUMENT",
+      "text": "{\n      \"id\": \"DIFF-01\",\n      \"route\": \"DIZZINESS_TACHYCARDIA\",\n      \"inputs\": {\n        \"dizziness\": true,\n        \"tachycardia\": true,\n        \"postural\": true,\n        \"delta_sbp\": -25,\n        \"standing_time_min\": 2\n      },\n      \"expected\": {\n        \"diagnostic_status\": \"CRITERIA_MET\",\n        \"urgency\": \"PROMPT\",\n        \"confirmation_status\": \"SATISFIED\",\n        \"protocol_status\": \"ELIGIBLE\",\n        \"treatment_status\": \"NOT_STARTED\"\n      },\n      \"top_hypothesis\": \"ORTHOSTATIC_HYPOTENSION\",\n      \"contradicted\": [\"POTS\"],\n      \"source_ids\": [\"SRC-AHA-OH-2024\", \"SRC-HRS-POTS-2015\"]\n    },\n    {\n      \"id\": \"DIFF-02\",\n      \"route\": \"DIZZINESS_TACHYCARDIA\",\n      \"inputs\": {\n        \"dizziness\": true,\n        \"postural_delta_hr\": 36,\n        \"orthostatic_hypotension\": false,\n        \"vomiting_last_24h\": true,\n        \"dehydration\": true,\n        \"symptom_duration_days\": 1\n      },\n      \"expected\": {\n        \"diagnostic_status\": \"SUSPECTED\",\n        \"urgency\": \"PROMPT\",\n        \"confirmation_status\": \"PENDING\",\n        \"protocol_status\": \"NOT_EVALUATED\",\n        \"treatment_status\": \"NOT_STARTED\"\n      },\n      \"top_hypothesis\": \"HYPOVOLEMIA\",\n      \"contradicted\": [\"POTS\"],\n      \"source_ids\": [\"SRC-NIH-POTS-2021\"]\n    },\n    {\n      \"id\": \"DIFF-03\",\n      \"route\": \"DIZZINESS_TACHYCARDIA\",\n      \"inputs\": {\n        \"tachycardia\": true,\n        \"dyspnea\": true,\n        \"known_allergen\": true,\n        \"bronchospasm\": true\n      },\n      \"expected\": {\n        \"diagn",
+      "reference": {
+        "document": "deep-research-report-2026-10-16.md",
+        "sha256": "38ad3ab166f25a8b46c1e1f483ba813510c34dc766171389307635ecf7e8a715",
+        "line": 2010,
+        "character_offset": 0,
+        "authority": "RESEARCH_REPORT_NOT_PATIENT_RESULT"
+      }
+    },
+    {
+      "id": "D126",
+      "kind": "DOCUMENT",
+      "text": "ostic_status\": \"CRITERIA_MET\",\n        \"urgency\": \"EMERGENCY\",\n        \"confirmation_status\": \"NOT_REQUIRED\",\n        \"protocol_status\": \"BLOCKED_AUTHORIZATION\",\n        \"treatment_status\": \"NOT_STARTED\"\n      },\n      \"top_hypothesis\": \"ANAPHYLAXIS\",\n      \"source_ids\": [\"SRC-WAO-ANAPH-2020\"]\n    },\n    {\n      \"id\": \"DIFF-04\",\n      \"route\": \"DIZZINESS_TACHYCARDIA\",\n      \"inputs\": {\n        \"tachycardia\": true,\n        \"nausea\": true,\n        \"plasma_glucose_mg_dl\": 280,\n        \"beta_hydroxybutyrate\": null,\n        \"pH\": null,\n        \"bicarbonate\": null\n      },\n      \"expected\": {\n        \"diagnostic_status\": \"SUSPECTED\",\n        \"urgency\": \"URGENT\",\n        \"confirmation_status\": \"REQUIRED\",\n        \"protocol_status\": \"BLOCKED_MISSING_DATA\",\n        \"treatment_status\": \"NOT_STARTED\"\n      },\n      \"top_hypothesis\": \"DKA\",\n      \"next_tests\": [\"TEST-BETA-OHB\", \"TEST-VENOUS-PH-BICARB\"],\n      \"source_ids\": [\"SRC-DKA-2024\"]\n    },\n    {\n      \"id\": \"DIFF-05\",\n      \"route\": \"DIZZINESS_TACHYCARDIA\",\n      \"inputs\": {\n        \"dizziness\": true,\n        \"tachycardia\": true,\n        \"urine_output_ml_kg_h\": 0.3,\n        \"urine_output_duration_h\": 8,\n        \"creatinine_delta_48h_mg_dl\": 0.4\n      },\n      \"expected\": {\n        \"diagnostic_status\": \"CRITERIA_MET\",\n        \"urgency\": \"URGENT\",\n        \"confirmation_status\": \"SATISFIED\",\n        \"protocol_status\": \"ELIGIBLE\",\n        \"treatment_status\": \"NOT_STARTED\"\n      },\n      \"top_hypothesis\": \"AKI\",\n      \"secondary_hypoth",
+      "reference": {
+        "document": "deep-research-report-2026-10-16.md",
+        "sha256": "38ad3ab166f25a8b46c1e1f483ba813510c34dc766171389307635ecf7e8a715",
+        "line": 2010,
+        "character_offset": 1500,
+        "authority": "RESEARCH_REPORT_NOT_PATIENT_RESULT"
+      }
+    },
+    {
+      "id": "D127",
+      "kind": "DOCUMENT",
+      "text": "esis\": \"HYPOVOLEMIA\",\n      \"source_ids\": [\"SRC-KDIGO-AKI-2012\"]\n    },\n    {\n      \"id\": \"DIFF-06\",\n      \"route\": \"DIZZINESS_TACHYCARDIA\",\n      \"inputs\": {\n        \"dizziness\": true,\n        \"persistent_tachycardia\": true,\n        \"postural_relation\": false,\n        \"irregular_pulse\": true\n      },\n      \"expected\": {\n        \"diagnostic_status\": \"INSUFFICIENT_DATA\",\n        \"urgency\": \"URGENT\",\n        \"confirmation_status\": \"REQUIRED\",\n        \"protocol_status\": \"NOT_EVALUATED\",\n        \"treatment_status\": \"NOT_STARTED\"\n      },\n      \"top_hypothesis\": \"EXTERNAL_ARRHYTHMIA_PATHWAY\",\n      \"next_tests\": [\"TEST-ECG\"],\n      \"must_not_output\": [\"POTS_DIAGNOSIS\"],\n      \"source_ids\": [\"SRC-HRS-POTS-2015\"]\n    }\n  ]\n}\n```",
+      "reference": {
+        "document": "deep-research-report-2026-10-16.md",
+        "sha256": "38ad3ab166f25a8b46c1e1f483ba813510c34dc766171389307635ecf7e8a715",
+        "line": 2010,
+        "character_offset": 3000,
+        "authority": "RESEARCH_REPORT_NOT_PATIENT_RESULT"
+      }
+    },
+    {
+      "id": "D128",
+      "kind": "DOCUMENT",
+      "text": "Los primeros 24 casos reproducen límites o reglas de las fuentes correspondientes; los seis casos diferenciales prueban la lógica de orquestación y están deliberadamente construidos para evitar que el motor confunda una presentación inespecífica con un diagnóstico. citeturn18search0turn21search3turn17search0turn18search3turn27search3turn21search0",
+      "reference": {
+        "document": "deep-research-report-2026-10-16.md",
+        "sha256": "38ad3ab166f25a8b46c1e1f483ba813510c34dc766171389307635ecf7e8a715",
+        "line": 2140,
+        "character_offset": 0,
+        "authority": "RESEARCH_REPORT_NOT_PATIENT_RESULT"
+      }
+    },
+    {
+      "id": "D129",
+      "kind": "DOCUMENT",
+      "text": "Codex debe **ampliar el motor existente, no reconstruirlo**, conservando almacenamiento, auditoría, baselines, API, simulación, permisos y pruebas ya implementados. Esta continuidad está establecida en la especificación previa del proyecto. fileciteturn0file1",
+      "reference": {
+        "document": "deep-research-report-2026-10-16.md",
+        "sha256": "38ad3ab166f25a8b46c1e1f483ba813510c34dc766171389307635ecf7e8a715",
+        "line": 2150,
+        "character_offset": 0,
+        "authority": "RESEARCH_REPORT_NOT_PATIENT_RESULT"
+      }
+    },
+    {
+      "id": "D130",
+      "kind": "DOCUMENT",
+      "text": "```text\nengine/\n└── vigile/\n    ├── clinical/\n    │   ├── models.py\n    │   ├── evaluator.py\n    │   ├── boolean_logic.py\n    │   ├── quality.py\n    │   ├── differential.py\n    │   ├── test_selection.py\n    │   ├── protocols.py\n    │   ├── authorization.py\n    │   ├── resources.py\n    │   ├── reassessment.py\n    │   └── trace.py\n    │\n    └── clinical_knowledge/\n        ├── sources_verified.json\n        ├── diagnostic_criteria.json\n        ├── differential_rules.json\n        ├── diagnostic_tests.json\n        ├── treatment_protocols.json\n        ├── contraindications.json\n        ├── space_applicability.json\n        └── synthetic_cases.json\n```",
+      "reference": {
+        "document": "deep-research-report-2026-10-16.md",
+        "sha256": "38ad3ab166f25a8b46c1e1f483ba813510c34dc766171389307635ecf7e8a715",
+        "line": 2154,
+        "character_offset": 0,
+        "authority": "RESEARCH_REPORT_NOT_PATIENT_RESULT"
+      }
+    },
+    {
+      "id": "D131",
+      "kind": "DOCUMENT",
+      "text": "class DiagnosticStatus(str, Enum):\n    NOT_EVALUATED = \"NOT_EVALUATED\"\n    INSUFFICIENT_DATA = \"INSUFFICIENT_DATA\"\n    SUSPECTED = \"SUSPECTED\"\n    CRITERIA_MET = \"CRITERIA_MET\"\n    CRITERIA_NOT_MET = \"CRITERIA_NOT_MET\"\n    CONFLICTING_EVIDENCE = \"CONFLICTING_EVIDENCE\"\n    NOT_APPLICABLE = \"NOT_APPLICABLE\"",
+      "reference": {
+        "document": "deep-research-report-2026-10-16.md",
+        "sha256": "38ad3ab166f25a8b46c1e1f483ba813510c34dc766171389307635ecf7e8a715",
+        "line": 2193,
+        "character_offset": 0,
+        "authority": "RESEARCH_REPORT_NOT_PATIENT_RESULT"
+      }
+    },
+    {
+      "id": "D132",
+      "kind": "DOCUMENT",
+      "text": "class ClinicalUrgency(str, Enum):\n    ROUTINE = \"ROUTINE\"\n    PROMPT = \"PROMPT\"\n    URGENT = \"URGENT\"\n    EMERGENCY = \"EMERGENCY\"",
+      "reference": {
+        "document": "deep-research-report-2026-10-16.md",
+        "sha256": "38ad3ab166f25a8b46c1e1f483ba813510c34dc766171389307635ecf7e8a715",
+        "line": 2203,
+        "character_offset": 0,
+        "authority": "RESEARCH_REPORT_NOT_PATIENT_RESULT"
+      }
+    },
+    {
+      "id": "D133",
+      "kind": "DOCUMENT",
+      "text": "class ConfirmationStatus(str, Enum):\n    NOT_APPLICABLE = \"NOT_APPLICABLE\"\n    NOT_REQUIRED = \"NOT_REQUIRED\"\n    REQUIRED = \"REQUIRED\"\n    PENDING = \"PENDING\"\n    SATISFIED = \"SATISFIED\"\n    UNAVAILABLE = \"UNAVAILABLE\"",
+      "reference": {
+        "document": "deep-research-report-2026-10-16.md",
+        "sha256": "38ad3ab166f25a8b46c1e1f483ba813510c34dc766171389307635ecf7e8a715",
+        "line": 2210,
+        "character_offset": 0,
+        "authority": "RESEARCH_REPORT_NOT_PATIENT_RESULT"
+      }
+    },
+    {
+      "id": "D134",
+      "kind": "DOCUMENT",
+      "text": "class ProtocolStatus(str, Enum):\n    NOT_EVALUATED = \"NOT_EVALUATED\"\n    NOT_INDICATED = \"NOT_INDICATED\"\n    ELIGIBLE = \"ELIGIBLE\"\n    BLOCKED_MISSING_DATA = \"BLOCKED_MISSING_DATA\"\n    BLOCKED_CONTRAINDICATION = \"BLOCKED_CONTRAINDICATION\"\n    BLOCKED_RESOURCE = \"BLOCKED_RESOURCE\"\n    BLOCKED_AUTHORIZATION = \"BLOCKED_AUTHORIZATION\"\n    READY_FOR_CREW = \"READY_FOR_CREW\"",
+      "reference": {
+        "document": "deep-research-report-2026-10-16.md",
+        "sha256": "38ad3ab166f25a8b46c1e1f483ba813510c34dc766171389307635ecf7e8a715",
+        "line": 2219,
+        "character_offset": 0,
+        "authority": "RESEARCH_REPORT_NOT_PATIENT_RESULT"
+      }
+    },
+    {
+      "id": "D135",
+      "kind": "DOCUMENT",
+      "text": "class TreatmentStatus(str, Enum):\n    NOT_STARTED = \"NOT_STARTED\"\n    STARTED = \"STARTED\"\n    MONITORING = \"MONITORING\"\n    HELD = \"HELD\"\n    FAILED = \"FAILED\"\n    COMPLETED = \"COMPLETED\"",
+      "reference": {
+        "document": "deep-research-report-2026-10-16.md",
+        "sha256": "38ad3ab166f25a8b46c1e1f483ba813510c34dc766171389307635ecf7e8a715",
+        "line": 2230,
+        "character_offset": 0,
+        "authority": "RESEARCH_REPORT_NOT_PATIENT_RESULT"
+      }
+    },
+    {
+      "id": "D136",
+      "kind": "DOCUMENT",
+      "text": "class SpaceApplicability(str, Enum):\n    DIRECTLY_APPLICABLE = \"DIRECTLY_APPLICABLE\"\n    APPLICABLE_WITH_LIMITATIONS = \"APPLICABLE_WITH_LIMITATIONS\"\n    REQUIRES_SPACE_SPECIFIC_VALIDATION = \"REQUIRES_SPACE_SPECIFIC_VALIDATION\"\n    NOT_ESTABLISHED_FOR_SPACEFLIGHT = \"NOT_ESTABLISHED_FOR_SPACEFLIGHT\"\n    NOT_APPLICABLE = \"NOT_APPLICABLE\"\n    CONTEXT_DEPENDENT = \"CONTEXT_DEPENDENT\"",
+      "reference": {
+        "document": "deep-research-report-2026-10-16.md",
+        "sha256": "38ad3ab166f25a8b46c1e1f483ba813510c34dc766171389307635ecf7e8a715",
+        "line": 2239,
+        "character_offset": 0,
+        "authority": "RESEARCH_REPORT_NOT_PATIENT_RESULT"
+      }
+    },
+    {
+      "id": "D137",
+      "kind": "DOCUMENT",
+      "text": "class MeasurementQuality(BaseModel):\n    valid: bool\n    device_id: str | None = None\n    method: str | None = None\n    reason_invalid: str | None = None\n    calibration_status: str | None = None",
+      "reference": {
+        "document": "deep-research-report-2026-10-16.md",
+        "sha256": "38ad3ab166f25a8b46c1e1f483ba813510c34dc766171389307635ecf7e8a715",
+        "line": 2248,
+        "character_offset": 0,
+        "authority": "RESEARCH_REPORT_NOT_PATIENT_RESULT"
+      }
+    },
+    {
+      "id": "D138",
+      "kind": "DOCUMENT",
+      "text": "class ClinicalObservation(BaseModel):\n    observation_id: str\n    concept: str\n    value: float | int | bool | str | None\n    unit: str | None = None\n    observed_at: datetime\n    body_position: str | None = None\n    gravity_context: str | None = None\n    quality: MeasurementQuality",
+      "reference": {
+        "document": "deep-research-report-2026-10-16.md",
+        "sha256": "38ad3ab166f25a8b46c1e1f483ba813510c34dc766171389307635ecf7e8a715",
+        "line": 2256,
+        "character_offset": 0,
+        "authority": "RESEARCH_REPORT_NOT_PATIENT_RESULT"
+      }
+    },
+    {
+      "id": "D139",
+      "kind": "DOCUMENT",
+      "text": "class SymptomAssessment(BaseModel):\n    symptom: str\n    present: bool\n    onset_at: datetime | None = None\n    duration_seconds: int | None = None\n    severity: str | None = None\n    relation_to_posture: str | None = None",
+      "reference": {
+        "document": "deep-research-report-2026-10-16.md",
+        "sha256": "38ad3ab166f25a8b46c1e1f483ba813510c34dc766171389307635ecf7e8a715",
+        "line": 2267,
+        "character_offset": 0,
+        "authority": "RESEARCH_REPORT_NOT_PATIENT_RESULT"
+      }
+    },
+    {
+      "id": "D140",
+      "kind": "DOCUMENT",
+      "text": "class ClinicalHistory(BaseModel):\n    known_conditions: list[str] = Field(default_factory=list)\n    medications: list[str] = Field(default_factory=list)\n    allergies: list[str] = Field(default_factory=list)\n    recent_exposures: list[str] = Field(default_factory=list)",
+      "reference": {
+        "document": "deep-research-report-2026-10-16.md",
+        "sha256": "38ad3ab166f25a8b46c1e1f483ba813510c34dc766171389307635ecf7e8a715",
+        "line": 2276,
+        "character_offset": 0,
+        "authority": "RESEARCH_REPORT_NOT_PATIENT_RESULT"
+      }
+    },
+    {
+      "id": "D141",
+      "kind": "DOCUMENT",
+      "text": "class MissionContext(BaseModel):\n    mission_phase: str\n    gravity_context: str\n    earth_contact_state: Literal[\n        \"EARTH_CONNECTED\",\n        \"DELAYED_COMMUNICATION\",\n        \"EARTH_UNAVAILABLE\",\n    ]\n    resource_inventory_version: str\n    authorization_policy_version: str",
+      "reference": {
+        "document": "deep-research-report-2026-10-16.md",
+        "sha256": "38ad3ab166f25a8b46c1e1f483ba813510c34dc766171389307635ecf7e8a715",
+        "line": 2283,
+        "character_offset": 0,
+        "authority": "RESEARCH_REPORT_NOT_PATIENT_RESULT"
+      }
+    },
+    {
+      "id": "D142",
+      "kind": "DOCUMENT",
+      "text": "class CriterionTraceNode(BaseModel):\n    node_id: str\n    result: Literal[\"TRUE\", \"FALSE\", \"UNKNOWN\", \"INVALID\"]\n    inputs_used: list[str] = Field(default_factory=list)\n    explanation: str",
+      "reference": {
+        "document": "deep-research-report-2026-10-16.md",
+        "sha256": "38ad3ab166f25a8b46c1e1f483ba813510c34dc766171389307635ecf7e8a715",
+        "line": 2295,
+        "character_offset": 0,
+        "authority": "RESEARCH_REPORT_NOT_PATIENT_RESULT"
+      }
+    },
+    {
+      "id": "D143",
+      "kind": "DOCUMENT",
+      "text": "class DifferentialHypothesisResult(BaseModel):\n    hypothesis_id: str\n    tier: str\n    supporting_findings: list[str] = Field(default_factory=list)\n    contradictory_findings: list[str] = Field(default_factory=list)\n    missing_data: list[str] = Field(default_factory=list)\n    next_test_ids: list[str] = Field(default_factory=list)",
+      "reference": {
+        "document": "deep-research-report-2026-10-16.md",
+        "sha256": "38ad3ab166f25a8b46c1e1f483ba813510c34dc766171389307635ecf7e8a715",
+        "line": 2302,
+        "character_offset": 0,
+        "authority": "RESEARCH_REPORT_NOT_PATIENT_RESULT"
+      }
+    },
+    {
+      "id": "D144",
+      "kind": "DOCUMENT",
+      "text": "class ClinicalEvaluationResult(BaseModel):\n    evaluation_id: str\n    patient_or_crew_id: str\n    condition_id: str | None = None",
+      "reference": {
+        "document": "deep-research-report-2026-10-16.md",
+        "sha256": "38ad3ab166f25a8b46c1e1f483ba813510c34dc766171389307635ecf7e8a715",
+        "line": 2311,
+        "character_offset": 0,
+        "authority": "RESEARCH_REPORT_NOT_PATIENT_RESULT"
+      }
+    },
+    {
+      "id": "D145",
+      "kind": "DOCUMENT",
+      "text": "diagnostic_status: DiagnosticStatus\n    urgency: ClinicalUrgency\n    confirmation_status: ConfirmationStatus\n    protocol_status: ProtocolStatus\n    treatment_status: TreatmentStatus",
+      "reference": {
+        "document": "deep-research-report-2026-10-16.md",
+        "sha256": "38ad3ab166f25a8b46c1e1f483ba813510c34dc766171389307635ecf7e8a715",
+        "line": 2316,
+        "character_offset": 0,
+        "authority": "RESEARCH_REPORT_NOT_PATIENT_RESULT"
+      }
+    },
+    {
+      "id": "D146",
+      "kind": "DOCUMENT",
+      "text": "criteria_met: list[str] = Field(default_factory=list)\n    criteria_not_met: list[str] = Field(default_factory=list)\n    criteria_unknown: list[str] = Field(default_factory=list)\n    invalid_inputs: list[str] = Field(default_factory=list)",
+      "reference": {
+        "document": "deep-research-report-2026-10-16.md",
+        "sha256": "38ad3ab166f25a8b46c1e1f483ba813510c34dc766171389307635ecf7e8a715",
+        "line": 2322,
+        "character_offset": 0,
+        "authority": "RESEARCH_REPORT_NOT_PATIENT_RESULT"
+      }
+    },
+    {
+      "id": "D147",
+      "kind": "DOCUMENT",
+      "text": "differentials: list[DifferentialHypothesisResult] = Field(\n        default_factory=list\n    )\n    recommended_test_ids: list[str] = Field(default_factory=list)",
+      "reference": {
+        "document": "deep-research-report-2026-10-16.md",
+        "sha256": "38ad3ab166f25a8b46c1e1f483ba813510c34dc766171389307635ecf7e8a715",
+        "line": 2327,
+        "character_offset": 0,
+        "authority": "RESEARCH_REPORT_NOT_PATIENT_RESULT"
+      }
+    },
+    {
+      "id": "D148",
+      "kind": "DOCUMENT",
+      "text": "source_ids: list[str]\n    criterion_version: str | None = None\n    knowledge_bundle_hash: str\n    input_snapshot_hash: str",
+      "reference": {
+        "document": "deep-research-report-2026-10-16.md",
+        "sha256": "38ad3ab166f25a8b46c1e1f483ba813510c34dc766171389307635ecf7e8a715",
+        "line": 2335,
+        "character_offset": 0,
+        "authority": "RESEARCH_REPORT_NOT_PATIENT_RESULT"
+      }
+    },
+    {
+      "id": "D149",
+      "kind": "DOCUMENT",
+      "text": "El modelo debe ser multi-dimensional porque diagnóstico, urgencia y tratamiento no forman una única secuencia lineal. Esta es una decisión de diseño de VIGILE sustentada por la necesidad de actuar frente a cuadros como anafilaxia mientras se continúa la evaluación. citeturn21search0turn24search1",
+      "reference": {
+        "document": "deep-research-report-2026-10-16.md",
+        "sha256": "38ad3ab166f25a8b46c1e1f483ba813510c34dc766171389307635ecf7e8a715",
+        "line": 2345,
+        "character_offset": 0,
+        "authority": "RESEARCH_REPORT_NOT_PATIENT_RESULT"
+      }
+    },
+    {
+      "id": "D150",
+      "kind": "DOCUMENT",
+      "text": "```json\n{\n  \"crew_id\": \"ASTRONAUT_01\",\n  \"presentation\": [\"dizziness\", \"tachycardia\"],\n  \"observations\": [],\n  \"symptoms\": [],\n  \"history\": {},\n  \"mission_context\": {\n    \"mission_phase\": \"MARS_TRANSIT\",\n    \"gravity_context\": \"FREE_MICROGRAVITY\",\n    \"earth_contact_state\": \"DELAYED_COMMUNICATION\",\n    \"resource_inventory_version\": \"inv-2026-10\",\n    \"authorization_policy_version\": \"auth-001\"\n  },\n  \"requested_mode\": \"DIAGNOSTIC_AND_DIFFERENTIAL\"\n}\n```",
+      "reference": {
+        "document": "deep-research-report-2026-10-16.md",
+        "sha256": "38ad3ab166f25a8b46c1e1f483ba813510c34dc766171389307635ecf7e8a715",
+        "line": 2349,
+        "character_offset": 0,
+        "authority": "RESEARCH_REPORT_NOT_PATIENT_RESULT"
+      }
+    },
+    {
+      "id": "D151",
+      "kind": "DOCUMENT",
+      "text": "```json\n{\n  \"diagnostic_status\": \"INSUFFICIENT_DATA\",\n  \"urgency\": \"PROMPT\",\n  \"confirmation_status\": \"REQUIRED\",\n  \"protocol_status\": \"NOT_EVALUATED\",\n  \"treatment_status\": \"NOT_STARTED\",\n  \"criteria_met\": [],\n  \"criteria_unknown\": [\"orthostatic_response\"],\n  \"differentials\": [],\n  \"recommended_test_ids\": [],\n  \"space_applicability\": \"CONTEXT_DEPENDENT\",\n  \"source_ids\": [],\n  \"trace\": []\n}\n```",
+      "reference": {
+        "document": "deep-research-report-2026-10-16.md",
+        "sha256": "38ad3ab166f25a8b46c1e1f483ba813510c34dc766171389307635ecf7e8a715",
+        "line": 2369,
+        "character_offset": 0,
+        "authority": "RESEARCH_REPORT_NOT_PATIENT_RESULT"
+      }
+    },
+    {
+      "id": "D152",
+      "kind": "DOCUMENT",
+      "text": "POST /clinical/presentations/evaluate\nGET  /clinical/evaluations/{evaluation_id}/differential\nGET  /clinical/evaluations/{evaluation_id}/next-tests",
+      "reference": {
+        "document": "deep-research-report-2026-10-16.md",
+        "sha256": "38ad3ab166f25a8b46c1e1f483ba813510c34dc766171389307635ecf7e8a715",
+        "line": 2392,
+        "character_offset": 0,
+        "authority": "RESEARCH_REPORT_NOT_PATIENT_RESULT"
+      }
+    },
+    {
+      "id": "D153",
+      "kind": "DOCUMENT",
+      "text": "GET  /clinical/conditions/{condition_id}\nGET  /clinical/conditions/{condition_id}/criteria\nGET  /clinical/criteria/{criterion_id}",
+      "reference": {
+        "document": "deep-research-report-2026-10-16.md",
+        "sha256": "38ad3ab166f25a8b46c1e1f483ba813510c34dc766171389307635ecf7e8a715",
+        "line": 2396,
+        "character_offset": 0,
+        "authority": "RESEARCH_REPORT_NOT_PATIENT_RESULT"
+      }
+    },
+    {
+      "id": "D154",
+      "kind": "DOCUMENT",
+      "text": "El endpoint `protocol-eligibility` **no ejecuta un tratamiento**. Devuelve una evaluación estructurada:",
+      "reference": {
+        "document": "deep-research-report-2026-10-16.md",
+        "sha256": "38ad3ab166f25a8b46c1e1f483ba813510c34dc766171389307635ecf7e8a715",
+        "line": 2409,
+        "character_offset": 0,
+        "authority": "RESEARCH_REPORT_NOT_PATIENT_RESULT"
+      }
+    },
+    {
+      "id": "D155",
+      "kind": "DOCUMENT",
+      "text": "```json\n{\n  \"protocol_id\": \"PROT-ANAPH-IM-EPI\",\n  \"evidence_supported\": true,\n  \"mission_approved\": false,\n  \"resource_available\": true,\n  \"contraindications_cleared\": true,\n  \"protocol_status\": \"BLOCKED_AUTHORIZATION\",\n  \"reasons\": [\"MISSION_POLICY_NOT_AUTHORIZED\"]\n}\n```",
+      "reference": {
+        "document": "deep-research-report-2026-10-16.md",
+        "sha256": "38ad3ab166f25a8b46c1e1f483ba813510c34dc766171389307635ecf7e8a715",
+        "line": 2411,
+        "character_offset": 0,
+        "authority": "RESEARCH_REPORT_NOT_PATIENT_RESULT"
+      }
+    },
+    {
+      "id": "D156",
+      "kind": "DOCUMENT",
+      "text": "```python\nif criterion_has_missing_required_inputs:\n    diagnostic_status = DiagnosticStatus.INSUFFICIENT_DATA\nelif criterion_evaluates_false:\n    diagnostic_status = DiagnosticStatus.CRITERIA_NOT_MET\n```",
+      "reference": {
+        "document": "deep-research-report-2026-10-16.md",
+        "sha256": "38ad3ab166f25a8b46c1e1f483ba813510c34dc766171389307635ecf7e8a715",
+        "line": 2460,
+        "character_offset": 0,
+        "authority": "RESEARCH_REPORT_NOT_PATIENT_RESULT"
+      }
+    },
+    {
+      "id": "D157",
+      "kind": "DOCUMENT",
+      "text": "```text\nall_of\nany_of\nnone_of\nat_least_n_of\ncomparison\ntemporal_window\nchange_from_baseline\nratio_to_baseline\nrepeat_confirmation\nsymptom_presence\nexposure_presence\ncontext_requirement\nquality_requirement\nexclusion_present\n```",
+      "reference": {
+        "document": "deep-research-report-2026-10-16.md",
+        "sha256": "38ad3ab166f25a8b46c1e1f483ba813510c34dc766171389307635ecf7e8a715",
+        "line": 2471,
+        "character_offset": 0,
+        "authority": "RESEARCH_REPORT_NOT_PATIENT_RESULT"
+      }
+    },
+    {
+      "id": "D158",
+      "kind": "DOCUMENT",
+      "text": "```json\n{\n  \"node_id\": \"DKA-KETOSIS\",\n  \"result\": \"TRUE\",\n  \"inputs_used\": [\"beta_hydroxybutyrate=4.2 mmol/L\"],\n  \"source_id\": \"SRC-DKA-2024\",\n  \"rule\": \"beta_hydroxybutyrate >= 3.0 mmol/L\"\n}\n```",
+      "reference": {
+        "document": "deep-research-report-2026-10-16.md",
+        "sha256": "38ad3ab166f25a8b46c1e1f483ba813510c34dc766171389307635ecf7e8a715",
+        "line": 2490,
+        "character_offset": 0,
+        "authority": "RESEARCH_REPORT_NOT_PATIENT_RESULT"
+      }
+    },
+    {
+      "id": "D159",
+      "kind": "DOCUMENT",
+      "text": "```python\ndef test_single_fpg_requires_confirmation():\n    case = load_case(\"DM-02\")\n    result = evaluate(case)",
+      "reference": {
+        "document": "deep-research-report-2026-10-16.md",
+        "sha256": "38ad3ab166f25a8b46c1e1f483ba813510c34dc766171389307635ecf7e8a715",
+        "line": 2502,
+        "character_offset": 0,
+        "authority": "RESEARCH_REPORT_NOT_PATIENT_RESULT"
+      }
+    },
+    {
+      "id": "D160",
+      "kind": "DOCUMENT",
+      "text": "assert result.diagnostic_status == DiagnosticStatus.SUSPECTED\n    assert result.confirmation_status == ConfirmationStatus.REQUIRED",
+      "reference": {
+        "document": "deep-research-report-2026-10-16.md",
+        "sha256": "38ad3ab166f25a8b46c1e1f483ba813510c34dc766171389307635ecf7e8a715",
+        "line": 2507,
+        "character_offset": 0,
+        "authority": "RESEARCH_REPORT_NOT_PATIENT_RESULT"
+      }
+    },
+    {
+      "id": "D161",
+      "kind": "DOCUMENT",
+      "text": "def test_cgm_is_not_direct_diabetes_diagnosis():\n    case = load_case(\"DM-04\")\n    result = evaluate(case)",
+      "reference": {
+        "document": "deep-research-report-2026-10-16.md",
+        "sha256": "38ad3ab166f25a8b46c1e1f483ba813510c34dc766171389307635ecf7e8a715",
+        "line": 2511,
+        "character_offset": 0,
+        "authority": "RESEARCH_REPORT_NOT_PATIENT_RESULT"
+      }
+    },
+    {
+      "id": "D162",
+      "kind": "DOCUMENT",
+      "text": "assert result.diagnostic_status == DiagnosticStatus.INSUFFICIENT_DATA\n    assert \"TEST-PLASMA-GLUCOSE\" in result.recommended_test_ids",
+      "reference": {
+        "document": "deep-research-report-2026-10-16.md",
+        "sha256": "38ad3ab166f25a8b46c1e1f483ba813510c34dc766171389307635ecf7e8a715",
+        "line": 2515,
+        "character_offset": 0,
+        "authority": "RESEARCH_REPORT_NOT_PATIENT_RESULT"
+      }
+    },
+    {
+      "id": "D163",
+      "kind": "DOCUMENT",
+      "text": "def test_euglycemic_dka_allowed_with_known_diabetes():\n    case = load_case(\"DM-05\")\n    result = evaluate(case)",
+      "reference": {
+        "document": "deep-research-report-2026-10-16.md",
+        "sha256": "38ad3ab166f25a8b46c1e1f483ba813510c34dc766171389307635ecf7e8a715",
+        "line": 2519,
+        "character_offset": 0,
+        "authority": "RESEARCH_REPORT_NOT_PATIENT_RESULT"
+      }
+    },
+    {
+      "id": "D164",
+      "kind": "DOCUMENT",
+      "text": "assert result.diagnostic_status == DiagnosticStatus.CRITERIA_MET\n    assert result.urgency == ClinicalUrgency.EMERGENCY",
+      "reference": {
+        "document": "deep-research-report-2026-10-16.md",
+        "sha256": "38ad3ab166f25a8b46c1e1f483ba813510c34dc766171389307635ecf7e8a715",
+        "line": 2523,
+        "character_offset": 0,
+        "authority": "RESEARCH_REPORT_NOT_PATIENT_RESULT"
+      }
+    },
+    {
+      "id": "D165",
+      "kind": "DOCUMENT",
+      "text": "def test_missing_acid_base_data_does_not_confirm_dka():\n    case = load_case(\"DM-06\")\n    result = evaluate(case)",
+      "reference": {
+        "document": "deep-research-report-2026-10-16.md",
+        "sha256": "38ad3ab166f25a8b46c1e1f483ba813510c34dc766171389307635ecf7e8a715",
+        "line": 2527,
+        "character_offset": 0,
+        "authority": "RESEARCH_REPORT_NOT_PATIENT_RESULT"
+      }
+    },
+    {
+      "id": "D166",
+      "kind": "DOCUMENT",
+      "text": "assert result.diagnostic_status == DiagnosticStatus.SUSPECTED\n    assert result.confirmation_status == ConfirmationStatus.REQUIRED",
+      "reference": {
+        "document": "deep-research-report-2026-10-16.md",
+        "sha256": "38ad3ab166f25a8b46c1e1f483ba813510c34dc766171389307635ecf7e8a715",
+        "line": 2531,
+        "character_offset": 0,
+        "authority": "RESEARCH_REPORT_NOT_PATIENT_RESULT"
+      }
+    },
+    {
+      "id": "D167",
+      "kind": "DOCUMENT",
+      "text": "def test_pots_blocked_by_dehydration():\n    case = load_case(\"ORTHO-05\")\n    result = evaluate(case)",
+      "reference": {
+        "document": "deep-research-report-2026-10-16.md",
+        "sha256": "38ad3ab166f25a8b46c1e1f483ba813510c34dc766171389307635ecf7e8a715",
+        "line": 2535,
+        "character_offset": 0,
+        "authority": "RESEARCH_REPORT_NOT_PATIENT_RESULT"
+      }
+    },
+    {
+      "id": "D168",
+      "kind": "DOCUMENT",
+      "text": "def test_orthostatic_test_not_applicable_in_free_microgravity():\n    case = load_case(\"ORTHO-06\")\n    result = evaluate(case)",
+      "reference": {
+        "document": "deep-research-report-2026-10-16.md",
+        "sha256": "38ad3ab166f25a8b46c1e1f483ba813510c34dc766171389307635ecf7e8a715",
+        "line": 2542,
+        "character_offset": 0,
+        "authority": "RESEARCH_REPORT_NOT_PATIENT_RESULT"
+      }
+    },
+    {
+      "id": "D169",
+      "kind": "DOCUMENT",
+      "text": "assert result.diagnostic_status == DiagnosticStatus.CRITERIA_MET\n    assert result.metadata[\"aki_stage\"] == 1",
+      "reference": {
+        "document": "deep-research-report-2026-10-16.md",
+        "sha256": "38ad3ab166f25a8b46c1e1f483ba813510c34dc766171389307635ecf7e8a715",
+        "line": 2553,
+        "character_offset": 0,
+        "authority": "RESEARCH_REPORT_NOT_PATIENT_RESULT"
+      }
+    },
+    {
+      "id": "D170",
+      "kind": "DOCUMENT",
+      "text": "def test_missing_aki_baseline_not_assumed_normal():\n    case = load_case(\"AKI-05\")\n    result = evaluate(case)",
+      "reference": {
+        "document": "deep-research-report-2026-10-16.md",
+        "sha256": "38ad3ab166f25a8b46c1e1f483ba813510c34dc766171389307635ecf7e8a715",
+        "line": 2557,
+        "character_offset": 0,
+        "authority": "RESEARCH_REPORT_NOT_PATIENT_RESULT"
+      }
+    },
+    {
+      "id": "D171",
+      "kind": "DOCUMENT",
+      "text": "def test_anaphylaxis_without_skin_can_meet_WAO_path_two():\n    case = load_case(\"ANAPH-02\")\n    result = evaluate(case)",
+      "reference": {
+        "document": "deep-research-report-2026-10-16.md",
+        "sha256": "38ad3ab166f25a8b46c1e1f483ba813510c34dc766171389307635ecf7e8a715",
+        "line": 2564,
+        "character_offset": 0,
+        "authority": "RESEARCH_REPORT_NOT_PATIENT_RESULT"
+      }
+    },
+    {
+      "id": "D172",
+      "kind": "DOCUMENT",
+      "text": "assert result.diagnostic_status == DiagnosticStatus.CRITERIA_MET\n    assert result.urgency == ClinicalUrgency.EMERGENCY",
+      "reference": {
+        "document": "deep-research-report-2026-10-16.md",
+        "sha256": "38ad3ab166f25a8b46c1e1f483ba813510c34dc766171389307635ecf7e8a715",
+        "line": 2568,
+        "character_offset": 0,
+        "authority": "RESEARCH_REPORT_NOT_PATIENT_RESULT"
+      }
+    },
+    {
+      "id": "D173",
+      "kind": "DOCUMENT",
+      "text": "def test_anaphylaxis_protocol_can_be_blocked_even_when_diagnosis_met():\n    case = load_case(\"ANAPH-06\")\n    result = evaluate(case)",
+      "reference": {
+        "document": "deep-research-report-2026-10-16.md",
+        "sha256": "38ad3ab166f25a8b46c1e1f483ba813510c34dc766171389307635ecf7e8a715",
+        "line": 2572,
+        "character_offset": 0,
+        "authority": "RESEARCH_REPORT_NOT_PATIENT_RESULT"
+      }
+    },
+    {
+      "id": "D174",
+      "kind": "DOCUMENT",
+      "text": "assert result.diagnostic_status == DiagnosticStatus.CRITERIA_MET\n    assert result.protocol_status == ProtocolStatus.BLOCKED_RESOURCE",
+      "reference": {
+        "document": "deep-research-report-2026-10-16.md",
+        "sha256": "38ad3ab166f25a8b46c1e1f483ba813510c34dc766171389307635ecf7e8a715",
+        "line": 2576,
+        "character_offset": 0,
+        "authority": "RESEARCH_REPORT_NOT_PATIENT_RESULT"
+      }
+    },
+    {
+      "id": "D175",
+      "kind": "DOCUMENT",
+      "text": "assert result.differentials[0].hypothesis_id == \"ORTHOSTATIC_HYPOTENSION\"\n    assert hypothesis(result, \"POTS\").tier == \"CONTRADICTED\"",
+      "reference": {
+        "document": "deep-research-report-2026-10-16.md",
+        "sha256": "38ad3ab166f25a8b46c1e1f483ba813510c34dc766171389307635ecf7e8a715",
+        "line": 2584,
+        "character_offset": 0,
+        "authority": "RESEARCH_REPORT_NOT_PATIENT_RESULT"
+      }
+    },
+    {
+      "id": "D176",
+      "kind": "DOCUMENT",
+      "text": "def test_nonpostural_irregular_tachycardia_does_not_become_pots():\n    case = load_case(\"DIFF-06\")\n    result = evaluate(case)",
+      "reference": {
+        "document": "deep-research-report-2026-10-16.md",
+        "sha256": "38ad3ab166f25a8b46c1e1f483ba813510c34dc766171389307635ecf7e8a715",
+        "line": 2588,
+        "character_offset": 0,
+        "authority": "RESEARCH_REPORT_NOT_PATIENT_RESULT"
+      }
+    },
+    {
+      "id": "D177",
+      "kind": "DOCUMENT",
+      "text": "```text\nglucose wrong unit\ncreatinine wrong unit\nunconvertible unit\ntimestamp missing\nmeasurement outside temporal window\ninvalid assay\ninvalid fasting duration\nA1C-glucose discordance\nCGM supplied instead of plasma glucose\nDKA missing ketones\nDKA missing acid-base data\nDKA potassium missing before treatment eligibility\nDKA potassium <3.5\nOH measurement >3 min when evaluating classic criterion\nOH missing baseline\nPOTS symptoms <3 months\nPOTS dehydration\nPOTS infection\nPOTS orthostatic hypotension present\northostatic test in free microgravity\nAKI missing baseline and missing urine output\nAKI invalid urine collection window\nanaphylaxis without sufficient clinical combination\nanaphylaxis without skin but valid WAO pathway 2\nepinephrine inventory unavailable\nmission authorization absent\nknowledge source superseded\ncriterion source marked DRAFT\nLLM attempts to modify criterion\nLLM attempts to authorize protocol\nLLM attempts to change a dose\nreplay with same input and knowledge hash\n```",
+      "reference": {
+        "document": "deep-research-report-2026-10-16.md",
+        "sha256": "38ad3ab166f25a8b46c1e1f483ba813510c34dc766171389307635ecf7e8a715",
+        "line": 2600,
+        "character_offset": 0,
+        "authority": "RESEARCH_REPORT_NOT_PATIENT_RESULT"
+      }
+    },
+    {
+      "id": "D178",
+      "kind": "DOCUMENT",
+      "text": "```text\nLLM MAY READ\n✓ observations\n✓ evaluated clinical states\n✓ criteria satisfied\n✓ missing evidence\n✓ differential hypotheses\n✓ recommended tests\n✓ approved source text\n✓ protocol eligibility\n✓ authorization status",
+      "reference": {
+        "document": "deep-research-report-2026-10-16.md",
+        "sha256": "38ad3ab166f25a8b46c1e1f483ba813510c34dc766171389307635ecf7e8a715",
+        "line": 2637,
+        "character_offset": 0,
+        "authority": "RESEARCH_REPORT_NOT_PATIENT_RESULT"
+      }
+    },
+    {
+      "id": "D179",
+      "kind": "DOCUMENT",
+      "text": "LLM MAY EXPLAIN\n✓ why a criterion was met\n✓ why a diagnosis remains unresolved\n✓ why another test is required\n✓ why a protocol is blocked",
+      "reference": {
+        "document": "deep-research-report-2026-10-16.md",
+        "sha256": "38ad3ab166f25a8b46c1e1f483ba813510c34dc766171389307635ecf7e8a715",
+        "line": 2649,
+        "character_offset": 0,
+        "authority": "RESEARCH_REPORT_NOT_PATIENT_RESULT"
+      }
+    },
+    {
+      "id": "D180",
+      "kind": "DOCUMENT",
+      "text": "LLM MAY NOT WRITE\n✗ threshold\n✗ diagnostic state\n✗ source version\n✗ medication dose\n✗ mission authorization\n✗ protocol eligibility\n✗ treatment execution\n```",
+      "reference": {
+        "document": "deep-research-report-2026-10-16.md",
+        "sha256": "38ad3ab166f25a8b46c1e1f483ba813510c34dc766171389307635ecf7e8a715",
+        "line": 2655,
+        "character_offset": 0,
+        "authority": "RESEARCH_REPORT_NOT_PATIENT_RESULT"
+      }
+    },
+    {
+      "id": "D181",
+      "kind": "DOCUMENT",
+      "text": "NASA está investigando CDSS precisamente como apoyo cognitivo y procedimental para una tripulación cada vez más autónoma; nada en esas publicaciones obliga a que las conclusiones clínicas procedan de un LLM generativo, por lo que mantener la generación de lenguaje separada del motor determinista es coherente con el objetivo de auditabilidad de VIGILE. citeturn19search1turn19search4turn19search5",
+      "reference": {
+        "document": "deep-research-report-2026-10-16.md",
+        "sha256": "38ad3ab166f25a8b46c1e1f483ba813510c34dc766171389307635ecf7e8a715",
+        "line": 2665,
+        "character_offset": 0,
+        "authority": "RESEARCH_REPORT_NOT_PATIENT_RESULT"
+      }
+    },
+    {
+      "id": "D182",
+      "kind": "DOCUMENT",
+      "text": "[ ] Diabetes:\n    un FPG aislado >=126 mg/dL en persona asintomática\n    NO produce confirmación automática.",
+      "reference": {
+        "document": "deep-research-report-2026-10-16.md",
+        "sha256": "38ad3ab166f25a8b46c1e1f483ba813510c34dc766171389307635ecf7e8a715",
+        "line": 2674,
+        "character_offset": 0,
+        "authority": "RESEARCH_REPORT_NOT_PATIENT_RESULT"
+      }
+    },
+    {
+      "id": "D183",
+      "kind": "DOCUMENT",
+      "text": "[ ] Diabetes:\n    dos resultados anormales válidos pueden satisfacer\n    la regla de confirmación ADA.",
+      "reference": {
+        "document": "deep-research-report-2026-10-16.md",
+        "sha256": "38ad3ab166f25a8b46c1e1f483ba813510c34dc766171389307635ecf7e8a715",
+        "line": 2678,
+        "character_offset": 0,
+        "authority": "RESEARCH_REPORT_NOT_PATIENT_RESULT"
+      }
+    },
+    {
+      "id": "D184",
+      "kind": "DOCUMENT",
+      "text": "[ ] Random plasma glucose >=200 mg/dL solo usa la vía\n    diagnóstica inmediata cuando existe el contexto clínico\n    requerido por ADA.",
+      "reference": {
+        "document": "deep-research-report-2026-10-16.md",
+        "sha256": "38ad3ab166f25a8b46c1e1f483ba813510c34dc766171389307635ecf7e8a715",
+        "line": 2685,
+        "character_offset": 0,
+        "authority": "RESEARCH_REPORT_NOT_PATIENT_RESULT"
+      }
+    },
+    {
+      "id": "D185",
+      "kind": "DOCUMENT",
+      "text": "[ ] DKA euglucémica no queda excluida solo porque\n    glucose <200 mg/dL cuando existe diabetes conocida.",
+      "reference": {
+        "document": "deep-research-report-2026-10-16.md",
+        "sha256": "38ad3ab166f25a8b46c1e1f483ba813510c34dc766171389307635ecf7e8a715",
+        "line": 2692,
+        "character_offset": 0,
+        "authority": "RESEARCH_REPORT_NOT_PATIENT_RESULT"
+      }
+    },
+    {
+      "id": "D186",
+      "kind": "DOCUMENT",
+      "text": "[ ] OH reconoce exactamente >=20 mmHg sistólica\n    o >=10 mmHg diastólica dentro del contexto temporal.",
+      "reference": {
+        "document": "deep-research-report-2026-10-16.md",
+        "sha256": "38ad3ab166f25a8b46c1e1f483ba813510c34dc766171389307635ecf7e8a715",
+        "line": 2700,
+        "character_offset": 0,
+        "authority": "RESEARCH_REPORT_NOT_PATIENT_RESULT"
+      }
+    },
+    {
+      "id": "D187",
+      "kind": "DOCUMENT",
+      "text": "[ ] Cumplir criterios de anafilaxia y tener un protocolo\n    bloqueado son estados simultáneamente representables.",
+      "reference": {
+        "document": "deep-research-report-2026-10-16.md",
+        "sha256": "38ad3ab166f25a8b46c1e1f483ba813510c34dc766171389307635ecf7e8a715",
+        "line": 2724,
+        "character_offset": 0,
+        "authority": "RESEARCH_REPORT_NOT_PATIENT_RESULT"
+      }
+    },
+    {
+      "id": "D188",
+      "kind": "DOCUMENT",
+      "text": "[ ] Cada decisión conserva:\n    source_id\n    criterion_version\n    knowledge_bundle_hash\n    input_snapshot_hash\n    trace",
+      "reference": {
+        "document": "deep-research-report-2026-10-16.md",
+        "sha256": "38ad3ab166f25a8b46c1e1f483ba813510c34dc766171389307635ecf7e8a715",
+        "line": 2738,
+        "character_offset": 0,
+        "authority": "RESEARCH_REPORT_NOT_PATIENT_RESULT"
+      }
+    },
+    {
+      "id": "D189",
+      "kind": "DOCUMENT",
+      "text": "```text\nregla verificada contra fuente\n        ↓\nunit test\n        ↓\ncaso sintético\n        ↓\nrevisión clínica independiente\n        ↓\nvalidación retrospectiva\n        ↓\nvalidación prospectiva\n        ↓\nvalidación en análogo espacial\n        ↓\nvalidación operacional específica de misión\n        ↓\nautorización\n```",
+      "reference": {
+        "document": "deep-research-report-2026-10-16.md",
+        "sha256": "38ad3ab166f25a8b46c1e1f483ba813510c34dc766171389307635ecf7e8a715",
+        "line": 2751,
+        "character_offset": 0,
+        "authority": "RESEARCH_REPORT_NOT_PATIENT_RESULT"
+      }
+    },
+    {
+      "id": "D190",
+      "kind": "DOCUMENT",
+      "text": "Esto es especialmente importante porque EIMO sigue siendo una dirección de desarrollo e investigación de NASA destinada a aumentar gradualmente la autonomía, no una certificación genérica de cualquier CDSS autónomo. citeturn19search0turn19search1turn19search6",
+      "reference": {
+        "document": "deep-research-report-2026-10-16.md",
+        "sha256": "38ad3ab166f25a8b46c1e1f483ba813510c34dc766171389307635ecf7e8a715",
+        "line": 2771,
+        "character_offset": 0,
+        "authority": "RESEARCH_REPORT_NOT_PATIENT_RESULT"
+      }
+    },
+    {
+      "id": "D191",
+      "kind": "DOCUMENT",
+      "text": "La implementación resultante debe producir un salto claramente observable respecto de VIGILE actual:",
+      "reference": {
+        "document": "deep-research-report-2026-10-16.md",
+        "sha256": "38ad3ab166f25a8b46c1e1f483ba813510c34dc766171389307635ecf7e8a715",
+        "line": 2773,
+        "character_offset": 0,
+        "authority": "RESEARCH_REPORT_NOT_PATIENT_RESULT"
+      }
+    },
+    {
+      "id": "D192",
+      "kind": "DOCUMENT",
+      "text": "sensor + síntomas + historia + contexto\n                ↓\n       calidad de los datos\n                ↓\n          urgencia paralela\n                ↓\n        criterios clínicos\n                ↓\n       confirmación necesaria\n                ↓\n       diferencial estructurado\n                ↓\n         siguiente prueba\n                ↓\n       protocolo candidato\n                ↓\n autorización + recursos + seguridad\n                ↓\n        actuación de tripulación\n                ↓\n           reevaluación\n```",
+      "reference": {
+        "document": "deep-research-report-2026-10-16.md",
+        "sha256": "38ad3ab166f25a8b46c1e1f483ba813510c34dc766171389307635ecf7e8a715",
+        "line": 2790,
+        "character_offset": 0,
+        "authority": "RESEARCH_REPORT_NOT_PATIENT_RESULT"
+      }
+    },
+    {
+      "id": "D193",
+      "kind": "DOCUMENT",
+      "text": "Esta arquitectura cumple el objetivo más importante de la especificación original: **VIGILE deja de limitarse a avisar que un dato es extraño y empieza a determinar, mediante reglas trazables, qué condición clínica está respaldada, qué alternativas siguen abiertas, qué datos faltan y qué protocolo preautorizado puede aplicarse sin depender de una respuesta generativa ni de comunicación inmediata con Tierra.** fileciteturn0file0 La idea de aumentar progresivamente esa autonomía está alineada con EIMO y con la exigencia de NASA-STD-3001 de diseñar las capacidades médicas según riesgo, necesidades de la tripulación, guías clínicas y restricciones de la misión. citeturn19search0turn19search2",
+      "reference": {
+        "document": "deep-research-report-2026-10-16.md",
+        "sha256": "38ad3ab166f25a8b46c1e1f483ba813510c34dc766171389307635ecf7e8a715",
+        "line": 2813,
+        "character_offset": 0,
+        "authority": "RESEARCH_REPORT_NOT_PATIENT_RESULT"
+      }
+    }
+  ],
+  "sha256": "07788d89067dd7d7ae640ce9d0a3243d0d9d9abe2e8067d7e2253c2cc717883a"
+}

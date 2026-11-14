@@ -1,0 +1,31 @@
+{
+  "condition_id": "C009",
+  "catalog_record": {
+    "condition_id": "C009",
+    "name_specialty": "SANS / neuro-oftalmología",
+    "description_spaceflight": "Cambios estructurales oculares y cerebrales relacionados con vuelo prolongado.",
+    "risks_symptoms": "Gravedad alterada, susceptibilidad individual; mecanismo incompleto.",
+    "biomarkers_sensors_tests": "Agudeza visual, refracción, fondo de ojo, OCT, IOP cuando disponible.",
+    "baselines_environment_interactions": "Evaluación ocular preflight; duración y fluid shift.",
+    "primary_evidence": "S07. citeturn11search2",
+    "limits_authorizations_state": "NASA señala que no existe equivalente terrestre directo; no diagnosticar por una sola métrica. `RV`."
+  },
+  "clinical_pathway_profile_as_published": "**P:** contramedidas aún en investigación; **M:** visión/OCT/fondo/IOP según disponibilidad; **Q:** mismo equipo/protocolo; **D:** cambio longitudinal; **A:** neuro-oftalmología; **DD:** patología ocular/neurológica terrestre; **T:** pérdida visual aguda → protocolo médico; **I:** bloqueado salvo autorización; **R/F:** seguimiento longitudinal; **G:** no pronóstico validado.",
+  "coverage_states": {
+    "prevention": "RV",
+    "monitoring": "ES",
+    "data_quality": "ES",
+    "detection": "RV",
+    "assessment": "RV",
+    "differential_diagnosis": "RV",
+    "triage": "RMA",
+    "intervention_authorized": "RMA",
+    "recovery": "RV",
+    "follow_up": "ES",
+    "prognosis": "RO"
+  },
+  "source_ids": [
+    "S07"
+  ],
+  "NOTICE": "Pathway text is an outline; not an authorized diagnostic or treatment protocol."
+}

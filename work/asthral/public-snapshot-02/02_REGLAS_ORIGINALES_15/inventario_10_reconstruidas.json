@@ -1,0 +1,62 @@
+[
+  {
+    "rule_id": "R-AER-001",
+    "logic": "VO₂max ≥32,9 mL/min/kg cuando aplique EVA microgravity",
+    "evidence": "V1 4001. citeturn6view0",
+    "authorization": "assessment"
+  },
+  {
+    "rule_id": "R-AER-002",
+    "logic": "VO₂max ≥36,5 mL/min/kg cuando aplique EVA superficie",
+    "evidence": "V1 4002. citeturn5view0",
+    "authorization": "assessment"
+  },
+  {
+    "rule_id": "R-AER-003",
+    "logic": "current/baseline ×100 ≥80 %",
+    "evidence": "V1 4003. citeturn5view0",
+    "authorization": "assessment"
+  },
+  {
+    "rule_id": "R-MUS-001",
+    "logic": "preflight deadlift/bench vs Table 4.6-1 según operación",
+    "evidence": "V1 4023/Table 4.6-1. citeturn6view1",
+    "authorization": "assessment"
+  },
+  {
+    "rule_id": "R-MUS-002",
+    "logic": "strength current/baseline ≥80 %",
+    "evidence": "V1 4024. citeturn6view1",
+    "authorization": "assessment"
+  },
+  {
+    "rule_id": "R-BONE-001",
+    "logic": "hip/spine retention ≥95 %; femoral neck ≥90 %",
+    "evidence": "V1 4027. citeturn6view2",
+    "authorization": "assessment"
+  },
+  {
+    "rule_id": "R-RAD-001",
+    "logic": "career effective dose <600 mSv",
+    "evidence": "V1 4030. citeturn6view3",
+    "authorization": "assessment"
+  },
+  {
+    "rule_id": "R-CO2-001",
+    "logic": "rolling 1-h ppCO₂ ≤3 mmHg",
+    "evidence": "V2 6004. citeturn19search4",
+    "authorization": "assessment/environment alert"
+  },
+  {
+    "rule_id": "R-PRESS-001",
+    "logic": "34,5<P≤103 kPa en condición de requisito",
+    "evidence": "V2 6006. citeturn10search0",
+    "authorization": "environment assessment"
+  },
+  {
+    "rule_id": "R-ORTHO-001",
+    "logic": "confirmar disponibilidad/aplicación de contramedida en transición microgravity→gravity/Az",
+    "evidence": "V2 7042. citeturn19search2",
+    "authorization": "mission configuration, no diagnosis"
+  }
+]

@@ -1,0 +1,31 @@
+{
+  "condition_id": "C013",
+  "catalog_record": {
+    "condition_id": "C013",
+    "name_specialty": "Desincronización circadiana / sueño",
+    "description_spaceflight": "Horarios irregulares y señales ambientales pueden desalinear ritmos.",
+    "risks_symptoms": "Turnos, luz, cambios horarios.",
+    "biomarkers_sensors_tests": "Horario sueño-vigilia, luz, actigrafía; biomarcadores circadianos si disponibles.",
+    "baselines_environment_interactions": "Patrón preflight.",
+    "primary_evidence": "S10. citeturn12search1",
+    "limits_authorizations_state": "Umbrales diagnósticos operacionales `NOT_FOUND`. `RV`."
+  },
+  "clinical_pathway_profile_as_published": "**P:** planificación circadiana; **M:** sueño-vigilia/luz; **Q:** sincronización temporal; **D:** desfase según algoritmo de misión `[RV]`; **A/DD:** horarios/sueño; **T/I:** autorización; **R/F:** realineamiento; **G:** research-only.",
+  "coverage_states": {
+    "prevention": "ES",
+    "monitoring": "ES",
+    "data_quality": "ES",
+    "detection": "RV",
+    "assessment": "RV",
+    "differential_diagnosis": "RV",
+    "triage": "RMA",
+    "intervention_authorized": "RMA",
+    "recovery": "RV",
+    "follow_up": "ES",
+    "prognosis": "RO"
+  },
+  "source_ids": [
+    "S10"
+  ],
+  "NOTICE": "Pathway text is an outline; not an authorized diagnostic or treatment protocol."
+}

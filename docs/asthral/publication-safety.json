@@ -1,0 +1,845 @@
+{
+  "date": "2026-11-04",
+  "staged_files": 208,
+  "history_and_staged_blobs_scanned": 301,
+  "findings": [],
+  "actual_credentials_compared_in_memory": 4,
+  "private_assets_excluded": true,
+  "third_party_full_text_and_binaries_excluded": true,
+  "project_license_added": false,
+  "manifest": [
+    {
+      "path": ".gitattributes",
+      "sha256": "36494894b5f99c64d500e99d171f7c6b6e4fe4350e24302f4160cc97ce76a5aa"
+    },
+    {
+      "path": ".gitignore",
+      "sha256": "981e054be30ee0c76d2bfb0546877b36806498d312d59fc1ab9525d0cd028c9b"
+    },
+    {
+      "path": "02_REGLAS_ORIGINALES_15/REGLAS_15_ORIGINALES.json",
+      "sha256": "1ef299cab4f06eb9f17095af804a5589dabbc7b718d49cccaf0a66ba47f93070"
+    },
+    {
+      "path": "02_REGLAS_ORIGINALES_15/individual/VIGILE-AER-001.json",
+      "sha256": "47fc68dd5226ee8cb3720859cd166445b707c237ad9c89a43fac5fb65750cce4"
+    },
+    {
+      "path": "02_REGLAS_ORIGINALES_15/individual/VIGILE-AER-002.json",
+      "sha256": "8423641570b5c1ebe530c38524a9eb51e999c6acf7557405c8bce2100430c2d6"
+    },
+    {
+      "path": "02_REGLAS_ORIGINALES_15/individual/VIGILE-AER-003.json",
+      "sha256": "1de1bc027ac34516373d5fa8a151c5ef3d681afad82a47ea4dec3f49813e92bc"
+    },
+    {
+      "path": "02_REGLAS_ORIGINALES_15/individual/VIGILE-BONE-001.json",
+      "sha256": "43278a12022534ceffb1ff9305e001825e46aa112bce13d1df5227f9c62794f7"
+    },
+    {
+      "path": "02_REGLAS_ORIGINALES_15/individual/VIGILE-ENV-001.json",
+      "sha256": "0a8a9faa3291017be7784eab3170ff473741725dac14e735004c825a3a1b1b06"
+    },
+    {
+      "path": "02_REGLAS_ORIGINALES_15/individual/VIGILE-ENV-002.json",
+      "sha256": "fc9a15e905f12e66b36b57d8f3ae03c403ab5ef2b6a40f46ecb604cfd1e43d23"
+    },
+    {
+      "path": "02_REGLAS_ORIGINALES_15/individual/VIGILE-ENV-003.json",
+      "sha256": "ab56f7b032581ea1e4c821d96edbad0b4643e18b41d766c6224ba70ffd588126"
+    },
+    {
+      "path": "02_REGLAS_ORIGINALES_15/individual/VIGILE-ENV-004.json",
+      "sha256": "f292d06e5428dfd9e929ed8f6a94e7ef3180b2d5be387c8f87c192971bf77acd"
+    },
+    {
+      "path": "02_REGLAS_ORIGINALES_15/individual/VIGILE-MUS-001.json",
+      "sha256": "7381d40546901740657f43c55653451c012ebb0a8e210c31052d16c655084fc9"
+    },
+    {
+      "path": "02_REGLAS_ORIGINALES_15/individual/VIGILE-MUS-002.json",
+      "sha256": "bbe6f662153b1820013cced85311ae9372c9ee6887a56cd3d419764adb8c3391"
+    },
+    {
+      "path": "02_REGLAS_ORIGINALES_15/individual/VIGILE-NUT-001.json",
+      "sha256": "370568fd8ecb393a6551a1cc7a1d3390b4197c44ccf7ddf160454c9f439318af"
+    },
+    {
+      "path": "02_REGLAS_ORIGINALES_15/individual/VIGILE-RAD-001.json",
+      "sha256": "595e5bc352b602e1055b0bbe49dacc82c602aa13d6be0e34f68a04455ebec949"
+    },
+    {
+      "path": "02_REGLAS_ORIGINALES_15/individual/VIGILE-RAD-002.json",
+      "sha256": "ec0117d1577c93f26292b6558dbac8bbb3674c1cdc640e2bc99c7d166f098998"
+    },
+    {
+      "path": "02_REGLAS_ORIGINALES_15/individual/VIGILE-RAD-003.json",
+      "sha256": "15db94f095e0b8a45fe748dd1a833d014485daa6168f3aa4c310d9709dd9cf02"
+    },
+    {
+      "path": "02_REGLAS_ORIGINALES_15/individual/VIGILE-RAD-004.json",
+      "sha256": "083cb546fc04e0fa1b05f01c8005cb1bfaeae51d07b038ddce57b318da976224"
+    },
+    {
+      "path": "02_REGLAS_ORIGINALES_15/inventario_10_reconstruidas.json",
+      "sha256": "ed616242651bf6cac1682179b3cc539fc065b1ac62ea80ff8bfcc6f73f5810ba"
+    },
+    {
+      "path": "03_CATALOGO/condiciones_con_rutas_y_cobertura.json",
+      "sha256": "30e2475b28f83c38de6af7e3609ee7548e8a362234455c4a167879e8c34278eb"
+    },
+    {
+      "path": "03_CATALOGO/condiciones_individuales/C001.json",
+      "sha256": "1b3ff9cfbf6d27a3f0ea7451e3afd74f52c5c9ae20c9fe8e833dc5f8502f4672"
+    },
+    {
+      "path": "03_CATALOGO/condiciones_individuales/C002.json",
+      "sha256": "ae380e568a8332c6e871265194e49437e95f6b3730fa1351165efa2fb88fffb8"
+    },
+    {
+      "path": "03_CATALOGO/condiciones_individuales/C003.json",
+      "sha256": "599cd7be4525e14f1825da9834ffc29ac25929dfdd5bcf629762243a1d90e491"
+    },
+    {
+      "path": "03_CATALOGO/condiciones_individuales/C004.json",
+      "sha256": "032c737a62a211eb8f91eb46635a2f82fb01564f8226a63597e7cdcd46757c90"
+    },
+    {
+      "path": "03_CATALOGO/condiciones_individuales/C005.json",
+      "sha256": "2c612c5a4bf4398ee16fbe4f50511cb4fd593c059a566420da53cfdf5ddbf957"
+    },
+    {
+      "path": "03_CATALOGO/condiciones_individuales/C006.json",
+      "sha256": "4dba4c1fe56d8798d73127aea564928dd039496c77706970d08504961c1ae75f"
+    },
+    {
+      "path": "03_CATALOGO/condiciones_individuales/C007.json",
+      "sha256": "c0d50a4d300892a28673a6a7bfd7892ad13e7488f3d8218e374ed0a4e8a44628"
+    },
+    {
+      "path": "03_CATALOGO/condiciones_individuales/C008.json",
+      "sha256": "c02d48ed95ffd2c37e4febb10c25469b418933a87b8e0f7e7b862b0979381aeb"
+    },
+    {
+      "path": "03_CATALOGO/condiciones_individuales/C009.json",
+      "sha256": "c02cc7bce38bc923d468bb58c975e7f04f36134d14c6c63c2212cb7b710296e2"
+    },
+    {
+      "path": "03_CATALOGO/condiciones_individuales/C010.json",
+      "sha256": "047e84c650d66d9a5659cc4b5ce3b67bf847b27878e38b0d11a19b1171bf666e"
+    },
+    {
+      "path": "03_CATALOGO/condiciones_individuales/C011.json",
+      "sha256": "1360f3962671ce403967f48825f70b3552a7f903fd1bbf7f1f5a029123ebb3de"
+    },
+    {
+      "path": "03_CATALOGO/condiciones_individuales/C012.json",
+      "sha256": "b945c31e03f6c704d0949f41f5a5058e3b9b280ea115dc1046d6a178976e43ca"
+    },
+    {
+      "path": "03_CATALOGO/condiciones_individuales/C013.json",
+      "sha256": "a5b6b08f6c3ddb964704645ce10da446c4ed6a6200429233294ec107140f8568"
+    },
+    {
+      "path": "03_CATALOGO/condiciones_individuales/C014.json",
+      "sha256": "15c1f15f3d26039f42bb51e26ec2c19f707950d55ac13e365bee9f63b97c2af8"
+    },
+    {
+      "path": "03_CATALOGO/condiciones_individuales/C015.json",
+      "sha256": "ede1b6c19ded2ff64f12f36a2afeaf21d870dd2a1d0574721938041832831092"
+    },
+    {
+      "path": "03_CATALOGO/condiciones_individuales/C016.json",
+      "sha256": "9c60b36aa137f7c1443fef19947fad37b0e85ba8b090348059f97fb443bb3e7a"
+    },
+    {
+      "path": "03_CATALOGO/condiciones_individuales/C017.json",
+      "sha256": "7051741e75dcb58406f5e1bf44b87cba80659c8c4a99e375ded9f69cd12d50d4"
+    },
+    {
+      "path": "03_CATALOGO/condiciones_individuales/C018.json",
+      "sha256": "1950bba3f1b09cd27eb1d1afe6e3427fef3028c59052ede341ff79b08c48403b"
+    },
+    {
+      "path": "03_CATALOGO/condiciones_individuales/C019.json",
+      "sha256": "92e87d84f05e6b0a64e8919d7f76a2c5efeb1dd28a3c73d4d18ac20bd1d0e059"
+    },
+    {
+      "path": "03_CATALOGO/condiciones_individuales/C020.json",
+      "sha256": "7ea15bc4d622740461ae3b7edf04b947d42594f66c8532432380da1f15451e6b"
+    },
+    {
+      "path": "03_CATALOGO/condiciones_individuales/C021.json",
+      "sha256": "9c29a63a31764cbded5f646905a9f8b6b992337b0f8f32d206ef13a93ecd5987"
+    },
+    {
+      "path": "03_CATALOGO/condiciones_individuales/C022.json",
+      "sha256": "4dfe81bdf590344ce5bc0d8fd08892c4d0db0d21723a5ed8b5f8f4eceb9b7cff"
+    },
+    {
+      "path": "03_CATALOGO/condiciones_individuales/C023.json",
+      "sha256": "ea6a134f851540ce20c93e3b14ffa876174e22011ec4e53469c52e78c71f59d2"
+    },
+    {
+      "path": "03_CATALOGO/condiciones_individuales/C024.json",
+      "sha256": "893cdda8f6c26d413bf890c75263f69bc10dbb639b82884557320f85d61c7d6a"
+    },
+    {
+      "path": "03_CATALOGO/condiciones_individuales/C025.json",
+      "sha256": "a8bb5a66bf143817323f3ebe629afbc72f357f747d7395c5c6e8333c34acebd9"
+    },
+    {
+      "path": "03_CATALOGO/condiciones_individuales/C026.json",
+      "sha256": "952f6b6769bbb39174b36b449804d3f9dc519896b5d74818993919f71ab1ca2e"
+    },
+    {
+      "path": "03_CATALOGO/condiciones_individuales/C027.json",
+      "sha256": "32d0822dc2786fabb359a1a2346d56017dd5354c13c780c7db5867cfd986a01c"
+    },
+    {
+      "path": "03_CATALOGO/condiciones_individuales/C028.json",
+      "sha256": "87231dc81a36b23f33f547c325f6fb25308fe0a0bc8e90e1264f6bbf8da28853"
+    },
+    {
+      "path": "03_CATALOGO/condiciones_individuales/C029.json",
+      "sha256": "7f3361f012a46357fe8027780c45a9eb2811f09db0c317ef94baf2b007d2f3ed"
+    },
+    {
+      "path": "03_CATALOGO/condiciones_individuales/C030.json",
+      "sha256": "d6e530297c43ad618a2ff1117c9e8d9ffd26baf74d98b89c0d8f5a838a72df39"
+    },
+    {
+      "path": "03_CATALOGO/condiciones_individuales/C031.json",
+      "sha256": "54e5b579c22583f7ca3943b64a8230bc4bef85623e97522c0b4388015e4b5c21"
+    },
+    {
+      "path": "03_CATALOGO/condiciones_individuales/C032.json",
+      "sha256": "9935bdb95e397b46cd0c787aa2d68fe540d341d6c7480db249095125ab07d849"
+    },
+    {
+      "path": "03_CATALOGO/condiciones_individuales/C033.json",
+      "sha256": "663c793566be30f50e9004e3d67fda03f9187538dcfa19c9163d26c26ef4a927"
+    },
+    {
+      "path": "03_CATALOGO/condiciones_individuales/C034.json",
+      "sha256": "338cfba401287983ffc497590e8e8bda47657110ccdd4b6835ae1d67e0045284"
+    },
+    {
+      "path": "03_CATALOGO/condiciones_individuales/C035.json",
+      "sha256": "c4e881634bee0d1c964a5f7c94bd798c822bd30fd2974d496b78b7e24141c314"
+    },
+    {
+      "path": "03_CATALOGO/condiciones_individuales/C036.json",
+      "sha256": "a4f06c43a02b1a037f5162a9bc1d91dbcfd0cb6e296d25953bf3791de04da102"
+    },
+    {
+      "path": "03_CATALOGO/condiciones_individuales/C037.json",
+      "sha256": "9a02258d9221be66a4ba2e5b9fb47b19916685b9d31706cdf0a2836b6d8fb760"
+    },
+    {
+      "path": "03_CATALOGO/condiciones_individuales/C038.json",
+      "sha256": "da3944cc72998ae3ea5ed7305670c6408aceebb50ee02e36090319ed100d11ff"
+    },
+    {
+      "path": "03_CATALOGO/condiciones_individuales/C039.json",
+      "sha256": "46a50c1b00d670c656f028803530d8b33239a9bd5594c7a6a00fd53c4d022a8c"
+    },
+    {
+      "path": "03_CATALOGO/condiciones_individuales/C040.json",
+      "sha256": "f4678e6b464b591258f7f7528588e5107f7acdc4f7b98a1749c2e3aff1b16f74"
+    },
+    {
+      "path": "03_CATALOGO/condiciones_individuales/C041.json",
+      "sha256": "a6b8486d3314a98f20fc67e90382d2e6ec29cd9f08dbc8aa392734a409cc7f0a"
+    },
+    {
+      "path": "03_CATALOGO/condiciones_individuales/C042.json",
+      "sha256": "7cfe62e24407727c86d7b558c849f75682c3e5faebc9256890a7d2a2c362ed1b"
+    },
+    {
+      "path": "03_CATALOGO/condiciones_individuales/C043.json",
+      "sha256": "6d7d311439fb34045fc699fe1e873d600ced8ee7e6ac3ffb159154c0a2305172"
+    },
+    {
+      "path": "03_CATALOGO/condiciones_individuales/C044.json",
+      "sha256": "2cee5f08bc730dc70779b16512992706b550703b529c09db1781935a108ebf42"
+    },
+    {
+      "path": "03_CATALOGO/matriz_cobertura_44x11.csv",
+      "sha256": "520c00bcbdd2c8a2d0867b0cffaceeb03edba64f1200e19c79674929eed99dc0"
+    },
+    {
+      "path": "04_ALGORITMOS/algoritmos.json",
+      "sha256": "6f6e4a0d57025a51c87fa3dfed2a41df6c17f89cdd4345389cc4f7e97a15d882"
+    },
+    {
+      "path": "05_SENSORES/sensores_biomarcadores.json",
+      "sha256": "1c74e54850a52323f1e41ab264051066bf54be182ed6a932761600c156d2cdfd"
+    },
+    {
+      "path": "06_MULTISISTEMA/interacciones.json",
+      "sha256": "a24e8f894b79bf441b9402110fd5d22e235ea5ba8efa02871a442eaeebc4de46"
+    },
+    {
+      "path": "07_EVIDENCIAS/extracciones.json",
+      "sha256": "4bd8c5c7a525ab8c5f6530c6adb1563bed343f10f336be0be09f34d6c4d2e7b6"
+    },
+    {
+      "path": "07_EVIDENCIAS/fuentes.json",
+      "sha256": "c4d5013b9f8dd7ca082c0290d6649c8ac57d5b54a36b1d9d4d442bd0f3338d17"
+    },
+    {
+      "path": "08_DATASETS/datasets.json",
+      "sha256": "8f3f6863c2746fc0ea2a196d6ffe579d86bd6f857cc7d1f8cfbaa27043942bc7"
+    },
+    {
+      "path": "09_TESTS/casos_sinteticos.json",
+      "sha256": "b8c1abf3b4e3adcd4bbb0de61d430b69af7be55bbd7ee5b140c1828db6e17261"
+    },
+    {
+      "path": "ASTHRAL_CORPUS_SHA256.json",
+      "sha256": "122681bb1b540157a19ef6cb552dc02c9decf7ae7fed2ab1b04c3cbc9b34b95c"
+    },
+    {
+      "path": "CONTRIBUTING.md",
+      "sha256": "7b4b0e9225d615fa90d177ae09b647ce2fd8e4defb98dd4e6d722551df320698"
+    },
+    {
+      "path": "README.md",
+      "sha256": "cfbe61fba4db4b5b68e139ec7b34e4134993db709e0f1b2673a2431c78f046e1"
+    },
+    {
+      "path": "SECURITY.md",
+      "sha256": "ca509d446b624f569fdaea624ba88eb2eff9bcc8abe8790d18b6ede58ee2f94e"
+    },
+    {
+      "path": "THIRD_PARTY_NOTICES.md",
+      "sha256": "d63044ac3bf9609556c29e235d51a93b9d060fa2a3169a1e5ef48d6b442bf5cc"
+    },
+    {
+      "path": "docs/asthral/DEMO.md",
+      "sha256": "fc24420ab26d225e806f40a663c561a22dd9c6df8c8a6a56c676e30cdbb8dec5"
+    },
+    {
+      "path": "docs/asthral/HISTORICAL_COMPATIBILITY.md",
+      "sha256": "19b40b0bfdca2631ab2d3b7f4e89072a1e79202e84c743e097b6ff4239d046d3"
+    },
+    {
+      "path": "docs/asthral/HYBRID_RAG.md",
+      "sha256": "ff683bfb0c56b2f93ebcd1a6b9925105f9de9f4cc796a578333560d245cac05e"
+    },
+    {
+      "path": "docs/asthral/MODELS.md",
+      "sha256": "34fb935a4d4ab6ca2b001884e7932aa48033278213cd56c159e830aac2e41da9"
+    },
+    {
+      "path": "docs/asthral/RELEASE.md",
+      "sha256": "b61128600212289ad2f19db90d3fe1574e1432fa15566a751b03d77c9a4d366d"
+    },
+    {
+      "path": "docs/asthral/retrieval-development.example.json",
+      "sha256": "09c1d15436eac0c6e0815d652eef9ba06940f6677c490cb16c64143792a059a5"
+    },
+    {
+      "path": "docs/asthral/retrieval-heldout.example.json",
+      "sha256": "c4ed2792d8900f5fbf5b5a88c4374865d2ced0b74ac1261ecd9fcc5044d92574"
+    },
+    {
+      "path": "docs/asthral/verification-summary.json",
+      "sha256": "6773fa6b3bf847b793dc091bb94ce7086e903bdcc6fd5d3b289f33d96bb3595a"
+    },
+    {
+      "path": "docs/knowledge/ASTHRAL_LOCAL_KNOWLEDGE.md",
+      "sha256": "75122940173b5f70c38deeb6ca4021006df40f1dab222376671da0b1084293d6"
+    },
+    {
+      "path": "docs/v101/CODE_FREEZE.json",
+      "sha256": "6ace32459f3702a7a89646103376361fa9c86ae83fd673362721c8e94084b9c5"
+    },
+    {
+      "path": "engine/Modelfile.example",
+      "sha256": "7e282af24793d71fcb96217f00e23fc39cef9711cc0a19506dde5b09b26b9192"
+    },
+    {
+      "path": "engine/config.example.json",
+      "sha256": "b84b546f1cf495e487d5a4e90df0794b51dd7720a350bf559a65009164998794"
+    },
+    {
+      "path": "engine/pyproject.toml",
+      "sha256": "9b20acbc33d683c795090ed83b82b06f8474d280f8f2d5e534c91b0ed2e421b6"
+    },
+    {
+      "path": "engine/requirements-v100.lock.txt",
+      "sha256": "6593ec3ef8ec60e17e796647698675625d58c17640229322c6e79ae68ae4338c"
+    },
+    {
+      "path": "engine/tests/astronaut_ui_unit.cjs",
+      "sha256": "67d6bdf266b936cca8b3715223119e1774660dabb74ed7f7219848feafb37c05"
+    },
+    {
+      "path": "engine/tests/conftest.py",
+      "sha256": "8d4e6cb45981cc41cb92ae46ffb62c5906a782f22452f1fa541a3d7271c9b904"
+    },
+    {
+      "path": "engine/tests/fixtures/management-v101-report.json",
+      "sha256": "78625a7293d264af57b763e8a3f9db7bee675ec8bb9a99f15eb5bd2c3fddfd9a"
+    },
+    {
+      "path": "engine/tests/management_ui_unit.cjs",
+      "sha256": "c8cd945cbe2232af3778728267050de98734cc8d0b5e7e604c6fc54110dd57fe"
+    },
+    {
+      "path": "engine/tests/test_api.py",
+      "sha256": "359f4828c5510d437a8d8bc4c1ce9e311a76cb6c1b074ca18cf2d61952a05e38"
+    },
+    {
+      "path": "engine/tests/test_asthral_hybrid.py",
+      "sha256": "d1b9d68f1a95db3e8097fc1162a5765cc9c90e5236c766d28705309c30a653dd"
+    },
+    {
+      "path": "engine/tests/test_astronaut_ux_v101.py",
+      "sha256": "d2b27f5c931984956e9446fff1ac2bc5e01e15b6297ffc413b3820d7f0786671"
+    },
+    {
+      "path": "engine/tests/test_biomedical_audit.py",
+      "sha256": "0e629bf2914707c8a94ff64a255918797a536981f90978dbf21a130d7b1e9acc"
+    },
+    {
+      "path": "engine/tests/test_clinical.py",
+      "sha256": "ba6a6cd3754bdff4ea475188df9f81c7e8c978c3acf56a9bbd9095b99bf6a3e5"
+    },
+    {
+      "path": "engine/tests/test_clinical_consistency.py",
+      "sha256": "bca06e00466d32a462ae78652eaa92f7fa1ad3aff277c200164d426c9866338b"
+    },
+    {
+      "path": "engine/tests/test_conversational.py",
+      "sha256": "7ad2891a2898b9053567d3c8d1edbe049e9fe179b275fd7bf8887c8bdf51a65a"
+    },
+    {
+      "path": "engine/tests/test_integration_edges.py",
+      "sha256": "0e3d83606370ba58e21632f47c8868d35c313ba5bfee1aa4620f712b229ae051"
+    },
+    {
+      "path": "engine/tests/test_integration_release.py",
+      "sha256": "0e70cebf9f6ac4a7d58841ed7e9eaafbba48c2c5b0ed2ce290024ebbed1023db"
+    },
+    {
+      "path": "engine/tests/test_local_protection_v010.py",
+      "sha256": "b213d8099ef4ad6a8acd5de681c4c9eeaf9b41558df8eb791c769458d951b8c5"
+    },
+    {
+      "path": "engine/tests/test_management_v101.py",
+      "sha256": "991eaa09935fa686519200e9fe2763352beaeb26500726e741451fb9d43b669a"
+    },
+    {
+      "path": "engine/tests/test_mission_v011.py",
+      "sha256": "602b13cc3179214d1fe3d52eba8f0848e84c881cd3a58685764677307a008ff9"
+    },
+    {
+      "path": "engine/tests/test_monitoring.py",
+      "sha256": "d3f30883e8229a48d9eeb5505f5247d91e232186a723c453c36fa61179821a03"
+    },
+    {
+      "path": "engine/tests/test_original_rules.py",
+      "sha256": "b3ea9817bc86ed9be85401853521c727d7407e000283ce0d268c69aa2c9afd51"
+    },
+    {
+      "path": "engine/tests/test_portal.py",
+      "sha256": "372ea133a8d108f38d14224c618adf71e8a14e9de22542d92c2ee9d1f1544c4b"
+    },
+    {
+      "path": "engine/tests/test_portal_v010.py",
+      "sha256": "9e06183804a83d38c8cef201c9dcb381392aa2843a10b32ef7bdd2ba7a4a8716"
+    },
+    {
+      "path": "engine/tests/test_safety.py",
+      "sha256": "d31a9a250e6ac91a571c9fe1e6e66f59d0060455694ff64e56a643b06482ad4f"
+    },
+    {
+      "path": "engine/tests/test_synthetic_cases.py",
+      "sha256": "bda942f60734c1332502de795eb8bd398f8fa946a89afad8edca83b3bac21077"
+    },
+    {
+      "path": "engine/tests/test_v02.py",
+      "sha256": "677a8b17d8d11bc9629ac5c325715910284e3eded500a3203b54db5601d80b48"
+    },
+    {
+      "path": "engine/tests/test_v08_ai.py",
+      "sha256": "c17b52de87aadb9aec50fc3d49984d179ab2ada8e5720976ddc6adee9b778693"
+    },
+    {
+      "path": "engine/tests/test_v08_biomedical.py",
+      "sha256": "e9ae83f16b37d5c322b2789c256a471b9509d48af5140af8a8226e3806311366"
+    },
+    {
+      "path": "engine/tests/test_v09_controls.py",
+      "sha256": "d2cefc17a3aa01d8dde53c3fc8cef53d28b07626018e3f6d723f1ac7a195f538"
+    },
+    {
+      "path": "engine/tests/test_voice_v100.py",
+      "sha256": "f0465ffd09cdcf5a57e2f57a824965c159d4a80f65bde028dd1a11e48249347a"
+    },
+    {
+      "path": "engine/tests/voice_ui_unit.cjs",
+      "sha256": "a2a8953d4daf3cfc8a19839e704c7b86ff8115c9e2366718f410247bf1475dbc"
+    },
+    {
+      "path": "engine/tools/demo_asthral.py",
+      "sha256": "5725f7a08d45607f39d80c57281ad71506aa08965e5a8d30363c7bfc1aecf459"
+    },
+    {
+      "path": "engine/tools/demo_astronaut_v101.py",
+      "sha256": "3a08108f15e68045c533d9086a1cab1cbe58b1759c9d1c827f11397b8f61ce7c"
+    },
+    {
+      "path": "engine/tools/demo_management_v101.py",
+      "sha256": "f57f92228d27dcc0844e3ea9c24b2e3e4013c49b4cd5bc7f4e37fa886a76f650"
+    },
+    {
+      "path": "engine/tools/download_local_ai.py",
+      "sha256": "a0e8398580c21ee79fef1c34b5ee0976c2c1528acba51af5ca0e889a2976e00b"
+    },
+    {
+      "path": "engine/tools/evaluate_reserved_once.py",
+      "sha256": "222305ca894e3dbc625004ab8902a45ab9eb37e821b3cdcd854337e5a29f46f1"
+    },
+    {
+      "path": "engine/tools/setup_asthral.py",
+      "sha256": "aae8662180ff8cb00e5bf010641aab9abf35ce6ec21f904c42f4da55e473cc56"
+    },
+    {
+      "path": "engine/tools/setup_voice.py",
+      "sha256": "33cc817af24fbcd364143ee4767bf459ee087a706a8434fcf5b4b6ddb6024aa8"
+    },
+    {
+      "path": "engine/tools/start_ollama_vigile.py",
+      "sha256": "febf05af2828afa309a230350bf22cf090e0221b00d0f75b7d41d1e1889ce157"
+    },
+    {
+      "path": "engine/vigile/__init__.py",
+      "sha256": "c838729e2a0e7854b4c093e321b110dff99b2398328bfa03fc61bfea753fc906"
+    },
+    {
+      "path": "engine/vigile/__main__.py",
+      "sha256": "d0f1e771a9ba6f40c4c13c134ade1f7d88f3fa70f34b780f903fc94b5da5672a"
+    },
+    {
+      "path": "engine/vigile/adapters.py",
+      "sha256": "75e9afa0647435aeab6229aa28db955a8a24d6f1f3fa31131630df14a3194731"
+    },
+    {
+      "path": "engine/vigile/ai_evaluation.py",
+      "sha256": "2dc8718f7ac744f02c14c8193dbc9b6ed4b1d9e0004497e7c078747e1677a6c7"
+    },
+    {
+      "path": "engine/vigile/algorithms.py",
+      "sha256": "983fe436222ee786dc444fe637dd3921498cbdaae627a007fd00a852ad6b5590"
+    },
+    {
+      "path": "engine/vigile/api.py",
+      "sha256": "7a75619c6f5bf3933e96a062cb10f2598da28dadb0e2eedb80271faf51eb1034"
+    },
+    {
+      "path": "engine/vigile/assistant_safety.py",
+      "sha256": "a0a1e1a7b71c03b47a921ebfb21e7ae6bb0210e8bffd6202ef8518538c841849"
+    },
+    {
+      "path": "engine/vigile/clinical_api.py",
+      "sha256": "646f04e58b6de30bab71ab7a5c87b6ef3ec7c5ecd247ce29d754a6322b6e928e"
+    },
+    {
+      "path": "engine/vigile/clinical_contracts.py",
+      "sha256": "da014064e0a1f6329f42512de72c0fd0b5724caf6d249c342c03be9edeec10fc"
+    },
+    {
+      "path": "engine/vigile/clinical_demo.py",
+      "sha256": "a920006fc576f59cf1a8342d99081a14bcd16a18052968d1936aa7f2eeb9fc92"
+    },
+    {
+      "path": "engine/vigile/clinical_differential.py",
+      "sha256": "a19c7cb21897d8d6359e100e24995a937d0e8edca360febf9cc985b426e80d91"
+    },
+    {
+      "path": "engine/vigile/clinical_engine.py",
+      "sha256": "ba6ad652f2f919cdd1548517510eabe18f035cf4a2f4afd0315153501af9667d"
+    },
+    {
+      "path": "engine/vigile/clinical_knowledge.py",
+      "sha256": "ffb6316fd90abe2cc70071cd201a401e6cee7bc30e55c7b9f26e0c74e7ef08f5"
+    },
+    {
+      "path": "engine/vigile/clinical_knowledge/contraindications.json",
+      "sha256": "c7b03068b4345d553e7b002c2fbdd2207ff855b6664c01b72fe96e2b6d95fcc7"
+    },
+    {
+      "path": "engine/vigile/clinical_knowledge/diagnostic_criteria.json",
+      "sha256": "3aee3add20e11ace8f192969ce0ce827b1ea163e55935110cc5afdd6c016c8ee"
+    },
+    {
+      "path": "engine/vigile/clinical_knowledge/diagnostic_tests.json",
+      "sha256": "ee49c8077105613c59fb8b8a5d3c61a6497616579205628462d02ac4f59d8a8d"
+    },
+    {
+      "path": "engine/vigile/clinical_knowledge/differential_rules.json",
+      "sha256": "22daab629bd06ce9756d940c63b3ebbf9dca37811d29467520fc2e27bce178b7"
+    },
+    {
+      "path": "engine/vigile/clinical_knowledge/manifest.json",
+      "sha256": "aebd5cf96c6892066e72c9207f87f331e29dfffe2ddeff45108e70faf4835a27"
+    },
+    {
+      "path": "engine/vigile/clinical_knowledge/sources_verified.json",
+      "sha256": "2c41be379e10b0c2ba3f7077fd47a9ae138f31addee1a9a2829f3f9bd815c2cd"
+    },
+    {
+      "path": "engine/vigile/clinical_knowledge/space_applicability.json",
+      "sha256": "d86e575957ab11f2abb831a1e0f64897586b0fe2ffd9aa5aee4d51bdc5df65b0"
+    },
+    {
+      "path": "engine/vigile/clinical_knowledge/synthetic_cases.json",
+      "sha256": "24f2f3e3bc0cbd749167c9bdbd69765a5f36a04ad9c0691aa92efc492852ab81"
+    },
+    {
+      "path": "engine/vigile/clinical_knowledge/treatment_protocols.json",
+      "sha256": "89a33123f49782318595967228cba6e7285d3f5662b5cbe7bda4df06d49130cc"
+    },
+    {
+      "path": "engine/vigile/clinical_knowledge/v07-extension.json",
+      "sha256": "b258ff2d79ab79355f65826466c9fc3e7a52380b749ec18ef2eb4700759e4fd8"
+    },
+    {
+      "path": "engine/vigile/clinical_logic.py",
+      "sha256": "9a3705bbf259489b1de9d0ea436ce57908ee5bd5476e7144dcb5819bb5f8e665"
+    },
+    {
+      "path": "engine/vigile/clinical_models.py",
+      "sha256": "c95c917eff4d732b373ddaf459fef3a5aa7e3ea68eb5a2f474ddc4a0def45c0d"
+    },
+    {
+      "path": "engine/vigile/clinical_simulator.py",
+      "sha256": "780efe1e8f7e53f5ea4589a64f0fc86004cad660c1ad583d4e1b995823d6ef55"
+    },
+    {
+      "path": "engine/vigile/conversational.py",
+      "sha256": "4d8a64a8f97ec8bb863b13d096f71b9a05761a50f9facb529832271242486f6c"
+    },
+    {
+      "path": "engine/vigile/credentials.py",
+      "sha256": "5e84fa82d14324acb303238f1072e56cbdc6f36f69a5aff47cef91583df30a72"
+    },
+    {
+      "path": "engine/vigile/dashboard_api.py",
+      "sha256": "2df79db1b6ca3838286b4870cfda99ffcd81387b2745bb674816d7d36ed8b85b"
+    },
+    {
+      "path": "engine/vigile/demo.py",
+      "sha256": "6c7b3433bef72e1cd022f472e7f792463a5fed332d934f51c21a20863c93f179"
+    },
+    {
+      "path": "engine/vigile/documentary.py",
+      "sha256": "6c7cf69e1d7d44931986cb078f08159f9741a9f835e3c9cd4eceef5edba299f1"
+    },
+    {
+      "path": "engine/vigile/encrypted_storage.py",
+      "sha256": "9a3ab025f86f8034eef0a69cf0b0efb20af9af1242b98ea1c16ff0878b1218c7"
+    },
+    {
+      "path": "engine/vigile/english.py",
+      "sha256": "1d08391611c8b0e9e1a25f2da5414c923fdfb0f052f06178805353249a878c6d"
+    },
+    {
+      "path": "engine/vigile/extensions.py",
+      "sha256": "c258fdc0ac16ddc0a4648a94019d0af184ea4bcf2eda8c8ece778e47b877559d"
+    },
+    {
+      "path": "engine/vigile/hybrid_retrieval.py",
+      "sha256": "bdf79d1b1dbe5935dd9df782ff2a567f281d0561b41491325151244bfa2062d6"
+    },
+    {
+      "path": "engine/vigile/inference_failures.py",
+      "sha256": "54115f93109bc0b12bf06640ee96439281897357cd3da86c72d56507eda46e7a"
+    },
+    {
+      "path": "engine/vigile/integration.py",
+      "sha256": "3b4d4e204d225ad9599724cda3ea9f9e67206eb3d52f6e9d11f020c1df94e440"
+    },
+    {
+      "path": "engine/vigile/knowledge_v08.py",
+      "sha256": "31db6998f007c7bbed1be0a9ed2f9105a437e1705924002442646f683eeb78a9"
+    },
+    {
+      "path": "engine/vigile/local_assistant.py",
+      "sha256": "450f5e99375b946cb29edbac1fc2c54e633c8d97336cecad83012c989302fa80"
+    },
+    {
+      "path": "engine/vigile/local_protection.py",
+      "sha256": "b68a19a826c6685749af0c449b18bcf9c55fba4abbeb3918e54ae91b1b6df614"
+    },
+    {
+      "path": "engine/vigile/local_runtime.py",
+      "sha256": "a2874c9a5d046f9c04db9ecd7b6e178fc5adfbdbb1877b63696eb275a7276a08"
+    },
+    {
+      "path": "engine/vigile/longitudinal_assistant.py",
+      "sha256": "453925f1292fb807c89cd4a39271db97208d63bb9be166674a8cac91344bc342"
+    },
+    {
+      "path": "engine/vigile/management.py",
+      "sha256": "67e45f67e44766569bcdd8411c7172f4278b2ed234d944f414d5d8456384f74e"
+    },
+    {
+      "path": "engine/vigile/mission_context.py",
+      "sha256": "eba742226415c9a7b562ec268fd5b86a26c461d0ff46d59a8a108f430df05717"
+    },
+    {
+      "path": "engine/vigile/mission_demo.py",
+      "sha256": "6204d0692f417f859c5a4cf5487a65ded4898f5fb326bda30e4a0bf6e0e3d952"
+    },
+    {
+      "path": "engine/vigile/mission_frames.py",
+      "sha256": "4609ba683dcd7eb15135f245be75b2d4a352ed6aa5da201869fcb598d9d1752a"
+    },
+    {
+      "path": "engine/vigile/mission_review.py",
+      "sha256": "3fce1369bde8f82cfb440e5049604d0e578b4a04f5a2ae2e0d0833ea7066b716"
+    },
+    {
+      "path": "engine/vigile/models.py",
+      "sha256": "c8bbac4e9f29bbf504666d20b63a64b098515bb80e166a305a660a4b08ee8765"
+    },
+    {
+      "path": "engine/vigile/monitoring.py",
+      "sha256": "56b76c132d5c0cb7aa8c3b53b0c01738b79cbe7e52fcea5e403a0ffee5b9879c"
+    },
+    {
+      "path": "engine/vigile/monitoring_demo.py",
+      "sha256": "03a700743e8de4943eb3e535b276bc24152326fd87e17cff6b4877eda2f56ec6"
+    },
+    {
+      "path": "engine/vigile/monitoring_models.py",
+      "sha256": "d0e8d8432ffdf1a7bbc2f8a9ea5fe25876acbf664477881a602d9473810bd28d"
+    },
+    {
+      "path": "engine/vigile/monitoring_portal_demo.py",
+      "sha256": "204e5ff05bdeb2b11af3d4ddd6ff72c47c0748973eda111a26650acc1590f610"
+    },
+    {
+      "path": "engine/vigile/offline_library.py",
+      "sha256": "3375f9783ccb810f4285b6eaf1a90a76b63685b457a9a6a5592c215fa8495477"
+    },
+    {
+      "path": "engine/vigile/pathways.py",
+      "sha256": "9d349d467beadeccf202b5fbbf533640adef6930998a862d24dcc47e6a523747"
+    },
+    {
+      "path": "engine/vigile/portal.py",
+      "sha256": "0a905a839d2a514a59b3d9637db2417dacd5e901e8181b4266b393df817f0364"
+    },
+    {
+      "path": "engine/vigile/portal_demo.py",
+      "sha256": "d314ea8eb790662f3ac9ac670a70b4d2eb9e0815bf3d583570cd17def2ba424b"
+    },
+    {
+      "path": "engine/vigile/portal_documents.py",
+      "sha256": "ad15b2f3e1dc271259401bbfb0d7cefc82015ed280e8ff58a0e3be77525adfc5"
+    },
+    {
+      "path": "engine/vigile/portal_sessions.py",
+      "sha256": "cfee241ed0aae800c865a5b1531e73cabd78f7e098559c39342d7caaca3766fc"
+    },
+    {
+      "path": "engine/vigile/product_demo.py",
+      "sha256": "3d92a8ba995a90812d3064348da72a9dc1ec92ef7a0fac93fcd120826035fc88"
+    },
+    {
+      "path": "engine/vigile/quality.py",
+      "sha256": "c2615e137b638b198fa34aed949e295a941627254015fa0be650df752ac060d4"
+    },
+    {
+      "path": "engine/vigile/registry.py",
+      "sha256": "dd9f4c5d05631d0457fffaa5fe409b457ef30086280b1ce291f6f52ad0553a95"
+    },
+    {
+      "path": "engine/vigile/retrieval_bm25.py",
+      "sha256": "164be2c18526be25e01abd47e8c0edf87179c9334517d03c5150af31e11598f7"
+    },
+    {
+      "path": "engine/vigile/rules.py",
+      "sha256": "a80f37fa03730de692afd77b7d248265bbceb15b5a912eb976bc0e9682641f20"
+    },
+    {
+      "path": "engine/vigile/security.py",
+      "sha256": "73d9a21a73b70b4e5061285c401e017a7b13fa87b07951b4a38159fd95d4b519"
+    },
+    {
+      "path": "engine/vigile/service.py",
+      "sha256": "de9fa4c02f03ea5f205dd744935e87fb9285a4f2a48930673e23cda21672d056"
+    },
+    {
+      "path": "engine/vigile/simulator.py",
+      "sha256": "42b01a2c697ee50d8320e7c0eb7501e3cbe21ae7a229ea3da8eeb882c918bbf8"
+    },
+    {
+      "path": "engine/vigile/space_compute.py",
+      "sha256": "5202790cceb25450a85c77232dd614ce25a561de27639601d5192cb5c949b67e"
+    },
+    {
+      "path": "engine/vigile/store.py",
+      "sha256": "861d46f4d071fed5cb1edd5e4db3b58f1dd6830739499dd7fb80b3ea20613af7"
+    },
+    {
+      "path": "engine/vigile/structured_facts.py",
+      "sha256": "c118a7268acf3027595579348caf336f32c2c0239421be59f124f35bc3e9db14"
+    },
+    {
+      "path": "engine/vigile/voice.py",
+      "sha256": "8715ff27a1d60115223659d4b720a4c0c98150c9c21e236a8f903215b4f26f38"
+    },
+    {
+      "path": "engine/vigile/voice_api.py",
+      "sha256": "c44a43f6db3e8c931cba8c9c5b2500a8fabf92ec3e6bfc461460ace995901aeb"
+    },
+    {
+      "path": "engine/vigile/voice_assets/models.json",
+      "sha256": "5b50404041654697cb72a2f46b84e3ec0d0907699b749886d5801b504f696b34"
+    },
+    {
+      "path": "engine/vigile/voice_assets/sapi.ps1",
+      "sha256": "65d0857cd6d06d573f9f17730c31eaf75b368387572a2b40cf65e3cac0a207af"
+    },
+    {
+      "path": "engine/vigile/web/app.js",
+      "sha256": "1105e971d995e7d7037c05745e926690d0fbbc3f835cd5cc5453169207f20e7a"
+    },
+    {
+      "path": "engine/vigile/web/index.html",
+      "sha256": "783828b2b7abab27628711be96c32383293c81c32f0b5e8bb580db14cdf11234"
+    },
+    {
+      "path": "engine/vigile/web/management.js",
+      "sha256": "8dbce75a9a1c8773dab8ac30927dd1422dbf7ae484925fe458bf76921b270e48"
+    },
+    {
+      "path": "engine/vigile/web/recorder-worklet.js",
+      "sha256": "4ca8182be376cdd1add3e8ddb2b9cbdaf894fd184aa55cde5ba4cce9b6589e78"
+    },
+    {
+      "path": "engine/vigile/web/style.css",
+      "sha256": "2b1cadca6ac21ef82acb14e5431ebb625dae0f67d4b1e441ab7ee1ce4b599a64"
+    },
+    {
+      "path": "engine/vigile/web/translations-en.json",
+      "sha256": "e581396392a792b5db464b2ea57f08f237a93313e481bdfe41b91cb3c8dc8e8d"
+    },
+    {
+      "path": "engine/vigile/web/translations.js",
+      "sha256": "882acc5e2b45acd2c99cd8bf87df16e0b6a9320c4cb12af6cbc3112334ac0322"
+    },
+    {
+      "path": "engine/vigile/web/voice-controller.js",
+      "sha256": "b659044c8e506ef22ee0e0cdf4c54fb70f5803610aa78a1a4c510195d9b413e8"
+    }
+  ],
+  "post_test_documentation_change": "Only README model-import relative path clarified; no code, criteria or configuration changed."
+}

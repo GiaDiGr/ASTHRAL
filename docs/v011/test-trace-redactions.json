@@ -1,0 +1,13 @@
+{
+  "reason": "Remove random ephemeral pytest fixture credentials from failed development tracebacks; retain test outcome, stack, clinical data and failure cause. No historical server credentials copied.",
+  "changes": [
+    {
+      "file": "development-mission-tests.xml",
+      "redacted_ephemeral_test_tokens": 2
+    },
+    {
+      "file": "final-tests-02.xml",
+      "redacted_ephemeral_test_tokens": 2
+    }
+  ]
+}

@@ -1,0 +1,102 @@
+{
+  "synthetic": true,
+  "clinical_validation": false,
+  "measurement_count": 38,
+  "dataset_hash": "5091e65d64ebe5eebc6701a17d306ef365cc50684769c2cfd7e947a951260f1a",
+  "baseline_value": 44.91,
+  "longitudinal_slope_per_day": -0.12917666666666666,
+  "postflight_slope_per_day": 0.449925,
+  "findings": {
+    "aerobic": "d195e945af5bf8b7e87610d73627353e2169e2b159dacf863a01de66cb3f1afb",
+    "muscle": "2a06a63352188bf44a064fd2b1535d52ee1ce5f7d2a4d91b508a6e3fb01adcb7",
+    "environment": "0dcc6e3a1847c407d814e1633d8f29c29c3fdea78e3f6e6dd80aa9b593024de8",
+    "inconclusive": "bbdbf28a7db3550a39678ca735a45747a39347929aade57ce8f774664fecb462"
+  },
+  "rule_results": [
+    "REQUIREMENT_NOT_MET",
+    "REQUIREMENT_NOT_MET",
+    "REQUIREMENT_NOT_MET"
+  ],
+  "inconclusive_results": [
+    {
+      "result": "INCONCLUSIVE",
+      "reason": "INSUFFICIENT_TEMPORAL_COVERAGE"
+    },
+    {
+      "result": "INCONCLUSIVE",
+      "reason": "PHASE_MISMATCH"
+    },
+    {
+      "result": "INCONCLUSIVE",
+      "reason": "NOT_MEASURED"
+    },
+    {
+      "result": "INCONCLUSIVE",
+      "reason": "INVALID"
+    },
+    {
+      "result": "INCONCLUSIVE",
+      "reason": "INVALID_CALIBRATION"
+    },
+    {
+      "result": "INCONCLUSIVE",
+      "reason": "DIMENSIONAL_MISMATCH"
+    },
+    {
+      "result": "INCONCLUSIVE",
+      "reason": "OUTSIDE_TECHNICAL_RANGE"
+    }
+  ],
+  "quality_states": [
+    "NOT_MEASURED",
+    "INVALID",
+    "INVALID_CALIBRATION",
+    "DIMENSIONAL_MISMATCH",
+    "OUTSIDE_TECHNICAL_RANGE"
+  ],
+  "multisystem": "NOT_INFERRED",
+  "followup": "COMPLETED_BY_HUMAN",
+  "reader_results": 12,
+  "audit_valid": true,
+  "replay_verified": true,
+  "clinical_execution": "BLOCKED",
+  "resource_result": "POLICY_CONFLICT",
+  "performance": {
+    "host_platform": "Windows-11-10.0.26300-SP0",
+    "python": "3.13.16",
+    "logical_cpus": 32,
+    "startup_seconds": 1.6897753999946872,
+    "workload_seconds": 2.070415900001535,
+    "server_pid_measured": 480,
+    "requests": 90,
+    "request_latency_ms": {
+      "median": 19.19869999983348,
+      "p95": 35.34310001123231,
+      "max": 111.354399996344
+    },
+    "server_counters_before": {
+      "available": true,
+      "working_set_bytes": 62832640,
+      "peak_working_set_bytes": 62832640,
+      "cpu_seconds": 1.046875
+    },
+    "server_counters_after": {
+      "available": true,
+      "working_set_bytes": 65789952,
+      "peak_working_set_bytes": 67149824,
+      "cpu_seconds": 1.5625
+    },
+    "workload_cpu_seconds": 0.515625,
+    "cpu_percent_one_core": 24.90441654740082,
+    "sqlite_live_bytes_including_wal": 1672536,
+    "scope": "Single sequential synthetic workload. Includes audit and client overhead; not flight qualification or a load test.",
+    "sqlite_closed_bytes": 585728
+  },
+  "offline_test": "PASSED_WITH_PYTHON_EXTERNAL_SOCKET_GUARD_LOOPBACK_ALLOWED_NOT_OS_FIREWALL",
+  "output_directory": "C:\\Users\\Gianni\\Desktop\\Vigile\\engine\\data\\spaceapps-demo",
+  "persisted_after_database_reopen": true,
+  "audit_checkpoint": {
+    "sequence": 77,
+    "hash": "b29f14c975beb373d3e33a84b6c8611d2cea9be06e3da8cb2e47d76a2ed43457"
+  }
+}
