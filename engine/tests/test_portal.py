@@ -176,6 +176,8 @@ def test_computer_vision_uses_existing_authenticated_portal(services):
     assert portal.get('/assets/computer-vision.js').status_code==200
     assert portal.get('/assets/astronaut-earth-login.png').status_code==200
     assert portal.get('/assets/astronaut-earth-login.png').headers['content-type']=='image/png'
+    login_css=portal.get('/assets/style.css').text
+    assert 'rgba(255,255,255,.26)' in login_css and 'background-color:rgba(255,255,255,.92)' in login_css
     page=portal.get('/').text
     assert 'Computer Vision / Análisis de Imágenes' in page
     assert all(f'data-view="{name}"' in page for name in ('skinguard','ocularvision','echovision','motionguard'))
