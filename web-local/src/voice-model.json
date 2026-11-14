@@ -1,0 +1,36 @@
+{
+  "model": "vosk-model-small-en-us-0.15",
+  "license": "Apache-2.0",
+  "source": "https://alphacephei.com/vosk/models/vosk-model-small-en-us-0.15.zip",
+  "original_archive_sha256": "30f26242c4eb449f948e42cb302dd7a686cb29a3423a8367f99ff41780942498",
+  "bytes": 41116478,
+  "sha256": "da7c2eeee0e8b8d79703e714a82d1f8aec130edcdc77d85530d78588287592f0",
+  "parts": [
+    {
+      "path": "voice-assets/part-00.bin",
+      "bytes": 8388608,
+      "sha256": "9f7d6a166b88e8b3515f15712ab919406c1d530827a85c43a23de70eed882388"
+    },
+    {
+      "path": "voice-assets/part-01.bin",
+      "bytes": 8388608,
+      "sha256": "84b6c0f8e47f5c124eeb6be10efbaa2f0b8f25fc2979db7aef69af1b9f794079"
+    },
+    {
+      "path": "voice-assets/part-02.bin",
+      "bytes": 8388608,
+      "sha256": "3c803f8af710b3e220a9654959c2cd93b8b52ba732fc8a36e2ac0474392eef55"
+    },
+    {
+      "path": "voice-assets/part-03.bin",
+      "bytes": 8388608,
+      "sha256": "2b10006b564034df6fb61d2798aa9d96f4c7862765bd97559be599323316b81b"
+    },
+    {
+      "path": "voice-assets/part-04.bin",
+      "bytes": 7562046,
+      "sha256": "1ee0e055603bc71d6717915ab9016523cd068d298e67a0e9dcdfe30a4a0aec88"
+    }
+  ],
+  "runtime": "vosk-browser-0.0.8"
+}

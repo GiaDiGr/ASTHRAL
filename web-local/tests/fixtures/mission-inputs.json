@@ -1,0 +1,4858 @@
+[
+  {
+    "id": "MISSION-ce-89a19c727b40aff053364c62242b656c",
+    "snapshot": {
+      "measurement_records": [],
+      "mission": {
+        "environment": "HABITABLE_VOLUME",
+        "exposure_context": null,
+        "extraterrestrial_surface_eva_planned_or_required": null,
+        "gravity": "EARTH",
+        "id": "mission-v011",
+        "microgravity_eva_planned_or_required": null,
+        "mode": "NOMINAL",
+        "phase": "PRE_MISSION",
+        "synthetic": true
+      },
+      "observations": [],
+      "profile": {
+        "id": "mission-crew-A",
+        "mission_id": "mission-v011",
+        "synthetic": true
+      },
+      "request": {
+        "age_years": 35,
+        "as_of": "2026-07-25T12:00:00Z",
+        "condition_id": "ORTHOSTATIC_HYPOTENSION",
+        "measurement_bindings": [],
+        "mission_id": "mission-v011",
+        "observations": [],
+        "population": "NONPREGNANT_ADULT",
+        "presentation_id": null,
+        "resource_policy": "DECLARED_R2",
+        "resources": {},
+        "subject_id": "mission-crew-A",
+        "window_start": "2026-07-25T12:00:00Z"
+      },
+      "resource_snapshot": {
+        "as_of": "2026-07-25T12:00:00Z",
+        "declared_flags": {},
+        "inventory_hash": null,
+        "inventory_id": null,
+        "inventory_version": null,
+        "mission_id": "mission-v011",
+        "policy": "DECLARED_R2",
+        "resources": [],
+        "synthetic_only": true
+      }
+    }
+  },
+  {
+    "id": "MISSION-ce-10adb4314171b9d5e4ad1b0a24cdce9e",
+    "snapshot": {
+      "measurement_records": [],
+      "mission": {
+        "environment": "HABITABLE_VOLUME",
+        "exposure_context": null,
+        "extraterrestrial_surface_eva_planned_or_required": null,
+        "gravity": "EARTH",
+        "id": "mission-v011",
+        "microgravity_eva_planned_or_required": null,
+        "mode": "NOMINAL",
+        "phase": "PRE_MISSION",
+        "synthetic": true
+      },
+      "observations": [],
+      "profile": {
+        "id": "mission-crew-B",
+        "mission_id": "mission-v011",
+        "synthetic": true
+      },
+      "request": {
+        "age_years": 42,
+        "as_of": "2026-07-25T12:00:00Z",
+        "condition_id": "ORTHOSTATIC_HYPOTENSION",
+        "measurement_bindings": [],
+        "mission_id": "mission-v011",
+        "observations": [],
+        "population": "NONPREGNANT_ADULT",
+        "presentation_id": null,
+        "resource_policy": "DECLARED_R2",
+        "resources": {},
+        "subject_id": "mission-crew-B",
+        "window_start": "2026-07-25T12:00:00Z"
+      },
+      "resource_snapshot": {
+        "as_of": "2026-07-25T12:00:00Z",
+        "declared_flags": {},
+        "inventory_hash": null,
+        "inventory_id": null,
+        "inventory_version": null,
+        "mission_id": "mission-v011",
+        "policy": "DECLARED_R2",
+        "resources": [],
+        "synthetic_only": true
+      }
+    }
+  },
+  {
+    "id": "MISSION-ce-790a1af87a094402977ca98590185b8c",
+    "snapshot": {
+      "measurement_records": [],
+      "mission": {
+        "environment": "HABITABLE_VOLUME",
+        "exposure_context": null,
+        "extraterrestrial_surface_eva_planned_or_required": null,
+        "gravity": "EARTH",
+        "id": "mission-v011",
+        "microgravity_eva_planned_or_required": null,
+        "mode": "NOMINAL",
+        "phase": "PRE_MISSION",
+        "synthetic": true
+      },
+      "observations": [],
+      "profile": {
+        "id": "mission-crew-A",
+        "mission_id": "mission-v011",
+        "synthetic": true
+      },
+      "request": {
+        "age_years": 35,
+        "as_of": "2026-07-27T12:00:00Z",
+        "condition_id": "ORTHOSTATIC_HYPOTENSION",
+        "measurement_bindings": [],
+        "mission_id": "mission-v011",
+        "observations": [],
+        "population": "NONPREGNANT_ADULT",
+        "presentation_id": null,
+        "resource_policy": "DECLARED_R2",
+        "resources": {},
+        "subject_id": "mission-crew-A",
+        "window_start": "2026-07-27T12:00:00Z"
+      },
+      "resource_snapshot": {
+        "as_of": "2026-07-27T12:00:00Z",
+        "declared_flags": {},
+        "inventory_hash": null,
+        "inventory_id": null,
+        "inventory_version": null,
+        "mission_id": "mission-v011",
+        "policy": "DECLARED_R2",
+        "resources": [],
+        "synthetic_only": true
+      }
+    }
+  },
+  {
+    "id": "MISSION-ce-085eb6e6be5dc747da9d3ecfaaa2958d",
+    "snapshot": {
+      "measurement_records": [],
+      "mission": {
+        "environment": "HABITABLE_VOLUME",
+        "exposure_context": null,
+        "extraterrestrial_surface_eva_planned_or_required": null,
+        "gravity": "EARTH",
+        "id": "mission-v011",
+        "microgravity_eva_planned_or_required": null,
+        "mode": "NOMINAL",
+        "phase": "PRE_MISSION",
+        "synthetic": true
+      },
+      "observations": [],
+      "profile": {
+        "id": "mission-crew-B",
+        "mission_id": "mission-v011",
+        "synthetic": true
+      },
+      "request": {
+        "age_years": 42,
+        "as_of": "2026-07-27T12:00:00Z",
+        "condition_id": "ORTHOSTATIC_HYPOTENSION",
+        "measurement_bindings": [],
+        "mission_id": "mission-v011",
+        "observations": [],
+        "population": "NONPREGNANT_ADULT",
+        "presentation_id": null,
+        "resource_policy": "DECLARED_R2",
+        "resources": {},
+        "subject_id": "mission-crew-B",
+        "window_start": "2026-07-27T12:00:00Z"
+      },
+      "resource_snapshot": {
+        "as_of": "2026-07-27T12:00:00Z",
+        "declared_flags": {},
+        "inventory_hash": null,
+        "inventory_id": null,
+        "inventory_version": null,
+        "mission_id": "mission-v011",
+        "policy": "DECLARED_R2",
+        "resources": [],
+        "synthetic_only": true
+      }
+    }
+  },
+  {
+    "id": "MISSION-ce-bf828f0a877ce5a032e57dfae34b8687",
+    "snapshot": {
+      "measurement_records": [],
+      "mission": {
+        "environment": "HABITABLE_VOLUME",
+        "exposure_context": null,
+        "extraterrestrial_surface_eva_planned_or_required": null,
+        "gravity": "EARTH",
+        "id": "mission-v011",
+        "microgravity_eva_planned_or_required": null,
+        "mode": "NOMINAL",
+        "phase": "PRE_MISSION",
+        "synthetic": true
+      },
+      "observations": [],
+      "profile": {
+        "id": "mission-crew-A",
+        "mission_id": "mission-v011",
+        "synthetic": true
+      },
+      "request": {
+        "age_years": 35,
+        "as_of": "2026-07-29T12:00:00Z",
+        "condition_id": "ORTHOSTATIC_HYPOTENSION",
+        "measurement_bindings": [],
+        "mission_id": "mission-v011",
+        "observations": [],
+        "population": "NONPREGNANT_ADULT",
+        "presentation_id": null,
+        "resource_policy": "DECLARED_R2",
+        "resources": {},
+        "subject_id": "mission-crew-A",
+        "window_start": "2026-07-29T12:00:00Z"
+      },
+      "resource_snapshot": {
+        "as_of": "2026-07-29T12:00:00Z",
+        "declared_flags": {},
+        "inventory_hash": null,
+        "inventory_id": null,
+        "inventory_version": null,
+        "mission_id": "mission-v011",
+        "policy": "DECLARED_R2",
+        "resources": [],
+        "synthetic_only": true
+      }
+    }
+  },
+  {
+    "id": "MISSION-ce-e1722a472f9d32de83cbfad3572cddd0",
+    "snapshot": {
+      "measurement_records": [],
+      "mission": {
+        "environment": "HABITABLE_VOLUME",
+        "exposure_context": null,
+        "extraterrestrial_surface_eva_planned_or_required": null,
+        "gravity": "EARTH",
+        "id": "mission-v011",
+        "microgravity_eva_planned_or_required": null,
+        "mode": "NOMINAL",
+        "phase": "PRE_MISSION",
+        "synthetic": true
+      },
+      "observations": [],
+      "profile": {
+        "id": "mission-crew-B",
+        "mission_id": "mission-v011",
+        "synthetic": true
+      },
+      "request": {
+        "age_years": 42,
+        "as_of": "2026-07-29T12:00:00Z",
+        "condition_id": "ORTHOSTATIC_HYPOTENSION",
+        "measurement_bindings": [],
+        "mission_id": "mission-v011",
+        "observations": [],
+        "population": "NONPREGNANT_ADULT",
+        "presentation_id": null,
+        "resource_policy": "DECLARED_R2",
+        "resources": {},
+        "subject_id": "mission-crew-B",
+        "window_start": "2026-07-29T12:00:00Z"
+      },
+      "resource_snapshot": {
+        "as_of": "2026-07-29T12:00:00Z",
+        "declared_flags": {},
+        "inventory_hash": null,
+        "inventory_id": null,
+        "inventory_version": null,
+        "mission_id": "mission-v011",
+        "policy": "DECLARED_R2",
+        "resources": [],
+        "synthetic_only": true
+      }
+    }
+  },
+  {
+    "id": "MISSION-ce-18e3ab0ced2c4293a630b7414780a280",
+    "snapshot": {
+      "measurement_records": [],
+      "mission": {
+        "environment": "HABITABLE_VOLUME",
+        "exposure_context": null,
+        "extraterrestrial_surface_eva_planned_or_required": null,
+        "gravity": "MICROGRAVITY",
+        "id": "mission-v011",
+        "microgravity_eva_planned_or_required": null,
+        "mode": "NOMINAL",
+        "phase": "IN_MISSION",
+        "synthetic": true
+      },
+      "observations": [],
+      "profile": {
+        "id": "mission-crew-A",
+        "mission_id": "mission-v011",
+        "synthetic": true
+      },
+      "request": {
+        "age_years": 35,
+        "as_of": "2026-08-01T12:00:00Z",
+        "condition_id": "ORTHOSTATIC_HYPOTENSION",
+        "measurement_bindings": [],
+        "mission_id": "mission-v011",
+        "observations": [],
+        "population": "NONPREGNANT_ADULT",
+        "presentation_id": null,
+        "resource_policy": "DECLARED_R2",
+        "resources": {},
+        "subject_id": "mission-crew-A",
+        "window_start": "2026-08-01T12:00:00Z"
+      },
+      "resource_snapshot": {
+        "as_of": "2026-08-01T12:00:00Z",
+        "declared_flags": {},
+        "inventory_hash": null,
+        "inventory_id": null,
+        "inventory_version": null,
+        "mission_id": "mission-v011",
+        "policy": "DECLARED_R2",
+        "resources": [],
+        "synthetic_only": true
+      }
+    }
+  },
+  {
+    "id": "MISSION-ce-c5fe479ea1d6f04fc3a3d0534c93b13b",
+    "snapshot": {
+      "measurement_records": [],
+      "mission": {
+        "environment": "HABITABLE_VOLUME",
+        "exposure_context": null,
+        "extraterrestrial_surface_eva_planned_or_required": null,
+        "gravity": "MICROGRAVITY",
+        "id": "mission-v011",
+        "microgravity_eva_planned_or_required": null,
+        "mode": "NOMINAL",
+        "phase": "IN_MISSION",
+        "synthetic": true
+      },
+      "observations": [],
+      "profile": {
+        "id": "mission-crew-A",
+        "mission_id": "mission-v011",
+        "synthetic": true
+      },
+      "request": {
+        "age_years": 35,
+        "as_of": "2026-08-01T12:00:00Z",
+        "condition_id": "POTS",
+        "measurement_bindings": [],
+        "mission_id": "mission-v011",
+        "observations": [],
+        "population": "NONPREGNANT_ADULT",
+        "presentation_id": null,
+        "resource_policy": "DECLARED_R2",
+        "resources": {},
+        "subject_id": "mission-crew-A",
+        "window_start": "2026-08-01T12:00:00Z"
+      },
+      "resource_snapshot": {
+        "as_of": "2026-08-01T12:00:00Z",
+        "declared_flags": {},
+        "inventory_hash": null,
+        "inventory_id": null,
+        "inventory_version": null,
+        "mission_id": "mission-v011",
+        "policy": "DECLARED_R2",
+        "resources": [],
+        "synthetic_only": true
+      }
+    }
+  },
+  {
+    "id": "MISSION-ce-2f6b0d66590e4febe0e6745d4f45db62",
+    "snapshot": {
+      "measurement_records": [],
+      "mission": {
+        "environment": "HABITABLE_VOLUME",
+        "exposure_context": null,
+        "extraterrestrial_surface_eva_planned_or_required": null,
+        "gravity": "MICROGRAVITY",
+        "id": "mission-v011",
+        "microgravity_eva_planned_or_required": null,
+        "mode": "NOMINAL",
+        "phase": "IN_MISSION",
+        "synthetic": true
+      },
+      "observations": [],
+      "profile": {
+        "id": "mission-crew-B",
+        "mission_id": "mission-v011",
+        "synthetic": true
+      },
+      "request": {
+        "age_years": 42,
+        "as_of": "2026-08-01T12:00:00Z",
+        "condition_id": "ORTHOSTATIC_HYPOTENSION",
+        "measurement_bindings": [],
+        "mission_id": "mission-v011",
+        "observations": [],
+        "population": "NONPREGNANT_ADULT",
+        "presentation_id": null,
+        "resource_policy": "DECLARED_R2",
+        "resources": {},
+        "subject_id": "mission-crew-B",
+        "window_start": "2026-08-01T12:00:00Z"
+      },
+      "resource_snapshot": {
+        "as_of": "2026-08-01T12:00:00Z",
+        "declared_flags": {},
+        "inventory_hash": null,
+        "inventory_id": null,
+        "inventory_version": null,
+        "mission_id": "mission-v011",
+        "policy": "DECLARED_R2",
+        "resources": [],
+        "synthetic_only": true
+      }
+    }
+  },
+  {
+    "id": "MISSION-ce-7b4e452dccc9c2b8de6d69ab318b2980",
+    "snapshot": {
+      "measurement_records": [],
+      "mission": {
+        "environment": "HABITABLE_VOLUME",
+        "exposure_context": null,
+        "extraterrestrial_surface_eva_planned_or_required": null,
+        "gravity": "MICROGRAVITY",
+        "id": "mission-v011",
+        "microgravity_eva_planned_or_required": null,
+        "mode": "NOMINAL",
+        "phase": "IN_MISSION",
+        "synthetic": true
+      },
+      "observations": [],
+      "profile": {
+        "id": "mission-crew-B",
+        "mission_id": "mission-v011",
+        "synthetic": true
+      },
+      "request": {
+        "age_years": 42,
+        "as_of": "2026-08-01T12:00:00Z",
+        "condition_id": "POTS",
+        "measurement_bindings": [],
+        "mission_id": "mission-v011",
+        "observations": [],
+        "population": "NONPREGNANT_ADULT",
+        "presentation_id": null,
+        "resource_policy": "DECLARED_R2",
+        "resources": {},
+        "subject_id": "mission-crew-B",
+        "window_start": "2026-08-01T12:00:00Z"
+      },
+      "resource_snapshot": {
+        "as_of": "2026-08-01T12:00:00Z",
+        "declared_flags": {},
+        "inventory_hash": null,
+        "inventory_id": null,
+        "inventory_version": null,
+        "mission_id": "mission-v011",
+        "policy": "DECLARED_R2",
+        "resources": [],
+        "synthetic_only": true
+      }
+    }
+  },
+  {
+    "id": "MISSION-ce-3f01717a4989cc841cd1899134ad10ac",
+    "snapshot": {
+      "measurement_records": [],
+      "mission": {
+        "environment": "HABITABLE_VOLUME",
+        "exposure_context": null,
+        "extraterrestrial_surface_eva_planned_or_required": null,
+        "gravity": "MICROGRAVITY",
+        "id": "mission-v011",
+        "microgravity_eva_planned_or_required": null,
+        "mode": "NOMINAL",
+        "phase": "IN_MISSION",
+        "synthetic": true
+      },
+      "observations": [],
+      "profile": {
+        "id": "mission-crew-A",
+        "mission_id": "mission-v011",
+        "synthetic": true
+      },
+      "request": {
+        "age_years": 35,
+        "as_of": "2026-08-08T12:00:00Z",
+        "condition_id": "ORTHOSTATIC_HYPOTENSION",
+        "measurement_bindings": [],
+        "mission_id": "mission-v011",
+        "observations": [],
+        "population": "NONPREGNANT_ADULT",
+        "presentation_id": null,
+        "resource_policy": "DECLARED_R2",
+        "resources": {},
+        "subject_id": "mission-crew-A",
+        "window_start": "2026-08-08T12:00:00Z"
+      },
+      "resource_snapshot": {
+        "as_of": "2026-08-08T12:00:00Z",
+        "declared_flags": {},
+        "inventory_hash": null,
+        "inventory_id": null,
+        "inventory_version": null,
+        "mission_id": "mission-v011",
+        "policy": "DECLARED_R2",
+        "resources": [],
+        "synthetic_only": true
+      }
+    }
+  },
+  {
+    "id": "MISSION-ce-c9a14f8218f3bcabc394df84181bd27f",
+    "snapshot": {
+      "measurement_records": [],
+      "mission": {
+        "environment": "HABITABLE_VOLUME",
+        "exposure_context": null,
+        "extraterrestrial_surface_eva_planned_or_required": null,
+        "gravity": "MICROGRAVITY",
+        "id": "mission-v011",
+        "microgravity_eva_planned_or_required": null,
+        "mode": "NOMINAL",
+        "phase": "IN_MISSION",
+        "synthetic": true
+      },
+      "observations": [],
+      "profile": {
+        "id": "mission-crew-A",
+        "mission_id": "mission-v011",
+        "synthetic": true
+      },
+      "request": {
+        "age_years": 35,
+        "as_of": "2026-08-08T12:00:00Z",
+        "condition_id": "POTS",
+        "measurement_bindings": [],
+        "mission_id": "mission-v011",
+        "observations": [],
+        "population": "NONPREGNANT_ADULT",
+        "presentation_id": null,
+        "resource_policy": "DECLARED_R2",
+        "resources": {},
+        "subject_id": "mission-crew-A",
+        "window_start": "2026-08-08T12:00:00Z"
+      },
+      "resource_snapshot": {
+        "as_of": "2026-08-08T12:00:00Z",
+        "declared_flags": {},
+        "inventory_hash": null,
+        "inventory_id": null,
+        "inventory_version": null,
+        "mission_id": "mission-v011",
+        "policy": "DECLARED_R2",
+        "resources": [],
+        "synthetic_only": true
+      }
+    }
+  },
+  {
+    "id": "MISSION-ce-fa196860725b5768f0ee932d416a3d39",
+    "snapshot": {
+      "measurement_records": [],
+      "mission": {
+        "environment": "HABITABLE_VOLUME",
+        "exposure_context": null,
+        "extraterrestrial_surface_eva_planned_or_required": null,
+        "gravity": "MICROGRAVITY",
+        "id": "mission-v011",
+        "microgravity_eva_planned_or_required": null,
+        "mode": "NOMINAL",
+        "phase": "IN_MISSION",
+        "synthetic": true
+      },
+      "observations": [],
+      "profile": {
+        "id": "mission-crew-B",
+        "mission_id": "mission-v011",
+        "synthetic": true
+      },
+      "request": {
+        "age_years": 42,
+        "as_of": "2026-08-08T12:00:00Z",
+        "condition_id": "ORTHOSTATIC_HYPOTENSION",
+        "measurement_bindings": [],
+        "mission_id": "mission-v011",
+        "observations": [],
+        "population": "NONPREGNANT_ADULT",
+        "presentation_id": null,
+        "resource_policy": "DECLARED_R2",
+        "resources": {},
+        "subject_id": "mission-crew-B",
+        "window_start": "2026-08-08T12:00:00Z"
+      },
+      "resource_snapshot": {
+        "as_of": "2026-08-08T12:00:00Z",
+        "declared_flags": {},
+        "inventory_hash": null,
+        "inventory_id": null,
+        "inventory_version": null,
+        "mission_id": "mission-v011",
+        "policy": "DECLARED_R2",
+        "resources": [],
+        "synthetic_only": true
+      }
+    }
+  },
+  {
+    "id": "MISSION-ce-53c094e162fea548b324246ae15107f1",
+    "snapshot": {
+      "measurement_records": [],
+      "mission": {
+        "environment": "HABITABLE_VOLUME",
+        "exposure_context": null,
+        "extraterrestrial_surface_eva_planned_or_required": null,
+        "gravity": "MICROGRAVITY",
+        "id": "mission-v011",
+        "microgravity_eva_planned_or_required": null,
+        "mode": "NOMINAL",
+        "phase": "IN_MISSION",
+        "synthetic": true
+      },
+      "observations": [],
+      "profile": {
+        "id": "mission-crew-B",
+        "mission_id": "mission-v011",
+        "synthetic": true
+      },
+      "request": {
+        "age_years": 42,
+        "as_of": "2026-08-08T12:00:00Z",
+        "condition_id": "POTS",
+        "measurement_bindings": [],
+        "mission_id": "mission-v011",
+        "observations": [],
+        "population": "NONPREGNANT_ADULT",
+        "presentation_id": null,
+        "resource_policy": "DECLARED_R2",
+        "resources": {},
+        "subject_id": "mission-crew-B",
+        "window_start": "2026-08-08T12:00:00Z"
+      },
+      "resource_snapshot": {
+        "as_of": "2026-08-08T12:00:00Z",
+        "declared_flags": {},
+        "inventory_hash": null,
+        "inventory_id": null,
+        "inventory_version": null,
+        "mission_id": "mission-v011",
+        "policy": "DECLARED_R2",
+        "resources": [],
+        "synthetic_only": true
+      }
+    }
+  },
+  {
+    "id": "MISSION-ce-11b3b66f092c5bd994565462e23d77db",
+    "snapshot": {
+      "measurement_records": [],
+      "mission": {
+        "environment": "HABITABLE_VOLUME",
+        "exposure_context": null,
+        "extraterrestrial_surface_eva_planned_or_required": null,
+        "gravity": "MICROGRAVITY",
+        "id": "mission-v011",
+        "microgravity_eva_planned_or_required": null,
+        "mode": "NOMINAL",
+        "phase": "IN_MISSION",
+        "synthetic": true
+      },
+      "observations": [],
+      "profile": {
+        "id": "mission-crew-A",
+        "mission_id": "mission-v011",
+        "synthetic": true
+      },
+      "request": {
+        "age_years": 35,
+        "as_of": "2026-08-15T12:00:00Z",
+        "condition_id": "ORTHOSTATIC_HYPOTENSION",
+        "measurement_bindings": [],
+        "mission_id": "mission-v011",
+        "observations": [],
+        "population": "NONPREGNANT_ADULT",
+        "presentation_id": null,
+        "resource_policy": "DECLARED_R2",
+        "resources": {},
+        "subject_id": "mission-crew-A",
+        "window_start": "2026-08-15T12:00:00Z"
+      },
+      "resource_snapshot": {
+        "as_of": "2026-08-15T12:00:00Z",
+        "declared_flags": {},
+        "inventory_hash": null,
+        "inventory_id": null,
+        "inventory_version": null,
+        "mission_id": "mission-v011",
+        "policy": "DECLARED_R2",
+        "resources": [],
+        "synthetic_only": true
+      }
+    }
+  },
+  {
+    "id": "MISSION-ce-6f65acd014e5bba6c2c369b725bbc759",
+    "snapshot": {
+      "measurement_records": [],
+      "mission": {
+        "environment": "HABITABLE_VOLUME",
+        "exposure_context": null,
+        "extraterrestrial_surface_eva_planned_or_required": null,
+        "gravity": "MICROGRAVITY",
+        "id": "mission-v011",
+        "microgravity_eva_planned_or_required": null,
+        "mode": "NOMINAL",
+        "phase": "IN_MISSION",
+        "synthetic": true
+      },
+      "observations": [],
+      "profile": {
+        "id": "mission-crew-A",
+        "mission_id": "mission-v011",
+        "synthetic": true
+      },
+      "request": {
+        "age_years": 35,
+        "as_of": "2026-08-15T12:00:00Z",
+        "condition_id": "POTS",
+        "measurement_bindings": [],
+        "mission_id": "mission-v011",
+        "observations": [],
+        "population": "NONPREGNANT_ADULT",
+        "presentation_id": null,
+        "resource_policy": "DECLARED_R2",
+        "resources": {},
+        "subject_id": "mission-crew-A",
+        "window_start": "2026-08-15T12:00:00Z"
+      },
+      "resource_snapshot": {
+        "as_of": "2026-08-15T12:00:00Z",
+        "declared_flags": {},
+        "inventory_hash": null,
+        "inventory_id": null,
+        "inventory_version": null,
+        "mission_id": "mission-v011",
+        "policy": "DECLARED_R2",
+        "resources": [],
+        "synthetic_only": true
+      }
+    }
+  },
+  {
+    "id": "MISSION-ce-1d8c30ba85900e7212af0ce4bc2337ed",
+    "snapshot": {
+      "measurement_records": [],
+      "mission": {
+        "environment": "HABITABLE_VOLUME",
+        "exposure_context": null,
+        "extraterrestrial_surface_eva_planned_or_required": null,
+        "gravity": "MICROGRAVITY",
+        "id": "mission-v011",
+        "microgravity_eva_planned_or_required": null,
+        "mode": "NOMINAL",
+        "phase": "IN_MISSION",
+        "synthetic": true
+      },
+      "observations": [],
+      "profile": {
+        "id": "mission-crew-B",
+        "mission_id": "mission-v011",
+        "synthetic": true
+      },
+      "request": {
+        "age_years": 42,
+        "as_of": "2026-08-15T12:00:00Z",
+        "condition_id": "ORTHOSTATIC_HYPOTENSION",
+        "measurement_bindings": [],
+        "mission_id": "mission-v011",
+        "observations": [],
+        "population": "NONPREGNANT_ADULT",
+        "presentation_id": null,
+        "resource_policy": "DECLARED_R2",
+        "resources": {},
+        "subject_id": "mission-crew-B",
+        "window_start": "2026-08-15T12:00:00Z"
+      },
+      "resource_snapshot": {
+        "as_of": "2026-08-15T12:00:00Z",
+        "declared_flags": {},
+        "inventory_hash": null,
+        "inventory_id": null,
+        "inventory_version": null,
+        "mission_id": "mission-v011",
+        "policy": "DECLARED_R2",
+        "resources": [],
+        "synthetic_only": true
+      }
+    }
+  },
+  {
+    "id": "MISSION-ce-6e83df35ff88ce81e96699b127204453",
+    "snapshot": {
+      "measurement_records": [],
+      "mission": {
+        "environment": "HABITABLE_VOLUME",
+        "exposure_context": null,
+        "extraterrestrial_surface_eva_planned_or_required": null,
+        "gravity": "MICROGRAVITY",
+        "id": "mission-v011",
+        "microgravity_eva_planned_or_required": null,
+        "mode": "NOMINAL",
+        "phase": "IN_MISSION",
+        "synthetic": true
+      },
+      "observations": [],
+      "profile": {
+        "id": "mission-crew-B",
+        "mission_id": "mission-v011",
+        "synthetic": true
+      },
+      "request": {
+        "age_years": 42,
+        "as_of": "2026-08-15T12:00:00Z",
+        "condition_id": "POTS",
+        "measurement_bindings": [],
+        "mission_id": "mission-v011",
+        "observations": [],
+        "population": "NONPREGNANT_ADULT",
+        "presentation_id": null,
+        "resource_policy": "DECLARED_R2",
+        "resources": {},
+        "subject_id": "mission-crew-B",
+        "window_start": "2026-08-15T12:00:00Z"
+      },
+      "resource_snapshot": {
+        "as_of": "2026-08-15T12:00:00Z",
+        "declared_flags": {},
+        "inventory_hash": null,
+        "inventory_id": null,
+        "inventory_version": null,
+        "mission_id": "mission-v011",
+        "policy": "DECLARED_R2",
+        "resources": [],
+        "synthetic_only": true
+      }
+    }
+  },
+  {
+    "id": "MISSION-ce-705f4366b0a3476ebb6c739e7a581a77",
+    "snapshot": {
+      "measurement_records": [],
+      "mission": {
+        "environment": "HABITABLE_VOLUME",
+        "exposure_context": null,
+        "extraterrestrial_surface_eva_planned_or_required": null,
+        "gravity": "MICROGRAVITY",
+        "id": "mission-v011",
+        "microgravity_eva_planned_or_required": null,
+        "mode": "NOMINAL",
+        "phase": "IN_MISSION",
+        "synthetic": true
+      },
+      "observations": [],
+      "profile": {
+        "id": "mission-crew-A",
+        "mission_id": "mission-v011",
+        "synthetic": true
+      },
+      "request": {
+        "age_years": 35,
+        "as_of": "2026-08-19T12:00:00Z",
+        "condition_id": "ORTHOSTATIC_HYPOTENSION",
+        "measurement_bindings": [],
+        "mission_id": "mission-v011",
+        "observations": [],
+        "population": "NONPREGNANT_ADULT",
+        "presentation_id": null,
+        "resource_policy": "DECLARED_R2",
+        "resources": {},
+        "subject_id": "mission-crew-A",
+        "window_start": "2026-08-19T12:00:00Z"
+      },
+      "resource_snapshot": {
+        "as_of": "2026-08-19T12:00:00Z",
+        "declared_flags": {},
+        "inventory_hash": null,
+        "inventory_id": null,
+        "inventory_version": null,
+        "mission_id": "mission-v011",
+        "policy": "DECLARED_R2",
+        "resources": [],
+        "synthetic_only": true
+      }
+    }
+  },
+  {
+    "id": "MISSION-ce-31e4964f9d811b860bf65113f7a234f0",
+    "snapshot": {
+      "measurement_records": [],
+      "mission": {
+        "environment": "HABITABLE_VOLUME",
+        "exposure_context": null,
+        "extraterrestrial_surface_eva_planned_or_required": null,
+        "gravity": "MICROGRAVITY",
+        "id": "mission-v011",
+        "microgravity_eva_planned_or_required": null,
+        "mode": "NOMINAL",
+        "phase": "IN_MISSION",
+        "synthetic": true
+      },
+      "observations": [],
+      "profile": {
+        "id": "mission-crew-A",
+        "mission_id": "mission-v011",
+        "synthetic": true
+      },
+      "request": {
+        "age_years": 35,
+        "as_of": "2026-08-19T12:00:00Z",
+        "condition_id": "POTS",
+        "measurement_bindings": [],
+        "mission_id": "mission-v011",
+        "observations": [],
+        "population": "NONPREGNANT_ADULT",
+        "presentation_id": null,
+        "resource_policy": "DECLARED_R2",
+        "resources": {},
+        "subject_id": "mission-crew-A",
+        "window_start": "2026-08-19T12:00:00Z"
+      },
+      "resource_snapshot": {
+        "as_of": "2026-08-19T12:00:00Z",
+        "declared_flags": {},
+        "inventory_hash": null,
+        "inventory_id": null,
+        "inventory_version": null,
+        "mission_id": "mission-v011",
+        "policy": "DECLARED_R2",
+        "resources": [],
+        "synthetic_only": true
+      }
+    }
+  },
+  {
+    "id": "MISSION-ce-e5eacc1a2aff89131abff094d62f6fc1",
+    "snapshot": {
+      "measurement_records": [
+        {
+          "device": {
+            "alignment_seconds": 1,
+            "calibrated_at": "2026-07-02T12:00:00Z",
+            "calibration_id": "cal-mission-device-12",
+            "conflict_tolerance": 0.0,
+            "id": "mission-device-12",
+            "max_age_seconds": 172800,
+            "policy_reference": "V011_SYNTHETIC_TECHNICAL_FIXTURE_NOT_A_CLINICAL_PROTOCOL",
+            "synthetic": true,
+            "technical_max": 100000.0,
+            "technical_min": 0.0,
+            "unit": "mg/dL",
+            "valid_until": "2026-10-30T12:00:00Z",
+            "variable": "plasma_glucose_mg_dl"
+          },
+          "measurement": {
+            "calibration_id": "cal-mission-device-12",
+            "compartment": null,
+            "device_id": "mission-device-12",
+            "id": "mission-sample-62",
+            "interval_end": null,
+            "method": "VENOUS_PLASMA",
+            "mission_id": "mission-v011",
+            "phase": "IN_MISSION",
+            "protocol": "V011_SYNTHETIC_TECHNICAL_FIXTURE_NOT_A_CLINICAL_PROTOCOL",
+            "provenance": "SEEDED_SYNTHETIC_MISSION_NOT_CLINICAL_DATA",
+            "reported_quality": "ACCEPTABLE",
+            "site": null,
+            "subject_id": "mission-crew-B",
+            "synthetic": true,
+            "timestamp": "2026-08-19T12:00:00Z",
+            "unit": "mg/dL",
+            "value": 180.0,
+            "variable": "plasma_glucose_mg_dl"
+          },
+          "quality_reason": null
+        },
+        {
+          "device": {
+            "alignment_seconds": 1,
+            "calibrated_at": "2026-07-02T12:00:00Z",
+            "calibration_id": "cal-mission-device-13",
+            "conflict_tolerance": 0.0,
+            "id": "mission-device-13",
+            "max_age_seconds": 172800,
+            "policy_reference": "V011_SYNTHETIC_TECHNICAL_FIXTURE_NOT_A_CLINICAL_PROTOCOL",
+            "synthetic": true,
+            "technical_max": 100000.0,
+            "technical_min": 0.0,
+            "unit": "mmol/L",
+            "valid_until": "2026-10-30T12:00:00Z",
+            "variable": "beta_hydroxybutyrate_mmol_l"
+          },
+          "measurement": {
+            "calibration_id": "cal-mission-device-13",
+            "compartment": null,
+            "device_id": "mission-device-13",
+            "id": "mission-sample-63",
+            "interval_end": null,
+            "method": "DIRECT",
+            "mission_id": "mission-v011",
+            "phase": "IN_MISSION",
+            "protocol": "V011_SYNTHETIC_TECHNICAL_FIXTURE_NOT_A_CLINICAL_PROTOCOL",
+            "provenance": "SEEDED_SYNTHETIC_MISSION_NOT_CLINICAL_DATA",
+            "reported_quality": "ACCEPTABLE",
+            "site": null,
+            "subject_id": "mission-crew-B",
+            "synthetic": true,
+            "timestamp": "2026-08-19T12:00:00Z",
+            "unit": "mmol/L",
+            "value": 4.2,
+            "variable": "beta_hydroxybutyrate_mmol_l"
+          },
+          "quality_reason": null
+        },
+        {
+          "device": {
+            "alignment_seconds": 1,
+            "calibrated_at": "2026-07-02T12:00:00Z",
+            "calibration_id": "cal-mission-device-14",
+            "conflict_tolerance": 0.0,
+            "id": "mission-device-14",
+            "max_age_seconds": 172800,
+            "policy_reference": "V011_SYNTHETIC_TECHNICAL_FIXTURE_NOT_A_CLINICAL_PROTOCOL",
+            "synthetic": true,
+            "technical_max": 100000.0,
+            "technical_min": 0.0,
+            "unit": "pH",
+            "valid_until": "2026-10-30T12:00:00Z",
+            "variable": "venous_pH"
+          },
+          "measurement": {
+            "calibration_id": "cal-mission-device-14",
+            "compartment": null,
+            "device_id": "mission-device-14",
+            "id": "mission-sample-64",
+            "interval_end": null,
+            "method": "VENOUS_BLOOD_GAS",
+            "mission_id": "mission-v011",
+            "phase": "IN_MISSION",
+            "protocol": "V011_SYNTHETIC_TECHNICAL_FIXTURE_NOT_A_CLINICAL_PROTOCOL",
+            "provenance": "SEEDED_SYNTHETIC_MISSION_NOT_CLINICAL_DATA",
+            "reported_quality": "ACCEPTABLE",
+            "site": null,
+            "subject_id": "mission-crew-B",
+            "synthetic": true,
+            "timestamp": "2026-08-19T12:00:00Z",
+            "unit": "pH",
+            "value": 7.22,
+            "variable": "venous_pH"
+          },
+          "quality_reason": null
+        }
+      ],
+      "mission": {
+        "environment": "HABITABLE_VOLUME",
+        "exposure_context": null,
+        "extraterrestrial_surface_eva_planned_or_required": null,
+        "gravity": "MICROGRAVITY",
+        "id": "mission-v011",
+        "microgravity_eva_planned_or_required": null,
+        "mode": "NOMINAL",
+        "phase": "IN_MISSION",
+        "synthetic": true
+      },
+      "observations": [
+        {
+          "concept": "known_diabetes",
+          "id": "known_diabetes-acute-18",
+          "method": "SYNTHETIC_OBSERVATION",
+          "provenance": "SYNTHETIC_REPORT_ADAPTER_NOT_CLINICAL_VALIDATION",
+          "quality": "VALID",
+          "sample_id": "acute-18",
+          "timestamp": "2026-08-19T12:00:00Z",
+          "unit": "1",
+          "value": true
+        },
+        {
+          "concept": "plasma_glucose_mg_dl",
+          "id": "mission-sample-62",
+          "method": "VENOUS_PLASMA",
+          "provenance": "SEEDED_SYNTHETIC_MISSION_NOT_CLINICAL_DATA",
+          "quality": "VALID",
+          "sample_id": "mission-sample-62",
+          "timestamp": "2026-08-19T12:00:00Z",
+          "unit": "mg/dL",
+          "value": 180.0
+        },
+        {
+          "concept": "beta_hydroxybutyrate_mmol_l",
+          "id": "mission-sample-63",
+          "method": "DIRECT",
+          "provenance": "SEEDED_SYNTHETIC_MISSION_NOT_CLINICAL_DATA",
+          "quality": "VALID",
+          "sample_id": "mission-sample-63",
+          "timestamp": "2026-08-19T12:00:00Z",
+          "unit": "mmol/L",
+          "value": 4.2
+        },
+        {
+          "concept": "venous_pH",
+          "id": "mission-sample-64",
+          "method": "VENOUS_BLOOD_GAS",
+          "provenance": "SEEDED_SYNTHETIC_MISSION_NOT_CLINICAL_DATA",
+          "quality": "VALID",
+          "sample_id": "mission-sample-64",
+          "timestamp": "2026-08-19T12:00:00Z",
+          "unit": "pH",
+          "value": 7.22
+        }
+      ],
+      "profile": {
+        "id": "mission-crew-B",
+        "mission_id": "mission-v011",
+        "synthetic": true
+      },
+      "request": {
+        "age_years": 42,
+        "as_of": "2026-08-19T12:00:00Z",
+        "condition_id": "DKA",
+        "measurement_bindings": [
+          {
+            "concept": "plasma_glucose_mg_dl",
+            "measurement_id": "mission-sample-62",
+            "sample_id": "mission-sample-62"
+          },
+          {
+            "concept": "beta_hydroxybutyrate_mmol_l",
+            "measurement_id": "mission-sample-63",
+            "sample_id": "mission-sample-63"
+          },
+          {
+            "concept": "venous_pH",
+            "measurement_id": "mission-sample-64",
+            "sample_id": "mission-sample-64"
+          }
+        ],
+        "mission_id": "mission-v011",
+        "observations": [
+          {
+            "concept": "known_diabetes",
+            "id": "known_diabetes-acute-18",
+            "method": "SYNTHETIC_OBSERVATION",
+            "provenance": "SYNTHETIC_REPORT_ADAPTER_NOT_CLINICAL_VALIDATION",
+            "quality": "VALID",
+            "sample_id": "acute-18",
+            "timestamp": "2026-08-19T12:00:00Z",
+            "unit": "1",
+            "value": true
+          }
+        ],
+        "population": "NONPREGNANT_ADULT",
+        "presentation_id": null,
+        "resource_policy": "DECLARED_R2",
+        "resources": {},
+        "subject_id": "mission-crew-B",
+        "window_start": "2026-08-19T12:00:00Z"
+      },
+      "resource_snapshot": {
+        "as_of": "2026-08-19T12:00:00Z",
+        "declared_flags": {},
+        "inventory_hash": null,
+        "inventory_id": null,
+        "inventory_version": null,
+        "mission_id": "mission-v011",
+        "policy": "DECLARED_R2",
+        "resources": [],
+        "synthetic_only": true
+      }
+    }
+  },
+  {
+    "id": "MISSION-ce-16077d0959d6ddea3541d4a5f039bccd",
+    "snapshot": {
+      "measurement_records": [
+        {
+          "device": {
+            "alignment_seconds": 1,
+            "calibrated_at": "2026-07-02T12:00:00Z",
+            "calibration_id": "cal-mission-device-12",
+            "conflict_tolerance": 0.0,
+            "id": "mission-device-12",
+            "max_age_seconds": 172800,
+            "policy_reference": "V011_SYNTHETIC_TECHNICAL_FIXTURE_NOT_A_CLINICAL_PROTOCOL",
+            "synthetic": true,
+            "technical_max": 100000.0,
+            "technical_min": 0.0,
+            "unit": "mg/dL",
+            "valid_until": "2026-10-30T12:00:00Z",
+            "variable": "plasma_glucose_mg_dl"
+          },
+          "measurement": {
+            "calibration_id": "cal-mission-device-12",
+            "compartment": null,
+            "device_id": "mission-device-12",
+            "id": "mission-sample-62",
+            "interval_end": null,
+            "method": "VENOUS_PLASMA",
+            "mission_id": "mission-v011",
+            "phase": "IN_MISSION",
+            "protocol": "V011_SYNTHETIC_TECHNICAL_FIXTURE_NOT_A_CLINICAL_PROTOCOL",
+            "provenance": "SEEDED_SYNTHETIC_MISSION_NOT_CLINICAL_DATA",
+            "reported_quality": "ACCEPTABLE",
+            "site": null,
+            "subject_id": "mission-crew-B",
+            "synthetic": true,
+            "timestamp": "2026-08-19T12:00:00Z",
+            "unit": "mg/dL",
+            "value": 180.0,
+            "variable": "plasma_glucose_mg_dl"
+          },
+          "quality_reason": null
+        },
+        {
+          "device": {
+            "alignment_seconds": 1,
+            "calibrated_at": "2026-07-02T12:00:00Z",
+            "calibration_id": "cal-mission-device-13",
+            "conflict_tolerance": 0.0,
+            "id": "mission-device-13",
+            "max_age_seconds": 172800,
+            "policy_reference": "V011_SYNTHETIC_TECHNICAL_FIXTURE_NOT_A_CLINICAL_PROTOCOL",
+            "synthetic": true,
+            "technical_max": 100000.0,
+            "technical_min": 0.0,
+            "unit": "mmol/L",
+            "valid_until": "2026-10-30T12:00:00Z",
+            "variable": "beta_hydroxybutyrate_mmol_l"
+          },
+          "measurement": {
+            "calibration_id": "cal-mission-device-13",
+            "compartment": null,
+            "device_id": "mission-device-13",
+            "id": "mission-sample-63",
+            "interval_end": null,
+            "method": "DIRECT",
+            "mission_id": "mission-v011",
+            "phase": "IN_MISSION",
+            "protocol": "V011_SYNTHETIC_TECHNICAL_FIXTURE_NOT_A_CLINICAL_PROTOCOL",
+            "provenance": "SEEDED_SYNTHETIC_MISSION_NOT_CLINICAL_DATA",
+            "reported_quality": "ACCEPTABLE",
+            "site": null,
+            "subject_id": "mission-crew-B",
+            "synthetic": true,
+            "timestamp": "2026-08-19T12:00:00Z",
+            "unit": "mmol/L",
+            "value": 4.2,
+            "variable": "beta_hydroxybutyrate_mmol_l"
+          },
+          "quality_reason": null
+        },
+        {
+          "device": {
+            "alignment_seconds": 1,
+            "calibrated_at": "2026-07-02T12:00:00Z",
+            "calibration_id": "cal-mission-device-14",
+            "conflict_tolerance": 0.0,
+            "id": "mission-device-14",
+            "max_age_seconds": 172800,
+            "policy_reference": "V011_SYNTHETIC_TECHNICAL_FIXTURE_NOT_A_CLINICAL_PROTOCOL",
+            "synthetic": true,
+            "technical_max": 100000.0,
+            "technical_min": 0.0,
+            "unit": "pH",
+            "valid_until": "2026-10-30T12:00:00Z",
+            "variable": "venous_pH"
+          },
+          "measurement": {
+            "calibration_id": "cal-mission-device-14",
+            "compartment": null,
+            "device_id": "mission-device-14",
+            "id": "mission-sample-64",
+            "interval_end": null,
+            "method": "VENOUS_BLOOD_GAS",
+            "mission_id": "mission-v011",
+            "phase": "IN_MISSION",
+            "protocol": "V011_SYNTHETIC_TECHNICAL_FIXTURE_NOT_A_CLINICAL_PROTOCOL",
+            "provenance": "SEEDED_SYNTHETIC_MISSION_NOT_CLINICAL_DATA",
+            "reported_quality": "ACCEPTABLE",
+            "site": null,
+            "subject_id": "mission-crew-B",
+            "synthetic": true,
+            "timestamp": "2026-08-19T12:00:00Z",
+            "unit": "pH",
+            "value": 7.22,
+            "variable": "venous_pH"
+          },
+          "quality_reason": null
+        }
+      ],
+      "mission": {
+        "environment": "HABITABLE_VOLUME",
+        "exposure_context": null,
+        "extraterrestrial_surface_eva_planned_or_required": null,
+        "gravity": "MICROGRAVITY",
+        "id": "mission-v011",
+        "microgravity_eva_planned_or_required": null,
+        "mode": "NOMINAL",
+        "phase": "IN_MISSION",
+        "synthetic": true
+      },
+      "observations": [
+        {
+          "concept": "known_diabetes",
+          "id": "known_diabetes-acute-18",
+          "method": "SYNTHETIC_OBSERVATION",
+          "provenance": "SYNTHETIC_REPORT_ADAPTER_NOT_CLINICAL_VALIDATION",
+          "quality": "VALID",
+          "sample_id": "acute-18",
+          "timestamp": "2026-08-19T12:00:00Z",
+          "unit": "1",
+          "value": true
+        },
+        {
+          "concept": "plasma_glucose_mg_dl",
+          "id": "mission-sample-62",
+          "method": "VENOUS_PLASMA",
+          "provenance": "SEEDED_SYNTHETIC_MISSION_NOT_CLINICAL_DATA",
+          "quality": "VALID",
+          "sample_id": "mission-sample-62",
+          "timestamp": "2026-08-19T12:00:00Z",
+          "unit": "mg/dL",
+          "value": 180.0
+        },
+        {
+          "concept": "beta_hydroxybutyrate_mmol_l",
+          "id": "mission-sample-63",
+          "method": "DIRECT",
+          "provenance": "SEEDED_SYNTHETIC_MISSION_NOT_CLINICAL_DATA",
+          "quality": "VALID",
+          "sample_id": "mission-sample-63",
+          "timestamp": "2026-08-19T12:00:00Z",
+          "unit": "mmol/L",
+          "value": 4.2
+        },
+        {
+          "concept": "venous_pH",
+          "id": "mission-sample-64",
+          "method": "VENOUS_BLOOD_GAS",
+          "provenance": "SEEDED_SYNTHETIC_MISSION_NOT_CLINICAL_DATA",
+          "quality": "VALID",
+          "sample_id": "mission-sample-64",
+          "timestamp": "2026-08-19T12:00:00Z",
+          "unit": "pH",
+          "value": 7.22
+        }
+      ],
+      "profile": {
+        "id": "mission-crew-B",
+        "mission_id": "mission-v011",
+        "synthetic": true
+      },
+      "request": {
+        "age_years": 42,
+        "as_of": "2026-08-19T12:00:00Z",
+        "condition_id": "HYPOGLYCEMIA",
+        "measurement_bindings": [
+          {
+            "concept": "plasma_glucose_mg_dl",
+            "measurement_id": "mission-sample-62",
+            "sample_id": "mission-sample-62"
+          },
+          {
+            "concept": "beta_hydroxybutyrate_mmol_l",
+            "measurement_id": "mission-sample-63",
+            "sample_id": "mission-sample-63"
+          },
+          {
+            "concept": "venous_pH",
+            "measurement_id": "mission-sample-64",
+            "sample_id": "mission-sample-64"
+          }
+        ],
+        "mission_id": "mission-v011",
+        "observations": [
+          {
+            "concept": "known_diabetes",
+            "id": "known_diabetes-acute-18",
+            "method": "SYNTHETIC_OBSERVATION",
+            "provenance": "SYNTHETIC_REPORT_ADAPTER_NOT_CLINICAL_VALIDATION",
+            "quality": "VALID",
+            "sample_id": "acute-18",
+            "timestamp": "2026-08-19T12:00:00Z",
+            "unit": "1",
+            "value": true
+          }
+        ],
+        "population": "NONPREGNANT_ADULT",
+        "presentation_id": null,
+        "resource_policy": "DECLARED_R2",
+        "resources": {},
+        "subject_id": "mission-crew-B",
+        "window_start": "2026-08-19T12:00:00Z"
+      },
+      "resource_snapshot": {
+        "as_of": "2026-08-19T12:00:00Z",
+        "declared_flags": {},
+        "inventory_hash": null,
+        "inventory_id": null,
+        "inventory_version": null,
+        "mission_id": "mission-v011",
+        "policy": "DECLARED_R2",
+        "resources": [],
+        "synthetic_only": true
+      }
+    }
+  },
+  {
+    "id": "MISSION-ce-221df73f0af2ba70de297fcbef1979e1",
+    "snapshot": {
+      "measurement_records": [
+        {
+          "device": {
+            "alignment_seconds": 1,
+            "calibrated_at": "2026-07-02T12:00:00Z",
+            "calibration_id": "cal-mission-device-12",
+            "conflict_tolerance": 0.0,
+            "id": "mission-device-12",
+            "max_age_seconds": 172800,
+            "policy_reference": "V011_SYNTHETIC_TECHNICAL_FIXTURE_NOT_A_CLINICAL_PROTOCOL",
+            "synthetic": true,
+            "technical_max": 100000.0,
+            "technical_min": 0.0,
+            "unit": "mg/dL",
+            "valid_until": "2026-10-30T12:00:00Z",
+            "variable": "plasma_glucose_mg_dl"
+          },
+          "measurement": {
+            "calibration_id": "cal-mission-device-12",
+            "compartment": null,
+            "device_id": "mission-device-12",
+            "id": "mission-sample-62",
+            "interval_end": null,
+            "method": "VENOUS_PLASMA",
+            "mission_id": "mission-v011",
+            "phase": "IN_MISSION",
+            "protocol": "V011_SYNTHETIC_TECHNICAL_FIXTURE_NOT_A_CLINICAL_PROTOCOL",
+            "provenance": "SEEDED_SYNTHETIC_MISSION_NOT_CLINICAL_DATA",
+            "reported_quality": "ACCEPTABLE",
+            "site": null,
+            "subject_id": "mission-crew-B",
+            "synthetic": true,
+            "timestamp": "2026-08-19T12:00:00Z",
+            "unit": "mg/dL",
+            "value": 180.0,
+            "variable": "plasma_glucose_mg_dl"
+          },
+          "quality_reason": null
+        },
+        {
+          "device": {
+            "alignment_seconds": 1,
+            "calibrated_at": "2026-07-02T12:00:00Z",
+            "calibration_id": "cal-mission-device-13",
+            "conflict_tolerance": 0.0,
+            "id": "mission-device-13",
+            "max_age_seconds": 172800,
+            "policy_reference": "V011_SYNTHETIC_TECHNICAL_FIXTURE_NOT_A_CLINICAL_PROTOCOL",
+            "synthetic": true,
+            "technical_max": 100000.0,
+            "technical_min": 0.0,
+            "unit": "mmol/L",
+            "valid_until": "2026-10-30T12:00:00Z",
+            "variable": "beta_hydroxybutyrate_mmol_l"
+          },
+          "measurement": {
+            "calibration_id": "cal-mission-device-13",
+            "compartment": null,
+            "device_id": "mission-device-13",
+            "id": "mission-sample-63",
+            "interval_end": null,
+            "method": "DIRECT",
+            "mission_id": "mission-v011",
+            "phase": "IN_MISSION",
+            "protocol": "V011_SYNTHETIC_TECHNICAL_FIXTURE_NOT_A_CLINICAL_PROTOCOL",
+            "provenance": "SEEDED_SYNTHETIC_MISSION_NOT_CLINICAL_DATA",
+            "reported_quality": "ACCEPTABLE",
+            "site": null,
+            "subject_id": "mission-crew-B",
+            "synthetic": true,
+            "timestamp": "2026-08-19T12:00:00Z",
+            "unit": "mmol/L",
+            "value": 4.2,
+            "variable": "beta_hydroxybutyrate_mmol_l"
+          },
+          "quality_reason": null
+        },
+        {
+          "device": {
+            "alignment_seconds": 1,
+            "calibrated_at": "2026-07-02T12:00:00Z",
+            "calibration_id": "cal-mission-device-14",
+            "conflict_tolerance": 0.0,
+            "id": "mission-device-14",
+            "max_age_seconds": 172800,
+            "policy_reference": "V011_SYNTHETIC_TECHNICAL_FIXTURE_NOT_A_CLINICAL_PROTOCOL",
+            "synthetic": true,
+            "technical_max": 100000.0,
+            "technical_min": 0.0,
+            "unit": "pH",
+            "valid_until": "2026-10-30T12:00:00Z",
+            "variable": "venous_pH"
+          },
+          "measurement": {
+            "calibration_id": "cal-mission-device-14",
+            "compartment": null,
+            "device_id": "mission-device-14",
+            "id": "mission-sample-64",
+            "interval_end": null,
+            "method": "VENOUS_BLOOD_GAS",
+            "mission_id": "mission-v011",
+            "phase": "IN_MISSION",
+            "protocol": "V011_SYNTHETIC_TECHNICAL_FIXTURE_NOT_A_CLINICAL_PROTOCOL",
+            "provenance": "SEEDED_SYNTHETIC_MISSION_NOT_CLINICAL_DATA",
+            "reported_quality": "ACCEPTABLE",
+            "site": null,
+            "subject_id": "mission-crew-B",
+            "synthetic": true,
+            "timestamp": "2026-08-19T12:00:00Z",
+            "unit": "pH",
+            "value": 7.22,
+            "variable": "venous_pH"
+          },
+          "quality_reason": null
+        }
+      ],
+      "mission": {
+        "environment": "HABITABLE_VOLUME",
+        "exposure_context": null,
+        "extraterrestrial_surface_eva_planned_or_required": null,
+        "gravity": "MICROGRAVITY",
+        "id": "mission-v011",
+        "microgravity_eva_planned_or_required": null,
+        "mode": "NOMINAL",
+        "phase": "IN_MISSION",
+        "synthetic": true
+      },
+      "observations": [
+        {
+          "concept": "known_diabetes",
+          "id": "known_diabetes-acute-18",
+          "method": "SYNTHETIC_OBSERVATION",
+          "provenance": "SYNTHETIC_REPORT_ADAPTER_NOT_CLINICAL_VALIDATION",
+          "quality": "VALID",
+          "sample_id": "acute-18",
+          "timestamp": "2026-08-19T12:00:00Z",
+          "unit": "1",
+          "value": true
+        },
+        {
+          "concept": "plasma_glucose_mg_dl",
+          "id": "mission-sample-62",
+          "method": "VENOUS_PLASMA",
+          "provenance": "SEEDED_SYNTHETIC_MISSION_NOT_CLINICAL_DATA",
+          "quality": "VALID",
+          "sample_id": "mission-sample-62",
+          "timestamp": "2026-08-19T12:00:00Z",
+          "unit": "mg/dL",
+          "value": 180.0
+        },
+        {
+          "concept": "beta_hydroxybutyrate_mmol_l",
+          "id": "mission-sample-63",
+          "method": "DIRECT",
+          "provenance": "SEEDED_SYNTHETIC_MISSION_NOT_CLINICAL_DATA",
+          "quality": "VALID",
+          "sample_id": "mission-sample-63",
+          "timestamp": "2026-08-19T12:00:00Z",
+          "unit": "mmol/L",
+          "value": 4.2
+        },
+        {
+          "concept": "venous_pH",
+          "id": "mission-sample-64",
+          "method": "VENOUS_BLOOD_GAS",
+          "provenance": "SEEDED_SYNTHETIC_MISSION_NOT_CLINICAL_DATA",
+          "quality": "VALID",
+          "sample_id": "mission-sample-64",
+          "timestamp": "2026-08-19T12:00:00Z",
+          "unit": "pH",
+          "value": 7.22
+        }
+      ],
+      "profile": {
+        "id": "mission-crew-B",
+        "mission_id": "mission-v011",
+        "synthetic": true
+      },
+      "request": {
+        "age_years": 42,
+        "as_of": "2026-08-19T12:00:00Z",
+        "condition_id": "ORTHOSTATIC_HYPOTENSION",
+        "measurement_bindings": [
+          {
+            "concept": "plasma_glucose_mg_dl",
+            "measurement_id": "mission-sample-62",
+            "sample_id": "mission-sample-62"
+          },
+          {
+            "concept": "beta_hydroxybutyrate_mmol_l",
+            "measurement_id": "mission-sample-63",
+            "sample_id": "mission-sample-63"
+          },
+          {
+            "concept": "venous_pH",
+            "measurement_id": "mission-sample-64",
+            "sample_id": "mission-sample-64"
+          }
+        ],
+        "mission_id": "mission-v011",
+        "observations": [
+          {
+            "concept": "known_diabetes",
+            "id": "known_diabetes-acute-18",
+            "method": "SYNTHETIC_OBSERVATION",
+            "provenance": "SYNTHETIC_REPORT_ADAPTER_NOT_CLINICAL_VALIDATION",
+            "quality": "VALID",
+            "sample_id": "acute-18",
+            "timestamp": "2026-08-19T12:00:00Z",
+            "unit": "1",
+            "value": true
+          }
+        ],
+        "population": "NONPREGNANT_ADULT",
+        "presentation_id": null,
+        "resource_policy": "DECLARED_R2",
+        "resources": {},
+        "subject_id": "mission-crew-B",
+        "window_start": "2026-08-19T12:00:00Z"
+      },
+      "resource_snapshot": {
+        "as_of": "2026-08-19T12:00:00Z",
+        "declared_flags": {},
+        "inventory_hash": null,
+        "inventory_id": null,
+        "inventory_version": null,
+        "mission_id": "mission-v011",
+        "policy": "DECLARED_R2",
+        "resources": [],
+        "synthetic_only": true
+      }
+    }
+  },
+  {
+    "id": "MISSION-ce-d61e51efc3cbcf142fb17eafda1df6fb",
+    "snapshot": {
+      "measurement_records": [
+        {
+          "device": {
+            "alignment_seconds": 1,
+            "calibrated_at": "2026-07-02T12:00:00Z",
+            "calibration_id": "cal-mission-device-12",
+            "conflict_tolerance": 0.0,
+            "id": "mission-device-12",
+            "max_age_seconds": 172800,
+            "policy_reference": "V011_SYNTHETIC_TECHNICAL_FIXTURE_NOT_A_CLINICAL_PROTOCOL",
+            "synthetic": true,
+            "technical_max": 100000.0,
+            "technical_min": 0.0,
+            "unit": "mg/dL",
+            "valid_until": "2026-10-30T12:00:00Z",
+            "variable": "plasma_glucose_mg_dl"
+          },
+          "measurement": {
+            "calibration_id": "cal-mission-device-12",
+            "compartment": null,
+            "device_id": "mission-device-12",
+            "id": "mission-sample-62",
+            "interval_end": null,
+            "method": "VENOUS_PLASMA",
+            "mission_id": "mission-v011",
+            "phase": "IN_MISSION",
+            "protocol": "V011_SYNTHETIC_TECHNICAL_FIXTURE_NOT_A_CLINICAL_PROTOCOL",
+            "provenance": "SEEDED_SYNTHETIC_MISSION_NOT_CLINICAL_DATA",
+            "reported_quality": "ACCEPTABLE",
+            "site": null,
+            "subject_id": "mission-crew-B",
+            "synthetic": true,
+            "timestamp": "2026-08-19T12:00:00Z",
+            "unit": "mg/dL",
+            "value": 180.0,
+            "variable": "plasma_glucose_mg_dl"
+          },
+          "quality_reason": null
+        },
+        {
+          "device": {
+            "alignment_seconds": 1,
+            "calibrated_at": "2026-07-02T12:00:00Z",
+            "calibration_id": "cal-mission-device-13",
+            "conflict_tolerance": 0.0,
+            "id": "mission-device-13",
+            "max_age_seconds": 172800,
+            "policy_reference": "V011_SYNTHETIC_TECHNICAL_FIXTURE_NOT_A_CLINICAL_PROTOCOL",
+            "synthetic": true,
+            "technical_max": 100000.0,
+            "technical_min": 0.0,
+            "unit": "mmol/L",
+            "valid_until": "2026-10-30T12:00:00Z",
+            "variable": "beta_hydroxybutyrate_mmol_l"
+          },
+          "measurement": {
+            "calibration_id": "cal-mission-device-13",
+            "compartment": null,
+            "device_id": "mission-device-13",
+            "id": "mission-sample-63",
+            "interval_end": null,
+            "method": "DIRECT",
+            "mission_id": "mission-v011",
+            "phase": "IN_MISSION",
+            "protocol": "V011_SYNTHETIC_TECHNICAL_FIXTURE_NOT_A_CLINICAL_PROTOCOL",
+            "provenance": "SEEDED_SYNTHETIC_MISSION_NOT_CLINICAL_DATA",
+            "reported_quality": "ACCEPTABLE",
+            "site": null,
+            "subject_id": "mission-crew-B",
+            "synthetic": true,
+            "timestamp": "2026-08-19T12:00:00Z",
+            "unit": "mmol/L",
+            "value": 4.2,
+            "variable": "beta_hydroxybutyrate_mmol_l"
+          },
+          "quality_reason": null
+        },
+        {
+          "device": {
+            "alignment_seconds": 1,
+            "calibrated_at": "2026-07-02T12:00:00Z",
+            "calibration_id": "cal-mission-device-14",
+            "conflict_tolerance": 0.0,
+            "id": "mission-device-14",
+            "max_age_seconds": 172800,
+            "policy_reference": "V011_SYNTHETIC_TECHNICAL_FIXTURE_NOT_A_CLINICAL_PROTOCOL",
+            "synthetic": true,
+            "technical_max": 100000.0,
+            "technical_min": 0.0,
+            "unit": "pH",
+            "valid_until": "2026-10-30T12:00:00Z",
+            "variable": "venous_pH"
+          },
+          "measurement": {
+            "calibration_id": "cal-mission-device-14",
+            "compartment": null,
+            "device_id": "mission-device-14",
+            "id": "mission-sample-64",
+            "interval_end": null,
+            "method": "VENOUS_BLOOD_GAS",
+            "mission_id": "mission-v011",
+            "phase": "IN_MISSION",
+            "protocol": "V011_SYNTHETIC_TECHNICAL_FIXTURE_NOT_A_CLINICAL_PROTOCOL",
+            "provenance": "SEEDED_SYNTHETIC_MISSION_NOT_CLINICAL_DATA",
+            "reported_quality": "ACCEPTABLE",
+            "site": null,
+            "subject_id": "mission-crew-B",
+            "synthetic": true,
+            "timestamp": "2026-08-19T12:00:00Z",
+            "unit": "pH",
+            "value": 7.22,
+            "variable": "venous_pH"
+          },
+          "quality_reason": null
+        }
+      ],
+      "mission": {
+        "environment": "HABITABLE_VOLUME",
+        "exposure_context": null,
+        "extraterrestrial_surface_eva_planned_or_required": null,
+        "gravity": "MICROGRAVITY",
+        "id": "mission-v011",
+        "microgravity_eva_planned_or_required": null,
+        "mode": "NOMINAL",
+        "phase": "IN_MISSION",
+        "synthetic": true
+      },
+      "observations": [
+        {
+          "concept": "known_diabetes",
+          "id": "known_diabetes-acute-18",
+          "method": "SYNTHETIC_OBSERVATION",
+          "provenance": "SYNTHETIC_REPORT_ADAPTER_NOT_CLINICAL_VALIDATION",
+          "quality": "VALID",
+          "sample_id": "acute-18",
+          "timestamp": "2026-08-19T12:00:00Z",
+          "unit": "1",
+          "value": true
+        },
+        {
+          "concept": "plasma_glucose_mg_dl",
+          "id": "mission-sample-62",
+          "method": "VENOUS_PLASMA",
+          "provenance": "SEEDED_SYNTHETIC_MISSION_NOT_CLINICAL_DATA",
+          "quality": "VALID",
+          "sample_id": "mission-sample-62",
+          "timestamp": "2026-08-19T12:00:00Z",
+          "unit": "mg/dL",
+          "value": 180.0
+        },
+        {
+          "concept": "beta_hydroxybutyrate_mmol_l",
+          "id": "mission-sample-63",
+          "method": "DIRECT",
+          "provenance": "SEEDED_SYNTHETIC_MISSION_NOT_CLINICAL_DATA",
+          "quality": "VALID",
+          "sample_id": "mission-sample-63",
+          "timestamp": "2026-08-19T12:00:00Z",
+          "unit": "mmol/L",
+          "value": 4.2
+        },
+        {
+          "concept": "venous_pH",
+          "id": "mission-sample-64",
+          "method": "VENOUS_BLOOD_GAS",
+          "provenance": "SEEDED_SYNTHETIC_MISSION_NOT_CLINICAL_DATA",
+          "quality": "VALID",
+          "sample_id": "mission-sample-64",
+          "timestamp": "2026-08-19T12:00:00Z",
+          "unit": "pH",
+          "value": 7.22
+        }
+      ],
+      "profile": {
+        "id": "mission-crew-B",
+        "mission_id": "mission-v011",
+        "synthetic": true
+      },
+      "request": {
+        "age_years": 42,
+        "as_of": "2026-08-19T12:00:00Z",
+        "condition_id": "POTS",
+        "measurement_bindings": [
+          {
+            "concept": "plasma_glucose_mg_dl",
+            "measurement_id": "mission-sample-62",
+            "sample_id": "mission-sample-62"
+          },
+          {
+            "concept": "beta_hydroxybutyrate_mmol_l",
+            "measurement_id": "mission-sample-63",
+            "sample_id": "mission-sample-63"
+          },
+          {
+            "concept": "venous_pH",
+            "measurement_id": "mission-sample-64",
+            "sample_id": "mission-sample-64"
+          }
+        ],
+        "mission_id": "mission-v011",
+        "observations": [
+          {
+            "concept": "known_diabetes",
+            "id": "known_diabetes-acute-18",
+            "method": "SYNTHETIC_OBSERVATION",
+            "provenance": "SYNTHETIC_REPORT_ADAPTER_NOT_CLINICAL_VALIDATION",
+            "quality": "VALID",
+            "sample_id": "acute-18",
+            "timestamp": "2026-08-19T12:00:00Z",
+            "unit": "1",
+            "value": true
+          }
+        ],
+        "population": "NONPREGNANT_ADULT",
+        "presentation_id": null,
+        "resource_policy": "DECLARED_R2",
+        "resources": {},
+        "subject_id": "mission-crew-B",
+        "window_start": "2026-08-19T12:00:00Z"
+      },
+      "resource_snapshot": {
+        "as_of": "2026-08-19T12:00:00Z",
+        "declared_flags": {},
+        "inventory_hash": null,
+        "inventory_id": null,
+        "inventory_version": null,
+        "mission_id": "mission-v011",
+        "policy": "DECLARED_R2",
+        "resources": [],
+        "synthetic_only": true
+      }
+    }
+  },
+  {
+    "id": "MISSION-ce-fbb2f57af69af43b379506af5d8cda65",
+    "snapshot": {
+      "measurement_records": [],
+      "mission": {
+        "environment": "HABITABLE_VOLUME",
+        "exposure_context": null,
+        "extraterrestrial_surface_eva_planned_or_required": null,
+        "gravity": "MICROGRAVITY",
+        "id": "mission-v011",
+        "microgravity_eva_planned_or_required": null,
+        "mode": "NOMINAL",
+        "phase": "IN_MISSION",
+        "synthetic": true
+      },
+      "observations": [],
+      "profile": {
+        "id": "mission-crew-A",
+        "mission_id": "mission-v011",
+        "synthetic": true
+      },
+      "request": {
+        "age_years": 35,
+        "as_of": "2026-08-19T14:24:00Z",
+        "condition_id": "ORTHOSTATIC_HYPOTENSION",
+        "measurement_bindings": [],
+        "mission_id": "mission-v011",
+        "observations": [],
+        "population": "NONPREGNANT_ADULT",
+        "presentation_id": null,
+        "resource_policy": "DECLARED_R2",
+        "resources": {},
+        "subject_id": "mission-crew-A",
+        "window_start": "2026-08-19T14:24:00Z"
+      },
+      "resource_snapshot": {
+        "as_of": "2026-08-19T14:24:00Z",
+        "declared_flags": {},
+        "inventory_hash": null,
+        "inventory_id": null,
+        "inventory_version": null,
+        "mission_id": "mission-v011",
+        "policy": "DECLARED_R2",
+        "resources": [],
+        "synthetic_only": true
+      }
+    }
+  },
+  {
+    "id": "MISSION-ce-83335045875f4a0506f0e02ef1ff32ad",
+    "snapshot": {
+      "measurement_records": [],
+      "mission": {
+        "environment": "HABITABLE_VOLUME",
+        "exposure_context": null,
+        "extraterrestrial_surface_eva_planned_or_required": null,
+        "gravity": "MICROGRAVITY",
+        "id": "mission-v011",
+        "microgravity_eva_planned_or_required": null,
+        "mode": "NOMINAL",
+        "phase": "IN_MISSION",
+        "synthetic": true
+      },
+      "observations": [],
+      "profile": {
+        "id": "mission-crew-A",
+        "mission_id": "mission-v011",
+        "synthetic": true
+      },
+      "request": {
+        "age_years": 35,
+        "as_of": "2026-08-19T14:24:00Z",
+        "condition_id": "POTS",
+        "measurement_bindings": [],
+        "mission_id": "mission-v011",
+        "observations": [],
+        "population": "NONPREGNANT_ADULT",
+        "presentation_id": null,
+        "resource_policy": "DECLARED_R2",
+        "resources": {},
+        "subject_id": "mission-crew-A",
+        "window_start": "2026-08-19T14:24:00Z"
+      },
+      "resource_snapshot": {
+        "as_of": "2026-08-19T14:24:00Z",
+        "declared_flags": {},
+        "inventory_hash": null,
+        "inventory_id": null,
+        "inventory_version": null,
+        "mission_id": "mission-v011",
+        "policy": "DECLARED_R2",
+        "resources": [],
+        "synthetic_only": true
+      }
+    }
+  },
+  {
+    "id": "MISSION-ce-ed5bf1da1f122b079f146ec9761a31c9",
+    "snapshot": {
+      "measurement_records": [
+        {
+          "device": {
+            "alignment_seconds": 1,
+            "calibrated_at": "2026-07-02T12:00:00Z",
+            "calibration_id": "cal-mission-device-12",
+            "conflict_tolerance": 0.0,
+            "id": "mission-device-12",
+            "max_age_seconds": 172800,
+            "policy_reference": "V011_SYNTHETIC_TECHNICAL_FIXTURE_NOT_A_CLINICAL_PROTOCOL",
+            "synthetic": true,
+            "technical_max": 100000.0,
+            "technical_min": 0.0,
+            "unit": "mg/dL",
+            "valid_until": "2026-10-30T12:00:00Z",
+            "variable": "plasma_glucose_mg_dl"
+          },
+          "measurement": {
+            "calibration_id": "cal-mission-device-12",
+            "compartment": null,
+            "device_id": "mission-device-12",
+            "id": "mission-sample-62",
+            "interval_end": null,
+            "method": "VENOUS_PLASMA",
+            "mission_id": "mission-v011",
+            "phase": "IN_MISSION",
+            "protocol": "V011_SYNTHETIC_TECHNICAL_FIXTURE_NOT_A_CLINICAL_PROTOCOL",
+            "provenance": "SEEDED_SYNTHETIC_MISSION_NOT_CLINICAL_DATA",
+            "reported_quality": "ACCEPTABLE",
+            "site": null,
+            "subject_id": "mission-crew-B",
+            "synthetic": true,
+            "timestamp": "2026-08-19T12:00:00Z",
+            "unit": "mg/dL",
+            "value": 180.0,
+            "variable": "plasma_glucose_mg_dl"
+          },
+          "quality_reason": null
+        },
+        {
+          "device": {
+            "alignment_seconds": 1,
+            "calibrated_at": "2026-07-02T12:00:00Z",
+            "calibration_id": "cal-mission-device-13",
+            "conflict_tolerance": 0.0,
+            "id": "mission-device-13",
+            "max_age_seconds": 172800,
+            "policy_reference": "V011_SYNTHETIC_TECHNICAL_FIXTURE_NOT_A_CLINICAL_PROTOCOL",
+            "synthetic": true,
+            "technical_max": 100000.0,
+            "technical_min": 0.0,
+            "unit": "mmol/L",
+            "valid_until": "2026-10-30T12:00:00Z",
+            "variable": "beta_hydroxybutyrate_mmol_l"
+          },
+          "measurement": {
+            "calibration_id": "cal-mission-device-13",
+            "compartment": null,
+            "device_id": "mission-device-13",
+            "id": "mission-sample-63",
+            "interval_end": null,
+            "method": "DIRECT",
+            "mission_id": "mission-v011",
+            "phase": "IN_MISSION",
+            "protocol": "V011_SYNTHETIC_TECHNICAL_FIXTURE_NOT_A_CLINICAL_PROTOCOL",
+            "provenance": "SEEDED_SYNTHETIC_MISSION_NOT_CLINICAL_DATA",
+            "reported_quality": "ACCEPTABLE",
+            "site": null,
+            "subject_id": "mission-crew-B",
+            "synthetic": true,
+            "timestamp": "2026-08-19T12:00:00Z",
+            "unit": "mmol/L",
+            "value": 4.2,
+            "variable": "beta_hydroxybutyrate_mmol_l"
+          },
+          "quality_reason": null
+        },
+        {
+          "device": {
+            "alignment_seconds": 1,
+            "calibrated_at": "2026-07-02T12:00:00Z",
+            "calibration_id": "cal-mission-device-14",
+            "conflict_tolerance": 0.0,
+            "id": "mission-device-14",
+            "max_age_seconds": 172800,
+            "policy_reference": "V011_SYNTHETIC_TECHNICAL_FIXTURE_NOT_A_CLINICAL_PROTOCOL",
+            "synthetic": true,
+            "technical_max": 100000.0,
+            "technical_min": 0.0,
+            "unit": "pH",
+            "valid_until": "2026-10-30T12:00:00Z",
+            "variable": "venous_pH"
+          },
+          "measurement": {
+            "calibration_id": "cal-mission-device-14",
+            "compartment": null,
+            "device_id": "mission-device-14",
+            "id": "mission-sample-64",
+            "interval_end": null,
+            "method": "VENOUS_BLOOD_GAS",
+            "mission_id": "mission-v011",
+            "phase": "IN_MISSION",
+            "protocol": "V011_SYNTHETIC_TECHNICAL_FIXTURE_NOT_A_CLINICAL_PROTOCOL",
+            "provenance": "SEEDED_SYNTHETIC_MISSION_NOT_CLINICAL_DATA",
+            "reported_quality": "ACCEPTABLE",
+            "site": null,
+            "subject_id": "mission-crew-B",
+            "synthetic": true,
+            "timestamp": "2026-08-19T12:00:00Z",
+            "unit": "pH",
+            "value": 7.22,
+            "variable": "venous_pH"
+          },
+          "quality_reason": null
+        },
+        {
+          "device": {
+            "alignment_seconds": 1,
+            "calibrated_at": "2026-07-02T12:00:00Z",
+            "calibration_id": "cal-mission-device-12",
+            "conflict_tolerance": 0.0,
+            "id": "mission-device-12",
+            "max_age_seconds": 172800,
+            "policy_reference": "V011_SYNTHETIC_TECHNICAL_FIXTURE_NOT_A_CLINICAL_PROTOCOL",
+            "synthetic": true,
+            "technical_max": 100000.0,
+            "technical_min": 0.0,
+            "unit": "mg/dL",
+            "valid_until": "2026-10-30T12:00:00Z",
+            "variable": "plasma_glucose_mg_dl"
+          },
+          "measurement": {
+            "calibration_id": "cal-mission-device-12",
+            "compartment": null,
+            "device_id": "mission-device-12",
+            "id": "mission-sample-75",
+            "interval_end": null,
+            "method": "VENOUS_PLASMA",
+            "mission_id": "mission-v011",
+            "phase": "IN_MISSION",
+            "protocol": "V011_SYNTHETIC_TECHNICAL_FIXTURE_NOT_A_CLINICAL_PROTOCOL",
+            "provenance": "SEEDED_SYNTHETIC_MISSION_NOT_CLINICAL_DATA",
+            "reported_quality": "ACCEPTABLE",
+            "site": null,
+            "subject_id": "mission-crew-B",
+            "synthetic": true,
+            "timestamp": "2026-08-19T14:24:00Z",
+            "unit": "mg/dL",
+            "value": 160.0,
+            "variable": "plasma_glucose_mg_dl"
+          },
+          "quality_reason": null
+        },
+        {
+          "device": {
+            "alignment_seconds": 1,
+            "calibrated_at": "2026-07-02T12:00:00Z",
+            "calibration_id": "cal-mission-device-13",
+            "conflict_tolerance": 0.0,
+            "id": "mission-device-13",
+            "max_age_seconds": 172800,
+            "policy_reference": "V011_SYNTHETIC_TECHNICAL_FIXTURE_NOT_A_CLINICAL_PROTOCOL",
+            "synthetic": true,
+            "technical_max": 100000.0,
+            "technical_min": 0.0,
+            "unit": "mmol/L",
+            "valid_until": "2026-10-30T12:00:00Z",
+            "variable": "beta_hydroxybutyrate_mmol_l"
+          },
+          "measurement": {
+            "calibration_id": "cal-mission-device-13",
+            "compartment": null,
+            "device_id": "mission-device-13",
+            "id": "mission-sample-76",
+            "interval_end": null,
+            "method": "DIRECT",
+            "mission_id": "mission-v011",
+            "phase": "IN_MISSION",
+            "protocol": "V011_SYNTHETIC_TECHNICAL_FIXTURE_NOT_A_CLINICAL_PROTOCOL",
+            "provenance": "SEEDED_SYNTHETIC_MISSION_NOT_CLINICAL_DATA",
+            "reported_quality": "ACCEPTABLE",
+            "site": null,
+            "subject_id": "mission-crew-B",
+            "synthetic": true,
+            "timestamp": "2026-08-19T14:24:00Z",
+            "unit": "mmol/L",
+            "value": 3.8,
+            "variable": "beta_hydroxybutyrate_mmol_l"
+          },
+          "quality_reason": null
+        },
+        {
+          "device": {
+            "alignment_seconds": 1,
+            "calibrated_at": "2026-07-02T12:00:00Z",
+            "calibration_id": "cal-mission-device-14",
+            "conflict_tolerance": 0.0,
+            "id": "mission-device-14",
+            "max_age_seconds": 172800,
+            "policy_reference": "V011_SYNTHETIC_TECHNICAL_FIXTURE_NOT_A_CLINICAL_PROTOCOL",
+            "synthetic": true,
+            "technical_max": 100000.0,
+            "technical_min": 0.0,
+            "unit": "pH",
+            "valid_until": "2026-10-30T12:00:00Z",
+            "variable": "venous_pH"
+          },
+          "measurement": {
+            "calibration_id": "cal-mission-device-14",
+            "compartment": null,
+            "device_id": "mission-device-14",
+            "id": "mission-sample-77",
+            "interval_end": null,
+            "method": "VENOUS_BLOOD_GAS",
+            "mission_id": "mission-v011",
+            "phase": "IN_MISSION",
+            "protocol": "V011_SYNTHETIC_TECHNICAL_FIXTURE_NOT_A_CLINICAL_PROTOCOL",
+            "provenance": "SEEDED_SYNTHETIC_MISSION_NOT_CLINICAL_DATA",
+            "reported_quality": "ACCEPTABLE",
+            "site": null,
+            "subject_id": "mission-crew-B",
+            "synthetic": true,
+            "timestamp": "2026-08-19T14:24:00Z",
+            "unit": "pH",
+            "value": 7.28,
+            "variable": "venous_pH"
+          },
+          "quality_reason": null
+        },
+        {
+          "device": {
+            "alignment_seconds": 1,
+            "calibrated_at": "2026-07-02T12:00:00Z",
+            "calibration_id": "cal-mission-device-15",
+            "conflict_tolerance": 0.0,
+            "id": "mission-device-15",
+            "max_age_seconds": 172800,
+            "policy_reference": "V011_SYNTHETIC_TECHNICAL_FIXTURE_NOT_A_CLINICAL_PROTOCOL",
+            "synthetic": true,
+            "technical_max": 100000.0,
+            "technical_min": 0.0,
+            "unit": "mmol/L",
+            "valid_until": "2026-10-30T12:00:00Z",
+            "variable": "potassium_mmol_l"
+          },
+          "measurement": {
+            "calibration_id": "cal-mission-device-15",
+            "compartment": null,
+            "device_id": "mission-device-15",
+            "id": "mission-sample-78",
+            "interval_end": null,
+            "method": "DIRECT",
+            "mission_id": "mission-v011",
+            "phase": "IN_MISSION",
+            "protocol": "V011_SYNTHETIC_TECHNICAL_FIXTURE_NOT_A_CLINICAL_PROTOCOL",
+            "provenance": "SEEDED_SYNTHETIC_MISSION_NOT_CLINICAL_DATA",
+            "reported_quality": "ACCEPTABLE",
+            "site": null,
+            "subject_id": "mission-crew-B",
+            "synthetic": true,
+            "timestamp": "2026-08-19T14:24:00Z",
+            "unit": "mmol/L",
+            "value": 4.0,
+            "variable": "potassium_mmol_l"
+          },
+          "quality_reason": null
+        }
+      ],
+      "mission": {
+        "environment": "HABITABLE_VOLUME",
+        "exposure_context": null,
+        "extraterrestrial_surface_eva_planned_or_required": null,
+        "gravity": "MICROGRAVITY",
+        "id": "mission-v011",
+        "microgravity_eva_planned_or_required": null,
+        "mode": "NOMINAL",
+        "phase": "IN_MISSION",
+        "synthetic": true
+      },
+      "observations": [
+        {
+          "concept": "known_diabetes",
+          "id": "known_diabetes-acute-18",
+          "method": "SYNTHETIC_OBSERVATION",
+          "provenance": "SYNTHETIC_REPORT_ADAPTER_NOT_CLINICAL_VALIDATION",
+          "quality": "VALID",
+          "sample_id": "acute-18",
+          "timestamp": "2026-08-19T12:00:00Z",
+          "unit": "1",
+          "value": true
+        },
+        {
+          "concept": "known_diabetes",
+          "id": "known_diabetes-acute-18.1",
+          "method": "SYNTHETIC_OBSERVATION",
+          "provenance": "SYNTHETIC_REPORT_ADAPTER_NOT_CLINICAL_VALIDATION",
+          "quality": "VALID",
+          "sample_id": "acute-18.1",
+          "timestamp": "2026-08-19T14:24:00Z",
+          "unit": "1",
+          "value": true
+        },
+        {
+          "concept": "plasma_glucose_mg_dl",
+          "id": "mission-sample-62",
+          "method": "VENOUS_PLASMA",
+          "provenance": "SEEDED_SYNTHETIC_MISSION_NOT_CLINICAL_DATA",
+          "quality": "VALID",
+          "sample_id": "mission-sample-62",
+          "timestamp": "2026-08-19T12:00:00Z",
+          "unit": "mg/dL",
+          "value": 180.0
+        },
+        {
+          "concept": "beta_hydroxybutyrate_mmol_l",
+          "id": "mission-sample-63",
+          "method": "DIRECT",
+          "provenance": "SEEDED_SYNTHETIC_MISSION_NOT_CLINICAL_DATA",
+          "quality": "VALID",
+          "sample_id": "mission-sample-63",
+          "timestamp": "2026-08-19T12:00:00Z",
+          "unit": "mmol/L",
+          "value": 4.2
+        },
+        {
+          "concept": "venous_pH",
+          "id": "mission-sample-64",
+          "method": "VENOUS_BLOOD_GAS",
+          "provenance": "SEEDED_SYNTHETIC_MISSION_NOT_CLINICAL_DATA",
+          "quality": "VALID",
+          "sample_id": "mission-sample-64",
+          "timestamp": "2026-08-19T12:00:00Z",
+          "unit": "pH",
+          "value": 7.22
+        },
+        {
+          "concept": "plasma_glucose_mg_dl",
+          "id": "mission-sample-75",
+          "method": "VENOUS_PLASMA",
+          "provenance": "SEEDED_SYNTHETIC_MISSION_NOT_CLINICAL_DATA",
+          "quality": "VALID",
+          "sample_id": "mission-sample-75",
+          "timestamp": "2026-08-19T14:24:00Z",
+          "unit": "mg/dL",
+          "value": 160.0
+        },
+        {
+          "concept": "beta_hydroxybutyrate_mmol_l",
+          "id": "mission-sample-76",
+          "method": "DIRECT",
+          "provenance": "SEEDED_SYNTHETIC_MISSION_NOT_CLINICAL_DATA",
+          "quality": "VALID",
+          "sample_id": "mission-sample-76",
+          "timestamp": "2026-08-19T14:24:00Z",
+          "unit": "mmol/L",
+          "value": 3.8
+        },
+        {
+          "concept": "venous_pH",
+          "id": "mission-sample-77",
+          "method": "VENOUS_BLOOD_GAS",
+          "provenance": "SEEDED_SYNTHETIC_MISSION_NOT_CLINICAL_DATA",
+          "quality": "VALID",
+          "sample_id": "mission-sample-77",
+          "timestamp": "2026-08-19T14:24:00Z",
+          "unit": "pH",
+          "value": 7.28
+        },
+        {
+          "concept": "potassium_mmol_l",
+          "id": "mission-sample-78",
+          "method": "DIRECT",
+          "provenance": "SEEDED_SYNTHETIC_MISSION_NOT_CLINICAL_DATA",
+          "quality": "VALID",
+          "sample_id": "mission-sample-78",
+          "timestamp": "2026-08-19T14:24:00Z",
+          "unit": "mmol/L",
+          "value": 4.0
+        }
+      ],
+      "profile": {
+        "id": "mission-crew-B",
+        "mission_id": "mission-v011",
+        "synthetic": true
+      },
+      "request": {
+        "age_years": 42,
+        "as_of": "2026-08-19T14:24:00Z",
+        "condition_id": "DKA",
+        "measurement_bindings": [
+          {
+            "concept": "plasma_glucose_mg_dl",
+            "measurement_id": "mission-sample-62",
+            "sample_id": "mission-sample-62"
+          },
+          {
+            "concept": "beta_hydroxybutyrate_mmol_l",
+            "measurement_id": "mission-sample-63",
+            "sample_id": "mission-sample-63"
+          },
+          {
+            "concept": "venous_pH",
+            "measurement_id": "mission-sample-64",
+            "sample_id": "mission-sample-64"
+          },
+          {
+            "concept": "plasma_glucose_mg_dl",
+            "measurement_id": "mission-sample-75",
+            "sample_id": "mission-sample-75"
+          },
+          {
+            "concept": "beta_hydroxybutyrate_mmol_l",
+            "measurement_id": "mission-sample-76",
+            "sample_id": "mission-sample-76"
+          },
+          {
+            "concept": "venous_pH",
+            "measurement_id": "mission-sample-77",
+            "sample_id": "mission-sample-77"
+          },
+          {
+            "concept": "potassium_mmol_l",
+            "measurement_id": "mission-sample-78",
+            "sample_id": "mission-sample-78"
+          }
+        ],
+        "mission_id": "mission-v011",
+        "observations": [
+          {
+            "concept": "known_diabetes",
+            "id": "known_diabetes-acute-18",
+            "method": "SYNTHETIC_OBSERVATION",
+            "provenance": "SYNTHETIC_REPORT_ADAPTER_NOT_CLINICAL_VALIDATION",
+            "quality": "VALID",
+            "sample_id": "acute-18",
+            "timestamp": "2026-08-19T12:00:00Z",
+            "unit": "1",
+            "value": true
+          },
+          {
+            "concept": "known_diabetes",
+            "id": "known_diabetes-acute-18.1",
+            "method": "SYNTHETIC_OBSERVATION",
+            "provenance": "SYNTHETIC_REPORT_ADAPTER_NOT_CLINICAL_VALIDATION",
+            "quality": "VALID",
+            "sample_id": "acute-18.1",
+            "timestamp": "2026-08-19T14:24:00Z",
+            "unit": "1",
+            "value": true
+          }
+        ],
+        "population": "NONPREGNANT_ADULT",
+        "presentation_id": null,
+        "resource_policy": "DECLARED_R2",
+        "resources": {},
+        "subject_id": "mission-crew-B",
+        "window_start": "2026-08-19T12:00:00Z"
+      },
+      "resource_snapshot": {
+        "as_of": "2026-08-19T14:24:00Z",
+        "declared_flags": {},
+        "inventory_hash": null,
+        "inventory_id": null,
+        "inventory_version": null,
+        "mission_id": "mission-v011",
+        "policy": "DECLARED_R2",
+        "resources": [],
+        "synthetic_only": true
+      }
+    }
+  },
+  {
+    "id": "MISSION-ce-69c48a723f4aedc6a5c21a4ea0eff3d3",
+    "snapshot": {
+      "measurement_records": [
+        {
+          "device": {
+            "alignment_seconds": 1,
+            "calibrated_at": "2026-07-02T12:00:00Z",
+            "calibration_id": "cal-mission-device-12",
+            "conflict_tolerance": 0.0,
+            "id": "mission-device-12",
+            "max_age_seconds": 172800,
+            "policy_reference": "V011_SYNTHETIC_TECHNICAL_FIXTURE_NOT_A_CLINICAL_PROTOCOL",
+            "synthetic": true,
+            "technical_max": 100000.0,
+            "technical_min": 0.0,
+            "unit": "mg/dL",
+            "valid_until": "2026-10-30T12:00:00Z",
+            "variable": "plasma_glucose_mg_dl"
+          },
+          "measurement": {
+            "calibration_id": "cal-mission-device-12",
+            "compartment": null,
+            "device_id": "mission-device-12",
+            "id": "mission-sample-62",
+            "interval_end": null,
+            "method": "VENOUS_PLASMA",
+            "mission_id": "mission-v011",
+            "phase": "IN_MISSION",
+            "protocol": "V011_SYNTHETIC_TECHNICAL_FIXTURE_NOT_A_CLINICAL_PROTOCOL",
+            "provenance": "SEEDED_SYNTHETIC_MISSION_NOT_CLINICAL_DATA",
+            "reported_quality": "ACCEPTABLE",
+            "site": null,
+            "subject_id": "mission-crew-B",
+            "synthetic": true,
+            "timestamp": "2026-08-19T12:00:00Z",
+            "unit": "mg/dL",
+            "value": 180.0,
+            "variable": "plasma_glucose_mg_dl"
+          },
+          "quality_reason": null
+        },
+        {
+          "device": {
+            "alignment_seconds": 1,
+            "calibrated_at": "2026-07-02T12:00:00Z",
+            "calibration_id": "cal-mission-device-13",
+            "conflict_tolerance": 0.0,
+            "id": "mission-device-13",
+            "max_age_seconds": 172800,
+            "policy_reference": "V011_SYNTHETIC_TECHNICAL_FIXTURE_NOT_A_CLINICAL_PROTOCOL",
+            "synthetic": true,
+            "technical_max": 100000.0,
+            "technical_min": 0.0,
+            "unit": "mmol/L",
+            "valid_until": "2026-10-30T12:00:00Z",
+            "variable": "beta_hydroxybutyrate_mmol_l"
+          },
+          "measurement": {
+            "calibration_id": "cal-mission-device-13",
+            "compartment": null,
+            "device_id": "mission-device-13",
+            "id": "mission-sample-63",
+            "interval_end": null,
+            "method": "DIRECT",
+            "mission_id": "mission-v011",
+            "phase": "IN_MISSION",
+            "protocol": "V011_SYNTHETIC_TECHNICAL_FIXTURE_NOT_A_CLINICAL_PROTOCOL",
+            "provenance": "SEEDED_SYNTHETIC_MISSION_NOT_CLINICAL_DATA",
+            "reported_quality": "ACCEPTABLE",
+            "site": null,
+            "subject_id": "mission-crew-B",
+            "synthetic": true,
+            "timestamp": "2026-08-19T12:00:00Z",
+            "unit": "mmol/L",
+            "value": 4.2,
+            "variable": "beta_hydroxybutyrate_mmol_l"
+          },
+          "quality_reason": null
+        },
+        {
+          "device": {
+            "alignment_seconds": 1,
+            "calibrated_at": "2026-07-02T12:00:00Z",
+            "calibration_id": "cal-mission-device-14",
+            "conflict_tolerance": 0.0,
+            "id": "mission-device-14",
+            "max_age_seconds": 172800,
+            "policy_reference": "V011_SYNTHETIC_TECHNICAL_FIXTURE_NOT_A_CLINICAL_PROTOCOL",
+            "synthetic": true,
+            "technical_max": 100000.0,
+            "technical_min": 0.0,
+            "unit": "pH",
+            "valid_until": "2026-10-30T12:00:00Z",
+            "variable": "venous_pH"
+          },
+          "measurement": {
+            "calibration_id": "cal-mission-device-14",
+            "compartment": null,
+            "device_id": "mission-device-14",
+            "id": "mission-sample-64",
+            "interval_end": null,
+            "method": "VENOUS_BLOOD_GAS",
+            "mission_id": "mission-v011",
+            "phase": "IN_MISSION",
+            "protocol": "V011_SYNTHETIC_TECHNICAL_FIXTURE_NOT_A_CLINICAL_PROTOCOL",
+            "provenance": "SEEDED_SYNTHETIC_MISSION_NOT_CLINICAL_DATA",
+            "reported_quality": "ACCEPTABLE",
+            "site": null,
+            "subject_id": "mission-crew-B",
+            "synthetic": true,
+            "timestamp": "2026-08-19T12:00:00Z",
+            "unit": "pH",
+            "value": 7.22,
+            "variable": "venous_pH"
+          },
+          "quality_reason": null
+        },
+        {
+          "device": {
+            "alignment_seconds": 1,
+            "calibrated_at": "2026-07-02T12:00:00Z",
+            "calibration_id": "cal-mission-device-12",
+            "conflict_tolerance": 0.0,
+            "id": "mission-device-12",
+            "max_age_seconds": 172800,
+            "policy_reference": "V011_SYNTHETIC_TECHNICAL_FIXTURE_NOT_A_CLINICAL_PROTOCOL",
+            "synthetic": true,
+            "technical_max": 100000.0,
+            "technical_min": 0.0,
+            "unit": "mg/dL",
+            "valid_until": "2026-10-30T12:00:00Z",
+            "variable": "plasma_glucose_mg_dl"
+          },
+          "measurement": {
+            "calibration_id": "cal-mission-device-12",
+            "compartment": null,
+            "device_id": "mission-device-12",
+            "id": "mission-sample-75",
+            "interval_end": null,
+            "method": "VENOUS_PLASMA",
+            "mission_id": "mission-v011",
+            "phase": "IN_MISSION",
+            "protocol": "V011_SYNTHETIC_TECHNICAL_FIXTURE_NOT_A_CLINICAL_PROTOCOL",
+            "provenance": "SEEDED_SYNTHETIC_MISSION_NOT_CLINICAL_DATA",
+            "reported_quality": "ACCEPTABLE",
+            "site": null,
+            "subject_id": "mission-crew-B",
+            "synthetic": true,
+            "timestamp": "2026-08-19T14:24:00Z",
+            "unit": "mg/dL",
+            "value": 160.0,
+            "variable": "plasma_glucose_mg_dl"
+          },
+          "quality_reason": null
+        },
+        {
+          "device": {
+            "alignment_seconds": 1,
+            "calibrated_at": "2026-07-02T12:00:00Z",
+            "calibration_id": "cal-mission-device-13",
+            "conflict_tolerance": 0.0,
+            "id": "mission-device-13",
+            "max_age_seconds": 172800,
+            "policy_reference": "V011_SYNTHETIC_TECHNICAL_FIXTURE_NOT_A_CLINICAL_PROTOCOL",
+            "synthetic": true,
+            "technical_max": 100000.0,
+            "technical_min": 0.0,
+            "unit": "mmol/L",
+            "valid_until": "2026-10-30T12:00:00Z",
+            "variable": "beta_hydroxybutyrate_mmol_l"
+          },
+          "measurement": {
+            "calibration_id": "cal-mission-device-13",
+            "compartment": null,
+            "device_id": "mission-device-13",
+            "id": "mission-sample-76",
+            "interval_end": null,
+            "method": "DIRECT",
+            "mission_id": "mission-v011",
+            "phase": "IN_MISSION",
+            "protocol": "V011_SYNTHETIC_TECHNICAL_FIXTURE_NOT_A_CLINICAL_PROTOCOL",
+            "provenance": "SEEDED_SYNTHETIC_MISSION_NOT_CLINICAL_DATA",
+            "reported_quality": "ACCEPTABLE",
+            "site": null,
+            "subject_id": "mission-crew-B",
+            "synthetic": true,
+            "timestamp": "2026-08-19T14:24:00Z",
+            "unit": "mmol/L",
+            "value": 3.8,
+            "variable": "beta_hydroxybutyrate_mmol_l"
+          },
+          "quality_reason": null
+        },
+        {
+          "device": {
+            "alignment_seconds": 1,
+            "calibrated_at": "2026-07-02T12:00:00Z",
+            "calibration_id": "cal-mission-device-14",
+            "conflict_tolerance": 0.0,
+            "id": "mission-device-14",
+            "max_age_seconds": 172800,
+            "policy_reference": "V011_SYNTHETIC_TECHNICAL_FIXTURE_NOT_A_CLINICAL_PROTOCOL",
+            "synthetic": true,
+            "technical_max": 100000.0,
+            "technical_min": 0.0,
+            "unit": "pH",
+            "valid_until": "2026-10-30T12:00:00Z",
+            "variable": "venous_pH"
+          },
+          "measurement": {
+            "calibration_id": "cal-mission-device-14",
+            "compartment": null,
+            "device_id": "mission-device-14",
+            "id": "mission-sample-77",
+            "interval_end": null,
+            "method": "VENOUS_BLOOD_GAS",
+            "mission_id": "mission-v011",
+            "phase": "IN_MISSION",
+            "protocol": "V011_SYNTHETIC_TECHNICAL_FIXTURE_NOT_A_CLINICAL_PROTOCOL",
+            "provenance": "SEEDED_SYNTHETIC_MISSION_NOT_CLINICAL_DATA",
+            "reported_quality": "ACCEPTABLE",
+            "site": null,
+            "subject_id": "mission-crew-B",
+            "synthetic": true,
+            "timestamp": "2026-08-19T14:24:00Z",
+            "unit": "pH",
+            "value": 7.28,
+            "variable": "venous_pH"
+          },
+          "quality_reason": null
+        },
+        {
+          "device": {
+            "alignment_seconds": 1,
+            "calibrated_at": "2026-07-02T12:00:00Z",
+            "calibration_id": "cal-mission-device-15",
+            "conflict_tolerance": 0.0,
+            "id": "mission-device-15",
+            "max_age_seconds": 172800,
+            "policy_reference": "V011_SYNTHETIC_TECHNICAL_FIXTURE_NOT_A_CLINICAL_PROTOCOL",
+            "synthetic": true,
+            "technical_max": 100000.0,
+            "technical_min": 0.0,
+            "unit": "mmol/L",
+            "valid_until": "2026-10-30T12:00:00Z",
+            "variable": "potassium_mmol_l"
+          },
+          "measurement": {
+            "calibration_id": "cal-mission-device-15",
+            "compartment": null,
+            "device_id": "mission-device-15",
+            "id": "mission-sample-78",
+            "interval_end": null,
+            "method": "DIRECT",
+            "mission_id": "mission-v011",
+            "phase": "IN_MISSION",
+            "protocol": "V011_SYNTHETIC_TECHNICAL_FIXTURE_NOT_A_CLINICAL_PROTOCOL",
+            "provenance": "SEEDED_SYNTHETIC_MISSION_NOT_CLINICAL_DATA",
+            "reported_quality": "ACCEPTABLE",
+            "site": null,
+            "subject_id": "mission-crew-B",
+            "synthetic": true,
+            "timestamp": "2026-08-19T14:24:00Z",
+            "unit": "mmol/L",
+            "value": 4.0,
+            "variable": "potassium_mmol_l"
+          },
+          "quality_reason": null
+        }
+      ],
+      "mission": {
+        "environment": "HABITABLE_VOLUME",
+        "exposure_context": null,
+        "extraterrestrial_surface_eva_planned_or_required": null,
+        "gravity": "MICROGRAVITY",
+        "id": "mission-v011",
+        "microgravity_eva_planned_or_required": null,
+        "mode": "NOMINAL",
+        "phase": "IN_MISSION",
+        "synthetic": true
+      },
+      "observations": [
+        {
+          "concept": "known_diabetes",
+          "id": "known_diabetes-acute-18",
+          "method": "SYNTHETIC_OBSERVATION",
+          "provenance": "SYNTHETIC_REPORT_ADAPTER_NOT_CLINICAL_VALIDATION",
+          "quality": "VALID",
+          "sample_id": "acute-18",
+          "timestamp": "2026-08-19T12:00:00Z",
+          "unit": "1",
+          "value": true
+        },
+        {
+          "concept": "known_diabetes",
+          "id": "known_diabetes-acute-18.1",
+          "method": "SYNTHETIC_OBSERVATION",
+          "provenance": "SYNTHETIC_REPORT_ADAPTER_NOT_CLINICAL_VALIDATION",
+          "quality": "VALID",
+          "sample_id": "acute-18.1",
+          "timestamp": "2026-08-19T14:24:00Z",
+          "unit": "1",
+          "value": true
+        },
+        {
+          "concept": "plasma_glucose_mg_dl",
+          "id": "mission-sample-62",
+          "method": "VENOUS_PLASMA",
+          "provenance": "SEEDED_SYNTHETIC_MISSION_NOT_CLINICAL_DATA",
+          "quality": "VALID",
+          "sample_id": "mission-sample-62",
+          "timestamp": "2026-08-19T12:00:00Z",
+          "unit": "mg/dL",
+          "value": 180.0
+        },
+        {
+          "concept": "beta_hydroxybutyrate_mmol_l",
+          "id": "mission-sample-63",
+          "method": "DIRECT",
+          "provenance": "SEEDED_SYNTHETIC_MISSION_NOT_CLINICAL_DATA",
+          "quality": "VALID",
+          "sample_id": "mission-sample-63",
+          "timestamp": "2026-08-19T12:00:00Z",
+          "unit": "mmol/L",
+          "value": 4.2
+        },
+        {
+          "concept": "venous_pH",
+          "id": "mission-sample-64",
+          "method": "VENOUS_BLOOD_GAS",
+          "provenance": "SEEDED_SYNTHETIC_MISSION_NOT_CLINICAL_DATA",
+          "quality": "VALID",
+          "sample_id": "mission-sample-64",
+          "timestamp": "2026-08-19T12:00:00Z",
+          "unit": "pH",
+          "value": 7.22
+        },
+        {
+          "concept": "plasma_glucose_mg_dl",
+          "id": "mission-sample-75",
+          "method": "VENOUS_PLASMA",
+          "provenance": "SEEDED_SYNTHETIC_MISSION_NOT_CLINICAL_DATA",
+          "quality": "VALID",
+          "sample_id": "mission-sample-75",
+          "timestamp": "2026-08-19T14:24:00Z",
+          "unit": "mg/dL",
+          "value": 160.0
+        },
+        {
+          "concept": "beta_hydroxybutyrate_mmol_l",
+          "id": "mission-sample-76",
+          "method": "DIRECT",
+          "provenance": "SEEDED_SYNTHETIC_MISSION_NOT_CLINICAL_DATA",
+          "quality": "VALID",
+          "sample_id": "mission-sample-76",
+          "timestamp": "2026-08-19T14:24:00Z",
+          "unit": "mmol/L",
+          "value": 3.8
+        },
+        {
+          "concept": "venous_pH",
+          "id": "mission-sample-77",
+          "method": "VENOUS_BLOOD_GAS",
+          "provenance": "SEEDED_SYNTHETIC_MISSION_NOT_CLINICAL_DATA",
+          "quality": "VALID",
+          "sample_id": "mission-sample-77",
+          "timestamp": "2026-08-19T14:24:00Z",
+          "unit": "pH",
+          "value": 7.28
+        },
+        {
+          "concept": "potassium_mmol_l",
+          "id": "mission-sample-78",
+          "method": "DIRECT",
+          "provenance": "SEEDED_SYNTHETIC_MISSION_NOT_CLINICAL_DATA",
+          "quality": "VALID",
+          "sample_id": "mission-sample-78",
+          "timestamp": "2026-08-19T14:24:00Z",
+          "unit": "mmol/L",
+          "value": 4.0
+        }
+      ],
+      "profile": {
+        "id": "mission-crew-B",
+        "mission_id": "mission-v011",
+        "synthetic": true
+      },
+      "request": {
+        "age_years": 42,
+        "as_of": "2026-08-19T14:24:00Z",
+        "condition_id": "HYPOGLYCEMIA",
+        "measurement_bindings": [
+          {
+            "concept": "plasma_glucose_mg_dl",
+            "measurement_id": "mission-sample-62",
+            "sample_id": "mission-sample-62"
+          },
+          {
+            "concept": "beta_hydroxybutyrate_mmol_l",
+            "measurement_id": "mission-sample-63",
+            "sample_id": "mission-sample-63"
+          },
+          {
+            "concept": "venous_pH",
+            "measurement_id": "mission-sample-64",
+            "sample_id": "mission-sample-64"
+          },
+          {
+            "concept": "plasma_glucose_mg_dl",
+            "measurement_id": "mission-sample-75",
+            "sample_id": "mission-sample-75"
+          },
+          {
+            "concept": "beta_hydroxybutyrate_mmol_l",
+            "measurement_id": "mission-sample-76",
+            "sample_id": "mission-sample-76"
+          },
+          {
+            "concept": "venous_pH",
+            "measurement_id": "mission-sample-77",
+            "sample_id": "mission-sample-77"
+          },
+          {
+            "concept": "potassium_mmol_l",
+            "measurement_id": "mission-sample-78",
+            "sample_id": "mission-sample-78"
+          }
+        ],
+        "mission_id": "mission-v011",
+        "observations": [
+          {
+            "concept": "known_diabetes",
+            "id": "known_diabetes-acute-18",
+            "method": "SYNTHETIC_OBSERVATION",
+            "provenance": "SYNTHETIC_REPORT_ADAPTER_NOT_CLINICAL_VALIDATION",
+            "quality": "VALID",
+            "sample_id": "acute-18",
+            "timestamp": "2026-08-19T12:00:00Z",
+            "unit": "1",
+            "value": true
+          },
+          {
+            "concept": "known_diabetes",
+            "id": "known_diabetes-acute-18.1",
+            "method": "SYNTHETIC_OBSERVATION",
+            "provenance": "SYNTHETIC_REPORT_ADAPTER_NOT_CLINICAL_VALIDATION",
+            "quality": "VALID",
+            "sample_id": "acute-18.1",
+            "timestamp": "2026-08-19T14:24:00Z",
+            "unit": "1",
+            "value": true
+          }
+        ],
+        "population": "NONPREGNANT_ADULT",
+        "presentation_id": null,
+        "resource_policy": "DECLARED_R2",
+        "resources": {},
+        "subject_id": "mission-crew-B",
+        "window_start": "2026-08-19T12:00:00Z"
+      },
+      "resource_snapshot": {
+        "as_of": "2026-08-19T14:24:00Z",
+        "declared_flags": {},
+        "inventory_hash": null,
+        "inventory_id": null,
+        "inventory_version": null,
+        "mission_id": "mission-v011",
+        "policy": "DECLARED_R2",
+        "resources": [],
+        "synthetic_only": true
+      }
+    }
+  },
+  {
+    "id": "MISSION-ce-262e1b413a1c240e8634d9142ac03eae",
+    "snapshot": {
+      "measurement_records": [
+        {
+          "device": {
+            "alignment_seconds": 1,
+            "calibrated_at": "2026-07-02T12:00:00Z",
+            "calibration_id": "cal-mission-device-12",
+            "conflict_tolerance": 0.0,
+            "id": "mission-device-12",
+            "max_age_seconds": 172800,
+            "policy_reference": "V011_SYNTHETIC_TECHNICAL_FIXTURE_NOT_A_CLINICAL_PROTOCOL",
+            "synthetic": true,
+            "technical_max": 100000.0,
+            "technical_min": 0.0,
+            "unit": "mg/dL",
+            "valid_until": "2026-10-30T12:00:00Z",
+            "variable": "plasma_glucose_mg_dl"
+          },
+          "measurement": {
+            "calibration_id": "cal-mission-device-12",
+            "compartment": null,
+            "device_id": "mission-device-12",
+            "id": "mission-sample-62",
+            "interval_end": null,
+            "method": "VENOUS_PLASMA",
+            "mission_id": "mission-v011",
+            "phase": "IN_MISSION",
+            "protocol": "V011_SYNTHETIC_TECHNICAL_FIXTURE_NOT_A_CLINICAL_PROTOCOL",
+            "provenance": "SEEDED_SYNTHETIC_MISSION_NOT_CLINICAL_DATA",
+            "reported_quality": "ACCEPTABLE",
+            "site": null,
+            "subject_id": "mission-crew-B",
+            "synthetic": true,
+            "timestamp": "2026-08-19T12:00:00Z",
+            "unit": "mg/dL",
+            "value": 180.0,
+            "variable": "plasma_glucose_mg_dl"
+          },
+          "quality_reason": null
+        },
+        {
+          "device": {
+            "alignment_seconds": 1,
+            "calibrated_at": "2026-07-02T12:00:00Z",
+            "calibration_id": "cal-mission-device-13",
+            "conflict_tolerance": 0.0,
+            "id": "mission-device-13",
+            "max_age_seconds": 172800,
+            "policy_reference": "V011_SYNTHETIC_TECHNICAL_FIXTURE_NOT_A_CLINICAL_PROTOCOL",
+            "synthetic": true,
+            "technical_max": 100000.0,
+            "technical_min": 0.0,
+            "unit": "mmol/L",
+            "valid_until": "2026-10-30T12:00:00Z",
+            "variable": "beta_hydroxybutyrate_mmol_l"
+          },
+          "measurement": {
+            "calibration_id": "cal-mission-device-13",
+            "compartment": null,
+            "device_id": "mission-device-13",
+            "id": "mission-sample-63",
+            "interval_end": null,
+            "method": "DIRECT",
+            "mission_id": "mission-v011",
+            "phase": "IN_MISSION",
+            "protocol": "V011_SYNTHETIC_TECHNICAL_FIXTURE_NOT_A_CLINICAL_PROTOCOL",
+            "provenance": "SEEDED_SYNTHETIC_MISSION_NOT_CLINICAL_DATA",
+            "reported_quality": "ACCEPTABLE",
+            "site": null,
+            "subject_id": "mission-crew-B",
+            "synthetic": true,
+            "timestamp": "2026-08-19T12:00:00Z",
+            "unit": "mmol/L",
+            "value": 4.2,
+            "variable": "beta_hydroxybutyrate_mmol_l"
+          },
+          "quality_reason": null
+        },
+        {
+          "device": {
+            "alignment_seconds": 1,
+            "calibrated_at": "2026-07-02T12:00:00Z",
+            "calibration_id": "cal-mission-device-14",
+            "conflict_tolerance": 0.0,
+            "id": "mission-device-14",
+            "max_age_seconds": 172800,
+            "policy_reference": "V011_SYNTHETIC_TECHNICAL_FIXTURE_NOT_A_CLINICAL_PROTOCOL",
+            "synthetic": true,
+            "technical_max": 100000.0,
+            "technical_min": 0.0,
+            "unit": "pH",
+            "valid_until": "2026-10-30T12:00:00Z",
+            "variable": "venous_pH"
+          },
+          "measurement": {
+            "calibration_id": "cal-mission-device-14",
+            "compartment": null,
+            "device_id": "mission-device-14",
+            "id": "mission-sample-64",
+            "interval_end": null,
+            "method": "VENOUS_BLOOD_GAS",
+            "mission_id": "mission-v011",
+            "phase": "IN_MISSION",
+            "protocol": "V011_SYNTHETIC_TECHNICAL_FIXTURE_NOT_A_CLINICAL_PROTOCOL",
+            "provenance": "SEEDED_SYNTHETIC_MISSION_NOT_CLINICAL_DATA",
+            "reported_quality": "ACCEPTABLE",
+            "site": null,
+            "subject_id": "mission-crew-B",
+            "synthetic": true,
+            "timestamp": "2026-08-19T12:00:00Z",
+            "unit": "pH",
+            "value": 7.22,
+            "variable": "venous_pH"
+          },
+          "quality_reason": null
+        },
+        {
+          "device": {
+            "alignment_seconds": 1,
+            "calibrated_at": "2026-07-02T12:00:00Z",
+            "calibration_id": "cal-mission-device-12",
+            "conflict_tolerance": 0.0,
+            "id": "mission-device-12",
+            "max_age_seconds": 172800,
+            "policy_reference": "V011_SYNTHETIC_TECHNICAL_FIXTURE_NOT_A_CLINICAL_PROTOCOL",
+            "synthetic": true,
+            "technical_max": 100000.0,
+            "technical_min": 0.0,
+            "unit": "mg/dL",
+            "valid_until": "2026-10-30T12:00:00Z",
+            "variable": "plasma_glucose_mg_dl"
+          },
+          "measurement": {
+            "calibration_id": "cal-mission-device-12",
+            "compartment": null,
+            "device_id": "mission-device-12",
+            "id": "mission-sample-75",
+            "interval_end": null,
+            "method": "VENOUS_PLASMA",
+            "mission_id": "mission-v011",
+            "phase": "IN_MISSION",
+            "protocol": "V011_SYNTHETIC_TECHNICAL_FIXTURE_NOT_A_CLINICAL_PROTOCOL",
+            "provenance": "SEEDED_SYNTHETIC_MISSION_NOT_CLINICAL_DATA",
+            "reported_quality": "ACCEPTABLE",
+            "site": null,
+            "subject_id": "mission-crew-B",
+            "synthetic": true,
+            "timestamp": "2026-08-19T14:24:00Z",
+            "unit": "mg/dL",
+            "value": 160.0,
+            "variable": "plasma_glucose_mg_dl"
+          },
+          "quality_reason": null
+        },
+        {
+          "device": {
+            "alignment_seconds": 1,
+            "calibrated_at": "2026-07-02T12:00:00Z",
+            "calibration_id": "cal-mission-device-13",
+            "conflict_tolerance": 0.0,
+            "id": "mission-device-13",
+            "max_age_seconds": 172800,
+            "policy_reference": "V011_SYNTHETIC_TECHNICAL_FIXTURE_NOT_A_CLINICAL_PROTOCOL",
+            "synthetic": true,
+            "technical_max": 100000.0,
+            "technical_min": 0.0,
+            "unit": "mmol/L",
+            "valid_until": "2026-10-30T12:00:00Z",
+            "variable": "beta_hydroxybutyrate_mmol_l"
+          },
+          "measurement": {
+            "calibration_id": "cal-mission-device-13",
+            "compartment": null,
+            "device_id": "mission-device-13",
+            "id": "mission-sample-76",
+            "interval_end": null,
+            "method": "DIRECT",
+            "mission_id": "mission-v011",
+            "phase": "IN_MISSION",
+            "protocol": "V011_SYNTHETIC_TECHNICAL_FIXTURE_NOT_A_CLINICAL_PROTOCOL",
+            "provenance": "SEEDED_SYNTHETIC_MISSION_NOT_CLINICAL_DATA",
+            "reported_quality": "ACCEPTABLE",
+            "site": null,
+            "subject_id": "mission-crew-B",
+            "synthetic": true,
+            "timestamp": "2026-08-19T14:24:00Z",
+            "unit": "mmol/L",
+            "value": 3.8,
+            "variable": "beta_hydroxybutyrate_mmol_l"
+          },
+          "quality_reason": null
+        },
+        {
+          "device": {
+            "alignment_seconds": 1,
+            "calibrated_at": "2026-07-02T12:00:00Z",
+            "calibration_id": "cal-mission-device-14",
+            "conflict_tolerance": 0.0,
+            "id": "mission-device-14",
+            "max_age_seconds": 172800,
+            "policy_reference": "V011_SYNTHETIC_TECHNICAL_FIXTURE_NOT_A_CLINICAL_PROTOCOL",
+            "synthetic": true,
+            "technical_max": 100000.0,
+            "technical_min": 0.0,
+            "unit": "pH",
+            "valid_until": "2026-10-30T12:00:00Z",
+            "variable": "venous_pH"
+          },
+          "measurement": {
+            "calibration_id": "cal-mission-device-14",
+            "compartment": null,
+            "device_id": "mission-device-14",
+            "id": "mission-sample-77",
+            "interval_end": null,
+            "method": "VENOUS_BLOOD_GAS",
+            "mission_id": "mission-v011",
+            "phase": "IN_MISSION",
+            "protocol": "V011_SYNTHETIC_TECHNICAL_FIXTURE_NOT_A_CLINICAL_PROTOCOL",
+            "provenance": "SEEDED_SYNTHETIC_MISSION_NOT_CLINICAL_DATA",
+            "reported_quality": "ACCEPTABLE",
+            "site": null,
+            "subject_id": "mission-crew-B",
+            "synthetic": true,
+            "timestamp": "2026-08-19T14:24:00Z",
+            "unit": "pH",
+            "value": 7.28,
+            "variable": "venous_pH"
+          },
+          "quality_reason": null
+        },
+        {
+          "device": {
+            "alignment_seconds": 1,
+            "calibrated_at": "2026-07-02T12:00:00Z",
+            "calibration_id": "cal-mission-device-15",
+            "conflict_tolerance": 0.0,
+            "id": "mission-device-15",
+            "max_age_seconds": 172800,
+            "policy_reference": "V011_SYNTHETIC_TECHNICAL_FIXTURE_NOT_A_CLINICAL_PROTOCOL",
+            "synthetic": true,
+            "technical_max": 100000.0,
+            "technical_min": 0.0,
+            "unit": "mmol/L",
+            "valid_until": "2026-10-30T12:00:00Z",
+            "variable": "potassium_mmol_l"
+          },
+          "measurement": {
+            "calibration_id": "cal-mission-device-15",
+            "compartment": null,
+            "device_id": "mission-device-15",
+            "id": "mission-sample-78",
+            "interval_end": null,
+            "method": "DIRECT",
+            "mission_id": "mission-v011",
+            "phase": "IN_MISSION",
+            "protocol": "V011_SYNTHETIC_TECHNICAL_FIXTURE_NOT_A_CLINICAL_PROTOCOL",
+            "provenance": "SEEDED_SYNTHETIC_MISSION_NOT_CLINICAL_DATA",
+            "reported_quality": "ACCEPTABLE",
+            "site": null,
+            "subject_id": "mission-crew-B",
+            "synthetic": true,
+            "timestamp": "2026-08-19T14:24:00Z",
+            "unit": "mmol/L",
+            "value": 4.0,
+            "variable": "potassium_mmol_l"
+          },
+          "quality_reason": null
+        }
+      ],
+      "mission": {
+        "environment": "HABITABLE_VOLUME",
+        "exposure_context": null,
+        "extraterrestrial_surface_eva_planned_or_required": null,
+        "gravity": "MICROGRAVITY",
+        "id": "mission-v011",
+        "microgravity_eva_planned_or_required": null,
+        "mode": "NOMINAL",
+        "phase": "IN_MISSION",
+        "synthetic": true
+      },
+      "observations": [
+        {
+          "concept": "known_diabetes",
+          "id": "known_diabetes-acute-18",
+          "method": "SYNTHETIC_OBSERVATION",
+          "provenance": "SYNTHETIC_REPORT_ADAPTER_NOT_CLINICAL_VALIDATION",
+          "quality": "VALID",
+          "sample_id": "acute-18",
+          "timestamp": "2026-08-19T12:00:00Z",
+          "unit": "1",
+          "value": true
+        },
+        {
+          "concept": "known_diabetes",
+          "id": "known_diabetes-acute-18.1",
+          "method": "SYNTHETIC_OBSERVATION",
+          "provenance": "SYNTHETIC_REPORT_ADAPTER_NOT_CLINICAL_VALIDATION",
+          "quality": "VALID",
+          "sample_id": "acute-18.1",
+          "timestamp": "2026-08-19T14:24:00Z",
+          "unit": "1",
+          "value": true
+        },
+        {
+          "concept": "plasma_glucose_mg_dl",
+          "id": "mission-sample-62",
+          "method": "VENOUS_PLASMA",
+          "provenance": "SEEDED_SYNTHETIC_MISSION_NOT_CLINICAL_DATA",
+          "quality": "VALID",
+          "sample_id": "mission-sample-62",
+          "timestamp": "2026-08-19T12:00:00Z",
+          "unit": "mg/dL",
+          "value": 180.0
+        },
+        {
+          "concept": "beta_hydroxybutyrate_mmol_l",
+          "id": "mission-sample-63",
+          "method": "DIRECT",
+          "provenance": "SEEDED_SYNTHETIC_MISSION_NOT_CLINICAL_DATA",
+          "quality": "VALID",
+          "sample_id": "mission-sample-63",
+          "timestamp": "2026-08-19T12:00:00Z",
+          "unit": "mmol/L",
+          "value": 4.2
+        },
+        {
+          "concept": "venous_pH",
+          "id": "mission-sample-64",
+          "method": "VENOUS_BLOOD_GAS",
+          "provenance": "SEEDED_SYNTHETIC_MISSION_NOT_CLINICAL_DATA",
+          "quality": "VALID",
+          "sample_id": "mission-sample-64",
+          "timestamp": "2026-08-19T12:00:00Z",
+          "unit": "pH",
+          "value": 7.22
+        },
+        {
+          "concept": "plasma_glucose_mg_dl",
+          "id": "mission-sample-75",
+          "method": "VENOUS_PLASMA",
+          "provenance": "SEEDED_SYNTHETIC_MISSION_NOT_CLINICAL_DATA",
+          "quality": "VALID",
+          "sample_id": "mission-sample-75",
+          "timestamp": "2026-08-19T14:24:00Z",
+          "unit": "mg/dL",
+          "value": 160.0
+        },
+        {
+          "concept": "beta_hydroxybutyrate_mmol_l",
+          "id": "mission-sample-76",
+          "method": "DIRECT",
+          "provenance": "SEEDED_SYNTHETIC_MISSION_NOT_CLINICAL_DATA",
+          "quality": "VALID",
+          "sample_id": "mission-sample-76",
+          "timestamp": "2026-08-19T14:24:00Z",
+          "unit": "mmol/L",
+          "value": 3.8
+        },
+        {
+          "concept": "venous_pH",
+          "id": "mission-sample-77",
+          "method": "VENOUS_BLOOD_GAS",
+          "provenance": "SEEDED_SYNTHETIC_MISSION_NOT_CLINICAL_DATA",
+          "quality": "VALID",
+          "sample_id": "mission-sample-77",
+          "timestamp": "2026-08-19T14:24:00Z",
+          "unit": "pH",
+          "value": 7.28
+        },
+        {
+          "concept": "potassium_mmol_l",
+          "id": "mission-sample-78",
+          "method": "DIRECT",
+          "provenance": "SEEDED_SYNTHETIC_MISSION_NOT_CLINICAL_DATA",
+          "quality": "VALID",
+          "sample_id": "mission-sample-78",
+          "timestamp": "2026-08-19T14:24:00Z",
+          "unit": "mmol/L",
+          "value": 4.0
+        }
+      ],
+      "profile": {
+        "id": "mission-crew-B",
+        "mission_id": "mission-v011",
+        "synthetic": true
+      },
+      "request": {
+        "age_years": 42,
+        "as_of": "2026-08-19T14:24:00Z",
+        "condition_id": "ORTHOSTATIC_HYPOTENSION",
+        "measurement_bindings": [
+          {
+            "concept": "plasma_glucose_mg_dl",
+            "measurement_id": "mission-sample-62",
+            "sample_id": "mission-sample-62"
+          },
+          {
+            "concept": "beta_hydroxybutyrate_mmol_l",
+            "measurement_id": "mission-sample-63",
+            "sample_id": "mission-sample-63"
+          },
+          {
+            "concept": "venous_pH",
+            "measurement_id": "mission-sample-64",
+            "sample_id": "mission-sample-64"
+          },
+          {
+            "concept": "plasma_glucose_mg_dl",
+            "measurement_id": "mission-sample-75",
+            "sample_id": "mission-sample-75"
+          },
+          {
+            "concept": "beta_hydroxybutyrate_mmol_l",
+            "measurement_id": "mission-sample-76",
+            "sample_id": "mission-sample-76"
+          },
+          {
+            "concept": "venous_pH",
+            "measurement_id": "mission-sample-77",
+            "sample_id": "mission-sample-77"
+          },
+          {
+            "concept": "potassium_mmol_l",
+            "measurement_id": "mission-sample-78",
+            "sample_id": "mission-sample-78"
+          }
+        ],
+        "mission_id": "mission-v011",
+        "observations": [
+          {
+            "concept": "known_diabetes",
+            "id": "known_diabetes-acute-18",
+            "method": "SYNTHETIC_OBSERVATION",
+            "provenance": "SYNTHETIC_REPORT_ADAPTER_NOT_CLINICAL_VALIDATION",
+            "quality": "VALID",
+            "sample_id": "acute-18",
+            "timestamp": "2026-08-19T12:00:00Z",
+            "unit": "1",
+            "value": true
+          },
+          {
+            "concept": "known_diabetes",
+            "id": "known_diabetes-acute-18.1",
+            "method": "SYNTHETIC_OBSERVATION",
+            "provenance": "SYNTHETIC_REPORT_ADAPTER_NOT_CLINICAL_VALIDATION",
+            "quality": "VALID",
+            "sample_id": "acute-18.1",
+            "timestamp": "2026-08-19T14:24:00Z",
+            "unit": "1",
+            "value": true
+          }
+        ],
+        "population": "NONPREGNANT_ADULT",
+        "presentation_id": null,
+        "resource_policy": "DECLARED_R2",
+        "resources": {},
+        "subject_id": "mission-crew-B",
+        "window_start": "2026-08-19T12:00:00Z"
+      },
+      "resource_snapshot": {
+        "as_of": "2026-08-19T14:24:00Z",
+        "declared_flags": {},
+        "inventory_hash": null,
+        "inventory_id": null,
+        "inventory_version": null,
+        "mission_id": "mission-v011",
+        "policy": "DECLARED_R2",
+        "resources": [],
+        "synthetic_only": true
+      }
+    }
+  },
+  {
+    "id": "MISSION-ce-7e34fabc4228a583028672583dccf4fc",
+    "snapshot": {
+      "measurement_records": [
+        {
+          "device": {
+            "alignment_seconds": 1,
+            "calibrated_at": "2026-07-02T12:00:00Z",
+            "calibration_id": "cal-mission-device-12",
+            "conflict_tolerance": 0.0,
+            "id": "mission-device-12",
+            "max_age_seconds": 172800,
+            "policy_reference": "V011_SYNTHETIC_TECHNICAL_FIXTURE_NOT_A_CLINICAL_PROTOCOL",
+            "synthetic": true,
+            "technical_max": 100000.0,
+            "technical_min": 0.0,
+            "unit": "mg/dL",
+            "valid_until": "2026-10-30T12:00:00Z",
+            "variable": "plasma_glucose_mg_dl"
+          },
+          "measurement": {
+            "calibration_id": "cal-mission-device-12",
+            "compartment": null,
+            "device_id": "mission-device-12",
+            "id": "mission-sample-62",
+            "interval_end": null,
+            "method": "VENOUS_PLASMA",
+            "mission_id": "mission-v011",
+            "phase": "IN_MISSION",
+            "protocol": "V011_SYNTHETIC_TECHNICAL_FIXTURE_NOT_A_CLINICAL_PROTOCOL",
+            "provenance": "SEEDED_SYNTHETIC_MISSION_NOT_CLINICAL_DATA",
+            "reported_quality": "ACCEPTABLE",
+            "site": null,
+            "subject_id": "mission-crew-B",
+            "synthetic": true,
+            "timestamp": "2026-08-19T12:00:00Z",
+            "unit": "mg/dL",
+            "value": 180.0,
+            "variable": "plasma_glucose_mg_dl"
+          },
+          "quality_reason": null
+        },
+        {
+          "device": {
+            "alignment_seconds": 1,
+            "calibrated_at": "2026-07-02T12:00:00Z",
+            "calibration_id": "cal-mission-device-13",
+            "conflict_tolerance": 0.0,
+            "id": "mission-device-13",
+            "max_age_seconds": 172800,
+            "policy_reference": "V011_SYNTHETIC_TECHNICAL_FIXTURE_NOT_A_CLINICAL_PROTOCOL",
+            "synthetic": true,
+            "technical_max": 100000.0,
+            "technical_min": 0.0,
+            "unit": "mmol/L",
+            "valid_until": "2026-10-30T12:00:00Z",
+            "variable": "beta_hydroxybutyrate_mmol_l"
+          },
+          "measurement": {
+            "calibration_id": "cal-mission-device-13",
+            "compartment": null,
+            "device_id": "mission-device-13",
+            "id": "mission-sample-63",
+            "interval_end": null,
+            "method": "DIRECT",
+            "mission_id": "mission-v011",
+            "phase": "IN_MISSION",
+            "protocol": "V011_SYNTHETIC_TECHNICAL_FIXTURE_NOT_A_CLINICAL_PROTOCOL",
+            "provenance": "SEEDED_SYNTHETIC_MISSION_NOT_CLINICAL_DATA",
+            "reported_quality": "ACCEPTABLE",
+            "site": null,
+            "subject_id": "mission-crew-B",
+            "synthetic": true,
+            "timestamp": "2026-08-19T12:00:00Z",
+            "unit": "mmol/L",
+            "value": 4.2,
+            "variable": "beta_hydroxybutyrate_mmol_l"
+          },
+          "quality_reason": null
+        },
+        {
+          "device": {
+            "alignment_seconds": 1,
+            "calibrated_at": "2026-07-02T12:00:00Z",
+            "calibration_id": "cal-mission-device-14",
+            "conflict_tolerance": 0.0,
+            "id": "mission-device-14",
+            "max_age_seconds": 172800,
+            "policy_reference": "V011_SYNTHETIC_TECHNICAL_FIXTURE_NOT_A_CLINICAL_PROTOCOL",
+            "synthetic": true,
+            "technical_max": 100000.0,
+            "technical_min": 0.0,
+            "unit": "pH",
+            "valid_until": "2026-10-30T12:00:00Z",
+            "variable": "venous_pH"
+          },
+          "measurement": {
+            "calibration_id": "cal-mission-device-14",
+            "compartment": null,
+            "device_id": "mission-device-14",
+            "id": "mission-sample-64",
+            "interval_end": null,
+            "method": "VENOUS_BLOOD_GAS",
+            "mission_id": "mission-v011",
+            "phase": "IN_MISSION",
+            "protocol": "V011_SYNTHETIC_TECHNICAL_FIXTURE_NOT_A_CLINICAL_PROTOCOL",
+            "provenance": "SEEDED_SYNTHETIC_MISSION_NOT_CLINICAL_DATA",
+            "reported_quality": "ACCEPTABLE",
+            "site": null,
+            "subject_id": "mission-crew-B",
+            "synthetic": true,
+            "timestamp": "2026-08-19T12:00:00Z",
+            "unit": "pH",
+            "value": 7.22,
+            "variable": "venous_pH"
+          },
+          "quality_reason": null
+        },
+        {
+          "device": {
+            "alignment_seconds": 1,
+            "calibrated_at": "2026-07-02T12:00:00Z",
+            "calibration_id": "cal-mission-device-12",
+            "conflict_tolerance": 0.0,
+            "id": "mission-device-12",
+            "max_age_seconds": 172800,
+            "policy_reference": "V011_SYNTHETIC_TECHNICAL_FIXTURE_NOT_A_CLINICAL_PROTOCOL",
+            "synthetic": true,
+            "technical_max": 100000.0,
+            "technical_min": 0.0,
+            "unit": "mg/dL",
+            "valid_until": "2026-10-30T12:00:00Z",
+            "variable": "plasma_glucose_mg_dl"
+          },
+          "measurement": {
+            "calibration_id": "cal-mission-device-12",
+            "compartment": null,
+            "device_id": "mission-device-12",
+            "id": "mission-sample-75",
+            "interval_end": null,
+            "method": "VENOUS_PLASMA",
+            "mission_id": "mission-v011",
+            "phase": "IN_MISSION",
+            "protocol": "V011_SYNTHETIC_TECHNICAL_FIXTURE_NOT_A_CLINICAL_PROTOCOL",
+            "provenance": "SEEDED_SYNTHETIC_MISSION_NOT_CLINICAL_DATA",
+            "reported_quality": "ACCEPTABLE",
+            "site": null,
+            "subject_id": "mission-crew-B",
+            "synthetic": true,
+            "timestamp": "2026-08-19T14:24:00Z",
+            "unit": "mg/dL",
+            "value": 160.0,
+            "variable": "plasma_glucose_mg_dl"
+          },
+          "quality_reason": null
+        },
+        {
+          "device": {
+            "alignment_seconds": 1,
+            "calibrated_at": "2026-07-02T12:00:00Z",
+            "calibration_id": "cal-mission-device-13",
+            "conflict_tolerance": 0.0,
+            "id": "mission-device-13",
+            "max_age_seconds": 172800,
+            "policy_reference": "V011_SYNTHETIC_TECHNICAL_FIXTURE_NOT_A_CLINICAL_PROTOCOL",
+            "synthetic": true,
+            "technical_max": 100000.0,
+            "technical_min": 0.0,
+            "unit": "mmol/L",
+            "valid_until": "2026-10-30T12:00:00Z",
+            "variable": "beta_hydroxybutyrate_mmol_l"
+          },
+          "measurement": {
+            "calibration_id": "cal-mission-device-13",
+            "compartment": null,
+            "device_id": "mission-device-13",
+            "id": "mission-sample-76",
+            "interval_end": null,
+            "method": "DIRECT",
+            "mission_id": "mission-v011",
+            "phase": "IN_MISSION",
+            "protocol": "V011_SYNTHETIC_TECHNICAL_FIXTURE_NOT_A_CLINICAL_PROTOCOL",
+            "provenance": "SEEDED_SYNTHETIC_MISSION_NOT_CLINICAL_DATA",
+            "reported_quality": "ACCEPTABLE",
+            "site": null,
+            "subject_id": "mission-crew-B",
+            "synthetic": true,
+            "timestamp": "2026-08-19T14:24:00Z",
+            "unit": "mmol/L",
+            "value": 3.8,
+            "variable": "beta_hydroxybutyrate_mmol_l"
+          },
+          "quality_reason": null
+        },
+        {
+          "device": {
+            "alignment_seconds": 1,
+            "calibrated_at": "2026-07-02T12:00:00Z",
+            "calibration_id": "cal-mission-device-14",
+            "conflict_tolerance": 0.0,
+            "id": "mission-device-14",
+            "max_age_seconds": 172800,
+            "policy_reference": "V011_SYNTHETIC_TECHNICAL_FIXTURE_NOT_A_CLINICAL_PROTOCOL",
+            "synthetic": true,
+            "technical_max": 100000.0,
+            "technical_min": 0.0,
+            "unit": "pH",
+            "valid_until": "2026-10-30T12:00:00Z",
+            "variable": "venous_pH"
+          },
+          "measurement": {
+            "calibration_id": "cal-mission-device-14",
+            "compartment": null,
+            "device_id": "mission-device-14",
+            "id": "mission-sample-77",
+            "interval_end": null,
+            "method": "VENOUS_BLOOD_GAS",
+            "mission_id": "mission-v011",
+            "phase": "IN_MISSION",
+            "protocol": "V011_SYNTHETIC_TECHNICAL_FIXTURE_NOT_A_CLINICAL_PROTOCOL",
+            "provenance": "SEEDED_SYNTHETIC_MISSION_NOT_CLINICAL_DATA",
+            "reported_quality": "ACCEPTABLE",
+            "site": null,
+            "subject_id": "mission-crew-B",
+            "synthetic": true,
+            "timestamp": "2026-08-19T14:24:00Z",
+            "unit": "pH",
+            "value": 7.28,
+            "variable": "venous_pH"
+          },
+          "quality_reason": null
+        },
+        {
+          "device": {
+            "alignment_seconds": 1,
+            "calibrated_at": "2026-07-02T12:00:00Z",
+            "calibration_id": "cal-mission-device-15",
+            "conflict_tolerance": 0.0,
+            "id": "mission-device-15",
+            "max_age_seconds": 172800,
+            "policy_reference": "V011_SYNTHETIC_TECHNICAL_FIXTURE_NOT_A_CLINICAL_PROTOCOL",
+            "synthetic": true,
+            "technical_max": 100000.0,
+            "technical_min": 0.0,
+            "unit": "mmol/L",
+            "valid_until": "2026-10-30T12:00:00Z",
+            "variable": "potassium_mmol_l"
+          },
+          "measurement": {
+            "calibration_id": "cal-mission-device-15",
+            "compartment": null,
+            "device_id": "mission-device-15",
+            "id": "mission-sample-78",
+            "interval_end": null,
+            "method": "DIRECT",
+            "mission_id": "mission-v011",
+            "phase": "IN_MISSION",
+            "protocol": "V011_SYNTHETIC_TECHNICAL_FIXTURE_NOT_A_CLINICAL_PROTOCOL",
+            "provenance": "SEEDED_SYNTHETIC_MISSION_NOT_CLINICAL_DATA",
+            "reported_quality": "ACCEPTABLE",
+            "site": null,
+            "subject_id": "mission-crew-B",
+            "synthetic": true,
+            "timestamp": "2026-08-19T14:24:00Z",
+            "unit": "mmol/L",
+            "value": 4.0,
+            "variable": "potassium_mmol_l"
+          },
+          "quality_reason": null
+        }
+      ],
+      "mission": {
+        "environment": "HABITABLE_VOLUME",
+        "exposure_context": null,
+        "extraterrestrial_surface_eva_planned_or_required": null,
+        "gravity": "MICROGRAVITY",
+        "id": "mission-v011",
+        "microgravity_eva_planned_or_required": null,
+        "mode": "NOMINAL",
+        "phase": "IN_MISSION",
+        "synthetic": true
+      },
+      "observations": [
+        {
+          "concept": "known_diabetes",
+          "id": "known_diabetes-acute-18",
+          "method": "SYNTHETIC_OBSERVATION",
+          "provenance": "SYNTHETIC_REPORT_ADAPTER_NOT_CLINICAL_VALIDATION",
+          "quality": "VALID",
+          "sample_id": "acute-18",
+          "timestamp": "2026-08-19T12:00:00Z",
+          "unit": "1",
+          "value": true
+        },
+        {
+          "concept": "known_diabetes",
+          "id": "known_diabetes-acute-18.1",
+          "method": "SYNTHETIC_OBSERVATION",
+          "provenance": "SYNTHETIC_REPORT_ADAPTER_NOT_CLINICAL_VALIDATION",
+          "quality": "VALID",
+          "sample_id": "acute-18.1",
+          "timestamp": "2026-08-19T14:24:00Z",
+          "unit": "1",
+          "value": true
+        },
+        {
+          "concept": "plasma_glucose_mg_dl",
+          "id": "mission-sample-62",
+          "method": "VENOUS_PLASMA",
+          "provenance": "SEEDED_SYNTHETIC_MISSION_NOT_CLINICAL_DATA",
+          "quality": "VALID",
+          "sample_id": "mission-sample-62",
+          "timestamp": "2026-08-19T12:00:00Z",
+          "unit": "mg/dL",
+          "value": 180.0
+        },
+        {
+          "concept": "beta_hydroxybutyrate_mmol_l",
+          "id": "mission-sample-63",
+          "method": "DIRECT",
+          "provenance": "SEEDED_SYNTHETIC_MISSION_NOT_CLINICAL_DATA",
+          "quality": "VALID",
+          "sample_id": "mission-sample-63",
+          "timestamp": "2026-08-19T12:00:00Z",
+          "unit": "mmol/L",
+          "value": 4.2
+        },
+        {
+          "concept": "venous_pH",
+          "id": "mission-sample-64",
+          "method": "VENOUS_BLOOD_GAS",
+          "provenance": "SEEDED_SYNTHETIC_MISSION_NOT_CLINICAL_DATA",
+          "quality": "VALID",
+          "sample_id": "mission-sample-64",
+          "timestamp": "2026-08-19T12:00:00Z",
+          "unit": "pH",
+          "value": 7.22
+        },
+        {
+          "concept": "plasma_glucose_mg_dl",
+          "id": "mission-sample-75",
+          "method": "VENOUS_PLASMA",
+          "provenance": "SEEDED_SYNTHETIC_MISSION_NOT_CLINICAL_DATA",
+          "quality": "VALID",
+          "sample_id": "mission-sample-75",
+          "timestamp": "2026-08-19T14:24:00Z",
+          "unit": "mg/dL",
+          "value": 160.0
+        },
+        {
+          "concept": "beta_hydroxybutyrate_mmol_l",
+          "id": "mission-sample-76",
+          "method": "DIRECT",
+          "provenance": "SEEDED_SYNTHETIC_MISSION_NOT_CLINICAL_DATA",
+          "quality": "VALID",
+          "sample_id": "mission-sample-76",
+          "timestamp": "2026-08-19T14:24:00Z",
+          "unit": "mmol/L",
+          "value": 3.8
+        },
+        {
+          "concept": "venous_pH",
+          "id": "mission-sample-77",
+          "method": "VENOUS_BLOOD_GAS",
+          "provenance": "SEEDED_SYNTHETIC_MISSION_NOT_CLINICAL_DATA",
+          "quality": "VALID",
+          "sample_id": "mission-sample-77",
+          "timestamp": "2026-08-19T14:24:00Z",
+          "unit": "pH",
+          "value": 7.28
+        },
+        {
+          "concept": "potassium_mmol_l",
+          "id": "mission-sample-78",
+          "method": "DIRECT",
+          "provenance": "SEEDED_SYNTHETIC_MISSION_NOT_CLINICAL_DATA",
+          "quality": "VALID",
+          "sample_id": "mission-sample-78",
+          "timestamp": "2026-08-19T14:24:00Z",
+          "unit": "mmol/L",
+          "value": 4.0
+        }
+      ],
+      "profile": {
+        "id": "mission-crew-B",
+        "mission_id": "mission-v011",
+        "synthetic": true
+      },
+      "request": {
+        "age_years": 42,
+        "as_of": "2026-08-19T14:24:00Z",
+        "condition_id": "POTS",
+        "measurement_bindings": [
+          {
+            "concept": "plasma_glucose_mg_dl",
+            "measurement_id": "mission-sample-62",
+            "sample_id": "mission-sample-62"
+          },
+          {
+            "concept": "beta_hydroxybutyrate_mmol_l",
+            "measurement_id": "mission-sample-63",
+            "sample_id": "mission-sample-63"
+          },
+          {
+            "concept": "venous_pH",
+            "measurement_id": "mission-sample-64",
+            "sample_id": "mission-sample-64"
+          },
+          {
+            "concept": "plasma_glucose_mg_dl",
+            "measurement_id": "mission-sample-75",
+            "sample_id": "mission-sample-75"
+          },
+          {
+            "concept": "beta_hydroxybutyrate_mmol_l",
+            "measurement_id": "mission-sample-76",
+            "sample_id": "mission-sample-76"
+          },
+          {
+            "concept": "venous_pH",
+            "measurement_id": "mission-sample-77",
+            "sample_id": "mission-sample-77"
+          },
+          {
+            "concept": "potassium_mmol_l",
+            "measurement_id": "mission-sample-78",
+            "sample_id": "mission-sample-78"
+          }
+        ],
+        "mission_id": "mission-v011",
+        "observations": [
+          {
+            "concept": "known_diabetes",
+            "id": "known_diabetes-acute-18",
+            "method": "SYNTHETIC_OBSERVATION",
+            "provenance": "SYNTHETIC_REPORT_ADAPTER_NOT_CLINICAL_VALIDATION",
+            "quality": "VALID",
+            "sample_id": "acute-18",
+            "timestamp": "2026-08-19T12:00:00Z",
+            "unit": "1",
+            "value": true
+          },
+          {
+            "concept": "known_diabetes",
+            "id": "known_diabetes-acute-18.1",
+            "method": "SYNTHETIC_OBSERVATION",
+            "provenance": "SYNTHETIC_REPORT_ADAPTER_NOT_CLINICAL_VALIDATION",
+            "quality": "VALID",
+            "sample_id": "acute-18.1",
+            "timestamp": "2026-08-19T14:24:00Z",
+            "unit": "1",
+            "value": true
+          }
+        ],
+        "population": "NONPREGNANT_ADULT",
+        "presentation_id": null,
+        "resource_policy": "DECLARED_R2",
+        "resources": {},
+        "subject_id": "mission-crew-B",
+        "window_start": "2026-08-19T12:00:00Z"
+      },
+      "resource_snapshot": {
+        "as_of": "2026-08-19T14:24:00Z",
+        "declared_flags": {},
+        "inventory_hash": null,
+        "inventory_id": null,
+        "inventory_version": null,
+        "mission_id": "mission-v011",
+        "policy": "DECLARED_R2",
+        "resources": [],
+        "synthetic_only": true
+      }
+    }
+  },
+  {
+    "id": "MISSION-ce-561d02107257a6b493fa5b9b089553bf",
+    "snapshot": {
+      "measurement_records": [],
+      "mission": {
+        "environment": "HABITABLE_VOLUME",
+        "exposure_context": null,
+        "extraterrestrial_surface_eva_planned_or_required": null,
+        "gravity": "MICROGRAVITY",
+        "id": "mission-v011",
+        "microgravity_eva_planned_or_required": null,
+        "mode": "NOMINAL",
+        "phase": "IN_MISSION",
+        "synthetic": true
+      },
+      "observations": [],
+      "profile": {
+        "id": "mission-crew-A",
+        "mission_id": "mission-v011",
+        "synthetic": true
+      },
+      "request": {
+        "age_years": 35,
+        "as_of": "2026-08-22T12:00:00Z",
+        "condition_id": "ORTHOSTATIC_HYPOTENSION",
+        "measurement_bindings": [],
+        "mission_id": "mission-v011",
+        "observations": [],
+        "population": "NONPREGNANT_ADULT",
+        "presentation_id": null,
+        "resource_policy": "DECLARED_R2",
+        "resources": {},
+        "subject_id": "mission-crew-A",
+        "window_start": "2026-08-22T12:00:00Z"
+      },
+      "resource_snapshot": {
+        "as_of": "2026-08-22T12:00:00Z",
+        "declared_flags": {},
+        "inventory_hash": null,
+        "inventory_id": null,
+        "inventory_version": null,
+        "mission_id": "mission-v011",
+        "policy": "DECLARED_R2",
+        "resources": [],
+        "synthetic_only": true
+      }
+    }
+  },
+  {
+    "id": "MISSION-ce-cabdd95ddfb233227aa75f9fb49a7cc5",
+    "snapshot": {
+      "measurement_records": [],
+      "mission": {
+        "environment": "HABITABLE_VOLUME",
+        "exposure_context": null,
+        "extraterrestrial_surface_eva_planned_or_required": null,
+        "gravity": "MICROGRAVITY",
+        "id": "mission-v011",
+        "microgravity_eva_planned_or_required": null,
+        "mode": "NOMINAL",
+        "phase": "IN_MISSION",
+        "synthetic": true
+      },
+      "observations": [],
+      "profile": {
+        "id": "mission-crew-A",
+        "mission_id": "mission-v011",
+        "synthetic": true
+      },
+      "request": {
+        "age_years": 35,
+        "as_of": "2026-08-22T12:00:00Z",
+        "condition_id": "POTS",
+        "measurement_bindings": [],
+        "mission_id": "mission-v011",
+        "observations": [],
+        "population": "NONPREGNANT_ADULT",
+        "presentation_id": null,
+        "resource_policy": "DECLARED_R2",
+        "resources": {},
+        "subject_id": "mission-crew-A",
+        "window_start": "2026-08-22T12:00:00Z"
+      },
+      "resource_snapshot": {
+        "as_of": "2026-08-22T12:00:00Z",
+        "declared_flags": {},
+        "inventory_hash": null,
+        "inventory_id": null,
+        "inventory_version": null,
+        "mission_id": "mission-v011",
+        "policy": "DECLARED_R2",
+        "resources": [],
+        "synthetic_only": true
+      }
+    }
+  },
+  {
+    "id": "MISSION-ce-7dcd632105511eedf7804b0a49f8f6f5",
+    "snapshot": {
+      "measurement_records": [],
+      "mission": {
+        "environment": "HABITABLE_VOLUME",
+        "exposure_context": null,
+        "extraterrestrial_surface_eva_planned_or_required": null,
+        "gravity": "MICROGRAVITY",
+        "id": "mission-v011",
+        "microgravity_eva_planned_or_required": null,
+        "mode": "NOMINAL",
+        "phase": "IN_MISSION",
+        "synthetic": true
+      },
+      "observations": [],
+      "profile": {
+        "id": "mission-crew-B",
+        "mission_id": "mission-v011",
+        "synthetic": true
+      },
+      "request": {
+        "age_years": 42,
+        "as_of": "2026-08-22T12:00:00Z",
+        "condition_id": "ORTHOSTATIC_HYPOTENSION",
+        "measurement_bindings": [],
+        "mission_id": "mission-v011",
+        "observations": [],
+        "population": "NONPREGNANT_ADULT",
+        "presentation_id": null,
+        "resource_policy": "DECLARED_R2",
+        "resources": {},
+        "subject_id": "mission-crew-B",
+        "window_start": "2026-08-22T12:00:00Z"
+      },
+      "resource_snapshot": {
+        "as_of": "2026-08-22T12:00:00Z",
+        "declared_flags": {},
+        "inventory_hash": null,
+        "inventory_id": null,
+        "inventory_version": null,
+        "mission_id": "mission-v011",
+        "policy": "DECLARED_R2",
+        "resources": [],
+        "synthetic_only": true
+      }
+    }
+  },
+  {
+    "id": "MISSION-ce-aa91f722e512966bee75e2d22422fa3b",
+    "snapshot": {
+      "measurement_records": [],
+      "mission": {
+        "environment": "HABITABLE_VOLUME",
+        "exposure_context": null,
+        "extraterrestrial_surface_eva_planned_or_required": null,
+        "gravity": "MICROGRAVITY",
+        "id": "mission-v011",
+        "microgravity_eva_planned_or_required": null,
+        "mode": "NOMINAL",
+        "phase": "IN_MISSION",
+        "synthetic": true
+      },
+      "observations": [],
+      "profile": {
+        "id": "mission-crew-B",
+        "mission_id": "mission-v011",
+        "synthetic": true
+      },
+      "request": {
+        "age_years": 42,
+        "as_of": "2026-08-22T12:00:00Z",
+        "condition_id": "POTS",
+        "measurement_bindings": [],
+        "mission_id": "mission-v011",
+        "observations": [],
+        "population": "NONPREGNANT_ADULT",
+        "presentation_id": null,
+        "resource_policy": "DECLARED_R2",
+        "resources": {},
+        "subject_id": "mission-crew-B",
+        "window_start": "2026-08-22T12:00:00Z"
+      },
+      "resource_snapshot": {
+        "as_of": "2026-08-22T12:00:00Z",
+        "declared_flags": {},
+        "inventory_hash": null,
+        "inventory_id": null,
+        "inventory_version": null,
+        "mission_id": "mission-v011",
+        "policy": "DECLARED_R2",
+        "resources": [],
+        "synthetic_only": true
+      }
+    }
+  },
+  {
+    "id": "MISSION-ce-36234ffd0539258eb1925537c6f79da5",
+    "snapshot": {
+      "measurement_records": [],
+      "mission": {
+        "environment": "HABITABLE_VOLUME",
+        "exposure_context": null,
+        "extraterrestrial_surface_eva_planned_or_required": null,
+        "gravity": "MICROGRAVITY",
+        "id": "mission-v011",
+        "microgravity_eva_planned_or_required": null,
+        "mode": "NOMINAL",
+        "phase": "IN_MISSION",
+        "synthetic": true
+      },
+      "observations": [],
+      "profile": {
+        "id": "mission-crew-A",
+        "mission_id": "mission-v011",
+        "synthetic": true
+      },
+      "request": {
+        "age_years": 35,
+        "as_of": "2026-08-29T12:00:00Z",
+        "condition_id": "ORTHOSTATIC_HYPOTENSION",
+        "measurement_bindings": [],
+        "mission_id": "mission-v011",
+        "observations": [],
+        "population": "NONPREGNANT_ADULT",
+        "presentation_id": null,
+        "resource_policy": "DECLARED_R2",
+        "resources": {},
+        "subject_id": "mission-crew-A",
+        "window_start": "2026-08-29T12:00:00Z"
+      },
+      "resource_snapshot": {
+        "as_of": "2026-08-29T12:00:00Z",
+        "declared_flags": {},
+        "inventory_hash": null,
+        "inventory_id": null,
+        "inventory_version": null,
+        "mission_id": "mission-v011",
+        "policy": "DECLARED_R2",
+        "resources": [],
+        "synthetic_only": true
+      }
+    }
+  },
+  {
+    "id": "MISSION-ce-1b8ba6fadec1c4225d9dacfc6814bff8",
+    "snapshot": {
+      "measurement_records": [],
+      "mission": {
+        "environment": "HABITABLE_VOLUME",
+        "exposure_context": null,
+        "extraterrestrial_surface_eva_planned_or_required": null,
+        "gravity": "MICROGRAVITY",
+        "id": "mission-v011",
+        "microgravity_eva_planned_or_required": null,
+        "mode": "NOMINAL",
+        "phase": "IN_MISSION",
+        "synthetic": true
+      },
+      "observations": [],
+      "profile": {
+        "id": "mission-crew-A",
+        "mission_id": "mission-v011",
+        "synthetic": true
+      },
+      "request": {
+        "age_years": 35,
+        "as_of": "2026-08-29T12:00:00Z",
+        "condition_id": "POTS",
+        "measurement_bindings": [],
+        "mission_id": "mission-v011",
+        "observations": [],
+        "population": "NONPREGNANT_ADULT",
+        "presentation_id": null,
+        "resource_policy": "DECLARED_R2",
+        "resources": {},
+        "subject_id": "mission-crew-A",
+        "window_start": "2026-08-29T12:00:00Z"
+      },
+      "resource_snapshot": {
+        "as_of": "2026-08-29T12:00:00Z",
+        "declared_flags": {},
+        "inventory_hash": null,
+        "inventory_id": null,
+        "inventory_version": null,
+        "mission_id": "mission-v011",
+        "policy": "DECLARED_R2",
+        "resources": [],
+        "synthetic_only": true
+      }
+    }
+  },
+  {
+    "id": "MISSION-ce-d02e45ac6accea0432c02aa5097ca194",
+    "snapshot": {
+      "measurement_records": [],
+      "mission": {
+        "environment": "HABITABLE_VOLUME",
+        "exposure_context": null,
+        "extraterrestrial_surface_eva_planned_or_required": null,
+        "gravity": "MICROGRAVITY",
+        "id": "mission-v011",
+        "microgravity_eva_planned_or_required": null,
+        "mode": "NOMINAL",
+        "phase": "IN_MISSION",
+        "synthetic": true
+      },
+      "observations": [],
+      "profile": {
+        "id": "mission-crew-B",
+        "mission_id": "mission-v011",
+        "synthetic": true
+      },
+      "request": {
+        "age_years": 42,
+        "as_of": "2026-08-29T12:00:00Z",
+        "condition_id": "ORTHOSTATIC_HYPOTENSION",
+        "measurement_bindings": [],
+        "mission_id": "mission-v011",
+        "observations": [],
+        "population": "NONPREGNANT_ADULT",
+        "presentation_id": null,
+        "resource_policy": "DECLARED_R2",
+        "resources": {},
+        "subject_id": "mission-crew-B",
+        "window_start": "2026-08-29T12:00:00Z"
+      },
+      "resource_snapshot": {
+        "as_of": "2026-08-29T12:00:00Z",
+        "declared_flags": {},
+        "inventory_hash": null,
+        "inventory_id": null,
+        "inventory_version": null,
+        "mission_id": "mission-v011",
+        "policy": "DECLARED_R2",
+        "resources": [],
+        "synthetic_only": true
+      }
+    }
+  },
+  {
+    "id": "MISSION-ce-250008eb8d1e870442ea02b66d40a735",
+    "snapshot": {
+      "measurement_records": [],
+      "mission": {
+        "environment": "HABITABLE_VOLUME",
+        "exposure_context": null,
+        "extraterrestrial_surface_eva_planned_or_required": null,
+        "gravity": "MICROGRAVITY",
+        "id": "mission-v011",
+        "microgravity_eva_planned_or_required": null,
+        "mode": "NOMINAL",
+        "phase": "IN_MISSION",
+        "synthetic": true
+      },
+      "observations": [],
+      "profile": {
+        "id": "mission-crew-B",
+        "mission_id": "mission-v011",
+        "synthetic": true
+      },
+      "request": {
+        "age_years": 42,
+        "as_of": "2026-08-29T12:00:00Z",
+        "condition_id": "POTS",
+        "measurement_bindings": [],
+        "mission_id": "mission-v011",
+        "observations": [],
+        "population": "NONPREGNANT_ADULT",
+        "presentation_id": null,
+        "resource_policy": "DECLARED_R2",
+        "resources": {},
+        "subject_id": "mission-crew-B",
+        "window_start": "2026-08-29T12:00:00Z"
+      },
+      "resource_snapshot": {
+        "as_of": "2026-08-29T12:00:00Z",
+        "declared_flags": {},
+        "inventory_hash": null,
+        "inventory_id": null,
+        "inventory_version": null,
+        "mission_id": "mission-v011",
+        "policy": "DECLARED_R2",
+        "resources": [],
+        "synthetic_only": true
+      }
+    }
+  },
+  {
+    "id": "MISSION-ce-aeef2d590db5a07e6829d911fb842ce1",
+    "snapshot": {
+      "measurement_records": [],
+      "mission": {
+        "environment": "HABITABLE_VOLUME",
+        "exposure_context": null,
+        "extraterrestrial_surface_eva_planned_or_required": null,
+        "gravity": "MICROGRAVITY",
+        "id": "mission-v011",
+        "microgravity_eva_planned_or_required": null,
+        "mode": "NOMINAL",
+        "phase": "IN_MISSION",
+        "synthetic": true
+      },
+      "observations": [],
+      "profile": {
+        "id": "mission-crew-A",
+        "mission_id": "mission-v011",
+        "synthetic": true
+      },
+      "request": {
+        "age_years": 35,
+        "as_of": "2026-09-05T12:00:00Z",
+        "condition_id": "ORTHOSTATIC_HYPOTENSION",
+        "measurement_bindings": [],
+        "mission_id": "mission-v011",
+        "observations": [],
+        "population": "NONPREGNANT_ADULT",
+        "presentation_id": null,
+        "resource_policy": "DECLARED_R2",
+        "resources": {},
+        "subject_id": "mission-crew-A",
+        "window_start": "2026-09-05T12:00:00Z"
+      },
+      "resource_snapshot": {
+        "as_of": "2026-09-05T12:00:00Z",
+        "declared_flags": {},
+        "inventory_hash": null,
+        "inventory_id": null,
+        "inventory_version": null,
+        "mission_id": "mission-v011",
+        "policy": "DECLARED_R2",
+        "resources": [],
+        "synthetic_only": true
+      }
+    }
+  },
+  {
+    "id": "MISSION-ce-4e341ab6f991db99d45b66bbf1e2f855",
+    "snapshot": {
+      "measurement_records": [],
+      "mission": {
+        "environment": "HABITABLE_VOLUME",
+        "exposure_context": null,
+        "extraterrestrial_surface_eva_planned_or_required": null,
+        "gravity": "MICROGRAVITY",
+        "id": "mission-v011",
+        "microgravity_eva_planned_or_required": null,
+        "mode": "NOMINAL",
+        "phase": "IN_MISSION",
+        "synthetic": true
+      },
+      "observations": [],
+      "profile": {
+        "id": "mission-crew-A",
+        "mission_id": "mission-v011",
+        "synthetic": true
+      },
+      "request": {
+        "age_years": 35,
+        "as_of": "2026-09-05T12:00:00Z",
+        "condition_id": "POTS",
+        "measurement_bindings": [],
+        "mission_id": "mission-v011",
+        "observations": [],
+        "population": "NONPREGNANT_ADULT",
+        "presentation_id": null,
+        "resource_policy": "DECLARED_R2",
+        "resources": {},
+        "subject_id": "mission-crew-A",
+        "window_start": "2026-09-05T12:00:00Z"
+      },
+      "resource_snapshot": {
+        "as_of": "2026-09-05T12:00:00Z",
+        "declared_flags": {},
+        "inventory_hash": null,
+        "inventory_id": null,
+        "inventory_version": null,
+        "mission_id": "mission-v011",
+        "policy": "DECLARED_R2",
+        "resources": [],
+        "synthetic_only": true
+      }
+    }
+  },
+  {
+    "id": "MISSION-ce-1f7fb1b09433821e04fe538d07506bc6",
+    "snapshot": {
+      "measurement_records": [],
+      "mission": {
+        "environment": "HABITABLE_VOLUME",
+        "exposure_context": null,
+        "extraterrestrial_surface_eva_planned_or_required": null,
+        "gravity": "MICROGRAVITY",
+        "id": "mission-v011",
+        "microgravity_eva_planned_or_required": null,
+        "mode": "NOMINAL",
+        "phase": "IN_MISSION",
+        "synthetic": true
+      },
+      "observations": [],
+      "profile": {
+        "id": "mission-crew-B",
+        "mission_id": "mission-v011",
+        "synthetic": true
+      },
+      "request": {
+        "age_years": 42,
+        "as_of": "2026-09-05T12:00:00Z",
+        "condition_id": "ORTHOSTATIC_HYPOTENSION",
+        "measurement_bindings": [],
+        "mission_id": "mission-v011",
+        "observations": [],
+        "population": "NONPREGNANT_ADULT",
+        "presentation_id": null,
+        "resource_policy": "DECLARED_R2",
+        "resources": {},
+        "subject_id": "mission-crew-B",
+        "window_start": "2026-09-05T12:00:00Z"
+      },
+      "resource_snapshot": {
+        "as_of": "2026-09-05T12:00:00Z",
+        "declared_flags": {},
+        "inventory_hash": null,
+        "inventory_id": null,
+        "inventory_version": null,
+        "mission_id": "mission-v011",
+        "policy": "DECLARED_R2",
+        "resources": [],
+        "synthetic_only": true
+      }
+    }
+  },
+  {
+    "id": "MISSION-ce-87b8e4a47feaba46afdc33f1aed9b8cf",
+    "snapshot": {
+      "measurement_records": [],
+      "mission": {
+        "environment": "HABITABLE_VOLUME",
+        "exposure_context": null,
+        "extraterrestrial_surface_eva_planned_or_required": null,
+        "gravity": "MICROGRAVITY",
+        "id": "mission-v011",
+        "microgravity_eva_planned_or_required": null,
+        "mode": "NOMINAL",
+        "phase": "IN_MISSION",
+        "synthetic": true
+      },
+      "observations": [],
+      "profile": {
+        "id": "mission-crew-B",
+        "mission_id": "mission-v011",
+        "synthetic": true
+      },
+      "request": {
+        "age_years": 42,
+        "as_of": "2026-09-05T12:00:00Z",
+        "condition_id": "POTS",
+        "measurement_bindings": [],
+        "mission_id": "mission-v011",
+        "observations": [],
+        "population": "NONPREGNANT_ADULT",
+        "presentation_id": null,
+        "resource_policy": "DECLARED_R2",
+        "resources": {},
+        "subject_id": "mission-crew-B",
+        "window_start": "2026-09-05T12:00:00Z"
+      },
+      "resource_snapshot": {
+        "as_of": "2026-09-05T12:00:00Z",
+        "declared_flags": {},
+        "inventory_hash": null,
+        "inventory_id": null,
+        "inventory_version": null,
+        "mission_id": "mission-v011",
+        "policy": "DECLARED_R2",
+        "resources": [],
+        "synthetic_only": true
+      }
+    }
+  },
+  {
+    "id": "MISSION-ce-e845911a6798431190924275b6da315b",
+    "snapshot": {
+      "measurement_records": [],
+      "mission": {
+        "environment": "HABITABLE_VOLUME",
+        "exposure_context": null,
+        "extraterrestrial_surface_eva_planned_or_required": null,
+        "gravity": "EARTH",
+        "id": "mission-v011",
+        "microgravity_eva_planned_or_required": null,
+        "mode": "NOMINAL",
+        "phase": "POST_MISSION",
+        "synthetic": true
+      },
+      "observations": [],
+      "profile": {
+        "id": "mission-crew-A",
+        "mission_id": "mission-v011",
+        "synthetic": true
+      },
+      "request": {
+        "age_years": 35,
+        "as_of": "2026-09-12T12:00:00Z",
+        "condition_id": "ORTHOSTATIC_HYPOTENSION",
+        "measurement_bindings": [],
+        "mission_id": "mission-v011",
+        "observations": [],
+        "population": "NONPREGNANT_ADULT",
+        "presentation_id": null,
+        "resource_policy": "DECLARED_R2",
+        "resources": {},
+        "subject_id": "mission-crew-A",
+        "window_start": "2026-09-12T12:00:00Z"
+      },
+      "resource_snapshot": {
+        "as_of": "2026-09-12T12:00:00Z",
+        "declared_flags": {},
+        "inventory_hash": null,
+        "inventory_id": null,
+        "inventory_version": null,
+        "mission_id": "mission-v011",
+        "policy": "DECLARED_R2",
+        "resources": [],
+        "synthetic_only": true
+      }
+    }
+  },
+  {
+    "id": "MISSION-ce-61aab825f7c61a5c129b947963a99165",
+    "snapshot": {
+      "measurement_records": [],
+      "mission": {
+        "environment": "HABITABLE_VOLUME",
+        "exposure_context": null,
+        "extraterrestrial_surface_eva_planned_or_required": null,
+        "gravity": "EARTH",
+        "id": "mission-v011",
+        "microgravity_eva_planned_or_required": null,
+        "mode": "NOMINAL",
+        "phase": "POST_MISSION",
+        "synthetic": true
+      },
+      "observations": [],
+      "profile": {
+        "id": "mission-crew-A",
+        "mission_id": "mission-v011",
+        "synthetic": true
+      },
+      "request": {
+        "age_years": 35,
+        "as_of": "2026-09-12T12:00:00Z",
+        "condition_id": "POTS",
+        "measurement_bindings": [],
+        "mission_id": "mission-v011",
+        "observations": [],
+        "population": "NONPREGNANT_ADULT",
+        "presentation_id": null,
+        "resource_policy": "DECLARED_R2",
+        "resources": {},
+        "subject_id": "mission-crew-A",
+        "window_start": "2026-09-12T12:00:00Z"
+      },
+      "resource_snapshot": {
+        "as_of": "2026-09-12T12:00:00Z",
+        "declared_flags": {},
+        "inventory_hash": null,
+        "inventory_id": null,
+        "inventory_version": null,
+        "mission_id": "mission-v011",
+        "policy": "DECLARED_R2",
+        "resources": [],
+        "synthetic_only": true
+      }
+    }
+  },
+  {
+    "id": "MISSION-ce-cc512ba08ed8c7f8751bab0ff4c00a1e",
+    "snapshot": {
+      "measurement_records": [],
+      "mission": {
+        "environment": "HABITABLE_VOLUME",
+        "exposure_context": null,
+        "extraterrestrial_surface_eva_planned_or_required": null,
+        "gravity": "EARTH",
+        "id": "mission-v011",
+        "microgravity_eva_planned_or_required": null,
+        "mode": "NOMINAL",
+        "phase": "POST_MISSION",
+        "synthetic": true
+      },
+      "observations": [],
+      "profile": {
+        "id": "mission-crew-B",
+        "mission_id": "mission-v011",
+        "synthetic": true
+      },
+      "request": {
+        "age_years": 42,
+        "as_of": "2026-09-12T12:00:00Z",
+        "condition_id": "ORTHOSTATIC_HYPOTENSION",
+        "measurement_bindings": [],
+        "mission_id": "mission-v011",
+        "observations": [],
+        "population": "NONPREGNANT_ADULT",
+        "presentation_id": null,
+        "resource_policy": "DECLARED_R2",
+        "resources": {},
+        "subject_id": "mission-crew-B",
+        "window_start": "2026-09-12T12:00:00Z"
+      },
+      "resource_snapshot": {
+        "as_of": "2026-09-12T12:00:00Z",
+        "declared_flags": {},
+        "inventory_hash": null,
+        "inventory_id": null,
+        "inventory_version": null,
+        "mission_id": "mission-v011",
+        "policy": "DECLARED_R2",
+        "resources": [],
+        "synthetic_only": true
+      }
+    }
+  },
+  {
+    "id": "MISSION-ce-1844dab51033d6f7e0e712ef2783e50d",
+    "snapshot": {
+      "measurement_records": [],
+      "mission": {
+        "environment": "HABITABLE_VOLUME",
+        "exposure_context": null,
+        "extraterrestrial_surface_eva_planned_or_required": null,
+        "gravity": "EARTH",
+        "id": "mission-v011",
+        "microgravity_eva_planned_or_required": null,
+        "mode": "NOMINAL",
+        "phase": "POST_MISSION",
+        "synthetic": true
+      },
+      "observations": [],
+      "profile": {
+        "id": "mission-crew-B",
+        "mission_id": "mission-v011",
+        "synthetic": true
+      },
+      "request": {
+        "age_years": 42,
+        "as_of": "2026-09-12T12:00:00Z",
+        "condition_id": "POTS",
+        "measurement_bindings": [],
+        "mission_id": "mission-v011",
+        "observations": [],
+        "population": "NONPREGNANT_ADULT",
+        "presentation_id": null,
+        "resource_policy": "DECLARED_R2",
+        "resources": {},
+        "subject_id": "mission-crew-B",
+        "window_start": "2026-09-12T12:00:00Z"
+      },
+      "resource_snapshot": {
+        "as_of": "2026-09-12T12:00:00Z",
+        "declared_flags": {},
+        "inventory_hash": null,
+        "inventory_id": null,
+        "inventory_version": null,
+        "mission_id": "mission-v011",
+        "policy": "DECLARED_R2",
+        "resources": [],
+        "synthetic_only": true
+      }
+    }
+  },
+  {
+    "id": "MISSION-ce-de9bfec9adc63d61660d383e66d06a12",
+    "snapshot": {
+      "measurement_records": [],
+      "mission": {
+        "environment": "HABITABLE_VOLUME",
+        "exposure_context": null,
+        "extraterrestrial_surface_eva_planned_or_required": null,
+        "gravity": "EARTH",
+        "id": "mission-v011",
+        "microgravity_eva_planned_or_required": null,
+        "mode": "NOMINAL",
+        "phase": "POST_MISSION",
+        "synthetic": true
+      },
+      "observations": [],
+      "profile": {
+        "id": "mission-crew-A",
+        "mission_id": "mission-v011",
+        "synthetic": true
+      },
+      "request": {
+        "age_years": 35,
+        "as_of": "2026-09-17T12:00:00Z",
+        "condition_id": "ORTHOSTATIC_HYPOTENSION",
+        "measurement_bindings": [],
+        "mission_id": "mission-v011",
+        "observations": [],
+        "population": "NONPREGNANT_ADULT",
+        "presentation_id": null,
+        "resource_policy": "DECLARED_R2",
+        "resources": {},
+        "subject_id": "mission-crew-A",
+        "window_start": "2026-09-17T12:00:00Z"
+      },
+      "resource_snapshot": {
+        "as_of": "2026-09-17T12:00:00Z",
+        "declared_flags": {},
+        "inventory_hash": null,
+        "inventory_id": null,
+        "inventory_version": null,
+        "mission_id": "mission-v011",
+        "policy": "DECLARED_R2",
+        "resources": [],
+        "synthetic_only": true
+      }
+    }
+  },
+  {
+    "id": "MISSION-ce-1fb027fd329cc03102e26e6097bd3810",
+    "snapshot": {
+      "measurement_records": [],
+      "mission": {
+        "environment": "HABITABLE_VOLUME",
+        "exposure_context": null,
+        "extraterrestrial_surface_eva_planned_or_required": null,
+        "gravity": "EARTH",
+        "id": "mission-v011",
+        "microgravity_eva_planned_or_required": null,
+        "mode": "NOMINAL",
+        "phase": "POST_MISSION",
+        "synthetic": true
+      },
+      "observations": [],
+      "profile": {
+        "id": "mission-crew-A",
+        "mission_id": "mission-v011",
+        "synthetic": true
+      },
+      "request": {
+        "age_years": 35,
+        "as_of": "2026-09-17T12:00:00Z",
+        "condition_id": "POTS",
+        "measurement_bindings": [],
+        "mission_id": "mission-v011",
+        "observations": [],
+        "population": "NONPREGNANT_ADULT",
+        "presentation_id": null,
+        "resource_policy": "DECLARED_R2",
+        "resources": {},
+        "subject_id": "mission-crew-A",
+        "window_start": "2026-09-17T12:00:00Z"
+      },
+      "resource_snapshot": {
+        "as_of": "2026-09-17T12:00:00Z",
+        "declared_flags": {},
+        "inventory_hash": null,
+        "inventory_id": null,
+        "inventory_version": null,
+        "mission_id": "mission-v011",
+        "policy": "DECLARED_R2",
+        "resources": [],
+        "synthetic_only": true
+      }
+    }
+  },
+  {
+    "id": "MISSION-ce-0e898a5aebd7219ff93a7da06d84dc86",
+    "snapshot": {
+      "measurement_records": [],
+      "mission": {
+        "environment": "HABITABLE_VOLUME",
+        "exposure_context": null,
+        "extraterrestrial_surface_eva_planned_or_required": null,
+        "gravity": "EARTH",
+        "id": "mission-v011",
+        "microgravity_eva_planned_or_required": null,
+        "mode": "NOMINAL",
+        "phase": "POST_MISSION",
+        "synthetic": true
+      },
+      "observations": [],
+      "profile": {
+        "id": "mission-crew-B",
+        "mission_id": "mission-v011",
+        "synthetic": true
+      },
+      "request": {
+        "age_years": 42,
+        "as_of": "2026-09-17T12:00:00Z",
+        "condition_id": "ORTHOSTATIC_HYPOTENSION",
+        "measurement_bindings": [],
+        "mission_id": "mission-v011",
+        "observations": [],
+        "population": "NONPREGNANT_ADULT",
+        "presentation_id": null,
+        "resource_policy": "DECLARED_R2",
+        "resources": {},
+        "subject_id": "mission-crew-B",
+        "window_start": "2026-09-17T12:00:00Z"
+      },
+      "resource_snapshot": {
+        "as_of": "2026-09-17T12:00:00Z",
+        "declared_flags": {},
+        "inventory_hash": null,
+        "inventory_id": null,
+        "inventory_version": null,
+        "mission_id": "mission-v011",
+        "policy": "DECLARED_R2",
+        "resources": [],
+        "synthetic_only": true
+      }
+    }
+  },
+  {
+    "id": "MISSION-ce-3bc1c3e3e55409f9f45cd3ad4077737a",
+    "snapshot": {
+      "measurement_records": [],
+      "mission": {
+        "environment": "HABITABLE_VOLUME",
+        "exposure_context": null,
+        "extraterrestrial_surface_eva_planned_or_required": null,
+        "gravity": "EARTH",
+        "id": "mission-v011",
+        "microgravity_eva_planned_or_required": null,
+        "mode": "NOMINAL",
+        "phase": "POST_MISSION",
+        "synthetic": true
+      },
+      "observations": [],
+      "profile": {
+        "id": "mission-crew-B",
+        "mission_id": "mission-v011",
+        "synthetic": true
+      },
+      "request": {
+        "age_years": 42,
+        "as_of": "2026-09-17T12:00:00Z",
+        "condition_id": "POTS",
+        "measurement_bindings": [],
+        "mission_id": "mission-v011",
+        "observations": [],
+        "population": "NONPREGNANT_ADULT",
+        "presentation_id": null,
+        "resource_policy": "DECLARED_R2",
+        "resources": {},
+        "subject_id": "mission-crew-B",
+        "window_start": "2026-09-17T12:00:00Z"
+      },
+      "resource_snapshot": {
+        "as_of": "2026-09-17T12:00:00Z",
+        "declared_flags": {},
+        "inventory_hash": null,
+        "inventory_id": null,
+        "inventory_version": null,
+        "mission_id": "mission-v011",
+        "policy": "DECLARED_R2",
+        "resources": [],
+        "synthetic_only": true
+      }
+    }
+  }
+]

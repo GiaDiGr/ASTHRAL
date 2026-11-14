@@ -142,3 +142,19 @@
 !/docs/asthral/verification-summary.json
 
 !/.gitattributes
+
+!/web-local/
+/web-local/*
+!/web-local/src/
+!/web-local/tests/
+!/web-local/*.py
+!/web-local/*.md
+!/web-local/*.json
+
+/web-local/src/webllm.js
+/web-local/src/embedding-runtime/
+
+/web-local/src/voice-assets/
+/web-local/src/vosk.js
+
+!/web-local/*_LICENSE.txt
