@@ -4,6 +4,8 @@
 
 **Offline-First Astronaut Health Monitoring and Medical Decision Support**
 
+> This is the historical v1.1.0 implementation status. Its manual acceptance section predates the browser review dated 2026-11-14. For the current tested preview, results and remaining acceptance limits, read [WEB_RELEASE_20261114.md](WEB_RELEASE_20261114.md).
+
 ## Implemented
 
 - ASTHRAL branding, English astronaut UI/templates, current English documentation and English-only STT/TTS options. Internal vigile imports/identifiers/cookies and immutable source language are retained for compatibility. Curated translations are separate from the clinical corpus; unsupported source translations are explicitly withheld.

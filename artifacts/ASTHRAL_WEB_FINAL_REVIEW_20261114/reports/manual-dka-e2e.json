@@ -1,0 +1,24 @@
+{
+  "test_id": "manual-dka-alternative-and-safety-2026-11-14",
+  "environment": "ASTHRAL Web Cloudflare preview b8ff15cb; IAB Chromium desktop; encrypted synthetic profile; no real patient data",
+  "inputs": {
+    "known_diabetes": true,
+    "plasma_glucose_mg_dl": 180,
+    "beta_hydroxybutyrate_mmol_l": 4.2,
+    "venous_pH": 7.22,
+    "bicarbonate": null,
+    "urine_ketones": null,
+    "potassium": null
+  },
+  "expected_and_observed": {
+    "diagnostic_criteria": "SATISFIED",
+    "urgency": "EMERGENCY",
+    "missing_required": [],
+    "optional_not_measured": ["bicarbonate", "urine ketones"],
+    "required_for_protocol_safety": ["blood potassium"],
+    "protocol": "BLOCKED_MISSING_DATA",
+    "treatment_execution": "BLOCKED"
+  },
+  "persistence": "After reload the encrypted profile locked; it was unlocked with its owner-local test passphrase and displayed the saved assessment and prior synthetic observation.",
+  "scope": "Software/UI consistency check only; not a clinical or operational validation."
+}

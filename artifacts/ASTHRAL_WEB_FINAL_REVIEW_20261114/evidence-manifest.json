@@ -1,0 +1,42 @@
+{
+  "product": "ASTHRAL",
+  "review_date": "2026-11-14",
+  "synthetic_data_only": true,
+  "files": [
+    {
+      "path": "README.md",
+      "size": 551,
+      "sha256": "eb81e4813673cbc3e07dbde8e7816a1b1d7f8f2025dd5c84673ec7cdee2eb3e3"
+    },
+    {
+      "path": "reports/backend-release-regression.txt",
+      "size": 1421,
+      "sha256": "9d603256ef3535451e6bba686f65736c90c6a912d93c58389b2851e1074bb64e"
+    },
+    {
+      "path": "reports/browser-final-tests.txt",
+      "size": 8577,
+      "sha256": "697a34400cd89b52b0a0d25972847efcb9ae325b98fc7ae63027fdaf51faa2b4"
+    },
+    {
+      "path": "reports/manual-dka-e2e.json",
+      "size": 1016,
+      "sha256": "d823d23347759a7e9a05c926b82dc73f8edca5a8836959ae74171f7f6a98a386"
+    },
+    {
+      "path": "reports/model-benchmarks-4b-accepted.json",
+      "size": 1449,
+      "sha256": "4e978f1b60daf637155889c129c041eaa749edc21fff23b22d95d6c01aceae0e"
+    },
+    {
+      "path": "screenshots/dka-alternatives-potassium-safety.jpg",
+      "size": 62281,
+      "sha256": "9b562da523e776209c3924e7fffb3d0208845679daece7fdf26e3994b516d998"
+    },
+    {
+      "path": "screenshots/dka-persisted-after-reload.jpg",
+      "size": 57454,
+      "sha256": "e1841749bf052de153a4ef4d1cd009f6eeec4538fca5b09c1d5d702000df3361"
+    }
+  ]
+}

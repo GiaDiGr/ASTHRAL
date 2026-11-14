@@ -1,0 +1,47 @@
+[
+  {
+    "state": "READY",
+    "model": "Qwen2.5-0.5B-Instruct-q4f16_1-MLC",
+    "init_seconds": 2.7000999999940394,
+    "local_execution": true
+  },
+  {
+    "citation": null,
+    "accepted": false,
+    "validation_pending": false,
+    "finish_reason": "stop",
+    "raw_output_withheld": true,
+    "model": "Qwen2.5-0.5B-Instruct-q4f16_1-MLC",
+    "local_execution": true,
+    "time_to_first_token_seconds": 4.087,
+    "seconds": 10.691399999976158,
+    "emitted_chunks": 69,
+    "chunks_per_second": 6.453785285383941,
+    "actual_token_throughput": "SEE_RUNTIME_STATS",
+    "runtime_stats": "prefill: 158.6480 tokens/sec, decoding: 10.4652 tokens/sec",
+    "validation": "REJECTED_BY_REFERENCE_VALIDATOR",
+    "validation_error_code": "REFERENCE_VALIDATION_FAILED"
+  },
+  {
+    "state": "READY",
+    "model": "Qwen3-4B-q4f16_1-MLC",
+    "init_seconds": 10.07,
+    "local_execution": true
+  },
+  {
+    "citation": null,
+    "accepted": true,
+    "validation_pending": false,
+    "finish_reason": "stop",
+    "raw_output_withheld": true,
+    "model": "Qwen3-4B-q4f16_1-MLC",
+    "local_execution": true,
+    "time_to_first_token_seconds": 16.77190000000596,
+    "seconds": 55.87309999999404,
+    "emitted_chunks": 75,
+    "chunks_per_second": 1.3423275243365411,
+    "actual_token_throughput": "SEE_RUNTIME_STATS",
+    "runtime_stats": "prefill: 18.5725 tokens/sec, decoding: 1.9189 tokens/sec",
+    "validation": "PASSED_REFERENCE_VALIDATOR"
+  }
+]
