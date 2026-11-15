@@ -39,8 +39,12 @@ def normalize_entry(raw, subject_id):
     note = raw.get("note", "")
     if not isinstance(label, str) or len(label.strip()) > 120 or not isinstance(note, str) or len(note.strip()) > 1000:
         raise ValueError("PREVENTION_TEXT_BOUNDS")
+    synthetic = raw.get("synthetic_fixture", False)
+    if type(synthetic) is not bool:
+        raise ValueError("INVALID_SYNTHETIC_FIXTURE_FLAG")
     output = {"subject_id": subject_id, "entry_type": kind, "occurred_at": _time(raw.get("occurred_at")),
-              "label": label.strip(), "note": note.strip(), "source": "SELF_REPORTED", "sensor_verified": False,
+              "label": label.strip(), "note": note.strip(), "source": "SYNTHETIC_FIXTURE" if synthetic else "SELF_REPORTED",
+              "synthetic_data": synthetic, "sensor_verified": False,
               "clinical_interpretation": "NOT_PROVIDED", "clinical_execution": "BLOCKED"}
     if kind == "EXERCISE_SESSION":
         output["duration_minutes"] = _number(raw.get("duration_minutes"), "duration_minutes", 1, 1440, integral=True)

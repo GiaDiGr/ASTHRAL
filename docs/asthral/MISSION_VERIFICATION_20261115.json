@@ -6,15 +6,15 @@
   "clinical_validation": false,
   "real_medical_data_used": false,
   "tests": {
-    "python_pytest_full": {"passed": 906, "skipped": 19, "failed": 0, "duration_seconds": 193.01, "warnings": ["Starlette/httpx TestClient deprecation"]},
-    "node_browser_tests": {"passed": 61, "failed": 0, "duration_seconds": 10.12, "warnings": ["Node module-type reparsing warning for ES modules under package without type=module"]},
+    "python_pytest_full": {"passed": 907, "skipped": 19, "failed": 0, "duration_seconds": 197.76, "warnings": ["Starlette/httpx TestClient deprecation"]},
+    "node_browser_tests": {"passed": 63, "failed": 0, "duration_seconds": 9.53, "warnings": ["Node module-type reparsing warning for ES modules under package without type=module"]},
     "science_source_registry_targeted": {"passed": 3, "failed": 0},
     "previous_full_run_diagnostics": {"passed": 904, "skipped": 19, "failed": 2, "corrective_action": "RAG source expectation now allows the newly indexed curated space-health summary; replay case was rerun independently and passed."}
   },
   "static_build": {
-    "path": "web-local/build-output-asthral-final-20261115",
-    "assets": 78,
-    "bytes": 112736532,
+    "path": "web-local/build-output-mission-integrated-20261115",
+    "assets": 79,
+    "bytes": 112738394,
     "synthetic_parity_cases": 254,
     "clinical_modules": "BYTE_IDENTICAL_TO_REFERENCE_BUILD_INPUT",
     "offline_sparse_corpus_documents": 8,

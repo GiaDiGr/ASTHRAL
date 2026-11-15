@@ -16,7 +16,7 @@ Added bounded self-reported prevention records, radiation observation storage an
 | Area | Implemented in this branch | Software verified | Evidence/source status | Hardware/clinical status |
 |---|---|---|---|---|
 | Existing seven deterministic pathways and differential engine | Preserved unchanged in reference modules and packaged byte-identically | Full Python suite and browser parity tests; 254 build fixtures | Existing criteria/source inventory unchanged | Not clinically or flight validated |
-| Prevention journal | Exercise, hydration, meal notes, sleep and voluntary well-being entries; owner-bound local persistence | Bounds, timezones, audit/profile isolation, Node integration suite | NASA HRP catalogue and selected report links/summaries | User-reported only; no validated sensors, target values, diagnoses, or prescriptions |
+| Prevention journal | Exercise, hydration, meal notes, sleep and voluntary well-being entries; owner-bound local persistence and a temporary-only synthetic journal fixture | Bounds, timezones, audit/profile isolation, synthetic provenance, Node integration suite | NASA HRP catalogue and selected report links/summaries | User-reported or synthetic fixture only; no validated sensors, target values, diagnoses, or prescriptions |
 | Radiation records | Separate quantity families, units, mode, quality, source, timestamps, model provenance and uncertainty; explicit rate integration; counter reset/duplicate review | Unit, gap, quality, mode, duplicate, reset and owner-scope tests | NASA SRAG CAD description, NESC HERA/CAD report and NASA standard catalogue links | No verified dosimeter or transport model; no Gy→Sv conversion, exposure limits, risk interpretation, treatment or flight decision |
 | DONKI | Bounded official API queries for six event classes plus notifications; partial failure handling, event validation, safe links, public cache and stale/offline display | Request, schema, link, cache, date and missing-network Node tests; one live API request observation | CCMC documents state research/prototyping use and no warranty; no clinical relevance mapping | Not real-time service assurance, personal exposure or crew warning |
 | Offline evidence | Eight hash-addressed files, 586 sparse lexical blocks, source registry copied into static build; optional MiniLM vector index remains six project-authored chunks | Source hash check, offline build, sparse retrieval and citation metadata tests | 12 official bibliography records; source summaries authored by ASTHRAL; no full report redistribution | Not a systematic review; scientific interpretation needs independent review |
@@ -51,10 +51,10 @@ No new clinical diagnostic criteria, doses, treatment protocols, mission alert t
 
 ## Actual verification results
 
-- Full Python suite: **906 passed, 19 skipped, 0 failed** in 193.01 seconds; one existing Starlette/httpx TestClient deprecation warning.
-- Full Node/browser test suite: **61 passed, 0 failed** in 10.12 seconds; Node prints a module-type reparsing warning because the existing `web-local/package.json` does not set `type=module`.
+- Full Python suite: **907 passed, 19 skipped, 0 failed** in 197.76 seconds; one existing Starlette/httpx TestClient deprecation warning.
+- Full Node/browser test suite: **63 passed, 0 failed** in 9.53 seconds; Node prints a module-type reparsing warning because the existing `web-local/package.json` does not set `type=module`.
 - Targeted source registry tests: **3 passed** after the final NASA standards metadata update.
-- Static build: **254 synthetic parity cases**, **78 assets**, **112,736,532 bytes**, **8 source documents**, **586 sparse blocks**; builder confirms byte-identical clinical modules.
+- Static build: **254 synthetic parity cases**, **79 assets**, **112,738,394 bytes**, **8 source documents**, **586 sparse blocks**; builder confirms byte-identical clinical modules.
 - Source integrity: `tools/build_science_integrity.py --check` returned `SOURCE_INTEGRITY_OK`; the static build includes the same integrity JSON.
 - Previous full run during correction had 904 passing and 2 failures. The updated RAG expectation passed in isolation; a separate replay test passed on rerun. The final full suite above has no failures.
 - One live NASA CCMC API check during implementation returned HTTP 200, CORS for the static site, and 9 FLR rows for November 1–15, 2026. Automated API tests use mocked responses, not live NASA dependencies.

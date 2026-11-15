@@ -33,6 +33,14 @@ def test_wellbeing_is_voluntary_self_rating_without_diagnosis():
     assert row["interpretation"]=="VOLUNTARY_SELF_RATING_NO_SCREENING_OR_DIAGNOSIS"
 
 
+def test_synthetic_demo_entries_have_distinct_provenance():
+    row=entry("SLEEP",duration_minutes=405,synthetic_fixture=True)
+    assert row["source"]=="SYNTHETIC_FIXTURE" and row["synthetic_data"] is True
+    assert row["clinical_execution"]=="BLOCKED"
+    with pytest.raises(ValueError,match="INVALID_SYNTHETIC_FIXTURE_FLAG"):
+        entry("SLEEP",duration_minutes=405,synthetic_fixture="true")
+
+
 def test_out_of_range_or_empty_records_are_rejected():
     with pytest.raises(ValueError):entry("SLEEP",duration_minutes=2000)
     with pytest.raises(ValueError,match="WELLBEING_ENTRY_EMPTY"):entry("WELLBEING")

@@ -1,5 +1,6 @@
 import {DONKI_API,fetchDonki,DONKI_HISTORICAL_FIXTURE,cacheDonki,cachedDonkiSnapshot} from './space-weather.js';
 import {normalizeSourceRegistry} from './research-sources.js';
+import {PREVENTION_FIXTURES,RADIATION_FIXTURES} from './synthetic-mission.js';
 
 const $=id=>document.getElementById(id);
 const el=(tag,text='')=>{const node=document.createElement(tag);node.textContent=text;return node;};
@@ -61,12 +62,17 @@ export function installMissionSupport({call,persist,status=()=>{},mode=()=> 'FUL
   if(type.value==='WELLBEING'){entry.mood_rating_1_5=mood.value===''?null:Number(mood.value);entry.stress_rating_1_5=stress.value===''?null:Number(stress.value);}
   const saved=await call('prevention_add',entry);await persist();status('Self-reported '+saved.entry_type.toLowerCase().replaceAll('_',' ')+' entry saved locally.');await refreshPrevention();
  });
+ const preventionFixture=button(preventionPanel,'Load synthetic prevention journal (temporary demo only)',async()=>{
+  if(!isTemporary())throw Error('Synthetic prevention fixtures are available only in the disposable demo.');
+  for(const entry of PREVENTION_FIXTURES)await call('prevention_add',{...entry,synthetic_fixture:true});
+  await persist();status('Five arbitrary synthetic prevention entries saved in temporary memory; they are not targets or health recommendations.');await refreshPrevention();
+ });
  const preventionStatus=el('p');preventionStatus.setAttribute('role','status');preventionStatus.setAttribute('aria-live','polite');form.append(preventionStatus);
  function updatePreventionFields(){for(const [field,visible] of [[exerciseType,type.value==='EXERCISE_SESSION'],[duration,['EXERCISE_SESSION','SLEEP'].includes(type.value)],[exertion,type.value==='EXERCISE_SESSION'],[hydration,type.value==='HYDRATION'],[sleepQuality,type.value==='SLEEP'],[mood,type.value==='WELLBEING'],[stress,type.value==='WELLBEING']])field.parentElement.hidden=!visible;}
  type.addEventListener('change',updatePreventionFields);updatePreventionFields();
  const exerciseNote=el('p','MotionGuard pose inference is unavailable in this browser build. Manual session logging works without camera access; no video is captured.');preventionPanel.append(exerciseNote);
  const journal=el('section');journal.append(el('h2','Local history'),el('p','Duration and ratings remain self-reported. No recovery or fitness conclusion is calculated.'));const journalRows=el('div');journalRows.className='mission-journal';journal.append(journalRows);prevention.append(journal);
- async function refreshPrevention(){const result=await call('prevention_list');journalRows.replaceChildren();for(const row of [...result.entries].reverse()){const card=el('article');card.append(el('h3',row.entry_type.replaceAll('_',' ')+' · '+row.occurred_at),el('p',[row.label,row.duration_minutes?row.duration_minutes+' min':null,row.amount_ml?row.amount_ml+' mL':null,row.subjective_quality_1_5?'sleep quality '+row.subjective_quality_1_5+'/5':null].filter(Boolean).join(' · ')||row.note));card.append(el('small','SELF-REPORTED · not sensor-verified · no clinical interpretation'));journalRows.append(card);}if(!result.entries.length)journalRows.append(el('p','No prevention entries yet.'));}
+ async function refreshPrevention(){const result=await call('prevention_list');journalRows.replaceChildren();for(const row of [...result.entries].reverse()){const card=el('article');card.append(el('h3',row.entry_type.replaceAll('_',' ')+' · '+row.occurred_at),el('p',[row.label,row.duration_minutes?row.duration_minutes+' min':null,row.amount_ml?row.amount_ml+' mL':null,row.subjective_quality_1_5?'sleep quality '+row.subjective_quality_1_5+'/5':null].filter(Boolean).join(' · ')||row.note));card.append(el('small',(row.synthetic_data?'SYNTHETIC FIXTURE':'SELF-REPORTED')+' · not sensor-verified · no clinical interpretation'));journalRows.append(card);}if(!result.entries.length)journalRows.append(el('p','No prevention entries yet.'));preventionFixture.disabled=!isTemporary()||result.entries.some(row=>row.synthetic_data);}
 
  const radiation=makeSection('space-radiation','Space Weather & Radiation','SEPARATE EVENT AND EXPOSURE RECORDS','NASA DONKI events describe reported space-weather information. Personal radiation exposure requires appropriately sourced dosimetry; DONKI cannot calculate it. No flight-safety or medical eligibility decision is made here.');
  const radiationSources=sourceRegister();radiation.append(radiationSources.node);
@@ -96,7 +102,7 @@ export function installMissionSupport({call,persist,status=()=>{},mode=()=> 'FUL
  const fixtureButton=button(fixtureSection,'Load synthetic timeline in this temporary demo',async()=>{
   if(!isTemporary())throw Error('Synthetic fixture records are available only inside the disposable demo.');
   const anchor=Date.parse('2026-11-05T18:21:00Z');
-  for(const [minutes,reading,tag] of [[0,1,'habitat'],[30,12,'EVA'],[60,2,'habitat']])await call('radiation_add',{quantity_kind:'ABSORBED_DOSE_RATE',value:reading,unit:'uGy/h',timestamp:new Date(anchor+minutes*60000).toISOString(),mode:'SYNTHETIC',quality:'UNKNOWN',mission_segment:'synthetic-eva-exercise',location:tag,instrument_id:'synthetic-dosimeter-fixture',source:'ARBITRARY_SYNTHETIC_SOFTWARE_FIXTURE',note:'Not an astronaut measurement and not a radiation transport model.'});
+  for(const [minutes,reading,tag] of RADIATION_FIXTURES)await call('radiation_add',{quantity_kind:'ABSORBED_DOSE_RATE',value:reading,unit:'uGy/h',timestamp:new Date(anchor+minutes*60000).toISOString(),mode:'SYNTHETIC',quality:'UNKNOWN',mission_segment:'synthetic-eva-exercise',location:tag,instrument_id:'synthetic-dosimeter-fixture',source:'ARBITRARY_SYNTHETIC_SOFTWARE_FIXTURE',note:'Not an astronaut measurement and not a radiation transport model.'});
   await persist();fixtureStatus.textContent='Three synthetic values stored in temporary memory only. They are unrelated to the historical solar flare record.';await refreshRadiation();
  });
  radiation.append(fixtureSection);

@@ -18,7 +18,7 @@ Browser action: `prevention_add`, followed by `prevention_list` or the existing 
 | `SLEEP` | `duration_minutes` | `subjective_quality_1_5` | Voluntary diary; no validated sleep measurement or impairment inference. |
 | `WELLBEING` | at least one rating or note | `mood_rating_1_5`, `stress_rating_1_5` | Voluntary check-in; no screening, diagnosis or crisis classifier. |
 
-Every normalized record has source `SELF_REPORTED`, `sensor_verified=false`, `clinical_interpretation=NOT_PROVIDED`, and `clinical_execution=BLOCKED`. The browser form collects only the fields for the selected entry type. Values are bounded and timestamps require an explicit timezone.
+User-entered records have source `SELF_REPORTED`; the disposable-demo fixture uses `SYNTHETIC_FIXTURE` and a separate `synthetic_data=true` field. All records have `sensor_verified=false`, `clinical_interpretation=NOT_PROVIDED`, and `clinical_execution=BLOCKED`. The browser form collects only the fields for the selected entry type. Values are bounded and timestamps require an explicit timezone. The seeded exercise, hydration, meal, sleep and well-being examples are arbitrary UI fixtures; they are not targets or recommendations.
 
 ### Radiation record
 
