@@ -59,7 +59,7 @@ def build(root,output,sources=None):
     output=Path(output);output.parent.mkdir(parents=True,exist_ok=True);output.write_text(json.dumps(manifest,ensure_ascii=False,indent=2),encoding='utf-8')
     return {k:v for k,v in manifest.items() if k!='blocks'}|{'blocks':len(rows)}
 
-def search(manifest,question,limit,root=ROOT):
+def verified_blocks(manifest,root=ROOT):
     rows=manifest['blocks'];issues=[];verified=[];cache={}
     if sha(canonical(rows))!=manifest['sha256']:raise ValueError('LIBRARY_INTEGRITY_FAILED')
     seen=set()
@@ -83,6 +83,10 @@ def search(manifest,question,limit,root=ROOT):
         seen.add(b['id'])
         if INJECTION.search(b['text']):issues.append('DOCUMENT_INSTRUCTION_QUARANTINED:'+b['id']);continue
         verified.append(b)
+    return verified, issues, cache
+
+def search(manifest,question,limit,root=ROOT):
+    verified, issues, cache = verified_blocks(manifest,root)
     from .retrieval_bm25 import rank
     ranked=rank(verified,question,cache)
     found=[];per_document={}

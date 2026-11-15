@@ -1,0 +1,133 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+  <meta name="theme-color" content="#10243a">
+  <meta name="description" content="ASTHRAL keeps supported health intelligence and encrypted records on this device.">
+  <title>ASTHRAL · Astronaut health intelligence</title>
+  <link rel="manifest" href="./manifest.webmanifest">
+  <link rel="stylesheet" href="./style.css">
+  <script src="./app.js" type="module"></script>
+</head>
+<body>
+  <header class="site-header">
+    <a href="#intro" class="brand" aria-label="ASTHRAL home">ASTHRAL<span>SPACE HEALTH</span></a>
+    <span id="network" role="status" class="network-status"></span>
+    <button id="lock" class="quiet-button" hidden>Lock profile</button>
+  </header>
+  <div id="emergency-banner" role="alert" hidden></div>
+  <p id="operation" role="status" aria-live="polite" class="operation-status"></p>
+  <main>
+    <section id="intro" class="landing">
+      <div class="landing-story">
+        <p class="eyebrow">Astronaut Support Tool for Health Risk Assessment and Logistics</p>
+        <h1>Health intelligence,<br>ready beyond Earth.</h1>
+        <p>Monitor health, review evidence and explore a synthetic mission. Your personal records stay encrypted on this device.</p>
+        <div class="notice">Research prototype. Synthetic data only. Treatment execution is disabled; medical decisions require qualified human oversight.</div>
+        <p id="runtime-status" role="status">Loading the local clinical engine…</p>
+        <details id="legacy-access" class="secondary-access">
+          <summary>Open an existing local profile or recover a backup</summary>
+          <p>Older profiles keep their original passphrase and encryption key. Unlock one here, then add an encrypted local email sign-in from Settings.</p>
+          <form id="unlock-form">
+            <label>Existing local profile<select id="profile-list" autocomplete="off"></select></label>
+            <label>Original passphrase<input id="unlock-password" type="password" required autocomplete="current-password"></label>
+            <button>Unlock existing profile</button>
+          </form>
+          <label>Recover from encrypted export<input id="import-file" type="file" accept="application/json"></label>
+          <p id="profile-status" role="status">Profile locked</p>
+        </details>
+      </div>
+      <div class="landing-actions">
+        <section class="auth-card" aria-labelledby="signin-title">
+          <h2 id="signin-title">Sign in on this device</h2>
+          <p>Local profile credentials are not sent to a server. This is not an online account or sync service.</p>
+          <form id="signin-form">
+            <label>Email<input id="signin-email" type="email" required maxlength="254" autocomplete="username" inputmode="email"></label>
+            <label>Password<span class="password-field"><input id="signin-password" type="password" required maxlength="256" autocomplete="current-password"><button type="button" class="reveal-password" data-password="signin-password" aria-label="Show password">Show</button></span></label>
+            <button class="primary-action">Sign in</button>
+          </form>
+          <button id="create-account-toggle" class="text-action" type="button" aria-expanded="false">Create an account</button>
+          <form id="create-form" hidden>
+            <h3>Create a local profile</h3>
+            <label>Email<input id="profile-label" type="email" required maxlength="254" autocomplete="username" inputmode="email"></label>
+            <label>Password<input id="create-password" type="password" minlength="14" maxlength="256" required autocomplete="new-password"></label>
+            <small>Use at least 14 characters. This password encrypts data stored on this device. There is no email-based reset.</small>
+            <button class="primary-action">Create account</button>
+          </form>
+        </section>
+        <section class="demo-entry" aria-labelledby="demo-title">
+          <div><h2 id="demo-title">Explore Synthetic Demo</h2><p>Explore ASTHRAL with example mission data. No account required.</p></div>
+          <button id="explore">Explore Synthetic Demo</button>
+        </section>
+      </div>
+      <div class="developer-tools">
+        <details><summary>Device capabilities and real test results</summary><pre id="diagnostics"></pre><pre id="parity"></pre></details>
+      </div>
+    </section>
+
+    <section id="profiles" hidden aria-label="Legacy profile status"></section>
+    <section id="workspace" hidden>
+      <aside class="side-rail">
+        <div class="workspace-heading"><p class="eyebrow">LOCAL WORKSPACE</p><p id="scope"></p></div>
+        <nav id="workspace-nav" aria-label="Main navigation">
+          <a href="#dashboard" data-view="dashboard">Overview</a>
+          <a href="#monitoring" data-view="monitoring">Monitoring</a>
+          <a href="#clinical" data-view="clinical">Assessment</a>
+          <a href="#assistant" data-view="assistant">Ask ASTHRAL</a>
+          <a href="#history" data-view="history">History</a>
+          <details class="more-nav"><summary>More</summary><div>
+            <a href="#voice" data-view="voice">Record observation</a>
+            <a href="#vision" data-view="vision">Computer Vision</a>
+            <a href="#followup" data-view="followup">Follow-up</a>
+            <a href="#inventory" data-view="inventory">Medical resources</a>
+            <a href="#mission-context" data-view="mission-context">Mission context</a>
+            <a href="#management-history" data-view="management-history">Management reports</a>
+            <a href="#knowledge" data-view="knowledge">References</a>
+            <a href="#settings" data-view="settings">Settings</a>
+          </div></details>
+        </nav>
+      </aside>
+      <div class="workspace-content">
+        <section id="dashboard" class="workspace-page">
+          <div class="page-intro"><p class="eyebrow">MISSION HEALTH</p><h1>Overview</h1><p id="dashboard-caption">A summary of recent local information.</p></div>
+          <div id="metrics" class="metric-grid"></div>
+          <div class="dashboard-actions"><a href="#clinical">Assess health</a><a href="#assistant">Ask ASTHRAL</a><a href="#voice">Record an observation</a></div>
+          <section class="dashboard-trends"><h2>Research statistics</h2><p>Descriptive calculations only; they do not establish a diagnosis or recovery.</p><label>Synthetic baseline or trend<select id="statistics-case"></select></label><button id="statistics-run">Recompute locally</button><div id="statistics-chart"></div><pre id="statistics-output"></pre></section>
+          <p class="notice">Missing or invalid measurements remain unknown. Self-reports are separate from sensor-verified readings.</p>
+        </section>
+        <section id="clinical" class="workspace-page" hidden>
+          <div class="page-intro"><p class="eyebrow">DETERMINISTIC REVIEW</p><h1>Health assessment</h1><p>The local Python clinical engine evaluates documented criteria. It does not diagnose independently or authorize treatment.</p></div>
+          <label>Synthetic clinical example<select id="case-list"></select></label>
+          <p>Review the scenario and method, units, quality, timing and gravity. Only synthetic scenarios are included in this demonstration.</p>
+          <div id="assessment-form"></div>
+          <label class="developer-only">Editable technical scenario<textarea id="scenario" rows="8" spellcheck="false"></textarea></label>
+          <button id="evaluate" class="primary-action">Run assessment on this device</button>
+          <div id="urgency" role="alert"></div><div id="assessment"></div>
+          <details class="developer-only"><summary>Full criterion trace and output</summary><pre id="clinical-output"></pre></details>
+          <section><h2>Documented management and resources</h2><div id="management"></div></section>
+        </section>
+        <section id="assistant" class="workspace-page" hidden>
+          <div class="page-intro"><p class="eyebrow">LOCAL EVIDENCE</p><h1>Ask ASTHRAL</h1><p>Ask about this synthetic mission. Clinical results come only from the deterministic engine. The assistant can explain existing results but cannot change them.</p></div>
+          <p id="chat-model-status" role="status" aria-live="polite">Checking local assistant availability…</p>
+          <div id="chat-suggestions" class="chat-suggestions"><button type="button" data-prompt="Explain the current assessment and its evidence.">Explain the current assessment</button><button type="button" data-prompt="Which required information is still unknown?">What is still unknown?</button></div>
+          <div id="answer" class="conversation" role="log" aria-live="polite" aria-relevant="additions"></div>
+          <form id="chat-form" class="chat-composer"><label class="sr-only" for="question">Your question</label><textarea id="question" rows="2" maxlength="1200" placeholder="Ask about the current assessment or evidence…"></textarea><div class="chat-controls"><button id="chat-microphone" type="button" aria-label="Start voice input">Use microphone</button><button id="ask" class="primary-action">Send</button></div><p id="chat-voice-status" role="status" aria-live="polite"></p></form>
+          <details class="assistant-settings"><summary>Local assistant and voice availability</summary><div class="assistant-tools"><label>Energy policy<select id="mode"><option>FULL</option><option>LOW_POWER</option><option>CRITICAL</option></select></label><p id="model-status">Not installed</p><button id="model-install">Inspect local model options</button><pre id="model-details"></pre><label>Local model<select id="model-choice"><option>Inspect options first</option></select></label><button id="model-load" disabled>Install / load on this device</button><button id="model-stop">Release local model memory</button><p id="embedding-status">Local lexical retrieval ready</p><button id="embed-install">Inspect local embedding download</button><button id="embed-load" disabled>Install local search model</button><details><summary>Observed local inference benchmarks</summary><pre id="model-benchmark"></pre></details></div></details>
+        </section>
+        <section id="history" class="workspace-page" hidden><div class="page-intro"><p class="eyebrow">LOCAL RECORDS</p><h1>History</h1><p>Records remain encrypted on this device.</p></div><div id="history-list"></div><div class="row"><button id="export">Download encrypted backup</button><button id="integrity">Verify database and audit</button></div><details><summary>Delete this local profile</summary><p>Export first. Deleting removes this browser's encrypted copy.</p><label>Type DELETE to confirm<input id="delete-confirm" autocomplete="off"></label><button id="delete">Delete local profile</button></details></section>
+        <section id="vision" class="workspace-page" hidden><div class="page-intro"><p class="eyebrow">RESEARCH MODULES</p><h1>Computer Vision</h1><p>Images remain in memory in this browser session. No computer-vision output changes a deterministic clinical assessment.</p></div><div class="vision-grid">
+          <article><span class="status-pill status-research">Model not connected</span><h2>OcularVision</h2><p>OCT image intake and quality review. No retinal segmentation model is packaged in this browser release; no SANS diagnosis is made.</p><label>Choose OCT image<input id="ocular-file" type="file" accept="image/png,image/jpeg,image/tiff"></label><div id="ocular-preview"></div><p id="ocular-status" role="status">Research image intake only; inference unavailable in this browser build.</p></article>
+          <article><span class="status-pill status-research">Model not connected</span><h2>MotionGuard</h2><p>Movement description requires an explicitly installed, compatible local pose model. 2D measurements are uncalibrated and do not establish clinical findings.</p><button disabled aria-disabled="true">Motion analysis unavailable</button></article>
+          <article><span class="status-pill status-research">No detector configured</span><h2>SkinGuard</h2><p>Image-quality review only. No skin-cancer or malignancy detector is configured.</p><label>Choose image for local quality review<input id="skin-file" type="file" accept="image/png,image/jpeg"></label><div id="skin-preview"></div><p id="skin-status" role="status">Images are not saved or transmitted.</p></article>
+          <article><span class="status-pill status-blocked">Disabled</span><h2>EchoVision</h2><p>Execution remains disabled while model and checkpoint permissions are being verified.</p></article>
+        </div></section>
+        <section id="voice" class="workspace-page" hidden><div class="page-intro"><p class="eyebrow">REVIEW BEFORE SAVING</p><h1>Record an observation</h1><p>Offline speech recognition depends on a separately installed local English model. Audio is processed in memory and is not saved by default.</p></div><div class="row"><button id="voice-inspect">Check offline voice availability</button><button id="voice-install" disabled>Install local voice model</button><button id="record">Start recording</button><button id="stop-record" disabled>Stop and transcribe</button><button id="cancel-record">Cancel and discard</button></div><label>Optional synthetic audio sample<input id="voice-file" type="file" accept="audio/wav"></label><p id="voice-status" role="status" aria-live="polite">Microphone ready when local voice resources are installed.</p><label class="check-option"><input id="voice-auto" type="checkbox"> Allow only the explicitly eligible duration reports to save automatically</label><form id="observation-form"><label>Reviewed observation<textarea id="observation-text" maxlength="1200" required></textarea></label><button>Save reviewed self-report</button></form></section>
+        <section id="knowledge" class="workspace-page" hidden><div class="page-intro"><p class="eyebrow">DOCUMENTARY EVIDENCE</p><h1>References</h1><p>Hash-verified local source excerpts provide context. They do not authorize treatment.</p></div><label>Research question<input id="search-question" maxlength="1200"></label><button id="search">Search local references</button><div id="citations"></div></section>
+        <section id="settings" class="workspace-page" hidden><div class="page-intro"><p class="eyebrow">DEVICE AND PRIVACY</p><h1>Settings</h1><p>Local profiles are device-specific. Keep an encrypted backup and the password you chose; no email reset or cloud sync is provided.</p></div><section><h2>Profile sign-in</h2><p id="profile-settings-status">Local profile locked.</p><label>Legacy profile email<input id="migration-email" type="email" autocomplete="email"></label><button id="migration-email-save">Add encrypted local email sign-in</button><p id="migration-status" role="status">Legacy encryption keys are not changed by adding a sign-in identifier.</p></section><button id="install-offline">Install offline resources</button><p id="offline-status" role="status" aria-live="polite"></p><button id="activate-update" hidden>Activate downloaded update</button><button id="diagnose">Run device feasibility test</button><button id="run-parity">Verify clinical parity</button></section>
+      </div>
+    </section>
+  </main>
+  <footer>ASTHRAL · On-device research prototype · Independent clinical and operational validation pending</footer>
+</body>
+</html>

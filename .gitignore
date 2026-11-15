@@ -44,10 +44,13 @@
 /work/browser-local/*-output.txt
 /work/browser-local/*-error.txt
 /work/browser-local/publication-check.json
+/web-local/build-output-unified-20261115/
+/web-local/build-output-unified-20261115b/
 /work/browser-local/npm/
 /engine/local_ai/llama-b11721-bin-win-vulkan-x64.zip
 /engine/local_ai/runtime-key.txt
 /engine/local_ai/ollama-process.json
 /engine/local_ai/runtime-process.json
+/engine/.pip-temp-unified/
 /docs.zip
 /work/releases/v0.2.0-before-integration.zip

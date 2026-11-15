@@ -1,5 +1,9 @@
 # ASTHRAL
 
+## ASTHRAL 1.2 personal integration candidate
+
+See the [English personal-account, voice and vector demo](docs/asthral/PERSONAL_V120.md) for offline provisioning, setup, reproducibility and deployment limits. The earlier shared-code instructions below describe the legacy synthetic demo.
+
 **Astronaut Support Tool for Health Risk Assessment and Logistics**
 
 **Offline-First Astronaut Health Monitoring and Medical Decision Support**
@@ -236,3 +240,5 @@ When the updater stops, preserve local work in a reviewed commit on its own bran
 SQLite/WAL/backups are **not encrypted**. DPAPI/ACL protects local credentials from other identities but does not isolate same-user processes. A storage-controlling attacker can rewrite data/hash chains; software hashes are not clinical signatures or external tamper-proof anchors. Isolation, operational authority policy, clinical review, and data-at-rest encryption remain pending. Use synthetic data only. See [SECURITY.md](SECURITY.md).
 
 Scientific provenance is retained in the computable source registry and clinical manifest. Online API documentation: [NCBI E-utilities](https://www.ncbi.nlm.nih.gov/books/NBK25499/) and [NLM usage guidance](https://www.nlm.nih.gov/dataguide/eutilities/utilities.html). Public scientific metadata is not a license to redistribute entire papers. Model/runtime licenses and exclusions are described in [THIRD_PARTY_NOTICES.md](THIRD_PARTY_NOTICES.md). **No project license has been selected or added.** Private team access does not itself grant third-party redistribution rights.
+
+The isolated public synthetic demo uses Cloudflare Quick Tunnel. See [Cloudflare operation, credentials and mobile acceptance](docs/asthral/CLOUDFLARE_PUBLIC_DEMO.md).
