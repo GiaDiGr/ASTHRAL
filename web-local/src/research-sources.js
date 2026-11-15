@@ -1,5 +1,5 @@
 const text=(value,max)=>typeof value==='string'&&value.trim()&&value.length<=max?value.trim():null;
-const trustedUrl=value=>{try{const url=new URL(value);return url.protocol==='https:'&&(url.hostname==='nasa.gov'||url.hostname.endsWith('.nasa.gov'))&&url.username===''&&url.password===''?url.href:null;}catch{return null;}};
+const trustedUrl=value=>{try{const url=new URL(value);const official=(url.hostname==='nasa.gov'||url.hostname.endsWith('.nasa.gov')||url.hostname==='usda.gov'||url.hostname.endsWith('.usda.gov'));return url.protocol==='https:'&&official&&url.username===''&&url.password===''?url.href:null;}catch{return null;}};
 
 export function normalizeSourceRegistry(raw){
  if(!raw||typeof raw!=='object'||raw.schema_version!=='1.0.0'||!Array.isArray(raw.sources)||raw.sources.length>100)throw Error('Invalid local source registry.');

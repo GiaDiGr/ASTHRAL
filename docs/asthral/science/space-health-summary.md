@@ -16,11 +16,11 @@ The 2016 HRP sleep evidence report reviews risk questions and research on sleep 
 
 ## Exercise, fitness and musculoskeletal health — SRC-NASA-HRR-FITNESS-2024; SRC-NASA-HRR-BONE-2024
 
-The HRP fitness and bone evidence reports address reduced cardiorespiratory and musculoskeletal fitness and fracture risk associated with spaceflight-related bone changes. These reports provide research context, not a user-specific exercise or rehabilitation plan. ASTHRAL stores a self-described activity, duration and optional perceived exertion. It does not estimate VO2, strength, bone density, injury risk or readiness from these journal entries.
+The HRP fitness and bone evidence reports address reduced cardiorespiratory and musculoskeletal fitness and fracture risk associated with spaceflight-related bone changes. These reports provide research context, not a user-specific exercise or rehabilitation plan. ASTHRAL provides project-authored generic movement examples to support a manual software workflow; they are not NASA training protocol content, approved mission countermeasures, or individualized prescriptions. The user records activity, workload, sets, repetitions and time. The app does not estimate VO2, strength, bone density, injury risk, form or readiness.
 
 ## Nutrition — SRC-NASA-HRR-NUTRITION-2020
 
-NASA's 2020 nutrition evidence report reviews nutrition research questions and human adaptation in spaceflight. A food note or entered fluid volume alone does not measure nutrient intake, energy balance, hydration status or adequacy. ASTHRAL records only what the user enters and offers no nutritional target, supplement advice or clinical interpretation.
+NASA's 2020 nutrition evidence report reviews nutrition research questions and human adaptation in spaceflight. ASTHRAL's offline food-composition estimates use a 424-food subset of USDA FoodData Central Foundation Foods release 2026-10, scaled from the source's per-100-g entries by a user-entered mass. These estimates may not match mission foods, packaging, preparation, or consumed amounts. Source nulls remain missing, not zero. A food-composition estimate does not establish an astronaut's intake, energy balance, hydration status, or nutrient adequacy. ASTHRAL offers no nutritional target, supplement advice, or clinical interpretation.
 
 ## Standards and applicability — SRC-NASA-STD3001-V1-REVC; SRC-NASA-STD3001-V2-REVD; SRC-NASA-STD3001-V2-REVF
 

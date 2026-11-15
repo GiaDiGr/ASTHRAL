@@ -225,6 +225,21 @@ def dispatch(action, data):
         record['id']='radiation-'+uuid4().hex;record['source_kind']='SELF_ENTERED_RECORD';record['synthetic_data']=record['mode']=='SYNTHETIC'
         store.put('radiation_record',record['id'],record,'local_profile')
         return record
+    if action == 'radiation_import':
+        from vigile.dosimetry import normalize_record
+        rows=data.get('records')
+        if not isinstance(rows,list) or not 1<=len(rows)<=10000:raise ValueError('RADIATION_IMPORT_RECORD_COUNT')
+        existing=store.all('radiation_record')
+        def marker(row):return (row['quantity_kind'],row.get('instrument_id'),row['timestamp'],row['mission_segment'],row['location'])
+        seen={marker(row) for row in existing};normalized=[]
+        for index,raw in enumerate(rows,1):
+            try:record=normalize_record(raw,owner)
+            except ValueError as exc:raise ValueError(f'RADIATION_IMPORT_ROW_{index}:{exc}') from None
+            key=marker(record)
+            if key in seen:raise ValueError(f'RADIATION_IMPORT_DUPLICATE_ROW_{index}')
+            seen.add(key);record['id']='radiation-'+uuid4().hex;record['source_kind']='FILE_IMPORT';record['synthetic_data']=record['mode']=='SYNTHETIC';normalized.append(record)
+        store.put_many([('radiation_record',row['id'],row) for row in normalized],'local_profile')
+        return {'records':normalized,'count':len(normalized),'atomic':True,'audit_valid':store.verify()}
     if action == 'radiation_list':
         from vigile.dosimetry import integrate_rate,cumulative_counter_segments
         records=store.all('radiation_record')

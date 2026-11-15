@@ -20,7 +20,11 @@ NASA's Human Research Roadmap catalogue organizes risk evidence reports. The sle
 
 NASA's aerobic and muscle evidence report and bone-fracture report provide research context on fitness and skeletal risk. ASTHRAL records user-entered exercise-session details only; it does not generate NASA-approved training plans, measure strength from a phone, infer bone loss, or personalize rehabilitation.
 
-NASA nutrition evidence reports document spaceflight research questions and measured diet information. ASTHRAL records a user note and optionally a user-entered fluid volume. It does not invent food composition, energy values, nutrient adequacy, hydration targets, or supplement advice.
+NASA nutrition evidence reports document spaceflight research questions and measured diet information. ASTHRAL separately uses USDA FDC Foundation Foods release 2026-10 for general composition estimates on a 424-food offline subset, when nutrient values are available. Portion scaling is based on a user-entered gram amount; estimates are not mission-food matches or measured intake. Missing source values remain null. ASTHRAL does not calculate nutrient adequacy, hydration targets, or supplement advice. See `sources.json` for USDA attribution and reuse metadata.
+
+## Exercise example scope
+
+ASTHRAL's generic exercise examples are project-authored interaction content, not NASA training-protocol content. They do not prescribe frequency, duration, intensity, sets, repetitions, equipment, progression or rehabilitation. Users enter their own activity only; mission restrictions and clinician authorization remain external. Pose tracking is unavailable without a verified local model and runtime.
 
 ### NASA human-spaceflight standards and radiation monitoring
 

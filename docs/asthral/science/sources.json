@@ -13,8 +13,15 @@
       "doi": null,
       "pmid": null,
       "evidence_category": "OFFICIAL_PUBLIC_RESEARCH_DATABASE",
-      "topics": ["space weather", "events", "notifications", "linked events"],
-      "summary_claim_ids": ["SW-001"],
+      "topics": [
+        "space weather",
+        "events",
+        "notifications",
+        "linked events"
+      ],
+      "summary_claim_ids": [
+        "SW-001"
+      ],
       "reuse_status": "LINK_ONLY_NO_DATABASE_REPUBLICATION",
       "review_status": "OFFICIAL_PAGE_AND_LIVE_ENDPOINT_CHECKED_2026-11-15"
     },
@@ -27,8 +34,21 @@
       "doi": null,
       "pmid": null,
       "evidence_category": "OFFICIAL_EVIDENCE_CATALOGUE",
-      "topics": ["sleep", "bone", "fitness", "nutrition", "SANS", "behavioral health", "medical autonomy"],
-      "summary_claim_ids": ["PH-001", "PH-002", "PH-003", "PH-004"],
+      "topics": [
+        "sleep",
+        "bone",
+        "fitness",
+        "nutrition",
+        "SANS",
+        "behavioral health",
+        "medical autonomy"
+      ],
+      "summary_claim_ids": [
+        "PH-001",
+        "PH-002",
+        "PH-003",
+        "PH-004"
+      ],
       "reuse_status": "LINK_ONLY_NO_REPORT_REPUBLICATION",
       "review_status": "OFFICIAL_CATALOGUE_CHECKED_2026-11-15"
     },
@@ -36,14 +56,27 @@
       "source_id": "SRC-NASA-HRR-SLEEP-2016",
       "institution": "NASA Human Research Program, Behavioral Health and Performance Element",
       "title": "Risk of Performance Decrements and Adverse Health Outcomes Resulting from Sleep Loss, Circadian Desynchronization, and Work Overload",
-      "authors": ["Erin Flynn-Evans", "Kevin Gregory", "Lucia Arsintescu", "Alexandra Whitmire", "and prior contributors"],
+      "authors": [
+        "Erin Flynn-Evans",
+        "Kevin Gregory",
+        "Lucia Arsintescu",
+        "Alexandra Whitmire",
+        "and prior contributors"
+      ],
       "publication_date": "2016-04-11",
       "url": "https://humanresearchroadmap.nasa.gov/evidence/reports/Sleep.pdf",
       "doi": null,
       "pmid": null,
       "evidence_category": "NASA_HRP_EVIDENCE_REPORT",
-      "topics": ["sleep", "circadian", "workload", "fatigue"],
-      "summary_claim_ids": ["PH-001"],
+      "topics": [
+        "sleep",
+        "circadian",
+        "workload",
+        "fatigue"
+      ],
+      "summary_claim_ids": [
+        "PH-001"
+      ],
       "reuse_status": "LINK_ONLY_NO_PDF_REPUBLICATION",
       "review_status": "OFFICIAL_REPORT_TITLE_AND_CONTENT_CHECKED_2026-11-15"
     },
@@ -56,8 +89,15 @@
       "doi": null,
       "pmid": null,
       "evidence_category": "NASA_HRP_EVIDENCE_REPORT",
-      "topics": ["exercise", "cardiorespiratory fitness", "muscle", "bone"],
-      "summary_claim_ids": ["PH-002"],
+      "topics": [
+        "exercise",
+        "cardiorespiratory fitness",
+        "muscle",
+        "bone"
+      ],
+      "summary_claim_ids": [
+        "PH-002"
+      ],
       "reuse_status": "LINK_ONLY_NO_PDF_REPUBLICATION",
       "review_status": "OFFICIAL_CATALOGUE_ENTRY_CHECKED_2026-11-15"
     },
@@ -70,8 +110,14 @@
       "doi": null,
       "pmid": null,
       "evidence_category": "NASA_HRP_EVIDENCE_REPORT",
-      "topics": ["bone", "fracture", "recovery"],
-      "summary_claim_ids": ["PH-002"],
+      "topics": [
+        "bone",
+        "fracture",
+        "recovery"
+      ],
+      "summary_claim_ids": [
+        "PH-002"
+      ],
       "reuse_status": "LINK_ONLY_NO_PDF_REPUBLICATION",
       "review_status": "OFFICIAL_REPORT_CHECKED_2026-11-15"
     },
@@ -84,8 +130,14 @@
       "doi": null,
       "pmid": null,
       "evidence_category": "NASA_HRP_EVIDENCE_REPORT",
-      "topics": ["nutrition", "energy intake", "food"],
-      "summary_claim_ids": ["PH-003"],
+      "topics": [
+        "nutrition",
+        "energy intake",
+        "food"
+      ],
+      "summary_claim_ids": [
+        "PH-003"
+      ],
       "reuse_status": "LINK_ONLY_NO_PDF_REPUBLICATION",
       "review_status": "OFFICIAL_REPORT_CHECKED_2026-11-15"
     },
@@ -98,8 +150,15 @@
       "doi": null,
       "pmid": null,
       "evidence_category": "NASA_TECHNICAL_STANDARD",
-      "topics": ["crew health", "radiation limits", "medical operations"],
-      "summary_claim_ids": ["RAD-001", "RAD-003"],
+      "topics": [
+        "crew health",
+        "radiation limits",
+        "medical operations"
+      ],
+      "summary_claim_ids": [
+        "RAD-001",
+        "RAD-003"
+      ],
       "reuse_status": "LINK_ONLY_NO_STANDARD_REPUBLICATION",
       "review_status": "OFFICIAL_DOCUMENT_CHECKED_2026-11-15"
     },
@@ -112,8 +171,16 @@
       "doi": null,
       "pmid": null,
       "evidence_category": "NASA_TECHNICAL_STANDARD",
-      "topics": ["radiation monitoring", "environmental health", "habitat", "EVA"],
-      "summary_claim_ids": ["RAD-001", "RAD-003"],
+      "topics": [
+        "radiation monitoring",
+        "environmental health",
+        "habitat",
+        "EVA"
+      ],
+      "summary_claim_ids": [
+        "RAD-001",
+        "RAD-003"
+      ],
       "reuse_status": "LINK_ONLY_NO_STANDARD_REPUBLICATION",
       "review_status": "OFFICIAL_DOCUMENT_CHECKED_2026-11-15"
     },
@@ -126,8 +193,16 @@
       "doi": null,
       "pmid": null,
       "evidence_category": "NASA_OPERATIONAL_INSTRUMENT_DESCRIPTION",
-      "topics": ["CAD", "personal dosimetry", "absorbed dose", "dose rate", "passive dosimetry"],
-      "summary_claim_ids": ["RAD-002"],
+      "topics": [
+        "CAD",
+        "personal dosimetry",
+        "absorbed dose",
+        "dose rate",
+        "passive dosimetry"
+      ],
+      "summary_claim_ids": [
+        "RAD-002"
+      ],
       "reuse_status": "LINK_ONLY_NO_PAGE_REPUBLICATION",
       "review_status": "OFFICIAL_PAGE_CHECKED_2026-11-15"
     },
@@ -140,8 +215,15 @@
       "doi": null,
       "pmid": null,
       "evidence_category": "NASA_TECHNICAL_REPORT",
-      "topics": ["HERA", "CAD", "Orion", "mission hardware applicability"],
-      "summary_claim_ids": ["RAD-002"],
+      "topics": [
+        "HERA",
+        "CAD",
+        "Orion",
+        "mission hardware applicability"
+      ],
+      "summary_claim_ids": [
+        "RAD-002"
+      ],
       "reuse_status": "LINK_ONLY_NO_REPORT_REPUBLICATION",
       "review_status": "NASA_NTRS_RECORD_AND_REPORT_CHECKED_2026-11-15"
     },
@@ -154,8 +236,14 @@
       "doi": null,
       "pmid": null,
       "evidence_category": "OFFICIAL_TECHNICAL_API_DOCUMENTATION",
-      "topics": ["DONKI API", "JSON schemas", "public data"],
-      "summary_claim_ids": ["SW-001"],
+      "topics": [
+        "DONKI API",
+        "JSON schemas",
+        "public data"
+      ],
+      "summary_claim_ids": [
+        "SW-001"
+      ],
       "reuse_status": "PUBLIC_API_USED_WITHOUT_CREDENTIALS",
       "review_status": "OPENAPI_V2_AND_LIVE_RESPONSE_CHECKED_2026-11-15"
     },
@@ -168,10 +256,48 @@
       "doi": null,
       "pmid": null,
       "evidence_category": "NASA_TECHNICAL_STANDARD_CATALOGUE_AND_ACTIVE_REVISION",
-      "topics": ["crew health", "human factors", "habitability", "environmental health", "mission-specific tailoring"],
-      "summary_claim_ids": ["RAD-001", "RAD-003"],
+      "topics": [
+        "crew health",
+        "human factors",
+        "habitability",
+        "environmental health",
+        "mission-specific tailoring"
+      ],
+      "summary_claim_ids": [
+        "RAD-001",
+        "RAD-003"
+      ],
       "reuse_status": "LINK_ONLY_NO_STANDARD_REPUBLICATION",
       "review_status": "NASA_STANDARDS_CATALOGUE_ACTIVE_REVISION_VERIFIED_2026-11-15"
+    },
+    {
+      "source_id": "SRC-USDA-FDC-FOUNDATION-2026-10",
+      "institution": "U.S. Department of Agriculture, Agricultural Research Service",
+      "title": "FoodData Central Foundation Foods, October 2026 release",
+      "authors": [
+        "USDA Agricultural Research Service"
+      ],
+      "publication_date": "2026-10-29",
+      "url": "https://fdc.nal.usda.gov/download-datasets/",
+      "dataset_url": "https://fdc.nal.usda.gov/fdc-datasets/FoodData_Central_foundation_food_json_2026-10-29.zip",
+      "doi": null,
+      "pmid": null,
+      "evidence_category": "PUBLIC_DOMAIN_FOOD_COMPOSITION_DATASET",
+      "topics": [
+        "food composition",
+        "energy",
+        "protein",
+        "carbohydrate",
+        "fat",
+        "water",
+        "offline nutrition estimate"
+      ],
+      "summary_claim_ids": [
+        "NUTRITION-001"
+      ],
+      "reuse_status": "PUBLIC_DOMAIN_CC0_1_0_ATTRIBUTION_REQUESTED",
+      "review_status": "OFFICIAL_DATASET_AND_API_LICENSING_PAGE_CHECKED_2026-11-15",
+      "suggested_citation": "U.S. Department of Agriculture, Agricultural Research Service. FoodData Central, 2019. fdc.nal.usda.gov."
     }
   ]
 }

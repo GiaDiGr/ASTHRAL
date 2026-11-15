@@ -156,6 +156,9 @@ def main():
         archive.writestr('ASTHRAL_CORPUS_SHA256.json',(ROOT/'ASTHRAL_CORPUS_SHA256.json').read_bytes())
         for item in manifest:archive.writestr(item['path'],(ROOT/item['path']).read_bytes())
         archive.writestr('browser_bridge.py',(ROOT/'web-local/src/browser_bridge.py').read_bytes())
+        # Nutrition estimates are recomputed by the Python worker from this verified offline subset.
+        for name in ('foods.json','foods.json.sha256'):
+            archive.write(ROOT/'web-local/src/nutrition'/name,'web-local/src/nutrition/'+name)
     monitoring_fixture=json.loads((ROOT/'web-local/tests/fixtures/monitor-native-oracle.json').read_bytes())
     (OUT/'monitor-fixture.json').write_text(json.dumps({'steps':monitoring_fixture['steps'],'source':'FROZEN_SYNTHETIC_INPUTS_ONLY_NO_EXPECTED_OUTPUTS'}),encoding='utf8')
     cases=fixtures()

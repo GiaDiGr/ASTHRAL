@@ -9,8 +9,10 @@ let clearPublicFeatures=()=>{};
 import {cachePublicResources} from './public-resources.js';
 import {installExperience,human} from './experience.js';
 import {installMissionSupport} from './mission-support.js';
+import {installPreventiveExperience} from './preventive-experience.js';
 let experience=null;
 let missionSupport=null;
+let preventiveExperience=null;
 const $=id=>document.getElementById(id);
 const runtimeState={ready:false,seconds:null};
 const operationMetrics=[];
@@ -101,8 +103,8 @@ function selectCase() {
 function dashboardCaption(text) {
   $('dashboard-caption').textContent=text;
 }
-async function recordedDashboard(data,epoch) {
-  const timeline=experience?await call('timeline'):null;
+async function recordedDashboard(data,epoch,providedTimeline=null) {
+  const timeline=experience?(providedTimeline??await call('timeline')):null;
   if(epoch!==profileEpoch||!vault)return;
   dashboardCaption('Recorded profile data · self-reports are separate from sensor-verified measurements');
   const cards=[];
@@ -145,6 +147,7 @@ async function entered() {
   if(vault.row?.email_box)$('migration-status').textContent='An encrypted local email sign-in is already associated with this profile.';
   else if(!vault.temporary)$('migration-status').textContent='Legacy profile unlocked. Add an email sign-in without changing the original passphrase or encryption key.';
   await missionSupport?.refresh();
+  await preventiveExperience?.refresh();
 }
 async function persist() {
   if(!vault.temporary)await vault.save(await call('serialize'));
@@ -154,36 +157,47 @@ async function history() {
   const epoch=profileEpoch;
   const data=await call('history');
   if(epoch!==profileEpoch||!vault)return;
+  const timeline=experience?await call('timeline'):null;
+  if(epoch!==profileEpoch||!vault)return;
   const latest=data.evaluations.at(-1);
   $('emergency-banner').hidden=true;
   // Historical results stay in history; current urgency is shown with its assessment.
   $('emergency-banner').textContent=latest?latest.output.urgency+' · Last saved synthetic assessment · Human medical review required · Treatment blocked':'';
+  const moment=row=>row.occurred_at||row.timestamp||row.submitted_at||row.computed_at||row.created_at||row.updated_at||row.started_at||row.measurement?.timestamp||row.snapshot?.request?.as_of||null;
   const rows=[
-    ...data.evaluations.map(row=>({label:row.output.urgency+' · '+(row.snapshot.request.condition_id||'Differential'),detail:row.output})),
-    ...data.observations.map(row=>({label:row.text,detail:row})),
-    ...(data.prevention_entries??[]).map(row=>({label:row.entry_type.replaceAll('_',' '),detail:row})),
-    ...(data.radiation_records??[]).map(row=>({label:row.quantity_kind.replaceAll('_',' ')+' · '+row.value+' '+row.unit,detail:row}))
+    ...data.evaluations.map(row=>({label:row.output.urgency+' · '+(row.snapshot.request.condition_id||'Differential'),detail:row,occurred_at:row.snapshot.request.as_of})),
+    ...data.observations.map(row=>({label:row.text,detail:row,occurred_at:moment(row)})),
+    ...(data.prevention_entries??[]).map(row=>({label:row.entry_type.replaceAll('_',' ')+(row.synthetic_data?' · synthetic':' · self-report'),detail:row,occurred_at:moment(row)})),
+    ...(data.radiation_records??[]).map(row=>({label:row.quantity_kind.replaceAll('_',' ')+' · '+row.value+' '+row.unit+' · '+row.mode,detail:row,occurred_at:moment(row)})),
+    ...(timeline?.measurement??[]).map(row=>({label:'Measurement · '+human(row.measurement.variable)+' · '+String(row.measurement.value??'unknown')+' '+row.measurement.unit,detail:row,occurred_at:moment(row)})),
+    ...(timeline?.baseline??[]).map(row=>({label:'Personal baseline · '+(row.variable||row.concept||'reference'),detail:row,occurred_at:moment(row)})),
+    ...(timeline?.trend??[]).map(row=>({label:'Longitudinal trend · '+(row.variable||row.concept||'review'),detail:row,occurred_at:moment(row)})),
+    ...(timeline?.finding??[]).map(row=>({label:'Recorded finding · '+(row.title||row.finding_id||row.category||'review'),detail:row,occurred_at:moment(row)})),
+    ...(timeline?.monitoring_run??[]).map(row=>({label:'Deterministic monitoring cycle · '+(row.severity||row.status||'completed'),detail:row,occurred_at:moment(row)})),
+    ...(timeline?.monitoring_event??[]).map(row=>({label:'Monitoring event · '+(row.event_type||row.category||'recorded'),detail:row,occurred_at:moment(row)})),
+    ...(timeline?.episode??[]).map(row=>({label:'Episode · '+(row.status||row.episode_type||'follow-up'),detail:row,occurred_at:moment(row)}))
   ];
+  rows.sort((a,b)=>String(b.occurred_at||'').localeCompare(String(a.occurred_at||'')));
   $('history-list').replaceChildren();
-  for(const row of rows.reverse()) {
+  for(const row of rows) {
     const article=document.createElement('article');
     const details=document.createElement('details');
     details.className='developer-only';
     details.append(element('summary','Record and provenance'),element('pre',JSON.stringify(row.detail,null,2)));
-    article.append(element('strong',row.label),details);
+    const header=document.createElement('div');header.append(element('strong',row.label));if(row.occurred_at){const time=document.createElement('time');time.dateTime=row.occurred_at;time.textContent=new Date(row.occurred_at).toLocaleString();header.append(time);}article.append(header,details);
     if(row.detail.source?.startsWith('SELF_REPORTED'))article.append(element('p','Self-reported information · not sensor-verified · medical review required; no text-based urgency classification.'));
     $('history-list').append(article);
   }
   if(!rows.length) $('history-list').append(element('p','No local observations or evaluations saved.'));
   $('profile-status').textContent='Unlocked · audit '+(data.audit_valid?'verified':'FAILED');
-  await recordedDashboard(data,epoch);
-  await missionSupport?.refresh();
+  await recordedDashboard(data,epoch,timeline);
 }
 async function lock() {
   profileEpoch++;
   operationMetrics.length=0;
   experience?.clear();
   missionSupport?.clear();
+  preventiveExperience?.clear();
   clearPublicFeatures();
   stopRecording();
   vault?.lock();
@@ -866,6 +880,7 @@ $('activate-update').onclick=safe(async()=>{
 });
 experience=await installExperience({call,persist});
 missionSupport=installMissionSupport({call,persist,status,isTemporary:()=>!!vault?.temporary,mode:()=>$('mode')?.value??'FULL'});
+preventiveExperience=installPreventiveExperience({call,persist,status,isTemporary:()=>!!vault?.temporary});
 if(vault&&cases.length){experience.refresh();await experience.update();await history();}
 clearPublicFeatures=await installPublicFeatures();
 
