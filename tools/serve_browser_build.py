@@ -3,13 +3,27 @@ import argparse
 from functools import partial
 from http.server import SimpleHTTPRequestHandler,ThreadingHTTPServer
 from pathlib import Path
+from fnmatch import fnmatch
+from urllib.parse import urlsplit
 class Handler(SimpleHTTPRequestHandler):
     # Keep responses on persistent HTTP/1.1 connections. Immediate HTTP/1.0
     # close correlated with lost/reset loopback responses in transport probes.
     protocol_version = "HTTP/1.1"
     def log_message(self,*args): pass
     def end_headers(self):
-        self.send_header('X-Content-Type-Options','nosniff')
+        # Mirror the public build's deployment policy in local acceptance tests.
+        headers = {'X-Content-Type-Options': 'nosniff'}
+        config = Path(self.directory) / '_headers'
+        if config.is_file():
+            matched = False
+            for line in config.read_text(encoding='utf-8').splitlines():
+                if not line.strip() or line.lstrip().startswith('#'): continue
+                if not line[0].isspace():
+                    matched = fnmatch(urlsplit(self.path).path, line.strip())
+                elif matched and ':' in line:
+                    key, value = line.strip().split(':', 1)
+                    if '\r' not in value and '\n' not in value: headers[key] = value.strip()
+        for key, value in headers.items(): self.send_header(key, value)
         super().end_headers()
     def guess_type(self,path):
         # Windows registry MIME associations may map .mjs to text/plain.

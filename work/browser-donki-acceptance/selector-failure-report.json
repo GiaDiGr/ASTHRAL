@@ -1,0 +1,15 @@
+{
+  "status": "FAILED",
+  "errors": [],
+  "requests_failed": [
+    {
+      "url": "https://ccmc.gsfc.nasa.gov/DONKI-API/get/CME?startDate=2026-11-08&endDate=2026-11-15",
+      "failure": "net::ERR_ABORTED"
+    },
+    {
+      "url": "https://ccmc.gsfc.nasa.gov/DONKI-API/get/notifications?startDate=2026-11-08&endDate=2026-11-15&type=all",
+      "failure": "net::ERR_ABORTED"
+    }
+  ],
+  "failure": "Locator.inner_text: Error: strict mode violation: locator(\"#space-weather\").locator(\"[role=status]\") resolved to 2 elements:\n    1) <p role=\"status\" aria-live=\"polite\">NASA CCMC data returned at 2026-11-15T14:51:02.36\u2026</p> aka get_by_text(\"NASA CCMC data returned at\")\n    2) <p role=\"status\">29 unacknowledged current notices / 29 selected p\u2026</p> aka get_by_text(\"29 unacknowledged current\")\n\nCall log:\n  - waiting for locator(\"#space-weather\").locator(\"[role=status]\")\n"
+}

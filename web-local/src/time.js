@@ -5,3 +5,8 @@ export function utcInput(value){
  if(value.length>=19&&date.getUTCSeconds()!==Number(value.slice(17,19)))throw Error('Invalid UTC seconds.');
  return date.toISOString();
 }
+
+export function utcDay(value){
+ if(typeof value!=='string'||!/(Z|[+-]\d{2}:\d{2})$/.test(value))return null;
+ try{const index=value.search(/(Z|[+-]\d{2}:\d{2})$/);utcInput(value.slice(0,index));const date=new Date(value);return Number.isFinite(date.getTime())?date.toISOString().slice(0,10):null;}catch{return null;}
+}

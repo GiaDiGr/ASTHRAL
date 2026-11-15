@@ -1,0 +1,121 @@
+{
+  "status": "GENUINE_INFERENCE_EXECUTED_NOT_BIOMECHANICAL_VALIDATION",
+  "errors": [],
+  "fixtures": [
+    {
+      "name": "wall-push",
+      "summary": {
+        "model": {
+          "model": "MediaPipe Pose Landmarker Lite",
+          "runtime": "0.10.21",
+          "model_sha256": "59929e1d1ee95287735ddd833b19cf4ac46d29bc7afddbbf6753c459690d574a",
+          "delegate": "CPU",
+          "clinical_validation": false
+        },
+        "source_sha256": "3592df1f787a91bd1edd87aa2d94a3aa29adc195ed3f34104c24c945276f7f9c",
+        "source": "USER_SELECTED_VIDEO_UNVERIFIED",
+        "capture_started_at": null,
+        "source_recorded_at": null,
+        "analyzed_at": "2026-11-15T15:03:10.115Z",
+        "projection": "IMAGE_PLANE_2D",
+        "joint": "left_elbow",
+        "frames": 25,
+        "valid_angle_frames": 24,
+        "missing_angle_frames": 1,
+        "angle_min_degrees": 56.440048571810514,
+        "angle_max_degrees": 145.83972434846868,
+        "cycles": null,
+        "observed_complete_cycles": 0,
+        "cycle_status": "PARTIAL_TRACKING",
+        "cycle_limits": {
+          "low": 70,
+          "high": 150
+        },
+        "cycle_scope": "MODEL_DERIVED_USER_DEFINED_EXCURSIONS_NOT_FORM_OR_FITNESS",
+        "sensor_verified": false,
+        "subject_identity_verified": false,
+        "clinical_interpretation": "NOT_PROVIDED"
+      },
+      "reference_cycle_count": null,
+      "accuracy_validated": false
+    },
+    {
+      "name": "knee-pushups",
+      "summary": {
+        "model": {
+          "model": "MediaPipe Pose Landmarker Lite",
+          "runtime": "0.10.21",
+          "model_sha256": "59929e1d1ee95287735ddd833b19cf4ac46d29bc7afddbbf6753c459690d574a",
+          "delegate": "CPU",
+          "clinical_validation": false
+        },
+        "source_sha256": "93900944dc329037ff3f4c565a65afa2f48e281ba3e781ea5493f0c1ae7d1ae3",
+        "source": "USER_SELECTED_VIDEO_UNVERIFIED",
+        "capture_started_at": null,
+        "source_recorded_at": null,
+        "analyzed_at": "2026-11-15T15:03:15.399Z",
+        "projection": "IMAGE_PLANE_2D",
+        "joint": "left_elbow",
+        "frames": 75,
+        "valid_angle_frames": 33,
+        "missing_angle_frames": 42,
+        "angle_min_degrees": 75.91467562419703,
+        "angle_max_degrees": 178.66690176540587,
+        "cycles": null,
+        "observed_complete_cycles": 0,
+        "cycle_status": "PARTIAL_TRACKING",
+        "cycle_limits": {
+          "low": 70,
+          "high": 150
+        },
+        "cycle_scope": "MODEL_DERIVED_USER_DEFINED_EXCURSIONS_NOT_FORM_OR_FITNESS",
+        "sensor_verified": false,
+        "subject_identity_verified": false,
+        "clinical_interpretation": "NOT_PROVIDED"
+      },
+      "reference_cycle_count": null,
+      "accuracy_validated": false
+    },
+    {
+      "name": "squat",
+      "summary": {
+        "model": {
+          "model": "MediaPipe Pose Landmarker Lite",
+          "runtime": "0.10.21",
+          "model_sha256": "59929e1d1ee95287735ddd833b19cf4ac46d29bc7afddbbf6753c459690d574a",
+          "delegate": "CPU",
+          "clinical_validation": false
+        },
+        "source_sha256": "a0cb2b41f41ddb884680ef0f05726be6e4058b1380c44c11024d3bf31aede79c",
+        "source": "USER_SELECTED_VIDEO_UNVERIFIED",
+        "capture_started_at": null,
+        "source_recorded_at": null,
+        "analyzed_at": "2026-11-15T15:03:19.544Z",
+        "projection": "IMAGE_PLANE_2D",
+        "joint": "left_knee",
+        "frames": 26,
+        "valid_angle_frames": 0,
+        "missing_angle_frames": 26,
+        "angle_min_degrees": null,
+        "angle_max_degrees": null,
+        "cycles": null,
+        "observed_complete_cycles": null,
+        "cycle_status": "INSUFFICIENT_TRACKING",
+        "cycle_limits": {
+          "low": 70,
+          "high": 150
+        },
+        "cycle_scope": "MODEL_DERIVED_USER_DEFINED_EXCURSIONS_NOT_FORM_OR_FITNESS",
+        "sensor_verified": false,
+        "subject_identity_verified": false,
+        "clinical_interpretation": "NOT_PROVIDED"
+      },
+      "reference_cycle_count": null,
+      "accuracy_validated": false
+    }
+  ],
+  "codec_support": {
+    "h264": "",
+    "vp8": "probably"
+  }
+}

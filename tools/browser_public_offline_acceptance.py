@@ -1,0 +1,16 @@
+"""Real offline public-cache reload, without private profiles or record writes."""
+import argparse,json,re
+from pathlib import Path
+from playwright.sync_api import sync_playwright,expect
+parser=argparse.ArgumentParser();parser.add_argument('--url',default='http://127.0.0.1:8944/');parser.add_argument('--output',default='work/browser-public-offline-acceptance');args=parser.parse_args();out=Path(args.output);out.mkdir(parents=True,exist_ok=True);report={'status':'FAILED','page_errors':[],'request_failures':[]}
+def capture(**options):
+ try:page.screenshot(timeout=5000,**options)
+ except Exception as error:report.setdefault('capture_errors',[]).append(str(error))
+with sync_playwright() as p:
+ b=p.chromium.launch(headless=True,executable_path=str(next((Path.home()/'AppData/Local/ms-playwright/chromium-1181').rglob('chrome.exe'))));context=b.new_context();page=context.new_page();page.on('pageerror',lambda e:report['page_errors'].append(str(e)));page.on('requestfailed',lambda r:report['request_failures'].append({'url':r.url,'failure':r.failure}))
+ try:
+  page.goto(args.url);expect(page.locator('#runtime-status')).to_contain_text('ready on this device',timeout=60000);page.locator('#explore').click();expect(page.locator('#operation')).to_contain_text('Temporary synthetic demo ready',timeout=30000);page.locator('#workspace-nav .more-nav > summary').click();page.locator('#workspace-nav [data-view="settings"]').click();page.locator('#install-offline').click();expect(page.locator('#offline-status')).to_contain_text(re.compile('^Offline resources verified:|^Offline installation failed:'),timeout=120000);report['install_status']=page.locator('#offline-status').inner_text();assert report['install_status'].startswith('Offline resources verified:')
+  page.wait_for_load_state('networkidle');page.reload();expect(page.locator('#runtime-status')).to_contain_text('ready on this device',timeout=60000);page.wait_for_load_state('networkidle');context.set_offline(True);page.reload();expect(page.locator('#runtime-status')).to_contain_text('ready on this device',timeout=60000);report['offline_runtime']=page.locator('#runtime-status').inner_text();assert page.evaluate('navigator.onLine') is False;page.locator('#explore').click();expect(page.locator('#operation')).to_contain_text('Temporary synthetic demo ready',timeout=30000);page.locator('#workspace-nav .more-nav > summary').click();page.locator('#workspace-nav [data-view="knowledge"]').click();page.locator('#search-question').fill('exercise countermeasures');page.locator('#search').click();expect(page.locator('#citations')).to_contain_text('SHA-256',timeout=30000);report['offline_citations']=page.locator('#citations').inner_text();report['status']='PUBLIC_CACHE_OFFLINE_RELOAD_AND_LEXICAL_RETRIEVAL_VERIFIED';report['private_profile_restore_tested']=False;capture(path=str(out/'offline-retrieval.png'),full_page=True)
+ except Exception as error:report['failure']=str(error);capture(path=str(out/'failure.png'),full_page=True)
+ finally:(out/'report.json').write_text(json.dumps(report,indent=2),encoding='utf8');print(json.dumps(report,indent=2),flush=True);b.close()
+if report['status']=='FAILED':raise SystemExit(1)

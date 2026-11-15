@@ -1,3 +1,5 @@
+> Current feature-branch instructions and evidence (2026-11-15): see ../docs/asthral/INTEGRATION_REVIEW_20261115.md and INTEGRATION_CONTRACTS.md. The historical commands/results below predate the 254-case package, real CPU pose/voice checks and versioned USDA energy references. No main deployment is authorized by the current directive.
+
 # ASTHRAL Web — browser-local integration prototype
 
 > Current candidate: see [IMPLEMENTATION_STATUS_20261114.md](IMPLEMENTATION_STATUS_20261114.md) and [OFFLINE_INSTALL_AUDIT.md](OFFLINE_INSTALL_AUDIT.md). Feature counts and limitations below describe the earlier prototype, not the current working tree. The current candidate has 44 passing browser tests and 254-case parity; Samsung offline operation was owner-reported successful on preview decec363. Final release acceptance remains in progress.

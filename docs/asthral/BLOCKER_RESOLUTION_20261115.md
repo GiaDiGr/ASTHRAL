@@ -1,3 +1,5 @@
+> Continuation update: INTEGRATION_REVIEW_20261115.md records subsequent CPU browser MotionGuard, USDA v2, DONKI acknowledgement and public offline checks, and a later parallel-navigation timeout. Historical results below are retained; they are not a claim of comprehensive load or clinical acceptance. The dev server now mirrors the build _headers policy.
+
 # ASTHRAL startup transport resolution â€” 2026-11-15
 
 ## Outcome and evidence boundary

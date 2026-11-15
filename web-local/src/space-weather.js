@@ -7,7 +7,7 @@ const EVENT_TIME={FLR:'beginTime',CME:'startTime',SEP:'eventTime',GST:'startTime
 const boundedJson=async response=>{
  if(!response.ok)throw Error('DONKI HTTP '+response.status);
  const reader=response.body?.getReader();if(!reader){const raw=await response.arrayBuffer();if(raw.byteLength>MAX_BYTES)throw Error('DONKI response too large');return JSON.parse(new TextDecoder().decode(raw));}
- let size=0;const chunks=[];try{for(;;){const {value,done}=await reader.read();if(done)break;size+=value.byteLength;if(size>MAX_BYTES)throw Error('DONKI response too large');chunks.push(value);}}finally{await reader.cancel().catch(()=>{});}
+ let size=0,complete=false;const chunks=[];try{for(;;){const {value,done}=await reader.read();if(done){complete=true;break;}size+=value.byteLength;if(size>MAX_BYTES)throw Error('DONKI response too large');chunks.push(value);}}finally{if(!complete)await reader.cancel().catch(()=>{});reader.releaseLock?.();}
  const bytes=new Uint8Array(size);let offset=0;for(const chunk of chunks){bytes.set(chunk,offset);offset+=chunk.byteLength;}return JSON.parse(new TextDecoder().decode(bytes));
 };
 const text=(value,max=320)=>typeof value==='string'?value.replace(/[\u0000-\u001f\u007f]/g,' ').trim().slice(0,max):'';

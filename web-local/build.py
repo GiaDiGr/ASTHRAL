@@ -26,6 +26,11 @@ MODULES=['__init__.py','clinical_engine.py','clinical_models.py','clinical_knowl
 
 def sha(raw):return hashlib.sha256(raw).hexdigest()
 
+def copy_public_source(source, destination):
+    # Interpreter caches depend on the build machine and are not browser assets.
+    shutil.copytree(source,destination,dirs_exist_ok=True,
+        ignore=shutil.ignore_patterns('__pycache__','*.pyc','*.pyo','browser_bridge.py','browser_monitoring.py'))
+
 def get_runtime():
     VENDOR.mkdir(exist_ok=True)
     with httpx.Client(verify=ssl.create_default_context(),trust_env=False,timeout=90,follow_redirects=True) as client:
@@ -118,7 +123,7 @@ def main():
         raise ValueError('BUILD_OUTPUT_ALREADY_EXISTS: preserve prior output and select a new isolated build directory')
     OUT.mkdir(exist_ok=True)
     selected=get_runtime()
-    shutil.copytree(ROOT/'web-local/src',OUT,dirs_exist_ok=True,ignore=shutil.ignore_patterns('browser_bridge.py','browser_monitoring.py'))
+    copy_public_source(ROOT/'web-local/src',OUT)
     shutil.copytree(ROOT/'docs/asthral/science',OUT/'research',dirs_exist_ok=True)
     (OUT/'runtime').mkdir(exist_ok=True)
     runtime_lock=json.loads((VENDOR/'pyodide-lock.json').read_bytes())
@@ -157,7 +162,7 @@ def main():
         for item in manifest:archive.writestr(item['path'],(ROOT/item['path']).read_bytes())
         archive.writestr('browser_bridge.py',(ROOT/'web-local/src/browser_bridge.py').read_bytes())
         # Nutrition estimates are recomputed by the Python worker from this verified offline subset.
-        for name in ('foods.json','foods.json.sha256'):
+        for name in ('foods.json','foods.json.sha256','foods-v1.json','foods-v1.json.sha256'):
             archive.write(ROOT/'web-local/src/nutrition'/name,'web-local/src/nutrition/'+name)
     monitoring_fixture=json.loads((ROOT/'web-local/tests/fixtures/monitor-native-oracle.json').read_bytes())
     (OUT/'monitor-fixture.json').write_text(json.dumps({'steps':monitoring_fixture['steps'],'source':'FROZEN_SYNTHETIC_INPUTS_ONLY_NO_EXPECTED_OUTPUTS'}),encoding='utf8')
@@ -192,7 +197,7 @@ def main():
             raw=path.read_bytes()
             if len(raw)>25*1024*1024:raise ValueError('PAGES_ASSET_LIMIT '+str(path))
             relative=path.relative_to(OUT).as_posix()
-            optional=relative.startswith(('voice-assets/','embedding-runtime/','test-audio/')) or relative in ('vosk.js','webllm.js','parity-cases.json')
+            optional=relative.startswith(('voice-assets/','embedding-runtime/','test-audio/','motion-runtime/','test-motion/')) or relative in ('vosk.js','webllm.js','parity-cases.json')
             manifest.append({'path':relative,'size':len(raw),'sha256':sha(raw),'optional':optional})
     (OUT/'assets.json').write_text(json.dumps({'version':'asthral-browser-1','files':manifest},indent=2))
     service_worker=(ROOT/'web-local/src/sw.js').read_text(encoding='utf8').replace('__BUILD_ID__',sha((OUT/'assets.json').read_bytes())[:16]).replace('__ASSET_MANIFEST_SHA__',sha((OUT/'assets.json').read_bytes()))

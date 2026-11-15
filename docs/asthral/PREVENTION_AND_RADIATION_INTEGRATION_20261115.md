@@ -1,3 +1,5 @@
+> Update: the following historical inventory predates the versioned USDA energy-reference correction and CPU browser MotionGuard. Current scope and migration are in NUTRITION_REFERENCE_AUDIT_V2_20261115.md, MOTIONGUARD_BROWSER_20261115.md and INTEGRATION_REVIEW_20261115.md. The historical 329 energy-missing count refers to nutrient 1008 only.
+
 # ASTHRAL preventive tracking and radiation import (2026-11-15)
 
 ## Scope and safety

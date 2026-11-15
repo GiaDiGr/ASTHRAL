@@ -1,14 +1,14 @@
 {
   "status": "RECOGNITION_EXECUTED_REVIEW_MISMATCHES",
   "errors": [],
-  "public_offline_assets": "Offline resources verified: 70 files. Browser storage can be evicted; retain an encrypted backup. Reload this page, then test without connectivity.",
+  "public_offline_assets": "Offline resources verified: 73 files. Browser storage can be evicted; retain an encrypted backup. Reload this page, then test without connectivity.",
   "voice_status": "READY \u00b7 vosk-model-small-en-us-0.15 \u00b7 local WebAssembly speech recognition",
   "results": [
     {
       "id": "heart-rate",
       "expected": "record my heart rate as eighty two beats per minute right now",
       "actual": "record my heart rate as eighty two beats per minute right now",
-      "seconds": 1.664600000023842,
+      "seconds": 2.377599999964237,
       "exact_transcript": true,
       "structured_values_match": true,
       "parsed": {
@@ -31,7 +31,7 @@
       "id": "temperature",
       "expected": "record my temperature as thirty seven point two degrees celsius right now",
       "actual": "record my temperature as thirty seven point two degrees celsius right now",
-      "seconds": 1.5810999999642372,
+      "seconds": 2.279099999964237,
       "exact_transcript": true,
       "structured_values_match": true,
       "parsed": {
@@ -54,7 +54,7 @@
       "id": "blood-pressure",
       "expected": "record my blood pressure as one hundred twenty over eighty millimeters of mercury right now",
       "actual": "record my blood pressure as one hundred twenty over eighty millimeters of mercury right now",
-      "seconds": 1.6394000000357627,
+      "seconds": 2.3357000000476837,
       "exact_transcript": true,
       "structured_values_match": true,
       "parsed": {
@@ -79,7 +79,7 @@
       "id": "negation",
       "expected": "I have no chest pain",
       "actual": "i have no chest pain",
-      "seconds": 0.8229000000357628,
+      "seconds": 1.181,
       "exact_transcript": true,
       "structured_values_match": true,
       "parsed": {
@@ -93,7 +93,7 @@
       "id": "question",
       "expected": "Do I need to record my glucose",
       "actual": "do i need to record my glucose",
-      "seconds": 1.052900000035763,
+      "seconds": 1.513100000023842,
       "exact_transcript": true,
       "structured_values_match": true,
       "parsed": null,
@@ -104,7 +104,7 @@
       "id": "sleep",
       "expected": "record my sleep duration as seven hours in the past twenty four hours",
       "actual": "record my sleep duration a seven hours in the past twenty four hours",
-      "seconds": 1.4306999999880792,
+      "seconds": 2.071899999976158,
       "exact_transcript": false,
       "structured_values_match": false,
       "parsed": {

@@ -36,7 +36,7 @@ def test_usda_foundation_food_meal_estimate_uses_local_food_id_and_preserves_pro
     assert row["food_name"]=="Bananas, overripe, raw"
     assert row["nutrient_estimate"]["energy_kcal"]==127.5
     assert row["nutrient_estimate"]["protein_g"]==1.095
-    assert row["nutrition_reference"]["catalog_id"]=="USDA_FDC_FOUNDATION_FOODS_2026_10_ASTHRAL_COMPACT"
+    assert row["nutrition_reference"]["catalog_id"]=="USDA_FDC_FOUNDATION_FOODS_2026_10_ASTHRAL_COMPACT_V2"
     assert len(row["nutrition_reference"]["source_archive_sha256"])==64
     with pytest.raises(ValueError,match="UNKNOWN_USDA_FDC_FOOD_ID"):
         entry("MEAL_NOTE",food_id="not-in-catalog",quantity_g=100)
@@ -101,3 +101,71 @@ def test_out_of_range_or_empty_records_are_rejected():
     with pytest.raises(ValueError,match="REQUIRES_TIMEZONE"):entry("SLEEP",duration_minutes=360,occurred_at="2026-11-15T10:00")
     with pytest.raises(ValueError,match="UNSUPPORTED_PREVENTION_ENTRY"):
         entry([],duration_minutes=20)
+
+def pose_summary(**updates):
+    data={"model":{"runtime":"0.10.21","model_sha256":"59929e1d1ee95287735ddd833b19cf4ac46d29bc7afddbbf6753c459690d574a"},"source_sha256":"a"*64,"projection":"IMAGE_PLANE_2D","joint":"left_elbow","frames":10,"valid_angle_frames":8,"missing_angle_frames":2,"angle_min_degrees":50,"angle_max_degrees":160,"cycle_limits":{"low":70,"high":150},"cycles":None,"observed_complete_cycles":1,"analyzed_at":"2026-11-15T10:00:00Z"}
+    data.update(updates);return data
+
+
+def test_pose_summary_is_untrusted_and_never_converts_missing_tracking_to_zero():
+    row=prevention._pose_summary(pose_summary(runtime_execution_verified=True,sensor_verified=True,clinical_execution="AUTHORIZED"))
+    assert row["cycles"] is None and row["observed_complete_cycles"]==1
+    assert row["cycle_status"]=="PARTIAL_TRACKING" and row["runtime_execution_verified"] is False
+    assert row["sensor_verified"] is False and row["clinical_execution"]=="BLOCKED"
+    missing=prevention._pose_summary(pose_summary(valid_angle_frames=0,missing_angle_frames=10,angle_min_degrees=None,angle_max_degrees=None,observed_complete_cycles=None))
+    assert missing["cycle_status"]=="INSUFFICIENT_TRACKING" and missing["cycles"] is None
+    assert missing["source_recorded_at"] is None and missing["temporal_correspondence_verified"] is False
+
+
+@pytest.mark.parametrize("updates",[{"cycles":0},{"valid_angle_frames":9},{"observed_complete_cycles":5},{"source_sha256":"forged"},{"model":{"runtime":"0.10.21","model_sha256":"bad"}},{"angle_min_degrees":float('nan')},{"analyzed_at":"2026-11-15T10:00:00"}])
+def test_pose_summary_rejects_contradictory_or_invalid_claims(updates):
+    with pytest.raises(ValueError):prevention._pose_summary(pose_summary(**updates))
+
+def test_pose_summary_camera_does_not_invent_a_source_file_hash_or_recording_time():
+    result=prevention._pose_summary(pose_summary(source="USER_CAMERA_UNVERIFIED",source_sha256=None,capture_started_at="2026-11-15T10:00:00Z"))
+    assert result["source_kind"]=="USER_CAMERA_UNVERIFIED" and result["source_sha256"] is None
+    assert result["source_recorded_at"] is None and result["runtime_execution_verified"] is False
+    with pytest.raises(ValueError,match="CAMERA_SOURCE_FILE_HASH"):
+        prevention._pose_summary(pose_summary(source="USER_CAMERA_UNVERIFIED"))
+
+
+def test_motion_summary_is_attached_without_replacing_manual_activity_counts():
+    session={"session_id":"synthetic-motion-session","title":"Synthetic software test","workout_type":"RESISTANCE","status":"PAUSED","started_at":"2026-11-15T09:00:00Z","updated_at":"2026-11-15T10:00:00Z","elapsed_seconds":60,"activities":[{"exercise_id":"manual-example","sets_completed":2,"repetitions":8,"duration_seconds":60}],"motion_summary":pose_summary()}
+    result=entry("EXERCISE_SESSION",duration_minutes=1,training_session=session,synthetic_fixture=True)
+    assert result["training_session"]["activities"][0]["repetitions"]==8
+    assert result["training_session"]["motion_summary"]["cycles"] is None
+    assert result["training_session"]["motion_summary"]["source"]=="CLIENT_REPORTED_POSE_ESTIMATE"
+    assert result["clinical_execution"]=="BLOCKED" and result["synthetic_data"] is True
+
+def test_energy_reference_alternatives_are_named_source_values_not_imputed_energy():
+    legacy=entry("MEAL_NOTE",food_id="2262074",quantity_g=10)
+    assert legacy["nutrient_estimate"]["energy_kcal"] is None
+    assert legacy["energy_reference_estimates_kcal"]["ATWATER_GENERAL_2047"]==64.5
+    general=entry("MEAL_NOTE",food_id="2262074",quantity_g=10,energy_basis="ATWATER_GENERAL_2047")
+    specific=entry("MEAL_NOTE",food_id="2262074",quantity_g=10,energy_basis="ATWATER_SPECIFIC_2048")
+    assert general["nutrient_estimate"]["energy_kcal"]==64.5 and specific["nutrient_estimate"]["energy_kcal"]==60.3
+    assert general["nutrition_reference"]["energy_basis"]=="ATWATER_GENERAL_2047"
+    assert len(general["nutrition_reference"]["catalog_content_sha256"])==64
+    with pytest.raises(ValueError,match="INVALID_USDA_ENERGY_BASIS"):
+        entry("MEAL_NOTE",food_id="2262074",quantity_g=10,energy_basis="GUESS_FROM_MACROS")
+
+
+def test_original_food_catalog_remains_available_by_explicit_version():
+    row=entry("MEAL_NOTE",food_id="1105073",quantity_g=100,nutrition_catalog_id="USDA_FDC_FOUNDATION_FOODS_2026_10_ASTHRAL_COMPACT")
+    assert row["nutrient_estimate"]["energy_kcal"]==85
+    assert row["nutrition_reference"]["catalog_content_sha256"]=="a09e222154963247cbb4f24b0a643385a6f2c5fac26d4aa0956dab34d1d6ad17"
+
+
+def test_nutrition_builder_refuses_an_unpinned_source_archive(tmp_path):
+    import importlib.util
+    source=Path(__file__).resolve().parents[2]/"tools/build_nutrition_catalog.py"
+    spec=importlib.util.spec_from_file_location("nutrition_builder_test",source);module=importlib.util.module_from_spec(spec);spec.loader.exec_module(module)
+    fake=tmp_path/"unverified.zip";fake.write_bytes(b"not the official USDA archive")
+    with pytest.raises(ValueError,match="USDA_SOURCE_ARCHIVE_HASH_MISMATCH"):
+        module.build(fake,tmp_path/"foods.json")
+    assert not (tmp_path/"foods.json").exists()
+
+
+@pytest.mark.parametrize("field,error",[("nutrition_catalog_id","NUTRITION_CATALOG_VERSION_UNSUPPORTED"),("energy_basis","INVALID_USDA_ENERGY_BASIS")])
+def test_malformed_nutrition_reference_selector_is_a_validation_error(field,error):
+    with pytest.raises(ValueError,match=error):entry("MEAL_NOTE",food_id="1105073",quantity_g=100,**{field:[]})

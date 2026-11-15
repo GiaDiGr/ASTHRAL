@@ -1,6 +1,6 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
-import {EXERCISE_PLANS,sessionElapsed,pauseSession,resumeSession,sleepInterval,dailySeries,dailySumSeries,exerciseSummary,dailyMealTotals,validatePerceivedExertion} from '../src/exercise.js';
+import {EXERCISE_PLANS,sessionElapsed,pauseSession,resumeSession,sleepInterval,dailySeries,dailySumSeries,exerciseSummary,dailyMealTotals,validatePerceivedExertion,sleepClockSummary} from '../src/exercise.js';
 
 test('exercise catalog covers resistance, aerobic, mobility and coordination with useful safe instructions',()=>{
  assert.deepEqual(new Set(EXERCISE_PLANS.map(p=>p.workout_type)),new Set(['RESISTANCE','AEROBIC','MOBILITY','BALANCE']));
@@ -53,3 +53,21 @@ test('daily hydration totals aggregate entries and keep mixed data provenance vi
 
 test('perceived exertion is optional and bounded as a user self-report',()=>{assert.equal(validatePerceivedExertion(''),null);assert.equal(validatePerceivedExertion('0'),0);assert.equal(validatePerceivedExertion('10'),10);assert.throws(()=>validatePerceivedExertion('-1'));assert.throws(()=>validatePerceivedExertion('11'));assert.throws(()=>validatePerceivedExertion('2.5'));});
 
+
+
+test('daily history uses UTC calendar days across explicit offsets and never accepts invalid or naive times',()=>{
+ const rows=[{entry_type:'HYDRATION',occurred_at:'2026-11-16T00:30:00+14:00',amount_ml:100},{entry_type:'HYDRATION',occurred_at:'2026-11-15T12:00:00Z',amount_ml:200},{entry_type:'HYDRATION',occurred_at:'2026-11-15T12:00:00',amount_ml:999},{entry_type:'HYDRATION',occurred_at:'2026-02-31T12:00:00Z',amount_ml:999}];
+ const totals=dailySumSeries(rows,'HYDRATION',r=>r.amount_ml);assert.equal(totals.length,1);assert.equal(totals[0].date,'2026-11-15');assert.equal(totals[0].value,300);assert.equal(totals[0].entries,2);
+});
+test('UTC sleep clock spread handles midnight wrapping and undefined or insufficient samples',()=>{
+ const rows=[{entry_type:'SLEEP',sleep_start:'2026-11-14T23:55:00Z'},{entry_type:'SLEEP',sleep_start:'2026-11-16T00:05:00Z'},{entry_type:'SLEEP',sleep_start:null}];const result=sleepClockSummary(rows);assert.equal(result.eligible_start_times,2);assert.equal(result.missing_or_invalid_start_times,1);assert.ok(Math.abs(result.circular_std_minutes-5)<.01);assert.ok(result.mean_start_utc_minutes<.01||result.mean_start_utc_minutes>1439.99);assert.equal(result.medical_interpretation,'NOT_PROVIDED');
+ assert.equal(sleepClockSummary(rows.slice(0,1)).circular_std_minutes,null);assert.equal(sleepClockSummary([{entry_type:'SLEEP',sleep_start:'2026-11-15T00:00:00Z'},{entry_type:'SLEEP',sleep_start:'2026-11-15T12:00:00Z'}]).status,'NO_DEFINED_CIRCULAR_MEAN');
+});
+
+
+test('exercise checkpoint ordering compares instants across timezone offsets',()=>{
+ const row=(occurred_at,status)=>({occurred_at,training_session:{session_id:'offset-test',status,elapsed_seconds:60}});
+ const result=exerciseSummary([row('2026-11-15T11:00:00+03:00','IN_PROGRESS'),row('2026-11-15T08:30:00Z','COMPLETED'),row('2026-11-15T12:00:00','STOPPED')]);
+ assert.equal(result.completed,1);assert.equal(result.started,1);
+ assert.throws(()=>sleepInterval('2026-02-30T00:00:00Z','2026-03-02T01:00:00Z'));
+});

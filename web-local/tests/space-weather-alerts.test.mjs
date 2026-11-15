@@ -17,3 +17,16 @@ test('in-app notices deduplicate event updates, respect configured types, and ac
 test('invalid event notices are rejected and malformed local state degrades safely',()=>{
  const s=storage();assert.throws(()=>acknowledgeNotice({type:'URGENT',id:'x'},s),/invalid DONKI/);s.setItem('asthral.donki.notice-types.v1','not json');assert.deepEqual(loadNoticePreferences(s),[]);s.setItem('asthral.donki.notice-ack.v1','bad');assert.deepEqual(readNoticeAcks(s),[]);
 });
+
+test('changed public metadata needs a new acknowledgement and preserves older revision history',()=>{
+ const s=storage(),event={type:'CME',id:'cme-1',time:'2026-11-15T10:00:00Z',description:'Coronal mass ejection',parameters:['reported speed 500 km/s']};acknowledgeNotice(event,s,'2026-11-15T10:01:00Z');
+ const updated={...event,parameters:['reported speed 600 km/s']};const notice=noticeState([updated],['CME'],readNoticeAcks(s))[0];assert.equal(notice.state,'UPDATED_SINCE_ACK');assert.equal(notice.revision_state,'CHANGED');
+ acknowledgeNotice(updated,s,'2026-11-15T10:02:00Z');assert.equal(readNoticeAcks(s).length,2);assert.equal(noticeState([updated],['CME'],readNoticeAcks(s))[0].state,'ACKNOWLEDGED');
+});
+test('legacy acknowledgements remain in history and do not attest an unknown current revision',()=>{
+ const s=storage();s.setItem('asthral.donki.notice-ack.v1',JSON.stringify([{key:'FLR:flare-1',type:'FLR',id:'flare-1',acknowledged_at:'2026-11-15T10:05:00Z'}]));const notice=noticeState([events[1]],['FLR'],readNoticeAcks(s))[0];assert.equal(notice.state,'UPDATED_SINCE_ACK');assert.equal(notice.revision_state,'LEGACY_UNKNOWN');assert.equal(readNoticeAcks(s).length,1);
+});
+
+test('failed acknowledgement persistence never creates a stored current acknowledgement',()=>{
+ const s={getItem:()=>null,setItem:()=>{throw Error('quota');}};const result=acknowledgeNotice(events[1],s);assert.equal(result.stored,false);assert.equal(noticeState([events[1]],['FLR'],readNoticeAcks(s))[0].state,'UNACKNOWLEDGED');
+});

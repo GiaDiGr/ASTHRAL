@@ -571,8 +571,11 @@ $('model-install').onclick=safe(async()=>{
   $('model-details').textContent=entries.map(row=>row.id+' · '+row.license+' · revision '+row.source_revision+
     ' · estimated model VRAM '+row.vram_mb+' MiB').join('\n')+
     '\nThe 0.5B model completed desktop browser inference. The 4B download did not complete in this review. Physical-device acceptance is pending.\nDownload uses public licensed assets. Inference stays on this device. Peak browser memory and reliable physical-device support require measurement.';
-  $('model-load').disabled=!navigator.gpu;
-  $('model-status').textContent=navigator.gpu?'DOWNLOAD_REQUIRED · select a model and explicitly install':'UNSUPPORTED · WebGPU unavailable · local extractive fallback available';
+  let adapter=null;
+  if(navigator.gpu){try{adapter=await navigator.gpu.requestAdapter();}catch{adapter=null;}}
+  $('model-load').disabled=!adapter;
+  $('model-status').textContent=adapter?'DOWNLOAD_REQUIRED · select a model and explicitly install':'UNSUPPORTED · no WebGPU adapter available · local CPU retrieval and deterministic computation remain available';
+  if(!adapter)$('chat-model-status').textContent='Local text generation unavailable in this browser session: no WebGPU adapter. Verified references and the deterministic engine remain available.';
 });
 $('model-load').onclick=safe(async()=>{
   if(!vault) throw Error('Unlock a synthetic local profile first.');
@@ -627,7 +630,7 @@ $('embed-load').onclick=safe(async()=>{
   localEmbedding.ready=true;
   benchmarks.push({...initialized,index_chunks:vectors.length,index_seconds:(performance.now()-start)/1000});
   $('model-benchmark').textContent=JSON.stringify(benchmarks,null,2);
-  $('embedding-status').textContent='READY · '+vectors.length+' scientific vectors persisted locally';
+  $('embedding-status').textContent='READY · '+vectors.length+' verified source vectors persisted locally';
 });
 async function localRetrieve(question,limit=3) {
   const lexical=await call('search',{corpus,question,limit:localEmbedding?.ready?32:limit});

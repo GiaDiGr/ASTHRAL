@@ -1,3 +1,4 @@
+import {utcDay} from './time.js';
 export const EXERCISE_PLANS = Object.freeze([
   {id:'mobility-basics',title:'Mobility movement examples',workout_type:'MOBILITY',objective:'Practice controlled, comfortable range-of-motion movements.',precautions:'Generic educational examples only. Follow mission medical restrictions and stop if symptoms or pain occur. No individualized clearance or prescription is provided.',activities:[
     {id:'seated-shoulder-range',name:'Seated shoulder range',setup:'Sit with feet supported and shoulders relaxed.',instructions:'Slowly raise the arms only through a comfortable range, then return them to rest. Avoid forcing the end range.',phases:['Arms at rest, shoulders relaxed','Raise both arms within a comfortable range','Lower arms back to rest'],tracking:'Optional sets and repetitions; enter only what you actually completed.'},
@@ -41,27 +42,27 @@ export function validatePerceivedExertion(value){
 }
 
 export function sleepInterval(start,end){
-  if(typeof start!=='string'||typeof end!=='string'||!/(?:Z|[+-]\d{2}:\d{2})$/i.test(start)||!/(?:Z|[+-]\d{2}:\d{2})$/i.test(end))throw new Error('Sleep timestamps must include a timezone-qualified offset.');
+  if(utcDay(start)===null||utcDay(end)===null)throw new Error('Sleep timestamps must include a valid timezone-qualified offset.');
   const a=Date.parse(start),b=Date.parse(end);
   if(!Number.isFinite(a)||!Number.isFinite(b)||b<=a||b-a>24*60*60*1000)throw new Error('Sleep times must be valid, ordered, timezone-qualified, and no more than 24 hours apart.');
   return Math.round((b-a)/60000);
 }
 
 export function dailySeries(rows,entryType,selectValue){
-  return rows.filter(row=>row.entry_type===entryType&&selectValue(row)!==null&&selectValue(row)!==undefined)
-    .map(row=>({date:row.occurred_at.slice(0,10),value:selectValue(row),source:row.synthetic_data?'SYNTHETIC_FIXTURE':row.source}))
+  return rows.filter(row=>row.entry_type===entryType&&utcDay(row.occurred_at)!==null&&selectValue(row)!==null&&selectValue(row)!==undefined)
+    .map(row=>({date:utcDay(row.occurred_at),value:selectValue(row),source:row.synthetic_data?'SYNTHETIC_FIXTURE':row.source}))
     .sort((a,b)=>a.date.localeCompare(b.date));
 }
 
 export function dailySumSeries(rows,entryType,selectValue){
- const days=new Map();for(const row of rows.filter(x=>x.entry_type===entryType&&selectValue(x)!==null&&selectValue(x)!==undefined)){const date=row.occurred_at.slice(0,10),day=days.get(date)||{date,value:0,entries:0,synthetic_entries:0,self_reported_entries:0};day.value+=selectValue(row);day.entries++;if(row.synthetic_data)day.synthetic_entries++;else day.self_reported_entries++;days.set(date,day);}
+ const days=new Map();for(const row of rows.filter(x=>x.entry_type===entryType&&utcDay(x.occurred_at)!==null&&selectValue(x)!==null&&selectValue(x)!==undefined)){const date=utcDay(row.occurred_at),day=days.get(date)||{date,value:0,entries:0,synthetic_entries:0,self_reported_entries:0};day.value+=selectValue(row);day.entries++;if(row.synthetic_data)day.synthetic_entries++;else day.self_reported_entries++;days.set(date,day);}
  return [...days.values()].sort((a,b)=>a.date.localeCompare(b.date)).map(day=>({...day,value:Math.round(day.value*1000)/1000,source:day.synthetic_entries&&day.self_reported_entries?'MIXED_PROVENANCE':day.synthetic_entries?'SYNTHETIC_FIXTURE':'SELF_REPORTED'}));
 }
 
 export function exerciseSummary(rows){
   const byId=new Map();
-  for(const row of rows){const session=row.training_session;if(!session?.session_id)continue;const old=byId.get(session.session_id);if(!old||old.occurred_at<row.occurred_at)byId.set(session.session_id,row);}
-  const sessions=[...byId.values()].sort((a,b)=>a.occurred_at.localeCompare(b.occurred_at));
+  for(const row of rows){const session=row.training_session;if(!session?.session_id||utcDay(row.occurred_at)===null)continue;const old=byId.get(session.session_id);if(!old||Date.parse(old.occurred_at)<Date.parse(row.occurred_at))byId.set(session.session_id,row);}
+  const sessions=[...byId.values()].sort((a,b)=>Date.parse(a.occurred_at)-Date.parse(b.occurred_at));
   const completed=sessions.filter(row=>row.training_session.status==='COMPLETED');
   return {sessions,started:sessions.length,completed:completed.length,completion_rate:sessions.length?completed.length/sessions.length:null,
     completed_seconds:completed.reduce((sum,row)=>sum+(row.training_session.elapsed_seconds||0),0),
@@ -70,11 +71,22 @@ export function exerciseSummary(rows){
 
 export function dailyMealTotals(rows){
  const nutrients=['energy_kcal','protein_g','carbohydrate_g','fat_g','water_g'],days=new Map();
- for(const row of rows.filter(x=>x.entry_type==='MEAL_NOTE'&&x.food_id&&x.nutrient_estimate)){
-  const date=row.occurred_at.slice(0,10);let day=days.get(date);if(!day){day={date,entries:0,synthetic_entries:0,self_reported_entries:0,nutrients:Object.fromEntries(nutrients.map(key=>[key,{known_sum:0,known_entries:0,missing_entries:0}]))};days.set(date,day);}day.entries++;if(row.synthetic_data)day.synthetic_entries++;else day.self_reported_entries++;
+ for(const row of rows.filter(x=>x.entry_type==='MEAL_NOTE'&&utcDay(x.occurred_at)!==null&&x.food_id&&x.nutrient_estimate)){
+  const date=utcDay(row.occurred_at);let day=days.get(date);if(!day){day={date,entries:0,synthetic_entries:0,self_reported_entries:0,nutrients:Object.fromEntries(nutrients.map(key=>[key,{known_sum:0,known_entries:0,missing_entries:0}]))};days.set(date,day);}day.entries++;if(row.synthetic_data)day.synthetic_entries++;else day.self_reported_entries++;
   for(const key of nutrients){const value=row.nutrient_estimate[key],item=day.nutrients[key];if(value===null||value===undefined)item.missing_entries++;else{item.known_sum+=value;item.known_entries++;}}
  }
  return [...days.values()].sort((a,b)=>a.date.localeCompare(b.date)).map(day=>({
   ...day,source:day.synthetic_entries&&day.self_reported_entries?'MIXED_PROVENANCE':day.synthetic_entries?'SYNTHETIC_FIXTURE':'SELF_REPORTED',nutrients:Object.fromEntries(Object.entries(day.nutrients).map(([key,item])=>[key,{...item,complete_estimated_total:item.missing_entries===0?Math.round(item.known_sum*1000)/1000:null}]))
  }));
+}
+
+export function sleepClockSummary(rows){
+ const sleeps=rows.filter(x=>x.entry_type==='SLEEP');
+ const starts=sleeps.filter(x=>utcDay(x.sleep_start)!==null).map(x=>{const d=new Date(x.sleep_start);return d.getUTCHours()*60+d.getUTCMinutes()+d.getUTCSeconds()/60;});
+ const base={clock:'UTC',logged_intervals:sleeps.length,eligible_start_times:starts.length,missing_or_invalid_start_times:sleeps.length-starts.length,mean_start_utc_minutes:null,circular_std_minutes:null,medical_interpretation:'NOT_PROVIDED'};
+ if(starts.length<2)return {...base,status:'INSUFFICIENT_DATA'};
+ const angles=starts.map(x=>x*2*Math.PI/1440),x=angles.reduce((a,b)=>a+Math.cos(b),0)/angles.length,y=angles.reduce((a,b)=>a+Math.sin(b),0)/angles.length,r=Math.min(1,Math.hypot(x,y));
+ if(r<1e-12)return {...base,status:'NO_DEFINED_CIRCULAR_MEAN'};
+ const mean=((Math.atan2(y,x)*1440/(2*Math.PI))%1440+1440)%1440;
+ return {...base,status:'DESCRIPTIVE_UTC_CLOCK_ONLY',mean_start_utc_minutes:mean,circular_std_minutes:Math.sqrt(-2*Math.log(r))*1440/(2*Math.PI)};
 }

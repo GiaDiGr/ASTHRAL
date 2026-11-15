@@ -1,0 +1,6 @@
+{
+  "status": "FAILED",
+  "errors": [],
+  "fixtures": [],
+  "failure": "Locator.wait_for: Timeout 90000ms exceeded.\nCall log:\n  - waiting for locator(\"#motionguard\").get_by_text(\"Analysis completed.\") to be visible\n"
+}

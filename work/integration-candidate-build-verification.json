@@ -1,0 +1,10 @@
+{
+  "manifest_assets": 104,
+  "manifest_bytes": 140660076,
+  "all_asset_hashes_and_sizes_match": true,
+  "source_assets_match": true,
+  "both_nutrition_catalogs_packaged": true,
+  "python_caches_excluded": true,
+  "mediapipe_license_bundled": true,
+  "assets_manifest_sha256": "d1b9f710cc199d9f0ecf7cce286a872304ac7f30e6fcf8d801dded44cbc3f644"
+}

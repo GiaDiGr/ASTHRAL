@@ -1,3 +1,5 @@
+> Update: the following historical inventory predates the versioned USDA energy-reference correction and CPU browser MotionGuard. Current scope and migration are in NUTRITION_REFERENCE_AUDIT_V2_20261115.md, MOTIONGUARD_BROWSER_20261115.md and INTEGRATION_REVIEW_20261115.md. The historical 329 energy-missing count refers to nutrient 1008 only.
+
 > Startup update: see [BLOCKER_RESOLUTION_20261115.md](BLOCKER_RESOLUTION_20261115.md) for the HTTP/1.1 correction, repeated successful Chromium runs, MIME correction, CPU embeddings and real Vosk tests. Failed runs below remain historical evidence.
 
 # ASTHRAL final integration checklist — 2026-11-15
