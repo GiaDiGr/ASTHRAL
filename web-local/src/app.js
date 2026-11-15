@@ -1,3 +1,4 @@
+import {loadPublicJson} from './public-json.js';
 import {Vault} from './vault.js';
 import {initialClinicalInput} from './profile-input.js';
 import {installOffline} from './offline-install.js';
@@ -80,8 +81,9 @@ function safe(action) {
 startWorker();
 async function resources() {
   if(cases.length) return;
-  cases=await (await fetch('./demo-scenarios.json')).json();
-  corpus=await (await fetch('./corpus.json')).json();
+  const nextCases=await loadPublicJson('./demo-scenarios.json');
+  const nextCorpus=await loadPublicJson('./corpus.json');
+  cases=nextCases;corpus=nextCorpus;
   $('case-list').replaceChildren(...cases.map((row,index)=>{
     const option=element('option',row.id+' · '+(row.snapshot.request.condition_id||'Differential'));
     option.value=String(index);

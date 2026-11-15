@@ -42,3 +42,7 @@ The raw SQLite database remains in memory; persistent browser profiles use AES-2
 FULL enables explicit optional models. LOW_POWER/CRITICAL release costly workers and retain deterministic computation and lexical retrieval. These controls do not certify energy/thermal behavior or physical-device model support. Storage includes pinned app assets plus optional model/cache copies and resumable chunks; download size is not total disk/RAM use. A failed optional component must leave the core usable. Do not delete encrypted profiles to repair a public cache.
 
 Read IMPLEMENTATION_STATUS_20261114.md and OFFLINE_INSTALL_AUDIT.md for actual test scopes, observed failures and physical-device acceptance. Software parity and synthetic speech tests do not provide independent clinical or operational validation.
+
+## Reviewed radiation import and local exports
+
+`radiation_preview` accepts the same records as `radiation_import` and returns `{records,count,persisted:false,audit_valid}` after the same normalization/ownership/duplicate checks, without database or audit mutation. Preview IDs are provisional. Commit revalidates against current state and assigns final IDs. No preview token bypasses validation. The UI limits visible preview rows to 10 and requires a separate commit action. Radiation charts keep quantity, unit, mode, quality, instrument, segment and location separate; they do not interpolate intervals or calculate dose. User-initiated history exports are plaintext JSON outside the encrypted vault.

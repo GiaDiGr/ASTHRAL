@@ -1,0 +1,20 @@
+{
+  "status": "FAILED",
+  "page_errors": [
+    "TypeError: Failed to fetch"
+  ],
+  "console_errors": [
+    "Failed to load resource: the server responded with a status of 404 (File not found)"
+  ],
+  "request_failures": [
+    {
+      "url": "http://127.0.0.1:8921/runtime/pyodide-lock.json",
+      "failure": "net::ERR_CONNECTION_RESET"
+    }
+  ],
+  "checks": [
+    "Login rendered"
+  ],
+  "runtime_status": "Local runtime failed. TypeError: Failed to fetch",
+  "failure": "Local runtime failed. TypeError: Failed to fetch"
+}

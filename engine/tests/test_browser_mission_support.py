@@ -77,3 +77,13 @@ def test_new_records_are_rejected_when_restored_under_another_owner():
     serialized=bridge.dispatch('serialize',{})
     with pytest.raises(ValueError,match='PRIVATE_RECORD_SCOPE_MISMATCH'):
         bridge.dispatch('init_profile',{'id':'different-owner','database':serialized})
+
+def test_radiation_preview_validates_without_persistence_and_commit_rechecks_duplicates():
+    raw={'quantity_kind':'ABSORBED_DOSE_RATE','value':1,'unit':'uGy/h','timestamp':'2026-11-15T10:00:00Z','mode':'SYNTHETIC','quality':'UNKNOWN','mission_segment':'demo','location':'fixture','source':'synthetic-fixture'}
+    before=bridge.dispatch('serialize',{})
+    preview=bridge.dispatch('radiation_preview',{'records':[raw]})
+    assert preview['count']==1 and preview['persisted'] is False
+    assert bridge.dispatch('serialize',{})==before
+    bridge.dispatch('radiation_import',{'records':[raw]})
+    with pytest.raises(ValueError,match='RADIATION_IMPORT_DUPLICATE_ROW_1'):
+        bridge.dispatch('radiation_preview',{'records':[raw]})

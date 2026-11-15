@@ -225,7 +225,7 @@ def dispatch(action, data):
         record['id']='radiation-'+uuid4().hex;record['source_kind']='SELF_ENTERED_RECORD';record['synthetic_data']=record['mode']=='SYNTHETIC'
         store.put('radiation_record',record['id'],record,'local_profile')
         return record
-    if action == 'radiation_import':
+    if action in {'radiation_preview','radiation_import'}:
         from vigile.dosimetry import normalize_record
         rows=data.get('records')
         if not isinstance(rows,list) or not 1<=len(rows)<=10000:raise ValueError('RADIATION_IMPORT_RECORD_COUNT')
@@ -238,6 +238,8 @@ def dispatch(action, data):
             key=marker(record)
             if key in seen:raise ValueError(f'RADIATION_IMPORT_DUPLICATE_ROW_{index}')
             seen.add(key);record['id']='radiation-'+uuid4().hex;record['source_kind']='FILE_IMPORT';record['synthetic_data']=record['mode']=='SYNTHETIC';normalized.append(record)
+        if action == 'radiation_preview':
+            return {'records':normalized,'count':len(normalized),'persisted':False,'audit_valid':store.verify()}
         store.put_many([('radiation_record',row['id'],row) for row in normalized],'local_profile')
         return {'records':normalized,'count':len(normalized),'atomic':True,'audit_valid':store.verify()}
     if action == 'radiation_list':

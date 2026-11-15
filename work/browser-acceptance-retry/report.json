@@ -1,0 +1,23 @@
+{
+  "status": "FAILED",
+  "page_errors": [],
+  "console_errors": [
+    "Failed to load resource: the server responded with a status of 404 (File not found)",
+    "Failed to load resource: net::ERR_CONNECTION_RESET"
+  ],
+  "request_failures": [
+    {
+      "url": "http://127.0.0.1:8920/runtime/pydantic-2.12.5-py3-none-any.whl",
+      "failure": "net::ERR_CONNECTION_RESET"
+    },
+    {
+      "url": "http://127.0.0.1:8920/corpus.json",
+      "failure": "net::ERR_CONNECTION_RESET"
+    }
+  ],
+  "checks": [
+    "Login rendered"
+  ],
+  "runtime_status": "Reference Python engine ready on this device \u00b7 22.99 seconds",
+  "failure": "Locator.wait_for: Timeout 30000ms exceeded.\nCall log:\n  - waiting for locator(\"#workspace\") to be visible\n    63 \u00d7 locator resolved to hidden <section hidden=\"\" id=\"workspace\">\u2026</section>\n"
+}

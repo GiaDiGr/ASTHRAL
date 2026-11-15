@@ -1,0 +1,24 @@
+{
+  "status": "FAILED",
+  "page_errors": [
+    "TypeError: Failed to fetch"
+  ],
+  "console_errors": [
+    "Failed to load resource: the server responded with a status of 404 (File not found)"
+  ],
+  "request_failures": [
+    {
+      "url": "http://127.0.0.1:8922/runtime/pydantic-2.12.5-py3-none-any.whl",
+      "failure": "net::ERR_CONNECTION_RESET"
+    },
+    {
+      "url": "http://127.0.0.1:8922/engine.zip",
+      "failure": "net::ERR_CONNECTION_RESET"
+    }
+  ],
+  "checks": [
+    "Login rendered"
+  ],
+  "runtime_status": "Local runtime failed. TypeError: Failed to fetch",
+  "failure": "Local runtime failed. TypeError: Failed to fetch"
+}

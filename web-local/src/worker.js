@@ -4,7 +4,14 @@ let runtime;
 const started=performance.now();
 const ready=(async()=>{
  runtime=await loadPyodide({indexURL:new URL('./runtime/',self.location.href).href});
- await runtime.loadPackage(['pydantic','sqlite3']);
+ // loadPackage may resolve even when a package download failed. Confirm imports
+ // and retry transient transport failures twice before blocking the engine.
+ let dependenciesReady=false,lastDependencyError;
+ for(let attempt=0;attempt<3;attempt++){
+  try{await runtime.loadPackage(['pydantic','sqlite3']);runtime.runPython('import pydantic, sqlite3');dependenciesReady=true;break;}
+  catch(error){lastDependencyError=error;}
+ }
+ if(!dependenciesReady)throw Error('LOCAL_DEPENDENCY_LOAD_FAILED: '+String(lastDependencyError));
  const data=await (await fetch('./engine.zip')).arrayBuffer();
  runtime.unpackArchive(new Uint8Array(data),'zip',{extractDir:'/app'});
  await runtime.runPythonAsync("import sys\nsys.path.insert(0,'/app')\nimport browser_bridge, json");
