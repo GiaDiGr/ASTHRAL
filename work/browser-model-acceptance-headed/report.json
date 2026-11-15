@@ -1,0 +1,9 @@
+{
+  "status": "NOT_COMPLETED",
+  "errors": [],
+  "gpu": {
+    "available": false,
+    "features": []
+  },
+  "failure": "WebGPU adapter unavailable under ordinary Chromium launch"
+}

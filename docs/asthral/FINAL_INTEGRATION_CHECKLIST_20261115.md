@@ -1,3 +1,5 @@
+> Startup update: see [BLOCKER_RESOLUTION_20261115.md](BLOCKER_RESOLUTION_20261115.md) for the HTTP/1.1 correction, repeated successful Chromium runs, MIME correction, CPU embeddings and real Vosk tests. Failed runs below remain historical evidence.
+
 # ASTHRAL final integration checklist — 2026-11-15
 
 Branch: `feature/asthral-autonomous-mission`; continuation from `d543cd8846c7a669a014b1c9e25ee07435a02ba8`. No production publication or merge into main. This checklist supersedes any previous implication that browser access itself is unavailable: the current directive authorizes isolated local Playwright execution and it was actually executed.

@@ -1,0 +1,34 @@
+[
+  {
+    "close": false,
+    "bytes": 444629,
+    "status": 200,
+    "sha": "16c95f5a95f8f9567d9eca870afe560e3522cddb94a872691c093e1819567a36"
+  },
+  {
+    "close": false,
+    "bytes": 444629,
+    "status": 200,
+    "sha": "16c95f5a95f8f9567d9eca870afe560e3522cddb94a872691c093e1819567a36"
+  },
+  {
+    "close": false,
+    "bytes": 444629,
+    "status": 200,
+    "sha": "16c95f5a95f8f9567d9eca870afe560e3522cddb94a872691c093e1819567a36"
+  },
+  {
+    "close": true,
+    "error": "TimeoutError('timed out')"
+  },
+  {
+    "close": true,
+    "bytes": 444629,
+    "status": 200,
+    "sha": "16c95f5a95f8f9567d9eca870afe560e3522cddb94a872691c093e1819567a36"
+  },
+  {
+    "close": true,
+    "error": "TimeoutError('timed out')"
+  }
+]

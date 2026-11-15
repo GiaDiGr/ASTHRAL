@@ -1,0 +1,118 @@
+{
+  "status": "RECOGNITION_EXECUTED_REVIEW_MISMATCHES",
+  "errors": [],
+  "public_offline_assets": "Offline resources verified: 70 files. Browser storage can be evicted; retain an encrypted backup. Reload this page, then test without connectivity.",
+  "voice_status": "READY \u00b7 vosk-model-small-en-us-0.15 \u00b7 local WebAssembly speech recognition",
+  "results": [
+    {
+      "id": "heart-rate",
+      "expected": "record my heart rate as eighty two beats per minute right now",
+      "actual": "record my heart rate as eighty two beats per minute right now",
+      "seconds": 1.664600000023842,
+      "exact_transcript": true,
+      "structured_values_match": true,
+      "parsed": {
+        "kind": "heart_rate",
+        "structured": true,
+        "values": [
+          82
+        ],
+        "unit": "beats/min",
+        "reported": [
+          "eighty two"
+        ],
+        "time_reference": "AT_RECORDING",
+        "explicit": true
+      },
+      "finalization": "EXPLICIT_WORKER_FINAL_RESULT",
+      "record_saved": false
+    },
+    {
+      "id": "temperature",
+      "expected": "record my temperature as thirty seven point two degrees celsius right now",
+      "actual": "record my temperature as thirty seven point two degrees celsius right now",
+      "seconds": 1.5810999999642372,
+      "exact_transcript": true,
+      "structured_values_match": true,
+      "parsed": {
+        "kind": "temperature",
+        "structured": true,
+        "values": [
+          37.2
+        ],
+        "unit": "Cel",
+        "reported": [
+          "thirty seven point two"
+        ],
+        "time_reference": "AT_RECORDING",
+        "explicit": true
+      },
+      "finalization": "EXPLICIT_WORKER_FINAL_RESULT",
+      "record_saved": false
+    },
+    {
+      "id": "blood-pressure",
+      "expected": "record my blood pressure as one hundred twenty over eighty millimeters of mercury right now",
+      "actual": "record my blood pressure as one hundred twenty over eighty millimeters of mercury right now",
+      "seconds": 1.6394000000357627,
+      "exact_transcript": true,
+      "structured_values_match": true,
+      "parsed": {
+        "kind": "blood_pressure",
+        "structured": true,
+        "values": [
+          120,
+          80
+        ],
+        "unit": "mmHg",
+        "reported": [
+          "one hundred twenty",
+          "eighty"
+        ],
+        "time_reference": "AT_RECORDING",
+        "explicit": true
+      },
+      "finalization": "EXPLICIT_WORKER_FINAL_RESULT",
+      "record_saved": false
+    },
+    {
+      "id": "negation",
+      "expected": "I have no chest pain",
+      "actual": "i have no chest pain",
+      "seconds": 0.8229000000357628,
+      "exact_transcript": true,
+      "structured_values_match": true,
+      "parsed": {
+        "kind": "symptom",
+        "structured": false
+      },
+      "finalization": "EXPLICIT_WORKER_FINAL_RESULT",
+      "record_saved": false
+    },
+    {
+      "id": "question",
+      "expected": "Do I need to record my glucose",
+      "actual": "do i need to record my glucose",
+      "seconds": 1.052900000035763,
+      "exact_transcript": true,
+      "structured_values_match": true,
+      "parsed": null,
+      "finalization": "EXPLICIT_WORKER_FINAL_RESULT",
+      "record_saved": false
+    },
+    {
+      "id": "sleep",
+      "expected": "record my sleep duration as seven hours in the past twenty four hours",
+      "actual": "record my sleep duration a seven hours in the past twenty four hours",
+      "seconds": 1.4306999999880792,
+      "exact_transcript": false,
+      "structured_values_match": false,
+      "parsed": {
+        "kind": "unresolved",
+        "structured": false
+      },
+      "finalization": "EXPLICIT_WORKER_FINAL_RESULT",
+      "record_saved": false
+    }
+  ]
+}

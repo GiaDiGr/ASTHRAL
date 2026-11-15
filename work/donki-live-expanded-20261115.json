@@ -1,0 +1,42 @@
+[
+  {
+    "type": "CME",
+    "url": "https://ccmc.gsfc.nasa.gov/DONKI-API/get/CME?startDate=2026-11-08&endDate=2026-11-15",
+    "status": 200,
+    "records": 21,
+    "json_type": "list",
+    "seconds": 0.7048537000082433
+  },
+  {
+    "type": "GST",
+    "url": "https://ccmc.gsfc.nasa.gov/DONKI-API/get/GST?startDate=2026-11-08&endDate=2026-11-15",
+    "status": 200,
+    "records": 0,
+    "json_type": "list",
+    "seconds": 0.4750293000251986
+  },
+  {
+    "type": "IPS",
+    "url": "https://ccmc.gsfc.nasa.gov/DONKI-API/get/IPS?startDate=2026-11-08&endDate=2026-11-15",
+    "status": 200,
+    "records": 0,
+    "json_type": "list",
+    "seconds": 0.48779410001588985
+  },
+  {
+    "type": "SEP",
+    "url": "https://ccmc.gsfc.nasa.gov/DONKI-API/get/SEP?startDate=2026-11-08&endDate=2026-11-15",
+    "status": 200,
+    "records": 0,
+    "json_type": "list",
+    "seconds": 0.4506626999936998
+  },
+  {
+    "type": "FLR",
+    "url": "https://ccmc.gsfc.nasa.gov/DONKI-API/get/FLR?startDate=2026-11-08&endDate=2026-11-15",
+    "status": 200,
+    "records": 5,
+    "json_type": "list",
+    "seconds": 0.4550100999767892
+  }
+]

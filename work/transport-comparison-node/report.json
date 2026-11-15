@@ -1,0 +1,653 @@
+{
+  "http_sequential": [
+    {
+      "path": "runtime/pydantic-2.12.5-py3-none-any.whl",
+      "error": "TimeoutError('timed out')",
+      "seconds": 15.099924699985422
+    },
+    {
+      "path": "runtime/pydantic-2.12.5-py3-none-any.whl",
+      "status": 200,
+      "headers": {
+        "Content-Length": "463580",
+        "Content-Type": "application/octet-stream",
+        "X-Content-Type-Options": "nosniff",
+        "Date": "Sun, 15 Nov 2026 13:08:44 GMT",
+        "Connection": "close"
+      },
+      "bytes": 463580,
+      "hash_match": true,
+      "seconds": 0.10804850002750754
+    },
+    {
+      "path": "runtime/pydantic-2.12.5-py3-none-any.whl",
+      "error": "TimeoutError('timed out')",
+      "seconds": 15.037477599980775
+    },
+    {
+      "path": "runtime/sqlite3-1.0.0-cp313-cp313-pyodide_2025_0_wasm32.whl",
+      "error": "TimeoutError('timed out')",
+      "seconds": 15.071552899957169
+    },
+    {
+      "path": "runtime/sqlite3-1.0.0-cp313-cp313-pyodide_2025_0_wasm32.whl",
+      "status": 200,
+      "headers": {
+        "Content-Length": "566301",
+        "Content-Type": "application/octet-stream",
+        "X-Content-Type-Options": "nosniff",
+        "Date": "Sun, 15 Nov 2026 13:09:14 GMT",
+        "Connection": "close"
+      },
+      "bytes": 566301,
+      "hash_match": true,
+      "seconds": 0.04514430003473535
+    },
+    {
+      "path": "runtime/sqlite3-1.0.0-cp313-cp313-pyodide_2025_0_wasm32.whl",
+      "error": "TimeoutError('timed out')",
+      "seconds": 15.073887300037313
+    },
+    {
+      "path": "runtime/pyodide-lock.json",
+      "status": 200,
+      "headers": {
+        "Content-Length": "120010",
+        "Content-Type": "application/json",
+        "X-Content-Type-Options": "nosniff",
+        "Date": "Sun, 15 Nov 2026 13:09:30 GMT",
+        "Connection": "close"
+      },
+      "bytes": 120010,
+      "hash_match": true,
+      "seconds": 0.035737199999857694
+    },
+    {
+      "path": "runtime/pyodide-lock.json",
+      "status": 200,
+      "headers": {
+        "Content-Length": "120010",
+        "Content-Type": "application/json",
+        "X-Content-Type-Options": "nosniff",
+        "Date": "Sun, 15 Nov 2026 13:09:30 GMT",
+        "Connection": "close"
+      },
+      "bytes": 120010,
+      "hash_match": true,
+      "seconds": 0.044778000039514154
+    },
+    {
+      "path": "runtime/pyodide-lock.json",
+      "error": "TimeoutError('timed out')",
+      "seconds": 15.067678899969906
+    },
+    {
+      "path": "engine.zip",
+      "status": 200,
+      "headers": {
+        "Content-Length": "444629",
+        "Content-Type": "application/octet-stream",
+        "X-Content-Type-Options": "nosniff",
+        "Date": "Sun, 15 Nov 2026 13:09:45 GMT",
+        "Connection": "close"
+      },
+      "bytes": 444629,
+      "hash_match": true,
+      "seconds": 0.10819509997963905
+    },
+    {
+      "path": "engine.zip",
+      "error": "TimeoutError('timed out')",
+      "seconds": 15.052295300003607
+    },
+    {
+      "path": "engine.zip",
+      "error": "TimeoutError('timed out')",
+      "seconds": 15.035350499965716
+    },
+    {
+      "path": "corpus.json",
+      "status": 200,
+      "headers": {
+        "Content-Length": "457316",
+        "Content-Type": "application/json",
+        "X-Content-Type-Options": "nosniff",
+        "Date": "Sun, 15 Nov 2026 13:10:15 GMT",
+        "Connection": "close"
+      },
+      "bytes": 457316,
+      "hash_match": true,
+      "seconds": 0.0646223000367172
+    },
+    {
+      "path": "corpus.json",
+      "status": 200,
+      "headers": {
+        "Content-Length": "457316",
+        "Content-Type": "application/json",
+        "X-Content-Type-Options": "nosniff",
+        "Date": "Sun, 15 Nov 2026 13:10:15 GMT",
+        "Connection": "close"
+      },
+      "bytes": 457316,
+      "hash_match": true,
+      "seconds": 0.0349232999724336
+    },
+    {
+      "path": "corpus.json",
+      "status": 200,
+      "headers": {
+        "Content-Length": "457316",
+        "Content-Type": "application/json",
+        "X-Content-Type-Options": "nosniff",
+        "Date": "Sun, 15 Nov 2026 13:10:15 GMT",
+        "Connection": "close"
+      },
+      "bytes": 457316,
+      "hash_match": true,
+      "seconds": 0.03661789995385334
+    }
+  ],
+  "http_concurrent": [
+    {
+      "path": "runtime/pydantic-2.12.5-py3-none-any.whl",
+      "error": "TimeoutError('timed out')",
+      "seconds": 15.07540600001812
+    },
+    {
+      "path": "runtime/sqlite3-1.0.0-cp313-cp313-pyodide_2025_0_wasm32.whl",
+      "error": "TimeoutError('timed out')",
+      "seconds": 15.045199299987871
+    },
+    {
+      "path": "runtime/pyodide-lock.json",
+      "status": 200,
+      "headers": {
+        "Content-Length": "120010",
+        "Content-Type": "application/json",
+        "X-Content-Type-Options": "nosniff",
+        "Date": "Sun, 15 Nov 2026 13:10:15 GMT",
+        "Connection": "close"
+      },
+      "bytes": 120010,
+      "hash_match": true,
+      "seconds": 0.025288999953772873
+    },
+    {
+      "path": "engine.zip",
+      "status": 200,
+      "headers": {
+        "Content-Length": "444629",
+        "Content-Type": "application/octet-stream",
+        "X-Content-Type-Options": "nosniff",
+        "Date": "Sun, 15 Nov 2026 13:10:15 GMT",
+        "Connection": "close"
+      },
+      "bytes": 444629,
+      "hash_match": true,
+      "seconds": 0.29245830001309514
+    },
+    {
+      "path": "corpus.json",
+      "status": 200,
+      "headers": {
+        "Content-Length": "457316",
+        "Content-Type": "application/json",
+        "X-Content-Type-Options": "nosniff",
+        "Date": "Sun, 15 Nov 2026 13:10:15 GMT",
+        "Connection": "close"
+      },
+      "bytes": 457316,
+      "hash_match": true,
+      "seconds": 0.06444139999803156
+    },
+    {
+      "path": "runtime/pydantic-2.12.5-py3-none-any.whl",
+      "status": 200,
+      "headers": {
+        "Content-Length": "463580",
+        "Content-Type": "application/octet-stream",
+        "X-Content-Type-Options": "nosniff",
+        "Date": "Sun, 15 Nov 2026 13:10:15 GMT",
+        "Connection": "close"
+      },
+      "bytes": 463580,
+      "hash_match": true,
+      "seconds": 0.30026759998872876
+    },
+    {
+      "path": "runtime/sqlite3-1.0.0-cp313-cp313-pyodide_2025_0_wasm32.whl",
+      "status": 200,
+      "headers": {
+        "Content-Length": "566301",
+        "Content-Type": "application/octet-stream",
+        "X-Content-Type-Options": "nosniff",
+        "Date": "Sun, 15 Nov 2026 13:10:15 GMT",
+        "Connection": "close"
+      },
+      "bytes": 566301,
+      "hash_match": true,
+      "seconds": 0.07891429995652288
+    },
+    {
+      "path": "runtime/pyodide-lock.json",
+      "status": 200,
+      "headers": {
+        "Content-Length": "120010",
+        "Content-Type": "application/json",
+        "X-Content-Type-Options": "nosniff",
+        "Date": "Sun, 15 Nov 2026 13:10:15 GMT",
+        "Connection": "close"
+      },
+      "bytes": 120010,
+      "hash_match": true,
+      "seconds": 0.037205400003585964
+    },
+    {
+      "path": "engine.zip",
+      "error": "TimeoutError('timed out')",
+      "seconds": 15.055577100021765
+    },
+    {
+      "path": "corpus.json",
+      "status": 200,
+      "headers": {
+        "Content-Length": "457316",
+        "Content-Type": "application/json",
+        "X-Content-Type-Options": "nosniff",
+        "Date": "Sun, 15 Nov 2026 13:10:15 GMT",
+        "Connection": "close"
+      },
+      "bytes": 457316,
+      "hash_match": true,
+      "seconds": 0.04815240000607446
+    },
+    {
+      "path": "runtime/pydantic-2.12.5-py3-none-any.whl",
+      "status": 200,
+      "headers": {
+        "Content-Length": "463580",
+        "Content-Type": "application/octet-stream",
+        "X-Content-Type-Options": "nosniff",
+        "Date": "Sun, 15 Nov 2026 13:10:15 GMT",
+        "Connection": "close"
+      },
+      "bytes": 463580,
+      "hash_match": true,
+      "seconds": 0.289303999976255
+    },
+    {
+      "path": "runtime/sqlite3-1.0.0-cp313-cp313-pyodide_2025_0_wasm32.whl",
+      "status": 200,
+      "headers": {
+        "Content-Length": "566301",
+        "Content-Type": "application/octet-stream",
+        "X-Content-Type-Options": "nosniff",
+        "Date": "Sun, 15 Nov 2026 13:10:15 GMT",
+        "Connection": "close"
+      },
+      "bytes": 566301,
+      "hash_match": true,
+      "seconds": 0.06479979999130592
+    },
+    {
+      "path": "runtime/pyodide-lock.json",
+      "status": 200,
+      "headers": {
+        "Content-Length": "120010",
+        "Content-Type": "application/json",
+        "X-Content-Type-Options": "nosniff",
+        "Date": "Sun, 15 Nov 2026 13:10:15 GMT",
+        "Connection": "close"
+      },
+      "bytes": 120010,
+      "hash_match": true,
+      "seconds": 0.03788190003251657
+    },
+    {
+      "path": "engine.zip",
+      "status": 200,
+      "headers": {
+        "Content-Length": "444629",
+        "Content-Type": "application/octet-stream",
+        "X-Content-Type-Options": "nosniff",
+        "Date": "Sun, 15 Nov 2026 13:10:15 GMT",
+        "Connection": "close"
+      },
+      "bytes": 444629,
+      "hash_match": true,
+      "seconds": 0.293083900003694
+    },
+    {
+      "path": "corpus.json",
+      "status": 200,
+      "headers": {
+        "Content-Length": "457316",
+        "Content-Type": "application/json",
+        "X-Content-Type-Options": "nosniff",
+        "Date": "Sun, 15 Nov 2026 13:10:15 GMT",
+        "Connection": "close"
+      },
+      "bytes": 457316,
+      "hash_match": true,
+      "seconds": 0.055436299997381866
+    },
+    {
+      "path": "runtime/pydantic-2.12.5-py3-none-any.whl",
+      "error": "TimeoutError('timed out')",
+      "seconds": 15.041756500024348
+    },
+    {
+      "path": "runtime/sqlite3-1.0.0-cp313-cp313-pyodide_2025_0_wasm32.whl",
+      "status": 200,
+      "headers": {
+        "Content-Length": "566301",
+        "Content-Type": "application/octet-stream",
+        "X-Content-Type-Options": "nosniff",
+        "Date": "Sun, 15 Nov 2026 13:10:15 GMT",
+        "Connection": "close"
+      },
+      "bytes": 566301,
+      "hash_match": true,
+      "seconds": 0.0821342000272125
+    },
+    {
+      "path": "runtime/pyodide-lock.json",
+      "status": 200,
+      "headers": {
+        "Content-Length": "120010",
+        "Content-Type": "application/json",
+        "X-Content-Type-Options": "nosniff",
+        "Date": "Sun, 15 Nov 2026 13:10:15 GMT",
+        "Connection": "close"
+      },
+      "bytes": 120010,
+      "hash_match": true,
+      "seconds": 0.03183870000066236
+    },
+    {
+      "path": "engine.zip",
+      "status": 200,
+      "headers": {
+        "Content-Length": "444629",
+        "Content-Type": "application/octet-stream",
+        "X-Content-Type-Options": "nosniff",
+        "Date": "Sun, 15 Nov 2026 13:10:15 GMT",
+        "Connection": "close"
+      },
+      "bytes": 444629,
+      "hash_match": true,
+      "seconds": 0.28645199997117743
+    },
+    {
+      "path": "corpus.json",
+      "status": 200,
+      "headers": {
+        "Content-Length": "457316",
+        "Content-Type": "application/json",
+        "X-Content-Type-Options": "nosniff",
+        "Date": "Sun, 15 Nov 2026 13:10:15 GMT",
+        "Connection": "close"
+      },
+      "bytes": 457316,
+      "hash_match": true,
+      "seconds": 0.06349490000866354
+    },
+    {
+      "path": "runtime/pydantic-2.12.5-py3-none-any.whl",
+      "status": 200,
+      "headers": {
+        "Content-Length": "463580",
+        "Content-Type": "application/octet-stream",
+        "X-Content-Type-Options": "nosniff",
+        "Date": "Sun, 15 Nov 2026 13:10:15 GMT",
+        "Connection": "close"
+      },
+      "bytes": 463580,
+      "hash_match": true,
+      "seconds": 0.25827779999235645
+    },
+    {
+      "path": "runtime/sqlite3-1.0.0-cp313-cp313-pyodide_2025_0_wasm32.whl",
+      "error": "TimeoutError('timed out')",
+      "seconds": 15.050191599992104
+    },
+    {
+      "path": "runtime/pyodide-lock.json",
+      "error": "TimeoutError('timed out')",
+      "seconds": 15.04815620003501
+    },
+    {
+      "path": "engine.zip",
+      "status": 200,
+      "headers": {
+        "Content-Length": "444629",
+        "Content-Type": "application/octet-stream",
+        "X-Content-Type-Options": "nosniff",
+        "Date": "Sun, 15 Nov 2026 13:10:15 GMT",
+        "Connection": "close"
+      },
+      "bytes": 444629,
+      "hash_match": true,
+      "seconds": 0.1941526999580674
+    },
+    {
+      "path": "corpus.json",
+      "status": 200,
+      "headers": {
+        "Content-Length": "457316",
+        "Content-Type": "application/json",
+        "X-Content-Type-Options": "nosniff",
+        "Date": "Sun, 15 Nov 2026 13:10:15 GMT",
+        "Connection": "close"
+      },
+      "bytes": 457316,
+      "hash_match": true,
+      "seconds": 0.05330530001083389
+    }
+  ],
+  "request_failures": [],
+  "chromium_fetch": [
+    {
+      "path": "runtime/pydantic-2.12.5-py3-none-any.whl",
+      "round": 0,
+      "status": 200,
+      "bytes": 463580,
+      "hash_match": true,
+      "seconds": 0.1935
+    },
+    {
+      "path": "runtime/sqlite3-1.0.0-cp313-cp313-pyodide_2025_0_wasm32.whl",
+      "round": 0,
+      "status": 200,
+      "bytes": 566301,
+      "hash_match": true,
+      "seconds": 0.06990000003576279
+    },
+    {
+      "path": "runtime/pyodide-lock.json",
+      "round": 0,
+      "status": 200,
+      "bytes": 120010,
+      "hash_match": true,
+      "seconds": 0.03830000001192093
+    },
+    {
+      "path": "engine.zip",
+      "round": 0,
+      "status": 200,
+      "bytes": 444629,
+      "hash_match": true,
+      "seconds": 0.21330000001192093
+    },
+    {
+      "path": "corpus.json",
+      "round": 0,
+      "status": 200,
+      "bytes": 457316,
+      "hash_match": true,
+      "seconds": 0.08180000001192093
+    },
+    {
+      "path": "runtime/pydantic-2.12.5-py3-none-any.whl",
+      "round": 1,
+      "status": 200,
+      "bytes": 463580,
+      "hash_match": true,
+      "seconds": 0.16110000002384187
+    },
+    {
+      "path": "runtime/sqlite3-1.0.0-cp313-cp313-pyodide_2025_0_wasm32.whl",
+      "round": 1,
+      "status": 200,
+      "bytes": 566301,
+      "hash_match": true,
+      "seconds": 0.05
+    },
+    {
+      "path": "runtime/pyodide-lock.json",
+      "round": 1,
+      "status": 200,
+      "bytes": 120010,
+      "hash_match": true,
+      "seconds": 0.0295
+    },
+    {
+      "path": "engine.zip",
+      "round": 1,
+      "status": 200,
+      "bytes": 444629,
+      "hash_match": true,
+      "seconds": 0.1675
+    },
+    {
+      "path": "corpus.json",
+      "round": 1,
+      "status": 200,
+      "bytes": 457316,
+      "hash_match": true,
+      "seconds": 0.054900000035762786
+    },
+    {
+      "path": "runtime/pydantic-2.12.5-py3-none-any.whl",
+      "round": 2,
+      "status": 200,
+      "bytes": 463580,
+      "hash_match": true,
+      "seconds": 0.15260000002384186
+    },
+    {
+      "path": "runtime/sqlite3-1.0.0-cp313-cp313-pyodide_2025_0_wasm32.whl",
+      "round": 2,
+      "status": 200,
+      "bytes": 566301,
+      "hash_match": true,
+      "seconds": 0.05590000003576279
+    },
+    {
+      "path": "runtime/pyodide-lock.json",
+      "round": 2,
+      "status": 200,
+      "bytes": 120010,
+      "hash_match": true,
+      "seconds": 0.026699999988079072
+    },
+    {
+      "path": "engine.zip",
+      "round": 2,
+      "status": 200,
+      "bytes": 444629,
+      "hash_match": true,
+      "seconds": 0.172
+    },
+    {
+      "path": "corpus.json",
+      "round": 2,
+      "status": 200,
+      "bytes": 457316,
+      "hash_match": true,
+      "seconds": 0.055100000023841855
+    },
+    {
+      "path": "runtime/pydantic-2.12.5-py3-none-any.whl",
+      "round": 3,
+      "status": 200,
+      "bytes": 463580,
+      "hash_match": true,
+      "seconds": 0.15160000002384186
+    },
+    {
+      "path": "runtime/sqlite3-1.0.0-cp313-cp313-pyodide_2025_0_wasm32.whl",
+      "round": 3,
+      "status": 200,
+      "bytes": 566301,
+      "hash_match": true,
+      "seconds": 0.0575
+    },
+    {
+      "path": "runtime/pyodide-lock.json",
+      "round": 3,
+      "status": 200,
+      "bytes": 120010,
+      "hash_match": true,
+      "seconds": 0.025399999976158143
+    },
+    {
+      "path": "engine.zip",
+      "round": 3,
+      "status": 200,
+      "bytes": 444629,
+      "hash_match": true,
+      "seconds": 0.17010000002384185
+    },
+    {
+      "path": "corpus.json",
+      "round": 3,
+      "status": 200,
+      "bytes": 457316,
+      "hash_match": true,
+      "seconds": 0.06869999998807907
+    },
+    {
+      "path": "runtime/pydantic-2.12.5-py3-none-any.whl",
+      "round": 4,
+      "status": 200,
+      "bytes": 463580,
+      "hash_match": true,
+      "seconds": 0.1545
+    },
+    {
+      "path": "runtime/sqlite3-1.0.0-cp313-cp313-pyodide_2025_0_wasm32.whl",
+      "round": 4,
+      "status": 200,
+      "bytes": 566301,
+      "hash_match": true,
+      "seconds": 0.05319999998807907
+    },
+    {
+      "path": "runtime/pyodide-lock.json",
+      "round": 4,
+      "status": 200,
+      "bytes": 120010,
+      "hash_match": true,
+      "seconds": 0.030900000035762785
+    },
+    {
+      "path": "engine.zip",
+      "round": 4,
+      "status": 200,
+      "bytes": 444629,
+      "hash_match": true,
+      "seconds": 0.17290000003576278
+    },
+    {
+      "path": "corpus.json",
+      "round": 4,
+      "status": 200,
+      "bytes": 457316,
+      "hash_match": true,
+      "seconds": 0.06919999998807908
+    }
+  ],
+  "server_errors": []
+}
