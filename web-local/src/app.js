@@ -31,12 +31,14 @@ function showWorkspaceView(id='dashboard') {
   const pages=[...content.querySelectorAll(':scope > section')];
   pages.forEach(page=>page.classList.add('workspace-page'));
   if(!pages.some(page=>page.id===id)) id='dashboard';
+  $('workspace-nav').querySelector('.more-nav')?.removeAttribute('open');
   for(const page of pages) page.hidden=page.id!==id;
   for(const link of $('workspace-nav').querySelectorAll('[data-view]')) {
     if(link.dataset.view===id) link.setAttribute('aria-current','page'); else link.removeAttribute('aria-current');
   }
   document.title=(pages.find(page=>page.id===id)?.querySelector('h1')?.textContent||'ASTHRAL')+' · ASTHRAL';
   window.scrollTo({top:0,behavior:matchMedia('(prefers-reduced-motion: reduce)').matches?'instant':'smooth'});
+  window.dispatchEvent(new CustomEvent('asthral:viewchange',{detail:{id}}));
 }
 function startWorker() {
   worker=new Worker('./worker.js?v=5');
@@ -171,6 +173,7 @@ async function history() {
     ...data.observations.map(row=>({label:row.text,detail:row,occurred_at:moment(row)})),
     ...(data.prevention_entries??[]).map(row=>({label:row.entry_type.replaceAll('_',' ')+(row.synthetic_data?' · synthetic':' · self-report'),detail:row,occurred_at:moment(row)})),
     ...(data.radiation_records??[]).map(row=>({label:row.quantity_kind.replaceAll('_',' ')+' · '+row.value+' '+row.unit+' · '+row.mode,detail:row,occurred_at:moment(row)})),
+    ...(data.eva_activities??[]).map(row=>({label:'EVA · '+String(row.scenario_id||'simulation').replaceAll('_',' ')+' · '+(row.final_state||row.status||'completed')+' · simulated',detail:row,occurred_at:row.ended_at_utc||row.started_at_utc})),
     ...(timeline?.measurement??[]).map(row=>({label:'Measurement · '+human(row.measurement.variable)+' · '+String(row.measurement.value??'unknown')+' '+row.measurement.unit,detail:row,occurred_at:moment(row)})),
     ...(timeline?.baseline??[]).map(row=>({label:'Personal baseline · '+(row.variable||row.concept||'reference'),detail:row,occurred_at:moment(row)})),
     ...(timeline?.trend??[]).map(row=>({label:'Longitudinal trend · '+(row.variable||row.concept||'review'),detail:row,occurred_at:moment(row)})),
@@ -198,7 +201,7 @@ async function lock() {
   profileEpoch++;
   operationMetrics.length=0;
   experience?.clear();
-  missionSupport?.clear();
+  await missionSupport?.clear();
   preventiveExperience?.clear();
   clearPublicFeatures();
   stopRecording();
@@ -833,6 +836,7 @@ document.addEventListener('visibilitychange',()=>{
 const policyBeforeVoice=$('mode').onchange;
 $('mode').onchange=()=>{
   if($('mode').value!=='FULL')offlineVoice.close();
+  window.dispatchEvent(new CustomEvent('asthral:power-mode',{detail:{mode:$('mode').value}}));
   policyBeforeVoice();
 };
 let statisticsCases=[];
@@ -883,7 +887,7 @@ $('activate-update').onclick=safe(async()=>{
   navigator.serviceWorker.addEventListener('controllerchange',()=>location.reload(),{once:true});
   registration.waiting.postMessage({action:'ACTIVATE_UPDATE'});
 });
-experience=await installExperience({call,persist});
+experience=await installExperience({call,persist,isTemporary:()=>!!vault?.temporary});
 missionSupport=installMissionSupport({call,persist,status,isTemporary:()=>!!vault?.temporary,mode:()=>$('mode')?.value??'FULL'});
 preventiveExperience=installPreventiveExperience({call,persist,status,isTemporary:()=>!!vault?.temporary});
 if(vault&&cases.length){experience.refresh();await experience.update();await history();}

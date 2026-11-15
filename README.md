@@ -10,6 +10,12 @@ See the [English personal-account, voice and vector demo](docs/asthral/PERSONAL_
 
 ASTHRAL is a research prototype for NASA Space Apps Challenge 2026. It combines deterministic biomedical assessment, longitudinal astronaut monitoring, traceable local evidence, a local assistant, and optional public scientific reference retrieval. It is designed to continue functioning without Internet access. It has not been clinically, operationally, or flight validated.
 
+## Final mission-control integration — 15 November 2026
+
+The local candidate is on `feature/asthral-mission-control-release-20261115`, based on `origin/main` with EVA Pull Request #2 in its history. It integrates Marfe's EVA module with the existing profile history, mission context, and cached public DONKI data; adds a real Three.js globe with locally propagated public ISS GP/OMM estimates and a separately labelled synthetic spacecraft; and preserves existing health, computer-vision, NeuroGuard, assistant, and voice routes. Orbital and optional model/voice assets remain on demand. The UI identifies stale, cached, unavailable, estimated, and synthetic states separately.
+
+Latest local software verification: **949 Python passed / 19 skipped / 0 failed**, **123 browser-local JavaScript tests passed**, and real Chromium acceptance **PASS**. The browser run rendered a WebGL2 Earth, completed a synthetic EVA with four cards and an acknowledged training advisory, saved and recovered its encrypted local history after lock/reload, checked the WebGL fallback and mobile navigation, and found no console errors, required failed requests, or horizontal overflow. Independent clinical, operational, and flight validation remains pending. Exact measurements, skip reasons, reproduction commands and screenshots are in [the mission-control integration record](docs/asthral/MISSION_CONTROL_INTEGRATION.md); the earlier component audit remains in [the local integration continuation](docs/asthral/LOCAL_INTEGRATION_CONTINUATION_20261115.md).
+
 ## Repository map and branches
 
 `main` is the default branch and the integrated project baseline. A successful push to another branch does **not** update `main`; every branch is a separate line of commits. The branch pointers below were checked on 15 November 2026. Confirm them again before starting new work because branches can move.

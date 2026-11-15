@@ -334,7 +334,7 @@
               ],
               "maximum_observed_gap_seconds": 86400.0
             },
-            "normative_finding_id": "36b6c233618e4f49ccc180066f7213e5e487c662304db4c2d9e0d5383e777cef",
+            "normative_finding_id": "0c6655d4807db51a1060ca9bb8bd10411309a810905e04fcc656a2308147ad67",
             "source_ids": [
               "S01",
               "S05"
@@ -1527,7 +1527,7 @@
         "input_hash": "d50bc3bec1a074ff465335cecaf7a6777369cb9f5c53c2f9e8fdc3a16782d210",
         "knowledge_hash": "b8c568bd645154e5fd67630c7a670ca53904dc04f54904315047a89923839d4e",
         "knowledge_version": "0.7.0",
-        "implementation_hash": "918ed97840fc876d99676f9fe153e91a9905ab6d22d90760c2f416771dfc5369",
+        "implementation_hash": "7447f7fa2d81783c3881a316b6cad0ede26025f73ef68af9850200050ce60696",
         "output_hash": "0d48cece49615b02c3e4fd02fca070db423feb5d3ee7633595afc44ce0122bea"
       },
       "HYPOGLYCEMIA": {
@@ -1872,7 +1872,7 @@
                     "source": {
                       "source_id": "SRC-ADA-HYPO-2026",
                       "organization": "American Diabetes Association",
-                      "title": "6. Glycemic Goals, Hypoglycemia, and Hyperglycemic Crises: Standards of Care in Diabetes\u20142026",
+                      "title": "6. Glycemic Goals, Hypoglycemia, and Hyperglycemic Crises: Standards of Care in Diabetes—2026",
                       "year": 2026,
                       "doi": "10.2337/dc26-S006",
                       "url": "https://doi.org/10.2337/dc26-S006",
@@ -1921,7 +1921,7 @@
         "input_hash": "238d1d3ef700ec30c870eaaf3825ca42867e3308cf00e5744dfb45379e6b4065",
         "knowledge_hash": "b8c568bd645154e5fd67630c7a670ca53904dc04f54904315047a89923839d4e",
         "knowledge_version": "0.7.0",
-        "implementation_hash": "918ed97840fc876d99676f9fe153e91a9905ab6d22d90760c2f416771dfc5369",
+        "implementation_hash": "7447f7fa2d81783c3881a316b6cad0ede26025f73ef68af9850200050ce60696",
         "output_hash": "306e37b32d80eab95d72eca4b0274277cfb0acc1f8aff57474f43a92b6a7ec08"
       }
     },
@@ -2031,11 +2031,11 @@
     "clinical_context_id": "dka-context",
     "mode": "EXPERIMENTAL_NOT_CLINICALLY_VALIDATED",
     "clinical_execution": "BLOCKED",
-    "implementation_hash": "918ed97840fc876d99676f9fe153e91a9905ab6d22d90760c2f416771dfc5369",
+    "implementation_hash": "7447f7fa2d81783c3881a316b6cad0ede26025f73ef68af9850200050ce60696",
     "knowledge_hash": "b8c568bd645154e5fd67630c7a670ca53904dc04f54904315047a89923839d4e",
     "policy_reference": "SYNTHETIC_PARITY_NOT_CLINICAL_VALIDATION",
-    "input_hash": "1f0c305fc16f0076e776262f3a7acd9840f91aac47f8eac7b322964ff0c3e1f6",
-    "output_hash": "e4792707789f787fdee179a2ffc74483f3c6a92ba3ce9945c17437efdbb0ce66"
+    "input_hash": "0009a755d5a3fdcd647296f751cb9fb86e967380b6fa71455fc01552bb6e843b",
+    "output_hash": "d38daaa91af60b557d5dd987b820b2dd5e6e9e7e213a5fad7e2243235458bfd1"
   },
   "replay": {
     "id": "cycle-native-web",

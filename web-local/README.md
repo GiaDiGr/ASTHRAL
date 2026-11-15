@@ -1,14 +1,14 @@
-> Current feature-branch instructions and evidence (2026-11-15): see ../docs/asthral/INTEGRATION_REVIEW_20261115.md and INTEGRATION_CONTRACTS.md. The historical commands/results below predate the 254-case package, real CPU pose/voice checks and versioned USDA energy references. No main deployment is authorized by the current directive.
+> Current release-candidate evidence: see [Mission Control integration](../docs/asthral/MISSION_CONTROL_INTEGRATION.md), [NASA data and anatomy integration](../docs/asthral/NASA_DATA_AND_ANATOMY_INTEGRATION.md), and [integration contracts](INTEGRATION_CONTRACTS.md). This checkout is a local feature branch; release statements must use the fresh verification artifacts from the current run.
 
 # ASTHRAL Web — browser-local integration prototype
 
-> Current candidate: see [IMPLEMENTATION_STATUS_20261114.md](IMPLEMENTATION_STATUS_20261114.md) and [OFFLINE_INSTALL_AUDIT.md](OFFLINE_INSTALL_AUDIT.md). Feature counts and limitations below describe the earlier prototype, not the current working tree. The current candidate has 44 passing browser tests and 254-case parity; Samsung offline operation was owner-reported successful on preview decec363. Final release acceptance remains in progress.
+> This application is a biomedical and mission-control research prototype. All health and EVA demonstration values are synthetic. NASA archive data are clearly marked as historical environmental instrument observations. Software tests do not constitute clinical, operational, radiation-safety, or flight validation.
 
-Review date: 2026-11-13 (America/Lima). Public static URL: https://asthral-web.pages.dev/ . This is a research prototype using synthetic data only; software tests are not clinical or operational validation.
+Review date: 2026-11-15. The checked-out release branch is developed and tested locally before any deployment. Do not infer that a previous public static URL contains this candidate until a deployment has been independently checked.
 
 ## Architecture and boundaries
 
-One static HTML/CSS/JavaScript application. A dedicated Worker loads Pyodide 0.29.3 and runs byte-identical selected Python clinical modules with Pydantic and SQLite. The original Windows FastAPI backend, Ollama configuration and Git history remain intact. There is no mandatory clinical server, Cloudflare Function, D1 database or remote inference endpoint. Static hosting remains available independently of the owner's computer; actual powered-off-PC acceptance needs an external physical device.
+One browser-local HTML/CSS/JavaScript application. A dedicated Worker loads Pyodide 0.29.3 and runs byte-identical selected Python clinical modules with Pydantic and SQLite. The original Windows FastAPI backend, Ollama configuration and Git history remain intact. Clinical assessment does not require a remote clinical server. A narrowly scoped Cloudflare Pages Function proxies public, historical NASA RadLab GET queries through a fixed upstream; the local preview implements the same allowlisted proxy in Python. No D1 database or remote inference endpoint is used by the browser clinical engine. Static hosting does not require the owner's computer to remain powered on; device/offline checks must be reported for the device actually tested.
 
 Seven pathways: diabetes, DKA, adult diabetes-related hypoglycemia, orthostatic hypotension, POTS, AKI and anaphylaxis; original differential logic is retained. Urgency, confirmation, missing/invalid data, alternative branches and protocol safety are separate original output fields. No therapeutic execution is exposed. The browser rejects measurement_bindings rather than pretending that full acquisition integration has been ported. Research baselines and trends use the original algorithms and quality checks. Full autonomous monitoring orchestration, device integration, episode/follow-up workflows and resource accounting remain on the reference backend; their complete browser migration is PENDING.
 
@@ -16,7 +16,9 @@ The demo uses an ephemeral in-memory SQLite profile. Persistent local profiles e
 
 The original Windows SQLite database is NOT made encrypted by this browser implementation. Browser encryption does not protect an unlocked page against same-origin malicious scripts, compromised extensions/OS, memory inspection or a malicious future deployment. Audit chains detect accidental changes but an attacker controlling storage/code can rewrite a chain or roll it back. Independent security review and process/device isolation remain necessary.
 
-## Verified results
+## Earlier verification snapshot
+
+The metrics immediately below are historical evidence from the 2026-11-14 browser candidate, not current release acceptance. Use the current dated Mission Control integration record and attached JSON artifacts for the latest run.
 
 * Original backend: 782 passed, one Starlette/httpx deprecation warning; 688.39 seconds (existing full-suite log archived). Reference backend source unchanged.
 * Browser tests: 12 passed, zero failed; actual WASM parity, serialized SQLite/ownership/audit, original statistical algorithms and voice parser; WebCrypto/IndexedDB isolation, encrypted recovery, tamper failure, stale-tab rejection and lock races; public-vector validation/version gates. IndexedDB unit tests use fake-indexeddb; they are not a physical browser restart test.
@@ -39,34 +41,34 @@ FULL enables explicit optional downloads. LOW_POWER/CRITICAL terminate optional 
 
 ## Reproduce on Windows
 
-From PowerShell, use the full Node path when Node is absent from PATH:
+From PowerShell at the ASTHRAL repository root, use the checked-out Python environment and Node 24+:
 
 ```powershell
-Set-Location C:\Users\Gianni\Desktop\Vigile
 $asthralNode = 'C:\Users\Gianni\.cache\codex-runtimes\codex-primary-runtime\dependencies\node\bin\node.exe'
-& engine/.venv/Scripts/python.exe web-local/prepare_models.py
-# Requires the already-reviewed local English voice files under engine/local_ai/voice:
-& engine/.venv/Scripts/python.exe web-local/prepare_voice.py
-& engine/.venv/Scripts/python.exe web-local/build.py
-# In a separate terminal; preview binds loopback only:
-& engine/.venv/Scripts/python.exe web-local/serve.py
+$env:ASTHRAL_BUILD_OUTPUT = Join-Path (Resolve-Path 'web-local').Path 'build-output-local-review'
+$env:ASTHRAL_TEST_DIST = $env:ASTHRAL_BUILD_OUTPUT
+& engine\.venv\Scripts\python.exe web-local\build.py
+Push-Location web-local
+& $asthralNode --test (Get-ChildItem tests -Filter '*.test.mjs' | ForEach-Object { $_.FullName })
+Pop-Location
+& engine\.venv\Scripts\python.exe -m pytest engine\tests -q -rs
+# Start the local preview in another PowerShell window; it binds to loopback only.
+& engine\.venv\Scripts\python.exe web-local\serve.py --root (Split-Path $env:ASTHRAL_BUILD_OUTPUT -Leaf)
 ```
 
-Open http://127.0.0.1:8960/ . On another machine install supported Node 22+ and the reference engine's Python requirements; use its node executable. Build downloads use TLS verification and official pinned artifacts; runtime hashes fail closed. prepare_voice.py currently requires the original local Vosk files; it does not download missing weights automatically. Binary runtimes/models/dist are intentionally excluded from Git. Frozen synthetic input JSON files are committed; builds do not read a development database.
+Open http://127.0.0.1:8960/ . On another machine install Python 3.13, Node 24+, and the locked engine and browser-test dependencies. Build downloads use TLS verification and official pinned artifacts; runtime hashes fail closed. `prepare_voice.py` requires the separately obtained, pinned local English Vosk files; it does not download model weights automatically. Generated build output is excluded from Git. Frozen synthetic input JSON files are committed; builds do not read a development database.
 
 ```powershell
-# Existing local toolchain (no global npm required):
-$env:FAKE_INDEXEDDB_MODULE = 'file:///' + ((Resolve-Path 'work/browser-local/toolchain/node_modules/fake-indexeddb/build/esm/index.js').Path.Replace('\','/'))
-& $asthralNode --test web-local/tests/*.test.mjs
-# Clean checkout: install fake-indexeddb 6.2.4 with npm in web-local, then npm test after build.
-& engine/.venv/Scripts/python.exe -m pytest engine/tests -q
-# Authorized static deployment only; never upload the project root/database:
-& $asthralNode --use-system-ca work/browser-local/toolchain/node_modules/wrangler/bin/wrangler.js whoami
-& $asthralNode --use-system-ca work/browser-local/toolchain/node_modules/wrangler/bin/wrangler.js pages deploy web-local/dist --project-name asthral-web --branch main --commit-dirty=true
+$browserPython = 'C:\Users\Gianni\AppData\Local\Programs\Python\Python313\python.exe'
+$chrome = Join-Path $env:LOCALAPPDATA 'ms-playwright\chromium-1181\chrome-win\chrome.exe'
+& $browserPython tools\browser_final_mission_control_acceptance.py --root $env:ASTHRAL_BUILD_OUTPUT --output work\browser-mission-control-review --chrome $chrome
+# Local preview endpoint uses the same constrained NASA proxy contract.
+& engine\.venv\Scripts\python.exe web-local\serve.py --root (Split-Path $env:ASTHRAL_BUILD_OUTPUT -Leaf)
+# Cloudflare Pages requires Wrangler to publish the Functions directory. Check `whoami` first;
+# deploy the reviewed build only, from the web-local project directory after local acceptance.
 ```
 
-The existing local Wrangler is 4.76.0. For a clean checkout, install this version from npm in a separate toolchain. Login is interactive OAuth; no token belongs in source or commands committed to Git. Public deployment uses Direct Upload and does not expose the private repository.
-
+For a clean checkout, install pinned browser test dependencies with `npm ci` in `web-local`; install Wrangler in a separate local toolchain if deployment is authorized. Pages Functions must be deployed together with the static assets from the `web-local/functions/` directory. Never deploy the repository root, profiles, databases, tokens, or downloaded private model weights. Interactive OAuth credentials stay in Wrangler's user configuration and are never committed.
 ## Acceptance checklist for physical devices
 
 PENDING on Samsung Galaxy S22 Ultra/Android Chrome, iPhone Safari, iPad Safari, macOS Safari and other physical tablets. Responsive Chromium viewports are visual tests, not those devices. No claim that all phones support WebGPU or have enough memory for 4B. Minimum essential capabilities: secure HTTPS, WebAssembly, Worker, WebCrypto and IndexedDB; service workers/storage availability are checked. The site can explain unsupported optional features without disabling clinical computation.
@@ -83,8 +85,8 @@ PENDING on Samsung Galaxy S22 Ultra/Android Chrome, iPhone Safari, iPad Safari, 
 
 `src/worker.js` serializes requests to `src/browser_bridge.py` dispatch. Actions: init_profile, evaluate, statistics, search, history, serialize, parse_observation, save_observation, parity. Clinical payload uses original ClinicalRequest and MissionContext models; output preserves original dictionaries, including criterion trace and knowledge hash. Ownership is assigned by the unlocked worker profile, never trusted from supplied subject identifiers. Browser adapter failures remain failures/inconclusive; they are not normal measurements. Do not change the original clinical rules in JavaScript.
 
-Frontend: consume preserved output fields; no independent diagnostic calculations. RAG: public verified references and existing outputs only; never grant rule/therapy authority. Optimization: benchmark the same fixtures; optional workers may be terminated, deterministic engine remains critical. Sensors: full measurement acquisition is not yet a browser contract; add a separately reviewed adapter before enabling bindings. Original backend API/OpenAPI contracts remain available for existing integrations.
+Frontend: consume preserved output fields; no independent diagnostic calculations. RAG: public verified references and existing outputs only; never grant rule/therapy authority. Optimization: benchmark the same fixtures; optional workers may be terminated, deterministic engine remains critical. Sensors: full measurement acquisition is not yet a browser contract; add a separately reviewed adapter before enabling bindings. Mission Control exposes the existing orbital/EVA flow, historical RadLab adapter and labeled power profiles. `NASA_DATA_SOURCES` records the reviewed RadLab, OSDR Biological Data API, NASA EDA and DONKI boundaries. Original backend API/OpenAPI contracts remain available for existing integrations.
 
-`build.py` packages original selected modules and source fixtures; `prepare_models.py`/`prepare_voice.py` prepare pinned public assets. `runtime-lock.json` pins official runtimes; `src/models.json` pins public model revisions/hashes. `src/vault.js` owns encryption/IndexedDB; `vectors.js` public index; `ml-worker.js` optional inference; `offline-voice.js` experimental voice; `sw.js` public-only versioned caches; tests contain synthetic fixtures. No personal decrypted clinical data enter static caches.
+`build.py` packages original selected modules, fixed synthetic fixtures, NASA source registry and optional licensed anatomy model. `functions/api/radlab.js` is the fixed-host same-origin public-data proxy; `radlab_proxy.py` is its local-preview counterpart. `mission-control.js`, `radlab.js`, `radlab-view.js`, `orbital-view.js` and lazy `anatomy-view.js` compose the presentation layer. `runtime-lock.json` pins official runtimes; `src/models.json` pins public model revisions/hashes. `src/vault.js` owns encryption/IndexedDB; `vectors.js` public index; `ml-worker.js` optional inference; `offline-voice.js` experimental voice; `sw.js` public-only versioned caches; tests contain synthetic fixtures. No personal decrypted clinical data enter static caches.
 
 Priorities: physical offline/restart/export acceptance; independent security review; recognizer startup/finalization and actual synthetic audio regression; broader licensed source retrieval evaluation; full monitored-measurement/episode/follow-up port; measured mobile model/resource feasibility. Clinical validation requires independent professionals and appropriate operational studies, not this parity suite.

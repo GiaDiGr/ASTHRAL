@@ -1,8 +1,17 @@
 """Real Vosk recognition of packaged synthetic fixtures; no record writes."""
-import re,json,sys
+import argparse,re,json
 from pathlib import Path
 from playwright.sync_api import sync_playwright,expect
-out=Path('work/browser-voice-acceptance');out.mkdir(exist_ok=True);report={'status':'NOT_COMPLETED','errors':[]}
+parser=argparse.ArgumentParser(description=__doc__)
+parser.add_argument('legacy_url',nargs='?',help='Optional positional URL retained for existing invocations')
+parser.add_argument('--url',dest='url',help='Local ASTHRAL build URL')
+parser.add_argument('--output',type=Path,default=Path('work/browser-voice-acceptance'),help='Isolated directory for report and screenshot')
+args=parser.parse_args()
+url=args.url or args.legacy_url or 'http://127.0.0.1:8934/'
+out=args.output
+if out.exists() and any(out.iterdir()):
+    parser.error(f'Output directory is not empty; choose a new --output path to preserve existing evidence: {out}')
+out.mkdir(parents=True,exist_ok=True);report={'status':'NOT_COMPLETED','errors':[]}
 with sync_playwright() as p:
     b=p.chromium.launch(headless=True,executable_path=str(next((Path.home()/'AppData/Local/ms-playwright/chromium-1181').rglob('chrome.exe'))));page=b.new_page(viewport={'width':1440,'height':1000});page.on('pageerror',lambda e:report['errors'].append(str(e)))
     def visit(view):
@@ -10,7 +19,7 @@ with sync_playwright() as p:
         if not link.is_visible():page.locator('#workspace-nav .more-nav > summary').click()
         link.click();page.locator('#'+view).wait_for(state='visible')
     try:
-        page.goto(sys.argv[1] if len(sys.argv)>1 else 'http://127.0.0.1:8934/');expect(page.locator('#runtime-status')).to_contain_text('ready on this device',timeout=60000);page.locator('#explore').click();expect(page.locator('#operation')).to_contain_text('Temporary synthetic demo ready',timeout=30000)
+        page.goto(url);expect(page.locator('#runtime-status')).to_contain_text('ready on this device',timeout=60000);page.locator('#explore').click();expect(page.locator('#operation')).to_contain_text('Temporary synthetic demo ready',timeout=30000)
         visit('settings');page.locator('#install-offline').click();expect(page.locator('#offline-status')).to_contain_text(re.compile('^Offline resources verified:|^Offline installation failed:'),timeout=120000);report['public_offline_assets']=page.locator('#offline-status').text_content();assert report['public_offline_assets'].startswith('Offline resources verified:');page.reload();expect(page.locator('#runtime-status')).to_contain_text('ready on this device',timeout=60000);page.locator('#explore').click();expect(page.locator('#operation')).to_contain_text('Temporary synthetic demo ready',timeout=30000);visit('settings');page.locator('#advanced-settings > summary').click();page.get_by_label('Show Developer View',exact=True).check();visit('voice');page.locator('#voice-inspect').click();page.locator('#voice-install').click();expect(page.locator('#voice-status')).to_contain_text(re.compile('^READY|LOCAL_FALLBACK_AVAILABLE'),timeout=90000)
         report['voice_status']=page.locator('#voice-status').inner_text()
         if not report['voice_status'].startswith('READY'):raise RuntimeError(report['voice_status'])

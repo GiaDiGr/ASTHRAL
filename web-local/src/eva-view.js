@@ -1,102 +1,228 @@
-// ASTHRAL · EVA Monitoring — view adapter.
-// Integration point:  import { mountEvaMonitoring } from './eva-view.js';
-//                     mountEvaMonitoring(document.querySelector('#eva-monitoring'));
-// Reuses the existing DONKI client/cache from ./space-weather.js (no second HTTP client).
+// EVA monitoring integration by Marfe, contributed in ASTHRAL PR #2.
+// The view reuses ASTHRAL's existing DONKI cache; all sensor and dose values remain synthetic.
 import { cachedDonkiSnapshot, DONKI_HISTORICAL_FIXTURE } from './space-weather.js';
 import { EvaController, EVA_SCENARIOS, EVA_RULES, buildHandoverReport, reportToText } from './eva-monitoring.js';
 
-const STYLE_ID = 'asthral-eva-style';
-const CSS = `
-.eva{--g:#16a34a;--y:#ca8a04;--r:#dc2626;--n:#64748b;font-family:inherit;color:inherit}
-.eva .bar{display:flex;flex-wrap:wrap;gap:8px;align-items:center;margin-bottom:12px}
-.eva button,.eva select{font:inherit;padding:8px 14px;border-radius:10px;border:1px solid currentColor;background:transparent;color:inherit;cursor:pointer}
-.eva button.primary{background:#2563eb;color:#fff;border-color:#2563eb;font-weight:700}
-.eva button:disabled{opacity:.45;cursor:default}
-.eva .sim{font-size:12px;font-weight:700;padding:3px 10px;border-radius:999px;background:#334155;color:#fff}
-.eva .advisory{display:none;padding:16px;border-radius:12px;background:var(--r);color:#fff;font-size:20px;font-weight:800;margin-bottom:12px}
-.eva .advisory.show{display:block}.eva .advisory small{display:block;font-size:13px;font-weight:500;margin-top:6px}
-.eva .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:12px}
-.eva .card{border:1px solid #475569;border-left:8px solid var(--n);border-radius:12px;padding:14px}
-.eva .card[data-level=NORMAL]{border-left-color:var(--g)}.eva .card[data-level=WARNING]{border-left-color:var(--y)}.eva .card[data-level=CRITICAL]{border-left-color:var(--r)}
-.eva .card h3{margin:0 0 4px;font-size:13px;text-transform:uppercase;letter-spacing:.05em}
-.eva .val{font-size:34px;font-weight:800}.eva .lvl{font-weight:700;font-size:13px}.eva .meta{font-size:12px;opacity:.8;margin-top:6px}
-.eva .log{font-size:12px;max-height:160px;overflow:auto;margin-top:12px;border-top:1px solid #475569;padding-top:8px}
-.eva pre{white-space:pre-wrap;font-size:12px;border:1px solid #475569;border-radius:10px;padding:10px;max-height:280px;overflow:auto}
-`;
-const LABEL = { NORMAL: 'Normal', WARNING: 'Caution', CRITICAL: 'Critical', NO_DATA: 'No information', STALE: 'Stale data', INVALID: 'Invalid data', NO_BASELINE: 'No baseline available', CONTEXT: 'Context only' };
+const LABEL = {
+  NORMAL: 'Within demo range', WARNING: 'Demo caution', CRITICAL: 'Demo critical',
+  NO_DATA: 'No information', STALE: 'Stale data', INVALID: 'Invalid data',
+  NO_BASELINE: 'No reference available', CONTEXT: 'Context only',
+};
 
-function el(tag, attrs = {}, text) { const e = document.createElement(tag); for (const [k, v] of Object.entries(attrs)) e.setAttribute(k, v); if (text !== undefined) e.textContent = text; return e; }
+function el(tag, attrs = {}, text) {
+  const element = document.createElement(tag);
+  for (const [key, value] of Object.entries(attrs)) element.setAttribute(key, value);
+  if (text !== undefined) element.textContent = text;
+  return element;
+}
 
-/** Offline demo: if there is no DONKI cache, show the existing historical fixture, clearly labelled. */
+/** Offline demo: reuse the DONKI cache, otherwise label a fixed historical fixture. */
 export function spaceWeatherProvider({ now = () => Date.now(), useFixtureWhenEmpty = true } = {}) {
   return () => {
-    const snap = cachedDonkiSnapshot(now());
-    if (snap.state === 'NO_CACHE' && useFixtureWhenEmpty) return { state: 'FIXTURE', events: [DONKI_HISTORICAL_FIXTURE], fetched_at: null, note: 'Example data: fixed historical DONKI fixture (offline demo)' };
-    return snap;
+    const snapshot = cachedDonkiSnapshot(now());
+    if (snapshot.state === 'NO_CACHE' && useFixtureWhenEmpty) {
+      return { state: 'FIXTURE', events: [DONKI_HISTORICAL_FIXTURE], fetched_at: null, note: 'Fixed historical example; not current.' };
+    }
+    return snapshot;
   };
 }
 
-export function mountEvaMonitoring(container, { now = () => Date.now(), stepMs = 1000, spaceWeather = spaceWeatherProvider({ now }) } = {}) {
-  if (!container) throw Error('EVA container not found');
-  if (!document.getElementById(STYLE_ID)) { const s = el('style', { id: STYLE_ID }); s.textContent = CSS; document.head.appendChild(s); }
-  const ctl = new EvaController({ now, spaceWeather });
-  let timer = null;
-  const root = el('section', { class: 'eva', 'aria-label': 'EVA Monitoring (simulation)' });
+export function mountEvaMonitoring(container, {
+  now = () => Date.now(), stepMs = 1000, spaceWeather = spaceWeatherProvider({ now }),
+  onScenarioChange = () => {}, onScenarioTime = () => {}, onScenarioActive = () => {}, onStart = () => null,
+  onComplete = async () => {},
+} = {}) {
+  if (!container) throw Error('EVA container not found.');
+  const controller = new EvaController({ now, spaceWeather });
+  let timer = null, completionPromise = null, savedEvaId = null;
+  const root = el('section', { class: 'eva-monitoring', 'aria-label': 'EVA monitoring simulation' });
+  const bar = el('div', { class: 'eva-toolbar' });
+  const scenarioLabel = el('label', {}, 'Synthetic scenario');
+  const scenarioSelect = el('select', { 'aria-label': 'Synthetic EVA scenario' });
+  for (const scenario of Object.values(EVA_SCENARIOS)) scenarioSelect.append(el('option', { value: scenario.id }, scenario.label));
+  scenarioLabel.append(scenarioSelect);
+  const startButton = el('button', { type: 'button', class: 'primary-action' }, 'Start EVA');
+  const pauseButton = el('button', { type: 'button' }, 'Pause EVA');
+  const resumeButton = el('button', { type: 'button' }, 'Resume EVA');
+  const endButton = el('button', { type: 'button' }, 'End EVA');
+  const trainingButton = el('button', { type: 'button', title: 'Training simulation only' }, 'Trigger training alert');
+  const acknowledgeButton = el('button', { type: 'button' }, 'Acknowledge advisory');
+  const reportButton = el('button', { type: 'button' }, 'Generate handover report');
+  const simulationTag = el('span', { class: 'eva-simulation-tag' }, 'SIMULATION · SYNTHETIC DATA');
+  bar.append(scenarioLabel, startButton, pauseButton, resumeButton, endButton, trainingButton, acknowledgeButton, reportButton, simulationTag);
 
-  const bar = el('div', { class: 'bar' });
-  const scenarioSel = el('select', { 'aria-label': 'Synthetic EVA scenario' });
-  for (const sc of Object.values(EVA_SCENARIOS)) scenarioSel.appendChild(el('option', { value: sc.id }, sc.label));
-  const startBtn = el('button', { class: 'primary', type: 'button' }, 'Start EVA');
-  const endBtn = el('button', { type: 'button' }, 'End EVA');
-  const trainBtn = el('button', { type: 'button', title: 'Training exercise only' }, 'Trigger training critical');
-  const ackBtn = el('button', { type: 'button' }, 'Acknowledge advisory');
-  const reportBtn = el('button', { type: 'button' }, 'Prepare handover report');
-  bar.append(scenarioSel, startBtn, endBtn, trainBtn, ackBtn, reportBtn, el('span', { class: 'sim' }, 'SIMULATION · synthetic data'));
-
-  const advisory = el('div', { class: 'advisory', role: 'alert', 'aria-live': 'assertive' });
-  const grid = el('div', { class: 'grid' });
-  const cards = {};
-  for (const [key, title] of [['temp', '🌡️ Core Temperature'], ['hr', '❤️ Heart Rate'], ['sw', '☀️ Solar Weather · NASA DONKI'], ['dose', '⏱️ EVA Timer + Radiation Dose']]) {
-    const c = el('div', { class: 'card', 'data-level': 'NO_DATA' });
-    c.append(el('h3', {}, title), el('div', { class: 'val' }, '—'), el('div', { class: 'lvl' }, LABEL.NO_DATA), el('div', { class: 'meta' }, ''));
-    cards[key] = c; grid.appendChild(c);
+  const intro = el('p', { class: 'eva-prototype-note' }, 'This software scenario is not flight telemetry. Configured advisory values are demonstration rules, not medically validated limits or autonomous EVA commands.');
+  const advisory = el('div', { class: 'eva-advisory', role: 'alert', 'aria-live': 'assertive', hidden: '' });
+  const cards = el('div', { class: 'eva-cards' });
+  const indicators = {};
+  for (const [key, title, detail] of [
+    ['temperature', 'Core body temperature', 'Synthetic core-temperature series · °C'],
+    ['heart-rate', 'Heart rate vs scenario reference', 'Synthetic heart-rate series · bpm'],
+    ['space-weather', 'Solar-weather context', 'NASA CCMC DONKI cache or a labeled historical fixture'],
+    ['time-dose', 'EVA time and radiation', 'Scenario clock · synthetic dose only · no dosimeter'],
+  ]) {
+    const card = el('article', { class: 'eva-card', 'data-level': 'NO_DATA' });
+    const heading = el('p', { class: 'eva-card-label' }, title);
+    const value = el('strong', { class: 'eva-card-value' }, '—');
+    const state = el('span', { class: 'eva-card-state' }, LABEL.NO_DATA);
+    const meta = el('p', { class: 'eva-card-meta' }, detail);
+    card.append(heading, value, state, meta);
+    indicators[key] = { card, value, state, meta };
+    cards.append(card);
   }
-  const log = el('div', { class: 'log', 'aria-label': 'EVA event log' });
-  const report = el('pre', { hidden: '' });
-  root.append(bar, advisory, grid, log, report);
+  const logSection = el('section', { class: 'eva-log-panel' });
+  const logTitle = el('h3', {}, 'Mission activity log');
+  const log = el('ol', { class: 'eva-log', 'aria-label': 'Synthetic EVA event log' });
+  const saveStatus = el('p', { role: 'status', 'aria-live': 'polite' }, 'Completed EVA reports are stored in the encrypted local profile.');
+  logSection.append(logTitle, log, saveStatus);
+  const reportSection = el('section', { class: 'eva-report-panel', hidden: '' });
+  reportSection.append(el('h3', {}, 'Medical ground handover report'));
+  const reportText = el('pre', { class: 'eva-report' });
+  const reportActions = el('div', { class: 'row' });
+  const downloadButton = el('button', { type: 'button' }, 'Download synthetic report JSON');
+  reportActions.append(downloadButton);
+  reportSection.append(reportText, reportActions);
+  root.append(bar, intro, advisory, cards, logSection, reportSection);
   container.replaceChildren(root);
 
-  const setCard = (c, level, value, meta) => { c.dataset.level = level; c.children[1].textContent = value; c.children[2].textContent = LABEL[level] ?? level; c.children[3].textContent = meta; };
-  const mmss = s => `${String(Math.floor(s / 60)).padStart(2, '0')}:${String(s % 60).padStart(2, '0')}`;
+  const setIndicator = (key, level, value, meta) => {
+    const item = indicators[key];
+    item.card.dataset.level = level;
+    item.value.textContent = value;
+    item.state.textContent = LABEL[level] ?? level;
+    item.meta.textContent = meta;
+  };
+  const formatClock = seconds => {
+    const n = Math.max(0, Math.floor(seconds));
+    return `${String(Math.floor(n / 3600)).padStart(2, '0')}:${String(Math.floor(n % 3600 / 60)).padStart(2, '0')}:${String(n % 60).padStart(2, '0')}`;
+  };
 
-  function render(snap) {
-    const s = snap.session, L = s.latest, active = ['active', 'warning', 'critical'].includes(s.state);
-    startBtn.disabled = active; endBtn.disabled = !active; scenarioSel.disabled = active;
-    trainBtn.disabled = !(active && s.state !== 'critical'); ackBtn.disabled = !(s.state === 'critical' && !s.acknowledgement); reportBtn.disabled = !s.started_at_utc;
-    if (!L) { for (const k of ['temp', 'hr', 'sw']) setCard(cards[k], 'NO_DATA', '—', 'Start EVA to begin.'); }
-    else {
-      const t = L.core_temperature, h = L.heart_rate, w = L.space_weather, d = L.dose;
-      const trend = (hist) => hist.length > 1 ? (hist.at(-1).value > hist.at(-2).value ? '↑' : hist.at(-1).value < hist.at(-2).value ? '↓' : '→') : '';
-      setCard(cards.temp, t.level, `${t.value ?? '—'} °C ${trend(s.temp_history)}`, `Core temperature (not skin) · source: ${t.source} · ${t.rule ?? 'within prototype range'}`);
-      setCard(cards.hr, h.level, `${h.value ?? '—'} bpm ${trend(s.hr_history)}`, h.baseline ? `Δ ${h.value - h.baseline} bpm vs EVA-exertion baseline ${h.baseline} bpm · source: ${h.source}` : 'No baseline available');
-      const swText = { DATA_UNAVAILABLE: 'Data not available', NO_EVENTS_RECORDED: 'No events recorded', EVENTS_NOT_EVALUATED_FOR_MISSION: `${w.real_events.length} event(s) — not evaluated for this mission`, DEMO_TRAINING_ALERT: 'TRAINING: synthetic particle event' }[w.status];
-      const first = w.real_events[0];
-      setCard(cards.sw, w.level, swText, `${first ? `${first.type} ${first.time_utc} · ${first.source}` : 'No real event listed'} · cache: ${w.cache_state}${w.fetched_at_utc ? ' updated ' + w.fetched_at_utc : ''}${w.stale ? ' (STALE)' : ''}`);
-      setCard(cards.dose, d.value_msv === null ? 'NO_DATA' : d.level, d.value_msv === null ? 'DOSIMETER NOT CONNECTED' : `${d.value_msv} mSv`, `${d.value_msv === null ? '' : 'SIMULATED DOSE · ' + d.assumption + ' · '}EVA time ${mmss(snap.elapsed_s)}`);
+  function render(snapshot) {
+    const session = snapshot.session;
+    const active = ['active', 'warning', 'critical'].includes(session.state);
+    const paused = session.state === 'paused';
+    const inProgress = active || paused;
+    startButton.disabled = inProgress;
+    endButton.disabled = !inProgress;
+    pauseButton.disabled = !active;
+    resumeButton.disabled = !paused;
+    scenarioSelect.disabled = active || paused;
+    onScenarioActive(inProgress);
+    if (session.scenario_time_utc) onScenarioTime(session.scenario_time_utc, { active: inProgress, paused });
+    trainingButton.disabled = !(active && session.state !== 'critical');
+    acknowledgeButton.disabled = !(session.state === 'critical' && !session.acknowledgement);
+    reportButton.disabled = !session.started_at_utc;
+    if (!session.latest) {
+      for (const key of Object.keys(indicators)) setIndicator(key, 'NO_DATA', '—', 'Start the synthetic EVA scenario to display data.');
+    } else {
+      const latest = session.latest;
+      const trend = history => history.length > 1
+        ? (history.at(-1).value > history.at(-2).value ? '↑' : history.at(-1).value < history.at(-2).value ? '↓' : '→') : '';
+      const temperature = latest.core_temperature;
+      setIndicator('temperature', temperature.level, `${temperature.value ?? '—'} °C ${trend(session.temp_history)}`.trim(),
+        `Synthetic source · core temperature, not skin temperature · ${temperature.rule ?? 'no demonstration rule fired'}`);
+      const heart = latest.heart_rate;
+      setIndicator('heart-rate', heart.level, `${heart.value ?? '—'} bpm ${trend(session.hr_history)}`.trim(),
+        heart.baseline === null ? 'No comparable personal EVA baseline is available; this demonstration uses a fixed synthetic scenario reference.'
+          : `Δ ${heart.value - heart.baseline} bpm vs synthetic scenario exertion reference ${heart.baseline} bpm · not a personal measurement`);
+      const weather = latest.space_weather;
+      const weatherLabel = {
+        DATA_UNAVAILABLE: 'Data unavailable', NO_EVENTS_RECORDED: 'No events recorded',
+        EVENTS_NOT_EVALUATED_FOR_MISSION: `${weather.real_events.length} event(s) · context only`,
+        DEMO_TRAINING_ALERT: 'Synthetic training event',
+      }[weather.status] ?? 'Context only';
+      const event = weather.real_events[0];
+      setIndicator('space-weather', weather.level, weatherLabel,
+        `${event ? `${event.type} · ${event.time_utc ?? 'UTC time not provided'}` : 'No event listed'} · ${weather.cache_state === 'FIXTURE' ? 'fixed historical fixture, not current' : `cache ${weather.cache_state}`}${weather.fetched_at_utc ? ` · retrieved ${weather.fetched_at_utc}` : ''}${weather.stale ? ' · stale cache' : ''} · no personal exposure inference`);
+      const dose = latest.dose;
+      setIndicator('time-dose', dose.value_msv === null ? 'NO_DATA' : dose.level,
+        dose.value_msv === null ? 'No dosimeter connected' : `${dose.value_msv} mSv · simulated`,
+        `Scenario elapsed ${formatClock(snapshot.scenario_elapsed_s)} · wall clock ${formatClock(snapshot.elapsed_s)} · ${dose.value_msv === null ? 'dose unknown' : 'synthetic model; no dose measurement'}`);
     }
-    const adv = snap.advisory;
-    advisory.classList.toggle('show', !!adv);
-    if (adv) { advisory.textContent = adv.text; advisory.appendChild(el('small', {}, `Rule: ${adv.rule} · at ${adv.at_utc}${s.acknowledgement ? ' · acknowledged ' + s.acknowledgement.at_utc : ' · awaiting acknowledgement'}`)); }
-    log.replaceChildren(...snap.log.slice(-30).reverse().map(e => el('div', {}, `${e.at_utc} · ${e.kind} · ${e.detail}`)));
+    const notice = controller.advisory();
+    advisory.hidden = !notice;
+    advisory.replaceChildren();
+    if (notice) {
+      advisory.append(el('strong', {}, 'Return to airlock — simulated mission advisory'));
+      advisory.append(el('p', {}, `Demonstration rule: ${notice.rule}`));
+      advisory.append(el('small', {}, `${notice.at_utc} UTC scenario time · this software does not command an EVA or suit.`));
+      if (session.acknowledgement) advisory.append(el('p', {}, `Acknowledged in simulation at ${session.acknowledgement.at_utc} UTC wall-clock time.`));
+    }
+    log.replaceChildren(...snapshot.log.slice(-40).map(entry => {
+      const row = el('li');
+      row.append(el('time', { dateTime: entry.at_utc }, `${entry.at_utc} UTC · ${entry.time_basis === 'SCENARIO_UTC' ? 'scenario clock' : 'wall clock'}`));
+      row.append(el('span', {}, `${entry.kind.replaceAll('_', ' ')} · ${entry.detail}`));
+      return row;
+    }));
   }
 
-  ctl.onChange(render);
-  const stop = () => { if (timer) { clearInterval(timer); timer = null; } };
-  startBtn.addEventListener('click', () => { ctl.setScenario(scenarioSel.value); ctl.start(); stop(); timer = setInterval(() => { if (!ctl.step()) stop(); }, stepMs); ctl.step(); });
-  endBtn.addEventListener('click', () => { stop(); ctl.end('ended by astronaut'); });
-  trainBtn.addEventListener('click', () => ctl.triggerTrainingCritical());
-  ackBtn.addEventListener('click', () => ctl.acknowledge());
-  reportBtn.addEventListener('click', () => { const r = buildHandoverReport(ctl); report.hidden = false; report.textContent = reportToText(r); report.dataset.json = JSON.stringify(r); });
-  render(ctl.snapshot());
-  return { controller: ctl, destroy: () => { stop(); container.replaceChildren(); }, rules: EVA_RULES };
+  function stopTimer() { if (timer !== null) { clearInterval(timer); timer = null; } }
+  function startTimer() { stopTimer(); timer = setInterval(() => { if (!controller.step()) stopTimer(); }, Math.max(100, stepMs)); }
+
+  async function finalizeReport() {
+    const session = controller.session;
+    if (session.state !== 'completed' || savedEvaId === session.eva_id) return;
+    if (completionPromise) return completionPromise;
+    const report = buildHandoverReport(controller);
+    const snapshot = controller.snapshot();
+    reportSection.hidden = false;
+    reportText.textContent = reportToText(report);
+    reportSection.dataset.reportJson = JSON.stringify(report);
+    saveStatus.textContent = 'Saving the completed synthetic report to local history…';
+    completionPromise = Promise.resolve(onComplete({ report, snapshot })).then(result => {
+      savedEvaId = session.eva_id;
+      saveStatus.textContent = result?.storage_scope === 'ENCRYPTED_LOCAL_PROFILE'
+        ? 'Synthetic EVA report saved in the encrypted local profile.'
+        : 'Synthetic EVA report saved in temporary demo memory; it will be discarded when the demo closes.';
+    }).catch(error => {
+      saveStatus.textContent = `Report remains visible but could not be saved: ${error.message}`;
+      completionPromise = null;
+    });
+    return completionPromise;
+  }
+
+  controller.onChange(snapshot => {
+    render(snapshot);
+    if (snapshot.session.state === 'completed') void finalizeReport();
+  });
+  startButton.addEventListener('click', () => {
+    completionPromise = null; savedEvaId = null; reportSection.hidden = true; reportText.textContent = '';
+    controller.setScenario(scenarioSelect.value);
+    onScenarioChange(scenarioSelect.value);
+    const simulationStartUtc = onStart();
+    controller.start({ simulationStartUtc: typeof simulationStartUtc === 'string' ? simulationStartUtc : null });
+    controller.step(); startTimer();
+  });
+  scenarioSelect.addEventListener('change', () => onScenarioChange(scenarioSelect.value));
+  pauseButton.addEventListener('click', () => { if (controller.pause()) stopTimer(); });
+  resumeButton.addEventListener('click', () => { if (controller.resume()) startTimer(); });
+  endButton.addEventListener('click', () => { stopTimer(); controller.end('ended by user in synthetic mission demonstration'); });
+  trainingButton.addEventListener('click', () => controller.triggerTrainingCritical());
+  acknowledgeButton.addEventListener('click', () => controller.acknowledge('synthetic crew participant'));
+  reportButton.addEventListener('click', () => {
+    const report = buildHandoverReport(controller);
+    reportSection.hidden = false;
+    reportText.textContent = reportToText(report);
+    reportSection.dataset.reportJson = JSON.stringify(report);
+  });
+  downloadButton.addEventListener('click', () => {
+    const raw = reportSection.dataset.reportJson;
+    if (!raw) return;
+    const report = JSON.parse(raw);
+    const blob = new Blob([JSON.stringify(report, null, 2)], { type: 'application/json' });
+    const url = URL.createObjectURL(blob);
+    const link = el('a', { href: url, download: `asthral-synthetic-eva-${report.eva_id}.json` });
+    link.click(); URL.revokeObjectURL(url);
+  });
+  render(controller.snapshot());
+  return {
+    controller,
+    destroy() { stopTimer(); container.replaceChildren(); },
+    async finalizeIfActive() {
+      if (['active', 'warning', 'critical', 'paused'].includes(controller.session.state)) {
+        stopTimer(); controller.end('profile locked; synthetic session finalized locally'); await finalizeReport();
+      } else if (controller.session.state === 'completed') await finalizeReport();
+    },
+    rules: EVA_RULES,
+  };
 }

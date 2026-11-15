@@ -21,7 +21,7 @@ VERSION='0.29.3'
 BASE=f'https://cdn.jsdelivr.net/pyodide/v{VERSION}/full/'
 PIN='pyodide-manifest.json'
 MODULES=['__init__.py','clinical_engine.py','clinical_models.py','clinical_knowledge.py','clinical_logic.py',
-         'clinical_differential.py','clinical_simulator.py','models.py','store.py','security.py',
+         'clinical_differential.py','clinical_simulator.py','models.py','store.py','security.py','eva_records.py',
          'management.py','knowledge_v08.py','retrieval_bm25.py','mission_context.py','algorithms.py','quality.py','monitoring_models.py']
 
 def sha(raw):return hashlib.sha256(raw).hexdigest()
@@ -124,6 +124,15 @@ def main():
     OUT.mkdir(exist_ok=True)
     selected=get_runtime()
     copy_public_source(ROOT/'web-local/src',OUT)
+    required_orbit_assets=(
+        'vendor/orbit/three.module.js',
+        'vendor/orbit/three.core.js',
+        'vendor/orbit/earth-blue-marble-july-2004.webp',
+        'vendor/orbit/satellite-js/io.js',
+        'vendor/orbit/satellite-js/propagation.js',
+    )
+    absent=[name for name in required_orbit_assets if not (OUT/name).is_file()]
+    if absent:raise ValueError('ORBIT_ASSET_BUNDLE_INCOMPLETE: '+', '.join(absent))
     shutil.copytree(ROOT/'docs/asthral/science',OUT/'research',dirs_exist_ok=True)
     (OUT/'runtime').mkdir(exist_ok=True)
     runtime_lock=json.loads((VENDOR/'pyodide-lock.json').read_bytes())
@@ -197,7 +206,7 @@ def main():
             raw=path.read_bytes()
             if len(raw)>25*1024*1024:raise ValueError('PAGES_ASSET_LIMIT '+str(path))
             relative=path.relative_to(OUT).as_posix()
-            optional=relative.startswith(('voice-assets/','embedding-runtime/','test-audio/','motion-runtime/','test-motion/')) or relative in ('vosk.js','webllm.js','parity-cases.json')
+            optional=relative.startswith(('voice-assets/','embedding-runtime/','test-audio/','motion-runtime/','test-motion/','vendor/anatomy/')) or relative in ('vosk.js','webllm.js','parity-cases.json')
             manifest.append({'path':relative,'size':len(raw),'sha256':sha(raw),'optional':optional})
     (OUT/'assets.json').write_text(json.dumps({'version':'asthral-browser-1','files':manifest},indent=2))
     service_worker=(ROOT/'web-local/src/sw.js').read_text(encoding='utf8').replace('__BUILD_ID__',sha((OUT/'assets.json').read_bytes())[:16]).replace('__ASSET_MANIFEST_SHA__',sha((OUT/'assets.json').read_bytes()))

@@ -1,0 +1,245 @@
+{
+  "build_root": "isolated temporary build directory; see traceability report",
+  "base_url": "http://127.0.0.1:8978/",
+  "synthetic_data_only": true,
+  "screenshots": {
+    "initial_state": "initial-state.png",
+    "historical_radlab": "mission-control-historical-radlab.png",
+    "desktop": "mission-control-desktop.png",
+    "mobile": "mission-control-mobile.png"
+  },
+  "checks": {
+    "synthetic_encrypted_profile": {
+      "created": true,
+      "credentials_logged": false,
+      "health_records": "none; EVA software scenario only"
+    },
+    "three_dimensional_earth": {
+      "stage_message": "Interactive Earth renderer ready. Drag to rotate · scroll to zoom · click a surface point to inspect its coordinates.",
+      "width": 501,
+      "height": 590,
+      "rect": {
+        "width": 501.984375,
+        "height": 588
+      },
+      "webgl2": true,
+      "hidden": false
+    },
+    "nasa_data_source_registry": {
+      "source_ids": [
+        "NASA_OSDR_RADLAB",
+        "NASA_CCMC_DONKI",
+        "NASA_OSDR_BIODATA",
+        "NASA_OSDR_EDA"
+      ],
+      "osdr_biodata_clinical_use": false,
+      "eda_integrated": false
+    },
+    "live_nasa_radlab": {
+      "provider": "NASA_OSDR_RADLAB",
+      "classification": "HISTORICAL_PUBLIC_ENVIRONMENTAL_OBSERVATIONS",
+      "returned_records": 1469,
+      "stats": "1,469 returned records · HISTORICAL_QUERY_RESPONSE\n1,469 absorbed-dose rate values · 0 missing\n1,469 records with valid coordinates\nRetrieved 2026-11-15T22:06:06.914Z UTC",
+      "time_series_points": 1469,
+      "geospatial_points": 1469,
+      "globe_legend": "HISTORICAL RADLAB · 1469",
+      "eva_context": "Historical RadLab context selected · 2023-01-01T00:00:00.000Z UTC · REM-Lid · 1469 archive record(s) loaded · 1469 record(s) with valid coordinates shown on the globe. This does not enter the EVA assessment, calculate individual dose or trigger a safety alert.",
+      "dose_or_alert_inference": false
+    },
+    "radlab_exports": {
+      "json_filename": "asthral-radlab-historical.json",
+      "json_provider": "NASA_OSDR_RADLAB",
+      "csv_filename": "asthral-radlab-historical.csv",
+      "csv_header": "\"source\",\"classification\",\"observed_at_utc\",\"retrieved_at_utc\",\"spacecraft\",\"instrument_id\",\"instrument_family\",\"module\",\"latitude_deg\",\"longitude_deg\",\"altitude_km\",\"absorbed_dose_rate_value\",\"absorbed_dose_rate_unit\",\"dose_equivalent_rate_value\",\"dose_equivalent_rate_unit\",\"flux_value\",\"flux_unit\""
+    },
+    "offline_radlab_cache": {
+      "stale_label_visible": true,
+      "records_retained": 1469
+    },
+    "resource_profiles": {
+      "low_power_applied": true,
+      "critical_applied": true,
+      "critical_playback_disabled": true,
+      "full_restored": true
+    },
+    "eva_card_styles": {
+      "background": "rgb(14, 34, 53)",
+      "labelColor": "rgb(183, 202, 214)",
+      "valueColor": "rgb(246, 249, 252)"
+    },
+    "synthetic_orbit": {
+      "badge": "SYNTHETIC ORBIT",
+      "position_utc": "2026-11-15T22:06:59.611Z",
+      "latitude": "26.77°",
+      "longitude": "164.82°",
+      "altitude": "420.6 km"
+    },
+    "completed_eva": {
+      "cards": 4,
+      "advisory_acknowledged": true,
+      "report_saved": true,
+      "report_labels_present": {
+        "EVA Medical Handover Report": true,
+        "SIMULATION": true,
+        "scenario time": true,
+        "synthetic": true,
+        "DONKI": true,
+        "Not clinically, operationally or flight validated": true
+      }
+    },
+    "encrypted_profile_history_view": {
+      "record_visible": true,
+      "history_label": "EVA · nominal · critical · simulated15/11/2026, 17:07:04",
+      "vault_row": {
+        "revision": 2,
+        "encrypted": true,
+        "iv": true,
+        "iterations": 600000,
+        "email_box_encrypted": true
+      },
+      "credentials_logged": false
+    },
+    "encrypted_profile_reload": {
+      "record_recovered": true,
+      "audit_status": "Unlocked · audit verified"
+    },
+    "interactive_anatomy": {
+      "width": 862,
+      "height": 620,
+      "webgl2": true,
+      "hidden": false,
+      "rect": {
+        "width": 860,
+        "height": 618
+      },
+      "status": "3D anatomy loaded · Z-Anatomy muscular system layer · 513 named source meshes · model review only; no localized clinical findings are inferred.",
+      "selected_region": "Left upper arm · Musculoskeletal · left side. Selection is a navigation aid only.",
+      "posterior_view_active": true,
+      "context_export": "asthral-region-left_upper_arm.json",
+      "clinical_authority": false,
+      "clinical_localization": false
+    },
+    "existing_routes": [
+      "monitoring",
+      "clinical",
+      "computer vision",
+      "human anatomy"
+    ],
+    "mobile_layout": {
+      "viewport": 390,
+      "document": 390,
+      "stage": 282,
+      "canvas": 282,
+      "nav": {
+        "height": 52,
+        "background": "rgba(255, 255, 255, 0.97)",
+        "links": [
+          {
+            "text": "Overview",
+            "color": "rgb(54, 80, 102)",
+            "visible": true
+          },
+          {
+            "text": "Mission Control",
+            "color": "rgb(12, 95, 96)",
+            "visible": true
+          },
+          {
+            "text": "Monitoring",
+            "color": "rgb(54, 80, 102)",
+            "visible": true
+          },
+          {
+            "text": "Assessment",
+            "color": "rgb(54, 80, 102)",
+            "visible": true
+          },
+          {
+            "text": "Ask ASTHRAL",
+            "color": "rgb(54, 80, 102)",
+            "visible": true
+          }
+        ]
+      },
+      "overflow": []
+    },
+    "browser_console_errors": [],
+    "unexpected_failed_requests": [],
+    "webgl_fallback": {
+      "fallback_visible": true,
+      "message": "3D globe unavailable (WebGL deliberately disabled for fallback acceptance). The calculated 2D ground-track fallback remains available."
+    }
+  },
+  "errors": [],
+  "failed_requests": [],
+  "expected_offline_failures": [
+    {
+      "url": "http://127.0.0.1:8978/api/radlab?startDate=2023-01-01&endDate=2023-01-01&quantities=absorbed_dose_rate%2Cdose_equivalent_rate%2Cflux&spacecraft=ISS",
+      "failure": "net::ERR_INTERNET_DISCONNECTED"
+    }
+  ],
+  "initial_dom": {
+    "url": "http://127.0.0.1:8978/",
+    "title": "ASTHRAL · Astronaut health intelligence",
+    "readyState": "complete",
+    "bodyText": "ASTHRAL\nSPACE HEALTH\nNetwork available · processing local\n\nASTRONAUT SUPPORT TOOL FOR HEALTH RISK ASSESSMENT AND LOGISTICS\n\nHealth intelligence,\nready beyond Earth.\n\nMonitor health, review evidence and explore a synthetic mission. Your personal records stay encrypted on this device.\n\nResearch prototype. Synthetic data only. Treatment execution is disabled; medical decisions require qualified human oversight.\n\nLoading the local clinical engine…\n\nOpen an existing local profile or recover a backup\nSign in on this device\n\nLocal profile credentials are not sent to a server. This is not an online account or sync service.\n\nEmail\nPassword\nShow\nSign in\nCreate an account\nExplore Synthetic Demo\n\nExplore ASTHRAL with example mission data. No account required.\n\nExplore Synthetic Demo\nDevice capabilities and real test results\nASTHRAL · On-device research prototype · Independent clinical and operational validation pending",
+    "explore": {
+      "exists": true,
+      "hidden": false,
+      "disabled": false,
+      "display": "block",
+      "visibility": "visible",
+      "opacity": "1",
+      "width": 216.109375,
+      "height": 46.796875,
+      "text": "Explore Synthetic Demo"
+    },
+    "scripts": [
+      {
+        "src": "http://127.0.0.1:8978/app.js",
+        "type": "module"
+      }
+    ]
+  },
+  "measurements": {
+    "engine_ready_s": 8.992,
+    "initial_transfer_bytes_observed": 407501,
+    "initial_loaded_resources": 37,
+    "mission_control_mount_s": 1.51,
+    "mission_control_resources": [
+      {
+        "name": "http://127.0.0.1:8978/vendor/orbit/three.module.js",
+        "transferSize": 0,
+        "decodedBodySize": 658900,
+        "duration": 0
+      },
+      {
+        "name": "http://127.0.0.1:8978/vendor/orbit/three.core.js",
+        "transferSize": 0,
+        "decodedBodySize": 1474799,
+        "duration": 0
+      },
+      {
+        "name": "http://127.0.0.1:8978/orbital-view.js",
+        "transferSize": 0,
+        "decodedBodySize": 44154,
+        "duration": 0
+      },
+      {
+        "name": "http://127.0.0.1:8978/orbital-engine.js",
+        "transferSize": 0,
+        "decodedBodySize": 11534,
+        "duration": 0
+      },
+      {
+        "name": "http://127.0.0.1:8978/vendor/orbit/earth-blue-marble-july-2004.webp",
+        "transferSize": 0,
+        "decodedBodySize": 153288,
+        "duration": 1.2099999785423279
+      }
+    ],
+    "orbital_resources_decoded_bytes": 2342675,
+    "orbital_resource_timing_note": "Resource Timing transferSize may be zero when served from cache or without transfer details; decodedBodySize is the observed decoded payload size. mission_control_mount_s is measured by wall clock from route activation through renderer-ready status."
+  },
+  "result": "PASS"
+}

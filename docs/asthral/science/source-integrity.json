@@ -4,18 +4,18 @@
   "files": [
     {
       "path": "docs/asthral/science/SPACE_HEALTH_EVIDENCE.md",
-      "bytes": 6660,
-      "sha256": "84d261826ce58ebc3c04c5e5a62561167bcc5c9d6c26787fdfec431d8b5592ca"
+      "bytes": 10710,
+      "sha256": "7b198071b9f8373f2a4fb86e5594390957212ab86eadaa2125a8cbe90fc0acc1"
     },
     {
       "path": "docs/asthral/science/space-health-summary.md",
-      "bytes": 6105,
-      "sha256": "2da68f8e31da1075c12a1ad6f3b54a75c98e817ac33925192f278752fc54f32b"
+      "bytes": 9459,
+      "sha256": "ba7aca43c82001dd97d860e3df72b8e27ecef699b9f87ea4152e0ef3033e3f4e"
     },
     {
       "path": "docs/asthral/science/sources.json",
-      "bytes": 10926,
-      "sha256": "e42ecdc364cdf433daccfac7e2a9eb4f616f17d5ed436822831418f972bdeed8"
+      "bytes": 35252,
+      "sha256": "acce2cda17fbf3cc44441b6ffa70b6abaef12760a953cb284f6979b1576151be"
     }
   ]
 }

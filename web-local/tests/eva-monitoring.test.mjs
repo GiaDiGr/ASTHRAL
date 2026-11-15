@@ -73,7 +73,9 @@ test('7. An explicitly marked synthetic training event does trigger the configur
 test('8. Without DONKI data the panel distinguishes "unavailable" from "no events"', () => {
   assert.equal(evaluateSpaceWeather({ state: 'NO_CACHE', events: [], fetched_at: null }, false).status, 'DATA_UNAVAILABLE');
   assert.equal(evaluateSpaceWeather(null, false).level, 'NO_DATA');
-  assert.equal(evaluateSpaceWeather({ state: 'CACHED', events: [], fetched_at: '2026-11-15T17:00:00Z' }, false).status, 'NO_EVENTS_RECORDED');
+  const noEvents = evaluateSpaceWeather({ state: 'CACHED', events: [], fetched_at: '2026-11-15T17:00:00Z' }, false);
+  assert.equal(noEvents.status, 'NO_EVENTS_RECORDED');
+  assert.equal(noEvents.level, 'CONTEXT', 'an empty query does not imply normal conditions');
   assert.equal(evaluateSpaceWeather({ state: 'STALE', events: [], fetched_at: '2026-11-10T17:00:00Z' }, false).stale, true);
 });
 
@@ -120,4 +122,31 @@ test('14. Offline demo is reproducible with no network access', () => {
     for (let k = 0; k < 2; k++) { const c = clock(), ctl = new EvaController({ scenarioId: 'critical_training', now: c.now, spaceWeather: noCache }); ctl.start(); run(ctl, c, 30); out.push(JSON.stringify(ctl.session.alerts)); }
     assert.equal(out[0], out[1]);
   } finally { globalThis.fetch = saved; }
+});
+
+test('Pause and resume preserve the simulated scenario clock and exclude paused wall time', () => {
+  const c = clock(), ctl = new EvaController({ now: c.now, spaceWeather: noCache });
+  ctl.start({ simulationStartUtc: '2026-11-15T17:30:00.000Z' });
+  assert.equal(ctl.step(), true);
+  assert.equal(ctl.session.temp_history[0].timestamp_utc, '2026-11-15T17:30:00.000Z');
+  c.tick(100); const elapsedBeforePause = ctl.elapsedSeconds();
+  assert.equal(ctl.pause(), true);
+  c.tick(900); assert.equal(ctl.step(), false); assert.equal(ctl.elapsedSeconds(), elapsedBeforePause);
+  assert.throws(() => ctl.setScenario('thermal_warning'), /active EVA/);
+  assert.equal(ctl.resume(), true);
+  c.tick(5); assert.equal(ctl.step(), true);
+  assert.equal(ctl.session.temp_history[1].timestamp_utc, '2026-11-15T17:31:00.000Z');
+  assert.ok(ctl.log.every(row => row.at_utc && row.time_basis));
+});
+
+test('handover report distinguishes wall clock duration from accelerated scenario time', () => {
+  const c = clock(), ctl = new EvaController({ now: c.now, spaceWeather: noCache });
+  ctl.start({ simulationStartUtc: '2026-11-15T17:45:00.000Z' });
+  ctl.step(); c.tick(4); ctl.step(); ctl.end();
+  const report = buildHandoverReport(ctl);
+  assert.equal(report.started_at_utc, '2026-11-15T18:00:00.000Z');
+  assert.equal(report.scenario_time_utc, '2026-11-15T17:46:00.000Z');
+  assert.equal(report.timing.event_time_basis, 'SCENARIO_UTC');
+  assert.equal(report.scenario_elapsed_s, 120);
+  assert.equal(report.duration_s, 4);
 });

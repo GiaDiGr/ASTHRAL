@@ -22,6 +22,16 @@ NASA's aerobic and muscle evidence report and bone-fracture report provide resea
 
 NASA nutrition evidence reports document spaceflight research questions and measured diet information. ASTHRAL separately uses USDA FDC Foundation Foods release 2026-10 for general composition estimates on a 424-food offline subset, when nutrient values are available. Portion scaling is based on a user-entered gram amount; estimates are not mission-food matches or measured intake. Missing source values remain null. ASTHRAL does not calculate nutrient adequacy, hydration targets, or supplement advice. See `sources.json` for USDA attribution and reuse metadata.
 
+### EVA thermal-sensing prototypes and evidence boundaries
+
+The T-EVA journal article is an engineering prototype report with upper-body sensor placements and garment/electronics testing; the authors describe additional MDRS and lunar-like testing as future work. It is not flight qualification, a clinical validation study, or a source of medical cutoffs ([Palacios et al., 2023](https://doi.org/10.14569/IJACSA.2023.0140969)). The 2024 IAF contribution describes an embedded spacesuit temperature-sensor network, wrist display, and mission-control link; its UTEC abstract likewise puts analog-environment testing in future work ([Palacios et al., 2024](https://doi.org/10.52202/078359-0051); [UTEC abstract](https://cris.utec.edu.pe/en/publications/biomedical-embedded-system-for-monitoring-temperature-in-spacesui/)). These sources support engineering context only.
+
+One component detail needs engineering follow-up: the T-EVA article describes a DS18B20 as an analog sensor with 10 mV/°C output, whereas the manufacturer datasheet defines the DS18B20 as a digital 1-Wire thermometer. Do not reuse the article's sensor specification until the exact component/probe and calibration method are reconciled ([manufacturer data sheet](https://www.analog.com/media/en/technical-documentation/data-sheets/DS18B20.pdf)). The second paper's institutional and proceedings records also disagree on co-author names/order; the original proceedings title page is needed for a final full-author citation.
+
+NASA Volume 2 Revision F is the active standard in the NASA catalogue as of this review date; OCHMO-TB-050 is a reference brief based on Volume 2 Revision E and does not supersede program requirements. Current controlled requirements and mission tailoring, not an ASTHRAL summary, determine applicability ([NASA standard record](https://standards.nasa.gov/node/237); [OCHMO technical brief](https://www.nasa.gov/wp-content/uploads/2025/09/ochmo-tb-050-spacesuits.pdf)). A NASA simulated-EVA temperature-prediction study used heart rate and metabolic rate and reports development/test datasets of n=6 each; the result is specific to its simulator data and does not establish flight or clinical validation ([NASA NTRS](https://ntrs.nasa.gov/citations/20230016649)).
+
+Barreto et al.'s 2023 micro-review concerns space agriculture and mechatronics for space food production. It should be cited in agriculture/mechatronics discussions only; it is not evidence for EVA biomedical monitoring or thermal criteria ([IEEE DOI](https://doi.org/10.1109/INOCON57975.2023.10101312); [UTEC institutional metadata](https://cris.utec.edu.pe/en/publications/space-agriculture-and-mechatronic-technologies-micro-review-and-m/)).
+
 ## Exercise example scope
 
 ASTHRAL's generic exercise examples are project-authored interaction content, not NASA training-protocol content. They do not prescribe frequency, duration, intensity, sets, repetitions, equipment, progression or rehabilitation. Users enter their own activity only; mission restrictions and clinician authorization remain external. Pose tracking is unavailable without a verified local model and runtime.
@@ -37,6 +47,12 @@ Absorbed dose (Gy) and dose equivalent/effective dose (Sv) remain separate quant
 ## Source inventory and reuse
 
 Machine-readable citation and review metadata are in `sources.json`. The redistributable content in ASTHRAL is limited to project-authored summaries and bibliographic metadata. Full NASA PDFs, NASA standards, journal papers and third-party contents remain at their official source links. Redistribution permission has not been asserted where not explicitly determined. `source-integrity.json` hashes the local summary and registry; they do not hash or authenticate remote content.
+
+### Bibliography inclusion and display contract
+
+The registry accepts HTTPS references only from the reviewed NASA/USDA domains and the explicitly allowlisted DOI resolver, IJACSA publisher, UTEC institutional repository, IAF proceedings distributor, IEEE Xplore, and Analog Devices. Each entry carries a stable source ID, publication metadata, suggested citation, evidence category, mapped summary claims, module scope, reuse status, and known limitations where available. The References view displays the complete registry; prevention, radiation, and space-weather pages filter by module tags so an agriculture or EVA paper is not presented as support for an unrelated claim. DOI resolution and peer-review status are bibliographic signals, not proof that a study is clinically applicable or operationally validated.
+
+The T-EVA share URL is not used as a citation; the canonical DOI and publisher PDF are listed. The 2024 IAF record is cited with “et al.” because the UTEC and proceedings product metadata disagree on co-author names/order; verify the original proceedings title page before publishing the full author list. The 2023 Barreto micro-review is tagged for agriculture/mechatronics only. NASA's current Volume 2 Revision F record is kept separate from OCHMO-TB-050, which is based on Revision E and explicitly reference-only.
 
 ## Evidence limitations
 

@@ -7,6 +7,15 @@ sys.path.insert(0,str(ROOT/'web-local'/'src'))
 import browser_bridge as bridge
 
 
+def kss_payload(**updates):
+    payload={'entry_type':'WELLBEING','occurred_at':'2026-11-15T10:00:00Z','label':'NeuroGuard KSS',
+        'neuroguard':{'task':'KSS','score':4,'consent_given':True,
+            'consent_version':'ASTHRAL_NEUROGUARD_CONSENT_1','consented_at':'2026-11-15T09:00:00Z',
+            'task_context':'synthetic software test'}}
+    payload.update(updates)
+    return payload
+
+
 @pytest.fixture(autouse=True)
 def fresh_profile():
     bridge.dispatch('init_profile',{'id':'crew-local-test'})
@@ -87,3 +96,82 @@ def test_radiation_preview_validates_without_persistence_and_commit_rechecks_dup
     bridge.dispatch('radiation_import',{'records':[raw]})
     with pytest.raises(ValueError,match='RADIATION_IMPORT_DUPLICATE_ROW_1'):
         bridge.dispatch('radiation_preview',{'records':[raw]})
+
+
+def test_neuroguard_sleep_reference_is_resolved_from_same_profile_and_type():
+    sleep=bridge.dispatch('prevention_add',{'entry_type':'SLEEP','occurred_at':'2026-11-15T06:00:00Z',
+        'duration_minutes':420,'subjective_quality_1_5':4,'synthetic_fixture':True})
+    payload={'entry_type':'WELLBEING','occurred_at':'2026-11-15T10:00:00Z','label':'NeuroGuard fatigue',
+        'neuroguard':{'task':'FATIGUE_CHECK','mental_fatigue_0_10':3,'physical_fatigue_0_10':5,
+            'linked_sleep_entry_id':sleep['id'],'consent_given':True,
+            'consent_version':'ASTHRAL_NEUROGUARD_CONSENT_1','consented_at':'2026-11-15T09:00:00Z',
+            'task_context':'synthetic software test'}}
+    fatigue=bridge.dispatch('prevention_add',payload)
+    assert fatigue['neuroguard']['linked_sleep_summary']=={'id':sleep['id'],'occurred_at':sleep['occurred_at'],
+        'duration_minutes':420,'subjective_quality_1_5':4}
+    with pytest.raises(ValueError,match='LINKED_SLEEP_ENTRY_NOT_FOUND_FOR_PROFILE'):
+        bridge.dispatch('prevention_add',{**payload,'neuroguard':{**payload['neuroguard'],'linked_sleep_entry_id':'foreign-or-missing'}})
+    bridge.store.put('prevention_entry','foreign-sleep',{'id':'foreign-sleep','subject_id':'another-crew',
+        'entry_type':'SLEEP','duration_minutes':500},'test')
+    with pytest.raises(ValueError,match='LINKED_SLEEP_ENTRY_NOT_FOUND_FOR_PROFILE'):
+        bridge.dispatch('prevention_add',{**payload,'neuroguard':{**payload['neuroguard'],'linked_sleep_entry_id':'foreign-sleep'}})
+    assert bridge.dispatch('history',{})['audit_valid'] is True
+
+
+def test_neuroguard_delete_is_scoped_to_neuroguard_and_appends_valid_audit_event():
+    sleep=bridge.dispatch('prevention_add',{'entry_type':'SLEEP','occurred_at':'2026-11-15T06:00:00Z','duration_minutes':420})
+    ordinary=bridge.dispatch('prevention_add',{'entry_type':'WELLBEING','occurred_at':'2026-11-15T08:00:00Z',
+        'mood_rating_1_5':3,'note':'legacy voluntary record'})
+    session=bridge.dispatch('prevention_add',kss_payload())
+    with pytest.raises(ValueError,match='ONLY_NEUROGUARD_SESSIONS_CAN_BE_DELETED_HERE'):
+        bridge.dispatch('prevention_delete',{'id':sleep['id']})
+    with pytest.raises(ValueError,match='ONLY_NEUROGUARD_SESSIONS_CAN_BE_DELETED_HERE'):
+        bridge.dispatch('prevention_delete',{'id':ordinary['id']})
+    result=bridge.dispatch('prevention_delete',{'id':session['id']})
+    assert result=={'deleted_id':session['id'],'audit_valid':True}
+    remaining=bridge.dispatch('prevention_list',{})['entries']
+    assert {row['id'] for row in remaining}=={sleep['id'],ordinary['id']}
+    assert bridge.store.verify() is True
+    events=[__import__('json').loads(row['payload']) for row in bridge.store.db.execute('SELECT payload FROM audit')]
+    assert events[-1]['event']=='DELETE_PREVENTION_ENTRY'
+    assert events[-1]['data']['id']==session['id']
+    with pytest.raises(KeyError):
+        bridge.dispatch('prevention_delete',{'id':session['id']})
+
+
+def test_completed_eva_handover_is_synthetic_audited_and_survives_profile_export():
+    started='2026-11-15T10:00:00Z';ended='2026-11-15T10:00:12Z'
+    payload={'id':'eva-demo-unique-001','mission_id':'demo-mission','eva_id':'demo-eva-001',
+        'mode':'SIMULATION','scenario_id':'critical_training','started_at_utc':started,
+        'ended_at_utc':ended,'final_state':'critical','training_condition':True,
+        'report':{'report_type':'EVA Medical Handover Report','mode':'SIMULATION',
+            'delivery_status':'PREPARED_LOCALLY_NOT_SENT','mission_id':'demo-mission','eva_id':'demo-eva-001',
+            'scenario':{'id':'critical_training'},'training_condition':True,'final_state':'critical',
+            'scenario_time_utc':started},
+        'session':{'state':'completed','scenario_time_utc':started,'alerts':[],'log':[]}}
+    saved=bridge.dispatch('eva_activity_add',payload)
+    assert saved['stored'] is True and saved['audit_valid'] is True
+    history=bridge.dispatch('history',{})
+    assert history['eva_activities'][0]['subject_id']=='crew-local-test'
+    assert history['eva_activities'][0]['mode']=='SIMULATION'
+    assert history['audit_valid'] is True
+    backup=bridge.dispatch('serialize',{})
+    bridge.dispatch('init_profile',{'id':'crew-local-test','database':backup})
+    assert bridge.dispatch('history',{})['eva_activities'][0]['eva_id']=='demo-eva-001'
+    with pytest.raises(ValueError,match='PRIVATE_RECORD_SCOPE_MISMATCH'):
+        bridge.dispatch('init_profile',{'id':'another-owner','database':bridge.dispatch('serialize',{})})
+
+
+def test_eva_record_contract_rejects_live_data_and_unfinished_sessions():
+    payload={'id':'eva-demo-unique-002','mission_id':'demo-mission','eva_id':'demo-eva-002',
+        'mode':'SIMULATION','scenario_id':'nominal','started_at_utc':'2026-11-15T10:00:00Z',
+        'ended_at_utc':'2026-11-15T10:00:01Z','final_state':'active','training_condition':False,
+        'report':{'report_type':'EVA Medical Handover Report','mode':'LIVE',
+            'delivery_status':'PREPARED_LOCALLY_NOT_SENT','mission_id':'demo-mission','eva_id':'demo-eva-002',
+            'scenario':{'id':'nominal'},'training_condition':False,'final_state':'active','scenario_time_utc':'2026-11-15T10:00:00Z'},
+        'session':{'state':'active','scenario_time_utc':'2026-11-15T10:00:00Z'}}
+    with pytest.raises(ValueError,match='EVA_REPORT_MUST_BE_LOCAL_SIMULATION'):
+        bridge.dispatch('eva_activity_add',payload)
+    payload['report']['mode']='SIMULATION'
+    with pytest.raises(ValueError,match='EVA_ACTIVITY_MUST_BE_COMPLETED_BEFORE_STORAGE'):
+        bridge.dispatch('eva_activity_add',payload)

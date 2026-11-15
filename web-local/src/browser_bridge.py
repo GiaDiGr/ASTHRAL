@@ -51,7 +51,7 @@ def dispatch(action, data):
                 raise ValueError('LOCAL_DATABASE_INTEGRITY_FAILED')
             if store.db.execute('PRAGMA user_version').fetchone()[0] != 1:
                 raise ValueError('LOCAL_DATABASE_VERSION_UNSUPPORTED')
-            for kind in ('browser_evaluation','voice_observation','research_stats','finding','monitoring_run','monitoring_event','episode','baseline','trend','clinical_evaluation','management_record','prevention_entry','radiation_record'):
+            for kind in ('browser_evaluation','voice_observation','research_stats','finding','monitoring_run','monitoring_event','episode','baseline','trend','clinical_evaluation','management_record','prevention_entry','radiation_record','eva_activity'):
                 if any(row.get('subject_id')!=requested_owner for row in store.all(kind)):
                     raise ValueError('PRIVATE_RECORD_SCOPE_MISMATCH')
             for row in store.all('measurement'):
@@ -208,14 +208,40 @@ def dispatch(action, data):
     if action == 'history':
         return {'evaluations':store.all('browser_evaluation'),'observations':store.all('voice_observation'),'statistics':store.all('research_stats'),
                 'prevention_entries':store.all('prevention_entry'),'radiation_records':store.all('radiation_record'),
+                'eva_activities':store.all('eva_activity'),
+                'audit_valid':store.verify(),'checkpoint':store.checkpoint()}
+    if action == 'eva_activity_add':
+        from vigile.eva_records import EvaActivityRecord
+        record=EvaActivityRecord.model_validate({**data,'subject_id':owner})
+        payload=record.model_dump(mode='json')
+        store.put('eva_activity',record.id,payload,'local_profile')
+        return {'id':record.id,'eva_id':record.eva_id,'stored':True,'mode':record.mode,
                 'audit_valid':store.verify(),'checkpoint':store.checkpoint()}
     if action == 'prevention_add':
         from vigile.prevention import normalize_entry
         record=normalize_entry(data,owner);record['id']='prevention-'+uuid4().hex
+        neuro=record.get('neuroguard')
+        sleep_id=neuro.get('linked_sleep_entry_id') if isinstance(neuro,dict) else None
+        if sleep_id is not None:
+            linked=next((row for row in store.all('prevention_entry') if row.get('id')==sleep_id),None)
+            if linked is None or linked.get('subject_id')!=owner or linked.get('entry_type')!='SLEEP':
+                raise ValueError('LINKED_SLEEP_ENTRY_NOT_FOUND_FOR_PROFILE')
+            neuro['linked_sleep_summary']={key:linked.get(key) for key in ('id','occurred_at','duration_minutes','subjective_quality_1_5')}
         store.put('prevention_entry',record['id'],record,'local_profile')
         return record
     if action == 'prevention_list':
         return {'entries':store.all('prevention_entry'),'audit_valid':store.verify()}
+    if action == 'prevention_delete':
+        identifier=data.get('id')
+        if not isinstance(identifier,str) or not 1<=len(identifier)<=160:
+            raise ValueError('INVALID_PREVENTION_ENTRY_ID')
+        record=store.get('prevention_entry',identifier)
+        if record.get('subject_id')!=owner:
+            raise ValueError('PRIVATE_RECORD_SCOPE_MISMATCH')
+        if record.get('entry_type')!='WELLBEING' or not isinstance(record.get('neuroguard'),dict):
+            raise ValueError('ONLY_NEUROGUARD_SESSIONS_CAN_BE_DELETED_HERE')
+        store.delete('prevention_entry',identifier,'local_profile')
+        return {'deleted_id':identifier,'audit_valid':store.verify()}
     if action == 'radiation_add':
         from vigile.dosimetry import normalize_record
         record=normalize_record(data,owner)

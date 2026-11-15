@@ -1,22 +1,27 @@
 import {createRequire} from 'node:module';
 import {createHash} from 'node:crypto';
 import {readFile,writeFile} from 'node:fs/promises';
-import {fileURLToPath} from 'node:url';
+import {fileURLToPath,pathToFileURL} from 'node:url';
+import {resolve,sep} from 'node:path';
 import test from 'node:test';
 import assert from 'node:assert/strict';
 
 const require=createRequire(import.meta.url);
-const {loadPyodide}=require('../dist/runtime/pyodide.js');
-const runtime=await loadPyodide({indexURL:fileURLToPath(new URL('../dist/runtime/',import.meta.url))});
+const DIST=resolve(process.env.ASTHRAL_TEST_DIST??fileURLToPath(new URL('../dist/',import.meta.url)));
+const distFile=relative=>pathToFileURL(resolve(DIST,relative));
+const pyodideModule=require(resolve(DIST,'runtime','pyodide.js'));
+const loadPyodide=pyodideModule.loadPyodide??globalThis.loadPyodide;
+if(typeof loadPyodide!=='function')throw Error('PYODIDE_LOAD_FUNCTION_UNAVAILABLE');
+const runtime=await loadPyodide({indexURL:fileURLToPath(pathToFileURL(resolve(DIST,'runtime')+sep))});
 await runtime.loadPackage(['pydantic','sqlite3']);
-runtime.unpackArchive(new Uint8Array(await readFile(new URL('../dist/engine.zip',import.meta.url))),'zip',{extractDir:'/app'});
+runtime.unpackArchive(new Uint8Array(await readFile(distFile('engine.zip'))),'zip',{extractDir:'/app'});
 await runtime.runPythonAsync("import sys,json\nsys.path.insert(0,'/app')\nimport browser_bridge");
 async function call(action,data={}) {
   runtime.globals.set('_action',action);
   runtime.globals.set('_input',JSON.stringify(data));
   return JSON.parse(await runtime.runPythonAsync("json.dumps(browser_bridge.dispatch(_action,json.loads(_input)))"));
 }
-const cases=JSON.parse(await readFile(new URL('../dist/parity-cases.json',import.meta.url),'utf8'));
+const cases=JSON.parse(await readFile(distFile('parity-cases.json'),'utf8'));
 let parity;
 test('all browser WASM clinical outputs match CPython reference fixtures exactly',async()=>{
   parity=await call('parity',{cases});
@@ -38,7 +43,7 @@ test('SQLite serialization preserves audits and blocks foreign profile recovery'
   assert.equal((await call('history')).evaluations.length,0);
 });
 test('reference baseline and trend calculations run in real WASM',async()=>{
-  const samples=JSON.parse(await readFile(new URL('../dist/statistics-cases.json',import.meta.url),'utf8'));
+  const samples=JSON.parse(await readFile(distFile('statistics-cases.json'),'utf8'));
   assert.ok(samples.length);
   for(const sample of samples) {
     const result=await call('statistics',{sample});
@@ -64,6 +69,7 @@ test('complete monitoring cycle matches native reference and preserves episode/f
   await call('init_profile',{id:'profile-monitor-test'});
   let result;
   for(const step of fixture.steps)result=await call(step.action,step.data);
+  assert.deepEqual(result,fixture.expected,'Pyodide monitoring result must match the native Python oracle in full');
   assert.equal(result.output_hash,fixture.expected.output_hash);
   assert.equal(result.clinical_evaluations.DKA.results.DKA.diagnostic_status,'CRITERIA_MET');
   assert.ok(Object.keys(result.episode_ids).length);
@@ -88,7 +94,7 @@ test('browser acquisition rejects foreign ownership and immutable device changes
   await assert.rejects(call('ingest',input),/IMMUTABLE_DEVICE_CONFLICT/);
 });
 test('expanded approved local corpus verifies provenance and supports source-specific retrieval',async()=>{
-  const corpus=JSON.parse(await readFile(new URL('../dist/corpus.json',import.meta.url),'utf8'));
+  const corpus=JSON.parse(await readFile(distFile('corpus.json'),'utf8'));
   assert.ok(corpus.blocks.length>6);assert.ok(corpus.documents.length>1);
   for(const question of ['hypoglycemia level 2 glucose 54','DKA potassium insulin bicarbonate','microgravity muscle bone health']){
     const result=await call('search',{corpus,question,limit:4});
