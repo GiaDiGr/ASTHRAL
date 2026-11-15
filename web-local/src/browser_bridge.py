@@ -51,7 +51,7 @@ def dispatch(action, data):
                 raise ValueError('LOCAL_DATABASE_INTEGRITY_FAILED')
             if store.db.execute('PRAGMA user_version').fetchone()[0] != 1:
                 raise ValueError('LOCAL_DATABASE_VERSION_UNSUPPORTED')
-            for kind in ('browser_evaluation','voice_observation','research_stats','finding','monitoring_run','monitoring_event','episode','baseline','trend','clinical_evaluation','management_record'):
+            for kind in ('browser_evaluation','voice_observation','research_stats','finding','monitoring_run','monitoring_event','episode','baseline','trend','clinical_evaluation','management_record','prevention_entry','radiation_record'):
                 if any(row.get('subject_id')!=requested_owner for row in store.all(kind)):
                     raise ValueError('PRIVATE_RECORD_SCOPE_MISMATCH')
             for row in store.all('measurement'):
@@ -207,7 +207,37 @@ def dispatch(action, data):
         return record
     if action == 'history':
         return {'evaluations':store.all('browser_evaluation'),'observations':store.all('voice_observation'),'statistics':store.all('research_stats'),
+                'prevention_entries':store.all('prevention_entry'),'radiation_records':store.all('radiation_record'),
                 'audit_valid':store.verify(),'checkpoint':store.checkpoint()}
+    if action == 'prevention_add':
+        from vigile.prevention import normalize_entry
+        record=normalize_entry(data,owner);record['id']='prevention-'+uuid4().hex
+        store.put('prevention_entry',record['id'],record,'local_profile')
+        return record
+    if action == 'prevention_list':
+        return {'entries':store.all('prevention_entry'),'audit_valid':store.verify()}
+    if action == 'radiation_add':
+        from vigile.dosimetry import normalize_record
+        record=normalize_record(data,owner)
+        for prior in store.all('radiation_record'):
+            if (prior['quantity_kind'],prior.get('instrument_id'),prior['timestamp'],prior['mission_segment'],prior['location']) == (record['quantity_kind'],record.get('instrument_id'),record['timestamp'],record['mission_segment'],record['location']):
+                raise ValueError('DUPLICATE_RADIATION_OBSERVATION')
+        record['id']='radiation-'+uuid4().hex;record['source_kind']='SELF_ENTERED_RECORD';record['synthetic_data']=record['mode']=='SYNTHETIC'
+        store.put('radiation_record',record['id'],record,'local_profile')
+        return record
+    if action == 'radiation_list':
+        from vigile.dosimetry import integrate_rate,cumulative_counter_segments
+        records=store.all('radiation_record')
+        return {'records':records,'sensor_verified_records':0,'rate_integrations':{},
+                'counter_review':cumulative_counter_segments(records),'audit_valid':store.verify()}
+    if action == 'radiation_integrate':
+        from vigile.dosimetry import integrate_rate
+        quantity_kind=data.get('quantity_kind')
+        if not isinstance(quantity_kind,str) or quantity_kind not in {'ABSORBED_DOSE_RATE','DOSE_EQUIVALENT_RATE'}:raise ValueError('RATE_QUANTITY_REQUIRED')
+        records=[row for row in store.all('radiation_record') if row['quantity_kind']==quantity_kind]
+        result=integrate_rate(records,data.get('max_gap_seconds'))
+        result.update({'source':'COMPUTED_FROM_STORED_MEASURED_READINGS','clinical_interpretation':'NOT_PROVIDED','execution':'BLOCKED'})
+        return result
     if action == 'parse_observation':
         from health_voice_parser import parse
         return {'observation':parse(data['text'])}

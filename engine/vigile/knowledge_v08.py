@@ -11,7 +11,8 @@ SOURCES=[
  ('docs/v07/README.md','IMPLEMENTATION_DOCUMENTATION_NOT_GUIDELINE','0.7.0'),
  ('docs/v07/CONTRACTS.md','IMPLEMENTATION_CONTRACT','0.7.0'),
  ('engine/vigile/clinical_knowledge/v07-extension.json','IMPLEMENTED_CRITERION_NOT_ORIGINAL_ARTICLE','2026.1'),
- ('docs/v08/sources/ADA2026-short-excerpt.txt','PRIMARY_SOURCE_SHORT_EXCERPT','2026-table-6.4')]
+ ('docs/v08/sources/ADA2026-short-excerpt.txt','PRIMARY_SOURCE_SHORT_EXCERPT','2026-table-6.4'),
+ ('docs/asthral/science/space-health-summary.md','ASTHRAL_CURATED_PRIMARY_SOURCE_SUMMARY','2026-11-15')]
 INJECTION=re.compile(r'ignore (?:all |previous |the )?(?:instructions|rules)|ignora.{0,30}(?:reglas|instrucciones)|system prompt|reveal.{0,30}(?:secret|token)|<script|\[INST\]|role\s*:\s*system',re.I)
 GROUPS={
  'coverage':'coverage cobertura intervals intervalos accumulated acumulada acumulado',

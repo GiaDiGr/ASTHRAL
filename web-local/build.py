@@ -11,10 +11,11 @@ import sys
 import ssl
 import zipfile
 import httpx
+import os
 
 ROOT=Path(__file__).resolve().parents[1]
 sys.path.insert(0,str(ROOT/'engine'))
-OUT=ROOT/'web-local/build-output-unified-20261115b'
+OUT=Path(os.environ.get('ASTHRAL_BUILD_OUTPUT', str(ROOT/'web-local/build-output-unified-20261115b'))).resolve()
 VENDOR=ROOT/'web-local/vendor'
 VERSION='0.29.3'
 BASE=f'https://cdn.jsdelivr.net/pyodide/v{VERSION}/full/'
@@ -118,6 +119,7 @@ def main():
     OUT.mkdir(exist_ok=True)
     selected=get_runtime()
     shutil.copytree(ROOT/'web-local/src',OUT,dirs_exist_ok=True,ignore=shutil.ignore_patterns('browser_bridge.py','browser_monitoring.py'))
+    shutil.copytree(ROOT/'docs/asthral/science',OUT/'research',dirs_exist_ok=True)
     (OUT/'runtime').mkdir(exist_ok=True)
     runtime_lock=json.loads((VENDOR/'pyodide-lock.json').read_bytes())
     runtime_files=['pyodide.js','pyodide.asm.js','pyodide.asm.wasm','python_stdlib.zip','pyodide-lock.json']+[runtime_lock['packages'][key]['file_name'] for key in selected]

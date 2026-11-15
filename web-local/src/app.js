@@ -8,7 +8,9 @@ import {installPublicFeatures} from './public-science.js';
 let clearPublicFeatures=()=>{};
 import {cachePublicResources} from './public-resources.js';
 import {installExperience,human} from './experience.js';
+import {installMissionSupport} from './mission-support.js';
 let experience=null;
+let missionSupport=null;
 const $=id=>document.getElementById(id);
 const runtimeState={ready:false,seconds:null};
 const operationMetrics=[];
@@ -142,6 +144,7 @@ async function entered() {
   $('migration-email-save').disabled=!!vault.temporary||!!vault.row.email_box;
   if(vault.row?.email_box)$('migration-status').textContent='An encrypted local email sign-in is already associated with this profile.';
   else if(!vault.temporary)$('migration-status').textContent='Legacy profile unlocked. Add an email sign-in without changing the original passphrase or encryption key.';
+  await missionSupport?.refresh();
 }
 async function persist() {
   if(!vault.temporary)await vault.save(await call('serialize'));
@@ -157,7 +160,9 @@ async function history() {
   $('emergency-banner').textContent=latest?latest.output.urgency+' · Last saved synthetic assessment · Human medical review required · Treatment blocked':'';
   const rows=[
     ...data.evaluations.map(row=>({label:row.output.urgency+' · '+(row.snapshot.request.condition_id||'Differential'),detail:row.output})),
-    ...data.observations.map(row=>({label:row.text,detail:row}))
+    ...data.observations.map(row=>({label:row.text,detail:row})),
+    ...(data.prevention_entries??[]).map(row=>({label:row.entry_type.replaceAll('_',' '),detail:row})),
+    ...(data.radiation_records??[]).map(row=>({label:row.quantity_kind.replaceAll('_',' ')+' · '+row.value+' '+row.unit,detail:row}))
   ];
   $('history-list').replaceChildren();
   for(const row of rows.reverse()) {
@@ -172,11 +177,13 @@ async function history() {
   if(!rows.length) $('history-list').append(element('p','No local observations or evaluations saved.'));
   $('profile-status').textContent='Unlocked · audit '+(data.audit_valid?'verified':'FAILED');
   await recordedDashboard(data,epoch);
+  await missionSupport?.refresh();
 }
 async function lock() {
   profileEpoch++;
   operationMetrics.length=0;
   experience?.clear();
+  missionSupport?.clear();
   clearPublicFeatures();
   stopRecording();
   vault?.lock();
@@ -858,6 +865,7 @@ $('activate-update').onclick=safe(async()=>{
   registration.waiting.postMessage({action:'ACTIVATE_UPDATE'});
 });
 experience=await installExperience({call,persist});
+missionSupport=installMissionSupport({call,persist,status,isTemporary:()=>!!vault?.temporary,mode:()=>$('mode')?.value??'FULL'});
 if(vault&&cases.length){experience.refresh();await experience.update();await history();}
 clearPublicFeatures=await installPublicFeatures();
 

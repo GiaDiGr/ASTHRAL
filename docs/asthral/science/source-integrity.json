@@ -1,0 +1,21 @@
+{
+  "schema_version": "1.0.0",
+  "algorithm": "SHA-256",
+  "files": [
+    {
+      "path": "docs/asthral/science/SPACE_HEALTH_EVIDENCE.md",
+      "bytes": 5948,
+      "sha256": "5ff0075d360b43c90875eeacdc4a4d4553c75ac706e39a0708a3ccad981f6161"
+    },
+    {
+      "path": "docs/asthral/science/space-health-summary.md",
+      "bytes": 5640,
+      "sha256": "adc38ce96761a022b5f7e266682c5ef1e0d78c428c6421065501d484fb8fb2f0"
+    },
+    {
+      "path": "docs/asthral/science/sources.json",
+      "bytes": 8991,
+      "sha256": "cc1d496a5c6671984e79c0ed51a9d60b02e67b98a2f355862802f6a6d9cf5a04"
+    }
+  ]
+}
