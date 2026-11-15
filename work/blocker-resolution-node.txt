@@ -1,0 +1,155 @@
+(node:256412) [MODULE_TYPELESS_PACKAGE_JSON] Warning: Module type of file:///C:/Users/Gianni/Documents/Codex/ASTHRAL_AUTONOMOUS_MISSION_20261115/web-local/src/exercise.js is not specified and it doesn't parse as CommonJS.
+Reparsing as ES module because module syntax was detected. This incurs a performance overhead.
+To eliminate this warning, add "type": "module" to \\?\C:\Users\Gianni\Documents\Codex\ASTHRAL_AUTONOMOUS_MISSION_20261115\web-local\package.json.
+(Use `node --trace-warnings ...` to show where the warning was created)
+✔ exercise catalog covers resistance, aerobic, mobility and coordination with useful safe instructions (3.1362ms)
+✔ exercise session timer accumulates only active segments and pause/resume does not rewrite elapsed history (2.227ms)
+✔ sleep interval validates timezone-aware ordering and maximum duration (0.4076ms)
+✔ longitudinal summaries deduplicate session checkpoints and label data provenance (10.9788ms)
+✔ daily nutrition estimates preserve missing nutrients instead of summing them as zero (0.5635ms)
+✔ daily hydration totals aggregate entries and keep mixed data provenance visible (0.3248ms)
+✔ perceived exertion is optional and bounded as a user self-report (0.2077ms)
+✔ browser assistant forwards the original response schema to the model runtime (40.7267ms)
+✔ typed-fact generation preserves original prepared schema, messages and token budget (2.173ms)
+(node:26868) [MODULE_TYPELESS_PACKAGE_JSON] Warning: Module type of file:///C:/Users/Gianni/Documents/Codex/ASTHRAL_AUTONOMOUS_MISSION_20261115/web-local/src/longitudinal-views.js is not specified and it doesn't parse as CommonJS.
+Reparsing as ES module because module syntax was detected. This incurs a performance overhead.
+To eliminate this warning, add "type": "module" to \\?\C:\Users\Gianni\Documents\Codex\ASTHRAL_AUTONOMOUS_MISSION_20261115\web-local\package.json.
+(Use `node --trace-warnings ...` to show where the warning was created)
+✔ radiation plots never pool quantity, unit, source mode, quality or instrument (2.122ms)
+(node:181956) [MODULE_TYPELESS_PACKAGE_JSON] Warning: Module type of file:///C:/Users/Gianni/Documents/Codex/ASTHRAL_AUTONOMOUS_MISSION_20261115/web-local/src/space-weather.js is not specified and it doesn't parse as CommonJS.
+Reparsing as ES module because module syntax was detected. This incurs a performance overhead.
+To eliminate this warning, add "type": "module" to \\?\C:\Users\Gianni\Documents\Codex\ASTHRAL_AUTONOMOUS_MISSION_20261115\web-local\package.json.
+(Use `node --trace-warnings ...` to show where the warning was created)
+✔ DONKI queries only the official public API with fixed dates and no profile context (35.4635ms)
+✔ DONKI permits empty arrays, reports partial outages, and fails only if all endpoints fail (2.9847ms)
+✔ DONKI rejects malformed windows and caps query span (0.3968ms)
+✔ DONKI trusts only exact official event links and retains fixed offline historical fixture separately (2.0664ms)
+✔ only bounded public DONKI metadata is stored in local public cache (1.0853ms)
+✔ cached NASA events are explicitly available offline and stale data never implies current conditions (0.2685ms)
+✔ WebLLM caches receive exact verified public bytes before runtime initialization (33.5463ms)
+✔ corrupted approved bytes block runtime initialization instead of seeding model caches (3.1671ms)
+(node:214224) [MODULE_TYPELESS_PACKAGE_JSON] Warning: Module type of file:///C:/Users/Gianni/Documents/Codex/ASTHRAL_AUTONOMOUS_MISSION_20261115/web-local/src/network-audit.js is not specified and it doesn't parse as CommonJS.
+Reparsing as ES module because module syntax was detected. This incurs a performance overhead.
+To eliminate this warning, add "type": "module" to \\?\C:\Users\Gianni\Documents\Codex\ASTHRAL_AUTONOMOUS_MISSION_20261115\web-local\package.json.
+(Use `node --trace-warnings ...` to show where the warning was created)
+✔ network observer blocks synthetic private data and writes before transport (23.9748ms)
+(node:247916) [MODULE_TYPELESS_PACKAGE_JSON] Warning: Module type of file:///C:/Users/Gianni/Documents/Codex/ASTHRAL_AUTONOMOUS_MISSION_20261115/web-local/src/offline-install.js is not specified and it doesn't parse as CommonJS.
+Reparsing as ES module because module syntax was detected. This incurs a performance overhead.
+To eliminate this warning, add "type": "module" to \\?\C:\Users\Gianni\Documents\Codex\ASTHRAL_AUTONOMOUS_MISSION_20261115\web-local\package.json.
+(Use `node --trace-warnings ...` to show where the warning was created)
+✔ offline installation follows actual worker state transitions and reports failures (22.0495ms)
+✔ offline success requires an active worker cache-verification acknowledgment (30.4385ms)
+✔ existing active worker plus waiting update never produces a false ready result (0.7325ms)
+✔ storage permission failure does not discard a verified offline installation (0.7894ms)
+✔ cache verification failure cannot be reported as offline readiness (0.7379ms)
+(node:39716) [MODULE_TYPELESS_PACKAGE_JSON] Warning: Module type of file:///C:/Users/Gianni/Documents/Codex/ASTHRAL_AUTONOMOUS_MISSION_20261115/web-local/src/profile-input.js is not specified and it doesn't parse as CommonJS.
+Reparsing as ES module because module syntax was detected. This incurs a performance overhead.
+To eliminate this warning, add "type": "module" to \\?\C:\Users\Gianni\Documents\Codex\ASTHRAL_AUTONOMOUS_MISSION_20261115\web-local\package.json.
+(Use `node --trace-warnings ...` to show where the warning was created)
+✔ an empty persistent profile cannot inherit a synthetic diagnostic scenario (0.9951ms)
+✔ saved inputs remain historical, owner-bound and independent from the view draft (1.057ms)
+✔ special confirmation paths and nested OR branches expose original supported input names (0.2483ms)
+✔ derived criteria offer original raw dependencies and never editable derived results (0.1125ms)
+(node:327008) [MODULE_TYPELESS_PACKAGE_JSON] Warning: Module type of file:///C:/Users/Gianni/Documents/Codex/ASTHRAL_AUTONOMOUS_MISSION_20261115/web-local/src/public-json.js is not specified and it doesn't parse as CommonJS.
+Reparsing as ES module because module syntax was detected. This incurs a performance overhead.
+To eliminate this warning, add "type": "module" to \\?\C:\Users\Gianni\Documents\Codex\ASTHRAL_AUTONOMOUS_MISSION_20261115\web-local\package.json.
+(Use `node --trace-warnings ...` to show where the warning was created)
+✔ public asset JSON recovers transient transfer and decode failures with a bounded budget (0.8238ms)
+✔ public asset helper never accepts external/private paths and exhausts failures (1.0323ms)
+(node:304876) [MODULE_TYPELESS_PACKAGE_JSON] Warning: Module type of file:///C:/Users/Gianni/Documents/Codex/ASTHRAL_AUTONOMOUS_MISSION_20261115/web-local/src/public-resources.js is not specified and it doesn't parse as CommonJS.
+Reparsing as ES module because module syntax was detected. This incurs a performance overhead.
+To eliminate this warning, add "type": "module" to \\?\C:\Users\Gianni\Documents\Codex\ASTHRAL_AUTONOMOUS_MISSION_20261115\web-local\package.json.
+(Use `node --trace-warnings ...` to show where the warning was created)
+✔ optional runtime updates evict stale public bytes and preserve JavaScript MIME (44.0816ms)
+✔ unverified replacement bytes never enter the optional cache (2.6197ms)
+(node:187036) [MODULE_TYPELESS_PACKAGE_JSON] Warning: Module type of file:///C:/Users/Gianni/Documents/Codex/ASTHRAL_AUTONOMOUS_MISSION_20261115/web-local/src/public-science.js is not specified and it doesn't parse as CommonJS.
+Reparsing as ES module because module syntax was detected. This incurs a performance overhead.
+To eliminate this warning, add "type": "module" to \\?\C:\Users\Gianni\Documents\Codex\ASTHRAL_AUTONOMOUS_MISSION_20261115\web-local\package.json.
+(Use `node --trace-warnings ...` to show where the warning was created)
+✔ public bibliography sends only predefined topics and bounded numeric PMIDs (35.0636ms)
+✔ mode change between metadata requests prevents the second request (0.6862ms)
+(node:221468) [MODULE_TYPELESS_PACKAGE_JSON] Warning: Module type of file:///C:/Users/Gianni/Documents/Codex/ASTHRAL_AUTONOMOUS_MISSION_20261115/web-local/src/radiation-csv.js is not specified and it doesn't parse as CommonJS.
+Reparsing as ES module because module syntax was detected. This incurs a performance overhead.
+To eliminate this warning, add "type": "module" to \\?\C:\Users\Gianni\Documents\Codex\ASTHRAL_AUTONOMOUS_MISSION_20261115\web-local\package.json.
+(Use `node --trace-warnings ...` to show where the warning was created)
+✔ radiation CSV parses fixed schema, optional device and quoted note (1.4476ms)
+✔ radiation CSV rejects unknown columns, inconsistent rows, duplicate headers and malformed quotes (1.9027ms)
+✔ radiation CSV bounds input size and rejects empty files (0.2287ms)
+Loading annotated-types, pydantic, pydantic_core, sqlite3, typing-extensions, typing-inspection
+Loaded annotated-types, pydantic, pydantic_core, sqlite3, typing-extensions, typing-inspection
+✔ all browser WASM clinical outputs match CPython reference fixtures exactly (1860.2076ms)
+✔ SQLite serialization preserves audits and blocks foreign profile recovery (131.2284ms)
+✔ reference baseline and trend calculations run in real WASM (25.6732ms)
+✔ original voice parser extracts measurements without inventing missing units (6.7163ms)
+✔ complete monitoring cycle matches native reference and preserves episode/follow-up replay (241.9963ms)
+✔ browser acquisition rejects foreign ownership and immutable device changes (7.1386ms)
+✔ expanded approved local corpus verifies provenance and supports source-specific retrieval (1216.3466ms)
+✔ failed profile restore leaves every private action locked (62.9998ms)
+✔ clinical invalid timestamps reject before persistence and preserve record count (30.6134ms)
+✔ assistant uses the original read-only safety contract and rejects invented clinical claims (26.4243ms)
+✔ automatic voice policy preserves the original duration-only confidence and intent gates (8.5713ms)
+✔ registered gravity context is authoritative in Astronaut View (32.0973ms)
+✔ management records remain unverified human reports, never engine execution (10.4382ms)
+✔ numeric assistant facts use reference finite grammar and reject changing patient values (11.2164ms)
+✔ clinical input metadata comes from the byte-identical reference derivations (12.3399ms)
+(node:257208) [MODULE_TYPELESS_PACKAGE_JSON] Warning: Module type of file:///C:/Users/Gianni/Documents/Codex/ASTHRAL_AUTONOMOUS_MISSION_20261115/web-local/src/research-sources.js is not specified and it doesn't parse as CommonJS.
+Reparsing as ES module because module syntax was detected. This incurs a performance overhead.
+To eliminate this warning, add "type": "module" to \\?\C:\Users\Gianni\Documents\Codex\ASTHRAL_AUTONOMOUS_MISSION_20261115\web-local\package.json.
+(Use `node --trace-warnings ...` to show where the warning was created)
+✔ offline bibliography exposes bounded official NASA and USDA references only (2.0983ms)
+✔ malformed registry fails closed and duplicate source IDs are not repeated (0.6211ms)
+✔ Pages redirected HTML is normalized before serving a manual-mode navigation (46.5235ms)
+✔ a restarted service worker serves cached root and assets with no network (7.1946ms)
+(node:228324) [MODULE_TYPELESS_PACKAGE_JSON] Warning: Module type of file:///C:/Users/Gianni/Documents/Codex/ASTHRAL_AUTONOMOUS_MISSION_20261115/web-local/src/space-weather-alerts.js is not specified and it doesn't parse as CommonJS.
+Reparsing as ES module because module syntax was detected. This incurs a performance overhead.
+To eliminate this warning, add "type": "module" to \\?\C:\Users\Gianni\Documents\Codex\ASTHRAL_AUTONOMOUS_MISSION_20261115\web-local\package.json.
+(Use `node --trace-warnings ...` to show where the warning was created)
+✔ event preferences are bounded, persisted locally, and default to selected public event categories (2.2427ms)
+✔ in-app notices deduplicate event updates, respect configured types, and acknowledge without health inference (1.477ms)
+✔ invalid event notices are rejected and malformed local state degrades safely (1.7954ms)
+(node:285580) [MODULE_TYPELESS_PACKAGE_JSON] Warning: Module type of file:///C:/Users/Gianni/Documents/Codex/ASTHRAL_AUTONOMOUS_MISSION_20261115/web-local/src/synthetic-mission.js is not specified and it doesn't parse as CommonJS.
+Reparsing as ES module because module syntax was detected. This incurs a performance overhead.
+To eliminate this warning, add "type": "module" to \\?\C:\Users\Gianni\Documents\Codex\ASTHRAL_AUTONOMOUS_MISSION_20261115\web-local\package.json.
+(Use `node --trace-warnings ...` to show where the warning was created)
+✔ synthetic mission walkthrough has separate prevention types and explicit fixture provenance (1.9321ms)
+✔ synthetic radiation timeline is arbitrary software data across EVA/location tags (0.2376ms)
+(node:181696) [MODULE_TYPELESS_PACKAGE_JSON] Warning: Module type of file:///C:/Users/Gianni/Documents/Codex/ASTHRAL_AUTONOMOUS_MISSION_20261115/web-local/src/time.js is not specified and it doesn't parse as CommonJS.
+Reparsing as ES module because module syntax was detected. This incurs a performance overhead.
+To eliminate this warning, add "type": "module" to \\?\C:\Users\Gianni\Documents\Codex\ASTHRAL_AUTONOMOUS_MISSION_20261115\web-local\package.json.
+(Use `node --trace-warnings ...` to show where the warning was created)
+✔ explicit UTC form timestamps do not acquire the device local timezone (2.8638ms)
+✔ invalid calendar dates, missing timestamps and implicit timezone strings are rejected (0.4391ms)
+✔ default local sign-in exposes only email and password and demo follows authentication (2.5349ms)
+✔ focused workspace routes expose the core tasks and all contributed vision modules (0.5409ms)
+✔ mobile core navigation keeps History reachable at narrow widths (0.2293ms)
+(node:268372) [MODULE_TYPELESS_PACKAGE_JSON] Warning: Module type of file:///C:/Users/Gianni/Documents/Codex/ASTHRAL_AUTONOMOUS_MISSION_20261115/web-local/src/vault.js is not specified and it doesn't parse as CommonJS.
+Reparsing as ES module because module syntax was detected. This incurs a performance overhead.
+To eliminate this warning, add "type": "module" to \\?\C:\Users\Gianni\Documents\Codex\ASTHRAL_AUTONOMOUS_MISSION_20261115\web-local\package.json.
+(Use `node --trace-warnings ...` to show where the warning was created)
+✔ different local profiles have different salts and cannot unlock each other (683.6498ms)
+✔ encrypted export recovers after local deletion and rejects accidental overwrite (255.8365ms)
+✔ stale tabs cannot overwrite a newer encrypted revision (440.5818ms)
+✔ tampered ciphertext fails authentication after recovery (248.6168ms)
+✔ import policies reject unsupported KDF and schema versions (124.1902ms)
+✔ a profile locked while encryption is pending cannot commit the late write (251.2863ms)
+✔ local email sign-in remains encrypted, device-local and compatible with legacy profile keys (915.512ms)
+(node:239872) [MODULE_TYPELESS_PACKAGE_JSON] Warning: Module type of file:///C:/Users/Gianni/Documents/Codex/ASTHRAL_AUTONOMOUS_MISSION_20261115/web-local/src/vectors.js is not specified and it doesn't parse as CommonJS.
+Reparsing as ES module because module syntax was detected. This incurs a performance overhead.
+To eliminate this warning, add "type": "module" to \\?\C:\Users\Gianni\Documents\Codex\ASTHRAL_AUTONOMOUS_MISSION_20261115\web-local\package.json.
+(Use `node --trace-warnings ...` to show where the warning was created)
+✔ hybrid reranking never admits a source absent from verified lexical candidates (3.0507ms)
+✔ stale or malformed public indexes fail closed to the caller fallback (0.7715ms)
+✔ vector retrieval can find verified sources outside lexical matches (11.7591ms)
+✔ CSP-safe ABI wrappers preserve receiver, conversions, arity gates and destructor cleanup (3.3598ms)
+✔ CSP-safe ABI wrappers preserve dynamic destructor-stack and emval method calling (1.1068ms)
+✔ generated speech runtime contains the reviewed CSP-safe wrappers (28.5948ms)
+✔ worker verifies actual imports when package loader silently resolves and retries bounded failures (3.2663ms)
+✔ incomplete dependencies never expose a ready clinical engine or unpack app after retry budget (1.1812ms)
+ℹ tests 81
+ℹ suites 0
+ℹ pass 81
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 9706.5824

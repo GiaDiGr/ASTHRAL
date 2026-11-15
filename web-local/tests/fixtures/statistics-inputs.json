@@ -1,0 +1,1340 @@
+[
+  {
+    "kind": "baseline",
+    "request": {
+      "as_of": "2026-07-30T12:00:00Z",
+      "id": "mission-crew-A-baseline-0",
+      "measurement_ids": [
+        "mission-sample-1",
+        "mission-sample-7",
+        "mission-sample-13"
+      ],
+      "minimum_observations": 3,
+      "protocol_reference": "V011_SYNTHETIC_TECHNICAL_FIXTURE_NOT_A_CLINICAL_PROTOCOL",
+      "supersedes": null,
+      "valid_until": null
+    },
+    "snapshots": [
+      {
+        "device": {
+          "alignment_seconds": 1,
+          "calibrated_at": "2026-07-02T12:00:00Z",
+          "calibration_id": "cal-mission-device-0",
+          "conflict_tolerance": 0.0,
+          "id": "mission-device-0",
+          "max_age_seconds": 172800,
+          "policy_reference": "V011_SYNTHETIC_TECHNICAL_FIXTURE_NOT_A_CLINICAL_PROTOCOL",
+          "synthetic": true,
+          "technical_max": 100000.0,
+          "technical_min": 0.0,
+          "unit": "mL/min/kg",
+          "valid_until": "2026-10-30T12:00:00Z",
+          "variable": "physiology.vo2max"
+        },
+        "measurement": {
+          "calibration_id": "cal-mission-device-0",
+          "compartment": null,
+          "device_id": "mission-device-0",
+          "id": "mission-sample-1",
+          "interval_end": null,
+          "method": "DIRECT",
+          "mission_id": "mission-v011",
+          "phase": "PRE_MISSION",
+          "protocol": "V011_SYNTHETIC_TECHNICAL_FIXTURE_NOT_A_CLINICAL_PROTOCOL",
+          "provenance": "SEEDED_SYNTHETIC_MISSION_NOT_CLINICAL_DATA",
+          "reported_quality": "ACCEPTABLE",
+          "site": null,
+          "subject_id": "mission-crew-A",
+          "synthetic": true,
+          "timestamp": "2026-07-25T12:00:00Z",
+          "unit": "mL/min/kg",
+          "value": 49.5,
+          "variable": "physiology.vo2max"
+        }
+      },
+      {
+        "device": {
+          "alignment_seconds": 1,
+          "calibrated_at": "2026-07-02T12:00:00Z",
+          "calibration_id": "cal-mission-device-0",
+          "conflict_tolerance": 0.0,
+          "id": "mission-device-0",
+          "max_age_seconds": 172800,
+          "policy_reference": "V011_SYNTHETIC_TECHNICAL_FIXTURE_NOT_A_CLINICAL_PROTOCOL",
+          "synthetic": true,
+          "technical_max": 100000.0,
+          "technical_min": 0.0,
+          "unit": "mL/min/kg",
+          "valid_until": "2026-10-30T12:00:00Z",
+          "variable": "physiology.vo2max"
+        },
+        "measurement": {
+          "calibration_id": "cal-mission-device-0",
+          "compartment": null,
+          "device_id": "mission-device-0",
+          "id": "mission-sample-13",
+          "interval_end": null,
+          "method": "DIRECT",
+          "mission_id": "mission-v011",
+          "phase": "PRE_MISSION",
+          "protocol": "V011_SYNTHETIC_TECHNICAL_FIXTURE_NOT_A_CLINICAL_PROTOCOL",
+          "provenance": "SEEDED_SYNTHETIC_MISSION_NOT_CLINICAL_DATA",
+          "reported_quality": "ACCEPTABLE",
+          "site": null,
+          "subject_id": "mission-crew-A",
+          "synthetic": true,
+          "timestamp": "2026-07-29T12:00:00Z",
+          "unit": "mL/min/kg",
+          "value": 50.5,
+          "variable": "physiology.vo2max"
+        }
+      },
+      {
+        "device": {
+          "alignment_seconds": 1,
+          "calibrated_at": "2026-07-02T12:00:00Z",
+          "calibration_id": "cal-mission-device-0",
+          "conflict_tolerance": 0.0,
+          "id": "mission-device-0",
+          "max_age_seconds": 172800,
+          "policy_reference": "V011_SYNTHETIC_TECHNICAL_FIXTURE_NOT_A_CLINICAL_PROTOCOL",
+          "synthetic": true,
+          "technical_max": 100000.0,
+          "technical_min": 0.0,
+          "unit": "mL/min/kg",
+          "valid_until": "2026-10-30T12:00:00Z",
+          "variable": "physiology.vo2max"
+        },
+        "measurement": {
+          "calibration_id": "cal-mission-device-0",
+          "compartment": null,
+          "device_id": "mission-device-0",
+          "id": "mission-sample-7",
+          "interval_end": null,
+          "method": "DIRECT",
+          "mission_id": "mission-v011",
+          "phase": "PRE_MISSION",
+          "protocol": "V011_SYNTHETIC_TECHNICAL_FIXTURE_NOT_A_CLINICAL_PROTOCOL",
+          "provenance": "SEEDED_SYNTHETIC_MISSION_NOT_CLINICAL_DATA",
+          "reported_quality": "ACCEPTABLE",
+          "site": null,
+          "subject_id": "mission-crew-A",
+          "synthetic": true,
+          "timestamp": "2026-07-27T12:00:00Z",
+          "unit": "mL/min/kg",
+          "value": 50.0,
+          "variable": "physiology.vo2max"
+        }
+      }
+    ]
+  },
+  {
+    "kind": "baseline",
+    "request": {
+      "as_of": "2026-07-30T12:00:00Z",
+      "id": "mission-crew-A-baseline-1",
+      "measurement_ids": [
+        "mission-sample-2",
+        "mission-sample-8",
+        "mission-sample-14"
+      ],
+      "minimum_observations": 3,
+      "protocol_reference": "V011_SYNTHETIC_TECHNICAL_FIXTURE_NOT_A_CLINICAL_PROTOCOL",
+      "supersedes": null,
+      "valid_until": null
+    },
+    "snapshots": [
+      {
+        "device": {
+          "alignment_seconds": 1,
+          "calibrated_at": "2026-07-02T12:00:00Z",
+          "calibration_id": "cal-mission-device-1",
+          "conflict_tolerance": 0.0,
+          "id": "mission-device-1",
+          "max_age_seconds": 172800,
+          "policy_reference": "V011_SYNTHETIC_TECHNICAL_FIXTURE_NOT_A_CLINICAL_PROTOCOL",
+          "synthetic": true,
+          "technical_max": 100000.0,
+          "technical_min": 0.0,
+          "unit": "N",
+          "valid_until": "2026-10-30T12:00:00Z",
+          "variable": "physiology.strength"
+        },
+        "measurement": {
+          "calibration_id": "cal-mission-device-1",
+          "compartment": null,
+          "device_id": "mission-device-1",
+          "id": "mission-sample-14",
+          "interval_end": null,
+          "method": "DIRECT",
+          "mission_id": "mission-v011",
+          "phase": "PRE_MISSION",
+          "protocol": "V011_SYNTHETIC_TECHNICAL_FIXTURE_NOT_A_CLINICAL_PROTOCOL",
+          "provenance": "SEEDED_SYNTHETIC_MISSION_NOT_CLINICAL_DATA",
+          "reported_quality": "ACCEPTABLE",
+          "site": null,
+          "subject_id": "mission-crew-A",
+          "synthetic": true,
+          "timestamp": "2026-07-29T12:00:00Z",
+          "unit": "N",
+          "value": 500.5,
+          "variable": "physiology.strength"
+        }
+      },
+      {
+        "device": {
+          "alignment_seconds": 1,
+          "calibrated_at": "2026-07-02T12:00:00Z",
+          "calibration_id": "cal-mission-device-1",
+          "conflict_tolerance": 0.0,
+          "id": "mission-device-1",
+          "max_age_seconds": 172800,
+          "policy_reference": "V011_SYNTHETIC_TECHNICAL_FIXTURE_NOT_A_CLINICAL_PROTOCOL",
+          "synthetic": true,
+          "technical_max": 100000.0,
+          "technical_min": 0.0,
+          "unit": "N",
+          "valid_until": "2026-10-30T12:00:00Z",
+          "variable": "physiology.strength"
+        },
+        "measurement": {
+          "calibration_id": "cal-mission-device-1",
+          "compartment": null,
+          "device_id": "mission-device-1",
+          "id": "mission-sample-2",
+          "interval_end": null,
+          "method": "DIRECT",
+          "mission_id": "mission-v011",
+          "phase": "PRE_MISSION",
+          "protocol": "V011_SYNTHETIC_TECHNICAL_FIXTURE_NOT_A_CLINICAL_PROTOCOL",
+          "provenance": "SEEDED_SYNTHETIC_MISSION_NOT_CLINICAL_DATA",
+          "reported_quality": "ACCEPTABLE",
+          "site": null,
+          "subject_id": "mission-crew-A",
+          "synthetic": true,
+          "timestamp": "2026-07-25T12:00:00Z",
+          "unit": "N",
+          "value": 499.5,
+          "variable": "physiology.strength"
+        }
+      },
+      {
+        "device": {
+          "alignment_seconds": 1,
+          "calibrated_at": "2026-07-02T12:00:00Z",
+          "calibration_id": "cal-mission-device-1",
+          "conflict_tolerance": 0.0,
+          "id": "mission-device-1",
+          "max_age_seconds": 172800,
+          "policy_reference": "V011_SYNTHETIC_TECHNICAL_FIXTURE_NOT_A_CLINICAL_PROTOCOL",
+          "synthetic": true,
+          "technical_max": 100000.0,
+          "technical_min": 0.0,
+          "unit": "N",
+          "valid_until": "2026-10-30T12:00:00Z",
+          "variable": "physiology.strength"
+        },
+        "measurement": {
+          "calibration_id": "cal-mission-device-1",
+          "compartment": null,
+          "device_id": "mission-device-1",
+          "id": "mission-sample-8",
+          "interval_end": null,
+          "method": "DIRECT",
+          "mission_id": "mission-v011",
+          "phase": "PRE_MISSION",
+          "protocol": "V011_SYNTHETIC_TECHNICAL_FIXTURE_NOT_A_CLINICAL_PROTOCOL",
+          "provenance": "SEEDED_SYNTHETIC_MISSION_NOT_CLINICAL_DATA",
+          "reported_quality": "ACCEPTABLE",
+          "site": null,
+          "subject_id": "mission-crew-A",
+          "synthetic": true,
+          "timestamp": "2026-07-27T12:00:00Z",
+          "unit": "N",
+          "value": 500.0,
+          "variable": "physiology.strength"
+        }
+      }
+    ]
+  },
+  {
+    "kind": "baseline",
+    "request": {
+      "as_of": "2026-07-30T12:00:00Z",
+      "id": "mission-crew-A-baseline-2",
+      "measurement_ids": [
+        "mission-sample-3",
+        "mission-sample-9",
+        "mission-sample-15"
+      ],
+      "minimum_observations": 3,
+      "protocol_reference": "V011_SYNTHETIC_TECHNICAL_FIXTURE_NOT_A_CLINICAL_PROTOCOL",
+      "supersedes": null,
+      "valid_until": null
+    },
+    "snapshots": [
+      {
+        "device": {
+          "alignment_seconds": 1,
+          "calibrated_at": "2026-07-02T12:00:00Z",
+          "calibration_id": "cal-mission-device-2",
+          "conflict_tolerance": 0.0,
+          "id": "mission-device-2",
+          "max_age_seconds": 172800,
+          "policy_reference": "V011_SYNTHETIC_TECHNICAL_FIXTURE_NOT_A_CLINICAL_PROTOCOL",
+          "synthetic": true,
+          "technical_max": 100000.0,
+          "technical_min": 0.0,
+          "unit": "h",
+          "valid_until": "2026-10-30T12:00:00Z",
+          "variable": "sleep.duration"
+        },
+        "measurement": {
+          "calibration_id": "cal-mission-device-2",
+          "compartment": null,
+          "device_id": "mission-device-2",
+          "id": "mission-sample-15",
+          "interval_end": null,
+          "method": "DIRECT",
+          "mission_id": "mission-v011",
+          "phase": "PRE_MISSION",
+          "protocol": "V011_SYNTHETIC_TECHNICAL_FIXTURE_NOT_A_CLINICAL_PROTOCOL",
+          "provenance": "SEEDED_SYNTHETIC_MISSION_NOT_CLINICAL_DATA",
+          "reported_quality": "ACCEPTABLE",
+          "site": null,
+          "subject_id": "mission-crew-A",
+          "synthetic": true,
+          "timestamp": "2026-07-29T12:00:00Z",
+          "unit": "h",
+          "value": 8.5,
+          "variable": "sleep.duration"
+        }
+      },
+      {
+        "device": {
+          "alignment_seconds": 1,
+          "calibrated_at": "2026-07-02T12:00:00Z",
+          "calibration_id": "cal-mission-device-2",
+          "conflict_tolerance": 0.0,
+          "id": "mission-device-2",
+          "max_age_seconds": 172800,
+          "policy_reference": "V011_SYNTHETIC_TECHNICAL_FIXTURE_NOT_A_CLINICAL_PROTOCOL",
+          "synthetic": true,
+          "technical_max": 100000.0,
+          "technical_min": 0.0,
+          "unit": "h",
+          "valid_until": "2026-10-30T12:00:00Z",
+          "variable": "sleep.duration"
+        },
+        "measurement": {
+          "calibration_id": "cal-mission-device-2",
+          "compartment": null,
+          "device_id": "mission-device-2",
+          "id": "mission-sample-3",
+          "interval_end": null,
+          "method": "DIRECT",
+          "mission_id": "mission-v011",
+          "phase": "PRE_MISSION",
+          "protocol": "V011_SYNTHETIC_TECHNICAL_FIXTURE_NOT_A_CLINICAL_PROTOCOL",
+          "provenance": "SEEDED_SYNTHETIC_MISSION_NOT_CLINICAL_DATA",
+          "reported_quality": "ACCEPTABLE",
+          "site": null,
+          "subject_id": "mission-crew-A",
+          "synthetic": true,
+          "timestamp": "2026-07-25T12:00:00Z",
+          "unit": "h",
+          "value": 7.5,
+          "variable": "sleep.duration"
+        }
+      },
+      {
+        "device": {
+          "alignment_seconds": 1,
+          "calibrated_at": "2026-07-02T12:00:00Z",
+          "calibration_id": "cal-mission-device-2",
+          "conflict_tolerance": 0.0,
+          "id": "mission-device-2",
+          "max_age_seconds": 172800,
+          "policy_reference": "V011_SYNTHETIC_TECHNICAL_FIXTURE_NOT_A_CLINICAL_PROTOCOL",
+          "synthetic": true,
+          "technical_max": 100000.0,
+          "technical_min": 0.0,
+          "unit": "h",
+          "valid_until": "2026-10-30T12:00:00Z",
+          "variable": "sleep.duration"
+        },
+        "measurement": {
+          "calibration_id": "cal-mission-device-2",
+          "compartment": null,
+          "device_id": "mission-device-2",
+          "id": "mission-sample-9",
+          "interval_end": null,
+          "method": "DIRECT",
+          "mission_id": "mission-v011",
+          "phase": "PRE_MISSION",
+          "protocol": "V011_SYNTHETIC_TECHNICAL_FIXTURE_NOT_A_CLINICAL_PROTOCOL",
+          "provenance": "SEEDED_SYNTHETIC_MISSION_NOT_CLINICAL_DATA",
+          "reported_quality": "ACCEPTABLE",
+          "site": null,
+          "subject_id": "mission-crew-A",
+          "synthetic": true,
+          "timestamp": "2026-07-27T12:00:00Z",
+          "unit": "h",
+          "value": 8.0,
+          "variable": "sleep.duration"
+        }
+      }
+    ]
+  },
+  {
+    "kind": "baseline",
+    "request": {
+      "as_of": "2026-07-30T12:00:00Z",
+      "id": "mission-crew-B-baseline-0",
+      "measurement_ids": [
+        "mission-sample-4",
+        "mission-sample-10",
+        "mission-sample-16"
+      ],
+      "minimum_observations": 3,
+      "protocol_reference": "V011_SYNTHETIC_TECHNICAL_FIXTURE_NOT_A_CLINICAL_PROTOCOL",
+      "supersedes": null,
+      "valid_until": null
+    },
+    "snapshots": [
+      {
+        "device": {
+          "alignment_seconds": 1,
+          "calibrated_at": "2026-07-02T12:00:00Z",
+          "calibration_id": "cal-mission-device-3",
+          "conflict_tolerance": 0.0,
+          "id": "mission-device-3",
+          "max_age_seconds": 172800,
+          "policy_reference": "V011_SYNTHETIC_TECHNICAL_FIXTURE_NOT_A_CLINICAL_PROTOCOL",
+          "synthetic": true,
+          "technical_max": 100000.0,
+          "technical_min": 0.0,
+          "unit": "mL/min/kg",
+          "valid_until": "2026-10-30T12:00:00Z",
+          "variable": "physiology.vo2max"
+        },
+        "measurement": {
+          "calibration_id": "cal-mission-device-3",
+          "compartment": null,
+          "device_id": "mission-device-3",
+          "id": "mission-sample-10",
+          "interval_end": null,
+          "method": "DIRECT",
+          "mission_id": "mission-v011",
+          "phase": "PRE_MISSION",
+          "protocol": "V011_SYNTHETIC_TECHNICAL_FIXTURE_NOT_A_CLINICAL_PROTOCOL",
+          "provenance": "SEEDED_SYNTHETIC_MISSION_NOT_CLINICAL_DATA",
+          "reported_quality": "ACCEPTABLE",
+          "site": null,
+          "subject_id": "mission-crew-B",
+          "synthetic": true,
+          "timestamp": "2026-07-27T12:00:00Z",
+          "unit": "mL/min/kg",
+          "value": 45.0,
+          "variable": "physiology.vo2max"
+        }
+      },
+      {
+        "device": {
+          "alignment_seconds": 1,
+          "calibrated_at": "2026-07-02T12:00:00Z",
+          "calibration_id": "cal-mission-device-3",
+          "conflict_tolerance": 0.0,
+          "id": "mission-device-3",
+          "max_age_seconds": 172800,
+          "policy_reference": "V011_SYNTHETIC_TECHNICAL_FIXTURE_NOT_A_CLINICAL_PROTOCOL",
+          "synthetic": true,
+          "technical_max": 100000.0,
+          "technical_min": 0.0,
+          "unit": "mL/min/kg",
+          "valid_until": "2026-10-30T12:00:00Z",
+          "variable": "physiology.vo2max"
+        },
+        "measurement": {
+          "calibration_id": "cal-mission-device-3",
+          "compartment": null,
+          "device_id": "mission-device-3",
+          "id": "mission-sample-16",
+          "interval_end": null,
+          "method": "DIRECT",
+          "mission_id": "mission-v011",
+          "phase": "PRE_MISSION",
+          "protocol": "V011_SYNTHETIC_TECHNICAL_FIXTURE_NOT_A_CLINICAL_PROTOCOL",
+          "provenance": "SEEDED_SYNTHETIC_MISSION_NOT_CLINICAL_DATA",
+          "reported_quality": "ACCEPTABLE",
+          "site": null,
+          "subject_id": "mission-crew-B",
+          "synthetic": true,
+          "timestamp": "2026-07-29T12:00:00Z",
+          "unit": "mL/min/kg",
+          "value": 45.5,
+          "variable": "physiology.vo2max"
+        }
+      },
+      {
+        "device": {
+          "alignment_seconds": 1,
+          "calibrated_at": "2026-07-02T12:00:00Z",
+          "calibration_id": "cal-mission-device-3",
+          "conflict_tolerance": 0.0,
+          "id": "mission-device-3",
+          "max_age_seconds": 172800,
+          "policy_reference": "V011_SYNTHETIC_TECHNICAL_FIXTURE_NOT_A_CLINICAL_PROTOCOL",
+          "synthetic": true,
+          "technical_max": 100000.0,
+          "technical_min": 0.0,
+          "unit": "mL/min/kg",
+          "valid_until": "2026-10-30T12:00:00Z",
+          "variable": "physiology.vo2max"
+        },
+        "measurement": {
+          "calibration_id": "cal-mission-device-3",
+          "compartment": null,
+          "device_id": "mission-device-3",
+          "id": "mission-sample-4",
+          "interval_end": null,
+          "method": "DIRECT",
+          "mission_id": "mission-v011",
+          "phase": "PRE_MISSION",
+          "protocol": "V011_SYNTHETIC_TECHNICAL_FIXTURE_NOT_A_CLINICAL_PROTOCOL",
+          "provenance": "SEEDED_SYNTHETIC_MISSION_NOT_CLINICAL_DATA",
+          "reported_quality": "ACCEPTABLE",
+          "site": null,
+          "subject_id": "mission-crew-B",
+          "synthetic": true,
+          "timestamp": "2026-07-25T12:00:00Z",
+          "unit": "mL/min/kg",
+          "value": 44.5,
+          "variable": "physiology.vo2max"
+        }
+      }
+    ]
+  },
+  {
+    "kind": "baseline",
+    "request": {
+      "as_of": "2026-07-30T12:00:00Z",
+      "id": "mission-crew-B-baseline-1",
+      "measurement_ids": [
+        "mission-sample-5",
+        "mission-sample-11",
+        "mission-sample-17"
+      ],
+      "minimum_observations": 3,
+      "protocol_reference": "V011_SYNTHETIC_TECHNICAL_FIXTURE_NOT_A_CLINICAL_PROTOCOL",
+      "supersedes": null,
+      "valid_until": null
+    },
+    "snapshots": [
+      {
+        "device": {
+          "alignment_seconds": 1,
+          "calibrated_at": "2026-07-02T12:00:00Z",
+          "calibration_id": "cal-mission-device-4",
+          "conflict_tolerance": 0.0,
+          "id": "mission-device-4",
+          "max_age_seconds": 172800,
+          "policy_reference": "V011_SYNTHETIC_TECHNICAL_FIXTURE_NOT_A_CLINICAL_PROTOCOL",
+          "synthetic": true,
+          "technical_max": 100000.0,
+          "technical_min": 0.0,
+          "unit": "N",
+          "valid_until": "2026-10-30T12:00:00Z",
+          "variable": "physiology.strength"
+        },
+        "measurement": {
+          "calibration_id": "cal-mission-device-4",
+          "compartment": null,
+          "device_id": "mission-device-4",
+          "id": "mission-sample-11",
+          "interval_end": null,
+          "method": "DIRECT",
+          "mission_id": "mission-v011",
+          "phase": "PRE_MISSION",
+          "protocol": "V011_SYNTHETIC_TECHNICAL_FIXTURE_NOT_A_CLINICAL_PROTOCOL",
+          "provenance": "SEEDED_SYNTHETIC_MISSION_NOT_CLINICAL_DATA",
+          "reported_quality": "ACCEPTABLE",
+          "site": null,
+          "subject_id": "mission-crew-B",
+          "synthetic": true,
+          "timestamp": "2026-07-27T12:00:00Z",
+          "unit": "N",
+          "value": 430.0,
+          "variable": "physiology.strength"
+        }
+      },
+      {
+        "device": {
+          "alignment_seconds": 1,
+          "calibrated_at": "2026-07-02T12:00:00Z",
+          "calibration_id": "cal-mission-device-4",
+          "conflict_tolerance": 0.0,
+          "id": "mission-device-4",
+          "max_age_seconds": 172800,
+          "policy_reference": "V011_SYNTHETIC_TECHNICAL_FIXTURE_NOT_A_CLINICAL_PROTOCOL",
+          "synthetic": true,
+          "technical_max": 100000.0,
+          "technical_min": 0.0,
+          "unit": "N",
+          "valid_until": "2026-10-30T12:00:00Z",
+          "variable": "physiology.strength"
+        },
+        "measurement": {
+          "calibration_id": "cal-mission-device-4",
+          "compartment": null,
+          "device_id": "mission-device-4",
+          "id": "mission-sample-17",
+          "interval_end": null,
+          "method": "DIRECT",
+          "mission_id": "mission-v011",
+          "phase": "PRE_MISSION",
+          "protocol": "V011_SYNTHETIC_TECHNICAL_FIXTURE_NOT_A_CLINICAL_PROTOCOL",
+          "provenance": "SEEDED_SYNTHETIC_MISSION_NOT_CLINICAL_DATA",
+          "reported_quality": "ACCEPTABLE",
+          "site": null,
+          "subject_id": "mission-crew-B",
+          "synthetic": true,
+          "timestamp": "2026-07-29T12:00:00Z",
+          "unit": "N",
+          "value": 430.5,
+          "variable": "physiology.strength"
+        }
+      },
+      {
+        "device": {
+          "alignment_seconds": 1,
+          "calibrated_at": "2026-07-02T12:00:00Z",
+          "calibration_id": "cal-mission-device-4",
+          "conflict_tolerance": 0.0,
+          "id": "mission-device-4",
+          "max_age_seconds": 172800,
+          "policy_reference": "V011_SYNTHETIC_TECHNICAL_FIXTURE_NOT_A_CLINICAL_PROTOCOL",
+          "synthetic": true,
+          "technical_max": 100000.0,
+          "technical_min": 0.0,
+          "unit": "N",
+          "valid_until": "2026-10-30T12:00:00Z",
+          "variable": "physiology.strength"
+        },
+        "measurement": {
+          "calibration_id": "cal-mission-device-4",
+          "compartment": null,
+          "device_id": "mission-device-4",
+          "id": "mission-sample-5",
+          "interval_end": null,
+          "method": "DIRECT",
+          "mission_id": "mission-v011",
+          "phase": "PRE_MISSION",
+          "protocol": "V011_SYNTHETIC_TECHNICAL_FIXTURE_NOT_A_CLINICAL_PROTOCOL",
+          "provenance": "SEEDED_SYNTHETIC_MISSION_NOT_CLINICAL_DATA",
+          "reported_quality": "ACCEPTABLE",
+          "site": null,
+          "subject_id": "mission-crew-B",
+          "synthetic": true,
+          "timestamp": "2026-07-25T12:00:00Z",
+          "unit": "N",
+          "value": 429.5,
+          "variable": "physiology.strength"
+        }
+      }
+    ]
+  },
+  {
+    "kind": "baseline",
+    "request": {
+      "as_of": "2026-07-30T12:00:00Z",
+      "id": "mission-crew-B-baseline-2",
+      "measurement_ids": [
+        "mission-sample-6",
+        "mission-sample-12",
+        "mission-sample-18"
+      ],
+      "minimum_observations": 3,
+      "protocol_reference": "V011_SYNTHETIC_TECHNICAL_FIXTURE_NOT_A_CLINICAL_PROTOCOL",
+      "supersedes": null,
+      "valid_until": null
+    },
+    "snapshots": [
+      {
+        "device": {
+          "alignment_seconds": 1,
+          "calibrated_at": "2026-07-02T12:00:00Z",
+          "calibration_id": "cal-mission-device-5",
+          "conflict_tolerance": 0.0,
+          "id": "mission-device-5",
+          "max_age_seconds": 172800,
+          "policy_reference": "V011_SYNTHETIC_TECHNICAL_FIXTURE_NOT_A_CLINICAL_PROTOCOL",
+          "synthetic": true,
+          "technical_max": 100000.0,
+          "technical_min": 0.0,
+          "unit": "h",
+          "valid_until": "2026-10-30T12:00:00Z",
+          "variable": "sleep.duration"
+        },
+        "measurement": {
+          "calibration_id": "cal-mission-device-5",
+          "compartment": null,
+          "device_id": "mission-device-5",
+          "id": "mission-sample-12",
+          "interval_end": null,
+          "method": "DIRECT",
+          "mission_id": "mission-v011",
+          "phase": "PRE_MISSION",
+          "protocol": "V011_SYNTHETIC_TECHNICAL_FIXTURE_NOT_A_CLINICAL_PROTOCOL",
+          "provenance": "SEEDED_SYNTHETIC_MISSION_NOT_CLINICAL_DATA",
+          "reported_quality": "ACCEPTABLE",
+          "site": null,
+          "subject_id": "mission-crew-B",
+          "synthetic": true,
+          "timestamp": "2026-07-27T12:00:00Z",
+          "unit": "h",
+          "value": 7.5,
+          "variable": "sleep.duration"
+        }
+      },
+      {
+        "device": {
+          "alignment_seconds": 1,
+          "calibrated_at": "2026-07-02T12:00:00Z",
+          "calibration_id": "cal-mission-device-5",
+          "conflict_tolerance": 0.0,
+          "id": "mission-device-5",
+          "max_age_seconds": 172800,
+          "policy_reference": "V011_SYNTHETIC_TECHNICAL_FIXTURE_NOT_A_CLINICAL_PROTOCOL",
+          "synthetic": true,
+          "technical_max": 100000.0,
+          "technical_min": 0.0,
+          "unit": "h",
+          "valid_until": "2026-10-30T12:00:00Z",
+          "variable": "sleep.duration"
+        },
+        "measurement": {
+          "calibration_id": "cal-mission-device-5",
+          "compartment": null,
+          "device_id": "mission-device-5",
+          "id": "mission-sample-18",
+          "interval_end": null,
+          "method": "DIRECT",
+          "mission_id": "mission-v011",
+          "phase": "PRE_MISSION",
+          "protocol": "V011_SYNTHETIC_TECHNICAL_FIXTURE_NOT_A_CLINICAL_PROTOCOL",
+          "provenance": "SEEDED_SYNTHETIC_MISSION_NOT_CLINICAL_DATA",
+          "reported_quality": "ACCEPTABLE",
+          "site": null,
+          "subject_id": "mission-crew-B",
+          "synthetic": true,
+          "timestamp": "2026-07-29T12:00:00Z",
+          "unit": "h",
+          "value": 8.0,
+          "variable": "sleep.duration"
+        }
+      },
+      {
+        "device": {
+          "alignment_seconds": 1,
+          "calibrated_at": "2026-07-02T12:00:00Z",
+          "calibration_id": "cal-mission-device-5",
+          "conflict_tolerance": 0.0,
+          "id": "mission-device-5",
+          "max_age_seconds": 172800,
+          "policy_reference": "V011_SYNTHETIC_TECHNICAL_FIXTURE_NOT_A_CLINICAL_PROTOCOL",
+          "synthetic": true,
+          "technical_max": 100000.0,
+          "technical_min": 0.0,
+          "unit": "h",
+          "valid_until": "2026-10-30T12:00:00Z",
+          "variable": "sleep.duration"
+        },
+        "measurement": {
+          "calibration_id": "cal-mission-device-5",
+          "compartment": null,
+          "device_id": "mission-device-5",
+          "id": "mission-sample-6",
+          "interval_end": null,
+          "method": "DIRECT",
+          "mission_id": "mission-v011",
+          "phase": "PRE_MISSION",
+          "protocol": "V011_SYNTHETIC_TECHNICAL_FIXTURE_NOT_A_CLINICAL_PROTOCOL",
+          "provenance": "SEEDED_SYNTHETIC_MISSION_NOT_CLINICAL_DATA",
+          "reported_quality": "ACCEPTABLE",
+          "site": null,
+          "subject_id": "mission-crew-B",
+          "synthetic": true,
+          "timestamp": "2026-07-25T12:00:00Z",
+          "unit": "h",
+          "value": 7.0,
+          "variable": "sleep.duration"
+        }
+      }
+    ]
+  },
+  {
+    "kind": "trend",
+    "request": {
+      "as_of": "2026-07-27T12:00:00Z",
+      "baseline_id": null,
+      "cusum_allowance": 0.0,
+      "cusum_decision_limit": null,
+      "cusum_target": 49.5,
+      "ewma_initial": null,
+      "ewma_lambda": 0.5,
+      "max_gap_seconds": null,
+      "measurement_ids": [
+        "mission-sample-1",
+        "mission-sample-7"
+      ],
+      "policy_reference": "V011_SYNTHETIC_TECHNICAL_FIXTURE_NOT_A_CLINICAL_PROTOCOL"
+    },
+    "snapshots": [
+      {
+        "device": {
+          "alignment_seconds": 1,
+          "calibrated_at": "2026-07-02T12:00:00Z",
+          "calibration_id": "cal-mission-device-0",
+          "conflict_tolerance": 0.0,
+          "id": "mission-device-0",
+          "max_age_seconds": 172800,
+          "policy_reference": "V011_SYNTHETIC_TECHNICAL_FIXTURE_NOT_A_CLINICAL_PROTOCOL",
+          "synthetic": true,
+          "technical_max": 100000.0,
+          "technical_min": 0.0,
+          "unit": "mL/min/kg",
+          "valid_until": "2026-10-30T12:00:00Z",
+          "variable": "physiology.vo2max"
+        },
+        "measurement": {
+          "calibration_id": "cal-mission-device-0",
+          "compartment": null,
+          "device_id": "mission-device-0",
+          "id": "mission-sample-1",
+          "interval_end": null,
+          "method": "DIRECT",
+          "mission_id": "mission-v011",
+          "phase": "PRE_MISSION",
+          "protocol": "V011_SYNTHETIC_TECHNICAL_FIXTURE_NOT_A_CLINICAL_PROTOCOL",
+          "provenance": "SEEDED_SYNTHETIC_MISSION_NOT_CLINICAL_DATA",
+          "reported_quality": "ACCEPTABLE",
+          "site": null,
+          "subject_id": "mission-crew-A",
+          "synthetic": true,
+          "timestamp": "2026-07-25T12:00:00Z",
+          "unit": "mL/min/kg",
+          "value": 49.5,
+          "variable": "physiology.vo2max"
+        }
+      },
+      {
+        "device": {
+          "alignment_seconds": 1,
+          "calibrated_at": "2026-07-02T12:00:00Z",
+          "calibration_id": "cal-mission-device-0",
+          "conflict_tolerance": 0.0,
+          "id": "mission-device-0",
+          "max_age_seconds": 172800,
+          "policy_reference": "V011_SYNTHETIC_TECHNICAL_FIXTURE_NOT_A_CLINICAL_PROTOCOL",
+          "synthetic": true,
+          "technical_max": 100000.0,
+          "technical_min": 0.0,
+          "unit": "mL/min/kg",
+          "valid_until": "2026-10-30T12:00:00Z",
+          "variable": "physiology.vo2max"
+        },
+        "measurement": {
+          "calibration_id": "cal-mission-device-0",
+          "compartment": null,
+          "device_id": "mission-device-0",
+          "id": "mission-sample-7",
+          "interval_end": null,
+          "method": "DIRECT",
+          "mission_id": "mission-v011",
+          "phase": "PRE_MISSION",
+          "protocol": "V011_SYNTHETIC_TECHNICAL_FIXTURE_NOT_A_CLINICAL_PROTOCOL",
+          "provenance": "SEEDED_SYNTHETIC_MISSION_NOT_CLINICAL_DATA",
+          "reported_quality": "ACCEPTABLE",
+          "site": null,
+          "subject_id": "mission-crew-A",
+          "synthetic": true,
+          "timestamp": "2026-07-27T12:00:00Z",
+          "unit": "mL/min/kg",
+          "value": 50.0,
+          "variable": "physiology.vo2max"
+        }
+      }
+    ]
+  },
+  {
+    "kind": "trend",
+    "request": {
+      "as_of": "2026-07-27T12:00:00Z",
+      "baseline_id": null,
+      "cusum_allowance": 0.0,
+      "cusum_decision_limit": null,
+      "cusum_target": 499.5,
+      "ewma_initial": null,
+      "ewma_lambda": 0.5,
+      "max_gap_seconds": null,
+      "measurement_ids": [
+        "mission-sample-2",
+        "mission-sample-8"
+      ],
+      "policy_reference": "V011_SYNTHETIC_TECHNICAL_FIXTURE_NOT_A_CLINICAL_PROTOCOL"
+    },
+    "snapshots": [
+      {
+        "device": {
+          "alignment_seconds": 1,
+          "calibrated_at": "2026-07-02T12:00:00Z",
+          "calibration_id": "cal-mission-device-1",
+          "conflict_tolerance": 0.0,
+          "id": "mission-device-1",
+          "max_age_seconds": 172800,
+          "policy_reference": "V011_SYNTHETIC_TECHNICAL_FIXTURE_NOT_A_CLINICAL_PROTOCOL",
+          "synthetic": true,
+          "technical_max": 100000.0,
+          "technical_min": 0.0,
+          "unit": "N",
+          "valid_until": "2026-10-30T12:00:00Z",
+          "variable": "physiology.strength"
+        },
+        "measurement": {
+          "calibration_id": "cal-mission-device-1",
+          "compartment": null,
+          "device_id": "mission-device-1",
+          "id": "mission-sample-2",
+          "interval_end": null,
+          "method": "DIRECT",
+          "mission_id": "mission-v011",
+          "phase": "PRE_MISSION",
+          "protocol": "V011_SYNTHETIC_TECHNICAL_FIXTURE_NOT_A_CLINICAL_PROTOCOL",
+          "provenance": "SEEDED_SYNTHETIC_MISSION_NOT_CLINICAL_DATA",
+          "reported_quality": "ACCEPTABLE",
+          "site": null,
+          "subject_id": "mission-crew-A",
+          "synthetic": true,
+          "timestamp": "2026-07-25T12:00:00Z",
+          "unit": "N",
+          "value": 499.5,
+          "variable": "physiology.strength"
+        }
+      },
+      {
+        "device": {
+          "alignment_seconds": 1,
+          "calibrated_at": "2026-07-02T12:00:00Z",
+          "calibration_id": "cal-mission-device-1",
+          "conflict_tolerance": 0.0,
+          "id": "mission-device-1",
+          "max_age_seconds": 172800,
+          "policy_reference": "V011_SYNTHETIC_TECHNICAL_FIXTURE_NOT_A_CLINICAL_PROTOCOL",
+          "synthetic": true,
+          "technical_max": 100000.0,
+          "technical_min": 0.0,
+          "unit": "N",
+          "valid_until": "2026-10-30T12:00:00Z",
+          "variable": "physiology.strength"
+        },
+        "measurement": {
+          "calibration_id": "cal-mission-device-1",
+          "compartment": null,
+          "device_id": "mission-device-1",
+          "id": "mission-sample-8",
+          "interval_end": null,
+          "method": "DIRECT",
+          "mission_id": "mission-v011",
+          "phase": "PRE_MISSION",
+          "protocol": "V011_SYNTHETIC_TECHNICAL_FIXTURE_NOT_A_CLINICAL_PROTOCOL",
+          "provenance": "SEEDED_SYNTHETIC_MISSION_NOT_CLINICAL_DATA",
+          "reported_quality": "ACCEPTABLE",
+          "site": null,
+          "subject_id": "mission-crew-A",
+          "synthetic": true,
+          "timestamp": "2026-07-27T12:00:00Z",
+          "unit": "N",
+          "value": 500.0,
+          "variable": "physiology.strength"
+        }
+      }
+    ]
+  },
+  {
+    "kind": "trend",
+    "request": {
+      "as_of": "2026-07-27T12:00:00Z",
+      "baseline_id": null,
+      "cusum_allowance": 0.0,
+      "cusum_decision_limit": null,
+      "cusum_target": 7.5,
+      "ewma_initial": null,
+      "ewma_lambda": 0.5,
+      "max_gap_seconds": null,
+      "measurement_ids": [
+        "mission-sample-3",
+        "mission-sample-9"
+      ],
+      "policy_reference": "V011_SYNTHETIC_TECHNICAL_FIXTURE_NOT_A_CLINICAL_PROTOCOL"
+    },
+    "snapshots": [
+      {
+        "device": {
+          "alignment_seconds": 1,
+          "calibrated_at": "2026-07-02T12:00:00Z",
+          "calibration_id": "cal-mission-device-2",
+          "conflict_tolerance": 0.0,
+          "id": "mission-device-2",
+          "max_age_seconds": 172800,
+          "policy_reference": "V011_SYNTHETIC_TECHNICAL_FIXTURE_NOT_A_CLINICAL_PROTOCOL",
+          "synthetic": true,
+          "technical_max": 100000.0,
+          "technical_min": 0.0,
+          "unit": "h",
+          "valid_until": "2026-10-30T12:00:00Z",
+          "variable": "sleep.duration"
+        },
+        "measurement": {
+          "calibration_id": "cal-mission-device-2",
+          "compartment": null,
+          "device_id": "mission-device-2",
+          "id": "mission-sample-3",
+          "interval_end": null,
+          "method": "DIRECT",
+          "mission_id": "mission-v011",
+          "phase": "PRE_MISSION",
+          "protocol": "V011_SYNTHETIC_TECHNICAL_FIXTURE_NOT_A_CLINICAL_PROTOCOL",
+          "provenance": "SEEDED_SYNTHETIC_MISSION_NOT_CLINICAL_DATA",
+          "reported_quality": "ACCEPTABLE",
+          "site": null,
+          "subject_id": "mission-crew-A",
+          "synthetic": true,
+          "timestamp": "2026-07-25T12:00:00Z",
+          "unit": "h",
+          "value": 7.5,
+          "variable": "sleep.duration"
+        }
+      },
+      {
+        "device": {
+          "alignment_seconds": 1,
+          "calibrated_at": "2026-07-02T12:00:00Z",
+          "calibration_id": "cal-mission-device-2",
+          "conflict_tolerance": 0.0,
+          "id": "mission-device-2",
+          "max_age_seconds": 172800,
+          "policy_reference": "V011_SYNTHETIC_TECHNICAL_FIXTURE_NOT_A_CLINICAL_PROTOCOL",
+          "synthetic": true,
+          "technical_max": 100000.0,
+          "technical_min": 0.0,
+          "unit": "h",
+          "valid_until": "2026-10-30T12:00:00Z",
+          "variable": "sleep.duration"
+        },
+        "measurement": {
+          "calibration_id": "cal-mission-device-2",
+          "compartment": null,
+          "device_id": "mission-device-2",
+          "id": "mission-sample-9",
+          "interval_end": null,
+          "method": "DIRECT",
+          "mission_id": "mission-v011",
+          "phase": "PRE_MISSION",
+          "protocol": "V011_SYNTHETIC_TECHNICAL_FIXTURE_NOT_A_CLINICAL_PROTOCOL",
+          "provenance": "SEEDED_SYNTHETIC_MISSION_NOT_CLINICAL_DATA",
+          "reported_quality": "ACCEPTABLE",
+          "site": null,
+          "subject_id": "mission-crew-A",
+          "synthetic": true,
+          "timestamp": "2026-07-27T12:00:00Z",
+          "unit": "h",
+          "value": 8.0,
+          "variable": "sleep.duration"
+        }
+      }
+    ]
+  },
+  {
+    "kind": "trend",
+    "request": {
+      "as_of": "2026-07-27T12:00:00Z",
+      "baseline_id": null,
+      "cusum_allowance": 0.0,
+      "cusum_decision_limit": null,
+      "cusum_target": 44.5,
+      "ewma_initial": null,
+      "ewma_lambda": 0.5,
+      "max_gap_seconds": null,
+      "measurement_ids": [
+        "mission-sample-4",
+        "mission-sample-10"
+      ],
+      "policy_reference": "V011_SYNTHETIC_TECHNICAL_FIXTURE_NOT_A_CLINICAL_PROTOCOL"
+    },
+    "snapshots": [
+      {
+        "device": {
+          "alignment_seconds": 1,
+          "calibrated_at": "2026-07-02T12:00:00Z",
+          "calibration_id": "cal-mission-device-3",
+          "conflict_tolerance": 0.0,
+          "id": "mission-device-3",
+          "max_age_seconds": 172800,
+          "policy_reference": "V011_SYNTHETIC_TECHNICAL_FIXTURE_NOT_A_CLINICAL_PROTOCOL",
+          "synthetic": true,
+          "technical_max": 100000.0,
+          "technical_min": 0.0,
+          "unit": "mL/min/kg",
+          "valid_until": "2026-10-30T12:00:00Z",
+          "variable": "physiology.vo2max"
+        },
+        "measurement": {
+          "calibration_id": "cal-mission-device-3",
+          "compartment": null,
+          "device_id": "mission-device-3",
+          "id": "mission-sample-10",
+          "interval_end": null,
+          "method": "DIRECT",
+          "mission_id": "mission-v011",
+          "phase": "PRE_MISSION",
+          "protocol": "V011_SYNTHETIC_TECHNICAL_FIXTURE_NOT_A_CLINICAL_PROTOCOL",
+          "provenance": "SEEDED_SYNTHETIC_MISSION_NOT_CLINICAL_DATA",
+          "reported_quality": "ACCEPTABLE",
+          "site": null,
+          "subject_id": "mission-crew-B",
+          "synthetic": true,
+          "timestamp": "2026-07-27T12:00:00Z",
+          "unit": "mL/min/kg",
+          "value": 45.0,
+          "variable": "physiology.vo2max"
+        }
+      },
+      {
+        "device": {
+          "alignment_seconds": 1,
+          "calibrated_at": "2026-07-02T12:00:00Z",
+          "calibration_id": "cal-mission-device-3",
+          "conflict_tolerance": 0.0,
+          "id": "mission-device-3",
+          "max_age_seconds": 172800,
+          "policy_reference": "V011_SYNTHETIC_TECHNICAL_FIXTURE_NOT_A_CLINICAL_PROTOCOL",
+          "synthetic": true,
+          "technical_max": 100000.0,
+          "technical_min": 0.0,
+          "unit": "mL/min/kg",
+          "valid_until": "2026-10-30T12:00:00Z",
+          "variable": "physiology.vo2max"
+        },
+        "measurement": {
+          "calibration_id": "cal-mission-device-3",
+          "compartment": null,
+          "device_id": "mission-device-3",
+          "id": "mission-sample-4",
+          "interval_end": null,
+          "method": "DIRECT",
+          "mission_id": "mission-v011",
+          "phase": "PRE_MISSION",
+          "protocol": "V011_SYNTHETIC_TECHNICAL_FIXTURE_NOT_A_CLINICAL_PROTOCOL",
+          "provenance": "SEEDED_SYNTHETIC_MISSION_NOT_CLINICAL_DATA",
+          "reported_quality": "ACCEPTABLE",
+          "site": null,
+          "subject_id": "mission-crew-B",
+          "synthetic": true,
+          "timestamp": "2026-07-25T12:00:00Z",
+          "unit": "mL/min/kg",
+          "value": 44.5,
+          "variable": "physiology.vo2max"
+        }
+      }
+    ]
+  },
+  {
+    "kind": "trend",
+    "request": {
+      "as_of": "2026-07-27T12:00:00Z",
+      "baseline_id": null,
+      "cusum_allowance": 0.0,
+      "cusum_decision_limit": null,
+      "cusum_target": 429.5,
+      "ewma_initial": null,
+      "ewma_lambda": 0.5,
+      "max_gap_seconds": null,
+      "measurement_ids": [
+        "mission-sample-5",
+        "mission-sample-11"
+      ],
+      "policy_reference": "V011_SYNTHETIC_TECHNICAL_FIXTURE_NOT_A_CLINICAL_PROTOCOL"
+    },
+    "snapshots": [
+      {
+        "device": {
+          "alignment_seconds": 1,
+          "calibrated_at": "2026-07-02T12:00:00Z",
+          "calibration_id": "cal-mission-device-4",
+          "conflict_tolerance": 0.0,
+          "id": "mission-device-4",
+          "max_age_seconds": 172800,
+          "policy_reference": "V011_SYNTHETIC_TECHNICAL_FIXTURE_NOT_A_CLINICAL_PROTOCOL",
+          "synthetic": true,
+          "technical_max": 100000.0,
+          "technical_min": 0.0,
+          "unit": "N",
+          "valid_until": "2026-10-30T12:00:00Z",
+          "variable": "physiology.strength"
+        },
+        "measurement": {
+          "calibration_id": "cal-mission-device-4",
+          "compartment": null,
+          "device_id": "mission-device-4",
+          "id": "mission-sample-11",
+          "interval_end": null,
+          "method": "DIRECT",
+          "mission_id": "mission-v011",
+          "phase": "PRE_MISSION",
+          "protocol": "V011_SYNTHETIC_TECHNICAL_FIXTURE_NOT_A_CLINICAL_PROTOCOL",
+          "provenance": "SEEDED_SYNTHETIC_MISSION_NOT_CLINICAL_DATA",
+          "reported_quality": "ACCEPTABLE",
+          "site": null,
+          "subject_id": "mission-crew-B",
+          "synthetic": true,
+          "timestamp": "2026-07-27T12:00:00Z",
+          "unit": "N",
+          "value": 430.0,
+          "variable": "physiology.strength"
+        }
+      },
+      {
+        "device": {
+          "alignment_seconds": 1,
+          "calibrated_at": "2026-07-02T12:00:00Z",
+          "calibration_id": "cal-mission-device-4",
+          "conflict_tolerance": 0.0,
+          "id": "mission-device-4",
+          "max_age_seconds": 172800,
+          "policy_reference": "V011_SYNTHETIC_TECHNICAL_FIXTURE_NOT_A_CLINICAL_PROTOCOL",
+          "synthetic": true,
+          "technical_max": 100000.0,
+          "technical_min": 0.0,
+          "unit": "N",
+          "valid_until": "2026-10-30T12:00:00Z",
+          "variable": "physiology.strength"
+        },
+        "measurement": {
+          "calibration_id": "cal-mission-device-4",
+          "compartment": null,
+          "device_id": "mission-device-4",
+          "id": "mission-sample-5",
+          "interval_end": null,
+          "method": "DIRECT",
+          "mission_id": "mission-v011",
+          "phase": "PRE_MISSION",
+          "protocol": "V011_SYNTHETIC_TECHNICAL_FIXTURE_NOT_A_CLINICAL_PROTOCOL",
+          "provenance": "SEEDED_SYNTHETIC_MISSION_NOT_CLINICAL_DATA",
+          "reported_quality": "ACCEPTABLE",
+          "site": null,
+          "subject_id": "mission-crew-B",
+          "synthetic": true,
+          "timestamp": "2026-07-25T12:00:00Z",
+          "unit": "N",
+          "value": 429.5,
+          "variable": "physiology.strength"
+        }
+      }
+    ]
+  },
+  {
+    "kind": "trend",
+    "request": {
+      "as_of": "2026-07-27T12:00:00Z",
+      "baseline_id": null,
+      "cusum_allowance": 0.0,
+      "cusum_decision_limit": null,
+      "cusum_target": 7.0,
+      "ewma_initial": null,
+      "ewma_lambda": 0.5,
+      "max_gap_seconds": null,
+      "measurement_ids": [
+        "mission-sample-6",
+        "mission-sample-12"
+      ],
+      "policy_reference": "V011_SYNTHETIC_TECHNICAL_FIXTURE_NOT_A_CLINICAL_PROTOCOL"
+    },
+    "snapshots": [
+      {
+        "device": {
+          "alignment_seconds": 1,
+          "calibrated_at": "2026-07-02T12:00:00Z",
+          "calibration_id": "cal-mission-device-5",
+          "conflict_tolerance": 0.0,
+          "id": "mission-device-5",
+          "max_age_seconds": 172800,
+          "policy_reference": "V011_SYNTHETIC_TECHNICAL_FIXTURE_NOT_A_CLINICAL_PROTOCOL",
+          "synthetic": true,
+          "technical_max": 100000.0,
+          "technical_min": 0.0,
+          "unit": "h",
+          "valid_until": "2026-10-30T12:00:00Z",
+          "variable": "sleep.duration"
+        },
+        "measurement": {
+          "calibration_id": "cal-mission-device-5",
+          "compartment": null,
+          "device_id": "mission-device-5",
+          "id": "mission-sample-12",
+          "interval_end": null,
+          "method": "DIRECT",
+          "mission_id": "mission-v011",
+          "phase": "PRE_MISSION",
+          "protocol": "V011_SYNTHETIC_TECHNICAL_FIXTURE_NOT_A_CLINICAL_PROTOCOL",
+          "provenance": "SEEDED_SYNTHETIC_MISSION_NOT_CLINICAL_DATA",
+          "reported_quality": "ACCEPTABLE",
+          "site": null,
+          "subject_id": "mission-crew-B",
+          "synthetic": true,
+          "timestamp": "2026-07-27T12:00:00Z",
+          "unit": "h",
+          "value": 7.5,
+          "variable": "sleep.duration"
+        }
+      },
+      {
+        "device": {
+          "alignment_seconds": 1,
+          "calibrated_at": "2026-07-02T12:00:00Z",
+          "calibration_id": "cal-mission-device-5",
+          "conflict_tolerance": 0.0,
+          "id": "mission-device-5",
+          "max_age_seconds": 172800,
+          "policy_reference": "V011_SYNTHETIC_TECHNICAL_FIXTURE_NOT_A_CLINICAL_PROTOCOL",
+          "synthetic": true,
+          "technical_max": 100000.0,
+          "technical_min": 0.0,
+          "unit": "h",
+          "valid_until": "2026-10-30T12:00:00Z",
+          "variable": "sleep.duration"
+        },
+        "measurement": {
+          "calibration_id": "cal-mission-device-5",
+          "compartment": null,
+          "device_id": "mission-device-5",
+          "id": "mission-sample-6",
+          "interval_end": null,
+          "method": "DIRECT",
+          "mission_id": "mission-v011",
+          "phase": "PRE_MISSION",
+          "protocol": "V011_SYNTHETIC_TECHNICAL_FIXTURE_NOT_A_CLINICAL_PROTOCOL",
+          "provenance": "SEEDED_SYNTHETIC_MISSION_NOT_CLINICAL_DATA",
+          "reported_quality": "ACCEPTABLE",
+          "site": null,
+          "subject_id": "mission-crew-B",
+          "synthetic": true,
+          "timestamp": "2026-07-25T12:00:00Z",
+          "unit": "h",
+          "value": 7.0,
+          "variable": "sleep.duration"
+        }
+      }
+    ]
+  }
+]

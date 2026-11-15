@@ -1,0 +1,54 @@
+{
+  "fixtures": [
+    {
+      "id": "wall-push",
+      "file": "wall-push.webm",
+      "title": "Muscle Strengthening at Home - Push-ups",
+      "attribution": "U.S. Centers for Disease Control and Prevention",
+      "license": "U.S. federal government public domain (US)",
+      "license_or_source": "https://commons.wikimedia.org/wiki/File:Muscle_Strengthening_at_Home_-_Push-ups.webm",
+      "source_start_seconds": 11,
+      "duration_seconds": 5,
+      "changes": "Trimmed, audio removed, rescaled and transcoded to VP8/WebM",
+      "sha256": "3592df1f787a91bd1edd87aa2d94a3aa29adc195ed3f34104c24c945276f7f9c",
+      "bytes": 391781,
+      "purpose": "Prerecorded software inference fixture, not an astronaut observation, exercise prescription or endorsement",
+      "original_source_url": "https://upload.wikimedia.org/wikipedia/commons/1/18/Muscle_Strengthening_at_Home_-_Push-ups.webm",
+      "original_source_sha256": "829b88e24298123845dc024ac4cc03904d669fc91043463ea387a61316d10a4e"
+    },
+    {
+      "id": "knee-pushups",
+      "file": "knee-pushups.webm",
+      "title": "Muscle Strengthening at Home - Push-ups",
+      "attribution": "U.S. Centers for Disease Control and Prevention",
+      "license": "U.S. federal government public domain (US)",
+      "license_or_source": "https://commons.wikimedia.org/wiki/File:Muscle_Strengthening_at_Home_-_Push-ups.webm",
+      "source_start_seconds": 47,
+      "duration_seconds": 15,
+      "changes": "Trimmed, audio removed, rescaled and transcoded to VP8/WebM",
+      "sha256": "93900944dc329037ff3f4c565a65afa2f48e281ba3e781ea5493f0c1ae7d1ae3",
+      "bytes": 1155270,
+      "purpose": "Prerecorded software inference fixture, not an astronaut observation, exercise prescription or endorsement",
+      "original_source_url": "https://upload.wikimedia.org/wikipedia/commons/1/18/Muscle_Strengthening_at_Home_-_Push-ups.webm",
+      "original_source_sha256": "829b88e24298123845dc024ac4cc03904d669fc91043463ea387a61316d10a4e"
+    },
+    {
+      "id": "squat",
+      "file": "squat.webm",
+      "title": "Squats Wikipedia",
+      "attribution": "CRiles23",
+      "license": "CC BY-SA 3.0",
+      "license_or_source": "https://creativecommons.org/licenses/by-sa/3.0/",
+      "source_start_seconds": 43,
+      "duration_seconds": 5,
+      "changes": "Trimmed, audio removed, rescaled and transcoded to VP8/WebM",
+      "sha256": "a0cb2b41f41ddb884680ef0f05726be6e4058b1380c44c11024d3bf31aede79c",
+      "bytes": 647585,
+      "purpose": "Prerecorded software inference fixture, not an astronaut observation, exercise prescription or endorsement",
+      "original_source_url": "https://upload.wikimedia.org/wikipedia/commons/2/21/Squats_Wikipedia.webm",
+      "original_source_sha256": "d37c07d2ae87af305a7e74ad0dc41f71281e20a0eac5a15247e792d1d56a4b32"
+    }
+  ],
+  "clinical_validation": false,
+  "reference_cycle_counts": "NOT_ANNOTATED"
+}

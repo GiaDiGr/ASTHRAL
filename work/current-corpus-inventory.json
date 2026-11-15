@@ -1,0 +1,62 @@
+{
+  "documents": [
+    {
+      "document": "docs/knowledge/ASTHRAL_LOCAL_KNOWLEDGE.md",
+      "sha256": "75122940173b5f70c38deeb6ca4021006df40f1dab222376671da0b1084293d6",
+      "authority": "IMPLEMENTATION_DOCUMENTATION_NOT_GUIDELINE",
+      "version": "1.1.0"
+    },
+    {
+      "document": "docs/clinical/deep-research-report-2026-10-16.md",
+      "sha256": "38ad3ab166f25a8b46c1e1f483ba813510c34dc766171389307635ecf7e8a715",
+      "authority": "CLINICAL_RESEARCH_SYNTHESIS",
+      "version": "2026-10-16"
+    },
+    {
+      "document": "01_INFORMES/REPORTE_CONSOLIDADO_COMPLETO.md",
+      "sha256": "97e9fdc86925b6b973db75900e64f222c149ae3bd9cade8c182f2264c46831e5",
+      "authority": "SPACE_RESEARCH_SYNTHESIS",
+      "version": "PINNED_CORPUS"
+    },
+    {
+      "document": "docs/v07/README.md",
+      "sha256": "ccdf9005a4892a004edac7d6cef95a2680b8ec594cc15ac1083f53e950e723a3",
+      "authority": "IMPLEMENTATION_DOCUMENTATION_NOT_GUIDELINE",
+      "version": "0.7.0"
+    },
+    {
+      "document": "docs/v07/CONTRACTS.md",
+      "sha256": "dd9d15164c08d6a1675b74318270e46d1a3fd8ff590699fb6aa7429145466ab1",
+      "authority": "IMPLEMENTATION_CONTRACT",
+      "version": "0.7.0"
+    },
+    {
+      "document": "engine/vigile/clinical_knowledge/v07-extension.json",
+      "sha256": "b258ff2d79ab79355f65826466c9fc3e7a52380b749ec18ef2eb4700759e4fd8",
+      "authority": "IMPLEMENTED_CRITERION_NOT_ORIGINAL_ARTICLE",
+      "version": "2026.1"
+    },
+    {
+      "document": "docs/v08/sources/ADA2026-short-excerpt.txt",
+      "sha256": "cb09dce1d37f61a18effc5854418767a6e13c5fe83e26a2750e5d843912cb9eb",
+      "authority": "PRIMARY_SOURCE_SHORT_EXCERPT",
+      "version": "2026-table-6.4"
+    },
+    {
+      "document": "docs/asthral/science/space-health-summary.md",
+      "sha256": "2da68f8e31da1075c12a1ad6f3b54a75c98e817ac33925192f278752fc54f32b",
+      "authority": "ASTHRAL_CURATED_PRIMARY_SOURCE_SUMMARY",
+      "version": "2026-11-15"
+    }
+  ],
+  "document_count": 8,
+  "sparse_blocks": 586,
+  "corpus_sha256": "3126446f5c75cc68024fc9cc4d786657e457afa6fd3569f5b2218d6f571f4675",
+  "historical_baseline": {
+    "documents": 7,
+    "blocks": 566,
+    "prebuilt_semantic_fragments": 6
+  },
+  "clinical_rule_changes": false,
+  "coverage": "LIMITED_PROJECT_CORPUS_NOT_COMPREHENSIVE_PRIMARY_GUIDELINES"
+}

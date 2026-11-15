@@ -1,0 +1,486 @@
+{
+  "summary": {
+    "model": {
+      "model": "MediaPipe Pose Landmarker Lite",
+      "runtime": "0.10.21",
+      "model_sha256": "59929e1d1ee95287735ddd833b19cf4ac46d29bc7afddbbf6753c459690d574a",
+      "delegate": "CPU",
+      "clinical_validation": false
+    },
+    "source_sha256": "93900944dc329037ff3f4c565a65afa2f48e281ba3e781ea5493f0c1ae7d1ae3",
+    "source": "USER_SELECTED_VIDEO_UNVERIFIED",
+    "capture_started_at": null,
+    "source_recorded_at": null,
+    "analyzed_at": "2026-11-15T15:03:15.399Z",
+    "projection": "IMAGE_PLANE_2D",
+    "joint": "left_elbow",
+    "frames": 75,
+    "valid_angle_frames": 33,
+    "missing_angle_frames": 42,
+    "angle_min_degrees": 75.91467562419703,
+    "angle_max_degrees": 178.66690176540587,
+    "cycles": null,
+    "observed_complete_cycles": 0,
+    "cycle_status": "PARTIAL_TRACKING",
+    "cycle_limits": {
+      "low": 70,
+      "high": 150
+    },
+    "cycle_scope": "MODEL_DERIVED_USER_DEFINED_EXCURSIONS_NOT_FORM_OR_FITNESS",
+    "sensor_verified": false,
+    "subject_identity_verified": false,
+    "clinical_interpretation": "NOT_PROVIDED"
+  },
+  "frames": [
+    {
+      "video_seconds": 0,
+      "angle_degrees": 177.18337702898543,
+      "inference_ms": 108.40000003576279,
+      "tracking": "MODEL_ESTIMATE"
+    },
+    {
+      "video_seconds": 0.2,
+      "angle_degrees": 168.6159658820002,
+      "inference_ms": 21.099999964237213,
+      "tracking": "MODEL_ESTIMATE"
+    },
+    {
+      "video_seconds": 0.4,
+      "angle_degrees": 156.55901488387792,
+      "inference_ms": 18.80000001192093,
+      "tracking": "MODEL_ESTIMATE"
+    },
+    {
+      "video_seconds": 0.6000000000000001,
+      "angle_degrees": 166.7191401683154,
+      "inference_ms": 18.30000001192093,
+      "tracking": "MODEL_ESTIMATE"
+    },
+    {
+      "video_seconds": 0.8,
+      "angle_degrees": 167.14999735911098,
+      "inference_ms": 18.400000035762787,
+      "tracking": "MODEL_ESTIMATE"
+    },
+    {
+      "video_seconds": 1,
+      "angle_degrees": 168.94221728602017,
+      "inference_ms": 18.19999998807907,
+      "tracking": "MODEL_ESTIMATE"
+    },
+    {
+      "video_seconds": 1.2,
+      "angle_degrees": 167.90850911638736,
+      "inference_ms": 17.80000001192093,
+      "tracking": "MODEL_ESTIMATE"
+    },
+    {
+      "video_seconds": 1.4,
+      "angle_degrees": 166.98420067561068,
+      "inference_ms": 17.80000001192093,
+      "tracking": "MODEL_ESTIMATE"
+    },
+    {
+      "video_seconds": 1.5999999999999999,
+      "angle_degrees": 169.36470705018615,
+      "inference_ms": 17.899999976158142,
+      "tracking": "MODEL_ESTIMATE"
+    },
+    {
+      "video_seconds": 1.7999999999999998,
+      "angle_degrees": 176.31991922739664,
+      "inference_ms": 17.600000023841858,
+      "tracking": "MODEL_ESTIMATE"
+    },
+    {
+      "video_seconds": 1.9999999999999998,
+      "angle_degrees": 171.77217145809294,
+      "inference_ms": 18.099999964237213,
+      "tracking": "MODEL_ESTIMATE"
+    },
+    {
+      "video_seconds": 2.1999999999999997,
+      "angle_degrees": 165.28604696135173,
+      "inference_ms": 18.69999998807907,
+      "tracking": "MODEL_ESTIMATE"
+    },
+    {
+      "video_seconds": 2.4,
+      "angle_degrees": 170.76627925637683,
+      "inference_ms": 18.30000001192093,
+      "tracking": "MODEL_ESTIMATE"
+    },
+    {
+      "video_seconds": 2.6,
+      "angle_degrees": 176.3999821885051,
+      "inference_ms": 18.399999976158142,
+      "tracking": "MODEL_ESTIMATE"
+    },
+    {
+      "video_seconds": 2.8000000000000003,
+      "angle_degrees": 178.51866961637447,
+      "inference_ms": 18,
+      "tracking": "MODEL_ESTIMATE"
+    },
+    {
+      "video_seconds": 3.0000000000000004,
+      "angle_degrees": 175.74678046628034,
+      "inference_ms": 18.399999976158142,
+      "tracking": "MODEL_ESTIMATE"
+    },
+    {
+      "video_seconds": 3.2000000000000006,
+      "angle_degrees": 176.26117390744122,
+      "inference_ms": 17.899999976158142,
+      "tracking": "MODEL_ESTIMATE"
+    },
+    {
+      "video_seconds": 3.400000000000001,
+      "angle_degrees": 171.88858681137813,
+      "inference_ms": 17.19999998807907,
+      "tracking": "MODEL_ESTIMATE"
+    },
+    {
+      "video_seconds": 3.600000000000001,
+      "angle_degrees": 177.6779656918693,
+      "inference_ms": 17.19999998807907,
+      "tracking": "MODEL_ESTIMATE"
+    },
+    {
+      "video_seconds": 3.800000000000001,
+      "angle_degrees": 178.63294095191426,
+      "inference_ms": 16.600000023841858,
+      "tracking": "MODEL_ESTIMATE"
+    },
+    {
+      "video_seconds": 4.000000000000001,
+      "angle_degrees": 178.65087930148317,
+      "inference_ms": 16.599999964237213,
+      "tracking": "MODEL_ESTIMATE"
+    },
+    {
+      "video_seconds": 4.200000000000001,
+      "angle_degrees": 177.18639658910183,
+      "inference_ms": 17.30000001192093,
+      "tracking": "MODEL_ESTIMATE"
+    },
+    {
+      "video_seconds": 4.400000000000001,
+      "angle_degrees": 158.9777348663621,
+      "inference_ms": 18,
+      "tracking": "MODEL_ESTIMATE"
+    },
+    {
+      "video_seconds": 4.600000000000001,
+      "angle_degrees": 168.6285563123318,
+      "inference_ms": 17.5,
+      "tracking": "MODEL_ESTIMATE"
+    },
+    {
+      "video_seconds": 4.800000000000002,
+      "angle_degrees": 173.5591581833888,
+      "inference_ms": 18.19999998807907,
+      "tracking": "MODEL_ESTIMATE"
+    },
+    {
+      "video_seconds": 5.000000000000002,
+      "angle_degrees": 138.80253808392425,
+      "inference_ms": 17.299999952316284,
+      "tracking": "MODEL_ESTIMATE"
+    },
+    {
+      "video_seconds": 5.200000000000002,
+      "angle_degrees": 75.91467562419703,
+      "inference_ms": 16.899999976158142,
+      "tracking": "MODEL_ESTIMATE"
+    },
+    {
+      "video_seconds": 5.400000000000002,
+      "angle_degrees": 102.70398336911637,
+      "inference_ms": 17.400000035762787,
+      "tracking": "MODEL_ESTIMATE"
+    },
+    {
+      "video_seconds": 5.600000000000002,
+      "angle_degrees": null,
+      "inference_ms": 18,
+      "tracking": "LOST_OR_INSUFFICIENT_VISIBILITY"
+    },
+    {
+      "video_seconds": 5.8000000000000025,
+      "angle_degrees": null,
+      "inference_ms": 17.19999998807907,
+      "tracking": "LOST_OR_INSUFFICIENT_VISIBILITY"
+    },
+    {
+      "video_seconds": 6.000000000000003,
+      "angle_degrees": null,
+      "inference_ms": 17.5,
+      "tracking": "LOST_OR_INSUFFICIENT_VISIBILITY"
+    },
+    {
+      "video_seconds": 6.200000000000003,
+      "angle_degrees": null,
+      "inference_ms": 17.399999976158142,
+      "tracking": "LOST_OR_INSUFFICIENT_VISIBILITY"
+    },
+    {
+      "video_seconds": 6.400000000000003,
+      "angle_degrees": null,
+      "inference_ms": 17.299999952316284,
+      "tracking": "LOST_OR_INSUFFICIENT_VISIBILITY"
+    },
+    {
+      "video_seconds": 6.600000000000003,
+      "angle_degrees": null,
+      "inference_ms": 17.69999998807907,
+      "tracking": "LOST_OR_INSUFFICIENT_VISIBILITY"
+    },
+    {
+      "video_seconds": 6.800000000000003,
+      "angle_degrees": null,
+      "inference_ms": 17.30000001192093,
+      "tracking": "LOST_OR_INSUFFICIENT_VISIBILITY"
+    },
+    {
+      "video_seconds": 7.0000000000000036,
+      "angle_degrees": null,
+      "inference_ms": 17.30000001192093,
+      "tracking": "LOST_OR_INSUFFICIENT_VISIBILITY"
+    },
+    {
+      "video_seconds": 7.200000000000004,
+      "angle_degrees": null,
+      "inference_ms": 17.19999998807907,
+      "tracking": "LOST_OR_INSUFFICIENT_VISIBILITY"
+    },
+    {
+      "video_seconds": 7.400000000000004,
+      "angle_degrees": null,
+      "inference_ms": 17.400000035762787,
+      "tracking": "LOST_OR_INSUFFICIENT_VISIBILITY"
+    },
+    {
+      "video_seconds": 7.600000000000004,
+      "angle_degrees": null,
+      "inference_ms": 18,
+      "tracking": "LOST_OR_INSUFFICIENT_VISIBILITY"
+    },
+    {
+      "video_seconds": 7.800000000000004,
+      "angle_degrees": null,
+      "inference_ms": 18.80000001192093,
+      "tracking": "LOST_OR_INSUFFICIENT_VISIBILITY"
+    },
+    {
+      "video_seconds": 8.000000000000004,
+      "angle_degrees": null,
+      "inference_ms": 18.099999964237213,
+      "tracking": "LOST_OR_INSUFFICIENT_VISIBILITY"
+    },
+    {
+      "video_seconds": 8.200000000000003,
+      "angle_degrees": null,
+      "inference_ms": 18.19999998807907,
+      "tracking": "LOST_OR_INSUFFICIENT_VISIBILITY"
+    },
+    {
+      "video_seconds": 8.400000000000002,
+      "angle_degrees": null,
+      "inference_ms": 18.600000023841858,
+      "tracking": "LOST_OR_INSUFFICIENT_VISIBILITY"
+    },
+    {
+      "video_seconds": 8.600000000000001,
+      "angle_degrees": null,
+      "inference_ms": 19,
+      "tracking": "LOST_OR_INSUFFICIENT_VISIBILITY"
+    },
+    {
+      "video_seconds": 8.8,
+      "angle_degrees": 175.18945110296718,
+      "inference_ms": 18.5,
+      "tracking": "MODEL_ESTIMATE"
+    },
+    {
+      "video_seconds": 9,
+      "angle_degrees": 178.66690176540587,
+      "inference_ms": 18.69999998807907,
+      "tracking": "MODEL_ESTIMATE"
+    },
+    {
+      "video_seconds": 9.2,
+      "angle_degrees": 169.0883403002555,
+      "inference_ms": 18.599999964237213,
+      "tracking": "MODEL_ESTIMATE"
+    },
+    {
+      "video_seconds": 9.399999999999999,
+      "angle_degrees": 166.04657989060587,
+      "inference_ms": 18.30000001192093,
+      "tracking": "MODEL_ESTIMATE"
+    },
+    {
+      "video_seconds": 9.599999999999998,
+      "angle_degrees": 143.5472760267384,
+      "inference_ms": 17.69999998807907,
+      "tracking": "MODEL_ESTIMATE"
+    },
+    {
+      "video_seconds": 9.799999999999997,
+      "angle_degrees": null,
+      "inference_ms": 18,
+      "tracking": "LOST_OR_INSUFFICIENT_VISIBILITY"
+    },
+    {
+      "video_seconds": 9.999999999999996,
+      "angle_degrees": null,
+      "inference_ms": 17.5,
+      "tracking": "LOST_OR_INSUFFICIENT_VISIBILITY"
+    },
+    {
+      "video_seconds": 10.199999999999996,
+      "angle_degrees": null,
+      "inference_ms": 17.600000023841858,
+      "tracking": "LOST_OR_INSUFFICIENT_VISIBILITY"
+    },
+    {
+      "video_seconds": 10.399999999999995,
+      "angle_degrees": null,
+      "inference_ms": 18.099999964237213,
+      "tracking": "LOST_OR_INSUFFICIENT_VISIBILITY"
+    },
+    {
+      "video_seconds": 10.599999999999994,
+      "angle_degrees": null,
+      "inference_ms": 18.19999998807907,
+      "tracking": "LOST_OR_INSUFFICIENT_VISIBILITY"
+    },
+    {
+      "video_seconds": 10.799999999999994,
+      "angle_degrees": null,
+      "inference_ms": 17.69999998807907,
+      "tracking": "LOST_OR_INSUFFICIENT_VISIBILITY"
+    },
+    {
+      "video_seconds": 10.999999999999993,
+      "angle_degrees": null,
+      "inference_ms": 17.80000001192093,
+      "tracking": "LOST_OR_INSUFFICIENT_VISIBILITY"
+    },
+    {
+      "video_seconds": 11.199999999999992,
+      "angle_degrees": null,
+      "inference_ms": 17.19999998807907,
+      "tracking": "LOST_OR_INSUFFICIENT_VISIBILITY"
+    },
+    {
+      "video_seconds": 11.399999999999991,
+      "angle_degrees": null,
+      "inference_ms": 17.899999976158142,
+      "tracking": "LOST_OR_INSUFFICIENT_VISIBILITY"
+    },
+    {
+      "video_seconds": 11.59999999999999,
+      "angle_degrees": null,
+      "inference_ms": 17.900000035762787,
+      "tracking": "LOST_OR_INSUFFICIENT_VISIBILITY"
+    },
+    {
+      "video_seconds": 11.79999999999999,
+      "angle_degrees": null,
+      "inference_ms": 18.30000001192093,
+      "tracking": "LOST_OR_INSUFFICIENT_VISIBILITY"
+    },
+    {
+      "video_seconds": 11.99999999999999,
+      "angle_degrees": null,
+      "inference_ms": 17.700000047683716,
+      "tracking": "LOST_OR_INSUFFICIENT_VISIBILITY"
+    },
+    {
+      "video_seconds": 12.199999999999989,
+      "angle_degrees": null,
+      "inference_ms": 17.19999998807907,
+      "tracking": "LOST_OR_INSUFFICIENT_VISIBILITY"
+    },
+    {
+      "video_seconds": 12.399999999999988,
+      "angle_degrees": null,
+      "inference_ms": 17,
+      "tracking": "LOST_OR_INSUFFICIENT_VISIBILITY"
+    },
+    {
+      "video_seconds": 12.599999999999987,
+      "angle_degrees": null,
+      "inference_ms": 17,
+      "tracking": "LOST_OR_INSUFFICIENT_VISIBILITY"
+    },
+    {
+      "video_seconds": 12.799999999999986,
+      "angle_degrees": null,
+      "inference_ms": 16.899999976158142,
+      "tracking": "LOST_OR_INSUFFICIENT_VISIBILITY"
+    },
+    {
+      "video_seconds": 12.999999999999986,
+      "angle_degrees": null,
+      "inference_ms": 17.599999964237213,
+      "tracking": "LOST_OR_INSUFFICIENT_VISIBILITY"
+    },
+    {
+      "video_seconds": 13.199999999999985,
+      "angle_degrees": null,
+      "inference_ms": 17.200000047683716,
+      "tracking": "LOST_OR_INSUFFICIENT_VISIBILITY"
+    },
+    {
+      "video_seconds": 13.399999999999984,
+      "angle_degrees": null,
+      "inference_ms": 17.700000047683716,
+      "tracking": "LOST_OR_INSUFFICIENT_VISIBILITY"
+    },
+    {
+      "video_seconds": 13.599999999999984,
+      "angle_degrees": null,
+      "inference_ms": 16.80000001192093,
+      "tracking": "LOST_OR_INSUFFICIENT_VISIBILITY"
+    },
+    {
+      "video_seconds": 13.799999999999983,
+      "angle_degrees": null,
+      "inference_ms": 16.599999964237213,
+      "tracking": "LOST_OR_INSUFFICIENT_VISIBILITY"
+    },
+    {
+      "video_seconds": 13.999999999999982,
+      "angle_degrees": null,
+      "inference_ms": 17.200000047683716,
+      "tracking": "LOST_OR_INSUFFICIENT_VISIBILITY"
+    },
+    {
+      "video_seconds": 14.199999999999982,
+      "angle_degrees": null,
+      "inference_ms": 17.600000023841858,
+      "tracking": "LOST_OR_INSUFFICIENT_VISIBILITY"
+    },
+    {
+      "video_seconds": 14.39999999999998,
+      "angle_degrees": null,
+      "inference_ms": 17.30000001192093,
+      "tracking": "LOST_OR_INSUFFICIENT_VISIBILITY"
+    },
+    {
+      "video_seconds": 14.59999999999998,
+      "angle_degrees": null,
+      "inference_ms": 18.19999998807907,
+      "tracking": "LOST_OR_INSUFFICIENT_VISIBILITY"
+    },
+    {
+      "video_seconds": 14.79999999999998,
+      "angle_degrees": null,
+      "inference_ms": 18.399999976158142,
+      "tracking": "LOST_OR_INSUFFICIENT_VISIBILITY"
+    }
+  ]
+}

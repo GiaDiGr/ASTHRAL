@@ -8,6 +8,7 @@ from starlette.middleware.trustedhost import TrustedHostMiddleware
 from fastapi.exceptions import RequestValidationError
 from pydantic import Field,model_validator
 from typing import Literal
+from starlette.concurrency import run_in_threadpool
 import httpx
 from .conversational import ConversationalInference
 from .offline_library import OfflineLibrary
@@ -17,8 +18,14 @@ from .local_protection import read_secret
 from .portal_sessions import Sessions
 from .hybrid_retrieval import HybridRetrieval,Topic
 from .english import english_result
+from .skinguard import SkinGuardService,SkinGuardRequest,SkinGuardInputError
+from .computer_vision import ComputerVisionService,ComputerVisionError,OCTRequest,VideoRequest
 
 class Login(Model):code:str=Field(pattern=r'^[A-Za-z0-9_-]{24,200}$')
+class PersonalLogin(Model):
+ username:str=Field(pattern=r"^[A-Za-z0-9_.-]{3,64}$")
+ password:str=Field(min_length=1,max_length=256,repr=False)
+
 class Question(Model):
  evaluation_id:Id|None=None
  monitoring_id:Id|None=None
@@ -34,31 +41,51 @@ class Question(Model):
   return self
 class OperationMode(Model):mode:Literal['FULL','LOW_POWER','CRITICAL']
 
-HEADERS={'Cache-Control':'no-store','X-Content-Type-Options':'nosniff','Referrer-Policy':'no-referrer','Permissions-Policy':'camera=(), microphone=(), geolocation=()', 'Content-Security-Policy':"default-src 'self'; script-src 'self'; style-src 'self'; img-src 'self' data:; connect-src 'self'; frame-ancestors 'none'; base-uri 'none'; form-action 'self'"}
+HEADERS={'Cache-Control':'no-store','X-Content-Type-Options':'nosniff','Referrer-Policy':'no-referrer','Permissions-Policy':'camera=(self), microphone=(), geolocation=()', 'Content-Security-Policy':"default-src 'self'; script-src 'self'; style-src 'self'; img-src 'self' data: blob:; media-src 'self' blob:; connect-src 'self'; frame-ancestors 'none'; base-uri 'none'; form-action 'self'"}
 
 def create_portal(config,reader=None,inference=None,clock=time.monotonic,voice=None):
  config=dict(config);assets=Path(__file__).with_name('web')
  if config.get('voice_enabled') and not config.get('structured_explanations'):raise ValueError('VOICE_REQUIRES_STRUCTURED_EXPLANATIONS')
- reader=reader or ReaderClient(config['backend_url'],read_secret(config['reader_token_file']))
+ accounts=None
+ if config.get('accounts_db'):
+  from .personal_accounts import Accounts,PersonalReader
+  if reader is not None:raise ValueError('PERSONAL_READER_REQUIRED')
+  accounts=Accounts(config['accounts_db']);reader=PersonalReader(config['backend_url'])
+ else:reader=reader or ReaderClient(config['backend_url'],read_secret(config['reader_token_file']))
  inference=inference or (ConversationalInference(config.get('model_url','http://127.0.0.1:8891'),config.get('model'),config.get('mode','FULL'),config['inference_provider'],config.get('runtime_key_file')) if config.get('inference_provider') else OllamaInference(config.get('model_url','http://127.0.0.1:8891'),config.get('model')))
  inference.structured_explanations=bool(config.get('structured_explanations',False))
- hybrid=HybridRetrieval(config.get('online_retrieval'),lambda:getattr(inference,'mode','CRITICAL'),config.get('public_science_cache'));library=OfflineLibrary(config.get('library_manifest'));code=read_secret(config['access_code_file'])
- if len(code)<24:raise ValueError('ACCESS_CODE_TOO_SHORT')
+ skinguard=SkinGuardService()
+ computer_vision=ComputerVisionService()
+ hybrid=HybridRetrieval(config.get('online_retrieval'),lambda:getattr(inference,'mode','CRITICAL'),config.get('public_science_cache'));library=OfflineLibrary(config.get('library_manifest'));code=None if accounts else read_secret(config['access_code_file'])
+ if config.get('vector_retrieval'):
+  from .vector_library import MiniLM,VectorLibrary
+  vector=config['vector_retrieval']
+  library=VectorLibrary(config['library_manifest'],vector['index'],MiniLM(vector['url'],vector['digest']),lambda:getattr(inference,'mode','CRITICAL'),vector.get('hybrid_enabled') is True)
+ if code is not None and len(code)<24:raise ValueError('ACCESS_CODE_TOO_SHORT')
  sessions=Sessions(config.get('session_idle_seconds',900),config.get('session_absolute_seconds',28800),clock);attempts=[];lock=threading.Lock();inference_lock=threading.Lock()
  @asynccontextmanager
  async def lifespan(app):
   yield
   reader.close()
   if getattr(app.state,'voice',None):app.state.voice.close()
- app=FastAPI(title='ASTHRAL Local Reader Portal',version='1.1.0',docs_url=None,redoc_url=None,openapi_url=None,lifespan=lifespan)
- app.state.sessions=sessions;app.state.inference=inference;app.state.hybrid=hybrid
+  computer_vision.close()
+ app=FastAPI(title='ASTHRAL Local Reader Portal',version='1.2.0' if accounts else '1.1.0',docs_url=None,redoc_url=None,openapi_url=None,lifespan=lifespan)
+ app.state.sessions=sessions;app.state.inference=inference;app.state.hybrid=hybrid;app.state.skinguard=skinguard;app.state.computer_vision=computer_vision
  from .voice_api import install_voice
  attach_speech=install_voice(app,config,reader,inference,voice,clock)
+ if accounts:
+  from .health_voice import install_health_voice
+  install_health_voice(app,accounts,sessions,inference)
  headers=dict(HEADERS)
+ headers['Permissions-Policy']='camera=(self), microphone=(), geolocation=()'
  if config.get('voice_enabled'):
   headers['Permissions-Policy']='camera=(), microphone=(self), geolocation=()'
   headers['Content-Security-Policy']+="; media-src 'self' blob:"
- app.add_middleware(TrustedHostMiddleware,allowed_hosts=['127.0.0.1'])
+ if config.get('public_origin_file'):
+  if not accounts:raise ValueError('PUBLIC_PERSONAL_ACCOUNTS_REQUIRED')
+  from .public_origin import PublicOrigin
+  # Install outside the request security middleware below.
+ else:app.add_middleware(TrustedHostMiddleware,allowed_hosts=['127.0.0.1'])
  def error(code,status):return JSONResponse({'detail':code},status,headers=headers)
  @app.middleware('http')
  async def secure(request,call_next):
@@ -67,22 +94,45 @@ def create_portal(config,reader=None,inference=None,clock=time.monotonic,voice=N
   if request.method=='POST' and origin!=base:return error('ORIGIN_REQUIRED',403)
   if path.startswith('/api/') and origin and origin!=base:return error('ORIGIN_REJECTED',403)
   if path.startswith('/api/') and request.headers.get('sec-fetch-site')=='cross-site':return error('CROSS_SITE_REQUEST_REJECTED',403)
-  if path=='/api/voice/transcribe' and not sessions.get(request.cookies.get('vigile_session',''),False):return error('SESSION_EXPIRED_OR_REQUIRED',401)
+  vision_paths=path.startswith('/api/computer-vision/') and path.endswith('/analyze')
+  if (path in ('/api/voice/transcribe','/api/voice/health-capture','/api/skinguard/analyze') or vision_paths) and not sessions.get(request.cookies.get('vigile_session',''),False):return error('SESSION_EXPIRED_OR_REQUIRED',401)
   if request.method=='POST':
    body=bytearray()
    async for chunk in request.stream():
     body.extend(chunk)
-    limit=1_820_000 if path=='/api/voice/transcribe' else 16384
+    limit=15_728_640 if path=='/api/skinguard/analyze' or vision_paths else 1_820_000 if path in ('/api/voice/transcribe','/api/voice/health-capture') else 16384
     if len(body)>limit:return error('PAYLOAD_TOO_LARGE',413)
    request._body=bytes(body)
   if path.startswith('/api/') and path!='/api/login':
    token=request.cookies.get('vigile_session','');session=sessions.get(token,touch=path not in ('/api/status','/api/session','/api/runtime'))
    if not session:return error('SESSION_EXPIRED_OR_REQUIRED',401)
-   if not sessions.admit(token,path in ('/api/assistant','/api/voice/transcribe','/api/voice/synthesize')):
+   if not sessions.admit(token,path in ('/api/assistant','/api/voice/transcribe','/api/voice/synthesize','/api/voice/health-capture','/api/skinguard/analyze') or vision_paths):
     response=error('RETRY_LATER',429);response.headers['Retry-After']='60';return response
-  response=await call_next(request);response.headers.update(headers);return response
+  client=None;binding=None
+  if accounts and path.startswith('/api/') and path!='/api/login':
+   account=session['account']
+   try:
+    credential=await run_in_threadpool(accounts.resolve,account)
+    if not credential:
+     sessions.revoke(token);return error('SESSION_EXPIRED_OR_REQUIRED',401)
+    request.state.account=account
+    if path not in ('/api/logout','/api/session','/api/runtime','/api/voice/health-history','/api/voice/health-capture','/api/voice/health-review','/api/voice/health-delete'):
+     client=await run_in_threadpool(reader.bind,account,credential)
+     binding=reader.current.set(client)
+   except (sqlite3.Error,httpx.HTTPError,RuntimeError,ValueError):
+    return error('BACKEND_UNAVAILABLE_OR_ACCESS_DENIED',503)
+  try:
+   response=await call_next(request)
+   if accounts and path.startswith('/api/') and path not in ('/api/login','/api/logout','/api/session/renew'):
+    if not sessions.get(token,False) or not await run_in_threadpool(accounts.is_active,request.state.account):
+     return error('SESSION_EXPIRED_OR_REQUIRED',401)
+   response.headers.update(headers);return response
+  finally:
+   if binding is not None:reader.current.reset(binding)
+   if client is not None:await run_in_threadpool(client.close)
  @app.exception_handler(RuntimeError)
  async def backend_failure(request,exc):
+  if accounts and str(exc).startswith(('HTTP_403 ','HTTP_404 ')):return error('RESULT_NOT_FOUND',404)
   if str(exc).startswith('HTTP_403 '):return error('ACCESS_DENIED',403)
   if str(exc).startswith('HTTP_404 '):return error('RESULT_NOT_FOUND',404)
   return error('BACKEND_UNAVAILABLE_OR_ACCESS_DENIED',502)
@@ -97,15 +147,29 @@ def create_portal(config,reader=None,inference=None,clock=time.monotonic,voice=N
  def cookie(response,token,request):
   response.set_cookie('vigile_session',token,httponly=True,samesite='strict',secure=request.url.scheme=='https',max_age=max(1,math.ceil((sessions.get(token,False) or {}).get('absolute_until',clock())-clock())),path='/')
   return response
- @app.post('/api/login')
- def login(body:Login,request:Request):
+ def admit_login():
   with lock:
    now=clock();attempts[:]=[t for t in attempts if now-t<60]
    if len(attempts)>=10:raise HTTPException(429,'RETRY_LATER',headers={'Retry-After':'60'})
    attempts.append(now)
+ def login(body:Login,request:Request):
+  admit_login()
   if not hmac.compare_digest(body.code,code):raise HTTPException(401,'INVALID_ACCESS_CODE')
   if reader.get('/dashboard/identity')['role']!='reader':raise HTTPException(503,'READER_CREDENTIAL_REQUIRED')
   return cookie(JSONResponse({'authenticated':True,'idle_seconds':sessions.idle,'absolute_seconds':sessions.absolute}),sessions.create(),request)
+ def personal_login(body:PersonalLogin,request:Request):
+  admit_login()
+  account=accounts.authenticate(body.username,body.password)
+  if account is None:raise HTTPException(401,'INVALID_CREDENTIALS')
+  credential=accounts.resolve(account)
+  if not credential:raise HTTPException(401,'INVALID_CREDENTIALS')
+  client=reader.bind(account,credential)
+  client.close()
+  sessions.revoke(request.cookies.get('vigile_session',''))
+  return cookie(JSONResponse({'authenticated':True,'idle_seconds':sessions.idle,'absolute_seconds':sessions.absolute}),sessions.create(account=account),request)
+ app.post('/api/login')(personal_login if accounts else login)
+ @app.get('/auth-mode')
+ def auth_mode():return JSONResponse({'personal':accounts is not None},headers=headers)
  @app.post('/api/logout')
  def logout(request:Request):
   sessions.revoke(request.cookies.get('vigile_session',''));r=JSONResponse({'authenticated':False});r.delete_cookie('vigile_session',path='/');return r
@@ -134,9 +198,30 @@ def create_portal(config,reader=None,inference=None,clock=time.monotonic,voice=N
   try:
    identity=reader.get('/dashboard/identity');backend='CONNECTED' if identity['role']=='reader' else 'ACCESS_DENIED'
   except (httpx.HTTPError,RuntimeError,ValueError):backend='UNAVAILABLE_OR_ACCESS_DENIED'
-  return {'backend':backend,'portal':'CONNECTED','network':'LOOPBACK_PORTAL_OPTIONAL_PUBLIC_SCIENTIFIC_EGRESS','scientific_retrieval':hybrid.status(),'process_isolation':'SAME_USER_NOT_ISOLATED','assistant':inference.status(),'assistant_busy':inference_lock.locked(),'runtime':runtime_observation() if getattr(inference,'mode',None)!='CRITICAL' else {'state':'NOT_INSPECTED_IN_CRITICAL','loaded':None,'note':'NO_INFERENCE_DOES_NOT_MEAN_MEMORY_RELEASED'},'clinical_execution':'BLOCKED','version':'1.1.0'}
+  return {'backend':backend,'portal':'CONNECTED','network':'LOOPBACK_PORTAL_OPTIONAL_PUBLIC_SCIENTIFIC_EGRESS','scientific_retrieval':hybrid.status(),'process_isolation':'SAME_USER_NOT_ISOLATED','assistant':inference.status(),'assistant_busy':inference_lock.locked(),'runtime':runtime_observation() if getattr(inference,'mode',None)!='CRITICAL' else {'state':'NOT_INSPECTED_IN_CRITICAL','loaded':None,'note':'NO_INFERENCE_DOES_NOT_MEAN_MEMORY_RELEASED'},'clinical_execution':'BLOCKED','computer_vision':computer_vision.get_model_status(),'skinguard':skinguard.status(),'version':'1.2.0' if accounts else '1.1.0'}
+ @app.get('/api/skinguard/status')
+ def skinguard_status():return skinguard.status()
+ @app.post('/api/skinguard/analyze')
+ def skinguard_analyze(body:SkinGuardRequest):
+  try:return skinguard.analyze(body)
+  except SkinGuardInputError as exc:raise HTTPException(exc.status_code,exc.code)
+ @app.get('/api/computer-vision/status')
+ def computer_vision_status():return computer_vision.get_model_status()
+ @app.post('/api/computer-vision/ocular/analyze')
+ def ocularvision_analyze(body:OCTRequest):
+  try:return computer_vision.analyze_oct(body)
+  except ComputerVisionError as exc:raise HTTPException(exc.status_code,exc.code)
+ @app.post('/api/computer-vision/echo/analyze')
+ def echovision_analyze(body:VideoRequest):
+  try:return computer_vision.analyze_echo(body)
+  except ComputerVisionError as exc:raise HTTPException(exc.status_code,exc.code)
+ @app.post('/api/computer-vision/motion/analyze')
+ def motionguard_analyze(body:VideoRequest):
+  try:return computer_vision.analyze_motion(body)
+  except ComputerVisionError as exc:raise HTTPException(exc.status_code,exc.code)
  @app.post('/api/mode')
  def mode(body:OperationMode):
+  if accounts:raise HTTPException(403,'OPERATOR_MODE_CONTROL_REQUIRED')
   if not hasattr(inference,'set_mode'):raise HTTPException(409,'CONFIGURABLE_INFERENCE_REQUIRED')
   if not inference_lock.acquire(blocking=False):raise HTTPException(429,'ASSISTANT_BUSY')
   try:
@@ -166,7 +251,7 @@ def create_portal(config,reader=None,inference=None,clock=time.monotonic,voice=N
    body=body.model_copy(update={'language':'en'});response_start=time.perf_counter()
    before_calls=getattr(inference,'model_http_calls',None)
    if any(len(q)>1200 for q in body.history):raise HTTPException(422,'HISTORY_TOO_LARGE')
-   history=body.history if body.history_context_id==(body.monitoring_id or body.evaluation_id) else []
+   history=body.history if not accounts and body.history_context_id==(body.monitoring_id or body.evaluation_id) else []
    if body.monitoring_id:
     from .longitudinal_assistant import answer_monitoring
     result=answer_monitoring(reader,inference,body.monitoring_id,body.question,history,library,body.language)
@@ -183,15 +268,16 @@ def create_portal(config,reader=None,inference=None,clock=time.monotonic,voice=N
   result['supplementary_science']=hybrid.retrieve(body.public_topic)
   return result
  @app.get('/')
- def index():return FileResponse(assets/'index.html')
+ def index():return FileResponse(assets/'index.html',headers=headers)
  @app.get('/assets/{name}')
  def asset(name:str):
-  if name not in ('app.js','style.css','voice-controller.js','recorder-worklet.js','management.js','translations.js'):raise HTTPException(404)
+  if name not in ('app.js','style.css','voice-controller.js','recorder-worklet.js','management.js','translations.js','skinguard.js','computer-vision.js','astronaut-earth-login.png'):raise HTTPException(404)
   return FileResponse(assets/name)
+ if config.get('public_origin_file'):app.add_middleware(PublicOrigin,path=config['public_origin_file'])
  return app
 
 def main():
  import argparse,uvicorn
  p=argparse.ArgumentParser();p.add_argument('--config',required=True,type=Path);p.add_argument('--port',type=int,default=8766);args=p.parse_args()
- uvicorn.run(create_portal(json.loads(args.config.read_text(encoding='utf8'))),host='127.0.0.1',port=args.port,access_log=False)
+ uvicorn.run(create_portal(json.loads(args.config.read_text(encoding='utf8'))),host='127.0.0.1',port=args.port,access_log=False,proxy_headers=False)
 if __name__=='__main__':main()

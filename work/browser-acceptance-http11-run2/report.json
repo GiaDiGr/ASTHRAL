@@ -1,0 +1,21 @@
+{
+  "status": "PARTIAL_WORKFLOW_PASSED_NOT_FULL_ACCEPTANCE",
+  "page_errors": [],
+  "console_errors": [
+    "Failed to load resource: the server responded with a status of 404 (File not found)"
+  ],
+  "request_failures": [],
+  "checks": [
+    "Login rendered",
+    "Demo entered",
+    "Exercise start/count/pause/resume/complete",
+    "USDA search/portion/save/hydration",
+    "Route opened: sleep-recovery",
+    "Route opened: wellbeing",
+    "Route opened: space-weather",
+    "Route opened: space-radiation",
+    "Route opened: clinical",
+    "Route opened: history"
+  ],
+  "runtime_status": "Reference Python engine ready on this device \u00b7 3.63 seconds"
+}

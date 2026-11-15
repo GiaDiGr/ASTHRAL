@@ -1,0 +1,4 @@
+quantity_kind,value,unit,timestamp,mode,quality,mission_segment,location,source,instrument_id,uncertainty_value,uncertainty_unit,note
+ABSORBED_DOSE_RATE,1,uGy/h,2026-11-05T18:21:00Z,SYNTHETIC,UNKNOWN,synthetic-demo,synthetic-habitat,ASTHRAL_ARBITRARY_SOFTWARE_FIXTURE,synthetic-only,,,"Synthetic fixture; not measured exposure."
+ABSORBED_DOSE_RATE,12,uGy/h,2026-11-05T18:51:00Z,SYNTHETIC,UNKNOWN,synthetic-demo,synthetic-eva,ASTHRAL_ARBITRARY_SOFTWARE_FIXTURE,synthetic-only,,,"Synthetic fixture; unrelated to DONKI event records."
+ABSORBED_DOSE_RATE,2,uGy/h,2026-11-05T19:21:00Z,SYNTHETIC,UNKNOWN,synthetic-demo,synthetic-habitat,ASTHRAL_ARBITRARY_SOFTWARE_FIXTURE,synthetic-only,,,"Synthetic fixture; not a radiation transport model."

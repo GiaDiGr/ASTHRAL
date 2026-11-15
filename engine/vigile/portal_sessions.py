@@ -11,20 +11,20 @@ class Sessions:
    if not row or now>=min(row['idle_until'],row['absolute_until']):self.rows.pop(key,None);return None
    if touch:row['idle_until']=min(now+self.idle,row['absolute_until'])
    return dict(row)
- def create(self,absolute_until=None):
+ def create(self,absolute_until=None,account=None):
   with self.lock:
    now=self.clock()
    for key,row in list(self.rows.items()):
     if now>=min(row['idle_until'],row['absolute_until']):self.rows.pop(key)
    if len(self.rows)>=128:raise RuntimeError('SESSION_LIMIT')
-   token=secrets.token_urlsafe(32);self.rows[self._key(token)]={'idle_until':now+self.idle,'absolute_until':absolute_until or now+self.absolute,'reads':[],'assistant':[]};return token
+   token=secrets.token_urlsafe(32);self.rows[self._key(token)]={'idle_until':now+self.idle,'absolute_until':absolute_until or now+self.absolute,'reads':[],'assistant':[],'account':account};return token
  def revoke(self,token):
   with self.lock:self.rows.pop(self._key(token),None)
  def renew(self,token):
   with self.lock:
    row=self.get(token,False)
    if not row:return None
-   self.revoke(token);new=self.create(row['absolute_until']);self.rows[self._key(new)]['reads']=row['reads'];self.rows[self._key(new)]['assistant']=row['assistant'];return new
+   self.revoke(token);new=self.create(row['absolute_until'],row['account']);self.rows[self._key(new)]['reads']=row['reads'];self.rows[self._key(new)]['assistant']=row['assistant'];return new
  def admit(self,token,assistant=False):
   with self.lock:
    row=self.rows.get(self._key(token));now=self.clock()

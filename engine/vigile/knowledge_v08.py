@@ -11,7 +11,8 @@ SOURCES=[
  ('docs/v07/README.md','IMPLEMENTATION_DOCUMENTATION_NOT_GUIDELINE','0.7.0'),
  ('docs/v07/CONTRACTS.md','IMPLEMENTATION_CONTRACT','0.7.0'),
  ('engine/vigile/clinical_knowledge/v07-extension.json','IMPLEMENTED_CRITERION_NOT_ORIGINAL_ARTICLE','2026.1'),
- ('docs/v08/sources/ADA2026-short-excerpt.txt','PRIMARY_SOURCE_SHORT_EXCERPT','2026-table-6.4')]
+ ('docs/v08/sources/ADA2026-short-excerpt.txt','PRIMARY_SOURCE_SHORT_EXCERPT','2026-table-6.4'),
+ ('docs/asthral/science/space-health-summary.md','ASTHRAL_CURATED_PRIMARY_SOURCE_SUMMARY','2026-11-15')]
 INJECTION=re.compile(r'ignore (?:all |previous |the )?(?:instructions|rules)|ignora.{0,30}(?:reglas|instrucciones)|system prompt|reveal.{0,30}(?:secret|token)|<script|\[INST\]|role\s*:\s*system',re.I)
 GROUPS={
  'coverage':'coverage cobertura intervals intervalos accumulated acumulada acumulado',
@@ -59,7 +60,7 @@ def build(root,output,sources=None):
     output=Path(output);output.parent.mkdir(parents=True,exist_ok=True);output.write_text(json.dumps(manifest,ensure_ascii=False,indent=2),encoding='utf-8')
     return {k:v for k,v in manifest.items() if k!='blocks'}|{'blocks':len(rows)}
 
-def search(manifest,question,limit,root=ROOT):
+def verified_blocks(manifest,root=ROOT):
     rows=manifest['blocks'];issues=[];verified=[];cache={}
     if sha(canonical(rows))!=manifest['sha256']:raise ValueError('LIBRARY_INTEGRITY_FAILED')
     seen=set()
@@ -83,6 +84,10 @@ def search(manifest,question,limit,root=ROOT):
         seen.add(b['id'])
         if INJECTION.search(b['text']):issues.append('DOCUMENT_INSTRUCTION_QUARANTINED:'+b['id']);continue
         verified.append(b)
+    return verified, issues, cache
+
+def search(manifest,question,limit,root=ROOT):
+    verified, issues, cache = verified_blocks(manifest,root)
     from .retrieval_bm25 import rank
     ranked=rank(verified,question,cache)
     found=[];per_document={}

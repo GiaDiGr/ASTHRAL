@@ -1,0 +1,67 @@
+{
+  "project": "ASTHRAL",
+  "reviewed_at": "2026-11-15",
+  "branch": "feature/asthral-autonomous-mission",
+  "base_commit": "b708df456e504d9e486236915f878ec088e4f2f9",
+  "clinical_validation": false,
+  "real_medical_data_used": false,
+  "tests": {
+    "python_pytest_full": {"passed": 907, "skipped": 19, "failed": 0, "duration_seconds": 197.76, "warnings": ["Starlette/httpx TestClient deprecation"]},
+    "node_browser_tests": {"passed": 63, "failed": 0, "duration_seconds": 9.53, "warnings": ["Node module-type reparsing warning for ES modules under package without type=module"]},
+    "science_source_registry_targeted": {"passed": 3, "failed": 0},
+    "previous_full_run_diagnostics": {"passed": 904, "skipped": 19, "failed": 2, "corrective_action": "RAG source expectation now allows the newly indexed curated space-health summary; replay case was rerun independently and passed."}
+  },
+  "static_build": {
+    "path": "web-local/build-output-mission-integrated-20261115",
+    "assets": 79,
+    "bytes": 112738394,
+    "synthetic_parity_cases": 254,
+    "clinical_modules": "BYTE_IDENTICAL_TO_REFERENCE_BUILD_INPUT",
+    "offline_sparse_corpus_documents": 8,
+    "offline_sparse_corpus_blocks": 586,
+    "optional_minilm_index": "UNCHANGED_SIX_PROJECT_AUTHORED_CHUNKS; NOT_COMPREHENSIVE",
+    "science_registry_copied_offline": true,
+    "source_integrity_manifest_verified": true
+  },
+  "scientific_sources": {
+    "registry_records": 12,
+    "locally_republished_full_third_party_documents": 0,
+    "source_content": "BIBLIOGRAPHY_PLUS_PROJECT_AUTHORED_SUMMARIES_ONLY",
+    "standards_catalogue_correction": "NASA-STD-3001 Volume 2 Revision F, document date 2026-07-14, is active per NASA catalogue as checked 2026-11-15; Revision D retained as historical metadata."
+  },
+  "space_weather": {
+    "provider": "NASA CCMC DONKI",
+    "api_base": "https://ccmc.gsfc.nasa.gov/DONKI-API/get/",
+    "live_api_check": "HTTP 200; current CORS response observed; 9 FLR results for 2026-11-01 through 2026-11-15 during implementation check",
+    "personal_data_transmitted": false,
+    "clinical_or_operational_authority": false,
+    "offline_public_cache": "AUTO-DISPLAYED_WITH_24H_STALE_LABEL_AND_UNKNOWN_CURRENT_CONDITIONS"
+  },
+  "radiation": {
+    "quantity_families": ["absorbed dose Gy", "absorbed dose rate Gy/h", "dose equivalent Sv", "dose equivalent rate Sv/h", "effective dose Sv", "cumulative absorbed dose Gy"],
+    "cross_conversion_gy_to_sv": false,
+    "device_adapter_or_sensor_verification": false,
+    "therapeutic_or_flight_action": "BLOCKED"
+  },
+  "browser_review": {
+    "attempted": true,
+    "result": "LOCAL_BROWSER_ORIGIN_PERMISSION_DECLINED_BY_DESKTOP_POLICY",
+    "workaround_attempted": false,
+    "physical_device_verification": false,
+    "screenshots_captured": false
+  },
+  "deployment": {
+    "stable_site_modified": false,
+    "preview_deployed": false,
+    "reason": "No authenticated Cloudflare deployment session was available in the continuation worktree; deployment was not attempted.",
+    "private_credentials_committed": false
+  },
+  "limits": [
+    "No clinical or operational validation is implied by tests or synthetic fixtures.",
+    "SQLite is not encrypted by the Python reference backend; browser persistent profiles remain encrypted by the pre-existing vault design.",
+    "Manual radiation data are unverified; no CAD/HERA or mission sensor adapter is present.",
+    "Exercise, hydration, meals, sleep and well-being are user-reported journals only, without targets, sensor inference or clinical interpretation.",
+    "NASA DONKI data are research/prototyping context, not a personal warning or exposure estimate.",
+    "Camera and local LLM modules retain their earlier status; no inference benchmark or physical camera/microphone test was performed in this mission cycle."
+  ]
+}

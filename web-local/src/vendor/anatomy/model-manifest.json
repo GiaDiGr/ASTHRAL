@@ -1,0 +1,14 @@
+{
+  "schema_version": "1.0.0",
+  "asset": "zanatomy-muscles.glb",
+  "bytes": 4003932,
+  "sha256": "f8399ba12dedb7cd88de199eddf7e3f8a3de8373a69228fb9da7ce1b7981ffd2",
+  "source_url": "https://raw.githubusercontent.com/ArianArsenal/anatomy-explorer/8375d6ce7fec36e677c0eda66cae829ba55a4717/public/models/muscles.glb",
+  "source_commit": "8375d6ce7fec36e677c0eda66cae829ba55a4717",
+  "upstream_model": "https://github.com/Z-Anatomy/Models-of-human-anatomy",
+  "upstream_dataset": "https://dbarchive.biosciencedbc.jp/en/bodyparts3d/",
+  "license": "CC BY-SA 4.0; based on BodyParts3D CC BY-SA 2.1 Japan",
+  "modified_by_asthral": false,
+  "clinical_validation": false,
+  "layer": "muscular system only"
+}

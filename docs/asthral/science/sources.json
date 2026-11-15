@@ -1,0 +1,651 @@
+{
+  "schema_version": "1.0.0",
+  "reviewed_at": "2026-11-15",
+  "redistribution_policy": "OFFICIAL_LINKS_AND_PROJECT_AUTHORED_SUMMARIES_ONLY",
+  "sources": [
+    {
+      "source_id": "SRC-CCMC-DONKI-2026",
+      "institution": "NASA Community Coordinated Modeling Center",
+      "title": "CCMC DONKI System and rules of the road",
+      "publication_date": "2026-09-30 (URL migration notice; dynamic database)",
+      "url": "https://ccmc.gsfc.nasa.gov/tools/DONKI/",
+      "api_base": "https://ccmc.gsfc.nasa.gov/DONKI-API/get/",
+      "doi": null,
+      "pmid": null,
+      "evidence_category": "OFFICIAL_PUBLIC_RESEARCH_DATABASE",
+      "topics": [
+        "space weather",
+        "events",
+        "notifications",
+        "linked events"
+      ],
+      "summary_claim_ids": [
+        "SW-001"
+      ],
+      "reuse_status": "LINK_ONLY_NO_DATABASE_REPUBLICATION",
+      "review_status": "OFFICIAL_PAGE_AND_LIVE_ENDPOINT_CHECKED_2026-11-15",
+      "modules": [
+        "space-weather"
+      ],
+      "suggested_citation": "NASA Community Coordinated Modeling Center. (2026-09-30 (URL migration notice; dynamic database)). CCMC DONKI System and rules of the road. https://ccmc.gsfc.nasa.gov/tools/DONKI/"
+    },
+    {
+      "source_id": "SRC-NASA-HRR-2026",
+      "institution": "NASA Human Research Program",
+      "title": "Human Research Program Evidence catalogue",
+      "publication_date": "Dynamic catalogue; reviewed 2026-11-15",
+      "url": "https://humanresearchroadmap.nasa.gov/evidence/",
+      "doi": null,
+      "pmid": null,
+      "evidence_category": "OFFICIAL_EVIDENCE_CATALOGUE",
+      "topics": [
+        "sleep",
+        "bone",
+        "fitness",
+        "nutrition",
+        "SANS",
+        "behavioral health",
+        "medical autonomy"
+      ],
+      "summary_claim_ids": [
+        "PH-001",
+        "PH-002",
+        "PH-003",
+        "PH-004"
+      ],
+      "reuse_status": "LINK_ONLY_NO_REPORT_REPUBLICATION",
+      "review_status": "OFFICIAL_CATALOGUE_CHECKED_2026-11-15",
+      "modules": [
+        "prevention"
+      ],
+      "suggested_citation": "NASA Human Research Program. (Dynamic catalogue; reviewed 2026-11-15). Human Research Program Evidence catalogue. https://humanresearchroadmap.nasa.gov/evidence/"
+    },
+    {
+      "source_id": "SRC-NASA-HRR-SLEEP-2016",
+      "institution": "NASA Human Research Program, Behavioral Health and Performance Element",
+      "title": "Risk of Performance Decrements and Adverse Health Outcomes Resulting from Sleep Loss, Circadian Desynchronization, and Work Overload",
+      "authors": [
+        "Erin Flynn-Evans",
+        "Kevin Gregory",
+        "Lucia Arsintescu",
+        "Alexandra Whitmire",
+        "and prior contributors"
+      ],
+      "publication_date": "2016-04-11",
+      "url": "https://humanresearchroadmap.nasa.gov/evidence/reports/Sleep.pdf",
+      "doi": null,
+      "pmid": null,
+      "evidence_category": "NASA_HRP_EVIDENCE_REPORT",
+      "topics": [
+        "sleep",
+        "circadian",
+        "workload",
+        "fatigue"
+      ],
+      "summary_claim_ids": [
+        "PH-001"
+      ],
+      "reuse_status": "LINK_ONLY_NO_PDF_REPUBLICATION",
+      "review_status": "OFFICIAL_REPORT_TITLE_AND_CONTENT_CHECKED_2026-11-15",
+      "modules": [
+        "prevention"
+      ],
+      "suggested_citation": "NASA Human Research Program, Behavioral Health and Performance Element. (2016-04-11). Risk of Performance Decrements and Adverse Health Outcomes Resulting from Sleep Loss, Circadian Desynchronization, and Work Overload. https://humanresearchroadmap.nasa.gov/evidence/reports/Sleep.pdf"
+    },
+    {
+      "source_id": "SRC-NASA-HRR-FITNESS-2024",
+      "institution": "NASA Human Research Program",
+      "title": "Risk of Mission Performance Decrements and Adverse Health Outcomes Resulting from Reduced Cardiorespiratory and Musculoskeletal Fitness",
+      "publication_date": "2024 (catalogue-linked report)",
+      "url": "https://humanresearchroadmap.nasa.gov/evidence/",
+      "doi": null,
+      "pmid": null,
+      "evidence_category": "NASA_HRP_EVIDENCE_REPORT",
+      "topics": [
+        "exercise",
+        "cardiorespiratory fitness",
+        "muscle",
+        "bone"
+      ],
+      "summary_claim_ids": [
+        "PH-002"
+      ],
+      "reuse_status": "LINK_ONLY_NO_PDF_REPUBLICATION",
+      "review_status": "OFFICIAL_CATALOGUE_ENTRY_CHECKED_2026-11-15",
+      "modules": [
+        "prevention"
+      ],
+      "suggested_citation": "NASA Human Research Program. (2024 (catalogue-linked report)). Risk of Mission Performance Decrements and Adverse Health Outcomes Resulting from Reduced Cardiorespiratory and Musculoskeletal Fitness. https://humanresearchroadmap.nasa.gov/evidence/"
+    },
+    {
+      "source_id": "SRC-NASA-HRR-BONE-2024",
+      "institution": "NASA Human Research Program",
+      "title": "Risk of Bone Fracture due to Spaceflight-induced Changes to Bone",
+      "publication_date": "2024-07 (report filename date)",
+      "url": "https://humanresearchroadmap.nasa.gov/evidence/reports/Bone%20Fracture%20Evidence%20Report_07-18-2024.pdf",
+      "doi": null,
+      "pmid": null,
+      "evidence_category": "NASA_HRP_EVIDENCE_REPORT",
+      "topics": [
+        "bone",
+        "fracture",
+        "recovery"
+      ],
+      "summary_claim_ids": [
+        "PH-002"
+      ],
+      "reuse_status": "LINK_ONLY_NO_PDF_REPUBLICATION",
+      "review_status": "OFFICIAL_REPORT_CHECKED_2026-11-15",
+      "modules": [
+        "prevention"
+      ],
+      "suggested_citation": "NASA Human Research Program. (2024-07 (report filename date)). Risk of Bone Fracture due to Spaceflight-induced Changes to Bone. https://humanresearchroadmap.nasa.gov/evidence/reports/Bone%20Fracture%20Evidence%20Report_07-18-2024.pdf"
+    },
+    {
+      "source_id": "SRC-NASA-HRR-NUTRITION-2020",
+      "institution": "NASA Human Research Program",
+      "title": "Human Adaptation to Spaceflight: Nutrition Evidence Report",
+      "publication_date": "2020 (file version)",
+      "url": "https://humanresearchroadmap.nasa.gov/evidence/other/Nutrition%20ER_human_adaptation_2020_final.pdf",
+      "doi": null,
+      "pmid": null,
+      "evidence_category": "NASA_HRP_EVIDENCE_REPORT",
+      "topics": [
+        "nutrition",
+        "energy intake",
+        "food"
+      ],
+      "summary_claim_ids": [
+        "PH-003"
+      ],
+      "reuse_status": "LINK_ONLY_NO_PDF_REPUBLICATION",
+      "review_status": "OFFICIAL_REPORT_CHECKED_2026-11-15",
+      "modules": [
+        "prevention"
+      ],
+      "suggested_citation": "NASA Human Research Program. (2020 (file version)). Human Adaptation to Spaceflight: Nutrition Evidence Report. https://humanresearchroadmap.nasa.gov/evidence/other/Nutrition%20ER_human_adaptation_2020_final.pdf"
+    },
+    {
+      "source_id": "SRC-NASA-STD3001-V1-REVC",
+      "institution": "NASA Office of the Chief Health and Medical Officer",
+      "title": "NASA-STD-3001 Volume 1, Revision C: Crew Health",
+      "publication_date": "2023-11",
+      "url": "https://www.nasa.gov/wp-content/uploads/2023/11/nasa-std-3001-vol-1-rev-c-with-signature.pdf",
+      "doi": null,
+      "pmid": null,
+      "evidence_category": "NASA_TECHNICAL_STANDARD",
+      "topics": [
+        "crew health",
+        "radiation limits",
+        "medical operations"
+      ],
+      "summary_claim_ids": [
+        "RAD-001",
+        "RAD-003"
+      ],
+      "reuse_status": "LINK_ONLY_NO_STANDARD_REPUBLICATION",
+      "review_status": "OFFICIAL_DOCUMENT_CHECKED_2026-11-15",
+      "modules": [
+        "radiation"
+      ],
+      "suggested_citation": "NASA Office of the Chief Health and Medical Officer. (2023-11). NASA-STD-3001 Volume 1, Revision C: Crew Health. https://www.nasa.gov/wp-content/uploads/2023/11/nasa-std-3001-vol-1-rev-c-with-signature.pdf"
+    },
+    {
+      "source_id": "SRC-NASA-STD3001-V2-REVD",
+      "institution": "NASA Office of the Chief Health and Medical Officer",
+      "title": "NASA-STD-3001 Volume 2, Revision D: Human Factors, Habitability, and Environmental Health",
+      "publication_date": "2023-09-15 (Revision D approval; historical version as of 2026-11-15)",
+      "url": "https://standards.nasa.gov/sites/default/files/standards/NASA/D/nasa-std-3001-vol-2-rev-d-signature_1.pdf",
+      "doi": null,
+      "pmid": null,
+      "evidence_category": "NASA_TECHNICAL_STANDARD",
+      "topics": [
+        "radiation monitoring",
+        "environmental health",
+        "habitat",
+        "EVA"
+      ],
+      "summary_claim_ids": [
+        "RAD-001",
+        "RAD-003"
+      ],
+      "reuse_status": "LINK_ONLY_NO_STANDARD_REPUBLICATION",
+      "review_status": "OFFICIAL_DOCUMENT_CHECKED_2026-11-15",
+      "modules": [
+        "radiation",
+        "eva"
+      ],
+      "suggested_citation": "NASA Office of the Chief Health and Medical Officer. (2023-09-15 (Revision D approval; historical version as of 2026-11-15)). NASA-STD-3001 Volume 2, Revision D: Human Factors, Habitability, and Environmental Health. https://standards.nasa.gov/sites/default/files/standards/NASA/D/nasa-std-3001-vol-2-rev-d-signature_1.pdf"
+    },
+    {
+      "source_id": "SRC-NASA-SRAG-CAD-2026",
+      "institution": "NASA Johnson Space Center Space Radiation Analysis Group",
+      "title": "Radiation Detectors: Crew Active Dosimeters",
+      "publication_date": "Dynamic NASA page; reviewed 2026-11-15",
+      "url": "https://srag.jsc.nasa.gov/SpaceRadiation/How/How.cfm",
+      "doi": null,
+      "pmid": null,
+      "evidence_category": "NASA_OPERATIONAL_INSTRUMENT_DESCRIPTION",
+      "topics": [
+        "CAD",
+        "personal dosimetry",
+        "absorbed dose",
+        "dose rate",
+        "passive dosimetry"
+      ],
+      "summary_claim_ids": [
+        "RAD-002"
+      ],
+      "reuse_status": "LINK_ONLY_NO_PAGE_REPUBLICATION",
+      "review_status": "OFFICIAL_PAGE_CHECKED_2026-11-15",
+      "modules": [
+        "radiation"
+      ],
+      "suggested_citation": "NASA Johnson Space Center Space Radiation Analysis Group. (Dynamic NASA page; reviewed 2026-11-15). Radiation Detectors: Crew Active Dosimeters. https://srag.jsc.nasa.gov/SpaceRadiation/How/How.cfm"
+    },
+    {
+      "source_id": "SRC-NASA-NESC-RP-20-01589",
+      "institution": "NASA Engineering and Safety Center",
+      "title": "NESC-RP-20-01589: internal radiation monitoring hardware, HERA and CAD",
+      "publication_date": "2022-01 (NASA technical memorandum record)",
+      "url": "https://ntrs.nasa.gov/citations/20220002905",
+      "doi": null,
+      "pmid": null,
+      "evidence_category": "NASA_TECHNICAL_REPORT",
+      "topics": [
+        "HERA",
+        "CAD",
+        "Orion",
+        "mission hardware applicability"
+      ],
+      "summary_claim_ids": [
+        "RAD-002"
+      ],
+      "reuse_status": "LINK_ONLY_NO_REPORT_REPUBLICATION",
+      "review_status": "NASA_NTRS_RECORD_AND_REPORT_CHECKED_2026-11-15",
+      "modules": [
+        "radiation"
+      ],
+      "suggested_citation": "NASA Engineering and Safety Center. (2022-01 (NASA technical memorandum record)). NESC-RP-20-01589: internal radiation monitoring hardware, HERA and CAD. https://ntrs.nasa.gov/citations/20220002905"
+    },
+    {
+      "source_id": "SRC-NASA-CCMC-API-2026",
+      "institution": "NASA Community Coordinated Modeling Center",
+      "title": "CCMC Public Web Services and APIs / DONKI OpenAPI v2.0",
+      "publication_date": "API version 2.0; checked 2026-11-15",
+      "url": "https://ccmc.gsfc.nasa.gov/tools/API/",
+      "doi": null,
+      "pmid": null,
+      "evidence_category": "OFFICIAL_TECHNICAL_API_DOCUMENTATION",
+      "topics": [
+        "DONKI API",
+        "JSON schemas",
+        "public data"
+      ],
+      "summary_claim_ids": [
+        "SW-001"
+      ],
+      "reuse_status": "PUBLIC_API_USED_WITHOUT_CREDENTIALS",
+      "review_status": "OPENAPI_V2_AND_LIVE_RESPONSE_CHECKED_2026-11-15",
+      "modules": [
+        "space-weather"
+      ],
+      "suggested_citation": "NASA Community Coordinated Modeling Center. (API version 2.0; checked 2026-11-15). CCMC Public Web Services and APIs / DONKI OpenAPI v2.0. https://ccmc.gsfc.nasa.gov/tools/API/"
+    },
+    {
+      "source_id": "SRC-NASA-STD3001-V2-REVF",
+      "institution": "NASA Office of the Chief Health and Medical Officer / NASA Technical Standards System",
+      "title": "NASA Space Flight Human System Standard Volume 2: Human Factors, Habitability, and Environmental Health, Revision F",
+      "publication_date": "2026-07-14 (document date; active in catalogue on 2026-11-15)",
+      "url": "https://standards.nasa.gov/node/237",
+      "doi": null,
+      "pmid": null,
+      "evidence_category": "NASA_TECHNICAL_STANDARD_CATALOGUE_AND_ACTIVE_REVISION",
+      "topics": [
+        "crew health",
+        "human factors",
+        "habitability",
+        "environmental health",
+        "mission-specific tailoring",
+        "spacesuits",
+        "EVA",
+        "thermal management",
+        "suited crewmember heat storage"
+      ],
+      "summary_claim_ids": [
+        "RAD-001",
+        "RAD-003",
+        "EVA-002"
+      ],
+      "reuse_status": "LINK_ONLY_NO_STANDARD_REPUBLICATION",
+      "review_status": "NASA_STANDARDS_CATALOGUE_ACTIVE_REVISION_VERIFIED_2026-11-15",
+      "modules": [
+        "radiation",
+        "eva"
+      ],
+      "source_scope": "Active agency standard record for Volume 2, Revision F; Section 11 covers spacesuit-specific requirements. Use the current controlled document and program tailoring for applicability.",
+      "evidence_limitations": "A general-purpose ASTHRAL summary is not a compliance interpretation. Requirements are program- and mission-tailored; the standard does not validate ASTHRAL or authorize its alerts.",
+      "suggested_citation": "NASA. (2026). NASA Space Flight Human System Standard, Volume 2: Human Factors, Habitability, and Environmental Health (NASA-STD-3001 Vol. 2, Rev. F; document date 2026-07-14). https://standards.nasa.gov/node/237",
+      "access_url": "https://www.nasa.gov/reference/11-0-spacesuits-vol-2/"
+    },
+    {
+      "source_id": "SRC-USDA-FDC-FOUNDATION-2026-10",
+      "institution": "U.S. Department of Agriculture, Agricultural Research Service",
+      "title": "FoodData Central Foundation Foods, October 2026 release",
+      "authors": [
+        "USDA Agricultural Research Service"
+      ],
+      "publication_date": "2026-10-29",
+      "url": "https://fdc.nal.usda.gov/download-datasets/",
+      "dataset_url": "https://fdc.nal.usda.gov/fdc-datasets/FoodData_Central_foundation_food_json_2026-10-29.zip",
+      "doi": null,
+      "pmid": null,
+      "evidence_category": "PUBLIC_DOMAIN_FOOD_COMPOSITION_DATASET",
+      "topics": [
+        "food composition",
+        "energy",
+        "protein",
+        "carbohydrate",
+        "fat",
+        "water",
+        "offline nutrition estimate"
+      ],
+      "summary_claim_ids": [
+        "NUTRITION-001"
+      ],
+      "reuse_status": "PUBLIC_DOMAIN_CC0_1_0_ATTRIBUTION_REQUESTED",
+      "review_status": "OFFICIAL_DATASET_AND_API_LICENSING_PAGE_CHECKED_2026-11-15",
+      "suggested_citation": "U.S. Department of Agriculture, Agricultural Research Service. FoodData Central, 2019. fdc.nal.usda.gov.",
+      "modules": [
+        "prevention"
+      ]
+    },
+    {
+      "source_id": "SRC-TEVA-IJACSA-2023",
+      "institution": "International Journal of Advanced Computer Science and Applications / The Science and Information Organization",
+      "title": "Mechatronics Design and Development of T-EVA: Bio-Sensorized Space System for Astronaut’s Upper Body Temperature Monitoring During Extravehicular Activities on the Moon and Mars",
+      "authors": [
+        "Paul Palacios",
+        "Jose Cornejo",
+        "Juan C. Chavez",
+        "Carlos Cornejo",
+        "Jorge Cornejo",
+        "Mariela Vargas",
+        "Natalia I. Vargas-Cuentas",
+        "Avid Roman-Gonzalez",
+        "Julio Valdivia-Silva"
+      ],
+      "publication_date": "2023; 14(9), 661–672",
+      "url": "https://doi.org/10.14569/IJACSA.2023.0140969",
+      "access_url": "https://thesai.org/Downloads/Volume14No9/Paper_69-Mechatronics_Design_and_Development_of_T_EVA.pdf",
+      "metadata_source_url": "https://cris.utec.edu.pe/en/publications/mechatronics-design-and-development-of-t-eva-bio-sensorized-space/",
+      "doi": "10.14569/IJACSA.2023.0140969",
+      "evidence_category": "PEER_REVIEWED_ENGINEERING_PROTOTYPE_AND_LAB_TESTS",
+      "topics": [
+        "EVA",
+        "spacesuit",
+        "upper-body temperature",
+        "biomechatronics",
+        "temperature sensors",
+        "prototype"
+      ],
+      "summary_claim_ids": [
+        "EVA-001",
+        "EVA-003"
+      ],
+      "modules": [
+        "eva"
+      ],
+      "reuse_status": "OPEN_ACCESS_CC_BY_4_0_SOURCE_LINK_AND_PROJECT_AUTHORED_SUMMARY",
+      "review_status": "ARTICLE_PDF_UTEC_RECORD_AND_JOURNAL_REVIEW_POLICY_CHECKED_2026-11-15",
+      "suggested_citation": "Palacios, P., Cornejo, J., Chavez, J. C., Cornejo, C., Cornejo, J., Vargas, M., Vargas-Cuentas, N. I., Roman-Gonzalez, A., & Valdivia-Silva, J. (2023). Mechatronics Design and Development of T-EVA: Bio-Sensorized Space System for Astronaut’s Upper Body Temperature Monitoring During Extravehicular Activities on the Moon and Mars. International Journal of Advanced Computer Science and Applications, 14(9), 661–672. https://doi.org/10.14569/IJACSA.2023.0140969",
+      "source_scope": "Supports an engineering description of an upper-body temperature-sensing garment, sensor placements, electronics, and prototype testing reported by the authors.",
+      "evidence_limitations": "This is a prototype/design report, not flight qualification, clinical validation, a core-temperature measurement validation, or a diagnostic/alert threshold source. The article describes further MDRS and lunar-like environment testing as future work. Its text appears internally inconsistent when it describes the DS18B20 as an analog 10 mV/°C device; do not reuse that hardware specification without checking the manufacturer datasheet and exact probe assembly.",
+      "metadata_note": "The supplied short Google share URL was not independently resolvable in the research browser. The canonical publisher record was matched by exact title and DOI; cite the DOI rather than the share URL. IJACSA describes submissions as double-blind peer reviewed; the individual article’s review history is not public.",
+      "review_policy_url": "https://thesai.org/Publications/CallForPaper?code=IJACSA"
+    },
+    {
+      "source_id": "SRC-IAF-EVA-TEMPERATURE-2024",
+      "institution": "International Astronautical Federation (IAF); bibliographic metadata also indexed by UTEC CRIS",
+      "title": "Biomedical Embedded System for Monitoring Temperature in Spacesuits During Extravehicular Activities in Analog Missions for Mars and the Moon",
+      "authors": [
+        "Paul Palacios",
+        "Juan Carlos Chavez",
+        "Leo Camizan",
+        "Dennis Huaman-Yrigoin",
+        "Julio Valdivia-Silva",
+        "Maricielo Lisboa",
+        "Nino Garcia",
+        "Carlos Oblitas",
+        "David De La Torre"
+      ],
+      "publication_date": "2024; pp. 468–478; 27th IAA Symposium / IAC 2024",
+      "url": "https://doi.org/10.52202/078359-0051",
+      "access_url": "https://www.proceedings.com/078359-0051.html",
+      "metadata_source_url": "https://cris.utec.edu.pe/en/publications/biomedical-embedded-system-for-monitoring-temperature-in-spacesui/",
+      "doi": "10.52202/078359-0051",
+      "evidence_category": "PEER_REVIEWED_CONFERENCE_PROTOTYPE_ABSTRACT",
+      "topics": [
+        "EVA",
+        "spacesuit temperature monitoring",
+        "embedded sensors",
+        "analog mission",
+        "Mars",
+        "Moon"
+      ],
+      "summary_claim_ids": [
+        "EVA-001"
+      ],
+      "modules": [
+        "eva"
+      ],
+      "reuse_status": "BIBLIOGRAPHIC_METADATA_AND_ABSTRACT_SUMMARY_ONLY_FULL_TEXT_REMAINS_WITH_IAF",
+      "review_status": "IAF_PRODUCT_PAGE_AND_UTEC_INSTITUTIONAL_RECORD_REVIEWED_2026-11-15",
+      "suggested_citation": "Palacios, P., et al. (2024). Biomedical Embedded System for Monitoring Temperature in Spacesuits During Extravehicular Activities in Analog Missions for Mars and the Moon. In 27th IAA Symposium on Human Exploration of the Solar System (pp. 468–478). International Astronautical Federation. https://doi.org/10.52202/078359-0051",
+      "source_scope": "The institutional abstract describes an in-suit temperature-sensor network connected to an embedded board, wrist display, and mission control, with simulated lunar/Martian testing proposed as future work.",
+      "evidence_limitations": "The public record is an abstract/metadata source. It describes a prototype and future analog-environment work; it does not establish flight or clinical validation and provides no ASTHRAL-ready medical threshold. Full text is sold by the proceedings distributor; ASTHRAL does not redistribute it.",
+      "metadata_note": "Author-list metadata conflict: the UTEC institutional record and proceedings.com item page list different co-author names/order. The short citation uses “et al.”; verify against the original proceedings title page before publishing a full author list."
+    },
+    {
+      "source_id": "SRC-IEEE-SPACE-AGRI-2023",
+      "institution": "IEEE; bibliographic metadata from UTEC CRIS",
+      "title": "Space Agriculture and Mechatronic Technologies: Micro-Review and Multi-Collaborative Study",
+      "authors": [
+        "Ricardo Barreto",
+        "José Cornejo",
+        "Ricardo Palomares",
+        "Jorge A. Cornejo",
+        "Juan Carlos Suárez-Quispe",
+        "Mariela Vargas",
+        "Cristian Valenzuela",
+        "Juan C. Chavez",
+        "Julio Valdivia"
+      ],
+      "publication_date": "2023; INOCON 2023, Bangalore, India, pp. 1–8",
+      "url": "https://doi.org/10.1109/INOCON57975.2023.10101312",
+      "metadata_source_url": "https://cris.utec.edu.pe/en/publications/space-agriculture-and-mechatronic-technologies-micro-review-and-m/",
+      "doi": "10.1109/INOCON57975.2023.10101312",
+      "evidence_category": "PEER_REVIEWED_CONFERENCE_MICRO_REVIEW",
+      "topics": [
+        "space agriculture",
+        "controlled environment agriculture",
+        "mechatronics",
+        "microgravity",
+        "space crops"
+      ],
+      "summary_claim_ids": [
+        "AGRI-001"
+      ],
+      "modules": [
+        "agriculture"
+      ],
+      "reuse_status": "BIBLIOGRAPHIC_METADATA_AND_PROJECT_AUTHORED_ABSTRACT_SUMMARY_ONLY",
+      "review_status": "IEEE_DOI_AND_UTEC_INSTITUTIONAL_RECORD_REVIEWED_2026-11-15",
+      "suggested_citation": "Barreto, R., Cornejo, J., Palomares, R., Cornejo, J. A., Suárez-Quispe, J. C., Vargas, M., Valenzuela, C., Chavez, J. C., & Valdivia, J. (2023). Space Agriculture and Mechatronic Technologies: Micro-Review and Multi-Collaborative Study. In 2023 2nd International Conference for Innovation in Technology (INOCON 2023), Bangalore, India (pp. 1–8). https://doi.org/10.1109/INOCON57975.2023.10101312",
+      "source_scope": "A micro-review/conference contribution about controlled-environment space agriculture, mechatronics, and prospective food-production systems for long-duration missions.",
+      "evidence_limitations": "Relevant to agriculture and mechatronics context only. It is not evidence for EVA temperature sensing, astronaut physiology, thermal safety limits, medical alerts, or clinical interpretation. Full text remains subject to IEEE copyright; only metadata and a project-authored summary are included."
+    },
+    {
+      "source_id": "SRC-NASA-OCHMO-TB-050-REVE",
+      "institution": "NASA Office of the Chief Health and Medical Officer",
+      "title": "OCHMO-TB-050: NASA-STD-3001 Technical Brief — Spacesuits (Volume 2, Revision E basis)",
+      "publication_date": "2025-09-08 (brief date; derived from NASA-STD-3001 Volume 2 Revision E)",
+      "url": "https://www.nasa.gov/wp-content/uploads/2025/09/ochmo-tb-050-spacesuits.pdf",
+      "doi": null,
+      "pmid": null,
+      "evidence_category": "NASA_TECHNICAL_BRIEF_REFERENCE_ONLY",
+      "topics": [
+        "spacesuit",
+        "EVA",
+        "thermal physiology",
+        "heat storage",
+        "physiological monitoring"
+      ],
+      "summary_claim_ids": [
+        "EVA-002"
+      ],
+      "modules": [
+        "eva"
+      ],
+      "reuse_status": "LINK_ONLY_NO_PDF_REPUBLICATION",
+      "review_status": "NASA_OFFICIAL_TECHNICAL_BRIEF_REVIEWED_2026-11-15",
+      "suggested_citation": "NASA Office of the Chief Health and Medical Officer. (2025). OCHMO-TB-050: Spacesuits (NASA-STD-3001 Technical Brief; based on Volume 2, Revision E). https://www.nasa.gov/wp-content/uploads/2025/09/ochmo-tb-050-spacesuits.pdf",
+      "source_scope": "Provides NASA program-design context on suited operations, heat storage, physiological monitoring, and the derivation of some spacesuit requirements.",
+      "evidence_limitations": "The document says it is for reference and does not supersede or waive agency, program, or contract requirements. It is based on Volume 2 Revision E, not the current Volume 2 Revision F. Do not transplant its numerical requirements or supporting thresholds into ASTHRAL without controlled program applicability and independent review."
+    },
+    {
+      "source_id": "SRC-NASA-NTRS-EVA-THERMAL-2024",
+      "institution": "NASA Johnson Space Center / NASA Technical Reports Server",
+      "title": "Core Body Temperature Predictions Using Metabolic Energy Expenditure and Heart Rate During Simulated Extravehicular Activity",
+      "authors": [
+        "Bradley Hoffmann",
+        "Lori Cooper",
+        "Shayne York",
+        "Katie Heinemann",
+        "Taylor Schlotman",
+        "Karina Marshall-Goebel",
+        "Daniel Buckland"
+      ],
+      "publication_date": "2024-07-21; 53rd International Conference on Environmental Systems (ICES 2024)",
+      "url": "https://ntrs.nasa.gov/citations/20230016649",
+      "access_url": "https://ntrs.nasa.gov/api/citations/20230016649/downloads/H3PO_CSRM_Thermal_ICES_2024_Hoffmann.pdf",
+      "evidence_category": "NASA_TECHNICAL_CONFERENCE_STUDY_SIMULATED_EVA",
+      "topics": [
+        "EVA",
+        "core body temperature model",
+        "heart rate",
+        "metabolic rate",
+        "local skin temperature",
+        "HS3",
+        "ARGOS"
+      ],
+      "summary_claim_ids": [
+        "EVA-002"
+      ],
+      "modules": [
+        "eva"
+      ],
+      "reuse_status": "NASA_NTRS_RECORD_AND_LINK_ONLY",
+      "review_status": "NASA_NTRS_ABSTRACT_AND_LINKED_PAPER_REVIEWED_2026-11-15",
+      "suggested_citation": "Hoffmann, B., Cooper, L., York, S., Heinemann, K., Schlotman, T., Marshall-Goebel, K., & Buckland, D. (2024). Core Body Temperature Predictions Using Metabolic Energy Expenditure and Heart Rate During Simulated Extravehicular Activity. 53rd International Conference on Environmental Systems (ICES 2024). NASA Technical Reports Server. https://ntrs.nasa.gov/citations/20230016649",
+      "source_scope": "Describes a core-temperature prediction model using heart rate and metabolic rate in simulated EVA; the study collected local skin and suit cooling-garment temperatures and tested in a separate suited simulator dataset.",
+      "evidence_limitations": "Small simulator datasets (development n=6; test n=6), not in-flight or clinical validation. The reported prediction error is study-specific; it is not a diagnostic threshold, a sensor accuracy claim, or evidence that a model transfers to other suits, missions, populations, or gravity contexts."
+    },
+    {
+      "source_id": "SRC-ADI-DS18B20-2019",
+      "institution": "Analog Devices (Maxim Integrated)",
+      "title": "DS18B20: Programmable Resolution 1-Wire Digital Thermometer — Data Sheet, Revision 6",
+      "publication_date": "2019-08-09",
+      "url": "https://www.analog.com/media/en/technical-documentation/data-sheets/DS18B20.pdf",
+      "doi": null,
+      "evidence_category": "MANUFACTURER_PRIMARY_COMPONENT_DATASHEET",
+      "topics": [
+        "DS18B20",
+        "digital thermometer",
+        "1-Wire",
+        "component specifications"
+      ],
+      "summary_claim_ids": [
+        "EVA-003"
+      ],
+      "modules": [
+        "eva"
+      ],
+      "reuse_status": "LINK_ONLY_MANUFACTURER_DATASHEET",
+      "review_status": "MANUFACTURER_DATASHEET_REVIEWED_2026-11-15",
+      "suggested_citation": "Analog Devices. (2019). DS18B20: Programmable Resolution 1-Wire Digital Thermometer (Data Sheet, Rev. 6). https://www.analog.com/media/en/technical-documentation/data-sheets/DS18B20.pdf",
+      "source_scope": "Primary manufacturer document for the DS18B20 component interface and electrical/temperature specifications.",
+      "evidence_limitations": "Component specifications do not establish accuracy of a probe assembly, placement, skin/core temperature agreement, calibration in a suit, or fitness for a biomedical/flight application."
+    },
+    {
+      "source_id": "SRC-NASA-RADLAB-API-2026",
+      "institution": "NASA Open Science Data Repository / RadLab",
+      "title": "RadLab Data API",
+      "publication_date": "Dynamic API documentation; reviewed 2026-11-15",
+      "url": "https://visualization.osdr.nasa.gov/radlab/gui/data-api/",
+      "doi": null,
+      "evidence_category": "NASA_PUBLIC_INSTRUMENT_DATA_API_DOCUMENTATION",
+      "topics": ["Radiation data", "instrument observations", "dose rate", "particle flux", "geospatial coordinates", "units"],
+      "summary_claim_ids": ["RAD-API-001"],
+      "modules": ["radiation", "eva", "space-weather"],
+      "access_url": "https://visualization.osdr.nasa.gov/radlab/api/",
+      "reuse_status": "NASA_PUBLIC_API_LINK_AND_QUERY_RESULTS; preserve NASA source attribution",
+      "review_status": "OFFICIAL_API_DOCUMENTATION_AND_LIVE_ISS_RESPONSE_REVIEWED_2026-11-15",
+      "suggested_citation": "NASA Open Science Data Repository. (Dynamic; reviewed 2026-11-15). RadLab Data API. https://visualization.osdr.nasa.gov/radlab/gui/data-api/",
+      "source_scope": "Documents the public GET API, supported query forms, returned fields and source units: absorbed dose rate μGy/hour, dose equivalent rate μSv/hour, particle flux cm⁻² sr⁻¹ s⁻¹, and available ISS latitude/longitude/altitude. Instrument identifiers are case-sensitive; coordinate fields are currently described for ISS data.",
+      "evidence_limitations": "RadLab is a curated instrument-level archive; its records are not an individual astronaut dosimeter, clinical threshold, operational EVA limit or direct personal exposure estimate. NASA notes preliminary data and an approximate median cadence in its release history. Missing values and timestamps remain source-specific."
+    },
+    {
+      "source_id": "SRC-NASA-OSDR-BIODATA-API-2026",
+      "institution": "NASA Open Science Data Repository",
+      "title": "OSDR Biological Data API",
+      "publication_date": "Dynamic API documentation; reviewed 2026-11-15",
+      "url": "https://visualization.osdr.nasa.gov/biodata/api/",
+      "doi": null,
+      "evidence_category": "NASA_EXPERIMENTAL_BIOLOGICAL_DATA_API_DOCUMENTATION",
+      "topics": ["OSDR", "space biology", "assays", "samples", "experimental data", "dataset metadata"],
+      "summary_claim_ids": ["OSDR-API-001"],
+      "modules": ["clinical", "prevention", "radiation"],
+      "access_url": "https://visualization.osdr.nasa.gov/biodata/api/v2/datasets/",
+      "reuse_status": "NASA_PUBLIC_API_METADATA_LINK_ONLY; review dataset-specific terms and design",
+      "review_status": "OFFICIAL_API_DOCUMENTATION_REVIEWED_2026-11-15; NOT_CONNECTED_TO_CLINICAL_EVALUATION",
+      "suggested_citation": "NASA Open Science Data Repository. (Dynamic; reviewed 2026-11-15). OSDR Biological Data API. https://visualization.osdr.nasa.gov/biodata/api/",
+      "source_scope": "Documents REST and tabular query interfaces for GeneLab and ALSDA dataset, assay, sample, metadata and data records.",
+      "evidence_limitations": "OSDR contains heterogeneous human, animal, model-organism, cell, hardware and processed biological studies. Timestamps and units depend on each study. These archived experimental data are not current individual physiological measurements and are not used by ASTHRAL's clinical engine."
+    },
+    {
+      "source_id": "SRC-NASA-RADLAB-RELEASE-HISTORY-2026",
+      "institution": "NASA Open Science Data Repository / RadLab",
+      "title": "RadLab Release History",
+      "publication_date": "Dynamic release notes; reviewed 2026-11-15",
+      "url": "https://visualization.osdr.nasa.gov/radlab/gui/knowledgebase/Release_history",
+      "doi": null,
+      "evidence_category": "NASA_PUBLIC_INSTRUMENT_DATA_RELEASE_NOTES",
+      "topics": ["RadLab data status", "preliminary curated observations", "instrument cadence", "release history"],
+      "summary_claim_ids": ["RAD-API-002"],
+      "modules": ["radiation", "eva"],
+      "reuse_status": "NASA_PUBLIC_RELEASE_NOTES_LINK_ONLY",
+      "review_status": "OFFICIAL_RELEASE_HISTORY_REVIEWED_2026-11-15",
+      "suggested_citation": "NASA Open Science Data Repository. (Dynamic; reviewed 2026-11-15). RadLab Release History. https://visualization.osdr.nasa.gov/radlab/gui/knowledgebase/Release_history",
+      "source_scope": "Documents dataset-specific status and cadence notes. The release page describes some curated RAD, REM and TEPC observations as preliminary, with a median cadence of 24 hours; other RadLab datasets have different reported cadence.",
+      "evidence_limitations": "A release-level median cadence is not an individual observation schedule or guaranteed sampling interval. Do not interpolate missing records or use these notes to infer personal exposure, flight risk or clinical status."
+    },
+    {
+      "source_id": "SRC-NASA-OSDR-EDA-2026",
+      "institution": "NASA Open Science Data Repository / Environmental Data App",
+      "title": "Environmental Data App",
+      "publication_date": "Dynamic portal; reviewed 2026-11-15",
+      "url": "https://visualization.osdr.nasa.gov/eda/",
+      "doi": null,
+      "evidence_category": "NASA_HISTORICAL_ENVIRONMENTAL_AND_HARDWARE_DATA_PORTAL",
+      "topics": ["ISS environmental telemetry", "temperature", "relative humidity", "carbon dioxide", "mission data tables", "radiation"],
+      "summary_claim_ids": ["OSDR-EDA-001"],
+      "modules": ["radiation", "eva", "space-weather"],
+      "reuse_status": "NASA_PORTAL_LINK_ONLY; dataset-specific exports require independent review",
+      "review_status": "OFFICIAL_PORTAL_AND_NASA_OSDR_FAQ_REVIEWED_2026-11-15; NOT_CONNECTED_TO_CLINICAL_EVALUATION",
+      "suggested_citation": "NASA Open Science Data Repository. (Dynamic; reviewed 2026-11-15). Environmental Data App. https://visualization.osdr.nasa.gov/eda/",
+      "source_scope": "The portal provides mission-by-mission environmental and hardware data tables, including example temperature, relative humidity, CO₂ and radiation data.",
+      "evidence_limitations": "The surfaced environmental mission examples include rodent research hardware and ground controls. Cabin/hardware temperature is not body temperature; experimental telemetry is not crew health telemetry. No stable public JSON API contract was verified, so ASTHRAL does not fetch or clinically interpret EDA data."
+    }
+  ]
+}

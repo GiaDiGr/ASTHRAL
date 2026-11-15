@@ -26,7 +26,19 @@ class Registry:
         self.catalogs={}
         self.hashes={}
         self.issues=[]
-        manifest_path=self.root/('MANIFIESTO_SHA256.json' if (self.root/'MANIFIESTO_SHA256.json').exists() else 'ASTHRAL_CORPUS_SHA256.json')
+        original_manifest=self.root/'MANIFIESTO_SHA256.json'
+        public_manifest=self.root/'ASTHRAL_CORPUS_SHA256.json'
+        manifest_path=public_manifest
+        if original_manifest.exists():
+            original_entries=json.loads(original_manifest.read_text(encoding='utf-8-sig'))
+            root_resolved=self.root.resolve()
+            original_complete=all(
+                (self.root/item['path']).resolve().is_relative_to(root_resolved)
+                and (self.root/item['path']).is_file()
+                for item in original_entries
+            )
+            if original_complete:
+                manifest_path=original_manifest
         manifest=json.loads(manifest_path.read_text(encoding='utf-8-sig'))
         for item in manifest:
             p=(self.root/item['path']).resolve()

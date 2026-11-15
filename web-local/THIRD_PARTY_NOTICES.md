@@ -1,0 +1,18 @@
+# Third-party assets
+
+The Python reference modules retain their existing repository terms. No new project license is granted here.
+
+* Pyodide 0.29.3: MPL-2.0; CPython and bundled wheels retain upstream licenses. Official distribution https://github.com/pyodide/pyodide and its included package metadata apply. Runtime bytes are pinned in runtime-lock.json.
+* WebLLM 0.2.79 and Transformers.js 3.8.1: Apache-2.0; full license texts accompany this build. npm archives are integrity-pinned.
+* Qwen2.5-0.5B-Instruct, Qwen3-4B and all-MiniLM-L6-v2: Apache-2.0 per the pinned model cards. Public model assets download only after explicit opt-in; weights are not committed.
+* Vosk-browser 0.0.8 and vosk-model-small-en-us-0.15: Apache-2.0; CSP-safe browser initialization and synthetic file transcription have been exercised; physical microphone acceptance remains pending. Three legacy dynamic ABI wrappers are replaced by reviewed static wrappers without changing model weights; source is voice_csp_glue.js. prepare_voice.py verifies the reference model file hashes and npm package integrity.
+
+* Three.js 0.187.0 (r187): MIT. The application vendors the matching `three.module.js` and `three.core.js` from the upstream [r187 build](https://github.com/mrdoob/three.js/tree/r187/build); the full notice is `src/vendor/orbit/THREE_LICENSE`. The vendored `three.core.js` SHA-256 is `613e370f76638fdef83926642bf256dc9615684922de1ce1f63a8583e5d78578`.
+* satellite.js 7.1.0: MIT. The application vendors the required SGP4 and coordinate modules from [satellite.js](https://github.com/shashwatak/satellite-js); attribution and terms are in `src/vendor/orbit/SATELLITE_JS_LICENSE.md`.
+* NASA Earth Observatory Blue Marble Next Generation: NASA Earth imagery credit is retained in the Mission Control documentation. The bundled July 2004 composite is static background imagery, not a current Earth observation or NASA endorsement.
+* Z-Anatomy muscular-system model: `src/vendor/anatomy/zanatomy-muscles.glb`, redistributed unmodified from `ArianArsenal/anatomy-explorer` commit `8375d6ce7fec36e677c0eda66cae829ba55a4717`; CC BY-SA 4.0, based on BodyParts3D CC BY-SA 2.1 Japan. Required attribution, lineage, scope and SHA-256 are in `src/vendor/anatomy/ATTRIBUTION.md` and `src/vendor/anatomy/model-manifest.json`. ASTHRAL includes only the muscular layer; the upstream organ layer and separately licensed kidney asset are not included.
+* GLTFLoader, BufferGeometryUtils, SkeletonUtils and meshopt decoder: vendored from Three.js r187 under MIT. Their upstream module headers are retained; local import paths point only to the corresponding pinned local Three.js modules. The full Three.js license is `src/vendor/orbit/THREE_LICENSE`.
+
+Source model identifiers, revisions, sizes and SHA-256 hashes are recorded in src/models.json and src/voice-model.json. Browser MiniLM-L6 is a separate index from the Windows L12 model. The local corpus includes the original seven approved project/research sources and their provenance categories. Implementation criteria and research syntheses are not original guideline articles or independent clinical validation. Unreviewed translations and online publication metadata do not become clinical authority.
+
+Six bundled WAV files are fully synthetic software-test fixtures, identified by src/test-audio/manifest.json hashes. They were generated locally with Piper en_US-ljspeech-high and eSpeak phonemes; the LJSpeech dataset model card describes the dataset as public domain. Piper ONNX model weights and the test generation toolchain are not redistributed in this application. Test utterances are not medical records and are not used to establish clinical validity.

@@ -98,20 +98,41 @@ class Store:
             rows = self.db.execute("SELECT payload FROM records WHERE kind=? ORDER BY seq", (kind,)).fetchall()
         return [json.loads(r[0]) for r in rows]
 
+    def delete(self, kind, identifier, actor="system"):
+        """Erase one current record and append a hash-only deletion event."""
+        with self.transaction():
+            row = self.db.execute("SELECT payload FROM records WHERE kind=? AND id=?", (kind, identifier)).fetchone()
+            if not row:
+                raise KeyError(f"{kind}:{identifier}")
+            payload = json.loads(row["payload"])
+            # Deletion is exposed only through an authenticated, scope-checked adapter action.
+            # The append-only guard is restored before the transaction commits.
+            self.db.execute("DROP TRIGGER records_no_delete")
+            self.db.execute("DELETE FROM records WHERE kind=? AND id=?", (kind, identifier))
+            self.db.execute("CREATE TRIGGER records_no_delete BEFORE DELETE ON records BEGIN SELECT RAISE(ABORT,'append only'); END")
+            self.append_audit("DELETE_" + kind.upper(), actor, {"id": identifier, "content_hash": digest(payload)})
+        return payload
+
     def verify(self):
         with self.lock:
             rows = self.db.execute("SELECT * FROM audit ORDER BY seq").fetchall()
             records = self.db.execute("SELECT * FROM records").fetchall()
         previous = "0" * 64
-        anchored = set()
+        anchored = {}
         for r in rows:
             p = json.loads(r['payload'])
             if r['previous'] != previous or r['hash'] != digest({"previous": previous, "payload": p}):
                 return False
             previous = r['hash']
             if p['event'].startswith('CREATE_'):
-                anchored.add((p['event'][7:].lower(), p['data']['id'], p['data']['content_hash']))
-        actual={(r['kind'], r['id'], digest(json.loads(r['payload']))) for r in records}
+                key=(p['event'][7:].lower(),p['data']['id'])
+                if key in anchored:return False
+                anchored[key]=p['data']['content_hash']
+            elif p['event'].startswith('DELETE_'):
+                key=(p['event'][7:].lower(),p['data']['id'])
+                if anchored.get(key)!=p['data']['content_hash']:return False
+                del anchored[key]
+        actual={(r['kind'], r['id']):digest(json.loads(r['payload'])) for r in records}
         return actual == anchored
 
     def close(self):

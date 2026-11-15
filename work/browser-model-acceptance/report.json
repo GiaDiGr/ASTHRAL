@@ -1,0 +1,11 @@
+{
+  "status": "BLOCKED_NO_WEBGPU_ADAPTER",
+  "errors": [],
+  "gpu": {
+    "available": false,
+    "features": []
+  },
+  "model_status": "UNSUPPORTED \u00b7 no WebGPU adapter available \u00b7 local CPU retrieval and deterministic computation remain available",
+  "load_disabled": true,
+  "failure": "WebGPU adapter unavailable under ordinary Chromium launch; UI blocks model download"
+}

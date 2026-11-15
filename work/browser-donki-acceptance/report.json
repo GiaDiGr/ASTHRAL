@@ -1,0 +1,18 @@
+{
+  "status": "PUBLIC_EVENT_SYNC_ACK_RELOAD_VERIFIED",
+  "errors": [],
+  "requests_failed": [
+    {
+      "url": "https://ccmc.gsfc.nasa.gov/DONKI-API/get/CME?startDate=2026-11-08&endDate=2026-11-15",
+      "failure": "net::ERR_ABORTED"
+    },
+    {
+      "url": "https://ccmc.gsfc.nasa.gov/DONKI-API/get/notifications?startDate=2026-11-08&endDate=2026-11-15&type=all",
+      "failure": "net::ERR_ABORTED"
+    }
+  ],
+  "sync_status": "NASA CCMC data returned at 2026-11-15T15:06:44.738Z \u00b7 40 records \u00b7 0 endpoint issues. Notices are research/prototyping metadata, not real-time crew warnings.",
+  "unacknowledged_before": 29,
+  "unacknowledged_after": 28,
+  "acknowledgement_survives_reload": true
+}
