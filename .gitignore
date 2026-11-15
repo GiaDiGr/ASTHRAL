@@ -30,6 +30,7 @@
 /engine/local_ai/ollama-v0.40.6.zip
 /engine/local_ai/llama-*/
 /engine/local_ai/voice/
+/engine/local_ai/computer-vision/
 /engine/local_ai/*.gguf
 **/*.gguf
 **/*.onnx

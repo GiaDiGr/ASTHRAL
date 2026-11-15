@@ -1,0 +1,44 @@
+{
+  "schema_version": 1,
+  "review_status": "NOT_REVIEWED",
+  "model_id": "",
+  "task": "SKIN_LESION_LOCALIZATION",
+  "input_modality": "TOTAL_BODY_PHOTOGRAPH",
+  "license": {
+    "code": "REPLACE_WITH_CODE_LICENSE",
+    "weights": "REPLACE_WITH_WEIGHT_LICENSE",
+    "training_data": "REPLACE_WITH_DATA_LICENSE_AND_ACCESS_TERMS",
+    "reviewed": false
+  },
+  "source_url": "",
+  "training_data": {
+    "name": "REPLACE_WITH_DATASET",
+    "version": "REPLACE_WITH_VERSION",
+    "source": "REPLACE_WITH_SOURCE_URL",
+    "license": "REPLACE_WITH_LICENSE",
+    "subject_split_method": "REPLACE_WITH_SUBJECT_LEVEL_SPLIT_DESCRIPTION",
+    "manifest_sha256": "",
+    "content_snapshot_sha256": ""
+  },
+  "evaluation": {
+    "dataset": "REPLACE_WITH_HELD_OUT_DATASET_AND_VERSION",
+    "split": "SUBJECT_LEVEL_HELD_OUT",
+    "metrics_report": "evaluation.json",
+    "metrics_report_sha256": ""
+  },
+  "weights_sha256": "",
+  "input": {
+    "width": 640,
+    "height": 640,
+    "layout": "NCHW_RGB_FLOAT_0_1",
+    "resize": "LETTERBOX_114"
+  },
+  "output": {
+    "tensor_name": "detections",
+    "layout": "XYXY_SCORE_CLASS_NORMALIZED",
+    "labels": [
+      "skin_lesion_candidate"
+    ],
+    "score_threshold": 0.25
+  }
+}

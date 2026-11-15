@@ -8,12 +8,13 @@ ASTHRAL is a research prototype for NASA Space Apps Challenge 2026. It combines 
 
 ## Repository map and branches
 
-`main` is the default branch and the integrated project baseline. A successful push to another branch does **not** update `main`; every branch is a separate line of commits. The branch pointers below were checked on 14 November 2026. Confirm them again before starting new work because branches can move.
+`main` is the default branch and the integrated project baseline. A successful push to another branch does **not** update `main`; every branch is a separate line of commits. The branch pointers below were checked on 15 November 2026. Confirm them again before starting new work because branches can move.
 
 | Branch | Purpose and current relationship to `main` |
 |---|---|
 | [`main`](https://github.com/GiaDiGr/ASTHRAL/tree/main) | Integrated ASTHRAL baseline and browser release evidence. The current release report is [`WEB_RELEASE_20261114.md`](docs/asthral/WEB_RELEASE_20261114.md). |
-| [`feature/asthral-computer-vision`](https://github.com/GiaDiGr/ASTHRAL/tree/feature/asthral-computer-vision) | Separate workstream for SkinGuard, OcularVision, EchoVision, MotionGuard, their evaluation utilities, tests, and benchmarks. At the checked snapshot, these modules are **not integrated into `main`**. |
+| `feature/integrate-biomedical-contribution` | Reviewable integration branch based on the latest `origin/main`; contains the inspected Computer Vision contribution, compatibility fixes, and license gates. Not merged into `main`. |
+| [`feature/asthral-computer-vision`](https://github.com/GiaDiGr/ASTHRAL/tree/feature/asthral-computer-vision) | Contributor source branch for SkinGuard, OcularVision, EchoVision, MotionGuard, evaluation utilities, tests, and benchmarks; preserved separately. |
 | `feature/asthral-hybrid` | Earlier hybrid assistant and guarded PubMed retrieval work; its current branch tip is in `main`'s commit history. |
 | `feature/secure-voice-vector-rag` | Voice, personal sessions, and retrieval development line. Its branch tip is not in `main`'s commit history. |
 | `feature/cloudflare-mobile-demo` | Isolated synthetic mobile-demo deployment line; its branch tip is not in `main`'s commit history. |
@@ -57,8 +58,25 @@ When an AI assistant works in this repository, use these as project instructions
 
 ### Project flow at a glance
 
-Sensors or synthetic inputs are validated, then used for baselines and longitudinal trends. The deterministic clinical engine evaluates pathways and creates findings, episodes, and follow-up records. Snapshots, audit data, and replay support traceability. A scoped API serves the astronaut dashboard, local retrieval, and optional local Qwen3 inference through Ollama. Optional online retrieval is limited to approved public-topic PubMed metadata; it is not clinical evidence and cannot alter the rules. The browser release and the separate Computer Vision workstream have their own branch and verification scope.
+Sensors or synthetic inputs are validated, then used for baselines and longitudinal trends. The deterministic clinical engine evaluates pathways and creates findings, episodes, and follow-up records. Snapshots, audit data, and replay support traceability. A scoped API serves the astronaut dashboard, local retrieval, and optional local Qwen3 inference through Ollama. Optional online retrieval is limited to approved public-topic PubMed metadata; it is not clinical evidence and cannot alter the rules. The browser release and Computer Vision integration have separate evidence and verification scope.
 
+## Current results — 15 November 2026
+
+The figures below distinguish this integration run from upstream branch reports. Software tests, synthetic benchmarks, and clinical performance are separate evidence categories.
+
+| Evidence | Verified result | Scope |
+|---|---:|---|
+| Full Python suite on `feature/integrate-biomedical-contribution` | **882 passed, 17 skipped, 0 failed** in 261.90 s | Run in isolated Python 3.13 worktree environment; 13 tests skipped for missing OpenCV, 2 for missing PyTorch, and 2 for missing voice dependencies. One Starlette/httpx deprecation warning. |
+| Upstream Computer Vision branch report | **894 passed, 2 skipped** (reported by contributor) | Historical contributor report; not reproduced by the integration run. |
+| OcularVision and MotionGuard local synthetic benchmarks | Historical measurements only | See the dated machine-run report. The integration run did not install model weights. |
+| EchoVision | **Blocked** | Checkpoint rights and written permission are unverified; installer and API fail closed. The source-branch benchmark is historical and does not imply current availability. |
+| SkinGuard inference | **Not available** | No compatible, provenance-reviewed model weights or evaluation dataset is installed. |
+
+The contributor benchmark uses deterministic nonmedical patterns and measures workstation runtime, not accuracy. Its historic EchoVision mask and timing are not evidence of current enabled functionality. The report and source JSON are [here](docs/asthral/BENCHMARKS.md) and [here](artifacts/benchmarks/asthral-cv-benchmark-2026-11-14.json). None of these results establishes clinical, operational, or flight validation.
+
+The separate browser release evidence on `main` records **49/49 browser-local tests passed** and a **782/782 Python baseline** for that release snapshot. See the [main-branch browser release report](https://github.com/GiaDiGr/ASTHRAL/blob/main/docs/asthral/WEB_RELEASE_20261114.md). Those figures are separate from the integration suite above.
+
+SkinGuard supports private local image intake and creates reports without predictions when there is no compatible detector. See [SkinGuard scope, setup, and limits](docs/asthral/SKINGUARD.md).
 ## Architecture and authority
 
 ```text
@@ -75,10 +93,22 @@ Seven existing clinical pathways remain implemented: diabetes, DKA, hypoglycemia
 
 The internal Python package and historical identifiers remain `vigile` for compatibility. Original hashes, clinical records, and archived names are preserved. The current product and astronaut interface are ASTHRAL, in American English. Original-language evidence is never silently rewritten: curated presentation translations are marked, and text without an approved English rendering is withheld with an explicit limitation. Numerical facts, clinical codes, units, and source hashes are not translated.
 
+## Code and test map
+
+- `engine/vigile/computer_vision.py` connects the existing portal API to SkinGuard, OcularVision, EchoVision, and MotionGuard processing, output images, video summaries, and model status.
+- `engine/vigile/skinguard.py` validates photo inputs and only accepts a detector when its model, license, weights hash, and held-out evaluation report satisfy the documented contract.
+- `engine/vigile/computer_vision_metrics.py` calculates segmentation Dice/IoU, binary classification metrics, and single-class detection AP from supplied predictions and labeled references.
+- `engine/tests/test_computer_vision.py`, `test_skinguard.py`, `test_computer_vision_metrics.py`, and `test_benchmark_computer_vision.py` cover input errors, transformations, exports, synthetic metric-calculator examples, model-adapter contracts, and local timing code.
+- `engine/tools/sync_asthral.ps1` and `engine/tests/test_sync_asthral.py` implement and test safe branch-scoped updates across workstations.
+- `engine/tools/benchmark_computer_vision.py` runs a repeatable CPU timing check on synthetic patterns. It does not read patient data.
+- `web-local/tests/` covers the separate browser-local interface and offline behavior; the branch-specific release evidence is linked above.
+
+Passing a synthetic test means the tested software behavior matched that test's expected result. It is not a model accuracy score. Dice, AUROC, sensitivity, specificity, and mAP for an ASTHRAL model require authorized, correctly labeled, held-out evaluation data.
+
 ## Requirements and Windows setup
 
 - Python 3.11 or later; the owner environment was tested with Python 3.13.
-- Existing FastAPI, Pydantic, SQLite, uvicorn, pytest, and httpx dependencies; no new runtime dependency for online retrieval.
+- FastAPI, Pydantic, Pillow, SQLite, uvicorn, pytest, and httpx. Optional ONNX Runtime is needed only for a separately supplied SkinGuard detector; no new runtime dependency is required for online retrieval.
 - Windows DPAPI and ACL support for protected demonstration credentials.
 - Node.js for simulated DOM lifecycle tests; no Node frontend build is required.
 - Optional local Ollama with `vigile-qwen3-4b:latest` at `http://127.0.0.1:8891`.
@@ -131,6 +161,22 @@ Portal: **http://127.0.0.1:8922/**. Backend: **http://127.0.0.1:8921/health**. T
 
 The seed-42 longitudinal mission retains the original two synthetic astronauts, 26 receipt checkpoints, measurements, dates, and clinical results. Follow the [English demonstration](docs/asthral/DEMO.md). Plans are not proof of completed treatment, efficacy, recovery, or authorization.
 
+## Computer Vision research modules
+
+The existing portal navigation now includes SkinGuard, OcularVision, EchoVision, and MotionGuard. Read [the Computer Vision setup and model provenance guide](docs/asthral/COMPUTER_VISION.md) before installing optional packages or model assets. Model weights stay in ignored local storage; no image dataset is bundled. SkinGuard has no compatible detector installed, so it validates and documents photos without generating lesion predictions. OcularVision and MotionGuard can use explicitly installed local research assets. EchoVision is disabled pending written permission and checkpoint rights review. None is an ASTHRAL clinical validation or diagnosis.
+
+Install the optional CPU runtime from `engine/`, then explicitly select the model assets needed for the current machine:
+
+```powershell
+Set-Location engine
+.\.venv\Scripts\python.exe -m pip install --index-url https://download.pytorch.org/whl/cpu torch==2.5.1 torchvision==0.20.1
+.\.venv\Scripts\python.exe -m pip install -e ".[vision]"
+.\.venv\Scripts\python.exe tools\install_computer_vision_models.py --model oct
+.\.venv\Scripts\python.exe tools\install_computer_vision_models.py --model motion
+```
+
+EchoNet download and inference are blocked until written permission and checkpoint rights are verified. Computer Vision runs in the existing portal process on port 8922; it does not start another web server or change the SLM.
+
 ## Local and optional online RAG
 
 Local retrieval uses the existing provenance-checked sparse retrieval/citation pipeline. `tools/setup_asthral.py` builds a separate English project-authored implementation library. `LOCAL_PINNED` means fixed local provenance; it does not imply clinical validation. Historical libraries remain recoverable and their original retrieval behavior is retained where the supplied historical research pack exists.
@@ -158,6 +204,9 @@ Allowlist: outbound TLS to `eutils.ncbi.nlm.nih.gov:443`, fixed ESearch/ESummary
 ```powershell
 .\.venv\Scripts\python.exe -m pytest -q
 .\.venv\Scripts\python.exe -m pytest tests\test_asthral_hybrid.py -q
+.\.venv\Scripts\python.exe -m pytest tests\test_computer_vision.py tests\test_skinguard.py tests\test_computer_vision_metrics.py tests\test_benchmark_computer_vision.py -q --cov=vigile.computer_vision --cov=vigile.skinguard --cov=vigile.computer_vision_metrics --cov-fail-under=90
+.\.venv\Scripts\python.exe -m pytest tests\test_sync_asthral.py -q
+.\.venv\Scripts\python.exe tools\benchmark_computer_vision.py --warmup 2 --repeats 10 --output ..\artifacts\benchmarks\asthral-cv-benchmark-local.json
 ```
 
 New synthetic tests exercise modes, privacy sentinels, SSRF, redirect rejection, response limits, metadata validation, prompt injection, cache integrity, mode changes, name aliases, reader scope, and invariance of all seven clinical pathways. The new fixed retrieval comparison is separate from development fixtures and does not reuse the previously consumed reserved bank. It is a small lexical/software fixture evaluation, not independent clinical relevance validation or proof of real-world retrieval improvement. Live PubMed smoke results are reported separately. No electrical-power savings are claimed.
@@ -167,6 +216,22 @@ The full owner regression also checks legacy supplied artifacts; an archival cor
 ## Team collaboration, security, and attribution
 
 The repository is intended to be **private** under the owner-selected GitHub account. Use `main` for reviewed stable code and `feature/*` branches and pull requests for work. Never overwrite a teammate's branch or force-push. No invitations are sent without explicit usernames and authorization. See [CONTRIBUTING.md](CONTRIBUTING.md).
+
+### Keep work from every computer
+
+GitHub stores committed history per branch. Uncommitted edits remain local and are not included in a pull. The Computer Vision implementation and its test results are on `feature/asthral-computer-vision`; newer browser release evidence is on `main`. At this snapshot, the `main` tree does not contain the CV modules. Keep these streams separate until a reviewed integration retains both sets of work; do not replace one branch with the other or assume `main` contains every feature.
+
+For a fresh Computer Vision checkout, clone its branch explicitly. From an existing clean checkout, the safe updater checks only the current branch's configured upstream:
+
+```powershell
+git clone --branch feature/asthral-computer-vision https://github.com/GiaDiGr/ASTHRAL.git
+Set-Location ASTHRAL
+& .\engine\tools\sync_asthral.ps1
+```
+
+The updater fetches without pruning branches, stops when it finds local or untracked work, creates a local backup branch before an update, and advances only when Git can fast-forward the current branch without deleting files. It refuses divergent histories and incoming deletions for review. It does not push or merge `main` into a feature branch. Use `-FetchOnly` to check GitHub without updating the local branch.
+
+When the updater stops, preserve local work in a reviewed commit on its own branch. Before integrating another branch, inspect `git diff --name-status HEAD..origin/main`, create a backup branch, and review every deletion and conflict. Resolve a merge only after confirming that it retains work from both branches; if a clean, uncommitted merge introduces unexpected changes, use `git merge --abort`. Never use `git reset --hard`, `git clean`, or force-push to synchronize team work. Keep separate clones or Git worktrees when branches contain different versions of the same files.
 
 SQLite/WAL/backups are **not encrypted**. DPAPI/ACL protects local credentials from other identities but does not isolate same-user processes. A storage-controlling attacker can rewrite data/hash chains; software hashes are not clinical signatures or external tamper-proof anchors. Isolation, operational authority policy, clinical review, and data-at-rest encryption remain pending. Use synthetic data only. See [SECURITY.md](SECURITY.md).
 
