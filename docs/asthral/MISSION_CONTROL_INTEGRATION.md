@@ -65,7 +65,7 @@ directories to new, empty paths for each reproducible run:
 
 ```powershell
 $node = 'C:\Users\Gianni\.cache\codex-runtimes\codex-primary-runtime\dependencies\node\bin\node.exe'
-$env:ASTHRAL_BUILD_OUTPUT = Join-Path $env:TEMP 'asthral-mission-control-build'
+$env:ASTHRAL_BUILD_OUTPUT = Join-Path (Resolve-Path 'web-local').Path 'build-output-local-review'
 $env:ASTHRAL_TEST_DIST = $env:ASTHRAL_BUILD_OUTPUT
 & engine\.venv\Scripts\python.exe web-local\build.py
 Push-Location web-local
