@@ -1,0 +1,13 @@
+{
+  "status": "FAILED",
+  "page_errors": [],
+  "console_errors": [],
+  "request_failures": [],
+  "checks": [
+    "Login rendered",
+    "Demo entered",
+    "Exercise start/count/pause/resume/complete"
+  ],
+  "runtime_status": "Reference Python engine ready on this device \u00b7 3.97 seconds",
+  "failure": "Locator expected to have text 'Choose an energy reference method before saving.'\nActual value: None\nError: element(s) not found \nCall log:\n  - Expect \"to_have_text\" with timeout 5000ms\n  - waiting for locator(\"#nutrition\").locator(\"section\").filter(has=locator(\"#nutrition\").get_by_role(\"heading\", name=\"Record a meal\", exact=True)).get_by_role(\"status\")\n"
+}
