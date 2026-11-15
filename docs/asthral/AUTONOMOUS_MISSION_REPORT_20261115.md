@@ -5,6 +5,8 @@ Branch: `feature/asthral-autonomous-mission`
 Base: `b708df456e504d9e486236915f878ec088e4f2f9`
 Purpose: continue the existing integration in an isolated worktree; no reset or edits to the original project tree or stable deployment.
 
+Package metadata uses `asthral-engine`; the Python import namespace `vigile` remains unchanged for existing internal consumers and historical clinical contracts.
+
 ## Summary
 
 Added bounded self-reported prevention records, radiation observation storage and unit-safe calculations, NASA CCMC DONKI retrieval with offline cache display, and an offline NASA source registry. These additions keep readings, environment events and self-reports separate. The deterministic clinical rules, thresholds, and seven existing pathways were not changed. New records and computed dose intervals remain nonclinical and blocked from treatment or flight action.
