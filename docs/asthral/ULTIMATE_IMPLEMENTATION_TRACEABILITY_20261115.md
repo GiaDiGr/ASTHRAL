@@ -8,7 +8,7 @@ This register maps the 2026-11-15 attached implementation directive and the supp
 |---:|---|---|---|
 | 1 | Mission objective and preserve current application | Implemented in existing architecture | Existing browser-local workspace and clinical engine remain the host; this is an integration candidate, not a replacement project. |
 | 2 | Treat supplied HTML as visual inspiration | Reviewed | Its logging, trend, contextual help and anatomy ideas are inspiration only. The embedded 8.34 MB third-party mesh is not reused; hardcoded clinical labels/thresholds are not adopted. |
-| 3 | Prioritize protection, NASA data, 3D, audit and release | Local implementation verified; remote release pending | Existing encrypted local profile and authorization boundaries remain. Final browser, Python, Node, local Pages Function and source-manifest checks passed; remote publication is still gated on clean staging and repository checks. |
+| 3 | Prioritize protection, NASA data, 3D, audit and release | Implemented, verified, merged and deployed | Existing encrypted local profile and authorization boundaries remain. Fresh browser, Python, Node, Pages Function and source-manifest checks passed before the GitHub merge and production Pages deploy. |
 | 4 | Audit local project and existing implementation | Completed for this task's integration scope | Current branch/work tree was inspected. Historical generated `work/` evidence is preserved and not treated as a current test result. |
 | 5 | Modernize a coherent English UI | Existing foundation plus Mission Control integration | Mission Control, source register, power controls, RadLab and anatomy are integrated into existing navigation. A full redesign of every existing route was not repeated in this pass. |
 | 6 | Integrate NASA RadLab | Implemented and browser accepted | Fixed-host GET proxy, documented query form, units, timestamps, missing values, filter/range validation, historical/cache labels, plots, ISS coordinates, 3D markers, replay and CSV/JSON exports. The fresh acceptance rendered 1,469 returned records for a one-day historical ISS query. Not individual dosimetry. |
@@ -29,9 +29,9 @@ This register maps the 2026-11-15 attached implementation directive and the supp
 | 21 | Scientific/editorial review | Implemented for new claims | NASA documentation is cited for units, field coverage, dataset status, DONKI migration and OSDR boundaries. T-EVA/space-agriculture evidence is not used to establish clinical thresholds. |
 | 22 | Independent functional/visual audit | Automated visual/browser acceptance passed | Chromium rendered desktop and 390 px mobile views, interactive WebGL2 Earth/anatomy, real historical RadLab query, EVA completion and offline stale-cache behavior with zero unexpected console/page errors or failed requests. This remains a software audit only; no independent clinical review or flight certification was performed. |
 | 23 | Requirements traceability | This document | Final run artifacts and residual/pending status are recorded in the release report. |
-| 24 | Public deployment | Pending publication | Fresh local acceptance passed, including Wrangler Pages Function smoke test. No deployment of this candidate has yet been made; a prior Pages URL is not evidence that it contains this build. |
+| 24 | Public deployment | Deployed and remotely smoke-tested | Cloudflare production alias `https://asthral-web.pages.dev/` serves the release; its RadLab Function returned 1,469 historical observations with `no-store`, denied an untrusted Origin with 403 and rejected POST with 405. The deployment-specific URL is recorded in the release record below. |
 | 25 | FortiGuard classification | Not submitted | It requires a separate external request and a final stable URL; no request is fabricated or reported as completed. |
-| 26 | GitHub consolidation | Pending publication | The verified change set has not been committed, merged or pushed. Any release will use the tested branch, a non-force workflow and retained PR attribution; protected-branch checks remain authoritative. |
+| 26 | GitHub consolidation | Merged through a pull request | Commit `9d8e54ad` was pushed without force to the release branch and merged through PR #3 as merge commit `7972e07a`; existing contributor commits remain in history. GitHub exposed no Actions workflows or commit check-runs for the repository. |
 | 27 | Final documentation | Updated for local verification | See mission integration, NASA data/anatomy contract, this traceability matrix, current browser report, source registry and third-party notices. |
 | 28 | Required deliverables | Local deliverables ready | Features, tests, screenshots, measured performance, release status, limitations and prioritized follow-up are recorded here. |
 | 29 | Acceptance gates | Local gates passed; remote gates pending | Local automated/software gates below passed. Deployment and GitHub release gates remain separate and are not claimed complete. |
@@ -52,9 +52,9 @@ This register maps the 2026-11-15 attached implementation directive and the supp
 | Power modes apply their documented behavior | 24/12/1 fps caps, lower position-update rate, critical playback disabled | PASS in unit and browser tests; FULL restored after CRITICAL. |
 | Existing assistant/CV/NeuroGuard/voice behavior is retained | Existing route and suite regressions | PASS for included tests and route visibility. Optional inference dependencies were absent, so skipped tests do not validate local voice or vision model execution. |
 | No unsupported clinical inference is created | Source/result boundary checks | PASS in software contracts; RadLab is excluded from personal dose and EVA alert paths; anatomy export has no localized clinical findings. |
-| Public deployment and source URL match tested build | Live public endpoint, Pages Function and build fingerprint | Pending; the local Wrangler Pages Function has passed, but this candidate is not publicly deployed. |
+| Public deployment and source URL match tested build | Live public endpoint, Pages Function and build fingerprint | PASS; `https://asthral-web.pages.dev/` and the deployment URL responded with the ASTHRAL title; the production RadLab Function returned 200/1,469 records and preserved its security headers and rejection behavior. |
 | FortiGuard status is accurate | No submission is claimed | Not submitted; requires final URL and separate external workflow |
-| GitHub release matches tested code | Branch/revision, checks and non-force remote workflow | Pending |
+| GitHub release matches tested code | Branch/revision, checks and non-force remote workflow | PASS; PR #3 merged to `main` as `7972e07a`; no force push. There are no configured GitHub Actions workflows/check-runs, so remote CI did not run. |
 
 ## Fresh local verification — 2026-11-15
 
@@ -68,6 +68,14 @@ This register maps the 2026-11-15 attached implementation directive and the supp
 | Scientific source integrity | `SOURCE_INTEGRITY_OK` with `tools/build_science_integrity.py --check`. |
 
 The local Node runtime was invoked directly because `npm` is not available in this shell's `PATH`. Browser results were collected against a local build, not a public deployment. Timings and payload measurements are observations from this one Windows/Chromium machine; they do not establish performance on Android, flight computers or other hardware.
+
+## Release record — 2026-11-15
+
+- Tested source commit: `9d8e54ad691451eff96f803661d7450103be41c6` on `feature/asthral-mission-control-release-20261115`.
+- GitHub PR: [#3 — ASTHRAL release: Mission Control, EVA, NASA data and anatomy integration](https://github.com/GiaDiGr/ASTHRAL/pull/3), merged to `main` with merge commit `7972e07a4530bbe0f3cd32cd61c2d3c24e253407` using the normal merge workflow.
+- Cloudflare Pages deployment: `https://7ab50bba.asthral-web.pages.dev/`; production alias: [https://asthral-web.pages.dev/](https://asthral-web.pages.dev/). The feature preview remains at [https://feature-asthral-mission-cont.asthral-web.pages.dev/](https://feature-asthral-mission-cont.asthral-web.pages.dev/).
+- Production smoke test: root HTTP 200; RadLab endpoint HTTP 200 with 1,469 observations for 2023-01-01 ISS archive data, `HISTORICAL_QUERY_RESPONSE`, `Cache-Control: no-store`, and `NASA_OSDR_RADLAB` source header; untrusted `Origin` returned 403 and POST returned 405.
+- GitHub reported zero configured Actions workflows and zero commit check-runs for this repository. The PR was mergeable and clean; local Python, Node, Chromium, Pages Function and source-integrity gates above are the executed verification evidence. The repository still lacks remote CI checks for future changes.
 
 ## Sources
 
