@@ -48,7 +48,7 @@ $project = 'C:\Users\Gianni\Documents\Codex\ASTHRAL_AUTONOMOUS_MISSION_20261115'
 $python = 'C:\Users\Gianni\Documents\Codex\ASTHRAL_UNIFIED_WEB_20261115\engine\.venv\Scripts\python.exe'
 $env:PYTHONPATH = "$project\engine;$project\web-local\src"
 & $python -m pytest "$project\engine\tests\test_dosimetry.py" "$project\engine\tests\test_prevention.py" "$project\engine\tests\test_browser_mission_support.py" "$project\engine\tests\test_space_science_registry.py" -q
-$env:ASTHRAL_BUILD_OUTPUT = "$project\web-local\build-output-mission-final-20261115"
+$env:ASTHRAL_BUILD_OUTPUT = "$project\web-local\build-output-mission-recheck-20261115"
 & $python "$project\web-local\build.py"
 ```
 
