@@ -292,3 +292,24 @@ SQLite/WAL/backups are **not encrypted**. DPAPI/ACL protects local credentials f
 Scientific provenance is retained in the computable source registry and clinical manifest. Online API documentation: [NCBI E-utilities](https://www.ncbi.nlm.nih.gov/books/NBK25499/) and [NLM usage guidance](https://www.nlm.nih.gov/dataguide/eutilities/utilities.html). Public scientific metadata is not a license to redistribute entire papers. Model/runtime licenses and exclusions are described in [THIRD_PARTY_NOTICES.md](THIRD_PARTY_NOTICES.md). **No project license has been selected or added.** Private team access does not itself grant third-party redistribution rights.
 
 The isolated public synthetic demo uses Cloudflare Quick Tunnel. See [Cloudflare operation, credentials and mobile acceptance](docs/asthral/CLOUDFLARE_PUBLIC_DEMO.md).
+
+Participants
+
+Fabian A. Nana
+Biomedical Engineering Researcher
+
+Guillermo J. Armoa
+BSc in Biomedical Engineering
+Data & Intelligence Intern - Healthcare
+
+Sergio J.M. Herrera
+M.Sc. Student in Applied Physics
+
+Gianni Di Trani
+M.Sc. Student in Pure Mathematics
+
+Marfelinda Enciso
+Bioengineering
+
+David Grández
+CEO, SI & Cybersecurity Consultant
