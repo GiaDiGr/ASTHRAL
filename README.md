@@ -325,4 +325,5 @@ Bioengineering
 <img width="240" height="240" alt="image" src="https://github.com/user-attachments/assets/f673af24-191e-4f97-b033-136933f94884" />
 
 **David Grández**
+
 CEO, SI & Cybersecurity Consultant
