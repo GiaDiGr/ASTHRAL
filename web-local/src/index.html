@@ -112,6 +112,7 @@
         <section id="assistant" class="workspace-page" hidden>
           <div class="page-intro"><p class="eyebrow">LOCAL EVIDENCE</p><h1>Ask ASTHRAL</h1><p>Ask about this synthetic mission. Clinical results come only from the deterministic engine. The assistant can explain existing results but cannot change them.</p></div>
           <p id="chat-model-status" role="status" aria-live="polite">Checking local assistant availability…</p>
+          <label>Assessment to explain<select id="assistant-assessment"><option value="">Latest recorded assessment</option></select></label>
           <div id="chat-suggestions" class="chat-suggestions"><button type="button" data-prompt="Explain the current assessment and its evidence.">Explain the current assessment</button><button type="button" data-prompt="Which required information is still unknown?">What is still unknown?</button></div>
           <div id="answer" class="conversation" role="log" aria-live="polite" aria-relevant="additions"></div>
           <form id="chat-form" class="chat-composer"><label class="sr-only" for="question">Your question</label><textarea id="question" rows="2" maxlength="1200" placeholder="Ask about the current assessment or evidence…"></textarea><div class="chat-controls"><button id="chat-microphone" type="button" aria-label="Start voice input">Use microphone</button><button id="ask" class="primary-action">Send</button></div><p id="chat-voice-status" role="status" aria-live="polite"></p></form>

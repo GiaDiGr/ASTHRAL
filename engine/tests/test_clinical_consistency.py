@@ -132,6 +132,16 @@ def test_guard_rejects_optional_requirement_despite_model_approval():
         with pytest.raises(ValueError):
             validate_generated({'sentences':[{'text':text,'evidence_ids':['E1']}]},blocks)
 
+def test_exact_optional_engine_summary_can_be_cited():
+    from vigile.conversational import validate_generated
+    sentence='Unmeasured alternatives that do not block this result: bicarbonate.'
+    blocks=[{'id':'E1','kind':'ENGINE','text':sentence,'reference':{},
+             'clinical_contract':{'diagnostic_status':'CRITERIA_MET','missing_required':[],
+                                  'optional_not_measured':['bicarbonate_mmol_l'],'required_for_protocol_safety':['potassium_mmol_l']}}]
+    assert validate_generated({'sentences':[{'text':sentence,'evidence_ids':['E1']}]},blocks)[0]['text']==sentence
+    with pytest.raises(ValueError):
+        validate_generated({'sentences':[{'text':'Bicarbonate is required to evaluate DKA.','evidence_ids':['E1']}]},blocks)
+
 def test_generic_context_keeps_global_state(services):
     _,_,reader,_=services
     ev=reader.get('/dashboard/subjects/clinical-crew?mission_id=clinical-earth')['evaluations'][0]

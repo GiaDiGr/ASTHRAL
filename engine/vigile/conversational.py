@@ -28,7 +28,12 @@ def validate_generated(obj,blocks):
         for contract in contracts:
             for field in contract['optional_not_measured']:
                 terms=names.get(field,[field,field.replace('_',' ')])
-                if any(term in text.lower() for term in terms):raise ValueError('OPTIONAL_DATA_REQUIRES_ENGINE_SUMMARY')
+                if any(term in text.lower() for term in terms):
+                    # Permit only exact wording from a cited deterministic engine
+                    # summary; a model paraphrase can reverse the requirement.
+                    def compact(value):return re.sub(r'[^a-z0-9]+',' ',value.lower()).strip()
+                    if not any(b.get('kind')=='ENGINE' and b.get('clinical_contract') and compact(text) in compact(b['text']) for b in (allowed[i] for i in ids)):
+                        raise ValueError('OPTIONAL_DATA_REQUIRES_ENGINE_SUMMARY')
             if contract['diagnostic_status']=='CRITERIA_MET' and re.search(r'(falt|missing|insuficien|insufficien|no se puede|cannot).*(diagn|evalu|criter)',text,re.I):
                 raise ValueError('CLINICAL_STATE_CONTRADICTION')
         if UNSAFE.search(text) or re.search(r'para diagnosticar|https?://|www\.|<[a-zA-Z/!][^>]*>',text,re.I):raise ValueError('UNSAFE_GENERATED_TEXT')
