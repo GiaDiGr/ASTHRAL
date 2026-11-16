@@ -172,6 +172,11 @@ async function history() {
   const timeline=experience?await call('timeline'):null;
   if(epoch!==profileEpoch||!vault)return;
   const latest=data.evaluations.at(-1);
+  const assessmentSelect=$('assistant-assessment'),selectedAssessment=assessmentSelect.value;
+  assessmentSelect.replaceChildren(element('option','Latest recorded assessment'));
+  assessmentSelect.firstChild.value='';
+  for(const row of data.evaluations){const option=element('option',(row.snapshot.request.condition_id??'Differential')+' · '+row.snapshot.request.as_of+' · '+row.id);option.value=row.id;assessmentSelect.append(option);}
+  if([...assessmentSelect.options].some(option=>option.value===selectedAssessment))assessmentSelect.value=selectedAssessment;
   $('emergency-banner').hidden=true;
   // Historical results stay in history; current urgency is shown with its assessment.
   $('emergency-banner').textContent=latest?latest.output.urgency+' · Last saved synthetic assessment · Human medical review required · Treatment blocked':'';
@@ -661,6 +666,22 @@ async function localRetrieve(question,limit=3) {
     return lexical.blocks.slice(0,limit);
   }
 }
+function assessmentExplanation(response,row) {
+  response.append(element('strong','Assessment · recorded deterministic result'));
+  if(!row){response.append(element('p','No assessment is recorded in this profile. Open Assess health and run an assessment first.'));return;}
+  response.append(element('p','Assessment '+row.id+' · '+row.snapshot.request.as_of+' · recorded, not live.'));
+  for(const [condition,result] of Object.entries(row.output.results??{})){
+    response.append(element('p',human(condition)+': '+human(result.diagnostic_status)+' · confirmation: '+human(result.confirmation_status)+' · urgency: '+human(result.urgency)+'.'));
+    for(const [label,key] of [['Unresolved alternatives','missing_required'],['Unmeasured nonblocking alternatives','optional_not_measured'],['Invalid required inputs','invalid_required'],['Independent protocol safety inputs','required_for_protocol_safety']])
+      response.append(element('p',label+': '+((result[key]??[]).map(human).join(', ')||'None listed')+'.'));
+    response.append(element('p','Protocol status: '+human(result.protocol_status)+' · treatment status: '+human(result.treatment_status)+'. Sources: '+(result.source_ids??[]).join(', ')+'.'));
+  }
+  response.append(element('strong','Recorded observations'));
+  const observations=row.snapshot.observations??[];
+  if(!observations.length)response.append(element('p','No observations were recorded for this assessment.'));
+  for(const item of observations)response.append(element('p',human(item.concept)+': '+String(item.value??'not measured')+' '+item.unit+' · '+human(item.quality)+' · '+item.timestamp+'.'));
+  response.append(element('strong','Interpretation and limitations'),element('p','These are recorded engine states and inputs. An observed value is not necessarily an accepted criterion; review the assessment details and data quality. Missing or invalid inputs remain unresolved. Meeting criteria is not a signed diagnosis or treatment authorization.'),element('strong','Suggested next step'),element('p','Open Assess health or History to review the full criteria, evidence and pending actions.'));
+}
 $('search').onclick=safe(async()=>{
   await resources();
   renderDocs($('citations'),await localRetrieve($('search-question').value));
@@ -674,21 +695,35 @@ $('ask').onclick=safe(async()=>{
   if(question.length<3)throw Error('Enter a question of at least three characters.');
   const userMessage=element('div',question);userMessage.className='chat-message chat-user';userMessage.setAttribute('aria-label','Your question');$('answer').append(userMessage);
   $('question').value='';$('chat-model-status').textContent='Retrieving local evidence…';
-  const context=await call('assistant_context',{question});
+  const context=await call('assistant_context',{question,evaluation_id:$('assistant-assessment').value||null});
   if(['REFUSED_ACTION','CONTEXT_MISMATCH','INSUFFICIENT_INFORMATION'].includes(context.state)){
     const refusal=element('div',human(context.state));refusal.className='chat-message chat-assistant';refusal.setAttribute('aria-label','ASTHRAL response');$('answer').append(refusal);$('chat-model-status').textContent='The local evidence contract did not authorize an explanation for this question.';status(human(context.state));return;
   }
-  const blocks=[...context.blocks.slice(0,2),...(await localRetrieve(question)).filter(b=>b.english_generation_eligible!==false).slice(0,2)];
+  const assessmentQuestion=/\b(assessment|finding|unknown|missing|required|criteria|diagnos)\b/i.test(question);
+  const technicalQuestion=/\b(api|architecture|software|developer|implementation|endpoint|rag interface)\b/i.test(question);
+  const historyData=assessmentQuestion?await call('history'):null;
+  if(epoch!==modelEpoch||!vault)return;
+  const assessment=$('assistant-assessment').value?historyData?.evaluations?.find(row=>row.id===$('assistant-assessment').value)??null:historyData?.evaluations?.at(-1)??null;
+  const retrieved=await localRetrieve(assessmentQuestion&&assessment?Object.keys(assessment.output.results??{}).join(' ')+' clinical criteria evidence':question,20);
+  const relevant=retrieved.filter(b=>{
+    const authority=String(b.reference?.authority??'');
+    if(b.english_generation_eligible===false)return false;
+    if(technicalQuestion)return authority.startsWith('IMPLEMENTATION');
+    return !authority.startsWith('IMPLEMENTATION')&&!authority.startsWith('IMPLEMENTED_CRITERION')&&!/\b(?:RAGReadAPI|retrieve_evidence|GET \/|POST \/|API endpoint)\b/i.test(b.text)&&!/"(?:inputs|field|route|condition_id|expected)"\s*:/.test(b.text);
+  }).slice(0,2);
+  if(epoch!==modelEpoch||!vault)return;
+  const blocks=[...(technicalQuestion?[]:context.blocks.slice(0,2)),...relevant];
   const response=element('div','');response.className='chat-message chat-assistant';response.setAttribute('aria-label','ASTHRAL response');
+  if(assessmentQuestion&&!assessment){assessmentExplanation(response,null);$('answer').append(response);$('chat-model-status').textContent='No recorded assessment in the current profile.';return;}
   if($('mode').value!=='FULL'||!localGeneration?.ready||question.length>600) {
-    response.append(element('strong','Verified local evidence · text generation unavailable'));
-    response.append(element('p','The on-device text model is not loaded or is disabled. The items below are verbatim local evidence; they are not a generated medical explanation.'));
-    const citations=document.createElement('div');citations.className='chat-sources';renderDocs(citations,blocks);response.append(citations);$('answer').append(response);$('chat-model-status').textContent='Extractive fallback only · local text generation unavailable or disabled.';status('Displayed extractive evidence. No model generation was performed.');
+    if(assessmentQuestion)assessmentExplanation(response,assessment);
+    else {response.append(element('strong','Local references'));const citations=document.createElement('div');citations.className='chat-sources';renderDocs(citations,relevant);response.append(citations);}
+    $('answer').append(response);$('chat-model-status').textContent='Deterministic explanation or local references · text model not loaded or disabled.';status('No model generation was performed.');
     return;
   }
   $('model-status').textContent='Generating locally…';$('chat-model-status').textContent='Generating a response on this device…';
   const numeric=context.numeric&&/baseline|trend|change|recorded|measured|capacity|strength|sleep/i.test(question)?context.numeric:null;
-  const result=await localGeneration.call('generate',{question,blocks,explain:true,prepared_messages:numeric?.prompt.messages,prepared_schema:numeric?.prompt.schema,prepared_max_tokens:numeric?.prompt.max_tokens});
+  let result;try{result=await localGeneration.call('generate',{question,blocks,explain:true,prepared_messages:numeric?.prompt.messages,prepared_schema:numeric?.prompt.schema,prepared_max_tokens:numeric?.prompt.max_tokens});}catch(error){if(epoch!==modelEpoch)return;assessmentQuestion?assessmentExplanation(response,assessment):renderDocs(response,relevant);$('answer').append(response);$('chat-model-status').textContent='Local generation failed; deterministic information is shown.';return;}
   if(epoch!==modelEpoch) return;
   const metric={...result,generated_json:undefined,text:undefined};
   benchmarks.push(metric);
@@ -707,9 +742,8 @@ $('ask').onclick=safe(async()=>{
   } catch(error){
     metric.accepted=false;metric.validation_pending=false;metric.validation='REJECTED_BY_REFERENCE_VALIDATOR';
     metric.validation_error_code=['CLINICAL_CLAIM_REQUIRES_EXACT_ENGINE_TEXT','FACT_SCOPE_MISMATCH','FACT_DOES_NOT_MATCH_STORED_REFERENCE','TRUNCATED_MODEL_RESPONSE','INVALID_GENERATED_SCHEMA','INVALID_SENTENCE','INVALID_CITATION','STRUCTURED_FACT_REALIZATION_REJECTED','OPTIONAL_DATA_REQUIRES_ENGINE_SUMMARY','CLINICAL_STATE_CONTRADICTION','UNSAFE_GENERATED_TEXT','UNSUPPORTED_NUMBER','ENGINE_EXPLANATION_REQUIRES_VERBATIM_SUPPORT','DOCUMENT_CANNOT_ESTABLISH_PERSONAL_MEASUREMENTS','NO_SUPPORTED_GENERATED_EXPLANATION'].find(code=>String(error).includes(code))??(error instanceof SyntaxError?'INVALID_MODEL_JSON':'REFERENCE_VALIDATION_FAILED');
-    response.append(element('strong','Verified local evidence fallback'));
-    response.append(element('p','The generated wording did not pass the reference checks. It was discarded; the items below are verbatim evidence and do not constitute a generated explanation.'));
-    const citations=document.createElement('div');citations.className='chat-sources';renderDocs(citations,blocks);response.append(citations);$('answer').append(response);$('chat-model-status').textContent='Generated text rejected; verbatim evidence fallback shown.';
+    if(assessmentQuestion)assessmentExplanation(response,assessment);else renderDocs(response,relevant);
+    $('answer').append(response);$('chat-model-status').textContent='Generated text rejected; deterministic information shown.';
     status('Generated wording rejected by the reference safety contract.');
   } finally {$('model-benchmark').textContent=JSON.stringify(benchmarks,null,2);}
 });

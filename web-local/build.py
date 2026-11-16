@@ -161,7 +161,9 @@ def main():
         parts=[ast.get_source_segment(conversation,node) for node in nodes]
         evidence=(ROOT/'engine/vigile/local_assistant.py').read_text(encoding='utf8')
         evidence_node=next(node for node in ast.parse(evidence).body if isinstance(node,ast.FunctionDef) and node.name=='evidence_blocks')
-        helper='import re,json\n'+'\n\n'.join(parts)+'\n'+ast.get_source_segment(evidence,evidence_node)
+        # This extracted module lives at /app, outside the vigile package; retain
+        # the reference guard using an absolute import in its browser wrapper.
+        helper=('import re,json\n'+'\n\n'.join(parts)+'\n'+ast.get_source_segment(evidence,evidence_node)).replace('from .assistant_safety import clinical_claim_guard','from vigile.assistant_safety import clinical_claim_guard')
         archive.writestr('browser_assistant_reference.py',helper)
         scope={};exec('import re\n'+'\n\n'.join(ast.get_source_segment(conversation,node) for node in nodes if not isinstance(node,ast.FunctionDef)),scope)
         (OUT/'assistant-config.json').write_text(json.dumps({'system':scope['SYSTEM'],'schema':scope['SCHEMA'],'max_tokens':scope['MODES']['FULL']['max_tokens']}),encoding='utf8')

@@ -126,7 +126,10 @@ def dispatch(action, data):
                 numeric={'facts':[fact.model_dump(mode='json') for fact in facts[:5]],'prompt':recorder.prompt,'as_of':run['as_of'],'mode':'CONTEXT_PREPARATION_ONLY_NO_INFERENCE_EXECUTED'}
         rows=store.all('browser_evaluation')
         if not rows:return {'state':'AUTHORIZED_LOCAL_CONTEXT' if numeric else 'NO_RECORDED_ASSESSMENT','blocks':[],'numeric':numeric}
-        row=rows[-1]
+        selected=data.get('evaluation_id')
+        row=next((item for item in rows if item['id']==selected),None) if selected else rows[-1]
+        if row is None or row.get('subject_id')!=owner:
+            raise ValueError('ASSESSMENT_NOT_FOUND_FOR_PROFILE')
         from browser_assistant_reference import evidence_blocks
         from vigile.english import english_result
         class Reader:
