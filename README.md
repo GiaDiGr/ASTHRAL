@@ -293,7 +293,13 @@ Scientific provenance is retained in the computable source registry and clinical
 
 The isolated public synthetic demo uses Cloudflare Quick Tunnel. See [Cloudflare operation, credentials and mobile acceptance](docs/asthral/CLOUDFLARE_PUBLIC_DEMO.md).
 
-Participants
+## Participants
+
+<img width="240" height="288" alt="Gianni Di Trani" src="https://github.com/user-attachments/assets/e1f45fef-1414-4339-a3a1-7eb45e7e67e9" />
+
+Gianni Di Trani
+M.Sc. Student in Pure Mathematics
+
 
 Fabian A. Nana
 Biomedical Engineering Researcher
@@ -305,11 +311,10 @@ Data & Intelligence Intern - Healthcare
 Sergio J.M. Herrera
 M.Sc. Student in Applied Physics
 
-Gianni Di Trani
-M.Sc. Student in Pure Mathematics
-
 Marfelinda Enciso
 Bioengineering
+
+<img width="1254" height="1254" alt="image" src="https://github.com/user-attachments/assets/f673af24-191e-4f97-b033-136933f94884" />
 
 David Grández
 CEO, SI & Cybersecurity Consultant
