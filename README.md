@@ -297,7 +297,7 @@ The isolated public synthetic demo uses Cloudflare Quick Tunnel. See [Cloudflare
 
 
 
-<img width="240" height="288" alt="Gianni Di Trani" src="https://github.com/user-attachments/assets/e1f45fef-1414-4339-a3a1-7eb45e7e67e9" />
+<img width="240" alt="Gianni Di Trani" src="https://github.com/user-attachments/assets/e1f45fef-1414-4339-a3a1-7eb45e7e67e9" />
 
 **Gianni Di Trani**
 
@@ -305,11 +305,13 @@ M.Sc. Student in Pure Mathematics
 
 
 
-<img width="593" height="599" alt="image" src="https://github.com/user-attachments/assets/73ac7534-c7a5-4241-9d90-6eb14efb6e58" />
+<img width="240" alt="Fabian A. Nana" src="https://github.com/user-attachments/assets/73ac7534-c7a5-4241-9d90-6eb14efb6e58" />
 
 **Fabian A. Nana**
 
 Biomedical Engineering Researcher
+
+<img width="240" alt="Guillermo J. Armoa at an IEEE EMBS event" src="docs/asthral/team/guillermo-j-armoa-ieee-embs.jpg" />
 
 **Guillermo J. Armoa**
 
@@ -319,19 +321,17 @@ Data & Intelligence Intern - Healthcare
 
 
 
-<img width="1122" height="1402" alt="foto_cv" src="https://github.com/user-attachments/assets/54374719-4219-43d5-bd4c-b8df41f59325" />
-
 **Sergio J.M. Herrera**
 
 M.Sc. Student in Applied Physics
+
+<img width="240" alt="Marfelinda Enciso" src="docs/asthral/team/marfelinda-enciso.png" />
 
 **Marfelinda Enciso**
 
 B.Sc. Student in Bioengineering
 
 
-
-<img width="240" height="240" alt="image" src="https://github.com/user-attachments/assets/f673af24-191e-4f97-b033-136933f94884" />
 
 **David Grández**
 
