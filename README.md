@@ -296,6 +296,7 @@ The isolated public synthetic demo uses Cloudflare Quick Tunnel. See [Cloudflare
 ## Participants
 
 
+
 <img width="240" height="288" alt="Gianni Di Trani" src="https://github.com/user-attachments/assets/e1f45fef-1414-4339-a3a1-7eb45e7e67e9" />
 
 **Gianni Di Trani**
@@ -303,15 +304,22 @@ The isolated public synthetic demo uses Cloudflare Quick Tunnel. See [Cloudflare
 M.Sc. Student in Pure Mathematics
 
 
+
+<img width="593" height="599" alt="image" src="https://github.com/user-attachments/assets/73ac7534-c7a5-4241-9d90-6eb14efb6e58" />
+
 **Fabian A. Nana**
 
 Biomedical Engineering Researcher
 
 **Guillermo J. Armoa**
 
-BSc in Biomedical Engineering
+B.Sc. in Biomedical Engineering
 
 Data & Intelligence Intern - Healthcare
+
+
+
+<img width="1122" height="1402" alt="foto_cv" src="https://github.com/user-attachments/assets/54374719-4219-43d5-bd4c-b8df41f59325" />
 
 **Sergio J.M. Herrera**
 
@@ -319,7 +327,8 @@ M.Sc. Student in Applied Physics
 
 **Marfelinda Enciso**
 
-Bioengineering
+B.Sc. Student in Bioengineering
+
 
 
 <img width="240" height="240" alt="image" src="https://github.com/user-attachments/assets/f673af24-191e-4f97-b033-136933f94884" />
