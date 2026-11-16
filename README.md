@@ -295,26 +295,34 @@ The isolated public synthetic demo uses Cloudflare Quick Tunnel. See [Cloudflare
 
 ## Participants
 
+
 <img width="240" height="288" alt="Gianni Di Trani" src="https://github.com/user-attachments/assets/e1f45fef-1414-4339-a3a1-7eb45e7e67e9" />
 
-Gianni Di Trani
+**Gianni Di Trani**
+
 M.Sc. Student in Pure Mathematics
 
 
-Fabian A. Nana
+**Fabian A. Nana**
+
 Biomedical Engineering Researcher
 
-Guillermo J. Armoa
+**Guillermo J. Armoa**
+
 BSc in Biomedical Engineering
+
 Data & Intelligence Intern - Healthcare
 
-Sergio J.M. Herrera
+**Sergio J.M. Herrera**
+
 M.Sc. Student in Applied Physics
 
-Marfelinda Enciso
+**Marfelinda Enciso**
+
 Bioengineering
+
 
 <img width="240" height="240" alt="image" src="https://github.com/user-attachments/assets/f673af24-191e-4f97-b033-136933f94884" />
 
-David Grández
+**David Grández**
 CEO, SI & Cybersecurity Consultant
