@@ -321,6 +321,8 @@ Data & Intelligence Intern - Healthcare
 
 
 
+<img width="240" alt="Sergio J.M. Herrera" src="https://github.com/user-attachments/assets/54374719-4219-43d5-bd4c-b8df41f59325" />
+
 **Sergio J.M. Herrera**
 
 M.Sc. Student in Applied Physics
@@ -332,6 +334,8 @@ M.Sc. Student in Applied Physics
 B.Sc. Student in Bioengineering
 
 
+
+<img width="240" alt="David Grández" src="https://github.com/user-attachments/assets/f673af24-191e-4f97-b033-136933f94884" />
 
 **David Grández**
 
