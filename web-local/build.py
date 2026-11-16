@@ -29,7 +29,7 @@ def sha(raw):return hashlib.sha256(raw).hexdigest()
 def copy_public_source(source, destination):
     # Interpreter caches depend on the build machine and are not browser assets.
     shutil.copytree(source,destination,dirs_exist_ok=True,
-        ignore=shutil.ignore_patterns('__pycache__','*.pyc','*.pyo','browser_bridge.py','browser_monitoring.py'))
+        ignore=shutil.ignore_patterns('__pycache__','*.pyc','*.pyo','browser_bridge.py','browser_monitoring.py','zanatomy-muscles.glb'))
 
 def get_runtime():
     VENDOR.mkdir(exist_ok=True)

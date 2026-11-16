@@ -1,67 +1,13 @@
 import { cachePublicResources } from './public-resources.js';
+import {
+  ANATOMY_MODEL, ANATOMY_REGIONS, anatomyRegionMatches, regionForAnatomyName,
+  resolveAnatomySurfaceRegion, regionIdFromBoneName,
+} from './anatomy-regions.js';
 
-export const ANATOMY_MODEL = Object.freeze({
-  name: 'Z-Anatomy muscular system layer',
-  source: 'https://github.com/ArianArsenal/anatomy-explorer',
-  upstreamModel: 'https://github.com/Z-Anatomy/Models-of-human-anatomy',
-  upstreamDataset: 'https://dbarchive.biosciencedbc.jp/en/bodyparts3d/',
-  license: 'CC BY-SA 4.0 (model layer; derived from BodyParts3D CC BY-SA 2.1 Japan)',
-  sha256: 'f8399ba12dedb7cd88de199eddf7e3f8a3de8373a69228fb9da7ce1b7981ffd2',
-  clinical_validation: false,
-});
-
-const region = (id, label, system, laterality = 'midline', patterns = []) => Object.freeze({ id, label, system, laterality, patterns: patterns.map(value => new RegExp(value, 'i')) });
-
-export const ANATOMY_REGIONS = Object.freeze([
-  region('head', 'Head', 'Musculoskeletal', 'midline', ['head', 'frontalis', 'occipitalis', 'epicranial', 'temporoparietalis']),
-  region('face', 'Face', 'Musculoskeletal', 'midline', ['nasalis', 'masseter', 'buccinator', 'zygomatic', 'orbicularis oris', 'facial']),
-  region('left_eye', 'Left eye region', 'Ocular muscles', 'left', ['rectus muscle', 'oblique muscle', 'palpebra', 'tarsus', 'trochlea', 'orbicularis oculi']),
-  region('right_eye', 'Right eye region', 'Ocular muscles', 'right', ['rectus muscle', 'oblique muscle', 'palpebra', 'tarsus', 'trochlea', 'orbicularis oculi']),
-  region('neck', 'Neck', 'Musculoskeletal', 'midline', ['sternocleidomastoid', 'scalene', 'longus colli', 'longus capitis', 'neck']),
-  region('chest', 'Chest', 'Musculoskeletal', 'midline', ['pectoral', 'intercostal', 'serratus anterior', 'thoracic']),
-  region('abdomen', 'Abdomen', 'Musculoskeletal', 'midline', ['rectus abdominis', 'transversus abdominis', 'external oblique', 'internal oblique', 'abdominal']),
-  region('back', 'Back', 'Musculoskeletal', 'midline', ['trapezius', 'latissimus dorsi', 'rhomboid', 'erector spinae', 'multifidus', 'back']),
-  region('left_shoulder', 'Left shoulder', 'Musculoskeletal', 'left', ['deltoid', 'shoulder']),
-  region('right_shoulder', 'Right shoulder', 'Musculoskeletal', 'right', ['deltoid', 'shoulder']),
-  region('left_upper_arm', 'Left upper arm', 'Musculoskeletal', 'left', ['biceps brachii', 'triceps brachii', 'brachialis', 'coracobrachialis']),
-  region('right_upper_arm', 'Right upper arm', 'Musculoskeletal', 'right', ['biceps brachii', 'triceps brachii', 'brachialis', 'coracobrachialis']),
-  region('left_forearm', 'Left forearm', 'Musculoskeletal', 'left', ['forearm', 'pronator', 'supinator', 'flexor carpi', 'extensor carpi']),
-  region('right_forearm', 'Right forearm', 'Musculoskeletal', 'right', ['forearm', 'pronator', 'supinator', 'flexor carpi', 'extensor carpi']),
-  region('left_hand', 'Left hand', 'Musculoskeletal', 'left', ['hand', 'thenar', 'hypothenar', 'lumbrical', 'interossei']),
-  region('right_hand', 'Right hand', 'Musculoskeletal', 'right', ['hand', 'thenar', 'hypothenar', 'lumbrical', 'interossei']),
-  region('left_hip', 'Left hip', 'Musculoskeletal', 'left', ['gluteus', 'gluteal', 'hip']),
-  region('right_hip', 'Right hip', 'Musculoskeletal', 'right', ['gluteus', 'gluteal', 'hip']),
-  region('left_thigh', 'Left thigh', 'Musculoskeletal', 'left', ['quadriceps', 'hamstring', 'adductor', 'gracilis', 'sartorius', 'vastus', 'rectus femoris', 'biceps femoris']),
-  region('right_thigh', 'Right thigh', 'Musculoskeletal', 'right', ['quadriceps', 'hamstring', 'adductor', 'gracilis', 'sartorius', 'vastus', 'rectus femoris', 'biceps femoris']),
-  region('left_knee', 'Left knee', 'Musculoskeletal', 'left', ['patella', 'popliteus', 'knee']),
-  region('right_knee', 'Right knee', 'Musculoskeletal', 'right', ['patella', 'popliteus', 'knee']),
-  region('left_lower_leg', 'Left lower leg', 'Musculoskeletal', 'left', ['gastrocnemius', 'soleus', 'tibialis', 'fibularis', 'peroneus', 'lower leg']),
-  region('right_lower_leg', 'Right lower leg', 'Musculoskeletal', 'right', ['gastrocnemius', 'soleus', 'tibialis', 'fibularis', 'peroneus', 'lower leg']),
-  region('left_ankle', 'Left ankle', 'Musculoskeletal', 'left', ['ankle']),
-  region('right_ankle', 'Right ankle', 'Musculoskeletal', 'right', ['ankle']),
-  region('left_foot', 'Left foot', 'Musculoskeletal', 'left', ['foot', 'toe', 'plantar']),
-  region('right_foot', 'Right foot', 'Musculoskeletal', 'right', ['foot', 'toe', 'plantar']),
-]);
-
-function bodySide(name) {
-  const value = String(name ?? '').toLowerCase();
-  if (/(?:^|[._\s-])(?:l|left)$/.test(value) || /\bleft\b/.test(value)) return 'left';
-  if (/(?:^|[._\s-])(?:r|right)$/.test(value) || /\bright\b/.test(value)) return 'right';
-  return null;
-}
-
-export function regionForAnatomyName(name) {
-  const value = String(name ?? '');
-  const side = bodySide(value);
-  const candidates = ANATOMY_REGIONS.filter(item => item.patterns.some(pattern => pattern.test(value)));
-  if (!candidates.length) return null;
-  if (side) return candidates.find(item => item.laterality === side) ?? candidates.find(item => item.laterality === 'midline') ?? null;
-  return candidates.find(item => item.laterality === 'midline') ?? null;
-}
-
-export function anatomyRegionMatches(regionId, objectName) {
-  return regionForAnatomyName(objectName)?.id === regionId;
-}
+export {
+  ANATOMY_MODEL, ANATOMY_REGIONS, anatomyRegionMatches, regionForAnatomyName,
+  resolveAnatomySurfaceRegion, regionIdFromBoneName,
+} from './anatomy-regions.js';
 
 const svgNS = 'http://www.w3.org/2000/svg';
 const element = (tag, text = '') => { const item = document.createElement(tag); if (text) item.textContent = text; return item; };
@@ -79,12 +25,13 @@ export async function mountAnatomyView(container, { status = () => {}, powerMode
   const reset = element('button', 'Reset camera'); reset.type = 'button';
   const selectLabel = element('label', 'Select an anatomical region');
   const regionSelect = document.createElement('select'); regionSelect.setAttribute('aria-label', 'Select an anatomical region');
+  regionSelect.append(new Option('No region selected', ''));
   for (const item of ANATOMY_REGIONS) regionSelect.append(new Option(item.label, item.id));
   selectLabel.append(regionSelect);
   toolbar.append(front, back, pan, zoomIn, zoomOut, reset, selectLabel);
 
-  const frame = element('div'); frame.className = 'anatomy-frame'; frame.setAttribute('aria-label', 'Interactive 3D anatomical model');
-  const canvas = document.createElement('canvas'); canvas.className = 'anatomy-canvas'; canvas.setAttribute('aria-label', 'Rotate, zoom and select named muscle regions in the licensed 3D anatomy model');
+  const frame = element('div'); frame.className = 'anatomy-frame'; frame.setAttribute('aria-label', 'Interactive 3D external body map'); frame.dataset.selectedRegion = '';
+  const canvas = document.createElement('canvas'); canvas.className = 'anatomy-canvas'; canvas.setAttribute('aria-label', 'Rotate, zoom, and select regions on the external human body surface');
   const fallback = element('div'); fallback.className = 'anatomy-fallback'; fallback.hidden = true;
   const notice = element('p', 'Loading the locally licensed 3D anatomical model…'); notice.className = 'anatomy-notice'; notice.setAttribute('role', 'status'); notice.setAttribute('aria-live', 'polite');
   frame.append(canvas, fallback, notice);
@@ -95,7 +42,7 @@ export async function mountAnatomyView(container, { status = () => {}, powerMode
   const layout = element('div'); layout.className = 'anatomy-layout';
   const context = element('section'); context.className = 'anatomy-context';
   const heading = element('h2', 'Region context');
-  const selectedLine = element('p'); selectedLine.id = 'anatomy-selected-region';
+  const selectedLine = element('p', 'No region selected. Select a visible body area or use the accessible region selector.'); selectedLine.id = 'anatomy-selected-region'; selectedLine.dataset.regionId = '';
   const dataLine = element('p', 'No localized health assessments, findings or review decisions are mapped to this anatomical region in the current data contract. Missing regional data do not indicate normal health.'); dataLine.className = 'anatomy-no-data';
   const recordLine = element('p', 'System-wide physiological measurements remain in Health Monitoring and are not attributed to this body region by this view.'); recordLine.className = 'anatomy-system-context';
   const timelineHeading = element('h3', 'Regional history');
@@ -103,25 +50,25 @@ export async function mountAnatomyView(container, { status = () => {}, powerMode
   const moduleList = element('div'); moduleList.className = 'anatomy-modules';
   const history = element('a', 'Open Health History'); history.href = '#history'; history.dataset.view = 'history';
   const neuro = element('a', 'Open NeuroGuard context'); neuro.href = '#neuroguard'; neuro.dataset.view = 'neuroguard';
-  const exportButton = element('button', 'Export region context'); exportButton.type = 'button';
+  const exportButton = element('button', 'Export region context'); exportButton.type = 'button'; exportButton.disabled = true;
   const cacheButton = element('button', 'Install 3D model for offline use'); cacheButton.type = 'button';
   const dataStatus = element('p', 'The model is educational orientation context, not a diagnostic atlas or clinical localization tool.'); dataStatus.className = 'anatomy-data-status'; dataStatus.setAttribute('role', 'status');
   moduleList.append(history, neuro);
   context.append(heading, selectedLine, dataLine, recordLine, timelineHeading, timeline, moduleList, exportButton, cacheButton, dataStatus);
   const source = element('aside'); source.className = 'anatomy-source';
   const sourceTitle = element('h3', 'Model source & limits');
-  const sourceText = element('p', 'Z-Anatomy muscular system layer derived from BodyParts3D. Asset is distributed under CC BY-SA 4.0. Only this model layer is included; the organ layer and its separately licensed kidney asset are not bundled. ASTHRAL has not clinically validated the model or the region mapping.');
-  const sourceLink = element('a', 'View model provenance and attribution'); sourceLink.href = 'https://github.com/ArianArsenal/anatomy-explorer'; sourceLink.target = '_blank'; sourceLink.rel = 'noopener noreferrer';
+  const sourceText = element('p', 'Smooth external adult body model with male morphology; CC0 MakeHuman-derived asset from Innerscene. Bone weights and visible surface landmarks power region selection. The rig is invisible. This model is a navigation aid, not a diagnostic atlas, patient-specific representation or clinically validated localization system.');
+  const sourceLink = element('a', 'View model provenance and attribution'); sourceLink.href = ANATOMY_MODEL.source; sourceLink.target = '_blank'; sourceLink.rel = 'noopener noreferrer';
   const dataSourceLink = element('a', 'Open NASA OSDR environmental data portal'); dataSourceLink.href = 'https://visualization.osdr.nasa.gov/eda/'; dataSourceLink.target = '_blank'; dataSourceLink.rel = 'noopener noreferrer';
   source.append(sourceTitle, sourceText, sourceLink, dataSourceLink);
   layout.append(context, source);
   root.append(toolbar, frame, legend, layout);
   container.replaceChildren(root);
 
-  let THREE = null, renderer = null, scene = null, camera = null, modelRoot = null;
+  let THREE = null, renderer = null, scene = null, camera = null, modelRoot = null, anatomyModel = null;
   let resizeObserver = null, raycaster = null, pointer = null, raf = 0, renderTotal = 0, visible = true, disposed = false;
-  let selectedRegion = ANATOMY_REGIONS[0], posterior = false, panMode = false, drag = null, yaw = 0, pitch = 0.03, zoom = 3.4;
-  let target = null, originalMaterials = new Map(), highlighted = [], lastRenderAt = null;
+  let selectedRegion = null, posterior = false, panMode = false, drag = null, yaw = 0, pitch = 0.03, zoom = 3.4;
+  let target = null, originalMaterials = new Map(), bodyMeshes = [], lastRenderAt = null, testSurfaceSamples = null;
 
   function modelScale() { return powerMode() === 'FULL' ? 1.35 : powerMode() === 'LOW_POWER' ? 1 : 0.68; }
   function render() {
@@ -143,36 +90,30 @@ export async function mountAnatomyView(container, { status = () => {}, powerMode
     renderer.setPixelRatio(Math.min(devicePixelRatio || 1, modelScale()));
     renderer.setSize(box.width, box.height, false); camera.aspect = box.width / box.height; camera.updateProjectionMatrix(); scheduleRender();
   }
-  function disposeHighlighted() {
-    for (const [mesh, original, cloned] of highlighted) {
-      mesh.material = original;
-      for (const item of Array.isArray(cloned) ? cloned : [cloned]) item?.dispose?.();
-    }
-    highlighted = [];
-  }
   function highlightRegion(item) {
-    if (!modelRoot) return;
-    disposeHighlighted();
-    modelRoot.traverse(object => {
-      if (!object.isMesh || !object.userData.astName || !anatomyRegionMatches(item.id, object.userData.astName)) return;
-      const original = originalMaterials.get(object) ?? object.material;
-      const cloneMaterial = material => {
-        const clone = material.clone();
-        if (clone.emissive) { clone.emissive.setHex(0x25bfb6); clone.emissiveIntensity = 0.72; }
-        else if (clone.color) clone.color.lerp(new THREE.Color(0x3ddfd1), 0.52);
-        return clone;
-      };
-      const clone = Array.isArray(original) ? original.map(cloneMaterial) : cloneMaterial(original);
-      object.material = clone; highlighted.push([object, original, clone]);
-    });
-    selectedLine.textContent = `${item.label} · ${item.system} · ${item.laterality === 'midline' ? 'midline / unspecified side' : item.laterality + ' side'}. Selection is a navigation aid only.`;
     selectedRegion = item;
+    const id = item?.id ?? '';
+    regionSelect.value = id; frame.dataset.selectedRegion = id; selectedLine.dataset.regionId = id;
+    exportButton.disabled = !item;
+    selectedLine.textContent = item
+      ? item.label + ' · ' + item.system + ' · ' + (item.laterality === 'midline' ? 'midline / unspecified side' : item.laterality + ' side') + '. Selection is a navigation aid only.'
+      : 'No region selected. The surface could not be matched to a supported region, or the interaction was outside the body map.';
+    for (const mesh of bodyMeshes) {
+      for (let i = 0; i < mesh.regionGroups.length; i++) {
+        const group = mesh.geometry.groups[i], metadata = mesh.regionGroups[i];
+        group.materialIndex = item && metadata.regionId === item.id ? mesh.highlightMaterialIndex : metadata.baseMaterialIndex;
+      }
+    }
     scheduleRender();
   }
   function currentModules(item) {
     moduleList.replaceChildren();
     const add = (label, href, description) => { const a = element('a', label); a.href = href; a.title = description; moduleList.append(a); };
+    if (!item) return;
     if (/eye/.test(item.id)) add('OcularVision · image intake', '#vision', 'Open ocular image intake; no model diagnosis is available.');
+    if (item.id === 'head') add('Well-being and cognitive monitoring', '#neuroguard', 'Open cognitive monitoring and well-being context.');
+    if (item.id === 'chest') add('Cardiovascular monitoring', '#monitoring', 'Open systemic health monitoring.');
+    if (item.id === 'abdomen') add('Nutrition and hydration', '#nutrition', 'Open recorded nutrition and hydration context.');
     if (item.id === 'face' || item.id.startsWith('left_') || item.id.startsWith('right_')) add('MotionGuard · movement research', '#exercise', 'Open optional local motion analysis; outputs are not localized findings.');
     if (['chest'].includes(item.id)) add('EchoVision · model unavailable', '#vision', 'Open the computer-vision module status.');
     if (['face', 'head'].includes(item.id)) add('SkinGuard · image intake', '#vision', 'Open image quality intake; no skin lesion model is available.');
@@ -180,8 +121,8 @@ export async function mountAnatomyView(container, { status = () => {}, powerMode
     add('Health History', '#history', 'Open source records without anatomically attributing system-level measurements.');
   }
   function selectRegion(value) {
-    const item = ANATOMY_REGIONS.find(row => row.id === value) ?? ANATOMY_REGIONS[0];
-    regionSelect.value = item.id; highlightRegion(item); currentModules(item);
+    const item = ANATOMY_REGIONS.find(row => row.id === value) ?? null;
+    highlightRegion(item); currentModules(item);
   }
   function createFallback(message) {
     canvas.hidden = true; fallback.hidden = false; fallback.replaceChildren();
@@ -192,14 +133,149 @@ export async function mountAnatomyView(container, { status = () => {}, powerMode
     const help = element('p', message + ' Use the accessible region selector above.'); fallback.append(help);
     notice.textContent = 'Interactive 3D is unavailable; 2D schematic and region selection remain usable.';
   }
-  function sideFromName(value) { return /(?:^|[._\s-])(?:l|left)$/.test(value.toLowerCase()) ? 'left' : /(?:^|[._\s-])(?:r|right)$/.test(value.toLowerCase()) ? 'right' : 'midline'; }
+  function sourcePointFromWorld(worldPoint) {
+    const point = worldPoint.clone();
+    anatomyModel?.worldToLocal(point);
+    return { x: point.x, y: point.y, z: point.z };
+  }
+  function weightedBonesAtVertex(mesh, vertex) {
+    const indices = mesh.geometry.getAttribute('skinIndex'), weights = mesh.geometry.getAttribute('skinWeight');
+    if (!indices || !weights || !mesh.skeleton) return [];
+    const components = [indices.getX(vertex), indices.getY(vertex), indices.getZ(vertex), indices.getW(vertex)];
+    const amounts = [weights.getX(vertex), weights.getY(vertex), weights.getZ(vertex), weights.getW(vertex)];
+    return components.map((index, i) => [mesh.skeleton.bones[index]?.name, amounts[i]]).filter(([name, weight]) => name && weight > 0);
+  }
+  function regionAtHit(hit) {
+    if (!hit?.object?.isSkinnedMesh) return null;
+    // Regions are baked onto disjoint indexed faces. Ambiguous faces remain
+    // unclassified, and picking never passes through the visible surface.
+    const regionId = hit.object.regionByFace?.[hit.faceIndex] ?? null;
+    return ANATOMY_REGIONS.find(region => region.id === regionId) ?? null;
+  }
+  function classifyMeshVertices(mesh) {
+    const geometry = mesh.geometry, position = geometry.getAttribute('position');
+    const regions = new Array(position.count).fill(null);
+    const counts = Object.fromEntries(ANATOMY_REGIONS.map(item => [item.id, 0]));
+    for (let i = 0; i < position.count; i++) {
+      const point = { x: position.getX(i), y: position.getY(i), z: position.getZ(i) };
+      const regionId = resolveAnatomySurfaceRegion(point, weightedBonesAtVertex(mesh, i));
+      regions[i] = regionId;
+      if (regionId) counts[regionId]++;
+    }
+    geometry.deleteAttribute('color');
+    mesh.regionByVertex = regions;
+    mesh.regionCounts = counts;
+    bodyMeshes.push(mesh);
+    return counts;
+  }
+  function segmentMeshFaces(mesh) {
+    const geometry = mesh.geometry, sourceIndex = geometry.index;
+    if (!sourceIndex || sourceIndex.count % 3) throw Error('External body mesh is missing indexed triangle geometry.');
+    const materialForOffset = new Uint16Array(sourceIndex.count);
+    for (const group of geometry.groups) materialForOffset.fill(group.materialIndex, group.start, group.start + group.count);
+    if (!geometry.groups.length) materialForOffset.fill(0);
+    const buckets = new Map(), vertexRegions = mesh.regionByVertex;
+    for (let offset = 0; offset < sourceIndex.count; offset += 3) {
+      const a = sourceIndex.getX(offset), b = sourceIndex.getX(offset + 1), c = sourceIndex.getX(offset + 2);
+      const candidate = vertexRegions[a];
+      const regionId = candidate && vertexRegions[b] === candidate && vertexRegions[c] === candidate ? candidate : null;
+      const baseMaterialIndex = materialForOffset[offset];
+      const key = `${baseMaterialIndex}:${regionId ?? ''}`;
+      let bucket = buckets.get(key);
+      if (!bucket) { bucket = { baseMaterialIndex, regionId, indices: [] }; buckets.set(key, bucket); }
+      bucket.indices.push(a, b, c);
+    }
+    const IndexArray = sourceIndex.array.constructor, reordered = new IndexArray(sourceIndex.count);
+    const regionByFace = [], regionFaceCounts = Object.fromEntries(ANATOMY_REGIONS.map(item => [item.id, 0]));
+    mesh.regionGroups = [];
+    geometry.clearGroups();
+    let cursor = 0;
+    for (const bucket of buckets.values()) {
+      reordered.set(bucket.indices, cursor);
+      geometry.addGroup(cursor, bucket.indices.length, bucket.baseMaterialIndex);
+      mesh.regionGroups.push({ regionId: bucket.regionId, baseMaterialIndex: bucket.baseMaterialIndex });
+      const triangleCount = bucket.indices.length / 3;
+      for (let i = 0; i < triangleCount; i++) regionByFace.push(bucket.regionId);
+      if (bucket.regionId) regionFaceCounts[bucket.regionId] += triangleCount;
+      cursor += bucket.indices.length;
+    }
+    geometry.setIndex(new THREE.BufferAttribute(reordered, 1));
+    mesh.regionByFace = regionByFace;
+    mesh.regionFaceCounts = regionFaceCounts;
+    return regionFaceCounts;
+  }
+  function hitAtClientPoint(clientX, clientY) {
+    const rect = canvas.getBoundingClientRect();
+    if (!rect.width || !rect.height || clientX < rect.left || clientX > rect.right || clientY < rect.top || clientY > rect.bottom) return null;
+    pointer.set(((clientX - rect.left) / rect.width) * 2 - 1, -((clientY - rect.top) / rect.height) * 2 + 1);
+    camera.updateMatrixWorld(true);
+    raycaster.setFromCamera(pointer, camera);
+    return raycaster.intersectObject(modelRoot, true).find(hit => hit.object.isMesh) ?? null;
+  }
+  function installAnatomyTestHooks() {
+    if (!new URLSearchParams(location.search).has('anatomy-e2e')) return;
+    window.__ASTHRAL_ANATOMY_TEST__ = {
+      regions: () => ANATOMY_REGIONS.map(item => item.id),
+      coverage: () => Object.fromEntries(ANATOMY_REGIONS.map(item => [item.id,
+        bodyMeshes.reduce((sum, mesh) => sum + mesh.regionFaceCounts[item.id], 0)])),
+      highlightedTriangles: () => {
+        const counts = Object.fromEntries(ANATOMY_REGIONS.map(item => [item.id, 0]));
+        for (const mesh of bodyMeshes) {
+          for (let i = 0; i < mesh.regionGroups.length; i++) {
+            const group = mesh.geometry.groups[i], metadata = mesh.regionGroups[i];
+            if (metadata.regionId && group.materialIndex === mesh.highlightMaterialIndex) counts[metadata.regionId] += group.count / 3;
+          }
+        }
+        return counts;
+      },
+      surfacePointSamples: (regionId, limit = 24) => {
+        if (!testSurfaceSamples) {
+          testSurfaceSamples = Object.fromEntries([...ANATOMY_REGIONS.map(item => item.id), 'unclassified'].map(id => [id, []]));
+          for (const mesh of bodyMeshes) {
+            const index = mesh.geometry.index, regions = mesh.regionByVertex, faceRegions = mesh.regionByFace;
+            if (!index) continue;
+            const a = new THREE.Vector3(), b = new THREE.Vector3(), c = new THREE.Vector3();
+            for (let face = 0; face < faceRegions.length; face++) {
+              const offset = face * 3, id = faceRegions[face] ?? 'unclassified';
+              const ia = index.getX(offset), ib = index.getX(offset + 1), ic = index.getX(offset + 2);
+              if (id !== 'unclassified' && (regions[ia] !== id || regions[ib] !== id || regions[ic] !== id)) continue;
+              mesh.getVertexPosition(ia, a); mesh.localToWorld(a);
+              mesh.getVertexPosition(ib, b); mesh.localToWorld(b);
+              mesh.getVertexPosition(ic, c); mesh.localToWorld(c);
+              const centroid = a.add(b).add(c).multiplyScalar(1 / 3);
+              anatomyModel.worldToLocal(centroid);
+              testSurfaceSamples[id].push({ x: centroid.x, y: centroid.y, z: centroid.z });
+            }
+          }
+          for (const points of Object.values(testSurfaceSamples)) points.sort((a, b) => b.z - a.z);
+        }
+        const candidates = [...(testSurfaceSamples[regionId] ?? [])];
+        camera.updateMatrixWorld(true);
+        const eye = anatomyModel.worldToLocal(camera.getWorldPosition(new THREE.Vector3()));
+        const visibility = point => point.x * eye.x + point.y * eye.y + point.z * eye.z;
+        candidates.sort((a, b) => visibility(b) - visibility(a));
+        const count = Math.min(Math.max(1, limit), candidates.length);
+        return Array.from({ length: count }, (_, i) => candidates[Math.floor(i * (candidates.length - 1) / Math.max(count - 1, 1))]);
+      },
+      projectSourcePoint: ([x, y, z]) => {
+        camera.updateMatrixWorld(true); anatomyModel.updateMatrixWorld(true);
+        const projected = anatomyModel.localToWorld(new THREE.Vector3(x, y, z)).project(camera);
+        const rect = canvas.getBoundingClientRect();
+        return { x: rect.left + (projected.x + 1) * rect.width / 2, y: rect.top + (1 - projected.y) * rect.height / 2 };
+      },
+      resolveAtClientPoint: (x, y) => {
+        const hit = hitAtClientPoint(x, y);
+        return hit ? { regionId: regionAtHit(hit)?.id ?? null, objectName: hit.object.name, point: sourcePointFromWorld(hit.point), faceIndex: hit.faceIndex } : null;
+      },
+      selection: () => ({ regionId: frame.dataset.selectedRegion, dropdown: regionSelect.value, context: selectedLine.dataset.regionId }),
+    };
+  }
 
   try {
-    const [{ GLTFLoader }, { MeshoptDecoder }, three] = await Promise.all([
-      import('./vendor/anatomy/GLTFLoader.js'), import('./vendor/anatomy/meshopt_decoder.module.js'), import('./vendor/orbit/three.module.js'),
+    const [{ GLTFLoader }, three] = await Promise.all([
+      import('./vendor/anatomy/GLTFLoader.js'), import('./vendor/orbit/three.module.js'),
     ]);
     THREE = three;
-    await MeshoptDecoder.ready;
     renderer = new THREE.WebGLRenderer({ canvas, alpha: true, antialias: powerMode() === 'FULL', powerPreference: powerMode() === 'FULL' ? 'default' : 'low-power' });
     renderer.setPixelRatio(Math.min(devicePixelRatio || 1, modelScale())); renderer.setClearColor(0x071522, 0);
     scene = new THREE.Scene();
@@ -208,24 +284,45 @@ export async function mountAnatomyView(container, { status = () => {}, powerMode
     const key = new THREE.DirectionalLight(0xffe6cf, 2.3); key.position.set(-2.7, 3.4, 3.6); scene.add(key);
     const fill = new THREE.DirectionalLight(0x7cb8d2, 1.1); fill.position.set(3.4, 0.9, -3); scene.add(fill);
     modelRoot = new THREE.Group(); scene.add(modelRoot);
-    const loader = new GLTFLoader(); loader.setMeshoptDecoder(MeshoptDecoder);
-    const gltf = await loader.loadAsync('./vendor/anatomy/zanatomy-muscles.glb');
-    const model = gltf.scene; model.updateMatrixWorld(true);
-    const bounds = new THREE.Box3().setFromObject(model), center = bounds.getCenter(new THREE.Vector3()), size = bounds.getSize(new THREE.Vector3());
-    model.position.set(-center.x, -center.y, -center.z);
+    const loader = new GLTFLoader();
+    const gltf = await loader.loadAsync(ANATOMY_MODEL.asset);
+    anatomyModel = gltf.scene; anatomyModel.updateMatrixWorld(true);
+    const bounds = new THREE.Box3().setFromObject(anatomyModel), center = bounds.getCenter(new THREE.Vector3()), size = bounds.getSize(new THREE.Vector3());
+    anatomyModel.position.set(-center.x, -center.y, -center.z);
     modelRoot.scale.setScalar(1.62 / Math.max(size.y, 0.01));
-    modelRoot.add(model);
-    model.traverse(object => {
-      if (!object.isMesh) return;
-      object.userData.astName = `${object.name || ''} ${object.parent?.name || ''}`.trim();
+    modelRoot.add(anatomyModel);
+    modelRoot.updateMatrixWorld(true);
+    const regionCoverage = Object.fromEntries(ANATOMY_REGIONS.map(item => [item.id, 0]));
+    anatomyModel.traverse(object => {
+      if (!object.isSkinnedMesh || !object.geometry.getAttribute('skinIndex') || !object.geometry.getAttribute('skinWeight')) return;
       originalMaterials.set(object, object.material);
+      const stylize = (material, color = '#bdcbd3') => {
+        const clone = material.clone();
+        clone.color?.set(color);
+        clone.roughness = 0.84; clone.metalness = 0; clone.vertexColors = false;
+        return clone;
+      };
+      const original = object.material;
+      const baseMaterials = Array.isArray(original) ? original.map(material => stylize(material)) : [stylize(original)];
+      const highlightMaterial = stylize(Array.isArray(original) ? original[0] : original, '#27b7d4');
+      highlightMaterial.emissive?.set('#084455');
+      highlightMaterial.emissiveIntensity = 0.3;
+      object.material = [...baseMaterials, highlightMaterial];
+      object.highlightMaterialIndex = baseMaterials.length;
+      classifyMeshVertices(object);
+      const counts = segmentMeshFaces(object);
+      for (const item of ANATOMY_REGIONS) regionCoverage[item.id] += counts[item.id];
       object.frustumCulled = true;
     });
     target = new THREE.Vector3(0, 0, 0); raycaster = new THREE.Raycaster(); pointer = new THREE.Vector2();
+    cameraUpdate();
     resizeObserver = new ResizeObserver(resize); resizeObserver.observe(frame); resize();
-    fallback.hidden = true; canvas.hidden = false; notice.textContent = 'Interactive licensed model loaded. Drag to rotate · wheel or pinch to zoom · enable pan mode to move the view.';
+    fallback.hidden = true; canvas.hidden = false; notice.textContent = 'External body map loaded. Drag to rotate · wheel or pinch to zoom · pan mode moves the view.';
     selectRegion(regionSelect.value);
-    status(`3D anatomy loaded · ${ANATOMY_MODEL.name} · 513 named source meshes · model review only; no localized clinical findings are inferred.`);
+    installAnatomyTestHooks();
+    const unmapped = Object.entries(regionCoverage).filter(([, count]) => count < 1).map(([id]) => id);
+    status('3D external body map loaded · ' + ANATOMY_MODEL.name + ' · ' + (28 - unmapped.length) + '/28 regions represented in the surface mesh · orientation only; no clinical localization is inferred.');
+    if (unmapped.length) dataStatus.textContent = 'Some regions have no mapped surface vertices in this model: ' + unmapped.join(', ') + '. Use the selector for navigation only.';
   } catch (error) {
     createFallback(error.message || '3D model loading failed.');
     status('3D anatomy unavailable · 2D region selector remains usable · no clinical result was produced.');
@@ -233,13 +330,16 @@ export async function mountAnatomyView(container, { status = () => {}, powerMode
 
   function pointerDown(event) {
     if (!renderer || !canvas) return;
-    drag = { x: event.clientX, y: event.clientY, moved: false, pan: panMode || event.shiftKey || event.button === 2 };
+    drag = { id: event.pointerId, pointerType: event.pointerType, startX: event.clientX, startY: event.clientY, x: event.clientX, y: event.clientY, moved: false, pan: panMode || event.shiftKey || event.button === 2 };
     canvas.setPointerCapture(event.pointerId);
   }
   function pointerMove(event) {
-    if (!drag) return;
-    const dx = event.clientX - drag.x, dy = event.clientY - drag.y;
-    if (Math.abs(dx) + Math.abs(dy) > 2) drag.moved = true;
+    if (!drag || event.pointerId !== drag.id) return;
+    let dx = event.clientX - drag.x, dy = event.clientY - drag.y;
+    if (!drag.moved && Math.hypot(event.clientX - drag.startX, event.clientY - drag.startY) >= (drag.pointerType === 'touch' ? 8 : 5)) {
+      drag.moved = true; dx = event.clientX - drag.startX; dy = event.clientY - drag.startY;
+    }
+    if (!drag.moved) { drag.x = event.clientX; drag.y = event.clientY; return; }
     if (drag.pan && camera && target) {
       const scale = zoom / Math.max(frame.getBoundingClientRect().height, 1);
       target.x -= dx * scale; target.y += dy * scale;
@@ -247,18 +347,19 @@ export async function mountAnatomyView(container, { status = () => {}, powerMode
     drag.x = event.clientX; drag.y = event.clientY; cameraUpdate();
   }
   function pointerUp(event) {
-    const moved = drag?.moved; drag = null;
+    if (!drag || event.pointerId !== drag.id) return;
+    const moved = drag.moved;
+    try { if (canvas.hasPointerCapture(event.pointerId)) canvas.releasePointerCapture(event.pointerId); } catch {}
+    drag = null;
     if (moved || !renderer || !modelRoot || !camera || !raycaster) return;
-    const rect = canvas.getBoundingClientRect();
-    pointer.set(((event.clientX - rect.left) / rect.width) * 2 - 1, -((event.clientY - rect.top) / rect.height) * 2 + 1);
-    raycaster.setFromCamera(pointer, camera);
-    const hit = raycaster.intersectObject(modelRoot, true).find(item => item.object.isMesh);
-    const matched = hit ? regionForAnatomyName(hit.object.userData.astName || hit.object.name) : null;
-    if (matched) selectRegion(matched.id);
+    const hit = hitAtClientPoint(event.clientX, event.clientY);
+    const matched = hit ? regionAtHit(hit) : null;
+    selectRegion(matched?.id ?? '');
   }
   canvas.addEventListener('pointerdown', pointerDown);
   canvas.addEventListener('pointermove', pointerMove);
   canvas.addEventListener('pointerup', pointerUp);
+  canvas.addEventListener('pointercancel', event => { if (drag?.id === event.pointerId) drag = null; });
   canvas.addEventListener('contextmenu', event => event.preventDefault());
   canvas.addEventListener('wheel', event => { event.preventDefault(); zoom = Math.max(2.0, Math.min(6.0, zoom + event.deltaY * 0.003)); cameraUpdate(); }, { passive: false });
   window.addEventListener('resize', resize);
@@ -270,6 +371,7 @@ export async function mountAnatomyView(container, { status = () => {}, powerMode
   reset.addEventListener('click', () => { yaw = 0; pitch = 0.03; zoom = 3.4; target?.set(0, 0, 0); posterior = false; panMode = false; front.setAttribute('aria-pressed', 'true'); back.setAttribute('aria-pressed', 'false'); pan.setAttribute('aria-pressed', 'false'); pan.textContent = 'Pan mode off'; cameraUpdate(); });
   regionSelect.addEventListener('change', () => selectRegion(regionSelect.value));
   exportButton.addEventListener('click', () => {
+    if (!selectedRegion) return;
     const report = {
       report_type: 'ASTHRAL_ANATOMICAL_REGION_CONTEXT', generated_at_utc: new Date().toISOString(),
       region: { id: selectedRegion.id, name: selectedRegion.label, laterality: selectedRegion.laterality, system: selectedRegion.system },
@@ -286,7 +388,7 @@ export async function mountAnatomyView(container, { status = () => {}, powerMode
     catch (error) { dataStatus.textContent = `Offline anatomy install failed: ${error.message}. The 2D selector remains available.`; }
     finally { cacheButton.disabled = false; }
   });
-  regionSelect.value = selectedRegion.id; currentModules(selectedRegion);
+  regionSelect.value = selectedRegion?.id ?? ''; currentModules(selectedRegion);
   const profileModeListener = event => { if (renderer) { renderer.setPixelRatio(Math.min(devicePixelRatio || 1, modelScale())); resize(); } else scheduleRender(); if (event.detail?.mode === 'CRITICAL') notice.textContent = 'CRITICAL resource profile · anatomy draws only on user interaction; essential monitoring and assessment remain available.'; };
   window.addEventListener('asthral:power-mode', profileModeListener);
 
@@ -296,8 +398,12 @@ export async function mountAnatomyView(container, { status = () => {}, powerMode
     metrics: () => ({ render_calls: renderTotal, last_render_at_utc: lastRenderAt, mode: powerMode() }),
     destroy() {
       disposed = true; if (raf) cancelAnimationFrame(raf); resizeObserver?.disconnect(); window.removeEventListener('resize', resize); window.removeEventListener('asthral:power-mode', profileModeListener);
-      disposeHighlighted();
       scene?.traverse(object => { object.geometry?.dispose?.(); if (Array.isArray(object.material)) object.material.forEach(material => material.dispose?.()); else object.material?.dispose?.(); });
+      for (const original of originalMaterials.values()) {
+        if (Array.isArray(original)) original.forEach(material => material.dispose?.());
+        else original?.dispose?.();
+      }
+      if (window.__ASTHRAL_ANATOMY_TEST__) delete window.__ASTHRAL_ANATOMY_TEST__;
       renderer?.renderLists?.dispose?.(); renderer?.dispose?.(); renderer?.forceContextLoss?.(); container.replaceChildren();
     },
   };

@@ -67,7 +67,13 @@ class LocalBiomedical:
         if action=='inventory':
             return append_inventory(self.engine,InventoryVersion.model_validate({**data,'mission_id':'browser-mission'}),'local_profile')
         if action=='timeline':
-            return {kind:self.store.all(kind) for kind in ('measurement','device','baseline','trend','finding','monitoring_run','monitoring_event','episode','followup','followup_review','medical_inventory','mission_context','clinical_evaluation','management_record')}
+            return {kind:self.store.all(kind) for kind in ('measurement','device','baseline','trend','finding','monitoring_run','monitoring_event','notification_ack','episode','followup','followup_review','medical_inventory','mission_context','clinical_evaluation','management_record')}
+        if action=='notification_ack':
+            event=self.store.get('monitoring_event',data['id'])
+            if event['subject_id']!=self.owner or event['mission_id']!='browser-mission':raise ValueError('NOTIFICATION_SCOPE_MISMATCH')
+            try:return self.store.get('notification_ack',event['id'])
+            except KeyError:
+                return self.store.put('notification_ack',event['id'],{'id':event['id'],'subject_id':self.owner,'mission_id':'browser-mission','acknowledged_at':datetime.now(timezone.utc).isoformat()},'local_profile')
         if action=='replay_clinical':
             from vigile.store import digest
             from vigile.clinical_engine import ClinicalService
@@ -78,4 +84,4 @@ class LocalBiomedical:
             return {'id':row['id'],'matches':digest(output)==row['output_hash'],'scope':'FULL_FROZEN_CLINICAL_REEXECUTION','clinical_validation':False}
         raise ValueError('UNSUPPORTED_BIOMEDICAL_ACTION')
 
-ACTIONS={'ingest','baseline','trend','monitor','replay_monitor','episode_open','episode_transition','followup_plan','followup_review','mission_context','inventory','timeline','replay_clinical','management_record','countermeasures'}
+ACTIONS={'ingest','baseline','trend','monitor','replay_monitor','episode_open','episode_transition','followup_plan','followup_review','mission_context','inventory','timeline','notification_ack','replay_clinical','management_record','countermeasures'}

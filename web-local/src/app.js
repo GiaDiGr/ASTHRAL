@@ -15,6 +15,11 @@ let experience=null;
 let missionSupport=null;
 let preventiveExperience=null;
 const $=id=>document.getElementById(id);
+const cosmicLayers=[document.createElement('div'),document.createElement('div')];
+for(const layer of cosmicLayers){layer.className='cosmic-scene-layer';layer.setAttribute('aria-hidden','true');document.body.prepend(layer);}
+let cosmicActive=0,cosmicScene=-1;
+function showCosmicScene(id){const routes=[...$('workspace-nav').querySelectorAll('[data-view]')].map(link=>link.dataset.view).filter(route=>route!=='anatomy');const normalized=id==='anatomy'?'dashboard':id;const index=Math.max(0,routes.indexOf(normalized));const scene=index%24;if(scene===cosmicScene)return;cosmicScene=scene;const next=1-cosmicActive;cosmicLayers[next].dataset.scene=String(scene);cosmicLayers[next].style.backgroundImage=`url('./cosmic-scenes/scene-${String(scene).padStart(2,'0')}.svg')`;cosmicLayers[next].classList.add('cosmic-active');cosmicLayers[cosmicActive].classList.remove('cosmic-active');cosmicActive=next;}
+showCosmicScene('dashboard');
 const runtimeState={ready:false,seconds:null};
 const operationMetrics=[];
 let recordingEpoch=0,profileEpoch=0;
@@ -27,18 +32,21 @@ function element(tag,value) {
 }
 function status(value) { $('operation').textContent=value; }
 function showWorkspaceView(id='dashboard') {
+  if(id==='dashboard') id='anatomy';
   const content=$('workspace').querySelector('.workspace-content');
   const pages=[...content.querySelectorAll(':scope > section')];
   pages.forEach(page=>page.classList.add('workspace-page'));
   if(!pages.some(page=>page.id===id)) id='dashboard';
-  $('workspace-nav').querySelector('.more-nav')?.removeAttribute('open');
   for(const page of pages) page.hidden=page.id!==id;
   for(const link of $('workspace-nav').querySelectorAll('[data-view]')) {
-    if(link.dataset.view===id) link.setAttribute('aria-current','page'); else link.removeAttribute('aria-current');
+    if(link.dataset.view===id || (id==='anatomy' && link.dataset.view==='dashboard')) link.setAttribute('aria-current','page'); else link.removeAttribute('aria-current');
   }
+  const active=$('workspace-nav').querySelector('[aria-current="page"]');
+  if(active){const nav=$('workspace-nav');const left=active.offsetLeft-nav.offsetLeft;nav.scrollTo({left:Math.max(0,left-(nav.clientWidth-active.offsetWidth)/2),behavior:'instant'});}
   document.title=(pages.find(page=>page.id===id)?.querySelector('h1')?.textContent||'ASTHRAL')+' · ASTHRAL';
-  window.scrollTo({top:0,behavior:matchMedia('(prefers-reduced-motion: reduce)').matches?'instant':'smooth'});
+  window.scrollTo({top:0,behavior:'instant'});
   window.dispatchEvent(new CustomEvent('asthral:viewchange',{detail:{id}}));
+  showCosmicScene(id);
 }
 function startWorker() {
   worker=new Worker('./worker.js?v=5');
@@ -144,7 +152,7 @@ async function entered() {
   await experience?.update();
   if(epoch!==profileEpoch||!vault)return;
   $('intro').hidden=true;$('workspace').hidden=false;$('profiles').hidden=true;$('lock').hidden=false;
-  showWorkspaceView(location.hash.slice(1)||'dashboard');
+  showWorkspaceView('anatomy');
   $('profile-settings-status').textContent=vault.temporary?'Temporary synthetic demo · memory only · discarded on exit':'Encrypted local profile unlocked · no cloud synchronization';
   $('migration-email').disabled=!!vault.temporary||!!vault.row.email_box;
   $('migration-email-save').disabled=!!vault.temporary||!!vault.row.email_box;
@@ -186,6 +194,7 @@ async function history() {
   $('history-list').replaceChildren();
   for(const row of rows) {
     const article=document.createElement('article');
+    if(row.detail?.id) article.dataset.recordId=row.detail.id;
     const details=document.createElement('details');
     details.className='developer-only';
     details.append(element('summary','Record and provenance'),element('pre',JSON.stringify(row.detail,null,2)));
@@ -196,6 +205,7 @@ async function history() {
   if(!rows.length) $('history-list').append(element('p','No local observations or evaluations saved.'));
   $('profile-status').textContent='Unlocked · audit '+(data.audit_valid?'verified':'FAILED');
   await recordedDashboard(data,epoch,timeline);
+  missionSupport?.setVitalTimeline(timeline, epoch===profileEpoch && !!vault);
 }
 async function lock() {
   profileEpoch++;
@@ -216,9 +226,9 @@ async function lock() {
   $('emergency-banner').hidden=true;
   $('emergency-banner').textContent='';
   $('workspace').hidden=true;
+  floatingAssistant.hidden=true;floatingPanel.hidden=true;floatingToggle.setAttribute('aria-expanded','false');
   $('profiles').hidden=false;
   $('intro').hidden=false;
-  showWorkspaceView('dashboard');
   $('lock').hidden=true;
   for(const id of ['history-list','assessment','clinical-output','management','urgency','citations','answer','statistics-output','statistics-chart','metrics','model-benchmark']) $(id).replaceChildren();
   for(const id of ['observation-text','scenario','question','search-question'])$(id).value='';
@@ -290,7 +300,7 @@ $('explore').onclick=safe(async()=>{
   await entered();
   showWorkspaceView('dashboard');
   status('Temporary synthetic demo ready. Records stay in memory and are discarded when this page closes. Create a local profile for encrypted persistence.');
-  $('workspace').scrollIntoView({behavior:'smooth'});
+  $('workspace').scrollIntoView({behavior:'instant'});
 });
 $('case-list').onchange=selectCase;
 $('evaluate').onclick=safe(async()=>{
@@ -707,7 +717,39 @@ $('chat-form').onsubmit=safe(async()=>{ $('ask').click(); });
 $('question').addEventListener('keydown',event=>{if(event.key==='Enter'&&!event.shiftKey){event.preventDefault();$('chat-form').requestSubmit();}});
 $('chat-suggestions').addEventListener('click',event=>{const button=event.target.closest('[data-prompt]');if(button){$('question').value=button.dataset.prompt;$('question').focus();}});
 $('workspace-nav').addEventListener('click',event=>{const link=event.target.closest('[data-view]');if(!link)return;event.preventDefault();location.hash=link.getAttribute('href');showWorkspaceView(link.dataset.view);});
+$('workspace-nav').addEventListener('wheel',event=>{if(Math.abs(event.deltaY)>Math.abs(event.deltaX)){$('workspace-nav').scrollLeft+=event.deltaY;event.preventDefault();}},{passive:false});
+window.addEventListener('asthral:notification-details',event=>{
+  if(!vault){status('Unlock a local profile to view health records.');return;}
+  const id=event.detail?.id;
+  if(typeof id!=='string'||!id){status('The source record is unavailable.');return;}
+  showWorkspaceView('history');
+  const article=[...$('history-list').querySelectorAll('[data-record-id]')].find(item=>item.dataset.recordId===id);
+  if(!article){status('The source record is unavailable in this profile. History remains available.');return;}
+  const details=article.querySelector('details');if(details){details.classList.remove('developer-only');details.open=true;}
+  article.scrollIntoView({block:'center',behavior:'instant'});article.tabIndex=-1;article.focus({preventScroll:true});status('Showing the recorded source event.');
+});
 window.addEventListener('hashchange',()=>{if(vault&&location.hash)showWorkspaceView(location.hash.slice(1));});
+const floatingAssistant=element('div');floatingAssistant.className='floating-assistant';floatingAssistant.hidden=true;
+const floatingToggle=element('button','ASTHRAL assistant');floatingToggle.type='button';floatingToggle.setAttribute('aria-expanded','false');
+const floatingPanel=element('section');floatingPanel.className='floating-assistant-panel';floatingPanel.hidden=true;floatingPanel.setAttribute('aria-label','Contextual assistant');
+const floatingText=element('p','No simulation warnings. Open Ask ASTHRAL to review recorded evidence.');
+const floatingAnnouncement=element('p','');floatingAnnouncement.className='sr-only';floatingAnnouncement.setAttribute('role','status');floatingAnnouncement.setAttribute('aria-live','polite');
+const activeTrainingWarnings=new Map();
+const floatingOpen=element('button','Open Ask ASTHRAL');floatingOpen.type='button';floatingOpen.onclick=()=>{if(!vault)return;floatingPanel.hidden=true;floatingToggle.setAttribute('aria-expanded','false');showWorkspaceView('assistant');};
+const floatingDetails=element('button','View details');floatingDetails.type='button';floatingDetails.hidden=true;floatingDetails.onclick=()=>{if(!vault)return;floatingPanel.hidden=true;floatingToggle.setAttribute('aria-expanded','false');showWorkspaceView('monitoring');requestAnimationFrame(()=>$('#physiology-simulator')?.scrollIntoView({behavior:'smooth',block:'start'}));};
+floatingToggle.onclick=()=>{floatingPanel.hidden=!floatingPanel.hidden;floatingToggle.setAttribute('aria-expanded',String(!floatingPanel.hidden));};
+floatingPanel.append(element('h2','ASTHRAL assistant'),floatingText,floatingAnnouncement,floatingDetails,floatingOpen);floatingAssistant.append(floatingPanel,floatingToggle);document.body.append(floatingAssistant);
+window.addEventListener('asthral:viewchange',()=>{floatingAssistant.hidden=!vault||$('workspace').hidden;});
+function renderTrainingNotifications(announcement=''){
+ const current=[...activeTrainingWarnings.values()];
+ floatingText.textContent=current.length?current.map(y=>{const shown=typeof y.value==='number'&&String(y.parameter).endsWith('_oxygen_partial_pressure')?y.value.toFixed(2):y.value;return `SIMULATION WARNING · ${y.label}: ${shown} ${y.unit} · ${y.rule} · illustrative rule ${y.version}.`;}).join(' ')+' No cause or treatment is inferred. Review simulated context.':announcement||'No active simulation warnings. This does not establish normal health.';
+ floatingToggle.textContent=current.length?`ASTHRAL assistant · ${current.length} simulation notice${current.length===1?'':'s'}`:'ASTHRAL assistant';
+ floatingDetails.hidden=!current.length;
+ if(announcement)floatingAnnouncement.textContent=announcement;
+}
+window.addEventListener('asthral:simulation-transition',event=>{if(!vault)return;const x=event.detail;if(x.active)activeTrainingWarnings.set(x.parameter,x);else activeTrainingWarnings.delete(x.parameter);renderTrainingNotifications(x.active?`${x.label} crossed its configured synthetic training boundary.`:`${x.label} simulation warning cleared. This does not establish clinical recovery.`);});
+window.addEventListener('asthral:simulation-value-update',event=>{if(!vault)return;const x=event.detail;if(activeTrainingWarnings.has(x.parameter)){activeTrainingWarnings.set(x.parameter,x);renderTrainingNotifications();}});
+window.addEventListener('asthral:simulation-reset',()=>{activeTrainingWarnings.clear();renderTrainingNotifications('Simulation reset. No health records were changed.');});
 $('mode').onchange=()=>{
   if($('mode').value!=='FULL') releaseModels();
   $('model-status').textContent=$('mode').value+' · local extractive fallback available';
@@ -910,7 +952,7 @@ privacyCheck.onclick=()=>{privacyOutput.textContent=JSON.stringify({observed_at:
 
 const performanceCheck=element('button','Inspect measured workflow latency');performanceCheck.className='developer-only';$('advanced-settings').append(performanceCheck);const measuredPerformance=element('pre','');measuredPerformance.id='workflow-performance-report';measuredPerformance.className='developer-only';$('advanced-settings').append(measuredPerformance);performanceCheck.onclick=()=>{measuredPerformance.textContent=JSON.stringify({observed_at:new Date().toISOString(),python_startup_seconds:runtimeState.seconds,operations:operationMetrics,peak_memory:'NOT_MEASURED',thermal_energy:'NOT_MEASURED',physical_mobile:'NOT_TESTED'},null,2);};
 
-const loadMission=element('button','Load synthetic mission observations');$('dashboard').prepend(loadMission);const missionNotice=element('p','Disposable demo only: five synthetic measurements, a personal baseline and a real monitoring cycle. No connected sensor or actual treatment is implied.');loadMission.after(missionNotice);
+const loadMission=element('button','Load synthetic mission observations');$('anatomy').append(loadMission);const missionNotice=element('p','Disposable demo only: five synthetic measurements, a personal baseline and a real monitoring cycle. No connected sensor or actual treatment is implied.');loadMission.after(missionNotice);
 loadMission.onclick=safe(async()=>{
  if(!vault?.temporary)throw Error('Use a new temporary synthetic demo for the seeded mission. Persistent profiles are not modified by this generator.');
  const existing=await call('timeline');if(existing.measurement.length||existing.monitoring_run.length)throw Error('This demo already contains measurements. Lock it and open a new temporary demo to start another seeded mission.');
