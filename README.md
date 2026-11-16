@@ -10,11 +10,54 @@ See the [English personal-account, voice and vector demo](docs/asthral/PERSONAL_
 
 ASTHRAL is a research prototype for NASA Space Apps Challenge 2026. It combines deterministic biomedical assessment, longitudinal astronaut monitoring, traceable local evidence, a local assistant, and optional public scientific reference retrieval. It is designed to continue functioning without Internet access. It has not been clinically, operationally, or flight validated.
 
-## Final mission-control integration — 15 November 2026
+## Final integration candidate — 15 November 2026
 
-The local candidate is on `feature/asthral-mission-control-release-20261115`, based on `origin/main` with EVA Pull Request #2 in its history. It integrates Marfe's EVA module with the existing profile history, mission context, and cached public DONKI data; adds a real Three.js globe with locally propagated public ISS GP/OMM estimates and a separately labelled synthetic spacecraft; and preserves existing health, computer-vision, NeuroGuard, assistant, and voice routes. Orbital and optional model/voice assets remain on demand. The UI identifies stale, cached, unavailable, estimated, and synthetic states separately.
+The candidate branch `feature/asthral-final-integration-20261115` is based on the fetched `origin/main` history, which retains the earlier EVA integration. It preserves the 3D body map, health, computer-vision, NeuroGuard, assistant, voice, and exercise routes; includes the local Three.js globe and SGP4 propagation from public ISS GP/OMM elements when the provider is available; and retains the synthetic spacecraft as a separate mode. Orbital, model, and voice assets remain on demand. Live public observations, propagated estimates, cached data, unavailable feeds, and synthetic scenarios are labelled separately.
 
-Latest local software verification: **949 Python passed / 19 skipped / 0 failed**, **123 browser-local JavaScript tests passed**, and real Chromium acceptance **PASS**. The browser run rendered a WebGL2 Earth, completed a synthetic EVA with four cards and an acknowledged training advisory, saved and recovered its encrypted local history after lock/reload, checked the WebGL fallback and mobile navigation, and found no console errors, required failed requests, or horizontal overflow. Independent clinical, operational, and flight validation remains pending. Exact measurements, skip reasons, reproduction commands and screenshots are in [the mission-control integration record](docs/asthral/MISSION_CONTROL_INTEGRATION.md); the earlier component audit remains in [the local integration continuation](docs/asthral/LOCAL_INTEGRATION_CONTINUATION_20261115.md).
+Latest local software suite results: **958 Python passed / 19 skipped / 0 failed** (197.50 s; one Starlette/httpx deprecation warning), **148 browser-local JavaScript tests passed**, and **3 color-wave regression tests passed**. Chromium acceptance verified the blue–violet–blue sequence, all 24 palette assets, synthetic controls, and the heart-rate-driven ECG; the offline acceptance verified 139 cached resources and 24 scene assets, including six representative scenes after an offline reload. A separate mission-control run reached the WebGL2 globe and completed EVA, training-alert acknowledgement, encrypted report storage, and lock/reload recovery, but did not finish the full acceptance script because its former anatomy-navigation selector timed out. The live CelesTrak request returned HTTP 403 during that run. The application has a distinct `ISS ELEMENTS UNAVAILABLE` state and separately labelled synthetic orbit, but the failed run did not capture that state. No live ISS estimate was verified in that run. Independent clinical, operational, and flight validation remains pending. The earlier mission-control test record is [here](docs/asthral/MISSION_CONTROL_INTEGRATION.md); its historical results should not be conflated with this candidate.
+
+## Browser application and mission features
+
+`web-local/` is ASTHRAL's English, static browser application. It combines the 3D anatomical orientation map and systemic vital-sign dashboard with the biomedical engine, historical evidence, mission control, EVA, exercise, computer-vision, NeuroGuard, voice, and assistant modules. EVA uses synthetic training scenarios and the existing profile-history and reporting services; it does not represent suit telemetry. Public NASA archive records, cached observations, propagated orbital estimates, unavailable feeds, and synthetic scenarios are labelled separately.
+
+Mission Control renders an interactive Three.js Earth and time-stamped orbital estimates. The EVA workflow has four monitored cards, scenario alerts, pause/resume, completion, and an encrypted local handover report. These behaviors are software demonstrations, not NASA operational systems or flight validation.
+
+The 22 horizontal route tabs each select a distinct local starfield. Their blue-to-violet ambience follows a smooth 10-tab cycle, returning to blue between violet peaks. Cross-fading, assets, and the app shell are included in the offline resource manifest. After opening the app while connected, use **Settings → Install offline resources**, wait for verification, reload once online, then test with connectivity disabled. Live public data cannot refresh offline.
+
+**Synthetic Test Mode** exposes training-only vital-sign sliders, a heart-rate-driven ECG illustration, and independent cabin/spacesuit oxygen concentration and pressure inputs. Notices are deterministic software examples. The displayed atmospheric warning bounds are illustrative and are not NASA limits or life-support safety determinations. Synthetic controls never submit to the clinical engine or profile history.
+
+## Run, test, build, and deploy the browser app
+
+From the repository root in PowerShell, create a fresh build directory, build the local bundle, and serve it on loopback:
+
+```powershell
+$build = Join-Path (Get-Location) 'web-local\build-output-local'
+$env:ASTHRAL_BUILD_OUTPUT = $build
+& .\engine\.venv\Scripts\python.exe .\web-local\build.py
+& .\engine\.venv\Scripts\python.exe .\tools\serve_browser_build.py $build --port 8919
+```
+
+Run the full deterministic engine tests from the repository root:
+
+```powershell
+& .\engine\.venv\Scripts\python.exe -m pytest -q .\engine\tests
+```
+
+Run browser-local tests from `web-local/` against the exact build you just generated:
+
+```powershell
+Set-Location .\web-local
+$env:ASTHRAL_TEST_DIST = (Resolve-Path .\build-output-local).Path
+node --test .\tests\*.test.mjs
+```
+
+Cloudflare Pages project `asthral-web` is managed with Wrangler and serves `https://asthral-web.pages.dev/`. For an authorized production release, use the verified build generated from the integrated `main` branch and the configured production branch:
+
+```powershell
+npx wrangler pages deploy <build-directory> --project-name asthral-web --branch main
+```
+
+Wrangler must be authenticated to the ASTHRAL Cloudflare account. Do not deploy a feature preview to the production domain. Deployment does not imply clinical, operational, or flight qualification.
 
 ## Repository map and branches
 

@@ -3,17 +3,18 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
-  <meta name="theme-color" content="#10243a">
+  <meta name="theme-color" content="#061426">
   <meta name="description" content="ASTHRAL keeps supported health intelligence and encrypted records on this device.">
   <title>ASTHRAL · Astronaut health intelligence</title>
-  <link rel="icon" href="./icon.svg" type="image/svg+xml">
+  <link rel="icon" href="./asthral-logo.png" type="image/png">
   <link rel="manifest" href="./manifest.webmanifest">
   <link rel="stylesheet" href="./style.css">
+  <link rel="stylesheet" href="./space-theme.css">
   <script src="./app.js" type="module"></script>
 </head>
 <body>
   <header class="site-header">
-    <a href="#intro" class="brand" aria-label="ASTHRAL home">ASTHRAL<span>SPACE HEALTH</span></a>
+    <a href="#intro" class="brand" aria-label="ASTHRAL home"><img src="./asthral-logo.png" alt="" width="44" height="44">ASTHRAL<span>SPACE HEALTH</span></a>
     <span id="network" role="status" class="network-status"></span>
     <button id="lock" class="quiet-button" hidden>Lock profile</button>
   </header>
@@ -78,7 +79,6 @@
           <a href="#clinical" data-view="clinical">Assessment</a>
           <a href="#assistant" data-view="assistant">Ask ASTHRAL</a>
           <a href="#history" data-view="history">History</a>
-          <details class="more-nav"><summary>More</summary><div>
             <a href="#voice" data-view="voice">Record observation</a>
             <a href="#vision" data-view="vision">Computer Vision</a>
             <a href="#followup" data-view="followup">Follow-up</a>
@@ -88,7 +88,6 @@
             <a href="#knowledge" data-view="knowledge">References</a>
             <a href="#settings" data-view="settings">Settings</a>
             <a href="#neuroguard" data-view="neuroguard">NeuroGuard</a>
-          </div></details>
         </nav>
       </aside>
       <div class="workspace-content">

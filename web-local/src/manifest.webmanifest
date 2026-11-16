@@ -4,9 +4,15 @@
   "start_url": "./",
   "scope": "./",
   "display": "standalone",
-  "background_color": "#0d1526",
-  "theme_color": "#131f36",
+  "background_color": "#061426",
+  "theme_color": "#061426",
   "icons": [
+    {
+      "src": "./asthral-logo.png",
+      "sizes": "1254x1254",
+      "type": "image/png",
+      "purpose": "any"
+    },
     {
       "src": "./icon-192.png",
       "sizes": "192x192",

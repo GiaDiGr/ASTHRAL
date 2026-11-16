@@ -1,6 +1,7 @@
 import {createRequire} from 'node:module';
 import {createHash} from 'node:crypto';
-import {readFile,writeFile} from 'node:fs/promises';
+import {readFile,writeFile,cp,mkdtemp,rm} from 'node:fs/promises';
+import {tmpdir} from 'node:os';
 import {fileURLToPath,pathToFileURL} from 'node:url';
 import {resolve,sep} from 'node:path';
 import test from 'node:test';
@@ -9,10 +10,15 @@ import assert from 'node:assert/strict';
 const require=createRequire(import.meta.url);
 const DIST=resolve(process.env.ASTHRAL_TEST_DIST??fileURLToPath(new URL('../dist/',import.meta.url)));
 const distFile=relative=>pathToFileURL(resolve(DIST,relative));
-const pyodideModule=require(resolve(DIST,'runtime','pyodide.js'));
+// Pyodide's Node loader uses CommonJS. The web package is ESM; isolate a
+// byte-identical runtime under an explicit CommonJS package for this test.
+const runtimeTemp=await mkdtemp(resolve(tmpdir(),'asthral-pyodide-test-'));
+await cp(resolve(DIST,'runtime'),runtimeTemp,{recursive:true});
+await writeFile(resolve(runtimeTemp,'package.json'),'{"type":"commonjs"}\n');
+const pyodideModule=require(resolve(runtimeTemp,'pyodide.js'));
 const loadPyodide=pyodideModule.loadPyodide??globalThis.loadPyodide;
 if(typeof loadPyodide!=='function')throw Error('PYODIDE_LOAD_FUNCTION_UNAVAILABLE');
-const runtime=await loadPyodide({indexURL:fileURLToPath(pathToFileURL(resolve(DIST,'runtime')+sep))});
+const runtime=await loadPyodide({indexURL:fileURLToPath(pathToFileURL(runtimeTemp+sep))});
 await runtime.loadPackage(['pydantic','sqlite3']);
 runtime.unpackArchive(new Uint8Array(await readFile(distFile('engine.zip'))),'zip',{extractDir:'/app'});
 await runtime.runPythonAsync("import sys,json\nsys.path.insert(0,'/app')\nimport browser_bridge");
@@ -63,6 +69,7 @@ test('original voice parser extracts measurements without inventing missing unit
 });
 test.after(async()=>{
   await writeFile(new URL('../../work/browser-local/wasm-parity-report.json',import.meta.url),JSON.stringify(parity,null,2));
+  await rm(runtimeTemp,{recursive:true,force:true});
 });
 test('complete monitoring cycle matches native reference and preserves episode/follow-up replay',async()=>{
   const fixture=JSON.parse(await readFile(new URL('./fixtures/monitor-native-oracle.json',import.meta.url),'utf8'));

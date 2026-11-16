@@ -6,6 +6,7 @@ import {PREVENTION_FIXTURES,RADIATION_FIXTURES} from './synthetic-mission.js';
 import {parseRadiationCsv} from './radiation-csv.js';
 import {DONKI_EVENT_TYPES,loadNoticePreferences,saveNoticePreferences,readNoticeAcks,acknowledgeNotice,noticeState} from './space-weather-alerts.js';
 import {NASA_DATA_SOURCES} from './nasa-data-sources.js';
+import {drawSyntheticEcg} from './physiology-simulator.js';
 
 const $=id=>document.getElementById(id);
 const el=(tag,text='')=>{const node=document.createElement(tag);node.textContent=text;return node;};
@@ -25,7 +26,7 @@ function input(parent,label,type='text',options={}){
 }
 function button(parent,text,handler){const control=el('button',text);control.type='button';control.addEventListener('click',event=>{event.preventDefault();Promise.resolve(handler()).catch(error=>{const status=parent.querySelector('[role="status"]');if(status)status.textContent=error.message;});});parent.append(control);return control;}
 function makeSection(id,title,kicker,intro){const section=el('section');section.id=id;section.className='workspace-page mission-support-page';section.hidden=true;const header=el('div');header.className='page-intro';header.append(el('p',kicker),el('h1',title),el('p',intro));section.append(header);return section;}
-function addView(id,label){const menu=$('workspace-nav')?.querySelector('.more-nav>div');if(!menu||document.querySelector(`[data-view="${id}"]`))return;const link=el('a',label);link.href='#'+id;link.dataset.view=id;menu.append(link);}
+function addView(id,label){const menu=$('workspace-nav');if(!menu||document.querySelector(`[data-view="${id}"]`))return;const link=el('a',label);link.href='#'+id;link.dataset.view=id;menu.append(link);}
 function safeOfficialLink(value){try{const url=new URL(value);return url.protocol==='https:'&&url.hostname==='ccmc.gsfc.nasa.gov'&&url.pathname.startsWith('/DONKI/')?url.href:null;}catch{return null;}}
 function nasaSourceRegistry(){
  const details=el('details');details.className='nasa-source-registry';
@@ -143,9 +144,53 @@ export function installMissionSupport({call,persist,status=()=>{},mode=()=> 'FUL
  const radlabPanel=el('section');radlabPanel.className='mission-control-panel';radlabPanel.append(el('h2','Radiation Explorer'),el('p','Historical NASA RadLab instrument observations with original units and timestamps. This is environmental research context, not live telemetry or astronaut dosimetry.'));
  const radlabHost=el('div');radlabHost.id='mission-radlab';radlabPanel.append(nasaSourceRegistry(),radlabHost);
  missionControl.append(powerPanel,orbitalPanel,radlabPanel,evaPanel);
- const anatomy=makeSection('anatomy','Human anatomy','ANATOMICAL CONTEXT · LOCAL 3D MODEL','Explore a licensed 3D muscular-system model and select a named region. Region selection does not localize measurements, diagnose disease or establish a normal finding.');
+ const anatomy=makeSection('anatomy','Overview','CREW HEALTH · 3D ANATOMICAL CONTEXT','Review recorded systemic measurements and select a body region for orientation. Region selection does not localize measurements, diagnose disease or establish a normal finding.');
  const anatomyNotice=el('p','The model is lazy-loaded when this view opens.');anatomyNotice.id='anatomy-status';anatomyNotice.setAttribute('role','status');anatomyNotice.setAttribute('aria-live','polite');
- const anatomyHost=el('div');anatomyHost.id='anatomy-view';anatomy.append(anatomyNotice,anatomyHost);
+ const anatomyWorkspace=el('div');anatomyWorkspace.className='anatomy-home-workspace';
+ const anatomyHost=el('div');anatomyHost.id='anatomy-view';
+ const ecgPanel=el('aside');ecgPanel.id='anatomy-ecg';ecgPanel.className='anatomy-ecg';ecgPanel.setAttribute('aria-label','ECG display');
+ ecgPanel.append(el('h2','Heart rhythm display'));
+ const ecgStatus=el('p','No compatible recorded ECG samples are available.');ecgStatus.className='anatomy-ecg-status';ecgStatus.setAttribute('role','status');
+ const ecgCanvas=document.createElement('canvas');ecgCanvas.className='anatomy-ecg-canvas';ecgCanvas.width=600;ecgCanvas.height=150;ecgCanvas.hidden=true;ecgCanvas.setAttribute('aria-label','Synthetic ECG-style demonstration waveform, not a recorded ECG');
+ const ecgCaption=el('small','A real ECG trace is unavailable in this profile.');ecgPanel.append(ecgStatus,ecgCanvas,ecgCaption);
+ const alignHealthPanelsWithBody=()=>{const toolbarHeight=anatomyHost.querySelector('.anatomy-toolbar')?.getBoundingClientRect().height??0;const offset=window.matchMedia('(max-width: 850px)').matches?'0px':`${toolbarHeight}px`;ecgPanel.style.marginTop=offset;vitalPanel.style.marginTop=offset;};
+ const anatomyResizeObserver=new ResizeObserver(alignHealthPanelsWithBody);anatomyResizeObserver.observe(anatomyHost);window.addEventListener('resize',alignHealthPanelsWithBody);
+ window.addEventListener('asthral:simulation-values',event=>{const data=event.detail;if(data?.active&&Number.isFinite(data.heart_rate)){ecgCanvas.hidden=false;ecgStatus.textContent='SYNTHETIC TEST MODE · rate-driven illustration';ecgCaption.textContent='Synthetic ECG-style waveform · not a recording, diagnosis or clinical ECG.';drawSyntheticEcg(ecgCanvas,data.heart_rate);}else{ecgCanvas.hidden=true;ecgStatus.textContent='No compatible recorded ECG samples are available.';ecgCaption.textContent='A real ECG trace is unavailable in this profile.';}});
+ window.addEventListener('asthral:simulation-reset',()=>{ecgCanvas.hidden=true;ecgStatus.textContent='No compatible recorded ECG samples are available.';ecgCaption.textContent='A real ECG trace is unavailable in this profile.';});
+ const vitalPanel=el('aside');vitalPanel.className='anatomy-vitals';vitalPanel.setAttribute('aria-label','Systemic vital signs');
+ vitalPanel.append(el('h2','Systemic vital signs'),el('p','Recorded profile measurements · not localized to the selected region'));
+ const vitalRows=el('div');vitalRows.className='anatomy-vital-rows';vitalPanel.append(vitalRows);anatomyWorkspace.append(anatomyHost,ecgPanel,vitalPanel);anatomy.append(anatomyNotice,anatomyWorkspace);
+ const notifications=el('details');notifications.className='anatomy-notifications';const notificationSummary=el('summary','Notifications');const notificationRows=el('div');notifications.append(notificationSummary,notificationRows);vitalPanel.insertBefore(notifications,vitalRows);
+ const vitalDefinitions=[['Heart rate',['physiology.heart_rate']],['Blood pressure',['adult_sbp_mm_hg','adult_dbp_mm_hg']],['SpO2',['physiology.oxygen_saturation']],['Body temperature',['physiology.temperature']],['Blood glucose',['plasma_glucose_mg_dl','capillary_glucose_mg_dl','fasting_plasma_glucose_mg_dl','random_plasma_glucose_mg_dl']],['Sleep duration',['sleep.duration']],['Fatigue',['fatigue.score']],['Stress and well-being',['stress.score']],['Exercise and recovery',[]]];
+ function setVitalTimeline(timeline,active=true){
+  vitalRows.replaceChildren();
+  notificationRows.replaceChildren();
+  const events=active?(timeline?.monitoring_event??[]).filter(event=>event.notify):[];
+  const acknowledgements=new Set((timeline?.notification_ack??[]).map(row=>row.id));
+  notificationSummary.textContent=`Notifications · ${events.filter(event=>!acknowledgements.has(event.id)).length} unacknowledged`;
+  if(active && !(timeline?.measurement??[]).length){const suggestion=el('article');suggestion.className='anatomy-notification';suggestion.append(el('strong','SUGGESTION · Record an observation'),el('p','No measurements are recorded in this profile.'));const action=el('a','View details');action.href='#monitoring';action.className='notification-details';suggestion.append(action);notificationRows.append(suggestion);}
+  for(const event of events.slice().reverse()){
+   const category=event.kind==='CLINICAL_CRITERIA'&&['URGENT','EMERGENCY'].includes(event.urgency)?'ALERT':'NOTICE';
+   const run=(timeline?.monitoring_run??[]).find(item=>item.id===event.run_id);
+   const card=el('article');card.className='anatomy-notification';card.append(el('strong',`${category} · ${event.kind.replaceAll('_',' ')}`),el('p',`Engine state: ${event.state} · urgency: ${event.urgency} · assessment time: ${run?.as_of??'unavailable'}. Historical assessment; review the supporting record.`));
+   const evidence=(timeline?.measurement??[]).filter(row=>(event.evidence_ids??[]).includes(row.measurement?.id));
+   for(const row of evidence){const m=row.measurement;card.append(el('small',`${m.variable}: ${m.value??'Not measured'} ${m.unit??''} · ${m.timestamp??'time unavailable'} · ${m.synthetic?'synthetic':'recorded'} · ${m.provenance??'source unavailable'} · quality ${row.ingestion_quality??m.reported_quality??'unknown'}`));}
+   if(!evidence.length)card.append(el('small','Measurement details unavailable in this view; open History for the complete engine record.'));
+   const detail=el('button','View details');detail.type='button';detail.className='notification-details';detail.addEventListener('click',()=>window.dispatchEvent(new CustomEvent('asthral:notification-details',{detail:{id:event.id}})));card.append(detail);
+   if(acknowledgements.has(event.id))card.append(el('p','Acknowledged · finding remains in history.'));
+   else button(card,'Acknowledge',async()=>{await call('notification_ack',{id:event.id});await persist();});
+   notificationRows.append(card);
+  }
+  if(!events.length)notificationRows.append(el('p','No engine notices recorded. This does not establish normal health.'));
+  for(const [label,variables] of vitalDefinitions){
+   const card=el('article');card.className='anatomy-vital-card';card.append(el('h3',label));
+   const measurements=active?(timeline?.measurement??[]).filter(row=>variables.includes(row.measurement?.variable)).sort((a,b)=>String(b.measurement.timestamp??'').localeCompare(String(a.measurement.timestamp??''))):[];
+   if(!measurements.length)card.append(el('p','No data available'));
+   else for(const variable of variables){const row=measurements.find(entry=>entry.measurement.variable===variable);if(!row)continue;const m=row.measurement;const quality=row.ingestion_quality??m.reported_quality??'UNKNOWN';card.append(el('p',`${m.variable}: ${m.value??'Not measured'} ${m.unit??''}`),el('small',`Historical record · ${m.timestamp??'Timestamp unavailable'} · quality: ${quality} · ${m.synthetic?'Synthetic':'Recorded'} · ${m.provenance??m.method??'Source unavailable'}`));const prior=measurements.find(entry=>entry.measurement.variable===variable&&entry.measurement.id!==m.id);if(prior)card.append(el('small',`Previous record: ${prior.measurement.value??'Not measured'} ${prior.measurement.unit??''} · ${prior.measurement.timestamp??'time unavailable'}`));const runs=[...(timeline?.monitoring_run??[])].reverse();const indicator=runs.flatMap(run=>(run.domains??[]).flatMap(domain=>domain.indicators??[])).find(item=>item.variable===variable&&item.latest_measurement_id===m.id);if(indicator?.baseline_comparison)card.append(el('small',`Recorded baseline: ${indicator.baseline_comparison.baseline_value} ${indicator.unit} · difference: ${indicator.baseline_comparison.absolute_change} ${indicator.unit} · descriptive, not diagnostic`));if(indicator?.trend?.slope_per_day!=null)card.append(el('small',`Recorded trend slope: ${indicator.trend.slope_per_day} ${indicator.unit}/day · descriptive`));}
+   vitalRows.append(card);
+  }
+ }
+ setVitalTimeline(null,false);
  const anatomySources=sourceRegister('clinical');anatomy.append(anatomySources.node);
  const spaceSources=sourceRegister('space-weather');space.append(spaceSources.node);
  const spaceControls=el('section'),start=input(spaceControls,'Start date (UTC)','date'),end=input(spaceControls,'End date (UTC)','date'),sync=el('button','Synchronize NASA DONKI (optional online request)'),spaceStatus=el('p');spaceStatus.setAttribute('role','status');spaceStatus.setAttribute('aria-live','polite');
@@ -165,7 +210,7 @@ export function installMissionSupport({call,persist,status=()=>{},mode=()=> 'FUL
  const preventionStatusReset=()=>{preventionStatus.textContent='';radStatus.textContent='';calcResult.textContent='';};
  workspace.append(prevention,radiation,space,missionControl,anatomy);
  const referenceLibrary=document.getElementById('knowledge');if(referenceLibrary&&!referenceLibrary.querySelector('[data-source-registry="all"]')){const registry=sourceRegister();registry.node.dataset.sourceRegistry='all';referenceLibrary.append(registry.node);}
- addView('mission-control','Mission Control');addView('anatomy','Human anatomy');addView('prevention','Prevention & recovery');addView('space-radiation','Space Weather & Radiation');addView('space-weather','Space Weather');
+ addView('mission-control','Mission Control');addView('prevention','Prevention & recovery');addView('space-radiation','Space Weather & Radiation');addView('space-weather','Space Weather');
  powerSelect.value=document.getElementById('mode')?.value||'FULL';
  const powerText={FULL:'FULL · 24 fps globe render cap; optional local AI/voice allowed when available. Device energy is not measured.',LOW_POWER:'LOW POWER · 12 fps globe cap with reduced pixel ratio; optional model loads and inference are disabled. Essential logging and deterministic evaluation remain enabled.',CRITICAL:'CRITICAL · 1 fps globe refresh; optional AI, voice and background work are disabled. Essential logging and deterministic evaluation remain enabled. Device energy is not measured.'};
  const updatePowerProfile=mode=>{const value=['FULL','LOW_POWER','CRITICAL'].includes(mode)?mode:'FULL';powerSelect.value=value;powerStatus.textContent=powerText[value];};
@@ -187,8 +232,8 @@ export function installMissionSupport({call,persist,status=()=>{},mode=()=> 'FUL
   anatomyRuntimeTask=(async()=>{const {mountAnatomyView}=await import('./anatomy-view.js');anatomyRuntime=await mountAnatomyView(anatomyHost,{status:value=>{anatomyNotice.textContent=value;}});return anatomyRuntime;})();
   try{return await anatomyRuntimeTask;}catch(error){anatomyNotice.textContent='Anatomy view could not initialize: '+error.message+' · Health records and deterministic assessment remain available.';throw error;}finally{anatomyRuntimeTask=null;}
  }
- const onWorkspaceView=event=>{const id=event.detail?.id;if(id==='mission-control'){missionStatus.textContent='Loading local globe resources and mission views…';anatomyRuntime?.setVisible(false);enterMissionControl().then(runtime=>runtime.setVisible(!missionControl.hidden)).catch(()=>{});}else if(id==='anatomy'){missionRuntime?.setVisible(false);anatomyNotice.textContent='Loading the local anatomy viewer…';enterAnatomy().then(runtime=>runtime.setVisible(!anatomy.hidden)).catch(()=>{});}else{missionRuntime?.setVisible(false);anatomyRuntime?.setVisible(false);}};
+ const onWorkspaceView=event=>{const id=event.detail?.id;if(id==='mission-control'){missionStatus.textContent='Loading local globe resources and mission views…';anatomyRuntime?.setVisible(false);enterMissionControl().then(runtime=>runtime.setVisible(!missionControl.hidden)).catch(()=>{});}else if(id==='anatomy'){missionRuntime?.setVisible(false);if(!anatomyRuntime)anatomyNotice.textContent='Loading the local anatomy viewer…';enterAnatomy().then(runtime=>runtime.setVisible(!anatomy.hidden)).catch(()=>{});}else{missionRuntime?.setVisible(false);anatomyRuntime?.setVisible(false);}};
  window.addEventListener('asthral:viewchange',onWorkspaceView);
  async function refresh(){if(!document.querySelector('#workspace').hidden){await Promise.all([refreshPrevention(),refreshRadiation(),preventionSources.load,radiationSources.load,spaceSources.load,anatomySources.load]);showCachedEvents();if(!missionControl.hidden)await enterMissionControl();if(!anatomy.hidden){const runtime=await enterAnatomy();runtime.refresh();}}}
- return {refresh,async clear(){window.removeEventListener('asthral:viewchange',onWorkspaceView);window.removeEventListener('asthral:power-mode',onPowerMode);if(missionRuntimeTask){try{missionRuntime=await missionRuntimeTask;}catch{}missionRuntimeTask=null;}if(anatomyRuntimeTask){try{anatomyRuntime=await anatomyRuntimeTask;}catch{}anatomyRuntimeTask=null;}if(missionRuntime){await missionRuntime.destroy({finalize:true});missionRuntime=null;}if(anatomyRuntime){anatomyRuntime.destroy();anatomyRuntime=null;}journalRows.replaceChildren();savedRows.replaceChildren();counterResult.textContent='';calcResult.textContent='';spaceRows.replaceChildren();spaceStatus.textContent='';fixtureStatus.textContent='';displayedEvents=[];renderNotices();preventionStatusReset();for(const section of [prevention,radiation])for(const field of section.querySelectorAll('input'))field.value='';for(const section of [prevention,radiation])for(const field of section.querySelectorAll('select'))field.selectedIndex=0;},DONKI_API};
+ return {refresh,setVitalTimeline,async clear(){setVitalTimeline(null,false);if(missionRuntimeTask){try{missionRuntime=await missionRuntimeTask;}catch{}missionRuntimeTask=null;}if(anatomyRuntimeTask){try{anatomyRuntime=await anatomyRuntimeTask;}catch{}anatomyRuntimeTask=null;}if(missionRuntime){await missionRuntime.destroy({finalize:true});missionRuntime=null;}if(anatomyRuntime){anatomyRuntime.destroy();anatomyRuntime=null;}journalRows.replaceChildren();savedRows.replaceChildren();counterResult.textContent='';calcResult.textContent='';spaceRows.replaceChildren();spaceStatus.textContent='';fixtureStatus.textContent='';displayedEvents=[];renderNotices();preventionStatusReset();for(const section of [prevention,radiation])for(const field of section.querySelectorAll('input'))field.value='';for(const section of [prevention,radiation])for(const field of section.querySelectorAll('select'))field.selectedIndex=0;},DONKI_API};
 }

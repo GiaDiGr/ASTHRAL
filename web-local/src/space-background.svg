@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 1000" preserveAspectRatio="xMidYMid slice">
+ <defs>
+  <radialGradient id="a"><stop stop-color="#168ca1" stop-opacity=".36"/><stop offset="1" stop-color="#168ca1" stop-opacity="0"/></radialGradient>
+  <radialGradient id="b"><stop stop-color="#7049a9" stop-opacity=".32"/><stop offset="1" stop-color="#7049a9" stop-opacity="0"/></radialGradient>
+  <radialGradient id="c"><stop stop-color="#1b5ca9" stop-opacity=".28"/><stop offset="1" stop-color="#1b5ca9" stop-opacity="0"/></radialGradient>
+  <pattern id="stars" width="211" height="183" patternUnits="userSpaceOnUse"><g fill="#ddf9ff"><circle cx="14" cy="21" r="1" opacity=".72"/><circle cx="93" cy="42" r=".7" opacity=".5"/><circle cx="173" cy="15" r=".8" opacity=".6"/><circle cx="201" cy="103" r="1.1" opacity=".55"/><circle cx="38" cy="126" r=".7" opacity=".46"/><circle cx="120" cy="155" r="1" opacity=".65"/><circle cx="74" cy="92" r=".6" opacity=".5"/></g></pattern>
+ </defs>
+ <path fill="#030b1b" d="M0 0h1600v1000H0z"/><ellipse cx="150" cy="180" rx="620" ry="470" fill="url(#a)"/><ellipse cx="1300" cy="230" rx="650" ry="510" fill="url(#b)"/><ellipse cx="850" cy="1000" rx="900" ry="620" fill="url(#c)"/><path fill="url(#stars)" d="M0 0h1600v1000H0z"/>
+ <g fill="none" stroke="#76dfea" opacity=".16"><path d="M-300 850C230 510 640 110 1680 280"/><path d="M-350 870C240 525 650 125 1690 295"/></g>
+ <g fill="#c9faff" opacity=".8"><path d="M1225 135l2 8 8 2-8 2-2 8-2-8-8-2 8-2z"/><path d="M320 615l1.5 6 6 1.5-6 1.5-1.5 6-1.5-6-6-1.5 6-1.5z"/></g>
+</svg>

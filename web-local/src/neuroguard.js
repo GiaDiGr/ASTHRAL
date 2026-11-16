@@ -11,7 +11,7 @@ function page(workspace) {
   const root=el('section');root.id='neuroguard';root.className='workspace-page mission-support-page';root.hidden=true;
   const intro=el('div');intro.className='page-intro';intro.append(el('p','VOLUNTARY PRIVATE TRACKING'),el('h1','NeuroGuard'),el('p','Experimental self-reports and short browser tasks for descriptive personal tracking. This module does not screen, diagnose, predict fitness for duty, or authorize a clinical or operational decision.'));
   root.append(intro);workspace.append(root);
-  const nav=$('workspace-nav')?.querySelector('.more-nav>div');
+  const nav=$('workspace-nav');
   if(nav&&!nav.querySelector('[data-view="neuroguard"]')){const link=el('a','NeuroGuard');link.href='#neuroguard';link.dataset.view='neuroguard';nav.append(link);}
   return root;
 }

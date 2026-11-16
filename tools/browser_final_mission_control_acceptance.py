@@ -10,6 +10,7 @@ import argparse
 import asyncio
 import json
 import os
+import re
 import secrets
 import sys
 import time
@@ -97,6 +98,8 @@ async def main():
     parser.add_argument('--chrome', type=Path)
     parser.add_argument('--port', type=int, default=8978)
     parser.add_argument('--timeout-ms', type=int, default=180000)
+    parser.add_argument('--simulate-celestrak-status', type=int, choices=range(400, 600), metavar='HTTP_STATUS',
+                        help='return a marked test HTTP error for CelesTrak instead of making another provider request')
     args = parser.parse_args()
     root = args.root.resolve()
     output = args.output.resolve()
@@ -126,6 +129,12 @@ async def main():
             context = await browser.new_context(viewport={'width': 1440, 'height': 1000}, device_scale_factor=1, reduced_motion='reduce')
             page = await context.new_page()
             page.set_default_timeout(args.timeout_ms)
+            if args.simulate_celestrak_status is not None:
+                await page.route(
+                    re.compile(r'^https://celestrak\.org/NORAD/elements/gp\.php\?CATNR=25544&FORMAT=JSON$'),
+                    lambda route: route.fulfill(status=args.simulate_celestrak_status, content_type='application/json', body='{"fixture":"SYNTHETIC_EXTERNAL_FAILURE_TEST"}'),
+                )
+                report['provider_test_fixtures'] = {'celestrak_status': args.simulate_celestrak_status, 'synthetic_fixture': True}
             page.on('pageerror', lambda error: report['errors'].append({'kind': 'pageerror', 'message': str(error)}))
             def record_console_error(message):
                 if message.type != 'error':
@@ -135,9 +144,22 @@ async def main():
                     # The UI deliberately retries a historical query after offline
                     # installation; its network failure is an expected offline path.
                     return
+                if 'celestrak.org/NORAD/elements/gp.php?CATNR=25544' in str(location.get('url', '')):
+                    # Record this optional public source separately. HTTP failures
+                    # must still be reflected by the unavailable/cached UI state.
+                    report.setdefault('optional_orbit_source_errors', []).append({'message': message.text, 'location': location})
+                    return
                 report['errors'].append({'kind': 'console', 'message': message.text, 'location': location})
             page.on('console', record_console_error)
-            page.on('response', lambda response: report.setdefault('http_errors', []).append({'status': response.status, 'url': response.url}) if response.status >= 400 else None)
+            def record_http_error(response):
+                if response.status < 400:
+                    return
+                item = {'status': response.status, 'url': response.url}
+                if 'celestrak.org/NORAD/elements/gp.php?CATNR=25544' in response.url:
+                    report.setdefault('optional_orbit_http_failures', []).append(item)
+                else:
+                    report.setdefault('http_errors', []).append(item)
+            page.on('response', record_http_error)
             page.on('requestfailed', lambda request: report['expected_offline_failures'].append({'url': request.url, 'failure': request.failure}) if '/api/radlab?' in request.url and offline_state['value'] else report['failed_requests'].append({'url': request.url, 'failure': request.failure}) if 'celestrak.org' not in request.url else report.setdefault('optional_orbit_request_failures', []).append({'url': request.url, 'failure': request.failure}))
 
             t0 = time.perf_counter()
@@ -165,7 +187,7 @@ async def main():
             await page.locator('#create-password').fill(test_password)
             await page.locator('#create-form button.primary-action').click()
             await page.locator('#workspace').wait_for(state='visible')
-            await page.get_by_text('Encrypted synthetic local profile', exact=False).wait_for()
+            await page.locator('#scope').filter(has_text='Encrypted synthetic local profile').wait_for()
             report['checks']['synthetic_encrypted_profile'] = {'created': True, 'credentials_logged': False, 'health_records': 'none; EVA software scenario only'}
             orbit_mount_started = time.perf_counter()
             await page.locator('[data-view="mission-control"]').click()
@@ -174,7 +196,7 @@ async def main():
             await page.locator('.orbit-console').wait_for(state='visible')
             await page.locator('.orbit-globe-canvas').wait_for(state='visible', timeout=30000)
             stage_message = await page.locator('.orbit-stage-notice').inner_text()
-            await page.wait_for_function("document.querySelector('.orbit-stage-notice')?.textContent?.includes('Interactive Earth renderer ready')", timeout=30000)
+            await page.locator('.orbit-stage-notice').get_by_text('Interactive Earth renderer ready', exact=False).wait_for(timeout=30000)
             report['measurements']['mission_control_mount_s'] = round(time.perf_counter() - orbit_mount_started, 3)
             webgl_info = await page.locator('.orbit-globe-canvas').evaluate("canvas=>({width:canvas.width,height:canvas.height,rect:{width:canvas.getBoundingClientRect().width,height:canvas.getBoundingClientRect().height},webgl2:!!canvas.getContext('webgl2'),hidden:canvas.hidden})")
             report['checks']['three_dimensional_earth'] = {'stage_message': stage_message, **webgl_info}
@@ -248,6 +270,20 @@ async def main():
 
             report['checks']['eva_card_styles'] = await page.locator('.eva-card').first.evaluate("element=>({background:getComputedStyle(element).backgroundColor,labelColor:getComputedStyle(element.querySelector('.eva-card-label')).color,valueColor:getComputedStyle(element.querySelector('.eva-card-value')).color})")
             badge = page.locator('.orbit-source-badge')
+            orbit_source_badge = await badge.inner_text()
+            orbit_notice = await page.locator('.orbit-stage-notice').inner_text()
+            orbit_source_unavailable = bool(report.get('optional_orbit_http_failures') or report.get('optional_orbit_source_errors') or report.get('optional_orbit_request_failures'))
+            if orbit_source_unavailable:
+                if orbit_source_badge != 'ISS ELEMENTS UNAVAILABLE' or 'ISS tracking is unavailable' not in orbit_notice:
+                    raise AssertionError(f'Unavailable public GP source was not represented as unavailable: {orbit_source_badge}; {orbit_notice}')
+            elif orbit_source_badge not in ('CELESTRAK · FETCHED', 'OFFLINE · CACHED ELEMENTS', 'STALE ORBIT ELEMENTS'):
+                raise AssertionError(f'ISS orbital source has no explicit source state: {orbit_source_badge}; {orbit_notice}')
+            report['checks']['iss_data_availability'] = {
+                'badge': orbit_source_badge,
+                'state': 'UNAVAILABLE_EXTERNAL_SOURCE' if orbit_source_unavailable else 'PUBLIC_ELEMENTS_OR_CACHED_ESTIMATE',
+                'estimate_is_direct_telemetry': False,
+                'provider_http_failures': report.get('optional_orbit_http_failures', []),
+            }
             await page.locator('[aria-label="Spacecraft tracking mode"]').select_option('SIMULATED')
             await badge.get_by_text('SYNTHETIC ORBIT', exact=True).wait_for()
             position_time = await page.locator('#orbit-utc').inner_text()
@@ -331,12 +367,9 @@ async def main():
             await page.locator('#monitoring').wait_for(state='visible')
             await page.locator('[data-view="clinical"]').click()
             await page.locator('#clinical').wait_for(state='visible')
-            await page.locator('.more-nav summary').click()
-            if not await page.locator('[data-view="anatomy"]').is_visible():
-                await page.locator('.more-nav summary').click()
-            await page.locator('[data-view="anatomy"]').click()
+            await page.locator('[data-view="dashboard"]').click()
             await page.locator('#anatomy').wait_for(state='visible')
-            await page.get_by_text('3D anatomy loaded', exact=False).wait_for(timeout=60000)
+            await page.get_by_text('3D external body map loaded', exact=False).wait_for(timeout=60000)
             anatomy_info = await page.locator('.anatomy-canvas').evaluate("canvas=>({width:canvas.width,height:canvas.height,webgl2:!!canvas.getContext('webgl2'),hidden:canvas.hidden,rect:{width:canvas.getBoundingClientRect().width,height:canvas.getBoundingClientRect().height}})")
             if anatomy_info['hidden'] or not anatomy_info['webgl2'] or anatomy_info['width'] < 100 or anatomy_info['height'] < 100:
                 raise AssertionError(f'Interactive anatomy renderer did not initialize: {anatomy_info}')
@@ -361,7 +394,6 @@ async def main():
                 'context_export': region_file.suggested_filename, 'clinical_authority': region_export.get('clinical_authority'),
                 'clinical_localization': False,
             }
-            await page.locator('.more-nav summary').click()
             await page.locator('[data-view="vision"]').click()
             await page.locator('#vision').wait_for(state='visible')
             report['checks']['existing_routes'] = ['monitoring', 'clinical', 'computer vision', 'human anatomy']
@@ -400,6 +432,8 @@ async def main():
             await fallback_page.get_by_text('Reference Python engine ready on this device', exact=False).wait_for(timeout=args.timeout_ms)
             await fallback_page.locator('#explore').click()
             await fallback_page.locator('#workspace').wait_for(state='visible')
+            await fallback_page.locator('#anatomy:not([hidden])').wait_for(state='visible')
+            await fallback_page.get_by_text('3D external body map loaded', exact=False).wait_for(timeout=60000)
             await fallback_page.locator('[data-view="mission-control"]').click()
             await fallback_page.locator('.orbit-map-canvas').wait_for(state='visible', timeout=30000)
             fallback_message = await fallback_page.locator('.orbit-stage-notice').inner_text()

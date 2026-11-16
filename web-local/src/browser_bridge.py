@@ -51,7 +51,7 @@ def dispatch(action, data):
                 raise ValueError('LOCAL_DATABASE_INTEGRITY_FAILED')
             if store.db.execute('PRAGMA user_version').fetchone()[0] != 1:
                 raise ValueError('LOCAL_DATABASE_VERSION_UNSUPPORTED')
-            for kind in ('browser_evaluation','voice_observation','research_stats','finding','monitoring_run','monitoring_event','episode','baseline','trend','clinical_evaluation','management_record','prevention_entry','radiation_record','eva_activity'):
+            for kind in ('browser_evaluation','voice_observation','research_stats','finding','monitoring_run','monitoring_event','notification_ack','episode','baseline','trend','clinical_evaluation','management_record','prevention_entry','radiation_record','eva_activity'):
                 if any(row.get('subject_id')!=requested_owner for row in store.all(kind)):
                     raise ValueError('PRIVATE_RECORD_SCOPE_MISMATCH')
             for row in store.all('measurement'):
